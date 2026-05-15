@@ -1,0 +1,84 @@
+﻿{
+    "flowSlug":  "user-registration",
+    "version":  "0.1.1",
+    "cascadePoint":  "C0-source-flow",
+    "capturedAt":  "2026-05-15T15:53:22.5547271Z",
+    "marketplaceListing":  {
+                               "id":  "user-registration:0.1.1",
+                               "flowId":  "FLOW-01",
+                               "flowSlug":  "user-registration",
+                               "version":  "0.1.1",
+                               "moduleName":  "user-registration",
+                               "sourceRepo":  "xiigen-flows-dot-net-angular",
+                               "sourcePath":  "flows/FLOW-01-user-registration",
+                               "commitHash":  "cdd6cbb",
+                               "publisherTenantId":  "platform",
+                               "status":  "listed",
+                               "packages":  [
+                                                {
+                                                    "packageId":  "Xiigen.Flow.UserRegistration.Application",
+                                                    "version":  "0.1.1",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                },
+                                                {
+                                                    "packageId":  "Xiigen.Flow.UserRegistration.Infrastructure",
+                                                    "version":  "0.1.1",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                }
+                                            ],
+                               "metadata":  {
+                                                "roles":  5,
+                                                "cascadePoint":  "C0-source-flow",
+                                                "functionalCoverage":  "P1-P11",
+                                                "tier":  "D",
+                                                "cells":  3,
+                                                "sourceTenantId":  "none",
+                                                "mode":  "source"
+                                            },
+                               "adaptationHistory":  [
+
+                                                     ],
+                               "createdAt":  "2026-05-15T15:53:22.5062977+00:00",
+                               "updatedAt":  "2026-05-15T15:53:22.5062977+00:00",
+                               "correlationId":  "corr-c59e1bf84e694cae95082dc874fe0c38"
+                           },
+    "readback":  {
+                     "tempProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow01-user-registration-readback",
+                     "dependencyResolved":  "Xiigen.Flow.UserRegistration.Infrastructure 0.1.1",
+                     "restore":  "PASS",
+                     "packageId":  "Xiigen.Flow.UserRegistration.Infrastructure",
+                     "version":  "0.1.1",
+                     "build":  "PASS"
+                 },
+    "registry":  "http://127.0.0.1:5555/v3/index.json",
+    "moduleName":  "user-registration",
+    "status":  "PASS",
+    "evidenceType":  "package-publish-readback",
+    "tenantId":  "platform",
+    "marketplaceReadback":  {
+                                "id":  "user-registration:0.1.1:nuget:Xiigen.Flow.UserRegistration.Infrastructure",
+                                "flowSlug":  "user-registration",
+                                "version":  "0.1.1",
+                                "packageId":  "Xiigen.Flow.UserRegistration.Infrastructure",
+                                "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                "packageKind":  "nuget",
+                                "found":  true,
+                                "metadata":  {
+                                                 "tempProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow01-user-registration-readback",
+                                                 "build":  "PASS",
+                                                 "restore":  "PASS",
+                                                 "dependencyResolved":  "Xiigen.Flow.UserRegistration.Infrastructure 0.1.1",
+                                                 "xiigenRegistry":  "http://127.0.0.1:5555/v3/index.json",
+                                                 "frameworkRegistry":  "https://api.nuget.org/v3/index.json"
+                                             },
+                                "tenantId":  "platform",
+                                "verifiedAt":  "2026-05-15T15:53:22.5495271+00:00",
+                                "correlationId":  "corr-6330d7cfacab40d2938643bdbb4d368d"
+                            },
+    "readbackNugetConfig":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\NuGet.Xiigen.Readback.Config",
+    "finalReportAllowed":  false,
+    "flowId":  "FLOW-01",
+    "finalCompletion":  false
+}

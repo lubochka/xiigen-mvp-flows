@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-01/contracts/schemas/user-registration-response.schema.json",
+  "title": "User Registration Flow Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "accountStatus": {
+      "type": "string",
+      "enum": [
+        "PENDING_VERIFICATION",
+        "EMAIL_VERIFIED",
+        "ONBOARDING_COMPLETE"
+      ]
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "rawToken": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "ssoBypass": {
+      "type": "boolean"
+    },
+    "onboardingCompletedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "material_type": {
+      "type": "string",
+      "enum": [
+        "workspace_setup",
+        "flow_tutorial",
+        "community_invitation"
+      ]
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

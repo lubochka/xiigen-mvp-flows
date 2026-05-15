@@ -1,0 +1,128 @@
+﻿{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "cascadePoint":  "C0-source-flow",
+    "generatedAt":  "2026-05-15T14:30:47.2269934Z",
+    "total":  13,
+    "passed":  13,
+    "failed":  0,
+    "checks":  [
+                   {
+                       "name":  "health-ready-200",
+                       "method":  "GET",
+                       "path":  "/health/ready",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-01\"}"
+                   },
+                   {
+                       "name":  "anonymous-registration-201",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"id\":\"usr-531e2e40ab524358942637e2dbe96f3a\",\"userId\":\"usr-531e2e40ab524358942637e2dbe96f3a\",\"version\":\"1\",\"accountStatus\":\"PENDING_VERIFICATION\"}"
+                   },
+                   {
+                       "name":  "idempotency-replay-200",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"id\":\"usr-531e2e40ab524358942637e2dbe96f3a\",\"userId\":\"usr-531e2e40ab524358942637e2dbe96f3a\",\"version\":\"1\",\"accountStatus\":\"PENDING_VERIFICATION\"}"
+                   },
+                   {
+                       "name":  "boundary-validation-400",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration",
+                       "expected":  400,
+                       "actual":  400,
+                       "pass":  true,
+                       "body":  "{\"code\":\"VALIDATION_FAILED\",\"message\":\"Registration input validation failed\",\"details\":{\"details\":[{\"field\":\"email\",\"reason\":\"required\"}]}}"
+                   },
+                   {
+                       "name":  "timeout-504",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration",
+                       "expected":  504,
+                       "actual":  504,
+                       "pass":  true,
+                       "body":  "{\"code\":\"TIMEOUT\",\"message\":\"Downstream fabric timeout\",\"details\":{\"retryAfterMs\":5000}}"
+                   },
+                   {
+                       "name":  "onboarding-missing-token-401",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/workspace",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                   },
+                   {
+                       "name":  "onboarding-wrong-role-403",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/workspace",
+                       "expected":  403,
+                       "actual":  403,
+                       "pass":  true,
+                       "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                   },
+                   {
+                       "name":  "onboarding-cross-tenant-token-401",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/workspace",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                   },
+                   {
+                       "name":  "onboarding-workspace-201",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/workspace",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"id\":\"del-workspace_setup-4c8db21899d94e49a4d89408e78b67a6\",\"user_id\":\"usr-live\",\"tenant_id\":\"acme-corp\",\"material_type\":\"workspace_setup\",\"status\":\"delivered\",\"knowledge_scope\":\"PRIVATE\",\"delivered_at\":\"2026-05-15T14:30:47.0081435+00:00\"}"
+                   },
+                   {
+                       "name":  "onboarding-tutorial-201",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/tutorial",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"id\":\"del-flow_tutorial-6dfa73ac1dac46f18f0c0e33fd7a5146\",\"user_id\":\"usr-live\",\"tenant_id\":\"acme-corp\",\"material_type\":\"flow_tutorial\",\"status\":\"delivered\",\"knowledge_scope\":\"PRIVATE\",\"delivered_at\":\"2026-05-15T14:30:47.1998992+00:00\"}"
+                   },
+                   {
+                       "name":  "onboarding-invitation-201",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/invitation",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"id\":\"del-community_invitation-8a2440eaaa1f448187b42fe76e2bf65b\",\"user_id\":\"usr-live\",\"tenant_id\":\"acme-corp\",\"material_type\":\"community_invitation\",\"status\":\"delivered\",\"knowledge_scope\":\"PRIVATE\",\"delivered_at\":\"2026-05-15T14:30:47.2669573+00:00\",\"social_params\":{\"inviterName\":\"The Team\",\"communityName\":\"Community\"}}"
+                   },
+                   {
+                       "name":  "onboarding-complete-200",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/onboarding/complete",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"id\":\"onb-d85a46f70d7e40b489afcea5f52b1776\",\"userId\":\"usr-live\",\"email\":\"live@example.com\",\"tenantId\":\"acme-corp\",\"onboardingCompletedAt\":\"2026-05-15T14:30:47.3338923+00:00\"}"
+                   },
+                   {
+                       "name":  "verify-invalid-token-400",
+                       "method":  "POST",
+                       "path":  "/api/dynamic/user-registration/verify-token",
+                       "expected":  400,
+                       "actual":  400,
+                       "pass":  true,
+                       "body":  "{\"code\":\"INVALID_TOKEN\",\"message\":\"Token not found\",\"details\":null}"
+                   }
+               ]
+}

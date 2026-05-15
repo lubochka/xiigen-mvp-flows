@@ -1,0 +1,55 @@
+﻿{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "stack":  "dotnet-aspnet + angular",
+    "portabilityTier":  "Tier D",
+    "status":  "GREEN",
+    "finalCompletion":  true,
+    "finalReportAllowed":  true,
+    "completedAt":  "2026-05-15T16:06:14.5588840Z",
+    "repositories":  {
+                         "platform":  "C:\\Projects\\xiigen-platform-dot-net-angular",
+                         "flows":  "C:\\Projects\\xiigen-flows-dot-net-angular",
+                         "tenants":  [
+                                         "C:\\Projects\\tenant-a--user-registration",
+                                         "C:\\Projects\\tenant-a--tenant-a-registration",
+                                         "C:\\Projects\\tenant-b--tenant-a-registration",
+                                         "C:\\Projects\\tenant-b--tenant-b-registration",
+                                         "C:\\Projects\\tenant-c--tenant-b-registration",
+                                         "C:\\Projects\\tenant-c--tenant-c-registration"
+                                     ]
+                     },
+    "functionalCoverage":  {
+                               "existingCfRules":  4,
+                               "totalCfRules":  8,
+                               "serverTests":  "flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Tests/UserRegistrationServiceTests.cs",
+                               "sourceDocs":  "docs/flow-coverage/user-registration/P1-P11",
+                               "bfaRulesFile":  "flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Application/UserRegistrationBfaRuleRegistry.cs",
+                               "newCfRulesImplemented":  4,
+                               "status":  "PASS"
+                           },
+    "gates":  {
+                  "packageReadback":  "PASS: source 0.1.1, Tenant A 0.1.2, Tenant B 0.1.3, Tenant C 0.1.4",
+                  "dockerApiHealth":  "PASS: http://127.0.0.1:5101/health/ready",
+                  "flowBuildTest":  "PASS: 20 tests, 0 failures",
+                  "authMatrix":  "PASS: 200/401/403/cross-tenant-401 covered; cross-tenant isolation evidence recorded",
+                  "githubActions":  "PASS: 6 tenant repos green",
+                  "visualEvidence":  "PASS: 15 role/cell PNGs per cascade point plus marketplace listing screenshots",
+                  "qaReview":  "APPROVED",
+                  "platformBuildTest":  "PASS: 14 tests, 0 failures",
+                  "angularTestBuild":  "PASS: 5 tests, build success",
+                  "codeReview":  "PASS: docs/translation-evidence/FLOW-01/code-review-gate.json"
+              },
+    "evidence":  {
+                     "codeReview":  "docs/translation-evidence/FLOW-01/code-review-gate.json",
+                     "tenantAPackage":  "docs/translation-evidence/FLOW-01/tenant-a-registration-package-readback.json",
+                     "layer8Cascade":  "docs/translation-evidence/FLOW-01/layer8-cascade-evidence.json",
+                     "tenantCPackage":  "docs/translation-evidence/FLOW-01/tenant-c-registration-package-readback.json",
+                     "tenantBPackage":  "docs/translation-evidence/FLOW-01/tenant-b-registration-package-readback.json",
+                     "crossTenantJwt":  "docs/translation-evidence/FLOW-01/cross-tenant-jwt-isolation.json",
+                     "sourcePackage":  "docs/translation-evidence/FLOW-01/source-package-readback.json"
+                 },
+    "openIssues":  [
+
+                   ]
+}

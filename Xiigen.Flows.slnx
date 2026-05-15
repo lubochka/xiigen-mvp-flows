@@ -7,4 +7,11 @@
     <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/Xiigen.Flow.BundleActivation.Infrastructure.csproj" />
     <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Tests/Xiigen.Flow.BundleActivation.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-01-user-registration/" />
+  <Folder Name="/flows/FLOW-01-user-registration/server/">
+    <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Api/Xiigen.Flow.UserRegistration.Api.csproj" />
+    <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Application/Xiigen.Flow.UserRegistration.Application.csproj" />
+    <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Infrastructure/Xiigen.Flow.UserRegistration.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Tests/Xiigen.Flow.UserRegistration.Tests.csproj" />
+  </Folder>
 </Solution>

@@ -1,0 +1,37 @@
+﻿{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "evidenceType":  "cross-tenant-jwt-isolation",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-15T15:58:07.2837794Z",
+    "targetApi":  "http://127.0.0.1:5101",
+    "results":  [
+                    {
+                        "name":  "tenant-b-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-b:local",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-b",
+                        "tenantHeader":  "tenant-b",
+                        "authorization":  "Bearer tenant:tenant-c:local",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-c:local",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "status":  "PASS",
+                        "body":  "{\"id\":\"del-workspace_setup-28c3ec9d4738408b9966131f382708c9\",\"user_id\":\"user-c-positive\",\"tenant_id\":\"tenant-c\",\"material_type\":\"workspace_setup\",\"status\":\"delivered\",\"knowledge_scope\":\"PRIVATE\",\"delivered_at\":\"2026-05-15T15:58:07.2454971+00:00\"}"
+                    }
+                ]
+}

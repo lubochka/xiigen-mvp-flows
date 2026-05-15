@@ -1,0 +1,116 @@
+{
+  "flowId": "FLOW-01",
+  "flowSlug": "user-registration",
+  "cascadePoint": "C1-tenant-a-installed",
+  "moduleName": "user-registration",
+  "roleCount": 5,
+  "cellCount": 3,
+  "expectedPngCount": 15,
+  "screenshots": [
+    {
+      "role": "anonymous",
+      "cell": "desktop-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\anonymous-desktop-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "anonymous",
+      "cell": "desktop-he-rtl",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\anonymous-desktop-he-rtl.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "anonymous",
+      "cell": "mobile-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\anonymous-mobile-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_user-desktop-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-he-rtl",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_user-desktop-he-rtl.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "mobile-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_user-mobile-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_admin-desktop-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-he-rtl",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_admin-desktop-he-rtl.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "mobile-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\tenant_admin-mobile-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_admin-desktop-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-he-rtl",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_admin-desktop-he-rtl.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "mobile-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_admin-mobile-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_support",
+      "cell": "desktop-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_support-desktop-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_support",
+      "cell": "desktop-he-rtl",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_support-desktop-he-rtl.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_support",
+      "cell": "mobile-en",
+      "path": "C:\\Projects\\tenant-a--user-registration\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\platform_support-mobile-en.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

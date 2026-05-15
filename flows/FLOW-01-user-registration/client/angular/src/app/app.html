@@ -1,0 +1,148 @@
+<main class="registration-shell" data-testid="page-user-registration">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'מסע הצטרפות' : 'Onboarding journey' }}</p>
+      <h1>{{ localizedTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          הרשמה, אימות אימייל, שליחה חוזרת וקליטה ראשונית במקום אחד.
+        } @else {
+          Email signup, verification, resend handling, and onboarding delivery in one focused workflow.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Registration states">
+    @for (step of steps; track step.id) {
+      <button type="button" [class.active]="journeyState() === step.id" (click)="setJourneyState(step.id)">
+        <span>{{ $index + 1 }}</span>
+        {{ language() === 'he' ? hebrewLabel(step.id) : step.label }}
+      </button>
+    }
+  </nav>
+
+  @if (message()) {
+    <section class="notice" role="status" data-testid="status-message">{{ message() }}</section>
+  }
+
+  @if (role() === 'anonymous') {
+    <section class="layout" data-testid="role-anonymous-public">
+      <article class="primary-panel">
+        @if (journeyState() === 'registration') {
+          <h2>{{ language() === 'he' ? 'פתיחת חשבון' : 'Create your account' }}</h2>
+          <p>{{ language() === 'he' ? 'נשמור את הפרטים ונשלח קישור אימות.' : 'Your details are saved first, then a verification email is queued.' }}</p>
+          <label>
+            <span>Email</span>
+            <input type="email" [ngModel]="email()" (ngModelChange)="updateEmail($event)" />
+          </label>
+          <label>
+            <span>{{ language() === 'he' ? 'סיסמה' : 'Password' }}</span>
+            <input type="password" [ngModel]="password()" (ngModelChange)="updatePassword($event)" />
+          </label>
+          <button type="button" class="primary" data-testid="submit-registration" (click)="submitRegistration()">
+            {{ language() === 'he' ? 'שליחת הרשמה' : 'Submit registration' }}
+          </button>
+        } @else if (journeyState() === 'pending') {
+          <h2>{{ language() === 'he' ? 'בדקו את האימייל' : 'Check your email' }}</h2>
+          <p>{{ language() === 'he' ? 'הקישור תקף לזמן מוגבל ונשמר כטביעת אצבע מאובטחת.' : 'The link is time-limited and only a secure fingerprint is stored.' }}</p>
+          <button type="button" class="secondary" (click)="setJourneyState('verify-token')">
+            {{ language() === 'he' ? 'יש לי קישור אימות' : 'I have a verification link' }}
+          </button>
+        } @else if (journeyState() === 'verify-token') {
+          <h2>{{ language() === 'he' ? 'אימות קישור' : 'Verify your link' }}</h2>
+          <label>
+            <span>{{ language() === 'he' ? 'קוד אימות' : 'Verification token' }}</span>
+            <input [ngModel]="token()" (ngModelChange)="updateToken($event)" />
+          </label>
+          <button type="button" class="primary" data-testid="verify-token" (click)="verifyToken()">
+            {{ language() === 'he' ? 'אימות והמשך' : 'Verify and continue' }}
+          </button>
+        } @else if (journeyState() === 'resend') {
+          <h2>{{ language() === 'he' ? 'שליחה חוזרת' : 'Resend verification' }}</h2>
+          <p>{{ language() === 'he' ? 'שליחה חוזרת נבדקת לפי משתמש ודייר לפני יצירת קישור חדש.' : 'Resend is checked by member and tenant before a fresh link is created.' }}</p>
+          <button type="button" class="primary" data-testid="resend-verification" (click)="resendEmail()">
+            {{ language() === 'he' ? 'שליחה חוזרת' : 'Resend email' }}
+          </button>
+        } @else if (journeyState() === 'sso') {
+          <h2>{{ language() === 'he' ? 'כניסה אחידה' : 'Single sign-on' }}</h2>
+          <p>{{ language() === 'he' ? 'חשבונות מאומתים דרך ספק זהות מדלגים על איסוף סיסמה.' : 'Accounts verified by an identity provider skip password collection.' }}</p>
+          <button type="button" class="primary" (click)="startSso()">
+            {{ language() === 'he' ? 'המשך לספק הזהות' : 'Continue to identity provider' }}
+          </button>
+        } @else {
+          <h2>{{ language() === 'he' ? 'קליטה ראשונית' : 'Onboarding preview' }}</h2>
+          <p>{{ language() === 'he' ? 'אחרי אימות האימייל נפתח מסלול הקליטה.' : 'After email verification, onboarding materials become available.' }}</p>
+        }
+      </article>
+
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'מה מוגן' : 'What is protected' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'כפילויות אימייל נבדקות לפני יצירת חשבון.' : 'Duplicate email checks run before account creation.' }}</li>
+          <li>{{ language() === 'he' ? 'אותו מפתח פעולה לא יוצר חשבון כפול.' : 'Repeating the same request key does not create a duplicate account.' }}</li>
+          <li>{{ language() === 'he' ? 'תקלת שירות שומרת ניסיון לשליחה חוזרת.' : 'Service timeouts keep a retryable delivery record.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (role() === 'tenant_user') {
+    <section class="layout" data-testid="role-tenant-user-onboarding">
+      <article class="primary-panel">
+        <h2>{{ language() === 'he' ? 'משימות קליטה' : 'Your onboarding tasks' }}</h2>
+        <div class="task-list">
+          <label><input type="checkbox" checked /> {{ language() === 'he' ? 'הגדרת סביבת עבודה' : 'Workspace setup' }}</label>
+          <label><input type="checkbox" checked /> {{ language() === 'he' ? 'מדריך שימוש ראשון' : 'First-use tutorial' }}</label>
+          <label><input type="checkbox" checked /> {{ language() === 'he' ? 'הזמנה לקהילה' : 'Community invitation' }}</label>
+        </div>
+        <button type="button" class="primary" data-testid="complete-onboarding" (click)="completeOnboarding()">
+          {{ language() === 'he' ? 'סיום קליטה' : 'Complete onboarding' }}
+        </button>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'מצב חשבון' : 'Account state' }}</h2>
+        <p>{{ language() === 'he' ? 'האימייל אומת. כל חומרי הקליטה זמינים.' : 'Email is verified. All onboarding materials are available.' }}</p>
+      </aside>
+    </section>
+  } @else {
+    <section class="admin-layout" [attr.data-testid]="role() === 'tenant_admin' ? 'role-tenant-admin-review' : role() === 'platform_admin' ? 'role-platform-admin-console' : 'role-platform-support-readonly'">
+      <article class="primary-panel">
+        <h2>{{ language() === 'he' ? 'רישומים אחרונים' : 'Recent registrations' }}</h2>
+        <div class="table" role="table">
+          @for (record of records; track record.email) {
+            <div class="row" role="row">
+              <strong>{{ record.email }}</strong>
+              <span>{{ record.status }}</span>
+              <span>{{ record.source }}</span>
+              <span>{{ record.updated }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        @if (role() === 'platform_support') {
+          <h2>{{ language() === 'he' ? 'גישה לצפייה בלבד' : 'Read-only support view' }}</h2>
+          <p>{{ language() === 'he' ? 'ניתן לבדוק מצב ולהפנות להמשך טיפול, ללא שינוי חשבון.' : 'Support can inspect status and escalate without changing accounts.' }}</p>
+          <button type="button" class="secondary" disabled>{{ language() === 'he' ? 'שינוי חסום' : 'Changes disabled' }}</button>
+        } @else {
+          <h2>{{ language() === 'he' ? 'פעולות ניהול' : 'Admin actions' }}</h2>
+          <button type="button" class="secondary">{{ language() === 'he' ? 'בדיקת שליחה חוזרת' : 'Review resend attempts' }}</button>
+          <button type="button" class="secondary">{{ language() === 'he' ? 'בדיקת אימותים' : 'Review verification events' }}</button>
+        }
+      </aside>
+    </section>
+  }
+</main>

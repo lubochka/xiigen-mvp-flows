@@ -1,0 +1,156 @@
+﻿{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "evidenceType":  "layer8-cascade-evidence",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-15T15:58:48.3412661Z",
+    "sourceVisualEvidence":  {
+                                 "expectedPngCount":  15,
+                                 "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C0-source-flow",
+                                 "actualPngCount":  16,
+                                 "cascadePoint":  "C0-source-flow"
+                             },
+    "cascade":  [
+                    {
+                        "cascadePoint":  "C1-tenant-a-installed",
+                        "tenantId":  "tenant-a",
+                        "moduleName":  "user-registration",
+                        "version":  "0.1.1",
+                        "repo":  "https://github.com/lubochka/tenant-a--user-registration",
+                        "headSha":  "6df27c909cdb5d11379b50a495bd91cc92beaaf4",
+                        "githubActions":  {
+                                              "databaseId":  25924347102,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-a--user-registration/actions/runs/25924347102",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T14:50:06Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed",
+                                               "actualPngCount":  15,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                                           }
+                    },
+                    {
+                        "cascadePoint":  "C2-tenant-a-adapted-published",
+                        "tenantId":  "tenant-a",
+                        "moduleName":  "tenant-a-registration",
+                        "version":  "0.1.2",
+                        "repo":  "https://github.com/lubochka/tenant-a--tenant-a-registration",
+                        "headSha":  "50af027b1431e04282400ce38a71b225f3959ce8",
+                        "githubActions":  {
+                                              "databaseId":  25925333780,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-a--tenant-a-registration/actions/runs/25925333780",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T15:10:14Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C2-tenant-a-adapted-published",
+                                               "actualPngCount":  16,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                                           }
+                    },
+                    {
+                        "cascadePoint":  "C3-tenant-b-installed",
+                        "tenantId":  "tenant-b",
+                        "moduleName":  "tenant-a-registration",
+                        "version":  "0.1.2",
+                        "repo":  "https://github.com/lubochka/tenant-b--tenant-a-registration",
+                        "headSha":  "97f979603d739873fb8f40cedb03c7fec6a7e55b",
+                        "githubActions":  {
+                                              "databaseId":  25925702650,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-b--tenant-a-registration/actions/runs/25925702650",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T15:17:48Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C3-tenant-b-installed",
+                                               "actualPngCount":  15,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C3-tenant-b-installed\\visual-evidence-manifest.json"
+                                           }
+                    },
+                    {
+                        "cascadePoint":  "C3-tenant-b-adapted-published",
+                        "tenantId":  "tenant-b",
+                        "moduleName":  "tenant-b-registration",
+                        "version":  "0.1.3",
+                        "repo":  "https://github.com/lubochka/tenant-b--tenant-b-registration",
+                        "headSha":  "087e1fb4ce6c3360b6bc631522c22b2e43ce77b9",
+                        "githubActions":  {
+                                              "databaseId":  25926563692,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-b--tenant-b-registration/actions/runs/25926563692",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T15:35:42Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C3-tenant-b-adapted-published",
+                                               "actualPngCount":  16,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C3-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                                           }
+                    },
+                    {
+                        "cascadePoint":  "C4-tenant-c-installed",
+                        "tenantId":  "tenant-c",
+                        "moduleName":  "tenant-b-registration",
+                        "version":  "0.1.3",
+                        "repo":  "https://github.com/lubochka/tenant-c--tenant-b-registration",
+                        "headSha":  "65c9228e6f0574b6eb350ae182f87647fb839374",
+                        "githubActions":  {
+                                              "databaseId":  25926769727,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-c--tenant-b-registration/actions/runs/25926769727",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T15:39:58Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C4-tenant-c-installed",
+                                               "actualPngCount":  15,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C4-tenant-c-installed\\visual-evidence-manifest.json"
+                                           }
+                    },
+                    {
+                        "cascadePoint":  "C4-tenant-c-adapted",
+                        "tenantId":  "tenant-c",
+                        "moduleName":  "tenant-c-registration",
+                        "version":  "0.1.4",
+                        "repo":  "https://github.com/lubochka/tenant-c--tenant-c-registration",
+                        "headSha":  "5b23d3e559b1ff9f91bcb37955788a9281906627",
+                        "githubActions":  {
+                                              "databaseId":  25926919149,
+                                              "status":  "completed",
+                                              "url":  "https://github.com/lubochka/tenant-c--tenant-c-registration/actions/runs/25926919149",
+                                              "conclusion":  "success",
+                                              "createdAt":  "2026-05-15T15:43:05Z"
+                                          },
+                        "visualEvidence":  {
+                                               "expectedPngCount":  15,
+                                               "directory":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C4-tenant-c-adapted",
+                                               "actualPngCount":  16,
+                                               "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-registration\\dotnet-angular\\C4-tenant-c-adapted\\visual-evidence-manifest.json"
+                                           }
+                    }
+                ],
+    "packageEvidence":  [
+                            "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\translation-evidence\\FLOW-01\\source-package-readback.json",
+                            "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\translation-evidence\\FLOW-01\\tenant-a-registration-package-readback.json",
+                            "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\translation-evidence\\FLOW-01\\tenant-b-registration-package-readback.json",
+                            "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\translation-evidence\\FLOW-01\\tenant-c-registration-package-readback.json"
+                        ],
+    "crossTenantJwtIsolation":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\translation-evidence\\FLOW-01\\cross-tenant-jwt-isolation.json",
+    "totals":  {
+                   "marketplaceScreenshots":  4,
+                   "sourceVisualPngs":  16,
+                   "cascadeVisualPngs":  93,
+                   "tenantRepos":  6,
+                   "packageReadbacks":  4,
+                   "githubActionsGreen":  6
+               }
+}

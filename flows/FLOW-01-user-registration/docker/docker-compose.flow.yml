@@ -1,0 +1,15 @@
+services:
+  user-registration-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      XIIGEN_ENVIRONMENT: local
+    ports:
+      - "5101:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 6

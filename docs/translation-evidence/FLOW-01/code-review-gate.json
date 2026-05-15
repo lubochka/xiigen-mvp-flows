@@ -1,0 +1,59 @@
+﻿{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "evidenceType":  "code-review-gate",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-15T16:00:02.4245748Z",
+    "checks":  {
+                   "noTechDebtText":  {
+                                          "status":  "PASS",
+                                          "hitCount":  0,
+                                          "hits":  [
+
+                                                   ]
+                                      },
+                   "microserviceBase":  {
+                                            "status":  "PASS",
+                                            "serviceClassCount":  3,
+                                            "microserviceBaseCount":  3,
+                                            "hits":  [
+                                                         "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\UserRegistrationService.cs:9:public sealed class UserRegistrationService : MicroserviceBase\u003cUserRegistrationService\u003e",
+                                                         "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\OnboardingDeliveryService.cs:8:public sealed class OnboardingDeliveryService : MicroserviceBase\u003cOnboardingDeliveryService\u003e",
+                                                         "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\EmailVerificationService.cs:11:public sealed class EmailVerificationService : MicroserviceBase\u003cEmailVerificationService\u003e"
+                                                     ]
+                                        },
+                   "businessLogicNoThrows":  {
+                                                 "status":  "PASS",
+                                                 "hits":  [
+
+                                                          ]
+                                             },
+                   "noFreeTenantIdParameters":  {
+                                                    "status":  "PASS",
+                                                    "hits":  [
+
+                                                             ]
+                                                },
+                   "outboxCloudEvents":  {
+                                             "status":  "PASS",
+                                             "hits":  [
+                                                          "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\OnboardingDeliveryService.cs:156:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e",
+                                                          "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\UserRegistrationService.cs:188:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e",
+                                                          "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Application\\EmailVerificationService.cs:234:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e"
+                                                      ]
+                                         },
+                   "authMatrixCode":  {
+                                          "status":  "PASS",
+                                          "hits":  [
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:108:    var auth = RequireRole(context, \"tenant_user\", \"tenant_admin\", \"platform_admin\");",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:124:    var auth = RequireRole(context, \"tenant_user\", \"tenant_admin\", \"platform_admin\");",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:140:    var auth = RequireRole(context, \"tenant_user\", \"tenant_admin\", \"platform_admin\");",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:156:    var auth = RequireRole(context, \"tenant_user\", \"tenant_admin\", \"platform_admin\");",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:186:        return Results.Json(new { code = \"AUTH_CROSS_TENANT_TOKEN\" }, statusCode: StatusCodes.Status401Unauthorized);",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:192:static IResult? RequireRole(HttpContext context, params string[] allowedRoles)",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:197:        return Results.Json(new { code = \"AUTH_MISSING_TOKEN\" }, statusCode: StatusCodes.Status401Unauthorized);",
+                                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-01-user-registration\\server\\Xiigen.Flow.UserRegistration.Api\\Program.cs:211:        : Results.Json(new { code = \"AUTH_WRONG_ROLE\" }, statusCode: StatusCodes.Status403Forbidden);"
+                                                   ]
+                                      }
+               }
+}

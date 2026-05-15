@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-01/contracts/schemas/user-registration-request.schema.json",
+  "title": "User Registration Flow Request",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "minLength": 3
+    },
+    "password": {
+      "type": "string",
+      "minLength": 8
+    },
+    "credentials": {
+      "type": "string",
+      "minLength": 8
+    },
+    "userId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "token": {
+      "type": "string",
+      "minLength": 1
+    },
+    "existingOnboardingMaterialsCount": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3,
+      "default": 0
+    },
+    "simulateSlowWrite": {
+      "type": "boolean",
+      "default": false
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "anyOf": [
+    {
+      "required": ["email", "password"]
+    },
+    {
+      "required": ["email", "credentials"]
+    },
+    {
+      "required": ["userId", "token"]
+    },
+    {
+      "required": ["userId", "email"]
+    },
+    {
+      "required": ["userId"]
+    }
+  ]
+}

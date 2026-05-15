@@ -1,0 +1,121 @@
+{
+    "flowId":  "FLOW-01",
+    "flowSlug":  "user-registration",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-01-user-registration",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.UserRegistration.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "ci/github-actions/flow-ci.yml",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/user-registration/dotnet-angular",
+    "sourceAliases":  [
+                          "user-registration"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "anonymous",
+                                  "tenant_user",
+                                  "tenant_admin",
+                                  "platform_admin",
+                                  "platform_support"
+                              ],
+                  "partial":  [
+
+                              ],
+                  "wrongRoleForProtectedRoute":  "anonymous"
+              },
+    "certification":  {
+                          "readinessStatus":  "ready-after-shared-artifacts",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p1-p11",
+                               "sourceDocsRoot":  "docs/flow-coverage/user-registration",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/user-registration/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/user-registration/P3-automation-gap-analysis.md",
+                                                         "docs/flow-coverage/user-registration/P5-ui-specs.md",
+                                                         "docs/flow-coverage/user-registration/P9-edge-cases.md",
+                                                         "docs/flow-coverage/user-registration/P10-server-specs.md",
+                                                         "docs/flow-coverage/user-registration/P11-impl-readiness.md"
+                               ],
+                               "existingCfRules":  4,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  10,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false
+                                   },
+    "realProviderReplacementTests":  [
+
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow_module_name",
+                       "defaultModuleName":  "user-registration",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-user-registration.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-adapted-published",
+                                             "C4-tenant-c-adapted"
+                                         ]
+                   }
+}
