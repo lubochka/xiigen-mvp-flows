@@ -1,0 +1,41 @@
+{
+  "policies": [
+    {
+      "name": "BundleActivationWrite",
+      "serverPolicy": "RequireRole:tenant_admin,platform_admin",
+      "angularGuard": "authGuard + tenantGuard",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "tenantScoped": true,
+      "anonymousAllowed": false,
+      "bypassPaths": []
+    },
+    {
+      "name": "BundleActivationReadOnly",
+      "serverPolicy": "RequireRole:tenant_admin,platform_admin,platform_support",
+      "angularGuard": "authGuard + tenantGuard",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "tenantScoped": true,
+      "anonymousAllowed": false,
+      "bypassPaths": []
+    },
+    {
+      "name": "BundleActivationHealthBypass",
+      "serverPolicy": "AllowAnonymous",
+      "angularGuard": "none",
+      "allowedRoles": [],
+      "tenantScoped": false,
+      "anonymousAllowed": true,
+      "bypassPaths": [
+        "/health/live",
+        "/health/ready"
+      ]
+    }
+  ]
+}

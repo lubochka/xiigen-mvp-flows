@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "flowId": "FLOW-00",
+  "flowSlug": "bundle-activation",
+  "environment": "local",
+  "apiBaseUrl": "http://127.0.0.1:5100",
+  "clientBaseUrl": "http://127.0.0.1:4300",
+  "tenantResolution": "header",
+  "tenantIdHint": "acme-corp",
+  "secretsProvider": "vault",
+  "dockerCompose": "docker/docker-compose.flow.yml"
+}

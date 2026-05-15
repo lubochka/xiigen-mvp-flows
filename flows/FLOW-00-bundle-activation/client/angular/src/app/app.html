@@ -1,0 +1,125 @@
+<main class="flow-shell" data-testid="page-bundle-activation">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">FLOW-00</p>
+      <h1>Bundle Activation</h1>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>Role</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ item }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="state-strip" aria-label="Bundle lifecycle states">
+    @for (state of ['Validate', 'Dry run', 'Activate', 'Track status']; track state; let i = $index) {
+      <article class="state-tile" [attr.data-testid]="'state-tile-' + i">
+        <span>{{ i + 1 }}</span>
+        <strong>{{ state }}</strong>
+      </article>
+    }
+  </section>
+
+  @if (role() === 'tenant_admin') {
+    <section class="panel" data-testid="tenant-admin-wizard">
+      <div class="panel-heading">
+        <h2>Activate a workspace bundle</h2>
+        <p>Validation runs before any flow is provisioned. Dry run always precedes full activation.</p>
+      </div>
+
+      <ol class="stepper" aria-label="Activation steps">
+        @for (step of [1, 2, 3]; track step) {
+          <li [class.current]="wizardStep() >= step">Step {{ step }}</li>
+        }
+      </ol>
+
+      @if (wizardStep() === 1) {
+        <div class="bundle-options" data-testid="bundle-options">
+          @for (bundle of bundles; track bundle.id) {
+            <label class="bundle-option" [class.selected]="selectedBundleId() === bundle.id">
+              <input type="radio" name="bundle" [value]="bundle.id" [ngModel]="selectedBundleId()" (ngModelChange)="setSelectedBundleId($event)" />
+              <span>
+                <strong>{{ bundle.name }}</strong>
+                <small>{{ bundle.requiredFlowCount }} required flows / {{ bundle.tenantLabel }}</small>
+              </span>
+              <em [class]="statusClass(bundle.status)">{{ statusLabel(bundle.status) }}</em>
+            </label>
+          }
+          <button type="button" class="primary" data-testid="continue-configure" (click)="continueToConfigure()">Continue</button>
+        </div>
+      }
+
+      @if (wizardStep() === 2) {
+        <div class="configure" data-testid="activation-configure">
+          <label class="check-row">
+            <input type="checkbox" [ngModel]="dryRunMode()" (ngModelChange)="setDryRunMode($event)" />
+            <span>Run dry-run before full activation</span>
+          </label>
+          <div class="actions">
+            <button type="button" class="secondary" (click)="backToSelect()">Back</button>
+            <button type="button" class="primary" data-testid="activate-bundle" (click)="activateBundle()">Start activation</button>
+          </div>
+        </div>
+      }
+
+      @if (wizardStep() === 3 && activationMessage()) {
+        <div class="result" role="status" data-testid="activation-result">
+          {{ activationMessage() }}
+          <button type="button" class="secondary" (click)="resetWizard()">Activate another bundle</button>
+        </div>
+      }
+    </section>
+  } @else if (role() === 'platform_admin') {
+    <section class="panel" data-testid="platform-admin-console">
+      <div class="panel-heading">
+        <h2>Cross-tenant provisioning</h2>
+        <p>Force-activate and revoke controls are available only to platform administrators.</p>
+      </div>
+      <div class="bundle-list">
+        @for (bundle of bundles; track bundle.id) {
+          <article class="bundle-row">
+            <div>
+              <strong>{{ bundle.name }}</strong>
+              <span>{{ bundle.id }} / v{{ bundle.version }} / {{ bundle.tenantLabel }}</span>
+            </div>
+            <em [class]="statusClass(bundle.status)">{{ statusLabel(bundle.status) }}</em>
+            <button type="button" class="secondary" [attr.data-testid]="'force-' + bundle.id">Force-activate</button>
+          </article>
+        }
+      </div>
+    </section>
+  } @else if (role() === 'platform_support') {
+    <section class="panel" data-testid="platform-support-view">
+      <div class="panel-heading">
+        <h2>Bundle status</h2>
+        <p>Support can inspect status and escalate, but cannot change bundle state.</p>
+      </div>
+      <div class="bundle-list">
+        @for (bundle of bundles; track bundle.id) {
+          <article class="bundle-row">
+            <div>
+              <strong>{{ bundle.name }}</strong>
+              <span>{{ bundle.id }} / {{ bundle.tenantLabel }}</span>
+            </div>
+            <em [class]="statusClass(bundle.status)">{{ statusLabel(bundle.status) }}</em>
+            <button type="button" class="secondary" disabled>Force-activate</button>
+          </article>
+        }
+      </div>
+    </section>
+  } @else {
+    <section class="panel empty" data-testid="not-available">
+      <h2>Bundle Activation is not available for this role</h2>
+      <p>Ask a tenant administrator or platform administrator to review bundle status.</p>
+    </section>
+  }
+</main>

@@ -1,0 +1,92 @@
+{
+  "flowId": "FLOW-00",
+  "flowSlug": "bundle-activation",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-00-bundle-activation",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.BundleActivation.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/bundle-activation/dotnet-angular/local",
+  "sourceAliases": [
+    "bundle-activation"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "tenant_admin",
+      "platform_admin",
+      "platform_support"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "ready-after-shared-artifacts",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier A"
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/bundle-activation",
+    "requiredDocuments": [
+      "docs/flow-coverage/bundle-activation/P1-business-logic-inventory.md",
+      "docs/flow-coverage/bundle-activation/P3-automation-gap-analysis.md",
+      "docs/flow-coverage/bundle-activation/P5-ui-specs.md",
+      "docs/flow-coverage/bundle-activation/P9-edge-cases.md",
+      "docs/flow-coverage/bundle-activation/P10-server-specs.md",
+      "docs/flow-coverage/bundle-activation/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 8,
+    "newCfRules": 8,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 10,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "PASS",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false
+  },
+  "realProviderReplacementTests": []
+}

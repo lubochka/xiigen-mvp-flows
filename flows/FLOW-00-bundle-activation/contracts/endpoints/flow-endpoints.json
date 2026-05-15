@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "flowId": "FLOW-00",
+  "flowSlug": "bundle-activation",
+  "generatedBy": "tools/contracts/generate-endpoint-descriptors",
+  "sourceManifest": "flow.manifest.json",
+  "generatedAt": "2026-05-15T09:20:00Z",
+  "sourceHash": null,
+  "endpoints": [
+    {
+      "routeId": "bundle-activation-post",
+      "operationId": "ActivateBundle",
+      "httpMethods": [
+        "POST"
+      ],
+      "routePattern": "/api/dynamic/bundle-activation",
+      "requestSchemaRef": "schema://FLOW-00/contracts/schemas/bundle-activation-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-00/contracts/schemas/bundle-activation-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "BundleActivationWrite",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPathId": null,
+      "tenantScoped": true,
+      "contextRolePolicy": null,
+      "rateLimitPolicy": "flow-write-standard",
+      "correlationRequired": true
+    },
+    {
+      "routeId": "bundle-activation-health-live",
+      "operationId": "BundleActivationLive",
+      "httpMethods": [
+        "GET"
+      ],
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://platform/health-response.schema.json",
+      "authPosture": "anonymous",
+      "policyName": null,
+      "requiredRoles": [],
+      "bypassPathId": "dotnet-allow-anonymous-health-live",
+      "tenantScoped": false,
+      "contextRolePolicy": null,
+      "rateLimitPolicy": "health-read",
+      "correlationRequired": false
+    },
+    {
+      "routeId": "bundle-activation-health-ready",
+      "operationId": "BundleActivationReady",
+      "httpMethods": [
+        "GET"
+      ],
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://platform/health-response.schema.json",
+      "authPosture": "anonymous",
+      "policyName": null,
+      "requiredRoles": [],
+      "bypassPathId": "dotnet-allow-anonymous-health-ready",
+      "tenantScoped": false,
+      "contextRolePolicy": null,
+      "rateLimitPolicy": "health-read",
+      "correlationRequired": false
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "flowId": "FLOW-00",
+  "flowSlug": "bundle-activation",
+  "phase": "FLOW-00 implementation",
+  "tierCurrentCeiling": "Tier A",
+  "baseline": {
+    "sourceRead": true,
+    "coverageDocsRead": true,
+    "stateVerifiedAt": "2026-05-15T09:20:00Z"
+  },
+  "contractParity": {
+    "status": "PASS",
+    "artifacts": [
+      "flows/FLOW-00-bundle-activation/contracts/endpoints/flow-endpoints.json",
+      "flows/FLOW-00-bundle-activation/contracts/auth/auth-policy-registry.json",
+      "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-request.schema.json",
+      "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-response.schema.json"
+    ]
+  },
+  "dotnetServer": {
+    "status": "PASS",
+    "tests": {
+      "command": "dotnet test Xiigen.Flows.slnx -c Release --no-build",
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "angularClient": {
+    "status": "PASS",
+    "tests": {
+      "buildCommand": "npm run build",
+      "testCommand": "npm test",
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "liveAuth": {
+    "status": "PASS",
+    "matrix": [
+      "missing-token-401",
+      "wrong-role-403",
+      "tenant-admin-201",
+      "platform-admin-201"
+    ]
+  },
+  "visualEvidence": {
+    "status": "PASS",
+    "pngCount": 4,
+    "paths": [
+      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-en.png",
+      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-admin-mobile-en.png",
+      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-support-desktop-en.png",
+      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-he-rtl.png"
+    ]
+  },
+  "dockerIntegration": {
+    "status": "PASS",
+    "commands": [
+      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml config",
+      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml build bundle-activation-api",
+      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml up -d bundle-activation-api"
+    ],
+    "health": "healthy",
+    "hostReadyStatus": 200
+  },
+  "codeReview": {
+    "status": "PASS",
+    "technicalDebt": []
+  },
+  "qaReview": {
+    "status": "APPROVED",
+    "report": "docs/translation-evidence/FLOW-00/qa-report.md"
+  }
+}

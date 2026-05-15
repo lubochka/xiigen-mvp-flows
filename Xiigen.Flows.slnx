@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/flows/" />
+  <Folder Name="/flows/FLOW-00-bundle-activation/" />
+  <Folder Name="/flows/FLOW-00-bundle-activation/server/">
+    <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Api/Xiigen.Flow.BundleActivation.Api.csproj" />
+    <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Application/Xiigen.Flow.BundleActivation.Application.csproj" />
+    <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/Xiigen.Flow.BundleActivation.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Tests/Xiigen.Flow.BundleActivation.Tests.csproj" />
+  </Folder>
+</Solution>

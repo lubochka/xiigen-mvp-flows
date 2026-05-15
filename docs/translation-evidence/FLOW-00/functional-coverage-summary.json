@@ -1,0 +1,51 @@
+{
+  "flowId": "FLOW-00",
+  "flowSlug": "bundle-activation",
+  "sourceDocs": [
+    "docs/flow-coverage/bundle-activation/P1-business-logic-inventory.md",
+    "docs/flow-coverage/bundle-activation/P3-automation-gap-analysis.md",
+    "docs/flow-coverage/bundle-activation/P5-ui-specs.md",
+    "docs/flow-coverage/bundle-activation/P9-edge-cases.md",
+    "docs/flow-coverage/bundle-activation/P10-server-specs.md",
+    "docs/flow-coverage/bundle-activation/P11-impl-readiness.md"
+  ],
+  "cfRulesImplemented": [
+    "CF-842",
+    "CF-843",
+    "CF-844",
+    "CF-845",
+    "CF-846",
+    "CF-847",
+    "CF-848",
+    "CF-849"
+  ],
+  "serverContractsImplemented": [
+    "POST /api/dynamic/bundle-activation",
+    "GET /health/live",
+    "GET /health/ready"
+  ],
+  "testOracleCoverage": {
+    "concurrency409": "BundleActivationServiceTests.ActivateAsync_ReturnsConcurrentUpdateForStaleVersion",
+    "idempotencyReplay200": "BundleActivationServiceTests.ActivateAsync_ReplaysCachedResponseForSameIdempotencyKey",
+    "validation400NoPartialWrite": "BundleActivationServiceTests.ActivateAsync_RejectsBoundaryValidationWithoutPartialWrite",
+    "timeout504OutboxRetained": "BundleActivationServiceTests.ActivateAsync_TimeoutRetainsOutboxRecord",
+    "dryRunBeforeFull": "BundleActivationServiceTests.ActivateAsync_StoresBeforeOutboxAndRunsDryRunBeforeFull",
+    "bundleStatusTracker": "BundleActivationServiceTests.StatusTracker_UpdatesAllBundlesContainingRegeneratedFlow"
+  },
+  "angularCoverage": {
+    "tenantAdminWizard": true,
+    "platformAdminConsole": true,
+    "platformSupportReadOnly": true,
+    "anonymousUnavailable": true,
+    "rtlEvidence": true
+  },
+  "visualEvidence": [
+    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-en.png",
+    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-admin-mobile-en.png",
+    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-support-desktop-en.png",
+    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-he-rtl.png"
+  ],
+  "technicalDebt": [],
+  "futurePhase": [],
+  "status": "PASS"
+}

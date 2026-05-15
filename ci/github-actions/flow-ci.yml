@@ -1,0 +1,49 @@
+name: FLOW-00 Bundle Activation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  flow-00:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: flows/FLOW-00-bundle-activation/client/angular/package-lock.json
+      - name: Restore .NET
+        run: dotnet restore Xiigen.Flows.slnx
+      - name: Build .NET
+        run: dotnet build Xiigen.Flows.slnx --configuration Release --no-restore
+      - name: Test .NET
+        run: dotnet test Xiigen.Flows.slnx --configuration Release --no-build
+      - name: Install Angular
+        working-directory: flows/FLOW-00-bundle-activation/client/angular
+        run: npm ci
+      - name: Build Angular
+        working-directory: flows/FLOW-00-bundle-activation/client/angular
+        run: npm run build
+      - name: Test Angular
+        working-directory: flows/FLOW-00-bundle-activation/client/angular
+        run: npm test
+      - name: Capture visual evidence
+        working-directory: flows/FLOW-00-bundle-activation/client/angular
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath node -ArgumentList @('scripts/serve-flow00-dist.mjs') -PassThru -WindowStyle Hidden
+          try {
+            Start-Sleep -Seconds 5
+            node scripts/capture-flow00-evidence.mjs
+          } finally {
+            Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue
+          }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: flow-00-visual-evidence
+          path: docs/e2e-snapshots/bundle-activation/dotnet-angular/local/*.png

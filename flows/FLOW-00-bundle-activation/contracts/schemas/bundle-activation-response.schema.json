@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-00/contracts/schemas/bundle-activation-response.schema.json",
+  "title": "Bundle Activation Response",
+  "type": "object",
+  "required": [
+    "bundleId",
+    "status",
+    "validationPassed",
+    "bootstrapResults",
+    "freedomDefaultsApplied",
+    "outboxEventId",
+    "version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "bundleId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "degraded",
+        "pending",
+        "failed"
+      ]
+    },
+    "validationPassed": {
+      "type": "boolean"
+    },
+    "bootstrapResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "flowId",
+          "mode",
+          "succeeded"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "flowId": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "DRY_RUN",
+              "FULL"
+            ]
+          },
+          "succeeded": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "freedomDefaultsApplied": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outboxEventId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}

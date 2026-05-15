@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/.angular/
+**/.vscode/
+**/dist/
+**/TestResults/
+*.user
+*.log
+*.pid
+.vs/

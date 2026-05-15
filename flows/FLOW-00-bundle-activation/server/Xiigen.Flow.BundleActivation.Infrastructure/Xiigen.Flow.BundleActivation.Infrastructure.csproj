@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.BundleActivation.Application\Xiigen.Flow.BundleActivation.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.0" />
+  </ItemGroup>
+
+</Project>

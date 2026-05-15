@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.0" />
+  </ItemGroup>
+
+</Project>

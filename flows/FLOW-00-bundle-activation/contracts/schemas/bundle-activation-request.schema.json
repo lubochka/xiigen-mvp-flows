@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-00/contracts/schemas/bundle-activation-request.schema.json",
+  "title": "Bundle Activation Request",
+  "type": "object",
+  "required": [
+    "bundleId",
+    "requestedBy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "bundleId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requestedBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

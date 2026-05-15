@@ -1,0 +1,15 @@
+services:
+  bundle-activation-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      XIIGEN_ENVIRONMENT: local
+    ports:
+      - "5100:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
