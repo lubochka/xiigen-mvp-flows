@@ -1,0 +1,185 @@
+{
+    "status":  "PASS",
+    "flowId":  "FLOW-00",
+    "flowSlug":  "bundle-activation",
+    "completedAt":  "2026-05-15T13:22:28.9716404Z",
+    "officialCascadePoints":  [
+                                  "C0-source-flow",
+                                  "C1-tenant-a-installed",
+                                  "C2-tenant-a-adapted-published",
+                                  "C3-tenant-b-adapted-published",
+                                  "C4-tenant-c-adapted"
+                              ],
+    "requiredRoleCount":  3,
+    "requiredCellsPerRole":  3,
+    "requiredOfficialPngCount":  45,
+    "capturedOfficialPngCount":  45,
+    "marketplaceListingScreenshot":  "docs/e2e-snapshots/bundle-activation/dotnet-angular/C0-source-flow/marketplace-listing.png",
+    "visualMatrix":  {
+                         "C0-source-flow":  {
+                                                "pngCount":  9,
+                                                "files":  [
+                                                              "platform_admin-desktop-en.png",
+                                                              "platform_admin-desktop-he-rtl.png",
+                                                              "platform_admin-mobile-en.png",
+                                                              "platform_support-desktop-en.png",
+                                                              "platform_support-desktop-he-rtl.png",
+                                                              "platform_support-mobile-en.png",
+                                                              "tenant_admin-desktop-en.png",
+                                                              "tenant_admin-desktop-he-rtl.png",
+                                                              "tenant_admin-mobile-en.png"
+                                                          ]
+                                            },
+                         "C1-tenant-a-installed":  {
+                                                       "pngCount":  9,
+                                                       "files":  [
+                                                                     "platform_admin-desktop-en.png",
+                                                                     "platform_admin-desktop-he-rtl.png",
+                                                                     "platform_admin-mobile-en.png",
+                                                                     "platform_support-desktop-en.png",
+                                                                     "platform_support-desktop-he-rtl.png",
+                                                                     "platform_support-mobile-en.png",
+                                                                     "tenant_admin-desktop-en.png",
+                                                                     "tenant_admin-desktop-he-rtl.png",
+                                                                     "tenant_admin-mobile-en.png"
+                                                                 ]
+                                                   },
+                         "C2-tenant-a-adapted-published":  {
+                                                               "pngCount":  9,
+                                                               "files":  [
+                                                                             "platform_admin-desktop-en.png",
+                                                                             "platform_admin-desktop-he-rtl.png",
+                                                                             "platform_admin-mobile-en.png",
+                                                                             "platform_support-desktop-en.png",
+                                                                             "platform_support-desktop-he-rtl.png",
+                                                                             "platform_support-mobile-en.png",
+                                                                             "tenant_admin-desktop-en.png",
+                                                                             "tenant_admin-desktop-he-rtl.png",
+                                                                             "tenant_admin-mobile-en.png"
+                                                                         ]
+                                                           },
+                         "C3-tenant-b-adapted-published":  {
+                                                               "pngCount":  9,
+                                                               "files":  [
+                                                                             "platform_admin-desktop-en.png",
+                                                                             "platform_admin-desktop-he-rtl.png",
+                                                                             "platform_admin-mobile-en.png",
+                                                                             "platform_support-desktop-en.png",
+                                                                             "platform_support-desktop-he-rtl.png",
+                                                                             "platform_support-mobile-en.png",
+                                                                             "tenant_admin-desktop-en.png",
+                                                                             "tenant_admin-desktop-he-rtl.png",
+                                                                             "tenant_admin-mobile-en.png"
+                                                                         ]
+                                                           },
+                         "C4-tenant-c-adapted":  {
+                                                     "pngCount":  9,
+                                                     "files":  [
+                                                                   "platform_admin-desktop-en.png",
+                                                                   "platform_admin-desktop-he-rtl.png",
+                                                                   "platform_admin-mobile-en.png",
+                                                                   "platform_support-desktop-en.png",
+                                                                   "platform_support-desktop-he-rtl.png",
+                                                                   "platform_support-mobile-en.png",
+                                                                   "tenant_admin-desktop-en.png",
+                                                                   "tenant_admin-desktop-he-rtl.png",
+                                                                   "tenant_admin-mobile-en.png"
+                                                               ]
+                                                 }
+                     },
+    "extraInstallVisualEvidence":  {
+                                       "C3-tenant-b-installed":  {
+                                                                     "pngCount":  9,
+                                                                     "files":  [
+                                                                                   "platform_admin-desktop-en.png",
+                                                                                   "platform_admin-desktop-he-rtl.png",
+                                                                                   "platform_admin-mobile-en.png",
+                                                                                   "platform_support-desktop-en.png",
+                                                                                   "platform_support-desktop-he-rtl.png",
+                                                                                   "platform_support-mobile-en.png",
+                                                                                   "tenant_admin-desktop-en.png",
+                                                                                   "tenant_admin-desktop-he-rtl.png",
+                                                                                   "tenant_admin-mobile-en.png"
+                                                                               ]
+                                                                 },
+                                       "C4-tenant-c-installed":  {
+                                                                     "pngCount":  9,
+                                                                     "files":  [
+                                                                                   "platform_admin-desktop-en.png",
+                                                                                   "platform_admin-desktop-he-rtl.png",
+                                                                                   "platform_admin-mobile-en.png",
+                                                                                   "platform_support-desktop-en.png",
+                                                                                   "platform_support-desktop-he-rtl.png",
+                                                                                   "platform_support-mobile-en.png",
+                                                                                   "tenant_admin-desktop-en.png",
+                                                                                   "tenant_admin-desktop-he-rtl.png",
+                                                                                   "tenant_admin-mobile-en.png"
+                                                                               ]
+                                                                 }
+                                   },
+    "workflows":  {
+                      "tenantAInstalled":  {
+                                               "repo":  "https://github.com/lubochka/tenant-a--bundle-activation",
+                                               "cascadePoint":  "C1-tenant-a-installed",
+                                               "runId":  25918216592,
+                                               "status":  "completed",
+                                               "conclusion":  "success",
+                                               "url":  "https://github.com/lubochka/tenant-a--bundle-activation/actions/runs/25918216592",
+                                               "headSha":  "302cc0b677882ea6726999e854951e16ea67542a"
+                                           },
+                      "tenantAAdapted":  {
+                                             "repo":  "https://github.com/lubochka/tenant-a--tenant-a-activation",
+                                             "cascadePoint":  "C2-tenant-a-adapted-published",
+                                             "runId":  25918216575,
+                                             "status":  "completed",
+                                             "conclusion":  "success",
+                                             "url":  "https://github.com/lubochka/tenant-a--tenant-a-activation/actions/runs/25918216575",
+                                             "headSha":  "0f5cea53bad3693cc2b6fabe424085d1b068b654"
+                                         },
+                      "tenantBInstalled":  {
+                                               "repo":  "https://github.com/lubochka/tenant-b--tenant-a-activation",
+                                               "cascadePoint":  "C3-tenant-b-installed",
+                                               "runId":  25918646678,
+                                               "status":  "completed",
+                                               "conclusion":  "success",
+                                               "url":  "https://github.com/lubochka/tenant-b--tenant-a-activation/actions/runs/25918646678",
+                                               "headSha":  "7e089fc1dc4b6f13876d5e2d4e3ffcc7767dba7c"
+                                           },
+                      "tenantBAdapted":  {
+                                             "repo":  "https://github.com/lubochka/tenant-b--tenant-b-activation",
+                                             "cascadePoint":  "C3-tenant-b-adapted-published",
+                                             "runId":  25919173881,
+                                             "status":  "completed",
+                                             "conclusion":  "success",
+                                             "url":  "https://github.com/lubochka/tenant-b--tenant-b-activation/actions/runs/25919173881",
+                                             "headSha":  "857898ddecc953a44c16377d4e0b2c4ef63b3b67"
+                                         },
+                      "tenantCInstalled":  {
+                                               "repo":  "https://github.com/lubochka/tenant-c--tenant-b-activation",
+                                               "cascadePoint":  "C4-tenant-c-installed",
+                                               "runId":  25919325698,
+                                               "status":  "completed",
+                                               "conclusion":  "success",
+                                               "url":  "https://github.com/lubochka/tenant-c--tenant-b-activation/actions/runs/25919325698",
+                                               "headSha":  "287dd60ee01763bacce7382dc4e6a2d229ca2f56"
+                                           },
+                      "tenantCAdapted":  {
+                                             "repo":  "https://github.com/lubochka/tenant-c--tenant-c-activation",
+                                             "cascadePoint":  "C4-tenant-c-adapted",
+                                             "runId":  25919711505,
+                                             "status":  "completed",
+                                             "conclusion":  "success",
+                                             "url":  "https://github.com/lubochka/tenant-c--tenant-c-activation/actions/runs/25919711505",
+                                             "headSha":  "6e8c0e95a70d84e2e2ad586c3aae3b14c773d8d2"
+                                         }
+                  },
+    "packagePublishReadbacks":  [
+                                    "docs/translation-evidence/FLOW-00/source-package-readback.json",
+                                    "docs/translation-evidence/FLOW-00/tenant-a-adapted-publish-readback.json",
+                                    "docs/translation-evidence/FLOW-00/tenant-b-adapted-publish-readback.json",
+                                    "docs/translation-evidence/FLOW-00/tenant-c-adapted-publish-readback.json"
+                                ],
+    "crossTenantJwtIsolation":  "docs/translation-evidence/FLOW-00/cross-tenant-jwt-isolation.json",
+    "finalReportAllowed":  true,
+    "tierDComplete":  true
+}

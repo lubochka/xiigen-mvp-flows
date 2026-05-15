@@ -1,0 +1,35 @@
+{
+    "flowId":  "FLOW-00",
+    "flowSlug":  "bundle-activation",
+    "evidenceType":  "layer8-marketplace-preflight",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-15T11:58:28.2779851Z",
+    "platformRepo":  "C:\\Projects\\xiigen-platform-dot-net-angular",
+    "flowRepo":  "C:\\Projects\\xiigen-flows-dot-net-angular",
+    "platformArtifacts":  [
+                              "src/Xiigen.Platform.Marketplace",
+                              "src/Xiigen.Platform.Api",
+                              "docker-compose.platform.yml"
+                          ],
+    "commands":  [
+                     "dotnet restore",
+                     "dotnet build -c Release --no-restore",
+                     "dotnet test -c Release --no-build",
+                     "docker compose -f docker-compose.platform.yml config",
+                     "docker compose -f docker-compose.platform.yml build platform-api",
+                     "docker compose -f docker-compose.platform.yml up -d platform-api",
+                     "GET http://127.0.0.1:5080/health/ready",
+                     "POST http://127.0.0.1:5080/api/marketplace/listings",
+                     "GET http://127.0.0.1:5080/marketplace",
+                     "Playwright screenshot capture for marketplace listing"
+                 ],
+    "results":  {
+                    "platformTestsPassed":  11,
+                    "platformTestsFailed":  0,
+                    "platformDockerApiReady":  200,
+                    "marketplaceListingContainsFlow00":  true,
+                    "screenshot":  "docs/e2e-snapshots/bundle-activation/dotnet-angular/C0-source-flow/marketplace-listing.png"
+                },
+    "finalCompletion":  false,
+    "finalReportAllowed":  false
+}

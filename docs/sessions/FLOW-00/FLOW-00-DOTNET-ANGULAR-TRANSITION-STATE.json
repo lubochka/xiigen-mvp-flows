@@ -1,74 +1,153 @@
 {
-  "flowId": "FLOW-00",
-  "flowSlug": "bundle-activation",
-  "phase": "FLOW-00 implementation",
-  "tierCurrentCeiling": "Tier A",
-  "baseline": {
-    "sourceRead": true,
-    "coverageDocsRead": true,
-    "stateVerifiedAt": "2026-05-15T09:20:00Z"
-  },
-  "contractParity": {
-    "status": "PASS",
-    "artifacts": [
-      "flows/FLOW-00-bundle-activation/contracts/endpoints/flow-endpoints.json",
-      "flows/FLOW-00-bundle-activation/contracts/auth/auth-policy-registry.json",
-      "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-request.schema.json",
-      "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-response.schema.json"
-    ]
-  },
-  "dotnetServer": {
-    "status": "PASS",
-    "tests": {
-      "command": "dotnet test Xiigen.Flows.slnx -c Release --no-build",
-      "passed": 8,
-      "failed": 0
-    }
-  },
-  "angularClient": {
-    "status": "PASS",
-    "tests": {
-      "buildCommand": "npm run build",
-      "testCommand": "npm test",
-      "passed": 5,
-      "failed": 0
-    }
-  },
-  "liveAuth": {
-    "status": "PASS",
-    "matrix": [
-      "missing-token-401",
-      "wrong-role-403",
-      "tenant-admin-201",
-      "platform-admin-201"
-    ]
-  },
-  "visualEvidence": {
-    "status": "PASS",
-    "pngCount": 4,
-    "paths": [
-      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-en.png",
-      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-admin-mobile-en.png",
-      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-support-desktop-en.png",
-      "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-he-rtl.png"
-    ]
-  },
-  "dockerIntegration": {
-    "status": "PASS",
-    "commands": [
-      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml config",
-      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml build bundle-activation-api",
-      "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml up -d bundle-activation-api"
-    ],
-    "health": "healthy",
-    "hostReadyStatus": 200
-  },
-  "codeReview": {
-    "status": "PASS",
-    "technicalDebt": []
-  },
-  "qaReview": {
-    "status": "APPROVED",
-    "report": "docs/translation-evidence/FLOW-00/qa-report.md"
-  }
+    "flowId":  "FLOW-00",
+    "flowSlug":  "bundle-activation",
+    "phase":  "FLOW-00 Tier D complete",
+    "tierCurrentCeiling":  "Tier D",
+    "baseline":  {
+                     "sourceRead":  true,
+                     "coverageDocsRead":  true,
+                     "stateVerifiedAt":  "2026-05-15T09:20:00Z"
+                 },
+    "contractParity":  {
+                           "status":  "PASS",
+                           "artifacts":  [
+                                             "flows/FLOW-00-bundle-activation/contracts/endpoints/flow-endpoints.json",
+                                             "flows/FLOW-00-bundle-activation/contracts/auth/auth-policy-registry.json",
+                                             "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-request.schema.json",
+                                             "flows/FLOW-00-bundle-activation/contracts/schemas/bundle-activation-response.schema.json"
+                                         ]
+                       },
+    "dotnetServer":  {
+                         "status":  "PASS",
+                         "tests":  {
+                                       "command":  "dotnet test Xiigen.Flows.slnx -c Release --no-build",
+                                       "passed":  8,
+                                       "failed":  0
+                                   }
+                     },
+    "platformFabricRetrofit":  {
+                                   "status":  "PASS",
+                                   "platformRepo":  "C:\\Projects\\xiigen-platform-dot-net-angular",
+                                   "flowRepo":  "C:\\Projects\\xiigen-flows-dot-net-angular",
+                                   "packages":  [
+                                                    "Xiigen.Kernel.0.1.1.nupkg",
+                                                    "Xiigen.Fabrics.InMemory.0.1.1.nupkg",
+                                                    "Xiigen.Platform.Marketplace.0.1.0.nupkg"
+                                                ],
+                                   "flowLocalProvidersRemoved":  [
+                                                                     "InMemoryDocumentStore.cs",
+                                                                     "InMemoryIdempotencyStore.cs",
+                                                                     "InMemoryOutboxStore.cs",
+                                                                     "StubFlowBootstrapper.cs"
+                                                                 ],
+                                   "platformVerification":  {
+                                                                "restore":  "PASS",
+                                                                "build":  "PASS",
+                                                                "testsPassed":  11,
+                                                                "testsFailed":  0
+                                                            },
+                                   "flowVerification":  {
+                                                            "restoreLockedMode":  "PASS",
+                                                            "build":  "PASS",
+                                                            "testsPassed":  8,
+                                                            "testsFailed":  0,
+                                                            "dockerHealthReady":  200
+                                                        }
+                               },
+    "angularClient":  {
+                          "status":  "PASS",
+                          "tests":  {
+                                        "buildCommand":  "npm run build",
+                                        "testCommand":  "npm test",
+                                        "passed":  5,
+                                        "failed":  0
+                                    }
+                      },
+    "liveAuth":  {
+                     "status":  "PASS",
+                     "matrix":  [
+                                    "missing-token-401",
+                                    "wrong-role-403",
+                                    "tenant-admin-201",
+                                    "platform-admin-201"
+                                ]
+                 },
+    "visualEvidence":  {
+                           "status":  "PASS",
+                           "pngCount":  45,
+                           "paths":  [
+                                         "C0-source-flow",
+                                         "C1-tenant-a-installed",
+                                         "C2-tenant-a-adapted-published",
+                                         "C3-tenant-b-adapted-published",
+                                         "C4-tenant-c-adapted"
+                                     ]
+                       },
+    "dockerIntegration":  {
+                              "status":  "PASS",
+                              "commands":  [
+                                               "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml config",
+                                               "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml build bundle-activation-api",
+                                               "docker compose -f flows/FLOW-00-bundle-activation/docker/docker-compose.flow.yml up -d bundle-activation-api"
+                                           ],
+                              "health":  "healthy",
+                              "hostReadyStatus":  200
+                          },
+    "codeReview":  {
+                       "status":  "PASS",
+                       "technicalDebt":  [
+
+                                         ]
+                   },
+    "qaReview":  {
+                     "status":  "APPROVED",
+                     "report":  "docs/translation-evidence/FLOW-00/qa-report.md",
+                     "reason":  "Tier D completed: full marketplace cascade, 45 required PNGs, cross-tenant JWT isolation, code review, and QA review are green."
+                 },
+    "portabilityTier":  "Tier D",
+    "finalReportAllowed":  true,
+    "tierDComplete":  true,
+    "layer8":  {
+                   "status":  "PASS",
+                   "requiredForFinalReport":  true,
+                   "missingEvidence":  [
+
+                                       ],
+                   "preflight":  {
+                                     "status":  "PASS",
+                                     "adaptationSurfaceManifestFields":  "PASS",
+                                     "platformMarketplaceApi":  "PASS",
+                                     "platformMarketplaceUiScreenshot":  "PASS",
+                                     "localDockerPlatformApi":  "PASS",
+                                     "sourcePackagePublishReadback":  "PASS"
+                                 },
+                   "cascadeEvidence":  "docs/translation-evidence/FLOW-00/layer8-cascade-evidence.json",
+                   "crossTenantJwtIsolation":  "docs/translation-evidence/FLOW-00/cross-tenant-jwt-isolation.json"
+               },
+    "platformMarketplacePreflight":  {
+                                         "status":  "PASS",
+                                         "platformApiProject":  "C:\\Projects\\xiigen-platform-dot-net-angular\\src\\Xiigen.Platform.Api\\Xiigen.Platform.Api.csproj",
+                                         "marketplacePackage":  "C:\\Projects\\xiigen-platform-dot-net-angular\\src\\Xiigen.Platform.Marketplace\\Xiigen.Platform.Marketplace.csproj",
+                                         "dockerCompose":  "C:\\Projects\\xiigen-platform-dot-net-angular\\docker-compose.platform.yml",
+                                         "liveApiHealthReady":  200,
+                                         "dockerComposePlatformApiReady":  200,
+                                         "marketplaceListingApi":  "PASS",
+                                         "marketplaceListingUi":  "PASS",
+                                         "screenshot":  "docs/e2e-snapshots/bundle-activation/dotnet-angular/C0-source-flow/marketplace-listing.png"
+                                     },
+    "sourcePackageReadback":  {
+                                  "status":  "PASS",
+                                  "registry":  "http://127.0.0.1:5555/v3/index.json",
+                                  "packagesPushed":  [
+                                                         "Xiigen.Kernel.0.1.1.nupkg",
+                                                         "Xiigen.Fabrics.InMemory.0.1.1.nupkg",
+                                                         "Xiigen.Platform.Marketplace.0.1.0.nupkg",
+                                                         "Xiigen.Flow.BundleActivation.Application.0.1.1.nupkg",
+                                                         "Xiigen.Flow.BundleActivation.Infrastructure.0.1.1.nupkg"
+                                                     ],
+                                  "readbackPackage":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                                  "readbackVersion":  "0.1.1",
+                                  "tempProjectRestore":  "PASS",
+                                  "marketplaceReadbackEndpoint":  "PASS"
+                              }
 }

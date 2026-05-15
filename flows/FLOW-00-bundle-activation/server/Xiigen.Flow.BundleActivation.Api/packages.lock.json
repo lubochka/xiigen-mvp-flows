@@ -2,22 +2,31 @@
   "version": 1,
   "dependencies": {
     "net10.0": {
+      "Xiigen.Fabrics.InMemory": {
+        "type": "Transitive",
+        "resolved": "0.1.1",
+        "contentHash": "KuvBOBVySdhBa1U+t1eU/m3K/Iuzqdjl1pauNcg2tcxxTjlD+zF3cyaXxlfxIrtB15kJu+PrxU1WPr3k81TP7g==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
       "Xiigen.Kernel": {
         "type": "Transitive",
-        "resolved": "0.1.0",
-        "contentHash": "YQtB6y6XvgR7WgrQ+KnaSrA0wT7AZsO9JlV7uPREYUY94nM/Gb2rPHGD8O1GQJYGLZBZsB65QZj5AHwFsGemFw=="
+        "resolved": "0.1.1",
+        "contentHash": "2NolkCK3OwCa05qdN8RvDZiJ4AhYA3K7o+zrTECeehxWJqs9tOoK+qIZB297GJjV15oMMwYlC6EMHYzgUqBHHg=="
       },
       "xiigen.flow.bundleactivation.application": {
         "type": "Project",
         "dependencies": {
-          "Xiigen.Kernel": "[0.1.0, )"
+          "Xiigen.Kernel": "[0.1.1, )"
         }
       },
       "xiigen.flow.bundleactivation.infrastructure": {
         "type": "Project",
         "dependencies": {
+          "Xiigen.Fabrics.InMemory": "[0.1.1, )",
           "Xiigen.Flow.BundleActivation.Application": "[1.0.0, )",
-          "Xiigen.Kernel": "[0.1.0, )"
+          "Xiigen.Kernel": "[0.1.1, )"
         }
       }
     }

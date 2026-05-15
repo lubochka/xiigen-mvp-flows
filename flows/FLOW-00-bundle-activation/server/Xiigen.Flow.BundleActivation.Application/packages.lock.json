@@ -4,9 +4,9 @@
     "net10.0": {
       "Xiigen.Kernel": {
         "type": "Direct",
-        "requested": "[0.1.0, )",
-        "resolved": "0.1.0",
-        "contentHash": "YQtB6y6XvgR7WgrQ+KnaSrA0wT7AZsO9JlV7uPREYUY94nM/Gb2rPHGD8O1GQJYGLZBZsB65QZj5AHwFsGemFw==",
+        "requested": "[0.1.1, )",
+        "resolved": "0.1.1",
+        "contentHash": "2NolkCK3OwCa05qdN8RvDZiJ4AhYA3K7o+zrTECeehxWJqs9tOoK+qIZB297GJjV15oMMwYlC6EMHYzgUqBHHg==",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0"
         }

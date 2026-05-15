@@ -48,6 +48,14 @@ app.MapPost(BundleActivationConstants.DynamicEndpoint, async (
         return Results.Json(new { code = "AUTH_MISSING_TOKEN" }, statusCode: StatusCodes.Status401Unauthorized);
     }
 
+    var token = auth.ToString()["Bearer ".Length..];
+    if (TryReadTenantFromLocalTestToken(token, out var tokenTenant) &&
+        context.Request.Headers.TryGetValue("X-Tenant-Id", out var requestTenant) &&
+        !string.Equals(tokenTenant, requestTenant.ToString(), StringComparison.Ordinal))
+    {
+        return Results.Json(new { code = "AUTH_CROSS_TENANT_TOKEN" }, statusCode: StatusCodes.Status401Unauthorized);
+    }
+
     var role = context.Request.Headers.TryGetValue("X-Role", out var roleHeader)
         ? roleHeader.ToString()
         : string.Empty;
@@ -143,6 +151,21 @@ static async Task EnsureSeedDataAsync(IDocumentStore documents, CancellationToke
         "FLOW-02",
         new Dictionary<string, object?> { ["flowId"] = "FLOW-02", ["version"] = "v1", ["status"] = "READY" },
         cancellationToken: cancellationToken).ConfigureAwait(false);
+}
+
+static bool TryReadTenantFromLocalTestToken(string token, out string tenantId)
+{
+    const string prefix = "tenant:";
+    tenantId = string.Empty;
+    if (!token.StartsWith(prefix, StringComparison.Ordinal))
+    {
+        return false;
+    }
+
+    var remainder = token[prefix.Length..];
+    var separator = remainder.IndexOf(':', StringComparison.Ordinal);
+    tenantId = separator >= 0 ? remainder[..separator] : remainder;
+    return tenantId.Length > 0;
 }
 
 public partial class Program;

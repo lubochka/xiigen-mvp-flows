@@ -1,0 +1,105 @@
+{
+    "status":  "PASS",
+    "cascadePoint":  "C4-tenant-c-adapted",
+    "repo":  "https://github.com/lubochka/tenant-c--tenant-c-activation",
+    "workflowRun":  "https://github.com/lubochka/tenant-c--tenant-c-activation/actions/runs/25919513147",
+    "packagesPushed":  [
+                           "Xiigen.Flow.BundleActivation.Application.0.1.4.nupkg",
+                           "Xiigen.Flow.BundleActivation.Infrastructure.0.1.4.nupkg"
+                       ],
+    "registry":  "http://127.0.0.1:5555/v3/index.json",
+    "tempProjectRestore":  "PASS",
+    "marketplacePublish":  {
+                               "id":  "bundle-activation:0.1.4",
+                               "flowId":  "FLOW-00",
+                               "flowSlug":  "bundle-activation",
+                               "version":  "0.1.4",
+                               "moduleName":  "tenant-c-activation",
+                               "sourceRepo":  "https://github.com/lubochka/tenant-c--tenant-c-activation",
+                               "sourcePath":  "flows/FLOW-00-bundle-activation",
+                               "commitHash":  "f35a473848d403dc9fdaf2fe3aa3261f7ecb7504",
+                               "publisherTenantId":  "platform",
+                               "status":  "listed",
+                               "packages":  [
+                                                {
+                                                    "packageId":  "Xiigen.Flow.BundleActivation.Application",
+                                                    "version":  "0.1.4",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                },
+                                                {
+                                                    "packageId":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                                                    "version":  "0.1.4",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                }
+                                            ],
+                               "metadata":  {
+                                                "tenantId":  "tenant-c",
+                                                "adaptationFreedomKey":  "flow_module_name",
+                                                "previousModuleName":  "tenant-b-activation",
+                                                "cascadePoint":  "C4-tenant-c-adapted"
+                                            },
+                               "adaptationHistory":  [
+
+                                                     ],
+                               "createdAt":  "2026-05-15T13:12:49.4040882+00:00",
+                               "updatedAt":  "2026-05-15T13:12:49.4040882+00:00",
+                               "correlationId":  "corr-0625639513734b149700567b56993d8f"
+                           },
+    "packageReadback":  {
+                            "id":  "bundle-activation:0.1.4:nuget:Xiigen.Flow.BundleActivation.Infrastructure",
+                            "flowSlug":  "bundle-activation",
+                            "version":  "0.1.4",
+                            "packageId":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                            "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                            "packageKind":  "nuget",
+                            "found":  true,
+                            "metadata":  {
+                                             "nugetHttpCacheCleared":  true,
+                                             "restoreProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow00-c4-nuget-readback",
+                                             "cascadePoint":  "C4-tenant-c-adapted"
+                                         },
+                            "tenantId":  "platform",
+                            "verifiedAt":  "2026-05-15T13:12:49.4326951+00:00",
+                            "correlationId":  "corr-3ec0e9f6107c42afb8118d2c38c6bcb0"
+                        },
+    "marketplaceListing":  {
+                               "id":  "bundle-activation:0.1.4",
+                               "flowId":  "FLOW-00",
+                               "flowSlug":  "bundle-activation",
+                               "version":  "0.1.4",
+                               "moduleName":  "tenant-c-activation",
+                               "sourceRepo":  "https://github.com/lubochka/tenant-c--tenant-c-activation",
+                               "sourcePath":  "flows/FLOW-00-bundle-activation",
+                               "commitHash":  "f35a473848d403dc9fdaf2fe3aa3261f7ecb7504",
+                               "publisherTenantId":  "platform",
+                               "status":  "listed",
+                               "packages":  [
+                                                {
+                                                    "packageId":  "Xiigen.Flow.BundleActivation.Application",
+                                                    "version":  "0.1.4",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                },
+                                                {
+                                                    "packageId":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                                                    "version":  "0.1.4",
+                                                    "registryUrl":  "http://127.0.0.1:5555/v3/index.json",
+                                                    "packageKind":  "nuget"
+                                                }
+                                            ],
+                               "metadata":  {
+                                                "tenantId":  "tenant-c",
+                                                "adaptationFreedomKey":  "flow_module_name",
+                                                "previousModuleName":  "tenant-b-activation",
+                                                "cascadePoint":  "C4-tenant-c-adapted"
+                                            },
+                               "adaptationHistory":  [
+
+                                                     ],
+                               "createdAt":  "2026-05-15T13:12:49.4040882+00:00",
+                               "updatedAt":  "2026-05-15T13:12:49.4040882+00:00",
+                               "correlationId":  "corr-0625639513734b149700567b56993d8f"
+                           }
+}

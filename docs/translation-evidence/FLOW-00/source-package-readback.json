@@ -1,0 +1,31 @@
+{
+    "flowId":  "FLOW-00",
+    "flowSlug":  "bundle-activation",
+    "evidenceType":  "source-package-publish-readback",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-15T12:07:31.2175149Z",
+    "registry":  "http://127.0.0.1:5555/v3/index.json",
+    "nugetConfig":  "C:\\Projects\\xiigen-platform-dot-net-angular\\tools\\devops\\nuget\\NuGet.Local.Config",
+    "packagesPushed":  [
+                           "Xiigen.Kernel.0.1.1.nupkg",
+                           "Xiigen.Fabrics.InMemory.0.1.1.nupkg",
+                           "Xiigen.Platform.Marketplace.0.1.0.nupkg",
+                           "Xiigen.Flow.BundleActivation.Application.0.1.1.nupkg",
+                           "Xiigen.Flow.BundleActivation.Infrastructure.0.1.1.nupkg"
+                       ],
+    "readback":  {
+                     "packageId":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                     "version":  "0.1.1",
+                     "tempProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow00-nuget-readback",
+                     "restore":  "PASS",
+                     "dependencyResolved":  "Xiigen.Flow.BundleActivation.Application 0.1.1"
+                 },
+    "marketplaceReadbackEndpoint":  {
+                                        "url":  "http://127.0.0.1:5080/api/marketplace/readbacks",
+                                        "status":  "PASS",
+                                        "packageId":  "Xiigen.Flow.BundleActivation.Infrastructure",
+                                        "found":  true
+                                    },
+    "finalCompletion":  false,
+    "finalReportAllowed":  false
+}

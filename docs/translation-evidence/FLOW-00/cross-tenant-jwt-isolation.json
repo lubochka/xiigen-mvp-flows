@@ -1,0 +1,17 @@
+{
+    "status":  "PASS",
+    "checkedAt":  "2026-05-15T13:20:51.7801602Z",
+    "sameTenant":  {
+                       "tokenTenant":  "tenant-c",
+                       "requestTenant":  "tenant-c",
+                       "status":  201
+                   },
+    "crossTenant":  {
+                        "expected":  "401",
+                        "tokenTenant":  "tenant-b",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}",
+                        "requestTenant":  "tenant-c",
+                        "status":  401
+                    },
+    "route":  "/api/dynamic/bundle-activation"
+}

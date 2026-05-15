@@ -1,11 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Xiigen.Flow.BundleActivation.Infrastructure</PackageId>
+    <Version>0.1.1</Version>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xiigen.Flow.BundleActivation.Application\Xiigen.Flow.BundleActivation.Application.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Xiigen.Kernel" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Fabrics.InMemory" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.1" />
   </ItemGroup>
-
 </Project>

@@ -1,51 +1,87 @@
 {
-  "flowId": "FLOW-00",
-  "flowSlug": "bundle-activation",
-  "sourceDocs": [
-    "docs/flow-coverage/bundle-activation/P1-business-logic-inventory.md",
-    "docs/flow-coverage/bundle-activation/P3-automation-gap-analysis.md",
-    "docs/flow-coverage/bundle-activation/P5-ui-specs.md",
-    "docs/flow-coverage/bundle-activation/P9-edge-cases.md",
-    "docs/flow-coverage/bundle-activation/P10-server-specs.md",
-    "docs/flow-coverage/bundle-activation/P11-impl-readiness.md"
-  ],
-  "cfRulesImplemented": [
-    "CF-842",
-    "CF-843",
-    "CF-844",
-    "CF-845",
-    "CF-846",
-    "CF-847",
-    "CF-848",
-    "CF-849"
-  ],
-  "serverContractsImplemented": [
-    "POST /api/dynamic/bundle-activation",
-    "GET /health/live",
-    "GET /health/ready"
-  ],
-  "testOracleCoverage": {
-    "concurrency409": "BundleActivationServiceTests.ActivateAsync_ReturnsConcurrentUpdateForStaleVersion",
-    "idempotencyReplay200": "BundleActivationServiceTests.ActivateAsync_ReplaysCachedResponseForSameIdempotencyKey",
-    "validation400NoPartialWrite": "BundleActivationServiceTests.ActivateAsync_RejectsBoundaryValidationWithoutPartialWrite",
-    "timeout504OutboxRetained": "BundleActivationServiceTests.ActivateAsync_TimeoutRetainsOutboxRecord",
-    "dryRunBeforeFull": "BundleActivationServiceTests.ActivateAsync_StoresBeforeOutboxAndRunsDryRunBeforeFull",
-    "bundleStatusTracker": "BundleActivationServiceTests.StatusTracker_UpdatesAllBundlesContainingRegeneratedFlow"
-  },
-  "angularCoverage": {
-    "tenantAdminWizard": true,
-    "platformAdminConsole": true,
-    "platformSupportReadOnly": true,
-    "anonymousUnavailable": true,
-    "rtlEvidence": true
-  },
-  "visualEvidence": [
-    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-en.png",
-    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-admin-mobile-en.png",
-    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/platform-support-desktop-en.png",
-    "docs/e2e-snapshots/bundle-activation/dotnet-angular/local/tenant-admin-desktop-he-rtl.png"
-  ],
-  "technicalDebt": [],
-  "futurePhase": [],
-  "status": "PASS"
+    "flowId":  "FLOW-00",
+    "flowSlug":  "bundle-activation",
+    "sourceDocs":  [
+                       "docs/flow-coverage/bundle-activation/P1-business-logic-inventory.md",
+                       "docs/flow-coverage/bundle-activation/P3-automation-gap-analysis.md",
+                       "docs/flow-coverage/bundle-activation/P5-ui-specs.md",
+                       "docs/flow-coverage/bundle-activation/P9-edge-cases.md",
+                       "docs/flow-coverage/bundle-activation/P10-server-specs.md",
+                       "docs/flow-coverage/bundle-activation/P11-impl-readiness.md"
+                   ],
+    "cfRulesImplemented":  [
+                               "CF-842",
+                               "CF-843",
+                               "CF-844",
+                               "CF-845",
+                               "CF-846",
+                               "CF-847",
+                               "CF-848",
+                               "CF-849"
+                           ],
+    "serverContractsImplemented":  [
+                                       "POST /api/dynamic/bundle-activation",
+                                       "GET /health/live",
+                                       "GET /health/ready"
+                                   ],
+    "testOracleCoverage":  {
+                               "concurrency409":  "BundleActivationServiceTests.ActivateAsync_ReturnsConcurrentUpdateForStaleVersion",
+                               "idempotencyReplay200":  "BundleActivationServiceTests.ActivateAsync_ReplaysCachedResponseForSameIdempotencyKey",
+                               "validation400NoPartialWrite":  "BundleActivationServiceTests.ActivateAsync_RejectsBoundaryValidationWithoutPartialWrite",
+                               "timeout504OutboxRetained":  "BundleActivationServiceTests.ActivateAsync_TimeoutRetainsOutboxRecord",
+                               "dryRunBeforeFull":  "BundleActivationServiceTests.ActivateAsync_StoresBeforeOutboxAndRunsDryRunBeforeFull",
+                               "bundleStatusTracker":  "BundleActivationServiceTests.StatusTracker_UpdatesAllBundlesContainingRegeneratedFlow"
+                           },
+    "angularCoverage":  {
+                            "tenantAdminWizard":  true,
+                            "platformAdminConsole":  true,
+                            "platformSupportReadOnly":  true,
+                            "anonymousUnavailable":  true,
+                            "rtlEvidence":  true
+                        },
+    "visualEvidence":  [
+                           "docs/e2e-snapshots/bundle-activation/dotnet-angular/C0-source-flow",
+                           "docs/e2e-snapshots/bundle-activation/dotnet-angular/C1-tenant-a-installed",
+                           "docs/e2e-snapshots/bundle-activation/dotnet-angular/C2-tenant-a-adapted-published",
+                           "docs/e2e-snapshots/bundle-activation/dotnet-angular/C3-tenant-b-adapted-published",
+                           "docs/e2e-snapshots/bundle-activation/dotnet-angular/C4-tenant-c-adapted"
+                       ],
+    "technicalDebt":  [
+
+                      ],
+    "futurePhase":  [
+
+                    ],
+    "platformFabricRetrofit":  {
+                                   "status":  "PASS",
+                                   "platformPackages":  [
+                                                            "Xiigen.Kernel 0.1.1",
+                                                            "Xiigen.Fabrics.InMemory 0.1.1",
+                                                            "Xiigen.Platform.Marketplace 0.1.0"
+                                                        ],
+                                   "flowLocalInfrastructureProvidersRemoved":  true,
+                                   "flowLocalProviderFilesRemoved":  [
+                                                                         "flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/InMemoryDocumentStore.cs",
+                                                                         "flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/InMemoryIdempotencyStore.cs",
+                                                                         "flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/InMemoryOutboxStore.cs",
+                                                                         "flows/FLOW-00-bundle-activation/server/Xiigen.Flow.BundleActivation.Infrastructure/StubFlowBootstrapper.cs"
+                                                                     ]
+                               },
+    "status":  "TIER_D_PASS",
+    "finalCompletion":  true,
+    "finalReportAllowed":  true,
+    "tierDRequiredEvidence":  [
+
+                              ],
+    "marketplaceLayer8Preflight":  {
+                                       "status":  "PASS",
+                                       "platformApiHealth":  "PASS",
+                                       "dockerPlatformApiHealth":  "PASS",
+                                       "marketplaceListingApi":  "PASS",
+                                       "marketplaceListingUiScreenshot":  "docs/e2e-snapshots/bundle-activation/dotnet-angular/C0-source-flow/marketplace-listing.png",
+                                       "finalCompletion":  true,
+                                       "sourcePackageReadback":  "PASS"
+                                   },
+    "layer8CascadeEvidence":  "docs/translation-evidence/FLOW-00/layer8-cascade-evidence.json",
+    "crossTenantJwtIsolation":  "docs/translation-evidence/FLOW-00/cross-tenant-jwt-isolation.json"
 }

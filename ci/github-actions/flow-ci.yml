@@ -32,9 +32,14 @@ jobs:
       - name: Test Angular
         working-directory: flows/FLOW-00-bundle-activation/client/angular
         run: npm test
+      - name: Install Playwright Chromium
+        working-directory: flows/FLOW-00-bundle-activation/client/angular
+        run: npx playwright install chromium
       - name: Capture visual evidence
         working-directory: flows/FLOW-00-bundle-activation/client/angular
         shell: pwsh
+        env:
+          XIIGEN_CASCADE_POINT: C0-source-flow
         run: |
           $p = Start-Process -FilePath node -ArgumentList @('scripts/serve-flow00-dist.mjs') -PassThru -WindowStyle Hidden
           try {
@@ -46,4 +51,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: flow-00-visual-evidence
-          path: docs/e2e-snapshots/bundle-activation/dotnet-angular/local/*.png
+          path: docs/e2e-snapshots/bundle-activation/dotnet-angular/**/*.png

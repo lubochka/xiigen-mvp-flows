@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Logging.Abstractions;
 using Xiigen.Flow.BundleActivation.Application;
-using Xiigen.Flow.BundleActivation.Infrastructure;
+using Xiigen.Fabrics.InMemory;
 using Xiigen.Kernel;
 
 namespace Xiigen.Flow.BundleActivation.Tests;
@@ -169,7 +169,7 @@ public sealed class BundleActivationServiceTests
         private FlowFixture(
             InMemoryDocumentStore documents,
             InMemoryOutboxStore outbox,
-            StubFlowBootstrapper flowBootstrapper,
+            InMemoryFlowBootstrapper flowBootstrapper,
             BundleActivationService service,
             BundleStatusTrackerService statusTracker,
             ITenantContextAccessor tenantContextAccessor,
@@ -186,7 +186,7 @@ public sealed class BundleActivationServiceTests
 
         public InMemoryDocumentStore Documents { get; }
         public InMemoryOutboxStore Outbox { get; }
-        public StubFlowBootstrapper FlowBootstrapper { get; }
+        public InMemoryFlowBootstrapper FlowBootstrapper { get; }
         public BundleActivationService Service { get; }
         public BundleStatusTrackerService StatusTracker { get; }
         private ITenantContextAccessor TenantContextAccessor { get; }
@@ -204,7 +204,7 @@ public sealed class BundleActivationServiceTests
             var documents = new InMemoryDocumentStore();
             var idempotency = new InMemoryIdempotencyStore();
             var outbox = new InMemoryOutboxStore();
-            var bootstrapper = new StubFlowBootstrapper();
+            var bootstrapper = new InMemoryFlowBootstrapper();
             var tenantAccessor = new AsyncLocalTenantContextAccessor();
             var correlationAccessor = new AsyncLocalCorrelationContextAccessor();
             var validator = new BundleValidatorService(documents, outbox, tenantAccessor, correlationAccessor, NullLogger<BundleValidatorService>.Instance);
