@@ -1,0 +1,200 @@
+<main class="attendance-shell" data-testid="page-event-attendance">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'אירועים ונוכחות' : 'Event attendance' }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          הרשמה, רשימת המתנה, כניסה ומשוב אחרי האירוע במסך עבודה אחד.
+        } @else {
+          RSVP, waitlist, check-in, and post-event feedback in one operator surface.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Attendance states">
+    <button type="button" [class.active]="screenState() === 'rsvp'" (click)="setScreenState('rsvp')">
+      <span>1</span>{{ language() === 'he' ? 'הרשמה' : 'RSVP' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'waitlist'" (click)="setScreenState('waitlist')">
+      <span>2</span>{{ language() === 'he' ? 'המתנה' : 'Waitlist' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'checkin'" (click)="setScreenState('checkin')">
+      <span>3</span>{{ language() === 'he' ? 'כניסה' : 'Check-in' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'feedback'" (click)="setScreenState('feedback')">
+      <span>4</span>{{ language() === 'he' ? 'משוב' : 'Feedback' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'dashboard'" (click)="setScreenState('dashboard')">
+      <span>5</span>{{ language() === 'he' ? 'לוח' : 'Dashboard' }}
+    </button>
+  </nav>
+
+  @if (isProtected()) {
+    <section class="layout" data-testid="page-rsvp">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        <p>{{ language() === 'he' ? 'צריך להתחבר כדי להירשם, להיכנס או לתת משוב.' : 'Sign in to RSVP, check in, or leave feedback.' }}</p>
+        <a class="primary-link" href="/auth/login?returnUrl=/event-attendance">{{ language() === 'he' ? 'התחברות' : 'Sign in' }}</a>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'מה נשמר' : 'What stays safe' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'כל אורח משויך לאירוע ולדייר הנכון.' : 'Every attendee belongs to the right tenant event.' }}</li>
+          <li>{{ language() === 'he' ? 'בקשה חוזרת מחזירה את אותה תשובה.' : 'Repeated requests return the same result.' }}</li>
+          <li>{{ language() === 'he' ? 'כרטיס בתשלום מחכה לאישור תשלום.' : 'Paid attendance waits for payment confirmation.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'rsvp') {
+    <section class="layout" data-testid="page-rsvp">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        <div class="status-box success" data-testid="rsvp-confirmed">
+          <strong>{{ language() === 'he' ? 'מקום אושר' : 'Seat confirmed' }}</strong>
+          <p>{{ selectedAttendee() }} · {{ selectedEvent() }}</p>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>{{ language() === 'he' ? 'משתתף' : 'Attendee' }}</span>
+            <input value="Maya Chen" readonly>
+          </label>
+          <label>
+            <span>{{ language() === 'he' ? 'אירוע' : 'Event' }}</span>
+            <input value="Community Launch Night" readonly>
+          </label>
+          <label>
+            <span>{{ language() === 'he' ? 'קיבולת' : 'Capacity' }}</span>
+            <input value="14 / 40 confirmed" readonly>
+          </label>
+        </div>
+        <div class="status-box info" data-testid="rsvp-idempotent">
+          <strong>{{ language() === 'he' ? 'אין כפילויות' : 'No duplicate seats' }}</strong>
+          <p>{{ language() === 'he' ? 'שליחה חוזרת מציגה את אותו אישור במקום לפתוח הרשמה חדשה.' : 'A replay shows the same confirmation instead of opening another RSVP.' }}</p>
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'כללי הרשמה' : 'RSVP rules' }}</h2>
+        <ul>
+          @for (item of checkpoints; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'waitlist') {
+    <section class="layout" data-testid="page-waitlist">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'רשימת המתנה' : 'Waitlist routing' }}</h2>
+        <div class="status-box warning" data-testid="waitlist-capacity-zero">
+          <strong>{{ language() === 'he' ? 'אירוע מלא' : 'Full event' }}</strong>
+          <p>{{ language() === 'he' ? 'הבקשה נשמרת בהצלחה וממתינה לקידום לפי סדר ההצטרפות.' : 'The request is kept successfully and waits for first-in promotion.' }}</p>
+        </div>
+        <div class="feed-list" data-testid="waitlist-fifo-list">
+          @for (row of rows; track row.attendee) {
+            <div class="list-row">
+              <div>
+                <strong>{{ row.attendee }}</strong>
+                <p>{{ row.detail }}</p>
+              </div>
+              <span>{{ row.state }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'קידום הבא' : 'Next promotion' }}</h2>
+        <p>{{ language() === 'he' ? 'כאשר מקום מתפנה, הראשון ברשימה מקבל אישור.' : 'When a seat opens, the earliest waitlisted attendee is confirmed.' }}</p>
+      </aside>
+    </section>
+  } @else if (screenState() === 'checkin') {
+    <section class="layout" data-testid="page-checkin">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'עמדת כניסה' : 'Check-in desk' }}</h2>
+        <div class="scanner" data-testid="checkin-scanner">
+          <div class="scan-frame"></div>
+          <div>
+            <strong>{{ language() === 'he' ? 'אישור נמצא' : 'Confirmed RSVP found' }}</strong>
+            <p>{{ language() === 'he' ? 'כניסה נרשמה ונשלחה להמשך התהליך.' : 'Check-in recorded and sent to the next workflow.' }}</p>
+          </div>
+        </div>
+        <div class="status-box danger" data-testid="checkin-waitlist-blocked">
+          <strong>{{ language() === 'he' ? 'לא נכנס' : 'Not admitted' }}</strong>
+          <p>{{ language() === 'he' ? 'אורח ברשימת המתנה נשאר מחוץ לכניסה עד אישור מקום.' : 'A waitlisted attendee cannot check in until promoted.' }}</p>
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'בדיקות כניסה' : 'Desk checks' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'אישור קיים לפני כניסה.' : 'Confirmed RSVP exists before entry.' }}</li>
+          <li>{{ language() === 'he' ? 'כניסה חוזרת מציגה את אותו רישום.' : 'Repeat scan shows the same entry.' }}</li>
+          <li>{{ language() === 'he' ? 'אורח חסר לא יוצר שגיאת מערכת.' : 'Unknown attendee becomes a business state.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'feedback') {
+    <section class="layout" data-testid="page-feedback">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'משוב אחרי האירוע' : 'Post-event feedback' }}</h2>
+        <div class="status-box success" data-testid="feedback-window-open">
+          <strong>{{ language() === 'he' ? 'חלון משוב פתוח' : 'Feedback window open' }}</strong>
+          <p>{{ language() === 'he' ? 'החלון נפתח רק לאחר סיום האירוע.' : 'The window opens only after the event has ended.' }}</p>
+        </div>
+        <label>
+          <span>{{ language() === 'he' ? 'ציון' : 'Rating' }}</span>
+          <input value="5 / 5" readonly>
+        </label>
+        <label>
+          <span>{{ language() === 'he' ? 'תגובה' : 'Comment' }}</span>
+          <input value="Useful and well organised" readonly>
+        </label>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'זמן' : 'Timing' }}</h2>
+        <p>{{ language() === 'he' ? 'משך החלון מגיע מהגדרות המערכת.' : 'The open duration comes from runtime configuration.' }}</p>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-dashboard">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'לוח נוכחות' : 'Attendance dashboard' }}</h2>
+        <div class="metric-grid">
+          <div class="metric" data-testid="metric-confirmed"><strong>38</strong><span>{{ language() === 'he' ? 'מאושרים' : 'Confirmed' }}</span></div>
+          <div class="metric" data-testid="metric-waitlisted"><strong>7</strong><span>{{ language() === 'he' ? 'בהמתנה' : 'Waitlisted' }}</span></div>
+          <div class="metric" data-testid="metric-checked-in"><strong>31</strong><span>{{ language() === 'he' ? 'נכנסו' : 'Checked in' }}</span></div>
+          <div class="metric" data-testid="metric-feedback"><strong>18</strong><span>{{ language() === 'he' ? 'משובים' : 'Feedback' }}</span></div>
+        </div>
+        <div class="feed-list" data-testid="dashboard-attendees">
+          @for (row of rows; track row.attendee) {
+            <div class="list-row">
+              <div>
+                <strong>{{ row.attendee }}</strong>
+                <p>{{ row.detail }}</p>
+              </div>
+              <span>{{ row.state }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'תמונה מלאה' : 'Full picture' }}</h2>
+        <p>{{ language() === 'he' ? 'הצוות רואה הרשמה, המתנה, כניסה ומשוב בלי לעבור בין כלים.' : 'The team sees RSVP, waitlist, entry, and feedback without switching tools.' }}</p>
+      </aside>
+    </section>
+  }
+</main>

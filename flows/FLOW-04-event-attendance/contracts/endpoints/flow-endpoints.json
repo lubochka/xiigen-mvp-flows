@@ -1,0 +1,146 @@
+{
+  "flowId": "FLOW-04",
+  "flowSlug": "event-attendance",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "event-attendance-submit-rsvp",
+      "operationId": "SubmitRsvp",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-attendance",
+      "requestSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-dashboard",
+      "operationId": "GetAttendanceDashboard",
+      "method": "GET",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/dashboard",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-status",
+      "operationId": "GetAttendanceStatus",
+      "method": "GET",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/status/{attendeeId}",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-cancel-rsvp",
+      "operationId": "CancelRsvp",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/cancel",
+      "requestSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-check-in",
+      "operationId": "CheckInAttendee",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/check-in",
+      "requestSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_admin",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-open-feedback-window",
+      "operationId": "OpenFeedbackWindow",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/feedback-window",
+      "requestSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_admin",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-submit-feedback",
+      "operationId": "SubmitFeedback",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-attendance/{eventId}/feedback",
+      "requestSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventAttendanceProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-attendance-health-live",
+      "operationId": "EventAttendanceLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "event-attendance-health-ready",
+      "operationId": "EventAttendanceReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}

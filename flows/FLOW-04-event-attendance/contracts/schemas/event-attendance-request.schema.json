@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-04/contracts/schemas/event-attendance-request.schema.json",
+  "title": "EventAttendanceRequest",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "eventId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attendeeId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventTitle": {
+      "type": "string"
+    },
+    "eventCapacity": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "eventStartsAtUtc": {
+      "type": "string"
+    },
+    "eventEndsAtUtc": {
+      "type": "string"
+    },
+    "seedEvent": {
+      "type": "boolean"
+    },
+    "isPaidEvent": {
+      "type": "boolean"
+    },
+    "paymentConfirmed": {
+      "type": "boolean"
+    },
+    "triggerSource": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "comment": {
+      "type": "string"
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}

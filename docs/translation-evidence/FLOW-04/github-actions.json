@@ -1,0 +1,50 @@
+﻿[
+    {
+        "repo":  "tenant-a--event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--event-attendance/actions/runs/26092480425",
+        "headSha":  "6dd0af3c07ecaea233a6ada8d14df7f30a014091",
+        "createdAt":  "2026-05-19T10:50:47Z"
+    },
+    {
+        "repo":  "tenant-a--tenant-a-event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--tenant-a-event-attendance/actions/runs/26092620564",
+        "headSha":  "25e63355b80dcd00dc19a3e1d530ef206590b964",
+        "createdAt":  "2026-05-19T10:53:48Z"
+    },
+    {
+        "repo":  "tenant-b--tenant-a-event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--tenant-a-event-attendance/actions/runs/26092748800",
+        "headSha":  "7f4a8314bec71af776f669805f40073a15f8e1b2",
+        "createdAt":  "2026-05-19T10:56:34Z"
+    },
+    {
+        "repo":  "tenant-b--tenant-b-event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--tenant-b-event-attendance/actions/runs/26092893136",
+        "headSha":  "ed3be1a6fafc0e5790a3e1fdb92a68ba9cf009ad",
+        "createdAt":  "2026-05-19T10:59:37Z"
+    },
+    {
+        "repo":  "tenant-c--tenant-b-event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--tenant-b-event-attendance/actions/runs/26093034158",
+        "headSha":  "be2e856270b4e805f8465adc9a54aaa2289bd02d",
+        "createdAt":  "2026-05-19T11:02:29Z"
+    },
+    {
+        "repo":  "tenant-c--tenant-c-event-attendance",
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--tenant-c-event-attendance/actions/runs/26093168206",
+        "headSha":  "dea69a625db6f96241448871f0e559a60afb050e",
+        "createdAt":  "2026-05-19T11:05:21Z"
+    }
+]

@@ -1,0 +1,158 @@
+{
+  "flowId": "FLOW-04",
+  "flowSlug": "event-attendance",
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "tenant-a-event-attendance",
+  "roleCount": 7,
+  "cellCount": 3,
+  "expectedPngCount": 21,
+  "screenshots": [
+    {
+      "role": "anonymous",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "anonymous",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "anonymous",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_user-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_user-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_user-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "referral_user",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\referral_user-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "referral_user",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\referral_user-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "referral_user",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\referral_user-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_admin-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_admin-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant_admin-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\business_partner-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\business_partner-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "business_partner",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\business_partner-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\event_organiser-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\event_organiser-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\event_organiser-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-en-rsvp",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\platform_admin-desktop-en-rsvp.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-he-rtl-checkin",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\platform_admin-desktop-he-rtl-checkin.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "mobile-en-feedback",
+      "path": "C:\\Projects\\tenant-a--tenant-a-event-attendance\\docs\\e2e-snapshots\\event-attendance\\dotnet-angular\\C2-tenant-a-adapted-published\\platform_admin-mobile-en-feedback.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

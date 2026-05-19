@@ -1,0 +1,14 @@
+{
+  "flowId": "FLOW-04",
+  "flowSlug": "event-attendance",
+  "targets": [
+    {
+      "name": "local",
+      "apiBaseUrl": "http://127.0.0.1:5295",
+      "clientBaseUrl": "http://127.0.0.1:4304",
+      "tenantResolution": "header",
+      "secretsProvider": "vault-dev"
+    }
+  ]
+}
+

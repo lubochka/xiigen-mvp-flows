@@ -1,0 +1,4 @@
+@Xiigen.Flow.EventAttendance.Api_HostAddress = http://localhost:5295
+
+GET {{Xiigen.Flow.EventAttendance.Api_HostAddress}}/health/ready
+

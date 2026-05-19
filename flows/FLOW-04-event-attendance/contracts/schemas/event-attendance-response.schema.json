@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-04/contracts/schemas/event-attendance-response.schema.json",
+  "title": "EventAttendanceResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "rsvpId": {
+      "type": "string"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "attendeeId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "routed": {
+      "type": "string"
+    },
+    "checkInId": {
+      "type": "string"
+    },
+    "feedbackWindowId": {
+      "type": "string"
+    },
+    "feedbackId": {
+      "type": "string"
+    },
+    "capacityLabel": {
+      "type": "string"
+    },
+    "retryAfterMs": {
+      "type": "integer"
+    }
+  }
+}

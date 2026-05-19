@@ -1,0 +1,170 @@
+﻿[
+    {
+        "label":  "source",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "source",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-installed",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27782,
+        "sha256":  "7B13908BBBE733EAD609FD963734F73809005B69ADE4576239BE1FF562F37DDD",
+        "path":  "C:\\Projects\\tenant-a--event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-installed",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  3940,
+        "sha256":  "B9221097063FB5A632D2FA9A9A5CD4208AC13562E79ABB3D2C0BA2E5724F01AC",
+        "path":  "C:\\Projects\\tenant-a--event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.2.nupkg",
+        "bytes":  27787,
+        "sha256":  "194ECA935CD624EC0C369BADD9857BAC5332B9AAA965B69A998AE9BB7E46CE3B",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.2.nupkg",
+        "bytes":  3945,
+        "sha256":  "E279BA0178676D58FBA4AD0979669D7FE7DA58D2F440B2E7002B3D1B558A7DF5",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.2.nupkg",
+        "bytes":  27786,
+        "sha256":  "98E2F5EFE3776C9B4666BF78FE70192C9163253A76575B9743D909285385BF82",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.2.nupkg",
+        "bytes":  3952,
+        "sha256":  "96D38E8B2DEB5797B755EE00DE4475F1CF467CCDE8400CA9CBFCDB71582BD5ED",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.3.nupkg",
+        "bytes":  27784,
+        "sha256":  "F6C867E02C6F301F8FF22A4D7F034FFC7D029ACA3213C01F5C34C313672BDA96",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.3.nupkg",
+        "bytes":  3945,
+        "sha256":  "7D84B262964E3752ADAB7A22173C1F2687F43975F2B940BF26AC21CD142DBE5B",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.3.nupkg",
+        "bytes":  27785,
+        "sha256":  "6E1CCFC09CCAF586233EAA18A3CEE446800FA00EBBACDEEA5ED67C90610DC871",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.3.nupkg",
+        "bytes":  3944,
+        "sha256":  "BA6F52BE11829CA5AABD06C0FC27F85696C18E9EC9D80BCE949EFA048F665EB3",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg",
+        "bytes":  27896,
+        "sha256":  "A60DA5C196CF39146731B567649650553AF1AE53952CCD39DD485860B5B0657A",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Application.0.1.4.nupkg",
+        "bytes":  27788,
+        "sha256":  "D07144E594E404BAE52A3EB4D12AFDFA3EC1DF8CE833A3511038EF3E9F47A57A",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Application.0.1.4.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg",
+        "bytes":  4041,
+        "sha256":  "B8B8AED268D7C1647AE5CE33ED165AAC579A699C433CFD0C0BAFA8C25E7A215D",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.EventAttendance.Infrastructure.0.1.4.nupkg",
+        "bytes":  3936,
+        "sha256":  "BF93D46F2479C54BE292F0645F5EE5DF8DB5CB9F0BEB8DE424297795EDDFA542",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-attendance\\artifacts\\nuget\\FLOW-04\\Xiigen.Flow.EventAttendance.Infrastructure.0.1.4.nupkg"
+    }
+]

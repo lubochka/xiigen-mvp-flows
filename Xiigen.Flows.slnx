@@ -28,4 +28,11 @@
     <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Infrastructure/Xiigen.Flow.EventManagement.Infrastructure.csproj" />
     <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Tests/Xiigen.Flow.EventManagement.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-04-event-attendance/" />
+  <Folder Name="/flows/FLOW-04-event-attendance/server/">
+    <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Api/Xiigen.Flow.EventAttendance.Api.csproj" />
+    <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Application/Xiigen.Flow.EventAttendance.Application.csproj" />
+    <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Infrastructure/Xiigen.Flow.EventAttendance.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Tests/Xiigen.Flow.EventAttendance.Tests.csproj" />
+  </Folder>
 </Solution>

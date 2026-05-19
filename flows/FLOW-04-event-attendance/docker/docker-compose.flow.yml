@@ -1,0 +1,11 @@
+services:
+  event-attendance-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5297:8080"
+

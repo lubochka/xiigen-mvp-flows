@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "name": "EventAttendanceProtected",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "name": "EventAttendanceHealthBypass",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/health/live",
+        "/health/ready"
+      ]
+    }
+  ]
+}

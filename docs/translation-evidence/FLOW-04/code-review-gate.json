@@ -1,0 +1,30 @@
+﻿{
+    "flowId":  "FLOW-04",
+    "passed":  true,
+    "checks":  {
+                   "sdkImports":  [
+
+                                  ],
+                   "freeTenantParam":  [
+
+                                       ],
+                   "businessThrows":  [
+
+                                      ],
+                   "microserviceBase":  [
+                                            "flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Application\\EventAttendanceService.cs:9:public sealed class EventAttendanceService : MicroserviceBase\u003cEventAttendanceService\u003e"
+                                        ],
+                   "outboxAppendLines":  [
+                                             "82:            var retained = await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.TimeoutRetainedEvent, eventId, timeoutPayload), cancellationToken).ConfigureAwait(false);",
+                                             "177:            await _outbox.AppendAsync(",
+                                             "253:        await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.RsvpCancelledEvent, eventId, response), cancellationToken).ConfigureAwait(false);",
+                                             "345:        await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.AttendeeCheckedInEvent, eventId, response), cancellationToken).ConfigureAwait(false);",
+                                             "393:        await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.FeedbackWindowOpenedEvent, eventId, response), cancellationToken).ConfigureAwait(false);",
+                                             "454:        await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.FeedbackSubmittedEvent, eventId, response), cancellationToken).ConfigureAwait(false);",
+                                             "544:        await _outbox.AppendAsync(CreateEvent(EventAttendanceConstants.WaitlistPromotionCompletedEvent, eventId, response), cancellationToken).ConfigureAwait(false);"
+                                         ],
+                   "cloudEvents":  [
+                                       "719:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e"
+                                   ]
+               }
+}
