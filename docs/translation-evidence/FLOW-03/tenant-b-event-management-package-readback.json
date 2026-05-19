@@ -1,0 +1,36 @@
+﻿{
+    "flowId":  "FLOW-03",
+    "flowSlug":  "event-management",
+    "evidenceType":  "package-publish-readback",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T08:57:39.4818860Z",
+    "tenantId":  "tenant-b",
+    "moduleName":  "tenant-b-event-management",
+    "version":  "0.1.3",
+    "packages":  [
+                     {
+                         "packageId":  "Xiigen.Flow.EventManagement.Application",
+                         "version":  "0.1.3",
+                         "packageKind":  "nuget",
+                         "packageDir":  "C:\\Projects\\tenant-b--tenant-b-event-management\\artifacts\\nuget\\FLOW-03",
+                         "found":  true
+                     },
+                     {
+                         "packageId":  "Xiigen.Flow.EventManagement.Infrastructure",
+                         "version":  "0.1.3",
+                         "packageKind":  "nuget",
+                         "packageDir":  "C:\\Projects\\tenant-b--tenant-b-event-management\\artifacts\\nuget\\FLOW-03",
+                         "found":  true
+                     }
+                 ],
+    "readback":  {
+                     "tempProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow03-tenant-b-event-management-readback",
+                     "dependencyResolved":  "Xiigen.Flow.EventManagement.Infrastructure 0.1.3",
+                     "restore":  "PASS",
+                     "build":  "PASS",
+                     "packageId":  "Xiigen.Flow.EventManagement.Infrastructure",
+                     "version":  "0.1.3"
+                 },
+    "finalReportAllowed":  false,
+    "finalCompletion":  false
+}

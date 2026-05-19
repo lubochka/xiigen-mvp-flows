@@ -1,0 +1,11 @@
+﻿services:
+  event-management-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5296:8080"
+

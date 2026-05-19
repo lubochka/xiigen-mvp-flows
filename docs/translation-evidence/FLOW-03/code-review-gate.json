@@ -1,0 +1,68 @@
+﻿{
+    "flowId":  "FLOW-03",
+    "flowSlug":  "event-management",
+    "evidenceType":  "code-review-gate",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T08:57:39.4818860Z",
+    "checks":  {
+                   "noTechDebtText":  {
+                                          "status":  "PASS",
+                                          "hitCount":  0,
+                                          "hits":  [
+
+                                                   ]
+                                      },
+                   "microserviceBase":  {
+                                            "status":  "PASS",
+                                            "serviceClassCount":  1,
+                                            "microserviceBaseCount":  1,
+                                            "hits":  [
+                                                         "C:\\Projects\\xiigen-flows-dot-net-angular\\ sealed class EventManagementService : MicroserviceBase\u003cEventManagementService\u003e"
+                                                     ]
+                                        },
+                   "businessLogicNoThrows":  {
+                                                 "status":  "PASS",
+                                                 "hits":  [
+
+                                                          ]
+                                             },
+                   "noFreeTenantIdParameters":  {
+                                                    "status":  "PASS",
+                                                    "hits":  [
+
+                                                             ]
+                                                },
+                   "outboxCloudEvents":  {
+                                             "status":  "PASS",
+                                             "hits":  [
+                                                          "EventManagementService writes event documents before outbox CloudEvents; emits creation requested, created, published, registration recorded, promotion requested/rejected/published, analytics finalized, PromotionCampaignCompleted, and timeout-retained events."
+                                                      ]
+                                         },
+                   "authMatrixCode":  {
+                                          "status":  "PASS",
+                                          "hits":  [
+                                                       "Program.cs RequireRole covers 401 missing token, 403 wrong role, 401 cross-tenant token, and all protected FLOW-03 endpoints."
+                                                   ]
+                                      },
+                   "consumerLanguage":  {
+                                            "status":  "PASS",
+                                            "hits":  [
+
+                                                     ]
+                                        },
+                   "ruleIds":  {
+                                   "status":  "PASS",
+                                   "hits":  [
+                                                "CF-03-1",
+                                                "CF-03-2",
+                                                "CF-03-3",
+                                                "CF-03-4",
+                                                "CF-858",
+                                                "CF-859",
+                                                "CF-860",
+                                                "CF-861",
+                                                "CF-862"
+                                            ]
+                               }
+               }
+}

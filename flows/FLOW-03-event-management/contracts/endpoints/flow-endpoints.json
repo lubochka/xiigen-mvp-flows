@@ -1,0 +1,130 @@
+﻿{
+  "flowId": "FLOW-03",
+  "flowSlug": "event-management",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "event-management-create-event",
+      "operationId": "CreateEvent",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-management",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-list-events",
+      "operationId": "ListEvents",
+      "method": "GET",
+      "routePattern": "/api/dynamic/event-management",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-read-event",
+      "operationId": "ReadEvent",
+      "method": "GET",
+      "routePattern": "/api/dynamic/event-management/{eventId}",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-register",
+      "operationId": "RegisterForEvent",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-management/{eventId}/registrations",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-promote",
+      "operationId": "PromoteEvent",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-management/{eventId}/promotion",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_admin",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-track-analytics",
+      "operationId": "TrackEventAnalytics",
+      "method": "POST",
+      "routePattern": "/api/dynamic/event-management/{eventId}/analytics/{analyticsType}",
+      "requestSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "EventManagementProtected",
+      "requiredRoles": [
+        "tenant_admin",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "event-management-health-live",
+      "operationId": "EventManagementLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "event-management-health-ready",
+      "operationId": "EventManagementReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}
+

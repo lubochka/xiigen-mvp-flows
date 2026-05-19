@@ -1,0 +1,54 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-03/contracts/schemas/event-management-response.schema.json",
+  "title": "EventManagementResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "eventId",
+    "version",
+    "status"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "capacityLabel": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "audienceSegments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "feedPlacements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notificationChannels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+

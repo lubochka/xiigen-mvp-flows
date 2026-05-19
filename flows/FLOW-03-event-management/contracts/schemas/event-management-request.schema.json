@@ -1,0 +1,68 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-03/contracts/schemas/event-management-request.schema.json",
+  "title": "EventManagementRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "organizerId",
+    "startDate"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organizerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "isPrivate": {
+      "type": "boolean"
+    },
+    "isPaidEvent": {
+      "type": "boolean"
+    },
+    "hasPaymentConfig": {
+      "type": "boolean"
+    },
+    "promotionEnabled": {
+      "type": "boolean"
+    },
+    "contentSafetyStatus": {
+      "type": "string"
+    },
+    "matchingCriteria": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "attendeeId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pushEnabled": {
+      "type": "boolean"
+    },
+    "urgent": {
+      "type": "boolean"
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}
+

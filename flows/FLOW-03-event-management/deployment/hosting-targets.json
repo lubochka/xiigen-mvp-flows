@@ -1,0 +1,14 @@
+﻿{
+  "flowId": "FLOW-03",
+  "flowSlug": "event-management",
+  "targets": [
+    {
+      "name": "local",
+      "apiBaseUrl": "http://127.0.0.1:5295",
+      "clientBaseUrl": "http://127.0.0.1:4303",
+      "tenantResolution": "header",
+      "secretsProvider": "vault-dev"
+    }
+  ]
+}
+

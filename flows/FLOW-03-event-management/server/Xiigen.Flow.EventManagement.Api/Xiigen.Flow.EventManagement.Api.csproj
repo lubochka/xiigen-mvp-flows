@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.EventManagement.Application\Xiigen.Flow.EventManagement.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.EventManagement.Infrastructure\Xiigen.Flow.EventManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.1" />
+  </ItemGroup>
+
+</Project>
+

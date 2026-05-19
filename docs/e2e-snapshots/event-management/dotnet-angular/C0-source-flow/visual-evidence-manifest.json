@@ -1,0 +1,158 @@
+{
+  "flowId": "FLOW-03",
+  "flowSlug": "event-management",
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "event-management",
+  "roleCount": 7,
+  "cellCount": 3,
+  "expectedPngCount": 21,
+  "screenshots": [
+    {
+      "role": "anonymous",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\anonymous-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "anonymous",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\anonymous-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "anonymous",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\anonymous-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_user-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_user-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_user-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_admin-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_admin-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\tenant_admin-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\freelancer-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\freelancer-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "freelancer",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\freelancer-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\business_partner-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\business_partner-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "business_partner",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\business_partner-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\event_organiser-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\event_organiser-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\event_organiser-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-en-creation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\platform_admin-desktop-en-creation.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-he-rtl-promotion",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\platform_admin-desktop-he-rtl-promotion.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "mobile-en-registration",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\event-management\\dotnet-angular\\C0-source-flow\\platform_admin-mobile-en-registration.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+﻿{
+    "flowId":  "FLOW-03",
+    "flowSlug":  "event-management",
+    "evidenceType":  "cross-tenant-jwt-isolation",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T08:57:39.4818860Z",
+    "targetApi":  "http://127.0.0.1:5296",
+    "results":  [
+                    {
+                        "name":  "tenant-b-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-b:event_organiser",
+                        "role":  "event_organiser",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-b",
+                        "tenantHeader":  "tenant-b",
+                        "authorization":  "Bearer tenant:tenant-c:event_organiser",
+                        "role":  "event_organiser",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-c:event_organiser",
+                        "role":  "event_organiser",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "status":  "PASS",
+                        "body":  "{\"id\":\"evt-tenant-c-isolation-tenant-c-token-against-tenant-c\",\"eventId\":\"evt-tenant-c-isolation-tenant-c-token-against-tenant-c\",\"version\":\"1\"}"
+                    }
+                ]
+}

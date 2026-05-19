@@ -21,4 +21,11 @@
     <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Infrastructure/Xiigen.Flow.ProfileEnrichment.Infrastructure.csproj" />
     <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Tests/Xiigen.Flow.ProfileEnrichment.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-03-event-management/" />
+  <Folder Name="/flows/FLOW-03-event-management/server/">
+    <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Api/Xiigen.Flow.EventManagement.Api.csproj" />
+    <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Application/Xiigen.Flow.EventManagement.Application.csproj" />
+    <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Infrastructure/Xiigen.Flow.EventManagement.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-03-event-management/server/Xiigen.Flow.EventManagement.Tests/Xiigen.Flow.EventManagement.Tests.csproj" />
+  </Folder>
 </Solution>

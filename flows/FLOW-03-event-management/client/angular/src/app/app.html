@@ -1,0 +1,219 @@
+<main class="event-shell" data-testid="page-event-management">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'אירועים וקהל' : 'Events and audience' }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          יצירה, הרשמה, קידום, התאמת קהל ומדדי ביצועים במסך אחד.
+        } @else {
+          Create events, route registrations, promote safely, and watch audience response.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Event management states">
+    <button type="button" [class.active]="['creation', 'validation', 'created'].includes(screenState())" (click)="setScreenState('creation')">
+      <span>1</span>{{ language() === 'he' ? 'יצירה' : 'Create' }}
+    </button>
+    <button type="button" [class.active]="['registration', 'waitlist'].includes(screenState())" (click)="setScreenState('registration')">
+      <span>2</span>{{ language() === 'he' ? 'הרשמה' : 'Register' }}
+    </button>
+    <button type="button" [class.active]="['promotion', 'promotion-rejected'].includes(screenState())" (click)="setScreenState('promotion')">
+      <span>3</span>{{ language() === 'he' ? 'קידום' : 'Promote' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'analytics'" (click)="setScreenState('analytics')">
+      <span>4</span>{{ language() === 'he' ? 'מדדים' : 'Analytics' }}
+    </button>
+  </nav>
+
+  @if (isProtected()) {
+    <section class="layout" data-testid="page-creation">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        <p>{{ language() === 'he' ? 'יש להתחבר לפני יצירה או הרשמה לאירועים.' : 'Sign in before creating, registering, or promoting events.' }}</p>
+        <a class="primary-link" href="/auth/login?returnUrl=/event-management">Sign in</a>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'בדיקות אבטחה' : 'Security checks' }}</h2>
+        <ul>
+          <li>Missing token returns 401.</li>
+          <li>Wrong role returns 403.</li>
+          <li>Cross-tenant token returns 401.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (['creation', 'validation', 'created'].includes(screenState())) {
+    <section class="layout" data-testid="page-creation">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        @if (!canCreate()) {
+          <div class="status-box info" data-testid="event-browse-role-state">
+            <strong>{{ language() === 'he' ? 'אירועים זמינים' : 'Available events' }}</strong>
+            <p>{{ role() === 'tenant_user' ? 'Browse events and register with tenant-safe capacity checks.' : 'Explore events matched to your role.' }}</p>
+          </div>
+          <div class="feed-list" data-testid="event-list">
+            @for (event of events; track event.id) {
+              <div class="list-row" data-testid="event-item">
+                <div>
+                  <strong>{{ event.title }}</strong>
+                  <p>{{ event.date }} · {{ event.capacityLabel }}</p>
+                </div>
+                <span>{{ event.status }}</span>
+              </div>
+            }
+          </div>
+        } @else if (screenState() === 'created') {
+          <div class="status-box success" data-testid="event-created">
+            <strong>{{ language() === 'he' ? 'האירוע נשמר' : 'Event saved' }}</strong>
+            <p data-testid="created-event-id">evt-acme-annual-tech-summit</p>
+          </div>
+          <div class="status-box info" data-testid="event-created-ordering">
+            <strong>{{ language() === 'he' ? 'רשומת האירוע נשמרה לפני הפרסום' : 'Stored before published' }}</strong>
+            <p>The event record is committed before discovery and notification work begins.</p>
+          </div>
+        } @else {
+          @if (screenState() === 'validation' || validationMessage()) {
+            <p role="alert" class="status-box danger" data-testid="event-creation-validation-error">{{ validationMessage() ?? 'Please review your event.' }}</p>
+          }
+          <form data-testid="event-creation-form" (ngSubmit)="submitEvent()" noValidate>
+            <label>
+              <span>{{ language() === 'he' ? 'שם האירוע' : 'Event title' }}</span>
+              <input id="title-input" data-testid="title-input" [ngModel]="title()" name="title" (ngModelChange)="updateTitle($event)" />
+            </label>
+            <label>
+              <span>{{ language() === 'he' ? 'קיבולת' : 'Capacity' }}</span>
+              <input id="capacity-input" data-testid="capacity-input" [ngModel]="capacity()" name="capacity" (ngModelChange)="updateCapacity($event)" [disabled]="unlimited()" />
+            </label>
+            <div class="checks">
+              <label><input data-testid="unlimited-checkbox" type="checkbox" [ngModel]="unlimited()" name="unlimited" (ngModelChange)="setUnlimited($event)" /> Unlimited</label>
+              <label><input data-testid="private-checkbox" type="checkbox" [ngModel]="privateEvent()" name="privateEvent" (ngModelChange)="setPrivateEvent($event)" /> Private event</label>
+              <label><input data-testid="paid-checkbox" type="checkbox" [ngModel]="paid()" name="paid" (ngModelChange)="setPaid($event)" /> Paid event</label>
+            </div>
+            <div class="actions">
+              <button type="submit" class="primary" data-testid="submit-button">{{ language() === 'he' ? 'שמירה' : 'Publish event' }}</button>
+              <button type="button" class="secondary" data-testid="cancel-button" (click)="setScreenState('registration')">{{ language() === 'he' ? 'ביטול' : 'Cancel' }}</button>
+            </div>
+          </form>
+        }
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'כללי יצירה' : 'Creation rules' }}</h2>
+        <ul>
+          <li>Unlimited capacity uses a strict null value.</li>
+          <li>Zero capacity is closed and routes to the waitlist.</li>
+          <li>Paid events require a payment configuration.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (['registration', 'waitlist'].includes(screenState())) {
+    <section class="layout" data-testid="page-registration">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'הרשמות וקיבולת' : 'Registration and capacity' }}</h2>
+        <div class="status-box success" data-testid="registration-confirmed">
+          <strong>{{ language() === 'he' ? 'מושב אושר' : 'Seat confirmed' }}</strong>
+          <p>Unlimited events accept registrations without decrementing a cap.</p>
+        </div>
+        <div class="status-box warning" data-testid="registration-waitlist">
+          <strong>{{ language() === 'he' ? 'רשימת המתנה' : 'Waitlist routing' }}</strong>
+          <p>Closed or full events keep the request and route it to the waitlist.</p>
+        </div>
+        <div class="feed-list" data-testid="event-list">
+          @for (event of events; track event.id) {
+            <div class="list-row" data-testid="event-item">
+              <div>
+                <strong>{{ event.title }}</strong>
+                <p>{{ event.date }} · {{ event.capacityLabel }}</p>
+              </div>
+              <button type="button" class="secondary">{{ language() === 'he' ? 'הרשמה' : 'Register' }}</button>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'הגנות' : 'Guards' }}</h2>
+        <ul>
+          <li>Repeated registration uses the saved response.</li>
+          <li>Concurrent capacity writes have one winner.</li>
+          <li>Every read is tenant-scoped.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (['promotion', 'promotion-rejected'].includes(screenState())) {
+    <section class="layout" data-testid="page-promotion">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'קידום והתאמת קהל' : 'Promotion and audience fit' }}</h2>
+        @if (screenState() === 'promotion-rejected') {
+          <div class="status-box danger" data-testid="promotion-rejected">
+            <strong>{{ language() === 'he' ? 'הקידום נדחה' : 'Promotion rejected' }}</strong>
+            <p>Content safety rejected the promotion before any public listing was published.</p>
+          </div>
+        } @else {
+          <div class="status-box success" data-testid="promotion-published">
+            <strong>{{ language() === 'he' ? 'הקידום פורסם' : 'Promotion published' }}</strong>
+            <p>Safety passed, then the promotion record was stored before feed updates.</p>
+          </div>
+        }
+        <div class="audience-table" data-testid="audience-match-table">
+          @for (row of audienceRows; track row.segment) {
+            <div class="list-row">
+              <strong>{{ row.segment }}</strong>
+              <span>{{ row.score }} · {{ row.placement }}</span>
+            </div>
+          }
+        </div>
+        <div class="status-box info" data-testid="notification-plan">
+          <strong>{{ language() === 'he' ? 'ערוצי הודעה' : 'Notification plan' }}</strong>
+          <p>{{ notifications.join(', ') }}</p>
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'משקלים' : 'Weights' }}</h2>
+        <ul>
+          <li>Interest relevance: 35%</li>
+          <li>Location proximity: 25%</li>
+          <li>Availability: 20%</li>
+          <li>Price and social signals: 20%</li>
+        </ul>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-analytics">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'מדדי אירוע' : 'Event analytics' }}</h2>
+        <div class="metric-grid">
+          <div class="metric" data-testid="analytics-views"><strong>1,284</strong><span>Views</span></div>
+          <div class="metric" data-testid="analytics-registrations"><strong>142</strong><span>Registrations</span></div>
+          <div class="metric" data-testid="analytics-conversions"><strong>11%</strong><span>Conversion</span></div>
+        </div>
+        <div class="status-box info" data-testid="analytics-ttl-window">
+          <strong>{{ language() === 'he' ? 'חלון מדידה' : 'Windowed counter' }}</strong>
+          <p>Analytics counters expire by window and never block event creation.</p>
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'סיום קמפיין' : 'Campaign completion' }}</h2>
+        <ul>
+          <li>Thresholds come from configuration.</li>
+          <li>Analytics errors stay best-effort.</li>
+          <li>Completion is a campaign event.</li>
+        </ul>
+      </aside>
+    </section>
+  }
+</main>
