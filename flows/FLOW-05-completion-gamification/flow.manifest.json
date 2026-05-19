@@ -1,0 +1,123 @@
+{
+  "flowId": "FLOW-05",
+  "flowSlug": "completion-gamification",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-05-completion-gamification",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.CompletionGamification.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/completion-gamification/dotnet-angular",
+  "sourceAliases": [
+    "completion-gamification",
+    "lesson-completion-gamification"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "tenant_user",
+      "referral_user",
+      "freelancer",
+      "event_organiser",
+      "tenant_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "ready-after-shared-artifacts",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-02",
+      "reason": "Consumes profile and learner-progress context before rewarding a completion."
+    },
+    {
+      "flowId": "FLOW-10",
+      "reason": "Publishes social learning and peer-grade signals consumed by reviews and reputation."
+    }
+  ],
+  "coInstallDependencies": [
+    "FLOW-02"
+  ],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/completion-gamification",
+    "requiredDocuments": [
+      "docs/flow-coverage/completion-gamification/P1-business-logic-inventory.md",
+      "docs/flow-coverage/completion-gamification/P3-automation-gap-analysis.md",
+      "docs/flow-coverage/completion-gamification/P5-ui-specs.md",
+      "docs/flow-coverage/completion-gamification/P9-edge-cases.md",
+      "docs/flow-coverage/completion-gamification/P10-server-specs.md",
+      "docs/flow-coverage/completion-gamification/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 11,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 18,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false
+  },
+  "realProviderReplacementTests": [],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "completion-gamification",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-completion-gamification.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+<main class="gamification-shell" data-testid="page-completion-gamification">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'למידה ותגמולים' : 'Learning rewards' }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          השלמה, נקודות, רצף, הישגים ושיתוף חברתי במקום אחד ברור.
+        } @else {
+          Completion, points, streaks, achievements, and social sharing in one focused workspace.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Gamification states">
+    <button type="button" [class.active]="screenState() === 'completion'" (click)="setScreenState('completion')">
+      <span>1</span>{{ language() === 'he' ? 'השלמה' : 'Completion' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'dashboard'" (click)="setScreenState('dashboard')">
+      <span>2</span>{{ language() === 'he' ? 'לוח' : 'Dashboard' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'social'" (click)="setScreenState('social')">
+      <span>3</span>{{ language() === 'he' ? 'שיתוף' : 'Social' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'progress'" (click)="setScreenState('progress')">
+      <span>4</span>{{ language() === 'he' ? 'התקדמות' : 'Progress' }}
+    </button>
+  </nav>
+
+  @if (screenState() === 'completion') {
+    <section class="layout" data-testid="page-completion">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <div class="completion-card" data-testid="completion-form-submitted">
+          <p class="eyebrow">{{ language() === 'he' ? 'נשמר בהצלחה' : 'Saved successfully' }}</p>
+          <h2>{{ roleHeading() }}</h2>
+          <p>{{ learnerName() }} · {{ lessonName() }}</p>
+          <div class="reward-total" data-testid="gamification-feedback">
+            <strong>+210</strong>
+            <span>{{ language() === 'he' ? 'נקודות מהציון שנשמר' : 'points from the stored score' }}</span>
+          </div>
+        </div>
+        <div class="metric-grid">
+          @for (row of rewardRows; track row.label) {
+            <div class="metric">
+              <strong>{{ row.value }}</strong>
+              <span>{{ row.label }}</span>
+              <p>{{ row.detail }}</p>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'מה נבדק' : 'What is checked' }}</h2>
+        <ul>
+          @for (item of checkpoints; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'dashboard') {
+    <section class="layout" data-testid="page-gamification-dashboard">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'לוח תגמולים' : 'Reward dashboard' }}</h2>
+        <div class="metric-grid">
+          <div class="metric" data-testid="total-points"><strong>2,840</strong><span>{{ language() === 'he' ? 'נקודות' : 'Total points' }}</span><p>{{ language() === 'he' ? 'לפי הדייר הנוכחי' : 'Scoped to the current tenant' }}</p></div>
+          <div class="metric" data-testid="current-level"><strong>6</strong><span>{{ language() === 'he' ? 'רמה' : 'Level' }}</span><p>{{ language() === 'he' ? 'עוד 160 נקודות לרמה הבאה' : '160 points to next level' }}</p></div>
+          <div class="metric" data-testid="streak-count"><strong>4</strong><span>{{ language() === 'he' ? 'ימי רצף' : 'Day streak' }}</span><p>{{ language() === 'he' ? 'מחושב לפי היום המקומי' : 'Uses the learner local day' }}</p></div>
+          <div class="metric" data-testid="achievement-gallery"><strong>12</strong><span>{{ language() === 'he' ? 'הישגים' : 'Achievements' }}</span><p>{{ language() === 'he' ? 'נפתחים לפי תנאי הלמידה' : 'Unlocked from learning conditions' }}</p></div>
+        </div>
+        <div class="feed-list" data-testid="points-history">
+          @for (row of progressRows; track row.learner) {
+            <div class="list-row">
+              <div>
+                <strong>{{ row.learner }}</strong>
+                <p>{{ row.detail }}</p>
+              </div>
+              <span>{{ row.status }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'ניהול' : 'Operations' }}</h2>
+        <p>{{ language() === 'he' ? 'צוות הלמידה רואה מי התקדם, מי ממתין לבדיקה, ומה צריך שיתוף.' : 'The learning team sees progress, pending review, and sharing readiness together.' }}</p>
+      </aside>
+    </section>
+  } @else if (screenState() === 'social') {
+    <section class="layout" data-testid="page-social-learning">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'שיתוף חברתי' : 'Social learning' }}</h2>
+        <div class="status-box success" data-testid="achievement-unlocked">
+          <strong>{{ language() === 'he' ? 'הישג נפתח' : 'Achievement unlocked' }}</strong>
+          <p>{{ language() === 'he' ? 'הפוסט נוצר רק אחרי הסכמה מפורשת של הלומד.' : 'The story is created only after learner consent.' }}</p>
+        </div>
+        <div class="form-grid" data-testid="post-builder">
+          <label>
+            <span>{{ language() === 'he' ? 'כותרת' : 'Post title' }}</span>
+            <input value="Maya completed Launch readiness" readonly>
+          </label>
+          <label>
+            <span>{{ language() === 'he' ? 'הרשאה' : 'Consent' }}</span>
+            <input value="Sharing allowed" readonly>
+          </label>
+        </div>
+        <div class="status-box info" data-testid="answer-grading-form">
+          <strong>{{ language() === 'he' ? 'בדיקת עמיתים' : 'Peer grading' }}</strong>
+          <p>{{ language() === 'he' ? 'ציון חברתי נשמר פעם אחת גם אם הבקשה חוזרת.' : 'A peer grade is saved once even if the request repeats.' }}</p>
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'פרטיות' : 'Privacy' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'אין שיתוף ללא הישג.' : 'No sharing without an achievement.' }}</li>
+          <li>{{ language() === 'he' ? 'אין שיתוף ללא הסכמה.' : 'No sharing without consent.' }}</li>
+          <li>{{ language() === 'he' ? 'מצב פרטי עוצר פרסום.' : 'Private mode blocks posting.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-learning-progress">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'המשך הלמידה' : 'Learning progress' }}</h2>
+        <div class="status-box warning" data-testid="adaptation-pending">
+          <strong>{{ language() === 'he' ? 'המלצת המשך מוכנה' : 'Next lesson suggestion ready' }}</strong>
+          <p>{{ language() === 'he' ? 'תוכנית הלמידה מתעדכנת אחרי השלמת התגמולים.' : 'The learning plan updates after the reward work completes.' }}</p>
+        </div>
+        <div class="feed-list" data-testid="performance-history">
+          @for (row of progressRows; track row.learner) {
+            <div class="list-row">
+              <div>
+                <strong>{{ row.learner }}</strong>
+                <p>{{ row.detail }}</p>
+              </div>
+              <span>{{ row.status }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'פעולה הבאה' : 'Next action' }}</h2>
+        <a class="primary-link" href="/completion-gamification/next-lesson">{{ language() === 'he' ? 'התחלת השיעור הבא' : 'Start next lesson' }}</a>
+      </aside>
+    </section>
+  }
+</main>

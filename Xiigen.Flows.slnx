@@ -35,4 +35,11 @@
     <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Infrastructure/Xiigen.Flow.EventAttendance.Infrastructure.csproj" />
     <Project Path="flows/FLOW-04-event-attendance/server/Xiigen.Flow.EventAttendance.Tests/Xiigen.Flow.EventAttendance.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-05-completion-gamification/" />
+  <Folder Name="/flows/FLOW-05-completion-gamification/server/">
+    <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Api/Xiigen.Flow.CompletionGamification.Api.csproj" />
+    <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Application/Xiigen.Flow.CompletionGamification.Application.csproj" />
+    <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Infrastructure/Xiigen.Flow.CompletionGamification.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Tests/Xiigen.Flow.CompletionGamification.Tests.csproj" />
+  </Folder>
 </Solution>

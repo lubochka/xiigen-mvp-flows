@@ -1,0 +1,25 @@
+{
+  "policies": [
+    {
+      "name": "CompletionGamificationProtected",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "name": "CompletionGamificationHealthBypass",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/health/live",
+        "/health/ready"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+﻿{
+    "flowId":  "FLOW-05",
+    "flowSlug":  "completion-gamification",
+    "completedAt":  "2026-05-19T15:29:23.0146468+03:00",
+    "status":  "PASS",
+    "checks":  [
+                   {
+                       "name":  "provider-sdk-imports",
+                       "expected":  0,
+                       "actual":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "free-tenant-parameters-in-service-or-fabric-methods",
+                       "expected":  0,
+                       "actual":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "business-throws",
+                       "expected":  0,
+                       "actual":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "services-missing-microservicebase",
+                       "expected":  0,
+                       "actual":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "outbox-cloudevents-present",
+                       "expected":  "\u003e0",
+                       "actual":  37,
+                       "pass":  true
+                   }
+               ],
+    "providerSdkHits":  [
+
+                        ],
+    "freeTenantParamHits":  [
+
+                            ],
+    "businessThrowHits":  [
+
+                          ],
+    "missingBaseHits":  [
+
+                        ],
+    "outboxCloudEventSample":  [
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationBfaRuleRegistry.cs",
+                                       "lineNumber":  10,
+                                       "line":  "Rule(\"CF-05-4\", \"SCOPE_ISOLATION\", \"Completion, ledger, streak, achievement, social, peer-grade, learning-completion, and outbox records are isolated by tenant context.\"),"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationBfaRuleRegistry.cs",
+                                       "lineNumber":  12,
+                                       "line":  "Rule(\"CF-868\", \"IDEMPOTENCY_CONSTRAINT\", \"X-Idempotency-Key replay returns the cached completion response without duplicate documents or outbox side effects.\"),"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationBfaRuleRegistry.cs",
+                                       "lineNumber":  14,
+                                       "line":  "Rule(\"CF-870\", \"DNA8_ORDERING\", \"Downstream fabric timeout returns 504 retry hint while retaining an outbox record for deduplicated retry.\"),"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationBfaRuleRegistry.cs",
+                                       "lineNumber":  18,
+                                       "line":  "Rule(\"CF-874\", \"DNA8_ORDERING\", \"Partial queue failure keeps stored state and an outbox retry record rather than losing reward work.\"),"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationResults.cs",
+                                       "lineNumber":  7,
+                                       "line":  "bool OutboxRetained);"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationService.cs",
+                                       "lineNumber":  15,
+                                       "line":  "private readonly IOutboxStore _outbox;"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationService.cs",
+                                       "lineNumber":  21,
+                                       "line":  "IOutboxStore outbox,"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationService.cs",
+                                       "lineNumber":  34,
+                                       "line":  "_outbox = outbox;"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationService.cs",
+                                       "lineNumber":  84,
+                                       "line":  "var retained = await _outbox.AppendAsync(CreateEvent(CompletionGamificationConstants.TimeoutRetainedEvent, lessonId, timeoutPayload), cancellationToken).ConfigureAwait(false);"
+                                   },
+                                   {
+                                       "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-05-completion-gamification\\server\\Xiigen.Flow.CompletionGamification.Application\\CompletionGamificationService.cs",
+                                       "lineNumber":  88,
+                                       "line":  "return Failure\u003cCompletionGamificationOutcome\u003e(\"UPSTREAM_FAILURE\", \"Outbox append failed during timeout handling\");"
+                                   }
+                               ]
+}

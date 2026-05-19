@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+  "title": "CompletionGamificationResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "completionId": {
+      "type": "string"
+    },
+    "lessonId": {
+      "type": "string"
+    },
+    "learnerId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "earnedPoints": {
+      "type": "integer"
+    },
+    "totalPoints": {
+      "type": "integer"
+    },
+    "level": {
+      "type": "integer"
+    },
+    "currentStreak": {
+      "type": "integer"
+    },
+    "localDate": {
+      "type": "string"
+    },
+    "socialShareAllowed": {
+      "type": "boolean"
+    },
+    "achievements": {
+      "type": "array"
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object"
+    }
+  }
+}

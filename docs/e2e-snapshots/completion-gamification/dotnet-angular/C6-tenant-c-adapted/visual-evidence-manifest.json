@@ -1,0 +1,116 @@
+{
+  "flowId": "FLOW-05",
+  "flowSlug": "completion-gamification",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tenant-c-completion-gamification",
+  "roleCount": 5,
+  "cellCount": 3,
+  "expectedPngCount": 15,
+  "screenshots": [
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\docs\\e2e-snapshots\\completion-gamification\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

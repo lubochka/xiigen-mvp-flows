@@ -1,0 +1,12 @@
+﻿services:
+  completion-gamification-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5305:8080"
+
+

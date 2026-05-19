@@ -1,0 +1,170 @@
+﻿[
+    {
+        "label":  "source",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28909,
+        "sha256":  "90336EE10DFA8777DF98BADB94E5BA2903022F8C2930305B923DD6473710BEFF",
+        "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "source",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "0793759A9B87B6F0E94A2BF4E7D7C799FBE60F9EC7CA7129875A74232784D756",
+        "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-installed",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28769,
+        "sha256":  "63D227A8A1B0F567C7B11BC970B213935B967341DD06E887DB695314D55F0F46",
+        "path":  "C:\\Projects\\tenant-a--completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-installed",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  3979,
+        "sha256":  "7E9986D40C066BEE2BDABE3C84D3A7625574D8EB86BCE1894ACC28D43DB2E3C7",
+        "path":  "C:\\Projects\\tenant-a--completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28908,
+        "sha256":  "EDF4828F39B95A37A21BE362F7BB5D4B3D3567B6DECC56C19B6CE1D38FCB1E98",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.2.nupkg",
+        "bytes":  28778,
+        "sha256":  "4301095A01E6613717BF9269110CC64A904E4AA29E0C2256E458A7A5B93EA797",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "5316A7E39590ADDAB90FEC1E3C46F97E8540E4D3CD441FDE06661F2BB5ED4E25",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-a-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.2.nupkg",
+        "bytes":  3984,
+        "sha256":  "54ED9F849AB0D93E6AE0B76F76590B8CC44A02847907987D54F9CEF1139E9040",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28908,
+        "sha256":  "EDF4828F39B95A37A21BE362F7BB5D4B3D3567B6DECC56C19B6CE1D38FCB1E98",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.2.nupkg",
+        "bytes":  28785,
+        "sha256":  "F0EC2716B86055955960D87FF329E7B6313C9B06073CCB6912372DFF770E7DBB",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "5316A7E39590ADDAB90FEC1E3C46F97E8540E4D3CD441FDE06661F2BB5ED4E25",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-installed-from-a",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.2.nupkg",
+        "bytes":  3986,
+        "sha256":  "FB26719C7DBB7697A6C3F2489F3A3D01966FC6D9884EDCEA07F2729F36375994",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.2.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28908,
+        "sha256":  "EDF4828F39B95A37A21BE362F7BB5D4B3D3567B6DECC56C19B6CE1D38FCB1E98",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.3.nupkg",
+        "bytes":  28778,
+        "sha256":  "8A7BE33B487B0FD6D82D3C0BB10D79A8712AFFB5F1D7826F3DDF31F50D2F7C81",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "5316A7E39590ADDAB90FEC1E3C46F97E8540E4D3CD441FDE06661F2BB5ED4E25",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-b-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.3.nupkg",
+        "bytes":  3990,
+        "sha256":  "EDAF1CC4034AAB4FAB2091FE22BC04ECECEFB05A6099C03DB365ECE8C9ED4B17",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28908,
+        "sha256":  "EDF4828F39B95A37A21BE362F7BB5D4B3D3567B6DECC56C19B6CE1D38FCB1E98",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.3.nupkg",
+        "bytes":  28787,
+        "sha256":  "F6984321DCF1E523ADDABBE9D0A00755EA14848DD125E4506361815C15A323FB",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "5316A7E39590ADDAB90FEC1E3C46F97E8540E4D3CD441FDE06661F2BB5ED4E25",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-installed-from-b",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.3.nupkg",
+        "bytes":  3990,
+        "sha256":  "B45AC01975FD5729A4E905900BE5D3AFD7CF942F04749958F0BD36B5C43C70CD",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.3.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg",
+        "bytes":  28908,
+        "sha256":  "EDF4828F39B95A37A21BE362F7BB5D4B3D3567B6DECC56C19B6CE1D38FCB1E98",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Application.0.1.4.nupkg",
+        "bytes":  28786,
+        "sha256":  "56CA997BBC89196E95EBC4176B828801F9CA1116DD55A82E1AD12E84C2583CDE",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Application.0.1.4.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg",
+        "bytes":  4092,
+        "sha256":  "5316A7E39590ADDAB90FEC1E3C46F97E8540E4D3CD441FDE06661F2BB5ED4E25",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.1.nupkg"
+    },
+    {
+        "label":  "tenant-c-adapted",
+        "package":  "Xiigen.Flow.CompletionGamification.Infrastructure.0.1.4.nupkg",
+        "bytes":  3997,
+        "sha256":  "92C9DF0D449649172E59CE6E60E9F786C6C784C31BD9273084EC5737E457D4C2",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\artifacts\\nuget\\FLOW-05\\Xiigen.Flow.CompletionGamification.Infrastructure.0.1.4.nupkg"
+    }
+]

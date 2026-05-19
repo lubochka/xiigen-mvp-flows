@@ -1,0 +1,15 @@
+﻿{
+  "flowId": "FLOW-05",
+  "flowSlug": "completion-gamification",
+  "targets": [
+    {
+      "name": "local",
+      "apiBaseUrl": "http://127.0.0.1:5295",
+      "clientBaseUrl": "http://127.0.0.1:4305",
+      "tenantResolution": "header",
+      "secretsProvider": "vault-dev"
+    }
+  ]
+}
+
+

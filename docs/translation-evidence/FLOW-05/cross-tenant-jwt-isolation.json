@@ -1,0 +1,8 @@
+﻿{
+    "flowId":  "FLOW-05",
+    "scenario":  "tenant-b-token-on-tenant-c-route",
+    "expected":  401,
+    "status":  401,
+    "pass":  true,
+    "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+}

@@ -1,0 +1,38 @@
+﻿{
+    "flowId":  "FLOW-05",
+    "flowSlug":  "completion-gamification",
+    "completedAt":  "2026-05-19T15:05:07.8032293+03:00",
+    "dockerServerUrl":  "http://127.0.0.1:5305",
+    "checks":  [
+                   {
+                       "expected":  201,
+                       "pass":  true,
+                       "name":  "valid-token-completion",
+                       "actual":  201
+                   },
+                   {
+                       "expected":  401,
+                       "pass":  true,
+                       "name":  "missing-token",
+                       "actual":  401
+                   },
+                   {
+                       "expected":  403,
+                       "pass":  true,
+                       "name":  "wrong-role",
+                       "actual":  403
+                   },
+                   {
+                       "expected":  401,
+                       "pass":  true,
+                       "name":  "cross-tenant-token",
+                       "actual":  401
+                   },
+                   {
+                       "expected":  201,
+                       "pass":  true,
+                       "name":  "peer-grade",
+                       "actual":  201
+                   }
+               ]
+}

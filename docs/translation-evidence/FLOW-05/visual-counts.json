@@ -1,0 +1,37 @@
+﻿[
+    {
+        "Point":  "C0-source-flow",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C1-tenant-a-installed",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C2-tenant-a-adapted-published",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C3-tenant-b-installed-from-a",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C4-tenant-b-adapted-published",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C5-tenant-c-installed-from-b",
+        "PngCount":  15,
+        "Manifest":  true
+    },
+    {
+        "Point":  "C6-tenant-c-adapted",
+        "PngCount":  15,
+        "Manifest":  true
+    }
+]

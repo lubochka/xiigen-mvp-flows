@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-05/contracts/schemas/completion-gamification-request.schema.json",
+  "title": "CompletionGamificationRequest",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "lessonId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "learnerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "questionnaireResult": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "scorePercent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "answersCorrect": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "answersTotal": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "scorePercent"
+      ]
+    },
+    "scorePercent": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "userTimezoneOffset": {
+      "type": "integer",
+      "minimum": -840,
+      "maximum": 840
+    },
+    "shareConsent": {
+      "type": "boolean"
+    },
+    "privateMode": {
+      "type": "boolean"
+    },
+    "graderId": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "comment": {
+      "type": "string"
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}

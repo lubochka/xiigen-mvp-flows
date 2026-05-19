@@ -1,0 +1,112 @@
+{
+  "flowId": "FLOW-05",
+  "flowSlug": "completion-gamification",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "completion-gamification-submit-completion",
+      "operationId": "SubmitLessonCompletion",
+      "method": "POST",
+      "routePattern": "/api/dynamic/completion-gamification",
+      "requestSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "CompletionGamificationProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ]
+    },
+    {
+      "routeId": "completion-gamification-dashboard",
+      "operationId": "GetGamificationDashboard",
+      "method": "GET",
+      "routePattern": "/api/dynamic/completion-gamification/{learnerId}/dashboard",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "CompletionGamificationProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ]
+    },
+    {
+      "routeId": "completion-gamification-status",
+      "operationId": "GetCompletionStatus",
+      "method": "GET",
+      "routePattern": "/api/dynamic/completion-gamification/{lessonId}/status/{learnerId}",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "CompletionGamificationProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ]
+    },
+    {
+      "routeId": "completion-gamification-social-share",
+      "operationId": "SubmitSocialShare",
+      "method": "POST",
+      "routePattern": "/api/dynamic/completion-gamification/{lessonId}/share",
+      "requestSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "CompletionGamificationProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ]
+    },
+    {
+      "routeId": "completion-gamification-peer-grade",
+      "operationId": "SubmitPeerGrade",
+      "method": "POST",
+      "routePattern": "/api/dynamic/completion-gamification/{lessonId}/grade",
+      "requestSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-05/contracts/schemas/completion-gamification-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "CompletionGamificationProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "event_organiser",
+        "tenant_admin"
+      ]
+    },
+    {
+      "routeId": "completion-gamification-health-live",
+      "operationId": "CompletionGamificationLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "completion-gamification-health-ready",
+      "operationId": "CompletionGamificationReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}
