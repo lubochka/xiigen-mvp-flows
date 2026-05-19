@@ -1,0 +1,81 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "flowSlug":  "friend-request-social-feed",
+    "baseUrl":  "http://127.0.0.1:5307",
+    "generatedAt":  "2026-05-19T21:58:37.9830039Z",
+    "total":  10,
+    "passed":  10,
+    "failed":  0,
+    "results":  [
+                    {
+                        "name":  "health-ready-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-07\"}"
+                    },
+                    {
+                        "name":  "public-preview-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"flow\":\"FLOW-07\",\"summary\":\"Friend requests, connection strength, and feed integration\",\"states\":[\"request\",\"connections\",\"feed\",\"analytics\"]}"
+                    },
+                    {
+                        "name":  "valid-token-submit-201",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "pass":  true,
+                        "body":  "{\"id\":\"docker-request-1\",\"requestId\":\"docker-request-1\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"senderUserId\":\"docker-alice\",\"recipientUserId\":\"docker-bob\",\"status\":\"PENDING\",\"version\":\"1\",\"httpStatus\":201}"
+                    },
+                    {
+                        "name":  "idempotent-replay-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"id\":\"docker-request-1\",\"requestId\":\"docker-request-1\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"senderUserId\":\"docker-alice\",\"recipientUserId\":\"docker-bob\",\"status\":\"PENDING\",\"version\":\"1\",\"httpStatus\":201}"
+                    },
+                    {
+                        "name":  "valid-token-accept-201",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "pass":  true,
+                        "body":  "{\"requestId\":\"docker-request-1\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"senderUserId\":\"docker-alice\",\"recipientUserId\":\"docker-bob\",\"status\":\"ACCEPTED\",\"connectionStrength\":1,\"postLimit\":20,\"zone\":\"top-20-percent\",\"version\":\"2\"}"
+                    },
+                    {
+                        "name":  "feed-read-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"connectionStrength\":0.99,\"items\":[{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-01\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 1 from docker-bob\",\"score\":0,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-02\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 2 from docker-bob\",\"score\":0.99,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-03\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 3 from docker-bob\",\"score\":0.98,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-04\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 4 from docker-bob\",\"score\":0.97,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-05\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 5 from docker-bob\",\"score\":0.96,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-06\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 6 from docker-bob\",\"score\":0.95,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-07\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 7 from docker-bob\",\"score\":0.94,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-08\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 8 from docker-bob\",\"score\":0.9299999999999999,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-09\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 9 from docker-bob\",\"score\":0.92,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-10\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 10 from docker-bob\",\"score\":0.91,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-11\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 11 from docker-bob\",\"score\":0.9,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-12\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 12 from docker-bob\",\"score\":0.89,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-13\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 13 from docker-bob\",\"score\":0.88,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-14\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 14 from docker-bob\",\"score\":0.87,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-15\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 15 from docker-bob\",\"score\":0.86,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-16\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 16 from docker-bob\",\"score\":0.85,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-17\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 17 from docker-bob\",\"score\":0.84,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-18\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 18 from docker-bob\",\"score\":0.83,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-19\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 19 from docker-bob\",\"score\":0.8200000000000001,\"zone\":\"top-20-percent\",\"version\":\"1\"},{\"feedItemId\":\"feed-conn-acme-corp-docker-alice-docker-bob-docker-alice-20\",\"connectionId\":\"conn-acme-corp-docker-alice-docker-bob\",\"viewerUserId\":\"docker-alice\",\"sourceUserId\":\"docker-bob\",\"title\":\"Historical post 20 from docker-bob\",\"score\":0.81,\"zone\":\"top-20-percent\",\"version\":\"1\"}]}"
+                    },
+                    {
+                        "name":  "analytics-admin-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"connectionCount\":1,\"pendingRequestCount\":0,\"averageStrength\":1,\"strengthBuckets\":{\"strong\":2,\"medium\":0,\"weak\":0,\"dormant\":0}}"
+                    },
+                    {
+                        "name":  "missing-token-401",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                    },
+                    {
+                        "name":  "wrong-role-403",
+                        "expectedStatus":  403,
+                        "actualStatus":  403,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                    },
+                    {
+                        "name":  "cross-tenant-token-401",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    }
+                ]
+}

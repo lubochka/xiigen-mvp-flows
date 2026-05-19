@@ -49,4 +49,11 @@
     <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Infrastructure/Xiigen.Flow.UserGroupsCommunities.Infrastructure.csproj" />
     <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Tests/Xiigen.Flow.UserGroupsCommunities.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-07-friend-request-social-feed/" />
+  <Folder Name="/flows/FLOW-07-friend-request-social-feed/server/">
+    <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Api/Xiigen.Flow.FriendRequestSocialFeed.Api.csproj" />
+    <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Application/Xiigen.Flow.FriendRequestSocialFeed.Application.csproj" />
+    <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Infrastructure/Xiigen.Flow.FriendRequestSocialFeed.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Tests/Xiigen.Flow.FriendRequestSocialFeed.Tests.csproj" />
+  </Folder>
 </Solution>

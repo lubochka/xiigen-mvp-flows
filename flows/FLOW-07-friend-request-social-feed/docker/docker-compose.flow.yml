@@ -1,0 +1,12 @@
+services:
+  friend-request-social-feed-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5307:8080"
+
+

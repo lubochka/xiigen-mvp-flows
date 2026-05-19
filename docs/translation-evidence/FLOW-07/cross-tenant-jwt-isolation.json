@@ -1,0 +1,6 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "verdict":  "PASS",
+    "check":  "Docker auth matrix proved tenant-b request with tenant:acme-corp token returns 401 AUTH_CROSS_TENANT_TOKEN; tenant cascade keeps tenant-specific repositories and module names distinct through C1-C6.",
+    "evidence":  "docs/translation-evidence/FLOW-07/docker-auth-matrix.json"
+}

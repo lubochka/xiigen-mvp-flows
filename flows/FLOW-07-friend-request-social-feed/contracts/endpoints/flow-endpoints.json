@@ -1,0 +1,102 @@
+{
+  "flowId": "FLOW-07",
+  "flowSlug": "friend-request-social-feed",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "friend-request-social-feed-public-preview",
+      "operationId": "FriendRequestSocialFeedPublicPreview",
+      "method": "GET",
+      "routePattern": "/api/dynamic/friend-request-social-feed/public-preview",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+      "authPosture": "anonymous",
+      "bypassReason": "Public preview exposes only synthetic module summary data."
+    },
+    {
+      "routeId": "friend-request-social-feed-request",
+      "operationId": "SubmitFriendRequest",
+      "method": "POST",
+      "routePattern": "/api/dynamic/friend-request-social-feed",
+      "requestSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "FriendRequestSocialFeedProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "business_partner",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "friend-request-social-feed-response",
+      "operationId": "RespondToFriendRequest",
+      "method": "POST",
+      "routePattern": "/api/dynamic/friend-request-social-feed/{requestId}/response",
+      "requestSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "FriendRequestSocialFeedProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "business_partner",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "friend-request-social-feed-feed",
+      "operationId": "GetFeed",
+      "method": "GET",
+      "routePattern": "/api/dynamic/friend-request-social-feed/{connectionId}/feed/{viewerUserId}",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "FriendRequestSocialFeedProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "business_partner",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "friend-request-social-feed-analytics",
+      "operationId": "GetAnalytics",
+      "method": "GET",
+      "routePattern": "/api/dynamic/friend-request-social-feed/analytics",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "FriendRequestSocialFeedAdmin",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "friend-request-social-feed-health-live",
+      "operationId": "FriendRequestSocialFeedLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "friend-request-social-feed-health-ready",
+      "operationId": "FriendRequestSocialFeedReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}

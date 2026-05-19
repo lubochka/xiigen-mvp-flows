@@ -1,0 +1,15 @@
+{
+  "flowId": "FLOW-07",
+  "flowSlug": "friend-request-social-feed",
+  "targets": [
+    {
+      "name": "local",
+      "apiBaseUrl": "http://127.0.0.1:5307",
+      "clientBaseUrl": "http://127.0.0.1:4307",
+      "tenantResolution": "header",
+      "secretsProvider": "vault-dev"
+    }
+  ]
+}
+
+

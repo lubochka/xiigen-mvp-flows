@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-response.schema.json",
+  "title": "FriendRequestSocialFeedResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "connectionId": {
+      "type": "string"
+    },
+    "senderUserId": {
+      "type": "string"
+    },
+    "recipientUserId": {
+      "type": "string"
+    },
+    "viewerUserId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "connectionStrength": {
+      "type": "number"
+    },
+    "postLimit": {
+      "type": "integer"
+    },
+    "zone": {
+      "type": "string"
+    },
+    "existingRecord": {
+      "type": "boolean"
+    },
+    "fromCache": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array"
+    },
+    "strengthBuckets": {
+      "type": "object"
+    },
+    "connectionCount": {
+      "type": "integer"
+    },
+    "pendingRequestCount": {
+      "type": "integer"
+    },
+    "averageStrength": {
+      "type": "number"
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object"
+    },
+    "retryAfterMs": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "verdict":  "PASS",
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.FriendRequestSocialFeed.Application.0.1.1.nupkg",
+                         "Length":  27703,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-07\\Xiigen.Flow.FriendRequestSocialFeed.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.FriendRequestSocialFeed.Infrastructure.0.1.1.nupkg",
+                         "Length":  4120,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-07\\Xiigen.Flow.FriendRequestSocialFeed.Infrastructure.0.1.1.nupkg"
+                     }
+                 ]
+}

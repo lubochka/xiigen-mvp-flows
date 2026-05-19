@@ -1,0 +1,66 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "verdict":  "success",
+    "runs":  [
+                 {
+                     "repo":  "lubochka/tenant-a--friend-request-social-feed",
+                     "cascadePoint":  "C1-tenant-a-installed",
+                     "runId":  26128107036,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--friend-request-social-feed/actions/runs/26128107036",
+                     "commit":  "c3a1b3aaffbc0c88b281dd48a8e8518157375a3c"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-a--tenant-a-friend-request-social-feed",
+                     "cascadePoint":  "C2-tenant-a-adapted-published",
+                     "runId":  26128249659,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--tenant-a-friend-request-social-feed/actions/runs/26128249659",
+                     "commit":  "d19218032f47084f4194e5ad169d4514e012fcd1"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-a-friend-request-social-feed",
+                     "cascadePoint":  "C3-tenant-b-installed-from-a",
+                     "runId":  26128389138,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-a-friend-request-social-feed/actions/runs/26128389138",
+                     "commit":  "23d3985853a4360b10505619ff8ded9a4be219e7"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-b-friend-request-social-feed",
+                     "cascadePoint":  "C4-tenant-b-adapted-published",
+                     "runId":  26128552680,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-b-friend-request-social-feed/actions/runs/26128552680",
+                     "commit":  "80f203efbc5f97822e1d14b8c861601861e543a6"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-b-friend-request-social-feed",
+                     "cascadePoint":  "C5-tenant-c-installed-from-b",
+                     "runId":  26128689415,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-b-friend-request-social-feed/actions/runs/26128689415",
+                     "commit":  "78562334b85538a49f2f60dc666e0f5466663d3a"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-c-friend-request-social-feed",
+                     "cascadePoint":  "C6-tenant-c-adapted",
+                     "runId":  26128828618,
+                     "workflow":  "FLOW-07 Friend Request Social Feed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-c-friend-request-social-feed/actions/runs/26128828618",
+                     "commit":  "2f0592a3392969a8f05aebe43a7b71f9f5384b18"
+                 }
+             ]
+}

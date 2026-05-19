@@ -1,0 +1,68 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "roleCount":  7,
+    "cellCount":  3,
+    "cascadePointCount":  7,
+    "expectedPerPoint":  21,
+    "expectedTotal":  147,
+    "actualTotal":  147,
+    "verdict":  "PASS",
+    "points":  [
+                   {
+                       "point":  "C0",
+                       "cascadePoint":  "C0-source-flow",
+                       "localPath":  "C:\\Projects\\xiigen-flows-dot-net-angular",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C1",
+                       "cascadePoint":  "C1-tenant-a-installed",
+                       "localPath":  "C:\\Projects\\tenant-a--friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C2",
+                       "cascadePoint":  "C2-tenant-a-adapted-published",
+                       "localPath":  "C:\\Projects\\tenant-a--tenant-a-friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C3",
+                       "cascadePoint":  "C3-tenant-b-installed-from-a",
+                       "localPath":  "C:\\Projects\\tenant-b--tenant-a-friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C4",
+                       "cascadePoint":  "C4-tenant-b-adapted-published",
+                       "localPath":  "C:\\Projects\\tenant-b--tenant-b-friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C5",
+                       "cascadePoint":  "C5-tenant-c-installed-from-b",
+                       "localPath":  "C:\\Projects\\tenant-c--tenant-b-friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   },
+                   {
+                       "point":  "C6",
+                       "cascadePoint":  "C6-tenant-c-adapted",
+                       "localPath":  "C:\\Projects\\tenant-c--tenant-c-friend-request-social-feed",
+                       "visualExpected":  21,
+                       "visualActual":  21,
+                       "status":  "PASS"
+                   }
+               ]
+}

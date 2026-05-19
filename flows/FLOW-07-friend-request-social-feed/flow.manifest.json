@@ -1,0 +1,128 @@
+{
+  "flowId": "FLOW-07",
+  "flowSlug": "friend-request-social-feed",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-07-friend-request-social-feed",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.FriendRequestSocialFeed.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/friend-request-social-feed/dotnet-angular",
+  "sourceAliases": [
+    "friend-request-social-feed",
+    "social-feed",
+    "friend-request"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "public_marketplace_visitor",
+      "tenant_user",
+      "tenant_admin",
+      "freelancer",
+      "business_partner",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "ready-after-shared-artifacts",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-02",
+      "reason": "Uses enriched profile and questionnaire signals for connection strength scoring."
+    },
+    {
+      "flowId": "FLOW-03",
+      "reason": "Uses event overlap as one input to feed ranking and relationship strength."
+    },
+    {
+      "flowId": "FLOW-05",
+      "reason": "Publishes social engagement events consumed by completion and participation scoring."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/friend-request-social-feed",
+    "requiredDocuments": [
+      "docs/flow-coverage/friend-request-social-feed/P1-business-logic-inventory.md",
+      "docs/flow-coverage/friend-request-social-feed/P3-automation-gap-analysis.md",
+      "docs/flow-coverage/friend-request-social-feed/P5-ui-specs.md",
+      "docs/flow-coverage/friend-request-social-feed/P9-edge-cases.md",
+      "docs/flow-coverage/friend-request-social-feed/P10-server-specs.md",
+      "docs/flow-coverage/friend-request-social-feed/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 11,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 15,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false
+  },
+  "realProviderReplacementTests": [],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "friend-request-social-feed",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-friend-request-social-feed.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

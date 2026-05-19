@@ -1,0 +1,19 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "verdict":  "PASS",
+    "providerSdkImports":  [
+
+                           ],
+    "freeTenantIdParameters":  [
+
+                               ],
+    "businessThrows":  [
+
+                       ],
+    "metadataExemptions":  [
+                               "BfaRuleDefinition.TenantId is static rule metadata, not a service/fabric free-form tenant parameter."
+                           ],
+    "microserviceBase":  true,
+    "outboxBeforeQueue":  true,
+    "cloudEvents":  true
+}

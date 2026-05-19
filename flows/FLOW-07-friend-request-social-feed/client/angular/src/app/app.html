@@ -1,0 +1,141 @@
+<main class="flow-shell" data-testid="page-friend-request-social-feed">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">{{ translated('Friend request') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          בקשות חברות, קשרים דו כיווניים ועדכון חברתי שמכבדים פרטיות ודייר.
+        } @else {
+          Friend requests, bidirectional connection records, and personalized social feed delivery in one tenant-safe workflow.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Friend request states">
+    <button type="button" [class.active]="screenState() === 'request'" (click)="setScreenState('request')">
+      <span>1</span>{{ translated('Request') }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'connections'" (click)="setScreenState('connections')">
+      <span>2</span>{{ translated('Connections') }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'feed'" (click)="setScreenState('feed')">
+      <span>3</span>{{ translated('Feed') }}
+    </button>
+  </nav>
+
+  @if (screenState() === 'request') {
+    <section class="layout" data-testid="page-friendrequest">
+      <article class="main-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ translated('Request state') }}</p>
+            <h2>{{ roleHeading() }}</h2>
+            <p>{{ language() === 'he' ? 'הבקשה נבדקת מול כללי פרטיות לפני שמירה, ואז נשמרת לפני כל הודעה חיצונית.' : 'The request checks privacy before state is stored, then stores state before any external message is emitted.' }}</p>
+          </div>
+          <strong class="counter">201</strong>
+        </div>
+        <div class="request-grid">
+          @for (row of requestRows; track row.label) {
+            <div class="metric">
+              <span>{{ row.label }}</span>
+              <strong>{{ row.value }}</strong>
+              <p>{{ row.detail }}</p>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'החלטה בטוחה' : 'Safe decision path' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'בקשה חסומה אינה חושפת סיבת פרטיות.' : 'A blocked request does not reveal the private reason.' }}</li>
+          <li>{{ language() === 'he' ? 'אותו מפתח פעולה מחזיר אותה תוצאה.' : 'The same operation key returns the same result.' }}</li>
+          <li>{{ language() === 'he' ? 'בקשות מקבילות לא יוצרות כפילות.' : 'Parallel requests do not create duplicate state.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'connections') {
+    <section class="layout" data-testid="page-connections">
+      <article class="main-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ translated('Connection strength') }}</p>
+            <h2>{{ translated('Social graph') }}</h2>
+            <p class="role-context">{{ roleHeading() }}</p>
+            <p>{{ language() === 'he' ? 'קבלה יוצרת שני קצוות קשר לפני אירוע ההפצה, כדי שכל צד יראה את אותו קשר.' : 'Acceptance creates both connection edges before the publication event, so each side sees the same relationship.' }}</p>
+          </div>
+          <strong class="counter">2</strong>
+        </div>
+        <div class="connection-list" data-testid="page-socialgraph">
+          @for (connection of connections; track connection.name) {
+            <div class="connection-row">
+              <div>
+                <strong>{{ connection.name }}</strong>
+                <p>{{ connection.detail }}</p>
+              </div>
+              <span>{{ connection.strength }} · {{ connection.zone }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'אותות משוקללים' : 'Weighted signals' }}</h2>
+        <div class="weight-stack">
+          <span>Profile match · 25%</span>
+          <span>Groups · 20%</span>
+          <span>Events · 20%</span>
+          <span>Purchases · 15%</span>
+          <span>Questionnaire · 20%</span>
+        </div>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-social-feed">
+      <article class="main-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ translated('Feed delivery') }}</p>
+            <h2>{{ translated('Personal feed') }}</h2>
+            <p class="role-context">{{ roleHeading() }}</p>
+            <p>{{ language() === 'he' ? 'חוזק הקשר קובע חלון תוכן. גם ציון אפס נשמר ונבדק.' : 'Connection strength determines the content window. A zero score is still preserved and visible to tests.' }}</p>
+          </div>
+          <strong class="counter">0.00</strong>
+        </div>
+        <div class="feed-list">
+          @for (item of feedRows; track item.title) {
+            <div class="feed-row">
+              <div>
+                <strong>{{ item.title }}</strong>
+                <p>{{ item.detail }}</p>
+              </div>
+              <span>{{ item.score }} · {{ item.placement }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'גבולות דייר' : 'Tenant boundary' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'עדכון של דייר אחר אינו מופיע כאן.' : 'Another tenant’s feed never appears here.' }}</li>
+          <li>{{ language() === 'he' ? 'מדדי ניהול אינם כוללים מזהי משתמשים.' : 'Operational metrics do not expose user identifiers.' }}</li>
+          <li>{{ language() === 'he' ? 'מסירה חוזרת לא יוצרת פריטי תוכן כפולים.' : 'Repeated delivery does not create duplicate feed items.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  }
+</main>

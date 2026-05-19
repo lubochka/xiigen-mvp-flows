@@ -1,0 +1,8 @@
+﻿{
+    "flowId":  "FLOW-07",
+    "verdict":  "PASS",
+    "forbiddenPattern":  "\\bBFA\\b|\\bDNA-[1-9]\\b|AF[- ]station|arbiter|FREEDOM config|MACHINE code|DataProcessResult|ENGINE_INTERNAL|\\bT[0-9]{3}\\b|\\bCF-[0-9]{3}\\b",
+    "hits":  [
+
+             ]
+}

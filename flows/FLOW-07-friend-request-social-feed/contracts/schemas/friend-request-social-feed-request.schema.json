@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-07/contracts/schemas/friend-request-social-feed-request.schema.json",
+  "title": "FriendRequestSocialFeedRequest",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "requestId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "senderUserId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recipientUserId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actorUserId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "DECLINE"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "baseMatchScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "groupWeight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "eventWeight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "purchaseWeight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "questionnaireWeight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mlAdjustment": {
+      "type": "number",
+      "minimum": -0.2,
+      "maximum": 0.2
+    },
+    "recipientPrivacyBlocked": {
+      "type": "boolean"
+    },
+    "senderBlocked": {
+      "type": "boolean"
+    },
+    "forceZeroScore": {
+      "type": "boolean"
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}

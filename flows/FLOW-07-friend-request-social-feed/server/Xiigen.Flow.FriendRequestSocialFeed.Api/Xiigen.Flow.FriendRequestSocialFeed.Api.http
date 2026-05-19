@@ -1,0 +1,5 @@
+@Xiigen.Flow.FriendRequestSocialFeed.Api_HostAddress = http://localhost:5306
+
+GET {{Xiigen.Flow.FriendRequestSocialFeed.Api_HostAddress}}/health/ready
+
+
