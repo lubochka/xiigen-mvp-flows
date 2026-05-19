@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-02/contracts/schemas/profile-enrichment-response.schema.json",
+  "title": "ProfileEnrichmentResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "profileId",
+    "version",
+    "partialResults",
+    "completionEventName"
+  ],
+  "properties": {
+    "profileId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "matchingProfileId": {
+      "type": "string"
+    },
+    "matching": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "suggestions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "partialResults": {
+      "type": "boolean"
+    },
+    "feedId": {
+      "type": "string"
+    },
+    "signalsUsed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "degraded": {
+      "type": "boolean"
+    },
+    "completionEventName": {
+      "const": "PersonalizationCompleted"
+    }
+  }
+}

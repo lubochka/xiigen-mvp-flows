@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "name": "ProfileEnrichmentProtected",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "name": "ProfileEnrichmentHealthBypass",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/health/live",
+        "/health/ready"
+      ]
+    }
+  ]
+}

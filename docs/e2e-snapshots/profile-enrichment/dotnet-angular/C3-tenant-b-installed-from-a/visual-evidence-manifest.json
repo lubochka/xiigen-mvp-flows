@@ -1,0 +1,158 @@
+{
+  "flowId": "FLOW-02",
+  "flowSlug": "profile-enrichment",
+  "cascadePoint": "C3-tenant-b-installed-from-a",
+  "moduleName": "tenant-a-profile-enrichment",
+  "roleCount": 7,
+  "cellCount": 3,
+  "expectedPngCount": 21,
+  "screenshots": [
+    {
+      "role": "anonymous",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "anonymous",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "anonymous",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_user-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_user-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_user-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_admin-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_admin-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant_admin-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "freelancer",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\business_partner-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "business_partner",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\business_partner-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "business_partner",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\business_partner-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\event_organiser-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\event_organiser-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\event_organiser-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-en-questionnaire",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform_admin-desktop-en-questionnaire.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "desktop-he-rtl-matching",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform_admin-desktop-he-rtl-matching.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "mobile-en-personalization",
+      "path": "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\docs\\e2e-snapshots\\profile-enrichment\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform_admin-mobile-en-personalization.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

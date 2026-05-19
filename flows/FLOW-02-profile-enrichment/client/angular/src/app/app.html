@@ -1,0 +1,186 @@
+<main class="profile-shell" data-testid="page-profile-enrichment">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'פרופיל והתאמה' : 'Profile intelligence' }}</p>
+      <h1>{{ title() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          שאלון, העשרת נתונים, התאמה והזנת תוכן אישית במקום אחד.
+        } @else {
+          Questionnaire intake, enrichment fan-in, matching convergence, and personalized feed readiness.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Profile enrichment states">
+    <button type="button" [class.active]="screenState() === 'questionnaire'" (click)="setScreenState('questionnaire')">
+      <span>1</span>{{ language() === 'he' ? 'שאלון' : 'Questionnaire' }}
+    </button>
+    <button type="button" [class.active]="screenState().startsWith('matching')" (click)="setScreenState('matching-complete')">
+      <span>2</span>{{ language() === 'he' ? 'התאמה' : 'Matching' }}
+    </button>
+    <button type="button" [class.active]="screenState().startsWith('personalization')" (click)="setScreenState('personalization-complete')">
+      <span>3</span>{{ language() === 'he' ? 'התאמה אישית' : 'Personalization' }}
+    </button>
+  </nav>
+
+  @if (isProtected()) {
+    <section class="layout" data-testid="page-questionnaire">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        <p>{{ language() === 'he' ? 'המסך מוגן. יש להתחבר לפני מילוי פרופיל.' : 'This flow is protected. Sign in before completing profile enrichment.' }}</p>
+        <a class="primary-link" href="/auth/login?returnUrl=/profile-enrichment/questionnaire">Sign in</a>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'בדיקות אבטחה' : 'Security checks' }}</h2>
+        <ul>
+          <li>Missing token returns 401.</li>
+          <li>Wrong role returns 403.</li>
+          <li>Cross-tenant token returns 401.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'questionnaire' || screenState() === 'validation' || screenState() === 'processing') {
+    <section class="layout" data-testid="page-questionnaire">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ roleHeading() }}</h2>
+        @if (screenState() === 'processing') {
+          <div class="status-box info" data-testid="processing">
+            <strong>{{ language() === 'he' ? 'מעבד פרופיל' : 'Processing profile' }}</strong>
+            <p>{{ language() === 'he' ? 'המערכת שומרת פרופיל פרטי ורשומת התאמה גלובלית.' : 'The flow stores the private profile and global matching record before publishing events.' }}</p>
+          </div>
+        } @else {
+          @if (screenState() === 'validation' || validationMessage()) {
+            <p role="alert" class="status-box danger" data-testid="questionnaire-validation-error">{{ validationMessage() ?? 'Please review your submission.' }}</p>
+          }
+          <form data-testid="questionnaire-form" (ngSubmit)="submitQuestionnaire()" noValidate>
+            <label>
+              <span>{{ language() === 'he' ? 'תחום פעילות' : role() === 'freelancer' ? 'Primary skill category' : 'Industry' }}</span>
+              <input id="industry-input" data-testid="industry-input" [ngModel]="industry()" name="industry" (ngModelChange)="updateIndustry($event)" />
+            </label>
+            <label>
+              <span>{{ language() === 'he' ? 'שלב עסקי' : role() === 'event_organiser' ? 'Organisation stage' : 'Business stage' }}</span>
+              <input data-testid="stage-input" [ngModel]="businessStage()" name="stage" (ngModelChange)="updateBusinessStage($event)" />
+            </label>
+            @if (role() === 'business_partner') {
+              <label>
+                <span>Primary hiring need</span>
+                <input data-testid="questionnaire-partner-need" [ngModel]="partnerNeed()" name="partnerNeed" (ngModelChange)="updatePartnerNeed($event)" />
+              </label>
+            }
+            @if (role() === 'tenant_admin') {
+              <div class="status-box warning" data-testid="questionnaire-admin-banner">Admin override active</div>
+            }
+            <div class="actions">
+              <button type="submit" class="primary" data-testid="submit-button">{{ language() === 'he' ? 'המשך' : 'Continue' }}</button>
+              <button type="button" class="secondary" data-testid="wizard-skip-link" (click)="skipQuestionnaire()">{{ language() === 'he' ? 'דלג כרגע' : 'Skip for now' }}</button>
+            </div>
+          </form>
+        }
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'כיסוי פונקציונלי' : 'Functional coverage' }}</h2>
+        <ul>
+          <li>Saved profile and matching summary are both required.</li>
+          <li>Repeating the same request returns the saved response.</li>
+          <li>Validation leaves no partial write.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState().startsWith('matching')) {
+    <section class="layout" data-testid="page-matching">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'תוצאות התאמה' : 'Matching results' }}</h2>
+        @if (screenState() === 'matching-in-progress') {
+          <div class="status-box info" data-testid="matching-in-progress">
+            <strong>{{ language() === 'he' ? 'בודק התאמות' : 'Matching in progress' }}</strong>
+            <p>Compatibility scoring is running across the tenant-safe matching profile set.</p>
+          </div>
+        } @else if (screenState() === 'matching-partial') {
+          <div data-testid="matching-partial">
+            <div class="status-box warning" data-testid="partial-results-notice">
+              <strong>{{ language() === 'he' ? 'תוצאות חלקיות זמינות' : 'Partial results available' }}</strong>
+              <p>Timeout is a success mode. Confirmed matches are shown while the rest continue.</p>
+            </div>
+            @for (match of partialMatches; track match.id) {
+              <div class="list-row"><strong>{{ match.name }}</strong><span>{{ match.score }}</span></div>
+            }
+          </div>
+        } @else {
+          <div data-testid="matching-complete">
+            <div class="status-box success">
+              <strong>{{ language() === 'he' ? 'ההתאמה הושלמה' : 'Matching complete' }}</strong>
+              <p><span data-testid="connection-count">{{ matches.length }}</span> connections found.</p>
+            </div>
+            @for (match of matches; track match.id) {
+              <div class="list-row"><strong>{{ match.name }}</strong><span>{{ match.score }}</span></div>
+            }
+          </div>
+        }
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'כללי התאמה' : 'Matching rules' }}</h2>
+        <ul>
+          <li>Matching reads the global matching record only.</li>
+          <li>Tenant scope is still enforced.</li>
+          <li>Partial results remain successful output.</li>
+        </ul>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-personalization">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <h2>{{ language() === 'he' ? 'הזנה אישית' : 'Personalized feed' }}</h2>
+        @if (screenState() === 'personalization-degraded') {
+          <div class="status-box warning" data-testid="personalization-degraded">
+            <strong>{{ language() === 'he' ? 'מציג תוכן פופולרי' : 'Showing trending content' }}</strong>
+            <p>Profile signals are degraded, so the flow serves safe fallback content.</p>
+          </div>
+          <div class="feed-list" data-testid="personalization-feed">
+            @for (item of fallbackFeed; track item.id) {
+              <div class="list-row" data-testid="feed-item"><strong>{{ item.title }}</strong><span>{{ item.signal }}</span></div>
+            }
+          </div>
+        } @else {
+          <div class="status-box success" data-testid="personalization-complete">
+            <strong>{{ language() === 'he' ? 'החוויה האישית מוכנה' : 'Personalization ready' }}</strong>
+            <p>4 of 4 enrichment signals were applied.</p>
+          </div>
+          <div class="feed-list" data-testid="personalization-feed">
+            @for (item of feed; track item.id) {
+              <div class="list-row" data-testid="feed-item"><strong>{{ item.title }}</strong><span>{{ item.signal }}</span></div>
+            }
+          </div>
+          <div class="status-box info" data-testid="personalization-completed-event">
+            <strong>You're all set</strong>
+            <p>This completion is separate from the earlier onboarding step.</p>
+          </div>
+        }
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'אותות' : 'Signals' }}</h2>
+        <ul>
+          <li>Profile signal</li>
+          <li>Segment signal</li>
+          <li>Curriculum signal</li>
+          <li>Matching signal</li>
+        </ul>
+      </aside>
+    </section>
+  }
+</main>

@@ -1,0 +1,13 @@
+{
+  "flowId": "FLOW-02",
+  "flowSlug": "profile-enrichment",
+  "targets": [
+    {
+      "name": "local",
+      "apiBaseUrl": "http://127.0.0.1:5295",
+      "clientBaseUrl": "http://127.0.0.1:4302",
+      "tenantResolution": "header",
+      "secretsProvider": "vault-dev"
+    }
+  ]
+}

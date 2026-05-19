@@ -1,0 +1,10 @@
+services:
+  profile-enrichment-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5295:8080"

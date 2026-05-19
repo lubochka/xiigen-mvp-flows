@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-02/contracts/schemas/profile-enrichment-request.schema.json",
+  "title": "ProfileEnrichmentRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "industry"
+  ],
+  "properties": {
+    "userId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "industry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "businessStage": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "teamSize": {
+      "type": "string"
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    },
+    "simulateMatchingTimeout": {
+      "type": "boolean"
+    }
+  }
+}

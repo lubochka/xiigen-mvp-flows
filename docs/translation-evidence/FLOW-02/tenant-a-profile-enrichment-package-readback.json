@@ -1,0 +1,36 @@
+{
+    "flowId":  "FLOW-02",
+    "flowSlug":  "profile-enrichment",
+    "evidenceType":  "package-publish-readback",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T07:00:30.3596532Z",
+    "tenantId":  "tenant-a",
+    "moduleName":  "tenant-a-profile-enrichment",
+    "version":  "0.1.2",
+    "packages":  [
+                     {
+                         "packageId":  "Xiigen.Flow.ProfileEnrichment.Application",
+                         "version":  "0.1.2",
+                         "packageKind":  "nuget",
+                         "packageDir":  "C:\\Projects\\tenant-a--tenant-a-profile-enrichment\\artifacts\\nuget\\FLOW-02",
+                         "found":  true
+                     },
+                     {
+                         "packageId":  "Xiigen.Flow.ProfileEnrichment.Infrastructure",
+                         "version":  "0.1.2",
+                         "packageKind":  "nuget",
+                         "packageDir":  "C:\\Projects\\tenant-a--tenant-a-profile-enrichment\\artifacts\\nuget\\FLOW-02",
+                         "found":  true
+                     }
+                 ],
+    "readback":  {
+                     "tempProject":  "C:\\Users\\lubao\\AppData\\Local\\Temp\\flow02-tenant-a-readback",
+                     "dependencyResolved":  "Xiigen.Flow.ProfileEnrichment.Infrastructure 0.1.2",
+                     "restore":  "PASS",
+                     "build":  "PASS",
+                     "packageId":  "Xiigen.Flow.ProfileEnrichment.Infrastructure",
+                     "version":  "0.1.2"
+                 },
+    "finalReportAllowed":  false,
+    "finalCompletion":  false
+}

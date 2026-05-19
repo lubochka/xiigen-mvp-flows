@@ -1,0 +1,37 @@
+{
+    "flowId":  "FLOW-02",
+    "flowSlug":  "profile-enrichment",
+    "evidenceType":  "cross-tenant-jwt-isolation",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T07:00:30.3596532Z",
+    "targetApi":  "http://127.0.0.1:5295",
+    "results":  [
+                    {
+                        "name":  "tenant-b-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-b:tenant_user",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-b",
+                        "tenantHeader":  "tenant-b",
+                        "authorization":  "Bearer tenant:tenant-c:tenant_user",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "status":  "PASS",
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    },
+                    {
+                        "name":  "tenant-c-token-against-tenant-c",
+                        "tenantHeader":  "tenant-c",
+                        "authorization":  "Bearer tenant:tenant-c:tenant_user",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "status":  "PASS",
+                        "body":  "{\"id\":\"profile-tenant-c-tenant-c-positive\",\"profileId\":\"profile-tenant-c-tenant-c-positive\",\"version\":\"1\",\"matchingProfileId\":\"match-profile-tenant-c-tenant-c-positive\",\"matching\":[\"match-profile-tenant-c-tenant-c-positive\"],\"suggestions\":[\"match-profile-tenant-c-tenant-c-positive\"],\"partialResults\":true,\"feedId\":\"feed-tenant-c-tenant-c-positive\",\"signalsUsed\":4,\"degraded\":false,\"completionEventName\":\"PersonalizationCompleted\"}"
+                    }
+                ]
+}

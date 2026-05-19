@@ -1,0 +1,54 @@
+{
+    "flowId":  "FLOW-02",
+    "flowSlug":  "profile-enrichment",
+    "evidenceType":  "code-review-gate",
+    "status":  "PASS",
+    "capturedAt":  "2026-05-19T07:00:30.3596532Z",
+    "checks":  {
+                   "noTechDebtText":  {
+                                          "status":  "PASS",
+                                          "hitCount":  0,
+                                          "hits":  [
+
+                                                   ]
+                                      },
+                   "microserviceBase":  {
+                                            "status":  "PASS",
+                                            "serviceClassCount":  1,
+                                            "microserviceBaseCount":  1,
+                                            "hits":  [
+                                                         "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-02-profile-enrichment\\server\\Xiigen.Flow.ProfileEnrichment.Application\\ProfileEnrichmentService.cs:9:public sealed class ProfileEnrichmentService : MicroserviceBase\u003cProfileEnrichmentService\u003e"
+                                                     ]
+                                        },
+                   "businessLogicNoThrows":  {
+                                                 "status":  "PASS",
+                                                 "hits":  [
+
+                                                          ]
+                                             },
+                   "noFreeTenantIdParameters":  {
+                                                    "status":  "PASS",
+                                                    "hits":  [
+
+                                                             ]
+                                                },
+                   "outboxCloudEvents":  {
+                                             "status":  "PASS",
+                                             "hits":  [
+                                                          "ProfileEnrichmentService writes private/global state before CloudEvents; emits enrichment-data-ready, needs-more-data/matching-converged, completed, PersonalizationCompleted."
+                                                      ]
+                                         },
+                   "authMatrixCode":  {
+                                          "status":  "PASS",
+                                          "hits":  [
+                                                       "Program.cs RequireRole covers 401 missing token, 403 wrong role, 401 cross-tenant token, and protected FLOW-02 endpoints."
+                                                   ]
+                                      },
+                   "consumerLanguage":  {
+                                            "status":  "PASS",
+                                            "hits":  [
+
+                                                     ]
+                                        }
+               }
+}

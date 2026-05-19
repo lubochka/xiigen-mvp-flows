@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-02",
+  "flowSlug": "profile-enrichment",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "profile-enrichment-submit-questionnaire",
+      "operationId": "SubmitProfileEnrichmentQuestionnaire",
+      "method": "POST",
+      "routePattern": "/api/dynamic/profile-enrichment",
+      "requestSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "ProfileEnrichmentProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "profile-enrichment-matching-read",
+      "operationId": "ReadProfileEnrichmentMatching",
+      "method": "GET",
+      "routePattern": "/api/dynamic/profile-enrichment/matching",
+      "requestSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "ProfileEnrichmentProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "profile-enrichment-personalization-read",
+      "operationId": "ReadProfileEnrichmentPersonalization",
+      "method": "GET",
+      "routePattern": "/api/dynamic/profile-enrichment/personalization",
+      "requestSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-02/contracts/schemas/profile-enrichment-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "ProfileEnrichmentProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "business_partner",
+        "freelancer",
+        "event_organiser",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "profile-enrichment-health-live",
+      "operationId": "ProfileEnrichmentLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "profile-enrichment-health-ready",
+      "operationId": "ProfileEnrichmentReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}

@@ -14,4 +14,11 @@
     <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Infrastructure/Xiigen.Flow.UserRegistration.Infrastructure.csproj" />
     <Project Path="flows/FLOW-01-user-registration/server/Xiigen.Flow.UserRegistration.Tests/Xiigen.Flow.UserRegistration.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-02-profile-enrichment/" />
+  <Folder Name="/flows/FLOW-02-profile-enrichment/server/">
+    <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Api/Xiigen.Flow.ProfileEnrichment.Api.csproj" />
+    <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Application/Xiigen.Flow.ProfileEnrichment.Application.csproj" />
+    <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Infrastructure/Xiigen.Flow.ProfileEnrichment.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-02-profile-enrichment/server/Xiigen.Flow.ProfileEnrichment.Tests/Xiigen.Flow.ProfileEnrichment.Tests.csproj" />
+  </Folder>
 </Solution>
