@@ -1,0 +1,41 @@
+{
+  "policies": [
+    {
+      "name": "UserGroupsCommunitiesProtected",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "name": "UserGroupsCommunitiesAdmin",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "name": "UserGroupsCommunitiesPublicDiscoveryBypass",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/user-groups-communities/discovery"
+      ]
+    },
+    {
+      "name": "UserGroupsCommunitiesHealthBypass",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/health/live",
+        "/health/ready"
+      ]
+    }
+  ]
+}

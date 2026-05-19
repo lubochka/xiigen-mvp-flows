@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-06/contracts/schemas/user-groups-communities-request.schema.json",
+  "title": "UserGroupsCommunitiesRequest",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "groupId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "userId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "JOIN",
+        "LEAVE"
+      ]
+    },
+    "groupType": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "INVITE_ONLY"
+      ]
+    },
+    "invitationId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REJECT"
+      ]
+    },
+    "targetUserId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requestedByUserId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "targetTier": {
+      "type": "string",
+      "enum": [
+        "member",
+        "premium",
+        "moderator",
+        "admin"
+      ]
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}

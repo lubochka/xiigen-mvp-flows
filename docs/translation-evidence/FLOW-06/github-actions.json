@@ -1,0 +1,87 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "flowSlug":  "user-groups-communities",
+    "capturedAt":  "2026-05-19T17:35:34.6082763+03:00",
+    "requiredTenantRuns":  6,
+    "successfulTenantRuns":  6,
+    "runs":  [
+                 {
+                     "repo":  "lubochka/tenant-a--user-groups-communities",
+                     "runId":  26102955584,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "fcadeb5c25adf09accd6c1a06407642617aee41c",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Add FLOW-06 C1-tenant-a-installed",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:13:56Z",
+                     "updatedAt":  "2026-05-19T14:17:09Z",
+                     "url":  "https://github.com/lubochka/tenant-a--user-groups-communities/actions/runs/26102955584"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-a--tenant-a-user-groups-communities",
+                     "runId":  26103089341,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "50c8619296e215b53c4f2603c29c8e182b6ccf03",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Add FLOW-06 C2-tenant-a-adapted-published",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:16:18Z",
+                     "updatedAt":  "2026-05-19T14:20:56Z",
+                     "url":  "https://github.com/lubochka/tenant-a--tenant-a-user-groups-communities/actions/runs/26103089341"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-a-user-groups-communities",
+                     "runId":  26103207955,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "b38f9b6c914033219223656e5bf8c35e6e1d6f16",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Add FLOW-06 C3-tenant-b-installed-from-a",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:18:22Z",
+                     "updatedAt":  "2026-05-19T14:22:49Z",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-a-user-groups-communities/actions/runs/26103207955"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-b-user-groups-communities",
+                     "runId":  26103328927,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "5bfc6f0ebaed99fc54d92fddfe0cc3b40ceeef7b",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Add FLOW-06 C4-tenant-b-adapted-published",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:20:30Z",
+                     "updatedAt":  "2026-05-19T14:24:25Z",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-b-user-groups-communities/actions/runs/26103328927"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-b-user-groups-communities",
+                     "runId":  26103564302,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "09185de169065c8e2dcc3cf5d976d870dc1e69fb",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Add FLOW-06 C5-tenant-c-installed-from-b",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:24:29Z",
+                     "updatedAt":  "2026-05-19T14:28:09Z",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-b-user-groups-communities/actions/runs/26103564302"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-c-user-groups-communities",
+                     "runId":  26103990519,
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "ae922b36037aa5765a6795abb025623d0adfc271",
+                     "workflowName":  "FLOW-06 User Groups Communities",
+                     "displayTitle":  "Stabilize FLOW-06 CI node setup",
+                     "event":  "push",
+                     "createdAt":  "2026-05-19T14:31:47Z",
+                     "updatedAt":  "2026-05-19T14:35:01Z",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-c-user-groups-communities/actions/runs/26103990519"
+                 }
+             ]
+}

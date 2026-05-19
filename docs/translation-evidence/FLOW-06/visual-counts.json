@@ -1,0 +1,10 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "cascadePoint":  "C0-source-flow",
+    "expectedRoleCount":  6,
+    "expectedCellCount":  3,
+    "expectedPngCount":  18,
+    "actualPngCount":  18,
+    "verdict":  "PASS",
+    "manifest":  "docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+}

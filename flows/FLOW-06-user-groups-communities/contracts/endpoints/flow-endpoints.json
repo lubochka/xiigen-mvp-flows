@@ -1,0 +1,113 @@
+{
+  "flowId": "FLOW-06",
+  "flowSlug": "user-groups-communities",
+  "schemaVersion": "1.0.0",
+  "endpoints": [
+    {
+      "routeId": "user-groups-communities-discovery",
+      "operationId": "DiscoverGroups",
+      "method": "GET",
+      "routePattern": "/api/dynamic/user-groups-communities/discovery",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "anonymous",
+      "bypassReason": "Public group discovery only exposes open, non-tenant-private listing summaries."
+    },
+    {
+      "routeId": "user-groups-communities-join",
+      "operationId": "SubmitMembership",
+      "method": "POST",
+      "routePattern": "/api/dynamic/user-groups-communities",
+      "requestSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "UserGroupsCommunitiesProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "user-groups-communities-membership-status",
+      "operationId": "GetMembershipStatus",
+      "method": "GET",
+      "routePattern": "/api/dynamic/user-groups-communities/{groupId}/membership/{userId}",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "UserGroupsCommunitiesProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "user-groups-communities-approval",
+      "operationId": "ReviewJoinRequest",
+      "method": "POST",
+      "routePattern": "/api/dynamic/user-groups-communities/{groupId}/approval",
+      "requestSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "UserGroupsCommunitiesAdmin",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "user-groups-communities-tier",
+      "operationId": "UpdateTier",
+      "method": "POST",
+      "routePattern": "/api/dynamic/user-groups-communities/{groupId}/tier",
+      "requestSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-request.schema.json",
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "UserGroupsCommunitiesAdmin",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "user-groups-communities-feed",
+      "operationId": "GetFeed",
+      "method": "GET",
+      "routePattern": "/api/dynamic/user-groups-communities/{groupId}/feed/{userId}",
+      "requestSchemaRef": null,
+      "responseSchemaRef": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+      "authPosture": "policy",
+      "policyName": "UserGroupsCommunitiesProtected",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "freelancer",
+        "platform_admin"
+      ]
+    },
+    {
+      "routeId": "user-groups-communities-health-live",
+      "operationId": "UserGroupsCommunitiesLive",
+      "method": "GET",
+      "routePattern": "/health/live",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Health probe does not expose tenant data."
+    },
+    {
+      "routeId": "user-groups-communities-health-ready",
+      "operationId": "UserGroupsCommunitiesReady",
+      "method": "GET",
+      "routePattern": "/health/ready",
+      "requestSchemaRef": null,
+      "responseSchemaRef": null,
+      "authPosture": "anonymous",
+      "bypassReason": "Readiness probe does not expose tenant data."
+    }
+  ]
+}

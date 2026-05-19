@@ -1,0 +1,17 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "verdict":  "PASS",
+    "expectedPackages":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.UserGroupsCommunities.Application.0.1.1.nupkg",
+                         "Length":  30365,
+                         "LastWriteTime":  "\/Date(1779199634950)\/"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.UserGroupsCommunities.Infrastructure.0.1.1.nupkg",
+                         "Length":  4104,
+                         "LastWriteTime":  "\/Date(1779199647868)\/"
+                     }
+                 ]
+}

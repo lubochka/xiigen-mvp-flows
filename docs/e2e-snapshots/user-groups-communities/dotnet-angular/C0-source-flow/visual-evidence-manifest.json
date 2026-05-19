@@ -1,0 +1,137 @@
+{
+  "flowId": "FLOW-06",
+  "flowSlug": "user-groups-communities",
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "user-groups-communities",
+  "roleCount": 6,
+  "cellCount": 3,
+  "expectedPngCount": 18,
+  "screenshots": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\anonymous-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\anonymous-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\anonymous-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-user-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-user-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\freelancer-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\freelancer-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\freelancer-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "lang": "en",
+      "dir": "ltr"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "lang": "he",
+      "dir": "rtl"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\user-groups-communities\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  ]
+}

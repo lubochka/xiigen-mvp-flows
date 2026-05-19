@@ -1,0 +1,52 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "flowSlug":  "user-groups-communities",
+    "baseUrl":  "http://127.0.0.1:5306",
+    "verdict":  "PASS",
+    "expected":  {
+                     "idempotent-replay-200":  200,
+                     "health-ready":  200,
+                     "public-discovery-200":  200,
+                     "missing-token-401":  401,
+                     "cross-tenant-401":  401,
+                     "valid-token-201":  201,
+                     "wrong-role-403":  403
+                 },
+    "cases":  [
+                  {
+                      "name":  "health-ready",
+                      "status":  200,
+                      "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-06\"}"
+                  },
+                  {
+                      "name":  "valid-token-201",
+                      "status":  201,
+                      "body":  "{\"membershipId\":\"membership-tenant-a-docker-builders-docker-user\",\"groupId\":\"docker-builders\",\"userId\":\"docker-user\",\"status\":\"ACTIVE\",\"tier\":\"member\",\"feedAvailable\":true,\"version\":\"1\"}"
+                  },
+                  {
+                      "name":  "idempotent-replay-200",
+                      "status":  200,
+                      "body":  "{\"membershipId\":\"membership-tenant-a-docker-builders-docker-user\",\"groupId\":\"docker-builders\",\"userId\":\"docker-user\",\"status\":\"ACTIVE\",\"tier\":\"member\",\"feedAvailable\":true,\"version\":\"1\"}"
+                  },
+                  {
+                      "name":  "missing-token-401",
+                      "status":  401,
+                      "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role-403",
+                      "status":  403,
+                      "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                  },
+                  {
+                      "name":  "cross-tenant-401",
+                      "status":  401,
+                      "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "public-discovery-200",
+                      "status":  200,
+                      "body":  "{\"groups\":[{\"groupId\":\"community-open-builders\",\"name\":\"Community Open Builders\",\"groupType\":\"OPEN\",\"visibility\":\"public\",\"version\":\"1\"}],\"recommendedGroups\":[{\"groupId\":\"community-open-builders\",\"name\":\"Community Open Builders\",\"groupType\":\"OPEN\",\"visibility\":\"public\",\"version\":\"1\"}],\"viewerRole\":\"anonymous\"}"
+                  }
+              ]
+}

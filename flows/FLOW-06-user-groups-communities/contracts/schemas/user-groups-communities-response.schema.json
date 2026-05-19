@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema://FLOW-06/contracts/schemas/user-groups-communities-response.schema.json",
+  "title": "UserGroupsCommunitiesResponse",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "membershipId": {
+      "type": "string"
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "groupId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tier": {
+      "type": "string"
+    },
+    "feedAvailable": {
+      "type": "boolean"
+    },
+    "existingRecord": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": "string"
+    },
+    "groups": {
+      "type": "array"
+    },
+    "recommendedGroups": {
+      "type": "array"
+    },
+    "items": {
+      "type": "array"
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object"
+    }
+  }
+}

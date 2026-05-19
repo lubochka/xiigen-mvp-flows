@@ -1,0 +1,5 @@
+@Xiigen.Flow.UserGroupsCommunities.Api_HostAddress = http://localhost:5306
+
+GET {{Xiigen.Flow.UserGroupsCommunities.Api_HostAddress}}/health/ready
+
+

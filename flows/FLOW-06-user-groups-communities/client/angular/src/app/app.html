@@ -1,0 +1,149 @@
+<main class="groups-shell" data-testid="page-user-groups-communities">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">{{ language() === 'he' ? 'חברות, אישורים ותוכן' : 'Membership, approvals, and feeds' }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">
+        @if (language() === 'he') {
+          מרחב אחד ברור לגילוי קבוצות, בקשות הצטרפות, רמות חברות ותוכן קהילתי.
+        } @else {
+          A focused workspace for group discovery, join requests, membership tiers, approvals, and gated community feeds.
+        }
+      </p>
+    </div>
+    <div class="toolbar" aria-label="View controls">
+      <label>
+        <span>{{ language() === 'he' ? 'תפקיד' : 'Role' }}</span>
+        <select data-testid="role-select" [ngModel]="role()" (ngModelChange)="setRole($event)">
+          @for (item of roles; track item) {
+            <option [value]="item">{{ roleLabel(item) }}</option>
+          }
+        </select>
+      </label>
+      <div class="segmented" aria-label="Language">
+        <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+        <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="journey" aria-label="Community states">
+    <button type="button" [class.active]="screenState() === 'discovery'" (click)="setScreenState('discovery')">
+      <span>1</span>{{ language() === 'he' ? 'גילוי' : 'Discovery' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'membership'" (click)="setScreenState('membership')">
+      <span>2</span>{{ language() === 'he' ? 'חברות' : 'Membership' }}
+    </button>
+    <button type="button" [class.active]="screenState() === 'feed'" (click)="setScreenState('feed')">
+      <span>3</span>{{ language() === 'he' ? 'תוכן' : 'Feed' }}
+    </button>
+  </nav>
+
+  @if (screenState() === 'discovery') {
+    <section class="layout" data-testid="page-group-discovery">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ language() === 'he' ? 'רשימת קבוצות' : 'Group directory' }}</p>
+            <h2>{{ roleHeading() }}</h2>
+            <p>{{ language() === 'he' ? 'קבוצות פתוחות מוצגות מיד. קבוצות בהזמנה נפתחות רק אחרי חברות פעילה.' : 'Open groups are visible immediately. Invite-only groups open only after active membership.' }}</p>
+          </div>
+          <strong class="counter">3</strong>
+        </div>
+        <div class="group-list" data-testid="group-directory-list">
+          @for (group of groups; track group.name) {
+            <div class="group-row">
+              <div>
+                <strong>{{ group.name }}</strong>
+                <p>{{ group.detail }}</p>
+              </div>
+              <span>{{ group.status }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'כללי גישה' : 'Access rules' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'מבקר אנונימי רואה רק קבוצות פתוחות.' : 'Anonymous visitors see only open groups.' }}</li>
+          <li>{{ language() === 'he' ? 'בקשת הצטרפות לא פותחת תוכן.' : 'A join request does not unlock content.' }}</li>
+          <li>{{ language() === 'he' ? 'חברות פעילה פותחת את העדכון.' : 'Active membership unlocks the feed.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  } @else if (screenState() === 'membership') {
+    <section class="layout" data-testid="page-membership-status">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ language() === 'he' ? 'מצב חברות' : 'Membership state' }}</p>
+            <h2>{{ roleHeading() }}</h2>
+          </div>
+          <strong class="counter">4</strong>
+        </div>
+        <div class="status-box success" data-testid="membership-active-card">
+          <strong>{{ language() === 'he' ? 'חברות פעילה' : 'Active membership' }}</strong>
+          <p>{{ language() === 'he' ? 'החברות נשמרה לפני שליחת הודעות המשך, והתוכן נפתח רק אחרי האישור.' : 'Membership is stored before follow-up messages are sent, and content opens only after approval.' }}</p>
+        </div>
+        <div class="metric-grid" data-testid="membership-audit-grid">
+          @for (row of auditRows; track row.label) {
+            <div class="metric">
+              <strong>{{ row.value }}</strong>
+              <span>{{ row.label }}</span>
+              <p>{{ row.detail }}</p>
+            </div>
+          }
+        </div>
+        <div class="approval-lane" data-testid="page-group-approval">
+          <div>
+            <h2>{{ language() === 'he' ? 'בקשות ממתינות' : 'Pending approvals' }}</h2>
+            <p>{{ language() === 'he' ? 'מנהלים רואים מי ביקש להצטרף ולמה התוכן עדיין נעול.' : 'Admins see who asked to join and why the feed is still locked.' }}</p>
+          </div>
+          <strong>4</strong>
+        </div>
+      </article>
+      <aside class="side-panel" data-testid="page-tier-management">
+        <h2>{{ language() === 'he' ? 'רמות חברות' : 'Membership tiers' }}</h2>
+        <div class="tier-stack">
+          <span>Member</span>
+          <span>Premium</span>
+          <span>Moderator</span>
+          <span>Admin</span>
+        </div>
+        <p>{{ language() === 'he' ? 'הרמה מגיעה מהרשומה בצד השרת, לא מטופס ההצטרפות.' : 'The tier comes from the server record, not from the join form.' }}</p>
+      </aside>
+    </section>
+  } @else {
+    <section class="layout" data-testid="page-group-feed">
+      <article class="primary-panel" [attr.data-testid]="roleTestId()">
+        <div class="hero-row">
+          <div>
+            <p class="eyebrow">{{ language() === 'he' ? 'עדכון קהילתי' : 'Community feed' }}</p>
+            <h2>{{ language() === 'he' ? 'תוכן לאחר אישור' : 'Content after approval' }}</h2>
+            <p>{{ language() === 'he' ? 'הפריטים מדורגים לפי מעורבות, רעננות והתאמה לרמת החברות.' : 'Items are ranked by engagement, freshness, and tier fit.' }}</p>
+          </div>
+          <strong class="counter">0.86</strong>
+        </div>
+        <div class="feed-list">
+          @for (item of feedItems; track item.title) {
+            <div class="feed-row">
+              <div>
+                <strong>{{ item.title }}</strong>
+                <p>{{ item.detail }}</p>
+              </div>
+              <span>{{ item.score }}</span>
+            </div>
+          }
+        </div>
+      </article>
+      <aside class="side-panel">
+        <h2>{{ language() === 'he' ? 'שמירה על גבולות' : 'Boundary checks' }}</h2>
+        <ul>
+          <li>{{ language() === 'he' ? 'אין תוכן אם אין חברות פעילה.' : 'No content without active membership.' }}</li>
+          <li>{{ language() === 'he' ? 'בקשה חוזרת מחזירה את אותה תוצאה.' : 'Repeated requests return the same result.' }}</li>
+          <li>{{ language() === 'he' ? 'מידע של דייר אחר לא מופיע כאן.' : 'Another tenant’s records never appear here.' }}</li>
+        </ul>
+      </aside>
+    </section>
+  }
+</main>

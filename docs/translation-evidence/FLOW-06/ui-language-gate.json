@@ -1,0 +1,12 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "verdict":  "PASS",
+    "forbiddenHitCount":  0,
+    "checkedFiles":  [
+                         "flows\\FLOW-06-user-groups-communities\\client\\angular\\src\\app\\app.html",
+                         "flows\\FLOW-06-user-groups-communities\\client\\angular\\src\\app\\app.ts"
+                     ],
+    "hits":  [
+
+             ]
+}

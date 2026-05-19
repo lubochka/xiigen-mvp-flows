@@ -42,4 +42,11 @@
     <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Infrastructure/Xiigen.Flow.CompletionGamification.Infrastructure.csproj" />
     <Project Path="flows/FLOW-05-completion-gamification/server/Xiigen.Flow.CompletionGamification.Tests/Xiigen.Flow.CompletionGamification.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-06-user-groups-communities/" />
+  <Folder Name="/flows/FLOW-06-user-groups-communities/server/">
+    <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Api/Xiigen.Flow.UserGroupsCommunities.Api.csproj" />
+    <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Application/Xiigen.Flow.UserGroupsCommunities.Application.csproj" />
+    <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Infrastructure/Xiigen.Flow.UserGroupsCommunities.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Tests/Xiigen.Flow.UserGroupsCommunities.Tests.csproj" />
+  </Folder>
 </Solution>

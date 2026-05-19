@@ -1,0 +1,46 @@
+﻿{
+    "flowId":  "FLOW-06",
+    "verdict":  "PASS",
+    "checks":  {
+                   "directProviderSdkImports":  [
+
+                                                ],
+                   "freeTenantIdParameters":  [
+
+                                              ],
+                   "businessThrows":  [
+
+                                      ],
+                   "microserviceBase":  [
+                                            "public sealed class UserGroupsCommunitiesService : MicroserviceBase\u003cUserGroupsCommunitiesService\u003e"
+                                        ],
+                   "cloudEvents":  [
+                                       "    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e"
+                                   ],
+                   "storeBeforeOutboxEvidence":  [
+                                                     "            var retained = await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.TimeoutRetainedEvent, groupId, timeoutPayload), cancellationToken).ConfigureAwait(false);",
+                                                     "                await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.GroupJoinRequestedEvent, groupId, response), cancellationToken).ConfigureAwait(false);",
+                                                     "            await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.MembershipAcceptedEvent, groupId, responseBody), cancellationToken).ConfigureAwait(false);",
+                                                     "            await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.MembershipRejectedEvent, groupId.Trim(), rejected), cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.MembershipAcceptedEvent, groupId.Trim(), response), cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.TierAssignedEvent, groupId.Trim(), response), cancellationToken).ConfigureAwait(false);",
+                                                     "        var stored = await _documents.UpsertAsync(UserGroupsCommunitiesConstants.Feeds, feedId, body, null, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.FeedPopulatedEvent, groupId, body), cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.MembershipLeftEvent, groupId, response), cancellationToken).ConfigureAwait(false);",
+                                                     "        return await _documents.UpsertAsync(UserGroupsCommunitiesConstants.Memberships, membershipId, body, ifMatch, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _documents.UpsertAsync(UserGroupsCommunitiesConstants.JoinRequests, requestId, body, null, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _documents.UpsertAsync(UserGroupsCommunitiesConstants.Groups, (string)group[\"id\"]!, group, null, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _documents.UpsertAsync(UserGroupsCommunitiesConstants.AccessLogs, accessId, body, null, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.AccessCheckInlineEvent, groupId, body), cancellationToken).ConfigureAwait(false);",
+                                                     "        await _documents.UpsertAsync(UserGroupsCommunitiesConstants.Analytics, analyticsId, body, null, cancellationToken).ConfigureAwait(false);",
+                                                     "        await _outbox.AppendAsync(CreateEvent(UserGroupsCommunitiesConstants.AnalyticsUpdatedEvent, groupId, body), cancellationToken).ConfigureAwait(false);"
+                                                 ]
+               },
+    "notes":  [
+                  "No provider SDK imports in flow services.",
+                  "No tenantId method parameters in application service; tenant comes from TenantContext.",
+                  "No business throw new in application service.",
+                  "Service extends MicroserviceBase\u003cUserGroupsCommunitiesService\u003e.",
+                  "Outbox events use CloudEventEnvelope and are appended after state writes in mutation paths."
+              ]
+}

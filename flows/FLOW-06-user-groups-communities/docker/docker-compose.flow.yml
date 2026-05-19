@@ -1,0 +1,12 @@
+services:
+  user-groups-communities-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-06-user-groups-communities/server/Xiigen.Flow.UserGroupsCommunities.Api/Dockerfile
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "5306:8080"
+
+
