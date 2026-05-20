@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-10/reviews-reputation-response.schema.json",
+  "title": "FLOW-10 Reviews Reputation Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "reviewId": { "type": "string" },
+    "status": { "type": "string" },
+    "moderationPath": { "type": "string", "enum": ["PASS", "REJECT", "UNCERTAIN"] },
+    "targetEntityId": { "type": "string" },
+    "targetEntityType": { "type": "string" },
+    "score": { "type": "number", "minimum": 1, "maximum": 5 },
+    "publishedReviewCount": { "type": "integer", "minimum": 0 },
+    "version": { "type": "string" },
+    "revisionAllowed": { "type": "boolean" },
+    "serverDerivedReviewId": { "type": "boolean" },
+    "code": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

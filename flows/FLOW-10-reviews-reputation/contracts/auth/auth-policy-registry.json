@@ -1,0 +1,63 @@
+{
+  "flowId": "FLOW-10",
+  "flowSlug": "reviews-reputation",
+  "policies": [
+    {
+      "policyId": "ReviewsReputationSubmit",
+      "route": "POST /api/dynamic/reviews-reputation",
+      "allowedRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": [],
+      "wrongRoleForProtectedRoute": "anonymous"
+    },
+    {
+      "policyId": "ReviewsReputationModerate",
+      "route": "POST /api/dynamic/reviews-reputation/moderate",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationRecalculate",
+      "route": "POST /api/dynamic/reviews-reputation/reputation/recalculate",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationRetract",
+      "route": "POST /api/dynamic/reviews-reputation/retract",
+      "allowedRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationResponse",
+      "route": "POST /api/dynamic/reviews-reputation/response",
+      "allowedRoles": ["business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationRead",
+      "route": "GET /api/dynamic/reviews-reputation/reviews",
+      "allowedRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationModerationQueue",
+      "route": "GET /api/dynamic/reviews-reputation/moderation-queue",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ReviewsReputationPublicPreview",
+      "route": "GET /api/dynamic/reviews-reputation/public-preview",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/reviews-reputation/public-preview"],
+      "authPosture": "anonymous"
+    },
+    {
+      "policyId": "ReviewsReputationPublicScore",
+      "route": "GET /api/dynamic/reviews-reputation/reputation/{targetEntityId}",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/reviews-reputation/reputation/{targetEntityId}"],
+      "authPosture": "anonymous"
+    }
+  ]
+}

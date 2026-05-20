@@ -1,0 +1,43 @@
+{
+    "flowId":  "FLOW-10",
+    "checkedAt":  "2026-05-20T20:47:57.9116563+03:00",
+    "verdict":  "PASS",
+    "checks":  {
+                   "directSdkImports":  [
+
+                                        ],
+                   "freeTenantIdParams":  [
+
+                                          ],
+                   "businessThrows":  [
+
+                                      ],
+                   "microserviceBase":  [
+                                            "11:public sealed class ReviewsReputationService : MicroserviceBase\u003cReviewsReputationService\u003e"
+                                        ],
+                   "outboxBeforeQueue":  [
+                                             "100:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.TimeoutRetainedEvent, reviewId, timeoutBody), cancellationToken).ConfigureAwait(false);",
+                                             "130:            await _documents.UpsertAsync(ReviewsReputationConstants.ReviewAudit, $\"audit-{reviewId}\", auditBody, null, cancellationToken).ConfigureAwait(false);",
+                                             "145:            var stored = await _documents.UpsertAsync(ReviewsReputationConstants.Reviews, reviewId, reviewBody, ifMatch, cancellationToken).ConfigureAwait(false);",
+                                             "152:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewAcceptedEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "153:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewSubmissionCompletedEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "216:        var stored = await _documents.UpsertAsync(ReviewsReputationConstants.Reviews, reviewId, updated, review.Data.Version, cancellationToken).ConfigureAwait(false);",
+                                             "235:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewPublishedEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "240:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewRejectedEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "244:            await _documents.UpsertAsync(ReviewsReputationConstants.ModerationQueue, $\"moderation-{reviewId}\", new Dictionary\u003cstring, object?\u003e",
+                                             "253:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewFlaggedForHumanEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "345:            var stored = await _documents.UpsertAsync(ReviewsReputationConstants.Reviews, reviewId, updated, ifMatch, cancellationToken).ConfigureAwait(false);",
+                                             "353:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewRetractedEvent, reviewId, new Dictionary\u003cstring, object?\u003e",
+                                             "434:                await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewResponseRejectedEvent, reviewId, rejected), cancellationToken).ConfigureAwait(false);",
+                                             "453:            await _documents.UpsertAsync(ReviewsReputationConstants.ResponseAudit, $\"response-audit-{reviewId}\", audit, null, cancellationToken).ConfigureAwait(false);",
+                                             "465:            var stored = await _documents.UpsertAsync(ReviewsReputationConstants.ReviewResponses, $\"response-{reviewId}\", body, existing.Data?.Version, cancellationToken).ConfigureAwait(false);",
+                                             "477:            await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReviewResponsePublishedEvent, reviewId, eventData), cancellationToken).ConfigureAwait(false);",
+                                             "579:        var stored = await _documents.UpsertAsync(ReviewsReputationConstants.ReputationScores, ReputationId(targetEntityId, targetEntityType), body, null, cancellationToken).ConfigureAwait(false);",
+                                             "585:        await _outbox.AppendAsync(CreateEvent(ReviewsReputationConstants.ReputationUpdatedEvent, ReputationId(targetEntityId, targetEntityType), new Dictionary\u003cstring, object?\u003e",
+                                             "649:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e"
+                                         ]
+               },
+    "technicalDebt":  "NONE",
+    "missingTests":  "NONE",
+    "futurePhase":  "NONE"
+}

@@ -1,0 +1,51 @@
+{
+    "flowId":  "FLOW-10",
+    "sourcePoint":  "C0-source-flow",
+    "cascade":  [
+                    {
+                        "repo":  "tenant-a--reviews-reputation",
+                        "cascadePoint":  "C1-tenant-a-installed",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-a--reviews-reputation/actions/runs/26177982447"
+                    },
+                    {
+                        "repo":  "tenant-a--acme-trust-reviews",
+                        "cascadePoint":  "C2-tenant-a-adapted-published",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-a--acme-trust-reviews/actions/runs/26178110107"
+                    },
+                    {
+                        "repo":  "tenant-b--acme-trust-reviews",
+                        "cascadePoint":  "C3-tenant-b-installed-from-a",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-b--acme-trust-reviews/actions/runs/26178223027"
+                    },
+                    {
+                        "repo":  "tenant-b--northwind-reputation-hub",
+                        "cascadePoint":  "C4-tenant-b-adapted-published",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-b--northwind-reputation-hub/actions/runs/26178335994"
+                    },
+                    {
+                        "repo":  "tenant-c--northwind-reputation-hub",
+                        "cascadePoint":  "C5-tenant-c-installed-from-b",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-c--northwind-reputation-hub/actions/runs/26178446244"
+                    },
+                    {
+                        "repo":  "tenant-c--tessera-community-reputation",
+                        "cascadePoint":  "C6-tenant-c-adapted",
+                        "conclusion":  "success",
+                        "runUrl":  "https://github.com/lubochka/tenant-c--tessera-community-reputation/actions/runs/26178555251"
+                    }
+                ],
+    "adaptationHistory":  [
+                              "C1 tenant-a installed source module reviews-reputation",
+                              "C2 tenant-a adapted and published acme-trust-reviews",
+                              "C3 tenant-b installed tenant-a package acme-trust-reviews",
+                              "C4 tenant-b adapted and published northwind-reputation-hub",
+                              "C5 tenant-c installed tenant-b package northwind-reputation-hub",
+                              "C6 tenant-c adapted tessera-community-reputation"
+                          ],
+    "verdict":  "PASS"
+}

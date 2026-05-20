@@ -1,0 +1,10 @@
+{
+    "flowId":  "FLOW-10",
+    "checkedAt":  "2026-05-20T20:47:39.1647788+03:00",
+    "roles":  8,
+    "cellsPerCascadePoint":  3,
+    "cascadePoints":  7,
+    "expectedPngCount":  168,
+    "actualPngCount":  168,
+    "pass":  true
+}

@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-10",
+  "flowSlug": "reviews-reputation",
+  "api": {
+    "localUrl": "http://127.0.0.1:5310",
+    "containerUrl": "http://127.0.0.1:5310"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4310",
+    "evidencePort": 4310
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "flowId":  "FLOW-10",
+    "checkedAt":  "2026-05-20T20:47:23.9605664+03:00",
+    "repositories":  [
+                         {
+                             "repo":  "tenant-a--acme-trust-reviews",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-a--acme-trust-reviews/actions/runs/26178110107",
+                             "databaseId":  26178110107
+                         },
+                         {
+                             "repo":  "tenant-a--reviews-reputation",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-a--reviews-reputation/actions/runs/26177982447",
+                             "databaseId":  26177982447
+                         },
+                         {
+                             "repo":  "tenant-b--acme-trust-reviews",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-b--acme-trust-reviews/actions/runs/26178223027",
+                             "databaseId":  26178223027
+                         },
+                         {
+                             "repo":  "tenant-b--northwind-reputation-hub",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-b--northwind-reputation-hub/actions/runs/26178335994",
+                             "databaseId":  26178335994
+                         },
+                         {
+                             "repo":  "tenant-c--northwind-reputation-hub",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-c--northwind-reputation-hub/actions/runs/26178446244",
+                             "databaseId":  26178446244
+                         },
+                         {
+                             "repo":  "tenant-c--tessera-community-reputation",
+                             "status":  "completed",
+                             "conclusion":  "success",
+                             "runUrl":  "https://github.com/lubochka/tenant-c--tessera-community-reputation/actions/runs/26178555251",
+                             "databaseId":  26178555251
+                         }
+                     ],
+    "allSuccess":  true
+}

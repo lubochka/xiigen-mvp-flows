@@ -1,0 +1,9 @@
+services:
+  flow-10-reviews-reputation-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Api/Dockerfile
+    ports:
+      - "5310:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

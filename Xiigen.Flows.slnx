@@ -70,4 +70,11 @@
     <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Infrastructure/Xiigen.Flow.TransactionalEventParticipation.Infrastructure.csproj" />
     <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Tests/Xiigen.Flow.TransactionalEventParticipation.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-10-reviews-reputation/" />
+  <Folder Name="/flows/FLOW-10-reviews-reputation/server/">
+    <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Api/Xiigen.Flow.ReviewsReputation.Api.csproj" />
+    <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Application/Xiigen.Flow.ReviewsReputation.Application.csproj" />
+    <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Infrastructure/Xiigen.Flow.ReviewsReputation.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Tests/Xiigen.Flow.ReviewsReputation.Tests.csproj" />
+  </Folder>
 </Solution>

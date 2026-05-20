@@ -1,0 +1,17 @@
+{
+    "flowId":  "FLOW-10",
+    "packageCount":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.ReviewsReputation.Application.0.1.1.nupkg",
+                         "Length":  25902,
+                         "LastWriteTime":  "\/Date(1779299848940)\/"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.ReviewsReputation.Infrastructure.0.1.1.nupkg",
+                         "Length":  4052,
+                         "LastWriteTime":  "\/Date(1779299850190)\/"
+                     }
+                 ],
+    "verdict":  "PASS"
+}

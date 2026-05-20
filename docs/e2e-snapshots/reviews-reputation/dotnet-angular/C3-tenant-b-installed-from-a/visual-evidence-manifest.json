@@ -1,0 +1,151 @@
+{
+  "cascadePoint": "C3-tenant-b-installed-from-a",
+  "moduleName": "acme-trust-reviews",
+  "count": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=anonymous&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=anonymous&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=anonymous&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=public_marketplace_visitor&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=public_marketplace_visitor&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=public_marketplace_visitor&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_user&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_user&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_user&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=freelancer&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=freelancer&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=freelancer&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=business_partner&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=business_partner&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=business_partner&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_admin&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_admin&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=tenant_admin&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=platform_admin&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=platform_admin&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=platform_admin&state=response&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=platform_support&state=submission&lang=en&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4310/?role=platform_support&state=moderation&lang=he&module=acme-trust-reviews"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-trust-reviews\\docs\\e2e-snapshots\\reviews-reputation\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4310/?role=platform_support&state=response&lang=en&module=acme-trust-reviews"
+    }
+  ]
+}

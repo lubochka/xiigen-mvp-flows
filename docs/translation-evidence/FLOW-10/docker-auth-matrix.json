@@ -1,0 +1,69 @@
+{
+    "flowId":  "FLOW-10",
+    "checkedAt":  "2026-05-20T20:06:40.6306232+03:00",
+    "pass":  true,
+    "results":  [
+                    {
+                        "name":  "wrongRole",
+                        "expected":  403,
+                        "actual":  403,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "health",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "publicPreview",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "crossTenantToken",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "validToken",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "missingToken",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true
+                    }
+                ],
+    "responses":  {
+                      "health":  {
+                                     "status":  200,
+                                     "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-10\"}"
+                                 },
+                      "publicPreview":  {
+                                            "status":  200,
+                                            "body":  "{\"flow\":\"FLOW-10\",\"summary\":\"Submit eligible reviews, moderate safely, publish reputation scores, and manage owner responses without leaking private review text.\",\"states\":[\"submission\",\"moderation\",\"response\"]}"
+                                        },
+                      "validToken":  {
+                                         "status":  201,
+                                         "body":  "{\"id\":\"review-08e6d452d9effc91d8092342\",\"reviewId\":\"review-08e6d452d9effc91d8092342\",\"status\":\"ACCEPTED\",\"targetEntityId\":\"profile-auth\",\"targetEntityType\":\"profile\",\"version\":\"1\",\"serverDerivedReviewId\":true}"
+                                     },
+                      "missingToken":  {
+                                           "status":  401,
+                                           "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                                       },
+                      "wrongRole":  {
+                                        "status":  403,
+                                        "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                                    },
+                      "crossTenantToken":  {
+                                               "status":  401,
+                                               "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                                           }
+                  }
+}

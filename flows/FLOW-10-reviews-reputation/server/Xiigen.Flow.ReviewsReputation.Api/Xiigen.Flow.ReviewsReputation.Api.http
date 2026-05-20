@@ -1,0 +1,27 @@
+@Xiigen.Flow.ReviewsReputation.Api_HostAddress = http://localhost:5310
+
+GET {{Xiigen.Flow.ReviewsReputation.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.ReviewsReputation.Api_HostAddress}}/api/dynamic/reviews-reputation/public-preview
+
+###
+
+POST {{Xiigen.Flow.ReviewsReputation.Api_HostAddress}}/api/dynamic/reviews-reputation
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+X-Idempotency-Key: demo-review
+Content-Type: application/json
+
+{
+  "reviewerId": "reviewer-demo",
+  "targetEntityId": "profile-demo",
+  "targetEntityType": "profile",
+  "rating": 5,
+  "reviewText": "A clear and useful experience.",
+  "checkInConfirmed": true,
+  "purchaseConfirmed": true,
+  "eligibilityConfirmed": true
+}

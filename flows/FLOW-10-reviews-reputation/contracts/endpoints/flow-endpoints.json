@@ -1,0 +1,94 @@
+{
+  "flowId": "FLOW-10",
+  "flowSlug": "reviews-reputation",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/dynamic/reviews-reputation",
+      "operationId": "SubmitReview",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/reviews-reputation-request.schema.json",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-10-1", "CF-913", "CF-914", "CF-915", "CF-916"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/reviews-reputation/moderate",
+      "operationId": "ModerateReview",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/reviews-reputation-request.schema.json",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-10-2"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/reviews-reputation/reputation/recalculate",
+      "operationId": "RecalculateReputation",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/reviews-reputation-request.schema.json",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-10-3", "CF-918"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/reviews-reputation/reputation/{targetEntityId}",
+      "operationId": "ReadReputation",
+      "authPosture": "anonymous",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "bypassReason": "Public reputation scores are intentionally readable while write, moderation, queue, and response routes stay protected."
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/reviews-reputation/retract",
+      "operationId": "RetractReview",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/reviews-reputation-request.schema.json",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-10-3", "CF-917"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/reviews-reputation/response",
+      "operationId": "SubmitReviewResponse",
+      "authPosture": "policy",
+      "requiredRoles": ["business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/reviews-reputation-request.schema.json",
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-10-4", "CF-917"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/reviews-reputation/reviews",
+      "operationId": "ReadTenantReviews",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "freelancer", "business_partner", "tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "bfaRules": ["CF-10-4"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/reviews-reputation/moderation-queue",
+      "operationId": "ReadModerationQueue",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/reviews-reputation-response.schema.json",
+      "bfaRules": ["CF-10-2"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/reviews-reputation/public-preview",
+      "operationId": "ReadReviewsReputationPublicPreview",
+      "authPosture": "anonymous",
+      "bypassReason": "Public review and reputation previews are intentionally readable before login; all mutation routes stay protected."
+    }
+  ]
+}
