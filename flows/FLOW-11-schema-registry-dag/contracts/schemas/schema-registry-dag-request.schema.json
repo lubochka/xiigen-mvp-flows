@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-11/schema-registry-dag-request.schema.json",
+  "title": "FLOW-11 Schema Registry DAG Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "schemaType": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^v?[0-9]+\\.[0-9]+(\\.[0-9]+)?$" },
+    "changeType": { "type": "string", "enum": ["ADDITIVE", "COMPATIBLE", "BREAKING"] },
+    "dependencies": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "jsonSchema": { "type": "object" },
+    "removedFields": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "changedFieldTypes": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "approvalId": { "type": "string", "minLength": 1 },
+    "decision": { "type": "string", "enum": ["APPROVE", "REJECT", "DEFER"] },
+    "actorId": { "type": "string", "minLength": 1 },
+    "document": { "type": "object" },
+    "format": { "type": "string", "enum": ["json", "mermaid"] },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" }
+  }
+}

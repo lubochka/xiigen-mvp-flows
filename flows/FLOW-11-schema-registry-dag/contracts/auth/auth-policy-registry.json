@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-11",
+  "flowSlug": "schema-registry-dag",
+  "policies": [
+    {
+      "policyId": "SchemaRegistryDagRegister",
+      "route": "POST /api/dynamic/schema-registry-dag",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": [],
+      "wrongRoleForProtectedRoute": "anonymous"
+    },
+    {
+      "policyId": "SchemaRegistryDagApproval",
+      "route": "POST /api/dynamic/schema-registry-dag/approval",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagRead",
+      "route": "GET /api/dynamic/schema-registry-dag/schemas",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagRender",
+      "route": "GET /api/dynamic/schema-registry-dag/dag/render",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagDeprecate",
+      "route": "POST /api/dynamic/schema-registry-dag/deprecate",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagValidate",
+      "route": "POST /api/dynamic/schema-registry-dag/validate",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagMigrate",
+      "route": "POST /api/dynamic/schema-registry-dag/migrate",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagQuality",
+      "route": "POST /api/dynamic/schema-registry-dag/quality",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagExport",
+      "route": "POST /api/dynamic/schema-registry-dag/export",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "SchemaRegistryDagPublicPreview",
+      "route": "GET /api/dynamic/schema-registry-dag/public-preview",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/schema-registry-dag/public-preview"],
+      "authPosture": "anonymous"
+    }
+  ]
+}

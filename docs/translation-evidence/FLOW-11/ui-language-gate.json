@@ -1,0 +1,10 @@
+{
+    "flowId":  "FLOW-11",
+    "verdict":  "APPROVED",
+    "command":  "rg -n \\bBFA\\b|\\bDNA-[1-9]\\b|AF[- ]station|arbiter|FREEDOM config|MACHINE code|DataProcessResult|ENGINE_INTERNAL|\\bT[0-9]{3}\\b|\\bCF-[0-9]{3}\\b flows/FLOW-11-schema-registry-dag/client/angular/src",
+    "hitCount":  0,
+    "hits":  {
+
+             },
+    "hebrewRtlEvidence":  "docs/e2e-snapshots/schema-registry-dag/dotnet-angular/C0-source-flow/platform-admin-C4-he-rtl-populated-desktop.png"
+}

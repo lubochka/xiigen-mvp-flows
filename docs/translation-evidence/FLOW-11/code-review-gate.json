@@ -1,0 +1,94 @@
+{
+    "flowId":  "FLOW-11",
+    "verdict":  "APPROVED",
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "command":  "rg -n using (Elastic|RabbitMQ|MassTransit|StackExchange|Stripe|Azure|Amazon|NEST)|new (Elastic|RabbitMQ|Redis|Stripe|Amazon) flows\\FLOW-11-schema-registry-dag\\server -g \u0027*.cs\u0027",
+                       "exitCode":  1,
+                       "hitCount":  0,
+                       "hits":  {
+
+                                }
+                   },
+                   {
+                       "name":  "no-business-throws",
+                       "command":  "rg -n throw new|throw\\s flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application -g \u0027*.cs\u0027",
+                       "exitCode":  1,
+                       "hitCount":  0,
+                       "hits":  {
+
+                                }
+                   }
+               ],
+    "microserviceBase":  {
+                             "hitCount":  1,
+                             "hits":  "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:11:public sealed class SchemaRegistryDagService : MicroserviceBase\u003cSchemaRegistryDagService\u003e"
+                         },
+    "dataProcessResult":  {
+                              "hitCount":  12,
+                              "hits":  [
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:42:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e RegisterSchemaAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:221:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e DecideApprovalAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:304:    public async Task\u003cDataProcessResult\u003cSchemaCollection\u003e\u003e SearchSchemasAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:337:    public async Task\u003cDataProcessResult\u003cDagRenderSnapshot\u003e\u003e RenderDagAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:375:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e DeprecateSchemaAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:439:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e ValidateDocumentAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:491:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e RunMigrationAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:527:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e AnalyzeQualityAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:545:    public async Task\u003cDataProcessResult\u003cSchemaRegistryDagOutcome\u003e\u003e ExportSchemasAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:563:    private async Task\u003cDataProcessResult\u003cIReadOnlyDictionary\u003cstring, object?\u003e\u003e\u003e PublishSchemaBodyAsync(",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:594:    private async Task\u003cDataProcessResult\u003cTopologySnapshot\u003e\u003e BuildTopologyAsync(CancellationToken cancellationToken)",
+                                           "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:710:    private async Task\u003cDataProcessResult\u003cIReadOnlyDictionary\u003cstring, object?\u003e\u003e\u003e ClassifyCompatibilityAsync("
+                                       ]
+                          },
+    "outboxAndCloudEvents":  {
+                                 "hitCount":  40,
+                                 "hits":  [
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:68:        var reservation = await _idempotency.TryReserveAsync(operationKey, TimeSpan.FromHours(24), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:79:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.RegistrationRequestedEvent, schemaId, new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:95:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.TimeoutRetainedEvent, schemaId, timeoutBody), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:120:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.VersionCheckInlineEvent, schemaId, new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:131:                await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaRejectedEvent, schemaId, cycleCheck.Body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:136:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.CycleCheckInlineEvent, schemaId, new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:146:                await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaRejectedEvent, schemaId, compatibility.Error?.Details ?? new Dictionary\u003cstring, object?\u003e()), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:151:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.CompatibilityCheckInlineEvent, schemaId, new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:159:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaValidatedEvent, schemaId, MinimalSchemaEvent(schemaType, version, \"VALIDATED\", changeType)), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:170:                var approval = await _documents.UpsertAsync(SchemaRegistryDagConstants.ApprovalQueue, approvalId, pending, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:176:                await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaApprovalRequiredEvent, schemaId, new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:193:                await _idempotency.MarkSucceededAsync(operationKey, pendingResponse, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:212:            await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:234:        var reservation = await _idempotency.TryReserveAsync(operationKey, TimeSpan.FromHours(24), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:276:            var storedApproval = await _documents.UpsertAsync(SchemaRegistryDagConstants.ApprovalQueue, approvalId, updatedApproval, approval.Data.Version, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:295:            await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:370:        await _documents.UpsertAsync(SchemaRegistryDagConstants.DagRenderCache, cacheId, body, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:371:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.DagRenderedEvent, cacheId, body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:390:        var reservation = await _idempotency.TryReserveAsync(operationKey, TimeSpan.FromHours(24), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:421:            var stored = await _documents.UpsertAsync(SchemaRegistryDagConstants.Schemas, schemaId, updated, ifMatch ?? schema.Data.Version, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:427:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaDeprecatedEvent, schemaId, MinimalSchemaEvent(schemaType, version, \"DEPRECATED\", ReadString(updated, \"change_type\") ?? \"UNKNOWN\")), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:430:            await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:483:            await _documents.UpsertAsync(SchemaRegistryDagConstants.ValidationFailures, $\"validation-{Guid.NewGuid():N}\", body, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:484:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.ValidationFailedEvent, schemaType, body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:511:        await _documents.UpsertAsync(SchemaRegistryDagConstants.MigrationRuns, runId, run, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:516:            await _documents.UpsertAsync(SchemaRegistryDagConstants.MigrationRuns, runId, run, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:517:            await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.TimeoutRetainedEvent, runId, run), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:522:        await _documents.UpsertAsync(SchemaRegistryDagConstants.MigrationRuns, runId, run, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:523:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.MigrationRunRecordedEvent, runId, run), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:540:        await _documents.UpsertAsync(SchemaRegistryDagConstants.QualityScores, $\"quality-{schemaType}\", body, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:541:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.QualityAnalyzedEvent, schemaType, new Dictionary\u003cstring, object?\u003e { [\"schemaType\"] = schemaType, [\"score\"] = score }), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:558:        await _documents.UpsertAsync(SchemaRegistryDagConstants.ExportAudits, auditId, audit, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:559:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.ExportStartedEvent, auditId, audit), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:578:        var stored = await _documents.UpsertAsync(SchemaRegistryDagConstants.Schemas, schemaId, body, expectedVersion, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:584:        await _documents.UpsertAsync(SchemaRegistryDagConstants.SchemaHistory, $\"history-{schemaId}-{Guid.NewGuid():N}\", new Dictionary\u003cstring, object?\u003e(body)",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:589:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.SchemaPublishedEvent, schemaId, MinimalSchemaEvent(schemaType, version, \"PUBLISHED\", ReadString(body, \"change_type\") ?? \"UNKNOWN\")), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:635:        await _documents.UpsertAsync(SchemaRegistryDagConstants.DagTopology, \"active\", body, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:636:        await _documents.UpsertAsync(SchemaRegistryDagConstants.DagRenderCache, \"dag-render-json\", new Dictionary\u003cstring, object?\u003e(body)",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:641:        await _outbox.AppendAsync(CreateEvent(SchemaRegistryDagConstants.DagRebuiltEvent, \"active\", new Dictionary\u003cstring, object?\u003e",
+                                              "flows\\FLOW-11-schema-registry-dag\\server\\Xiigen.Flow.SchemaRegistryDag.Application\\SchemaRegistryDagService.cs:797:    private CloudEventEnvelope CreateEvent(string type, string subject, IReadOnlyDictionary\u003cstring, object?\u003e data) =\u003e"
+                                          ]
+                             },
+    "acceptedTenantMentions":  [
+                                   "Program.cs local test token parser",
+                                   "SchemaRegistryDagService rejects tenantId payload fields; service methods do not accept tenant id parameters"
+                               ]
+}

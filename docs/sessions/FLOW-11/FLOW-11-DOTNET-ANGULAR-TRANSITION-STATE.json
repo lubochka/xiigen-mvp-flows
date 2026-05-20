@@ -1,0 +1,43 @@
+{
+  "flowId": "FLOW-11",
+  "flowSlug": "schema-registry-dag",
+  "portabilityTier": "Tier D",
+  "tierDComplete": true,
+  "portabilityStatus": "PASS",
+  "authenticationStatus": "PASS",
+  "tenantCertificationTier": "Tier D",
+  "sourceRepo": "C:\\Projects\\xiigen-flows-dot-net-angular",
+  "flowPath": "flows/FLOW-11-schema-registry-dag",
+  "functionalCoverage": {
+    "existingCfRules": ["CF-11-1", "CF-11-2", "CF-11-3", "CF-11-4"],
+    "newCfRules": ["CF-919", "CF-920", "CF-921", "CF-922", "CF-923", "CF-924", "CF-925", "CF-926", "CF-927", "CF-928"],
+    "serverTests": 15,
+    "angularTests": 5,
+    "status": "PASS"
+  },
+  "evidence": {
+    "dockerAuthMatrix": "docs/translation-evidence/FLOW-11/docker-auth-matrix.json",
+    "githubActions": "docs/translation-evidence/FLOW-11/github-actions.json",
+    "visualCounts": "docs/translation-evidence/FLOW-11/visual-counts.json",
+    "packageReadback": "docs/translation-evidence/FLOW-11/package-readback.json",
+    "layer8Cascade": "docs/translation-evidence/FLOW-11/layer8-cascade-evidence.json",
+    "crossTenantJwtIsolation": "docs/translation-evidence/FLOW-11/cross-tenant-jwt-isolation.json",
+    "codeReviewGate": "docs/translation-evidence/FLOW-11/code-review-gate.json",
+    "uiLanguageGate": "docs/translation-evidence/FLOW-11/ui-language-gate.json",
+    "qaReview": "docs/translation-evidence/FLOW-11/qa-review.md"
+  },
+  "cascade": {
+    "expectedPng": 105,
+    "actualPng": 105,
+    "repositories": [
+      "https://github.com/lubochka/tenant-a--schema-registry-dag",
+      "https://github.com/lubochka/tenant-a--acme-contract-map",
+      "https://github.com/lubochka/tenant-b--acme-contract-map",
+      "https://github.com/lubochka/tenant-b--northwind-schema-governance",
+      "https://github.com/lubochka/tenant-c--northwind-schema-governance",
+      "https://github.com/lubochka/tenant-c--tessera-contract-dag"
+    ],
+    "githubActionsConclusion": "success"
+  },
+  "openIssues": []
+}

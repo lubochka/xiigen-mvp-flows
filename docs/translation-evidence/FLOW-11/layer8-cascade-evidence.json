@@ -1,0 +1,81 @@
+{
+    "flowId":  "FLOW-11",
+    "cascade":  [
+                    {
+                        "repo":  "tenant-a--schema-registry-dag",
+                        "url":  "https://github.com/lubochka/tenant-a--schema-registry-dag",
+                        "commit":  "f2f131fb3778c02427d9633cb8281cb0442cfa38",
+                        "cascadePoint":  "C1-tenant-a-installed",
+                        "version":  "0.1.1",
+                        "mode":  "installed",
+                        "moduleName":  "schema-registry-dag",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    },
+                    {
+                        "repo":  "tenant-a--acme-contract-map",
+                        "url":  "https://github.com/lubochka/tenant-a--acme-contract-map",
+                        "commit":  "c3bccd57c5cf0a1c9c24dc4d476f984e71d1144d",
+                        "cascadePoint":  "C2-tenant-a-adapted-published",
+                        "version":  "0.1.2",
+                        "mode":  "adapted-published",
+                        "moduleName":  "acme-contract-map",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    },
+                    {
+                        "repo":  "tenant-b--acme-contract-map",
+                        "url":  "https://github.com/lubochka/tenant-b--acme-contract-map",
+                        "commit":  "0535877df5a5d889352b3fe3b583f53a8cd97846",
+                        "cascadePoint":  "C3-tenant-b-installed-from-a",
+                        "version":  "0.1.2",
+                        "mode":  "installed-from-tenant-a",
+                        "moduleName":  "acme-contract-map",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    },
+                    {
+                        "repo":  "tenant-b--northwind-schema-governance",
+                        "url":  "https://github.com/lubochka/tenant-b--northwind-schema-governance",
+                        "commit":  "767271be9ef71c958e73620cd5cae8a5af3dd39b",
+                        "cascadePoint":  "C4-tenant-b-adapted-published",
+                        "version":  "0.1.3",
+                        "mode":  "adapted-published",
+                        "moduleName":  "northwind-schema-governance",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    },
+                    {
+                        "repo":  "tenant-c--northwind-schema-governance",
+                        "url":  "https://github.com/lubochka/tenant-c--northwind-schema-governance",
+                        "commit":  "72fe16904b96278672cd09c89f6104e36e6ea941",
+                        "cascadePoint":  "C5-tenant-c-installed-from-b",
+                        "version":  "0.1.3",
+                        "mode":  "installed-from-tenant-b",
+                        "moduleName":  "northwind-schema-governance",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    },
+                    {
+                        "repo":  "tenant-c--tessera-contract-dag",
+                        "url":  "https://github.com/lubochka/tenant-c--tessera-contract-dag",
+                        "commit":  "5a42590352c26ebe6abc6fbca35490bd4b4ad4e2",
+                        "cascadePoint":  "C6-tenant-c-adapted",
+                        "version":  "0.1.4",
+                        "mode":  "adapted",
+                        "moduleName":  "tessera-contract-dag",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  15
+                    }
+                ],
+    "crossTenantJwtIsolation":  {
+                                    "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}",
+                                    "status":  401
+                                }
+}

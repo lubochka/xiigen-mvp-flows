@@ -1,0 +1,97 @@
+{
+  "cascadePoint": "C5-tenant-c-installed-from-b",
+  "moduleName": "northwind-schema-governance",
+  "count": 15,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=submission&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=approval&lang=he&module=northwind-schema-governance"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=dag&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=submission&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=approval&lang=he&module=northwind-schema-governance"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=dag&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=submission&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=approval&lang=he&module=northwind-schema-governance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=dag&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=submission&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=approval&lang=he&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=dag&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=submission&lang=en&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=approval&lang=he&module=northwind-schema-governance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-schema-governance\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=dag&lang=en&module=northwind-schema-governance"
+    }
+  ]
+}

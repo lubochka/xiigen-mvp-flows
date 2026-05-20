@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-11/schema-registry-dag-response.schema.json",
+  "title": "FLOW-11 Schema Registry DAG Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "schemaType": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "changeType": { "type": "string" },
+    "versionPin": { "type": "string" },
+    "approvalId": { "type": "string" },
+    "decision": { "type": "string" },
+    "schemas": { "type": "array" },
+    "total": { "type": "integer", "minimum": 0 },
+    "format": { "type": "string" },
+    "content": { "type": "string" },
+    "nodeCount": { "type": "integer", "minimum": 0 },
+    "edgeCount": { "type": "integer", "minimum": 0 },
+    "fromCache": { "type": "boolean" },
+    "code": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

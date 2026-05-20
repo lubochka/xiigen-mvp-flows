@@ -1,0 +1,9 @@
+services:
+  flow-11-schema-registry-dag-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Api/Dockerfile
+    ports:
+      - "5311:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

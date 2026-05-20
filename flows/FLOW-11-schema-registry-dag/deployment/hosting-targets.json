@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-11",
+  "flowSlug": "schema-registry-dag",
+  "api": {
+    "localUrl": "http://127.0.0.1:5311",
+    "containerUrl": "http://127.0.0.1:5311"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4311",
+    "evidencePort": 4311
+  }
+}

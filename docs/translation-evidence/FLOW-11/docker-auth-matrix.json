@@ -1,0 +1,33 @@
+{
+    "flowId":  "FLOW-11",
+    "route":  "/api/dynamic/schema-registry-dag/schemas",
+    "dockerCompose":  "flows/FLOW-11-schema-registry-dag/docker/docker-compose.flow.yml",
+    "healthReady":  {
+                        "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-11\"}",
+                        "status":  200
+                    },
+    "validToken200":  {
+                          "body":  "{\"schemas\":[{\"schemaType\":\"contract\",\"version\":\"1.0.0\",\"status\":\"PUBLISHED\",\"changeType\":\"ADDITIVE\",\"dependencies\":[],\"versionPin\":\"1\",\"deprecated\":false},{\"schemaType\":\"contract\",\"version\":\"1.0.1\",\"status\":\"PUBLISHED\",\"changeType\":\"ADDITIVE\",\"dependencies\":[],\"versionPin\":\"1\",\"deprecated\":false},{\"schemaType\":\"contract-http\",\"version\":\"1.0.0\",\"status\":\"PUBLISHED\",\"changeType\":\"ADDITIVE\",\"dependencies\":[],\"versionPin\":\"1\",\"deprecated\":false},{\"schemaType\":\"contract-matrix\",\"version\":\"1.0.0\",\"status\":\"PUBLISHED\",\"changeType\":\"ADDITIVE\",\"dependencies\":[],\"versionPin\":\"1\",\"deprecated\":false}],\"count\":4}",
+                          "status":  200
+                      },
+    "validMutation201":  {
+                             "body":  "{\"id\":\"contract-evidence:1.0.0\",\"schemaType\":\"contract-evidence\",\"version\":\"1.0.0\",\"status\":\"PUBLISHED\",\"changeType\":\"ADDITIVE\",\"versionPin\":\"1\"}",
+                             "status":  201
+                         },
+    "missingToken401":  {
+                            "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}",
+                            "status":  401
+                        },
+    "crossTenant401":  {
+                           "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}",
+                           "status":  401
+                       },
+    "wrongRole403":  {
+                         "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}",
+                         "status":  403
+                     },
+    "publicPreview200":  {
+                             "body":  "{\"flow\":\"FLOW-11\",\"summary\":\"Register versioned schemas, route breaking changes to approval, and render tenant-scoped dependency DAGs.\",\"states\":[\"submission\",\"approval\",\"dag\"]}",
+                             "status":  200
+                         }
+}

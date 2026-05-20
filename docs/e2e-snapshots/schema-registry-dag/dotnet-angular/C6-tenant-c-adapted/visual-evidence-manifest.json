@@ -1,0 +1,97 @@
+{
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-contract-dag",
+  "count": 15,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=submission&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=approval&lang=he&module=tessera-contract-dag"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=anonymous&state=dag&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=submission&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=approval&lang=he&module=tessera-contract-dag"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=public_marketplace_visitor&state=dag&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=submission&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=approval&lang=he&module=tessera-contract-dag"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=tenant_admin&state=dag&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=submission&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=approval&lang=he&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=platform_admin&state=dag&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=submission&lang=en&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=approval&lang=he&module=tessera-contract-dag"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-contract-dag\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4311/?role=platform_support&state=dag&lang=en&module=tessera-contract-dag"
+    }
+  ]
+}

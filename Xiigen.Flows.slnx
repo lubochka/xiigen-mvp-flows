@@ -77,4 +77,11 @@
     <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Infrastructure/Xiigen.Flow.ReviewsReputation.Infrastructure.csproj" />
     <Project Path="flows/FLOW-10-reviews-reputation/server/Xiigen.Flow.ReviewsReputation.Tests/Xiigen.Flow.ReviewsReputation.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-11-schema-registry-dag/" />
+  <Folder Name="/flows/FLOW-11-schema-registry-dag/server/">
+    <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Api/Xiigen.Flow.SchemaRegistryDag.Api.csproj" />
+    <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Application/Xiigen.Flow.SchemaRegistryDag.Application.csproj" />
+    <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Infrastructure/Xiigen.Flow.SchemaRegistryDag.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Tests/Xiigen.Flow.SchemaRegistryDag.Tests.csproj" />
+  </Folder>
 </Solution>

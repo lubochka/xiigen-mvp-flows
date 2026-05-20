@@ -1,0 +1,44 @@
+[
+    {
+        "repo":  "tenant-a--schema-registry-dag",
+        "runId":  26185274608,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--schema-registry-dag/actions/runs/26185274608"
+    },
+    {
+        "repo":  "tenant-a--acme-contract-map",
+        "runId":  26185460991,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--acme-contract-map/actions/runs/26185460991"
+    },
+    {
+        "repo":  "tenant-b--acme-contract-map",
+        "runId":  26185608936,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--acme-contract-map/actions/runs/26185608936"
+    },
+    {
+        "repo":  "tenant-b--northwind-schema-governance",
+        "runId":  26185778030,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--northwind-schema-governance/actions/runs/26185778030"
+    },
+    {
+        "repo":  "tenant-c--northwind-schema-governance",
+        "runId":  26185919157,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--northwind-schema-governance/actions/runs/26185919157"
+    },
+    {
+        "repo":  "tenant-c--tessera-contract-dag",
+        "runId":  26186073452,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--tessera-contract-dag/actions/runs/26186073452"
+    }
+]

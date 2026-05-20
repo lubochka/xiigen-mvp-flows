@@ -1,0 +1,93 @@
+<main class="schema-registry-dag-shell" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="hero" [attr.data-testid]="roleTestId()">
+    <div>
+      <p class="eyebrow">{{ translated('Schema Registry DAG') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Register tenant-safe schema versions, route breaking changes to approval, and render the active dependency graph for operators.
+      </p>
+    </div>
+    <aside class="role-panel">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ roleCta() }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Schema Registry DAG controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Schema Registry DAG states">
+      <button type="button" [class.active]="screenState() === 'submission'" (click)="setScreenState('submission')">{{ translated('Submission') }}</button>
+      <button type="button" [class.active]="screenState() === 'approval'" (click)="setScreenState('approval')">{{ translated('Approval') }}</button>
+      <button type="button" [class.active]="screenState() === 'dag'" (click)="setScreenState('dag')">{{ translated('DAG') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'submission'" class="submission-layout" data-testid="page-schema-registry-dag-submission">
+    <aside class="filters">
+      <p class="eyebrow">Registry filters</p>
+      <button type="button">Published</button>
+      <button type="button">Pending approval</button>
+      <button type="button">Deprecated</button>
+      <button type="button">Cycle-free</button>
+    </aside>
+    <div class="cards">
+      <article class="schema-card" *ngFor="let schema of schemaCards">
+        <div class="card-top">
+          <span>{{ schema.badge }}</span>
+          <strong>{{ schema.version }}</strong>
+        </div>
+        <h2>{{ schema.title }}</h2>
+        <p>{{ schema.detail }}</p>
+        <dl>
+          <div><dt>Version</dt><dd>{{ schema.version }}</dd></div>
+          <div><dt>Status</dt><dd>{{ schema.status }}</dd></div>
+          <div><dt>Scope</dt><dd>Tenant private</dd></div>
+          <div><dt>Graph</dt><dd>Rebuilt after publish</dd></div>
+        </dl>
+        <button type="button">{{ roleCta() }}</button>
+      </article>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'approval'" class="evidence-grid" data-testid="page-schema-registry-dag-approval">
+    <article class="summary-card">
+      <p class="eyebrow">{{ translated('Approval workflow') }}</p>
+      <h2>Breaking changes pause before publish</h2>
+      <p>Approval decisions are explicit and stored before any publication event can leave the flow.</p>
+    </article>
+    <article class="signal-card" *ngFor="let row of approvalSignals">
+      <span>{{ row.label }}</span>
+      <strong>{{ row.value }}</strong>
+      <p>{{ row.detail }}</p>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'dag'" class="analytics" data-testid="page-schema-registry-dag-dag">
+    <article class="summary-card wide">
+      <p class="eyebrow">{{ translated('Dependency graph') }}</p>
+      <h2>Renderable schema topology</h2>
+      <p>The active registry becomes a readable DAG so support can inspect dependencies without opening source code.</p>
+    </article>
+    <article class="signal-card" *ngFor="let row of submissionSignals">
+      <span>{{ row.label }}</span>
+      <strong>{{ row.value }}</strong>
+      <p>{{ row.detail }}</p>
+    </article>
+    <article class="signal-card" *ngFor="let row of dagSignals">
+      <span>{{ row.label }}</span>
+      <strong>{{ row.value }}</strong>
+      <p>{{ row.detail }}</p>
+    </article>
+  </section>
+</main>

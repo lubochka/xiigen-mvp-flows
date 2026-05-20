@@ -1,0 +1,55 @@
+{
+    "flowId":  "FLOW-11",
+    "roles":  [
+                  "anonymous",
+                  "public_marketplace_visitor",
+                  "tenant_admin",
+                  "platform_admin",
+                  "platform_support"
+              ],
+    "cells":  [
+                  "C2-en-populated-desktop",
+                  "C4-he-rtl-populated-desktop",
+                  "C6-en-populated-mobile"
+              ],
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  15,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\schema-registry-dag\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                          }
+                      ],
+    "expectedPerCascadePoint":  15,
+    "expectedTotal":  105,
+    "actualTotal":  105
+}

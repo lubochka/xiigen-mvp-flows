@@ -1,0 +1,31 @@
+@Xiigen.Flow.SchemaRegistryDag.Api_HostAddress = http://localhost:5311
+
+GET {{Xiigen.Flow.SchemaRegistryDag.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.SchemaRegistryDag.Api_HostAddress}}/api/dynamic/schema-registry-dag/public-preview
+
+###
+
+POST {{Xiigen.Flow.SchemaRegistryDag.Api_HostAddress}}/api/dynamic/schema-registry-dag
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-schema
+Content-Type: application/json
+
+{
+  "schemaType": "profile",
+  "version": "1.0.0",
+  "changeType": "ADDITIVE",
+  "dependencies": [],
+  "jsonSchema": {
+    "type": "object",
+    "required": ["id"],
+    "properties": {
+      "id": { "type": "string" }
+    }
+  },
+  "actorId": "operator-demo"
+}

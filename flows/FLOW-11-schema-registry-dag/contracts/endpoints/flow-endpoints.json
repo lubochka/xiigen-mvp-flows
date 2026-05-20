@@ -1,0 +1,108 @@
+{
+  "flowId": "FLOW-11",
+  "flowSlug": "schema-registry-dag",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag",
+      "operationId": "RegisterSchema",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-11-1", "CF-11-2", "CF-11-3", "CF-919", "CF-920", "CF-921", "CF-922"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/approval",
+      "operationId": "DecideSchemaApproval",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-11-3", "CF-923", "CF-924"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/schema-registry-dag/schemas",
+      "operationId": "SearchSchemas",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "bfaRules": ["CF-11-4"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/schema-registry-dag/dag/render",
+      "operationId": "RenderSchemaDag",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "bfaRules": ["CF-11-1", "CF-11-4", "CF-928"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/deprecate",
+      "operationId": "DeprecateSchema",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-927"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/validate",
+      "operationId": "ValidateDocument",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": false,
+      "bfaRules": ["CF-925"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/migrate",
+      "operationId": "RunSchemaMigration",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-926"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/quality",
+      "operationId": "AnalyzeSchemaQuality",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": false,
+      "bfaRules": ["CF-11-4"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/schema-registry-dag/export",
+      "operationId": "ExportSchemas",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/schema-registry-dag-request.schema.json",
+      "responseSchema": "contracts/schemas/schema-registry-dag-response.schema.json",
+      "idempotencyRequired": false,
+      "bfaRules": ["CF-11-4"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/schema-registry-dag/public-preview",
+      "operationId": "ReadSchemaRegistryDagPublicPreview",
+      "authPosture": "anonymous",
+      "bypassReason": "Public schema registry capability previews are intentionally readable before login; all mutation, read, render, validation, and export routes stay protected."
+    }
+  ]
+}

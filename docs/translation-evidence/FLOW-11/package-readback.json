@@ -1,0 +1,47 @@
+{
+    "flowId":  "FLOW-11",
+    "sourcePackages":  [
+                           {
+                               "name":  "Xiigen.Flow.SchemaRegistryDag.Application.0.1.1.nupkg",
+                               "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-11\\Xiigen.Flow.SchemaRegistryDag.Application.0.1.1.nupkg",
+                               "length":  34465
+                           },
+                           {
+                               "name":  "Xiigen.Flow.SchemaRegistryDag.Infrastructure.0.1.1.nupkg",
+                               "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-11\\Xiigen.Flow.SchemaRegistryDag.Infrastructure.0.1.1.nupkg",
+                               "length":  4071
+                           }
+                       ],
+    "tenantPackages":  [
+                           {
+                               "repo":  "tenant-a--schema-registry-dag",
+                               "version":  "0.1.1",
+                               "url":  "https://github.com/lubochka/tenant-a--schema-registry-dag"
+                           },
+                           {
+                               "repo":  "tenant-a--acme-contract-map",
+                               "version":  "0.1.2",
+                               "url":  "https://github.com/lubochka/tenant-a--acme-contract-map"
+                           },
+                           {
+                               "repo":  "tenant-b--acme-contract-map",
+                               "version":  "0.1.2",
+                               "url":  "https://github.com/lubochka/tenant-b--acme-contract-map"
+                           },
+                           {
+                               "repo":  "tenant-b--northwind-schema-governance",
+                               "version":  "0.1.3",
+                               "url":  "https://github.com/lubochka/tenant-b--northwind-schema-governance"
+                           },
+                           {
+                               "repo":  "tenant-c--northwind-schema-governance",
+                               "version":  "0.1.3",
+                               "url":  "https://github.com/lubochka/tenant-c--northwind-schema-governance"
+                           },
+                           {
+                               "repo":  "tenant-c--tessera-contract-dag",
+                               "version":  "0.1.4",
+                               "url":  "https://github.com/lubochka/tenant-c--tessera-contract-dag"
+                           }
+                       ]
+}

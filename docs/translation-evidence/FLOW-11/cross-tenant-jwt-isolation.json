@@ -1,0 +1,9 @@
+{
+    "flowId":  "FLOW-11",
+    "assertion":  "Tenant B token is rejected against Tenant C or mismatched tenant routes",
+    "evidence":  {
+                     "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}",
+                     "status":  401
+                 },
+    "expectedStatus":  401
+}
