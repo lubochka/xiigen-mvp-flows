@@ -56,4 +56,11 @@
     <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Infrastructure/Xiigen.Flow.FriendRequestSocialFeed.Infrastructure.csproj" />
     <Project Path="flows/FLOW-07-friend-request-social-feed/server/Xiigen.Flow.FriendRequestSocialFeed.Tests/Xiigen.Flow.FriendRequestSocialFeed.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-08-marketplace/" />
+  <Folder Name="/flows/FLOW-08-marketplace/server/">
+    <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Api/Xiigen.Flow.Marketplace.Api.csproj" />
+    <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Application/Xiigen.Flow.Marketplace.Application.csproj" />
+    <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Infrastructure/Xiigen.Flow.Marketplace.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Tests/Xiigen.Flow.Marketplace.Tests.csproj" />
+  </Folder>
 </Solution>

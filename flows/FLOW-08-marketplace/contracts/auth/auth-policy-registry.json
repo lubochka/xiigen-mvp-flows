@@ -1,0 +1,32 @@
+﻿{
+  "flowId": "FLOW-08",
+  "flowSlug": "marketplace",
+  "policies": [
+    {
+      "policyId": "MarketplacePublish",
+      "route": "POST /api/dynamic/marketplace",
+      "allowedRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": [],
+      "wrongRoleForProtectedRoute": "anonymous"
+    },
+    {
+      "policyId": "MarketplaceCatalogRead",
+      "route": "GET /api/dynamic/marketplace/catalog",
+      "allowedRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "MarketplaceAnalyticsRead",
+      "route": "GET /api/dynamic/marketplace/analytics",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "MarketplacePublicPreview",
+      "route": "GET /api/dynamic/marketplace/public-preview",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/marketplace/public-preview"],
+      "authPosture": "anonymous"
+    }
+  ]
+}

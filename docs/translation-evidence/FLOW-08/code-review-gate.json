@@ -1,0 +1,20 @@
+﻿{
+    "flowId":  "FLOW-08",
+    "verdict":  "PASS",
+    "providerSdkImports":  [
+
+                           ],
+    "freeTenantIdParameters":  [
+
+                               ],
+    "businessThrows":  [
+
+                       ],
+    "metadataExemptions":  [
+                               "BfaRuleDefinition.TenantId is static rule metadata, not a service/fabric free-form tenant parameter.",
+                               "TryReadTenantFromLocalTestToken parses a local test token inside the API auth matrix and is not a business or fabric method."
+                           ],
+    "microserviceBase":  true,
+    "outboxBeforeQueue":  true,
+    "cloudEvents":  true
+}

@@ -1,0 +1,21 @@
+﻿{
+    "flowId":  "FLOW-08",
+    "verdict":  "PASS",
+    "checks":  [
+                   {
+                       "status":  "PASS",
+                       "name":  "forbidden-internal-language",
+                       "source":  "flows/FLOW-08-marketplace/client/angular/src/app/app.ts|app.html|app.css"
+                   },
+                   {
+                       "status":  "PASS",
+                       "sample":  "tenant-admin-C4-he-rtl-populated-desktop.png",
+                       "name":  "hebrew-rtl-evidence"
+                   },
+                   {
+                       "status":  "PASS",
+                       "sample":  "platform-support-C6-en-populated-mobile.png",
+                       "name":  "mobile-evidence"
+                   }
+               ]
+}

@@ -1,0 +1,74 @@
+﻿{
+    "flowId":  "FLOW-08",
+    "flowSlug":  "marketplace",
+    "baseUrl":  "http://127.0.0.1:5308",
+    "generatedAt":  "2026-05-20T13:56:09.2901094Z",
+    "total":  9,
+    "passed":  9,
+    "failed":  0,
+    "results":  [
+                    {
+                        "name":  "health-ready-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"status\":\"ready\",\"flow\":\"FLOW-08\"}"
+                    },
+                    {
+                        "name":  "public-preview-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"flow\":\"FLOW-08\",\"summary\":\"Marketplace listings, catalog search, moderation, pricing, feed distribution, and analytics\",\"states\":[\"publish\",\"catalog\",\"feed\",\"analytics\"]}"
+                    },
+                    {
+                        "name":  "valid-token-publish-201",
+                        "expectedStatus":  201,
+                        "actualStatus":  201,
+                        "pass":  true,
+                        "body":  "{\"tenant_id\":\"acme-corp\",\"listing_id\":\"docker-listing-1\",\"seller_id\":\"seller-docker-1\",\"title\":\"Docker marketplace listing\",\"category\":\"Services\",\"description\":\"Verified docker e2e listing\",\"price\":1200,\"currency\":\"USD\",\"inventory\":3,\"status\":\"ACTIVE\",\"published_at\":\"2026-05-20T13:56:05.0791616+00:00\",\"id\":\"docker-listing-1\",\"version\":\"1\",\"catalogIndexed\":true,\"feedGenerated\":true}"
+                    },
+                    {
+                        "name":  "idempotent-replay-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"tenant_id\":\"acme-corp\",\"listing_id\":\"docker-listing-1\",\"seller_id\":\"seller-docker-1\",\"title\":\"Docker marketplace listing\",\"category\":\"Services\",\"description\":\"Verified docker e2e listing\",\"price\":1200,\"currency\":\"USD\",\"inventory\":3,\"status\":\"ACTIVE\",\"published_at\":\"2026-05-20T13:56:05.0791616+00:00\",\"id\":\"docker-listing-1\",\"version\":\"1\",\"catalogIndexed\":true,\"feedGenerated\":true}"
+                    },
+                    {
+                        "name":  "catalog-read-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"listings\":[{\"tenant_id\":\"acme-corp\",\"listing_id\":\"docker-listing-1\",\"seller_id\":\"seller-docker-1\",\"title\":\"Docker marketplace listing\",\"category\":\"Services\",\"description\":\"Verified docker e2e listing\",\"price\":1200,\"currency\":\"USD\",\"inventory\":3,\"status\":\"ACTIVE\",\"published_at\":\"2026-05-20T13:56:05.0791616+00:00\",\"searchKey\":\"services-docker marketplace listing\",\"version\":\"1\"}],\"count\":1,\"statusCounts\":{\"ACTIVE\":1}}"
+                    },
+                    {
+                        "name":  "analytics-admin-200",
+                        "expectedStatus":  200,
+                        "actualStatus":  200,
+                        "pass":  true,
+                        "body":  "{\"listingCount\":1,\"viewCount\":40,\"inquiryCount\":8,\"conversionRate\":0.2,\"statusCounts\":{\"RECORDED\":1},\"viewerIdsStored\":false}"
+                    },
+                    {
+                        "name":  "missing-token-401",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                    },
+                    {
+                        "name":  "wrong-role-403",
+                        "expectedStatus":  403,
+                        "actualStatus":  403,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                    },
+                    {
+                        "name":  "cross-tenant-token-401",
+                        "expectedStatus":  401,
+                        "actualStatus":  401,
+                        "pass":  true,
+                        "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                    }
+                ]
+}

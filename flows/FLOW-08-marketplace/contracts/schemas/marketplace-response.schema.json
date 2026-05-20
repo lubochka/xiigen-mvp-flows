@@ -1,0 +1,17 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/flow-08/marketplace-response.schema.json",
+  "title": "FLOW-08 Marketplace Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "listingId": { "type": "string" },
+    "status": { "type": "string", "enum": ["ACTIVE", "DRAFT", "REVIEW_REQUIRED", "RECORDED"] },
+    "version": { "type": "string" },
+    "catalogIndexed": { "type": "boolean" },
+    "feedGenerated": { "type": "boolean" },
+    "code": { "type": "string" },
+    "details": { "type": ["array", "object", "null"] }
+  }
+}

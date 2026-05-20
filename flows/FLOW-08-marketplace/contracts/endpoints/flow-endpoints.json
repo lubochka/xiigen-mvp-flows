@@ -1,0 +1,40 @@
+﻿{
+  "flowId": "FLOW-08",
+  "flowSlug": "marketplace",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/dynamic/marketplace",
+      "operationId": "PublishMarketplaceListing",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-08-1", "CF-08-2", "CF-08-3", "CF-08-4", "CF-895", "CF-896", "CF-897", "CF-898", "CF-899", "CF-900", "CF-901", "CF-902"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/marketplace/catalog",
+      "operationId": "ReadMarketplaceCatalog",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/marketplace-response.schema.json"
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/marketplace/analytics",
+      "operationId": "ReadMarketplaceAnalytics",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/marketplace-response.schema.json"
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/marketplace/public-preview",
+      "operationId": "ReadMarketplacePublicPreview",
+      "authPosture": "anonymous",
+      "bypassReason": "Public marketplace preview is intentionally readable before login."
+    }
+  ]
+}

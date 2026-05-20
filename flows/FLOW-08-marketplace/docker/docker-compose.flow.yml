@@ -1,0 +1,9 @@
+﻿services:
+  flow-08-marketplace-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Api/Dockerfile
+    ports:
+      - "5308:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

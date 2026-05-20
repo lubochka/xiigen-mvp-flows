@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "tenant-a-marketplace",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=anonymous&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=anonymous&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=anonymous&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=public_marketplace_visitor&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=public_marketplace_visitor&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=public_marketplace_visitor&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_user&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_user&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_user&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_admin&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_admin&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=tenant_admin&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=referral_user&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=referral_user&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=referral_user&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=freelancer&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=freelancer&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=freelancer&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=business_partner&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=business_partner&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=business_partner&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=event_organiser&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=event_organiser&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=event_organiser&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=platform_admin&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=platform_admin&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=platform_admin&state=analytics&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=platform_support&state=catalog&lang=en&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4308/?role=platform_support&state=publish&lang=he&module=tenant-a-marketplace"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--tenant-a-marketplace\\docs\\e2e-snapshots\\marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4308/?role=platform_support&state=analytics&lang=en&module=tenant-a-marketplace"
+    }
+  ]
+}

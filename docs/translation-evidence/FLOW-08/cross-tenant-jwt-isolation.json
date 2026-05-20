@@ -1,0 +1,6 @@
+﻿{
+    "flowId":  "FLOW-08",
+    "verdict":  "PASS",
+    "check":  "Tenant B token rejected on Tenant C route through Docker auth matrix and cascade protocol.",
+    "evidence":  "docker-auth-matrix.json: cross-tenant-token-401 actual 401 AUTH_CROSS_TENANT_TOKEN"
+}

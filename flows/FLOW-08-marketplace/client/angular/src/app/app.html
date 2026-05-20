@@ -1,0 +1,88 @@
+﻿<main class="marketplace-shell" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="hero" [attr.data-testid]="roleTestId()">
+    <div>
+      <p class="eyebrow">{{ translated('Marketplace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Publish seller offers, moderate unsafe copy, validate prices, index the catalog, and distribute buyer-ready cards without exposing private tenant data.
+      </p>
+    </div>
+    <aside class="role-panel">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ roleCta() }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Marketplace controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Marketplace states">
+      <button type="button" [class.active]="screenState() === 'publish'" (click)="setScreenState('publish')">{{ translated('Publish') }}</button>
+      <button type="button" [class.active]="screenState() === 'catalog'" (click)="setScreenState('catalog')">{{ translated('Catalog') }}</button>
+      <button type="button" [class.active]="screenState() === 'analytics'" (click)="setScreenState('analytics')">{{ translated('Analytics') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'publish'" class="evidence-grid" data-testid="page-marketplace-publish">
+    <article class="summary-card">
+      <p class="eyebrow">{{ translated('Listing checks') }}</p>
+      <h2>Seller publication path</h2>
+      <p>Each listing writes its audit trail first, then evaluates moderation and price rules before it reaches the catalog.</p>
+    </article>
+    <article class="signal-card" *ngFor="let row of publishSignals">
+      <span>{{ row.label }}</span>
+      <strong>{{ row.value }}</strong>
+      <p>{{ row.detail }}</p>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'catalog'" class="catalog-layout" data-testid="page-marketplace-catalog">
+    <aside class="filters">
+      <p class="eyebrow">Filters</p>
+      <button type="button">Services</button>
+      <button type="button">Creative</button>
+      <button type="button">Partnerships</button>
+      <button type="button">Free listings</button>
+    </aside>
+    <div class="cards">
+      <article class="listing-card" *ngFor="let listing of listings">
+        <div class="card-top">
+          <span>{{ listing.badge }}</span>
+          <strong>{{ listing.price }}</strong>
+        </div>
+        <h2>{{ listing.title }}</h2>
+        <p>{{ listing.detail }}</p>
+        <dl>
+          <div><dt>Category</dt><dd>{{ listing.category }}</dd></div>
+          <div><dt>Status</dt><dd>{{ listing.status }}</dd></div>
+          <div><dt>Seller</dt><dd>{{ listing.seller }}</dd></div>
+          <div><dt>Rating</dt><dd>{{ listing.rating }}</dd></div>
+        </dl>
+        <button type="button">{{ roleCta() }}</button>
+      </article>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'analytics'" class="analytics" data-testid="page-marketplace-analytics">
+    <article class="summary-card wide">
+      <p class="eyebrow">{{ translated('Marketplace health') }}</p>
+      <h2>Aggregate-only performance</h2>
+      <p>Marketplace analytics show conversion and recovery state without buyer lists, viewer identifiers, or cross-tenant leakage.</p>
+    </article>
+    <article class="signal-card" *ngFor="let row of analyticsRows">
+      <span>{{ row.label }}</span>
+      <strong>{{ row.value }}</strong>
+      <p>{{ row.detail }}</p>
+    </article>
+  </section>
+</main>

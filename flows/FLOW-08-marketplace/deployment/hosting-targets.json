@@ -1,0 +1,12 @@
+﻿{
+  "flowId": "FLOW-08",
+  "flowSlug": "marketplace",
+  "api": {
+    "localUrl": "http://127.0.0.1:5308",
+    "containerUrl": "http://127.0.0.1:5308"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4308",
+    "evidencePort": 4308
+  }
+}

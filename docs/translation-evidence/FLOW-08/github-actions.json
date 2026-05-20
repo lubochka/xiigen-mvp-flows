@@ -1,0 +1,66 @@
+﻿{
+    "flowId":  "FLOW-08",
+    "verdict":  "success",
+    "runs":  [
+                 {
+                     "repo":  "lubochka/tenant-a--marketplace",
+                     "cascadePoint":  "C1-tenant-a-installed",
+                     "runId":  26167584423,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--marketplace/actions/runs/26167584423",
+                     "commit":  "9cc0de439448f0d443f087e793820b214748354e"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-a--tenant-a-marketplace",
+                     "cascadePoint":  "C2-tenant-a-adapted-published",
+                     "runId":  26167817906,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--tenant-a-marketplace/actions/runs/26167817906",
+                     "commit":  "c646bc801a76284633a03b67a8f0e26f768abf5c"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-a-marketplace",
+                     "cascadePoint":  "C3-tenant-b-installed-from-a",
+                     "runId":  26168005458,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-a-marketplace/actions/runs/26168005458",
+                     "commit":  "96e6ce224e857c5caa9b2e7b2f13c100e74994de"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-b--tenant-b-marketplace",
+                     "cascadePoint":  "C4-tenant-b-adapted-published",
+                     "runId":  26168184772,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--tenant-b-marketplace/actions/runs/26168184772",
+                     "commit":  "8ca9a2b6ed398d1504e1ca317307d805065d70ad"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-b-marketplace",
+                     "cascadePoint":  "C5-tenant-c-installed-from-b",
+                     "runId":  26168370650,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-b-marketplace/actions/runs/26168370650",
+                     "commit":  "b4fab395664b6a22cd8183c874b1319c9c3b5346"
+                 },
+                 {
+                     "repo":  "lubochka/tenant-c--tenant-c-marketplace",
+                     "cascadePoint":  "C6-tenant-c-adapted",
+                     "runId":  26168549713,
+                     "workflow":  "FLOW-08 Marketplace",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tenant-c-marketplace/actions/runs/26168549713",
+                     "commit":  "921963594b6b966ef508570080e20a1234441806"
+                 }
+             ]
+}
