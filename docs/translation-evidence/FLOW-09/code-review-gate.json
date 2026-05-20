@@ -1,0 +1,14 @@
+{
+    "flowId":  "FLOW-09",
+    "checks":  {
+                   "directSdkImports":  "PASS",
+                   "tenantContext":  "PASS_WITH_TEST_HELPER_FALSE_POSITIVES",
+                   "microserviceBase":  "PASS",
+                   "businessThrows":  "PASS",
+                   "outboxBeforeQueue":  "PASS"
+               },
+    "notes":  [
+                  "tenantId grep hits are test helpers, BFA record metadata, or CurrentTenant writes, not service free-form tenant parameters."
+              ],
+    "verdict":  "PASS"
+}

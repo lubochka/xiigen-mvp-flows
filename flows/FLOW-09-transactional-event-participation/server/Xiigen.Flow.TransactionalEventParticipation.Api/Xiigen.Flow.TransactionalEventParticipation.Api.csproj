@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-flow-09-transactional-event-participation</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.TransactionalEventParticipation.Application\Xiigen.Flow.TransactionalEventParticipation.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.TransactionalEventParticipation.Infrastructure\Xiigen.Flow.TransactionalEventParticipation.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

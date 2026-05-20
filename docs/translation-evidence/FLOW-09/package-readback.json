@@ -1,0 +1,17 @@
+{
+    "flowId":  "FLOW-09",
+    "packageCount":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.TransactionalEventParticipation.Application.0.1.1.nupkg",
+                         "Length":  27720,
+                         "LastWriteTime":  "\/Date(1779292664807)\/"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.TransactionalEventParticipation.Infrastructure.0.1.1.nupkg",
+                         "Length":  4173,
+                         "LastWriteTime":  "\/Date(1779292665366)\/"
+                     }
+                 ],
+    "verdict":  "PASS"
+}

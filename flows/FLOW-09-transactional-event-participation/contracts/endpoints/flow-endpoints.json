@@ -1,0 +1,71 @@
+{
+  "flowId": "FLOW-09",
+  "flowSlug": "transactional-event-participation",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/dynamic/transactional-event-participation",
+      "operationId": "StartTransactionalEventParticipation",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/transactional-event-participation-request.schema.json",
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-09-1", "CF-09-2", "CF-09-4", "CF-09-5", "CF-09-6", "CF-09-7", "CF-903", "CF-904", "CF-905", "CF-906", "CF-907", "CF-908", "CF-909", "CF-910", "CF-911"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/transactional-event-participation/tickets",
+      "operationId": "ReadTransactionalEventParticipationTickets",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json"
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/transactional-event-participation/refund",
+      "operationId": "RequestTransactionalEventParticipationRefund",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/transactional-event-participation-request.schema.json",
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json",
+      "idempotencyRequired": true,
+      "bfaRules": ["CF-09-3", "CF-912"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/transactional-event-participation/waitlist",
+      "operationId": "JoinTransactionalEventParticipationWaitlist",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/transactional-event-participation-request.schema.json",
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json",
+      "idempotencyRequired": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/dynamic/transactional-event-participation/redeem-token",
+      "operationId": "RedeemTransactionalEventParticipationToken",
+      "authPosture": "policy",
+      "requiredRoles": ["event_organiser", "tenant_admin", "platform_admin", "platform_support"],
+      "requestSchema": "contracts/schemas/transactional-event-participation-request.schema.json",
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json",
+      "bfaRules": ["CF-09-6"]
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/transactional-event-participation/analytics",
+      "operationId": "ReadTransactionalEventParticipationAnalytics",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "event_organiser", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/transactional-event-participation-response.schema.json"
+    },
+    {
+      "method": "GET",
+      "path": "/api/dynamic/transactional-event-participation/public-preview",
+      "operationId": "ReadTransactionalEventParticipationPublicPreview",
+      "authPosture": "anonymous",
+      "bypassReason": "Public event previews are intentionally readable before login; all purchase, ticket, refund, redemption, and analytics routes stay protected."
+    }
+  ]
+}

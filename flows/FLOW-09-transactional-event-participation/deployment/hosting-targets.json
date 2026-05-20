@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-09",
+  "flowSlug": "transactional-event-participation",
+  "api": {
+    "localUrl": "http://127.0.0.1:5309",
+    "containerUrl": "http://127.0.0.1:5309"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4309",
+    "evidencePort": 4309
+  }
+}

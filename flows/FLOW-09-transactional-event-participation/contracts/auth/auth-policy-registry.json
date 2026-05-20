@@ -1,0 +1,44 @@
+{
+  "flowId": "FLOW-09",
+  "flowSlug": "transactional-event-participation",
+  "policies": [
+    {
+      "policyId": "transactionalEventParticipationCheckout",
+      "route": "POST /api/dynamic/transactional-event-participation",
+      "allowedRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": [],
+      "wrongRoleForProtectedRoute": "anonymous"
+    },
+    {
+      "policyId": "transactionalEventParticipationTicketRead",
+      "route": "GET /api/dynamic/transactional-event-participation/tickets",
+      "allowedRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "transactionalEventParticipationRefund",
+      "route": "POST /api/dynamic/transactional-event-participation/refund",
+      "allowedRoles": ["tenant_user", "tenant_admin", "referral_user", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "transactionalEventParticipationTokenRedemption",
+      "route": "POST /api/dynamic/transactional-event-participation/redeem-token",
+      "allowedRoles": ["event_organiser", "tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "transactionalEventParticipationAnalyticsRead",
+      "route": "GET /api/dynamic/transactional-event-participation/analytics",
+      "allowedRoles": ["tenant_admin", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "transactionalEventParticipationPublicPreview",
+      "route": "GET /api/dynamic/transactional-event-participation/public-preview",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/transactional-event-participation/public-preview"],
+      "authPosture": "anonymous"
+    }
+  ]
+}

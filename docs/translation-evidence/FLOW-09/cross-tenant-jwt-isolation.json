@@ -1,0 +1,7 @@
+{
+    "flowId":  "FLOW-09",
+    "scenario":  "Bearer tenant:northwind:local with X-Tenant-Id acme-corp",
+    "expected":  401,
+    "actual":  401,
+    "verdict":  "PASS"
+}

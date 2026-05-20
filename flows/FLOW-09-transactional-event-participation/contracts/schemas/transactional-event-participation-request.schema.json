@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-09/transactional-event-participation-request.schema.json",
+  "title": "FLOW-09 Transactional Event Participation Request",
+  "type": "object",
+  "required": ["eventId", "userId"],
+  "additionalProperties": true,
+  "properties": {
+    "participationId": { "type": "string", "minLength": 1 },
+    "eventId": { "type": "string", "minLength": 1 },
+    "userId": { "type": "string", "minLength": 1 },
+    "seatId": { "type": "string", "minLength": 1 },
+    "amount": { "type": "number", "minimum": 0 },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "seats": { "type": "integer", "minimum": 1 },
+    "eligible": { "type": "boolean" },
+    "capacityAvailable": { "type": "integer" },
+    "paymentMethod": { "type": "string" },
+    "paymentDeclined": { "type": "boolean" },
+    "ticketType": { "type": "string" },
+    "qrToken": { "type": "string" },
+    "ticketId": { "type": "string" },
+    "attempt": { "type": "integer", "minimum": 1 },
+    "maxAttempts": { "type": "integer", "minimum": 1 },
+    "reason": { "type": "string" },
+    "groupMembers": { "type": "array", "items": { "type": "string" } },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "simulateFraudServiceDown": { "type": "boolean" },
+    "simulateGroupMemberFailure": { "type": "boolean" }
+  }
+}

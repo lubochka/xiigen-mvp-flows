@@ -63,4 +63,11 @@
     <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Infrastructure/Xiigen.Flow.Marketplace.Infrastructure.csproj" />
     <Project Path="flows/FLOW-08-marketplace/server/Xiigen.Flow.Marketplace.Tests/Xiigen.Flow.Marketplace.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-09-transactional-event-participation/" />
+  <Folder Name="/flows/FLOW-09-transactional-event-participation/server/">
+    <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Api/Xiigen.Flow.TransactionalEventParticipation.Api.csproj" />
+    <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Application/Xiigen.Flow.TransactionalEventParticipation.Application.csproj" />
+    <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Infrastructure/Xiigen.Flow.TransactionalEventParticipation.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-09-transactional-event-participation/server/Xiigen.Flow.TransactionalEventParticipation.Tests/Xiigen.Flow.TransactionalEventParticipation.Tests.csproj" />
+  </Folder>
 </Solution>

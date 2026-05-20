@@ -1,0 +1,169 @@
+{
+  "cascadePoint": "C4-tenant-b-adapted-published",
+  "moduleName": "northwind-exchange-ticketing",
+  "count": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=anonymous&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=anonymous&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=anonymous&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_user&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_user&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_user&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=referral_user&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=referral_user&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=referral_user&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=freelancer&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=freelancer&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=freelancer&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=business_partner&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=business_partner&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=business_partner&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=event_organiser&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=event_organiser&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=event_organiser&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_admin&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_admin&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=tenant_admin&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=platform_admin&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=platform_admin&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=platform_admin&state=refund&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=platform_support&state=purchase&lang=en&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4309/?role=platform_support&state=ticket&lang=he&module=northwind-exchange-ticketing"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\docs\\e2e-snapshots\\transactional-event-participation\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4309/?role=platform_support&state=refund&lang=en&module=northwind-exchange-ticketing"
+    }
+  ]
+}

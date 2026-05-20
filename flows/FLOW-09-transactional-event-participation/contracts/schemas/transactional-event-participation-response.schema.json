@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-09/transactional-event-participation-response.schema.json",
+  "title": "FLOW-09 Transactional Event Participation Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "eventId": { "type": "string" },
+    "ticketId": { "type": "string" },
+    "paymentId": { "type": "string" },
+    "refundId": { "type": "string" },
+    "redemptionId": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "qrToken": { "type": "string" },
+    "fee": { "type": "object" },
+    "seatReservedBeforePayment": { "type": "boolean" },
+    "platformQrBoundary": { "type": "boolean" },
+    "outboxRetained": { "type": "boolean" },
+    "code": { "type": "string" },
+    "details": { "type": ["array", "object", "null"] }
+  }
+}

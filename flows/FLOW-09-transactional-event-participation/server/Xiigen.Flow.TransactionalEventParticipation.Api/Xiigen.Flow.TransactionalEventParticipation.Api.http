@@ -1,0 +1,21 @@
+@Xiigen.Flow.TransactionalEventParticipation.Api_HostAddress = http://localhost:5309
+
+GET {{Xiigen.Flow.TransactionalEventParticipation.Api_HostAddress}}/health/ready
+
+###
+
+POST {{Xiigen.Flow.TransactionalEventParticipation.Api_HostAddress}}/api/dynamic/transactional-event-participation
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+X-Idempotency-Key: demo-participation
+Content-Type: application/json
+
+{
+  "eventId": "event-demo",
+  "userId": "buyer-demo",
+  "amount": 125,
+  "currency": "USD",
+  "eligible": true,
+  "capacityAvailable": 4
+}

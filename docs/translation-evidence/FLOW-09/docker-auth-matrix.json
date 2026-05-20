@@ -1,0 +1,13 @@
+{
+    "flowId":  "FLOW-09",
+    "checkedAt":  "2026-05-20T19:25:11.1888351+03:00",
+    "results":  {
+                    "health":  200,
+                    "publicPreview":  200,
+                    "validToken":  201,
+                    "missingToken":  401,
+                    "wrongRole":  403,
+                    "crossTenantToken":  401
+                },
+    "verdict":  "PASS"
+}

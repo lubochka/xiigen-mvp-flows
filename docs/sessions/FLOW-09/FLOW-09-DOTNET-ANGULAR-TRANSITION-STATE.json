@@ -1,0 +1,76 @@
+{
+    "flowId":  "FLOW-09",
+    "flowSlug":  "transactional-event-participation",
+    "portabilityTier":  "Tier D",
+    "status":  "APPROVED",
+    "checkedAt":  "2026-05-20T19:25:11.3187308+03:00",
+    "server":  {
+                   "flowTests":  "20/20 PASS",
+                   "dotnetSolution":  "PASS",
+                   "dockerAuth":  "PASS",
+                   "allTests":  "140/140 PASS"
+               },
+    "client":  {
+                   "angularTests":  "5/5 PASS",
+                   "visualEvidence":  "PASS",
+                   "angularBuild":  "PASS"
+               },
+    "visualEvidence":  {
+                           "cascadePoints":  7,
+                           "cellsPerCascadePoint":  3,
+                           "expectedPngCount":  189,
+                           "actualPngCount":  189,
+                           "roles":  9
+                       },
+    "tenantCascade":  {
+                          "repositories":  [
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-a--transactional-event-participation/actions/runs/26175276294",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-a--transactional-event-participation",
+                                                   "cascadePoint":  "C1-tenant-a-installed"
+                                               },
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-a--acme-fast-release-ticketing/actions/runs/26175277898",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-a--acme-fast-release-ticketing",
+                                                   "cascadePoint":  "C2-tenant-a-adapted-published"
+                                               },
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-b--acme-fast-release-ticketing/actions/runs/26175279682",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-b--acme-fast-release-ticketing",
+                                                   "cascadePoint":  "C3-tenant-b-installed-from-a"
+                                               },
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-b--northwind-exchange-ticketing/actions/runs/26175281214",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-b--northwind-exchange-ticketing",
+                                                   "cascadePoint":  "C4-tenant-b-adapted-published"
+                                               },
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-c--northwind-exchange-ticketing/actions/runs/26175284028",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-c--northwind-exchange-ticketing",
+                                                   "cascadePoint":  "C5-tenant-c-installed-from-b"
+                                               },
+                                               {
+                                                   "runUrl":  "https://github.com/lubochka/tenant-c--tessera-community-ticketing/actions/runs/26175284827",
+                                                   "conclusion":  "success",
+                                                   "repo":  "tenant-c--tessera-community-ticketing",
+                                                   "cascadePoint":  "C6-tenant-c-adapted"
+                                               }
+                                           ],
+                          "githubActions":  "6/6 success"
+                      },
+    "codeReview":  {
+                       "verdict":  "PASS",
+                       "futurePhase":  "NONE",
+                       "technicalDebt":  "NONE",
+                       "missingTests":  "NONE"
+                   },
+    "qaReview":  {
+                     "report":  "docs/translation-evidence/FLOW-09/qa-review.md",
+                     "verdict":  "APPROVED"
+                 }
+}

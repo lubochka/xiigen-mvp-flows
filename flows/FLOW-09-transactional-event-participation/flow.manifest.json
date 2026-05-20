@@ -1,0 +1,130 @@
+{
+  "flowId": "FLOW-09",
+  "flowSlug": "transactional-event-participation",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-09-transactional-event-participation",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.TransactionalEventParticipation.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/transactional-event-participation/dotnet-angular",
+  "sourceAliases": [
+    "transactional-event-participation",
+    "ticket-purchase",
+    "seat-reservation-payment-ticketing"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "referral_user",
+      "freelancer",
+      "business_partner",
+      "event_organiser",
+      "tenant_admin",
+      "platform_admin",
+      "platform_support"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "ready-after-shared-artifacts",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-03",
+      "reason": "Event metadata and capacity signals provide the event record used during ticket purchase."
+    },
+    {
+      "flowId": "FLOW-04",
+      "reason": "Issued QR tickets feed the event attendance and check-in boundary."
+    },
+    {
+      "flowId": "FLOW-08",
+      "reason": "Marketplace package publication exposes adapted ticketing modules during the tenant cascade."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/transactional-event-participation",
+    "requiredDocuments": [
+      "docs/flow-coverage/transactional-event-participation/P1-business-logic-inventory.md",
+      "docs/flow-coverage/transactional-event-participation/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/transactional-event-participation/P5-ui-specs.md",
+      "docs/flow-coverage/transactional-event-participation/P9-edge-cases.md",
+      "docs/flow-coverage/transactional-event-participation/P10-server-specs.md",
+      "docs/flow-coverage/transactional-event-participation/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 7,
+    "newCfRules": 10,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 17,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false
+  },
+  "realProviderReplacementTests": [],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "transactional-event-participation",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-transactional-event-participation.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}
