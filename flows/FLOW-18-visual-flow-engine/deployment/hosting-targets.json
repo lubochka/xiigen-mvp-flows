@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "api": {
+    "localUrl": "http://127.0.0.1:5317",
+    "containerUrl": "http://127.0.0.1:5317"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4317",
+    "evidencePort": 4317
+  }
+}

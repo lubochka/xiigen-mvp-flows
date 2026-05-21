@@ -1,0 +1,64 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "generatedAt": "2026-05-21T15:02:35.3688906Z",
+  "expectedPackages": 8,
+  "actualPackages": 8,
+  "expectedVersions": [
+    "0.1.1",
+    "0.1.2",
+    "0.1.3",
+    "0.1.4"
+  ],
+  "pass": true,
+  "packages": [
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Application.0.1.1.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Application.0.1.1.nupkg",
+      "length": 30694,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Application.0.1.2.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Application.0.1.2.nupkg",
+      "length": 30587,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Application.0.1.3.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Application.0.1.3.nupkg",
+      "length": 30601,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Application.0.1.4.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Application.0.1.4.nupkg",
+      "length": 30597,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.1.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.1.nupkg",
+      "length": 4051,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.2.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.2.nupkg",
+      "length": 3956,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.3.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.3.nupkg",
+      "length": 3973,
+      "exists": true
+    },
+    {
+      "name": "Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.4.nupkg",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-18\\Xiigen.Flow.VisualFlowEngine.Infrastructure.0.1.4.nupkg",
+      "length": 3964,
+      "exists": true
+    }
+  ]
+}

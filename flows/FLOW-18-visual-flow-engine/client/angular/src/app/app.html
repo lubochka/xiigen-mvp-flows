@@ -1,0 +1,147 @@
+<main class="visual-flow-engine-shell" data-testid="visual-flow-engine-page" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-VisualFlowEngine">
+    <div>
+      <p class="eyebrow">{{ translated('Visual Flow Engine') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Design, test, and publish tenant-safe automation flows with a canvas that keeps draft state, type checks, publication locks, and code handoff evidence visible.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ canDesign() ? translated('Open actions') : translated('Preview only') }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Visual flow controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Visual flow screens">
+      <button type="button" [class.active]="screenState() === 'canvas'" (click)="setScreenState('canvas')">{{ translated('Canvas') }}</button>
+      <button type="button" [class.active]="screenState() === 'publisher'" (click)="setScreenState('publisher')">{{ translated('Publish') }}</button>
+      <button type="button" [class.active]="screenState() === 'debug'" (click)="setScreenState('debug')">{{ translated('Debug') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section class="dashboard" data-testid="visual-flow-engine-summary">
+    <article class="metric-card">
+      <span>Current mode</span>
+      <strong>{{ mode() }}</strong>
+      <p>The workspace switches between design, preview, active publishing, and debug review.</p>
+    </article>
+    <article class="metric-card">
+      <span>Nodes</span>
+      <strong>{{ nodes.length }}</strong>
+      <p>Every implementation step has a visible node and a typed edge.</p>
+    </article>
+    <article class="metric-card">
+      <span>Warnings</span>
+      <strong>{{ issueCount() }}</strong>
+      <p>Warnings block deployment until reviewed or repaired.</p>
+    </article>
+    <article class="metric-card">
+      <span>Publish lock</span>
+      <strong>Versioned</strong>
+      <p>Publishing uses the latest draft version and rejects stale updates.</p>
+    </article>
+  </section>
+
+  <section class="flow-grid">
+    <section *ngIf="screenState() === 'canvas'" class="surface" data-testid="flow-canvas-page">
+      <div class="surface-header">
+        <div>
+          <h2>{{ translated('Canvas') }}</h2>
+          <p>Drag-ready nodes show ownership, shape, and handoff status before the flow can move to preview.</p>
+        </div>
+        <button data-testid="save-canvas-button" type="button" [disabled]="!canDesign()">Save draft</button>
+      </div>
+      <div class="canvas-board" data-testid="canvas-board">
+        <button
+          *ngFor="let node of nodes"
+          type="button"
+          class="node-card"
+          [class.warning]="node.status === 'warning'"
+          [class.blocked]="node.status === 'blocked'"
+          [style.left.%]="node.x"
+          [style.top.%]="node.y"
+          (click)="setSelectedNode(node.id)">
+          <span>{{ node.category }}</span>
+          <strong>{{ node.label }}</strong>
+          <em>{{ node.task }}</em>
+        </button>
+        <div class="edge-line edge-one"></div>
+        <div class="edge-line edge-two"></div>
+        <div class="edge-line edge-three"></div>
+      </div>
+    </section>
+
+    <section *ngIf="screenState() === 'publisher'" class="surface" data-testid="flow-publisher-page">
+      <div class="surface-header">
+        <div>
+          <h2>{{ translated('Publish') }}</h2>
+          <p>Publication checks cycles first, type compatibility second, and version ownership before deployment.</p>
+        </div>
+        <button data-testid="deploy-flow-button" type="button" [disabled]="!canPublish()">{{ translated('Deploy') }}</button>
+      </div>
+      <div class="ledger-list" data-testid="publication-readiness">
+        <article class="good">
+          <strong>Cycle scan</strong>
+          <span>Clean path from request intake to handoff</span>
+        </article>
+        <article class="watch">
+          <strong>Type review</strong>
+          <span>Decision gate needs one reviewer confirmation</span>
+        </article>
+        <article class="good">
+          <strong>Version check</strong>
+          <span>Draft version is current for this tenant</span>
+        </article>
+        <article class="good">
+          <strong>Marketplace listing</strong>
+          <span>Package metadata is ready for tenant cascade publish</span>
+        </article>
+      </div>
+    </section>
+
+    <section *ngIf="screenState() === 'debug'" class="surface" data-testid="flow-debug-page">
+      <div class="surface-header">
+        <div>
+          <h2>{{ translated('Debug') }}</h2>
+          <p>Test runs show step-by-step outcomes and keep recovery evidence when an external handoff times out.</p>
+        </div>
+        <button data-testid="run-test-button" type="button" [disabled]="!canOperate()">{{ translated('Run test') }}</button>
+      </div>
+      <label>
+        <span>{{ translated('Run name') }}</span>
+        <input data-testid="run-name-input" [ngModel]="runName()" name="runName" (ngModelChange)="setRunName($event)" />
+      </label>
+      <div class="trace-list" data-testid="test-trace-panel">
+        <article *ngFor="let node of nodes" [class]="node.status">
+          <span>{{ node.label }}</span>
+          <strong>{{ node.status === 'ready' ? 'Success' : 'Needs review' }}</strong>
+        </article>
+      </div>
+    </section>
+
+    <aside class="evidence-panel">
+      <h2>{{ translated('Selected node') }}</h2>
+      <p data-testid="selected-node-name"><strong>{{ selected().label }}</strong> handles {{ selected().task }}.</p>
+      <p data-testid="scope-guard-note">Tenant identity is read from trusted request context and is never typed into the canvas.</p>
+      <p data-testid="occ-conflict-error">If two authors publish the same draft, one receives a version conflict and must reload.</p>
+      <p data-testid="timeout-retry-note">Timeouts keep a recovery event so the next worker can retry the operation safely.</p>
+      <div class="mini-map" aria-label="Mini map">
+        <span *ngFor="let node of nodes" [class]="node.status"></span>
+      </div>
+    </aside>
+  </section>
+</main>

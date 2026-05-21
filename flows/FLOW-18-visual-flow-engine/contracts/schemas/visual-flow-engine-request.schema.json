@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-18/visual-flow-engine-request.schema.json",
+  "title": "FLOW-18 Visual Flow Engine Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "flowId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string" },
+    "mode": {
+      "type": "string",
+      "enum": ["Design", "Preview", "Active", "Debug"]
+    },
+    "expectedVersion": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "nodeTypeId", "category", "taskTypeId"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "nodeTypeId": { "type": "string", "minLength": 1 },
+          "category": {
+            "type": "string",
+            "enum": ["trigger", "action", "gate", "transform", "output"]
+          },
+          "taskTypeId": {
+            "type": "string",
+            "enum": ["T617", "T618", "T619", "T620"]
+          },
+          "inputType": { "type": "string" },
+          "outputType": { "type": "string" },
+          "config": { "type": "object", "additionalProperties": true }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "additionalProperties": true,
+        "properties": {
+          "from": { "type": "string", "minLength": 1 },
+          "to": { "type": "string", "minLength": 1 },
+          "sourceOutputType": { "type": "string" },
+          "targetInputType": { "type": "string" }
+        }
+      }
+    },
+    "nodeTypeId": { "type": "string", "minLength": 1 },
+    "category": {
+      "type": "string",
+      "enum": ["trigger", "action", "gate", "transform", "output"]
+    },
+    "schema": { "type": "object", "additionalProperties": true },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "nodeId": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "minLength": 1 },
+    "codeHash": { "type": "string", "minLength": 1 },
+    "targetPath": { "type": "string", "minLength": 1 },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "simulateCapabilityWriteFailure": { "type": "boolean" },
+    "simulateInjectionFailure": { "type": "boolean" }
+  }
+}

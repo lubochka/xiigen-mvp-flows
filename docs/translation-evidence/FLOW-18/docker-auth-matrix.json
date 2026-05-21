@@ -1,0 +1,387 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "generatedAt": "2026-05-21T14:36:08.7669013Z",
+  "pass": true,
+  "total": 14,
+  "passed": 14,
+  "cases": [
+    {
+      "name": "public preview returns 200",
+      "method": "GET",
+      "route": "/api/dynamic/visual-flow-engine/public-preview",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "flow": "FLOW-18",
+        "summary": "Preview a visual flow canvas, node palette, type checks, test traces, and deploy readiness without exposing tenant-private execution data.",
+        "tabs": [
+          "canvas",
+          "node types",
+          "test run",
+          "publish"
+        ]
+      }
+    },
+    {
+      "name": "missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "tenant payload rejected on canvas returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "TENANT_SCOPE_FORBIDDEN",
+        "message": "tenantId is resolved from trusted platform context, never request body."
+      }
+    },
+    {
+      "name": "valid canvas save returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "flow-live",
+        "flowId": "flow-live",
+        "status": "DRAFT",
+        "version": "1",
+        "nodeCount": 4,
+        "edgeCount": 3
+      }
+    },
+    {
+      "name": "idempotent canvas save replay returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "flow-live",
+        "flowId": "flow-live",
+        "status": "DRAFT",
+        "version": "1",
+        "nodeCount": 4,
+        "edgeCount": 3
+      }
+    },
+    {
+      "name": "validation failure returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "VALIDATION_FAILED",
+        "details": [
+          {
+            "field": "nodes",
+            "reason": "At least one node is required."
+          }
+        ]
+      }
+    },
+    {
+      "name": "timeout keeps retry evidence and returns 504",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine",
+      "expectedStatus": 504,
+      "actualStatus": 504,
+      "pass": true,
+      "payload": {
+        "code": "TIMEOUT",
+        "message": "Canvas write timed out before completion.",
+        "retryAfterMs": 5000,
+        "flowId": "flow-timeout"
+      }
+    },
+    {
+      "name": "publish flow returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine/publish",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "flow-live",
+        "flowId": "flow-live",
+        "status": "PUBLISHED",
+        "version": "2",
+        "publishedAt": "2026-05-21T14:36:07.1100339+00:00"
+      }
+    },
+    {
+      "name": "register node type returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine/node-types",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "email-send",
+        "nodeTypeId": "email-send",
+        "status": "REGISTERED",
+        "category": "action",
+        "registeredAt": "2026-05-21T14:36:07.1599866+00:00"
+      }
+    },
+    {
+      "name": "code injection returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine/injections",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "email-send:v1",
+        "nodeId": "email-send",
+        "version": "v1",
+        "status": "INJECTED",
+        "codeHash": "hash-email-send-v1",
+        "injectedAt": "2026-05-21T14:36:07.2036712+00:00"
+      }
+    },
+    {
+      "name": "test run returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/visual-flow-engine/test-runs",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "run-4ff7c2576e297b50",
+        "runId": "run-4ff7c2576e297b50",
+        "flowId": "flow-live",
+        "status": "SUCCESS",
+        "trace": [
+          {
+            "nodeId": "n1",
+            "order": 1,
+            "status": "SUCCESS",
+            "inputType": "json",
+            "outputType": "draft"
+          },
+          {
+            "nodeId": "n2",
+            "order": 2,
+            "status": "SUCCESS",
+            "inputType": "draft",
+            "outputType": "approval"
+          },
+          {
+            "nodeId": "n3",
+            "order": 3,
+            "status": "SUCCESS",
+            "inputType": "approval",
+            "outputType": "registry"
+          },
+          {
+            "nodeId": "n4",
+            "order": 4,
+            "status": "SUCCESS",
+            "inputType": "registry",
+            "outputType": "json"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dashboard returns 200",
+      "method": "GET",
+      "route": "/api/dynamic/visual-flow-engine/dashboard",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "canvases": [
+          {
+            "flow_id": "flow-live",
+            "title": "Live visual flow",
+            "status": "PUBLISHED",
+            "mode": "Active",
+            "nodes": [
+              {
+                "id": "n1",
+                "nodeTypeId": "http-trigger",
+                "category": "trigger",
+                "taskTypeId": "T617",
+                "inputType": "json",
+                "outputType": "draft",
+                "config": {
+                  "returns": "DataProcessResult"
+                }
+              },
+              {
+                "id": "n2",
+                "nodeTypeId": "publish-gate",
+                "category": "gate",
+                "taskTypeId": "T618",
+                "inputType": "draft",
+                "outputType": "approval",
+                "config": {
+                  "returns": "DataProcessResult"
+                }
+              },
+              {
+                "id": "n3",
+                "nodeTypeId": "node-registry",
+                "category": "action",
+                "taskTypeId": "T619",
+                "inputType": "approval",
+                "outputType": "registry",
+                "config": {
+                  "returns": "DataProcessResult"
+                }
+              },
+              {
+                "id": "n4",
+                "nodeTypeId": "code-injector",
+                "category": "output",
+                "taskTypeId": "T620",
+                "inputType": "registry",
+                "outputType": "json",
+                "config": {
+                  "returns": "DataProcessResult"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "from": "n1",
+                "to": "n2",
+                "sourceOutputType": "draft",
+                "targetInputType": "draft"
+              },
+              {
+                "from": "n2",
+                "to": "n3",
+                "sourceOutputType": "approval",
+                "targetInputType": "approval"
+              },
+              {
+                "from": "n3",
+                "to": "n4",
+                "sourceOutputType": "registry",
+                "targetInputType": "registry"
+              }
+            ],
+            "updated_at": "2026-05-21T14:36:07.1100339+00:00",
+            "knowledge_scope": "PRIVATE",
+            "tenant_id": "acme-corp",
+            "published_at": "2026-05-21T14:36:07.1100339+00:00"
+          }
+        ],
+        "nodeTypes": [
+          {
+            "node_type_id": "email-send",
+            "category": "action",
+            "schema": {
+              "type": "object"
+            },
+            "capabilities": [
+              "write",
+              "test"
+            ],
+            "registered_at": "2026-05-21T14:36:07.1599866+00:00",
+            "knowledge_scope": "GLOBAL",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "injectionResults": [
+          {
+            "node_id": "email-send",
+            "version": "v1",
+            "target_path": "src/email-send.ts",
+            "code_hash": "hash-email-send-v1",
+            "status": "INJECTED",
+            "injected_at": "2026-05-21T14:36:07.2036712+00:00",
+            "knowledge_scope": "PRIVATE",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "testRuns": [
+          {
+            "run_id": "run-4ff7c2576e297b50",
+            "flow_id": "flow-live",
+            "status": "SUCCESS",
+            "trace": [
+              {
+                "nodeId": "n1",
+                "order": 1,
+                "status": "SUCCESS",
+                "inputType": "json",
+                "outputType": "draft"
+              },
+              {
+                "nodeId": "n2",
+                "order": 2,
+                "status": "SUCCESS",
+                "inputType": "draft",
+                "outputType": "approval"
+              },
+              {
+                "nodeId": "n3",
+                "order": 3,
+                "status": "SUCCESS",
+                "inputType": "approval",
+                "outputType": "registry"
+              },
+              {
+                "nodeId": "n4",
+                "order": 4,
+                "status": "SUCCESS",
+                "inputType": "registry",
+                "outputType": "json"
+              }
+            ],
+            "created_at": "2026-05-21T14:36:07.2438353+00:00",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "kpis": {
+          "draftFlows": 0,
+          "publishedFlows": 1,
+          "registeredNodeTypes": 1,
+          "successfulTestRuns": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+services:
+  FLOW-18-visual-flow-engine-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Api/Dockerfile
+    ports:
+      - "5317:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

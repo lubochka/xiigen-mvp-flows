@@ -1,0 +1,44 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "generatedAt": "2026-05-21T14:57:21.6863524Z",
+  "pass": true,
+  "checks": [
+    {
+      "name": "no direct provider SDK imports",
+      "count": 0,
+      "expected": "0",
+      "pass": true
+    },
+    {
+      "name": "no free-form tenant id method parameter",
+      "count": 0,
+      "expected": "0",
+      "pass": true
+    },
+    {
+      "name": "rejects tenant scope payload fields",
+      "count": 3,
+      "expected": "guard present",
+      "pass": true
+    },
+    {
+      "name": "service extends MicroserviceBase",
+      "count": 1,
+      "expected": ">=1",
+      "pass": true
+    },
+    {
+      "name": "uses outbox before inter-service events",
+      "count": 14,
+      "expected": ">=1",
+      "pass": true
+    },
+    {
+      "name": "returns DataProcessResult outcomes",
+      "count": 6,
+      "expected": ">=1",
+      "pass": true
+    }
+  ]
+}

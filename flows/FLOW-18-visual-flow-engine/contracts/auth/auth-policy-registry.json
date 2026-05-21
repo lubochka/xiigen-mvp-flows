@@ -1,0 +1,91 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "policies": [
+    {
+      "policyId": "visual-flow-engine-public-preview",
+      "route": "GET /api/dynamic/visual-flow-engine/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/visual-flow-engine/public-preview"
+      ],
+      "bypassReason": "Public visual flow previews are intentionally readable before login."
+    },
+    {
+      "policyId": "visual-flow-engine-save-canvas",
+      "route": "POST /api/dynamic/visual-flow-engine",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "visual-flow-engine-publish-flow",
+      "route": "POST /api/dynamic/visual-flow-engine/publish",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "visual-flow-engine-register-node-type",
+      "route": "POST /api/dynamic/visual-flow-engine/node-types",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "visual-flow-engine-inject-code",
+      "route": "POST /api/dynamic/visual-flow-engine/injections",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "visual-flow-engine-run-test",
+      "route": "POST /api/dynamic/visual-flow-engine/test-runs",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "visual-flow-engine-dashboard",
+      "route": "GET /api/dynamic/visual-flow-engine/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "flow_author",
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

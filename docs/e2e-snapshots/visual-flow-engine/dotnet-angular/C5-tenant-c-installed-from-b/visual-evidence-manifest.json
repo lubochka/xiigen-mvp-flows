@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C5-tenant-c-installed-from-b",
+  "moduleName": "northwind-automation-canvas",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "flow_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=flow_author&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "flow_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=flow_author&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "flow_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=flow_author&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\prompt-approver-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=prompt_approver&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\prompt-approver-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=prompt_approver&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\prompt-approver-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=prompt_approver&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\human-decision-maker-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=human_decision_maker&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\human-decision-maker-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=human_decision_maker&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\human-decision-maker-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=human_decision_maker&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=debug&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=canvas&lang=en&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=publisher&lang=he&module=northwind-automation-canvas"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-automation-canvas\\docs\\e2e-snapshots\\visual-flow-engine\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=debug&lang=en&module=northwind-automation-canvas"
+    }
+  ]
+}

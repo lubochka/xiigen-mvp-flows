@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "generatedAt": "2026-05-21T14:56:24.2798762Z",
+  "pass": true,
+  "runs": [
+    {
+      "repo": "tenant-a--visual-flow-engine",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-a--visual-flow-engine/actions/runs/26233029866",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233029866,
+      "headSha": "1961f08766ebdd1ea1a96b5e4c824f3c3759e25d",
+      "createdAt": "2026-05-21T14:40:19Z"
+    },
+    {
+      "repo": "tenant-a--acme-flow-studio",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-a--acme-flow-studio/actions/runs/26233176384",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233176384,
+      "headSha": "fc764bad2a22e0b1f0e574d142203c91722527f4",
+      "createdAt": "2026-05-21T14:42:53Z"
+    },
+    {
+      "repo": "tenant-b--acme-flow-studio",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-b--acme-flow-studio/actions/runs/26233321095",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233321095,
+      "headSha": "24a04933d7a6abc71d7a05826f624ac10254db46",
+      "createdAt": "2026-05-21T14:45:26Z"
+    },
+    {
+      "repo": "tenant-b--northwind-automation-canvas",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-b--northwind-automation-canvas/actions/runs/26233465463",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233465463,
+      "headSha": "941088fd3eaec30994ec3c47b123d8a05ab5f450",
+      "createdAt": "2026-05-21T14:47:57Z"
+    },
+    {
+      "repo": "tenant-c--northwind-automation-canvas",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-c--northwind-automation-canvas/actions/runs/26233606108",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233606108,
+      "headSha": "4fdadf75c4e98870611e5b5b18d062d0976ffc91",
+      "createdAt": "2026-05-21T14:50:25Z"
+    },
+    {
+      "repo": "tenant-c--tessera-flow-orchestrator",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/lubochka/tenant-c--tessera-flow-orchestrator/actions/runs/26233744180",
+      "workflowName": "FLOW-18 visual flow engine",
+      "databaseId": 26233744180,
+      "headSha": "9d5bdf271bc8be9907e1925c41e7b943508b3111",
+      "createdAt": "2026-05-21T14:52:51Z"
+    }
+  ]
+}

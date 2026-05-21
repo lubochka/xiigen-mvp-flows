@@ -1,0 +1,80 @@
+@Xiigen.Flow.VisualFlowEngine.Api_HostAddress = http://localhost:5317
+
+GET {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+GET {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/api/dynamic/visual-flow-engine/public-preview
+Accept: application/json
+
+###
+
+POST {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/api/dynamic/visual-flow-engine
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer tenant:acme-corp;user:demo
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-gig-acceptance
+
+{
+  "gigId": "gig-demo",
+  "bidId": "bid-demo",
+  "freelancerId": "freelancer-1",
+  "budgetCents": 140000
+}
+
+###
+
+POST {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/api/dynamic/visual-flow-engine/contracts
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer tenant:acme-corp;user:demo
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-contract
+
+{
+  "contractId": "contract-demo",
+  "contractTotalCents": 140000,
+  "milestones": [
+    { "milestoneId": "m1", "amountCents": 90000 },
+    { "milestoneId": "m2", "amountCents": 50000 }
+  ]
+}
+
+###
+
+POST {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/api/dynamic/visual-flow-engine/milestones/dispute
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer tenant:acme-corp;user:demo
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+
+{
+  "contractId": "contract-demo",
+  "milestoneId": "m1",
+  "deliveryId": "delivery-demo",
+  "reason": "Needs review"
+}
+
+###
+
+POST {{Xiigen.Flow.VisualFlowEngine.Api_HostAddress}}/api/dynamic/visual-flow-engine/reviews
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer tenant:acme-corp;user:demo
+X-Tenant-Id: acme-corp
+X-Role: freelancer
+X-Idempotency-Key: demo-review
+
+{
+  "engagementId": "contract-demo",
+  "direction": "FREELANCER_TO_CLIENT",
+  "reviewerId": "freelancer-1",
+  "targetId": "client-1",
+  "rating": 5,
+  "comment": "Clear scope and prompt feedback"
+}

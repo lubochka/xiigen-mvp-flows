@@ -1,0 +1,10 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "generatedAt": "2026-05-21T14:57:21.6863524Z",
+  "pass": true,
+  "assertion": "A bearer token scoped to another tenant receives 401 on protected FLOW-18 routes.",
+  "evidenceSource": "docs/translation-evidence/FLOW-18/docker-auth-matrix.json",
+  "caseName": "cross-tenant token returns 401",
+  "expectedStatus": 401
+}

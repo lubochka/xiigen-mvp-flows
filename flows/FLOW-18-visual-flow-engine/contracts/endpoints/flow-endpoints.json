@@ -1,0 +1,101 @@
+{
+  "flowId": "FLOW-18",
+  "flowSlug": "visual-flow-engine",
+  "endpoints": [
+    {
+      "endpointId": "visual-flow-engine-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/visual-flow-engine/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json",
+      "bypassReason": "public visual flow engine preview"
+    },
+    {
+      "endpointId": "visual-flow-engine-save-canvas",
+      "method": "POST",
+      "path": "/api/dynamic/visual-flow-engine",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/visual-flow-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    },
+    {
+      "endpointId": "visual-flow-engine-publish-flow",
+      "method": "POST",
+      "path": "/api/dynamic/visual-flow-engine/publish",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/visual-flow-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    },
+    {
+      "endpointId": "visual-flow-engine-register-node-type",
+      "method": "POST",
+      "path": "/api/dynamic/visual-flow-engine/node-types",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/visual-flow-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    },
+    {
+      "endpointId": "visual-flow-engine-inject-code",
+      "method": "POST",
+      "path": "/api/dynamic/visual-flow-engine/injections",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/visual-flow-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    },
+    {
+      "endpointId": "visual-flow-engine-run-test",
+      "method": "POST",
+      "path": "/api/dynamic/visual-flow-engine/test-runs",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "flow_author",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/visual-flow-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    },
+    {
+      "endpointId": "visual-flow-engine-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/visual-flow-engine/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "flow_author",
+        "prompt_approver",
+        "human_decision_maker",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/visual-flow-engine-response.schema.json"
+    }
+  ]
+}

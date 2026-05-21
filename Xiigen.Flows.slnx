@@ -126,4 +126,11 @@
     <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Infrastructure/Xiigen.Flow.FreelancerMarketplace.Infrastructure.csproj" />
     <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Tests/Xiigen.Flow.FreelancerMarketplace.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-18-visual-flow-engine/" />
+  <Folder Name="/flows/FLOW-18-visual-flow-engine/server/">
+    <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Api/Xiigen.Flow.VisualFlowEngine.Api.csproj" />
+    <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Application/Xiigen.Flow.VisualFlowEngine.Application.csproj" />
+    <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Infrastructure/Xiigen.Flow.VisualFlowEngine.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Tests/Xiigen.Flow.VisualFlowEngine.Tests.csproj" />
+  </Folder>
 </Solution>
