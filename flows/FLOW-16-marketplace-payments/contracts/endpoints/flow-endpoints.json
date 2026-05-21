@@ -1,0 +1,101 @@
+{
+  "flowId": "FLOW-16",
+  "flowSlug": "marketplace-payments",
+  "endpoints": [
+    {
+      "endpointId": "marketplace-payments-checkout",
+      "method": "POST",
+      "path": "/api/dynamic/marketplace-payments",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "requestSchema": "contracts/schemas/marketplace-payments-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json",
+      "bypassReason": "guest checkout is intentionally available before login"
+    },
+    {
+      "endpointId": "marketplace-payments-escrow-release",
+      "method": "POST",
+      "path": "/api/dynamic/marketplace-payments/escrow/release",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/marketplace-payments-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json"
+    },
+    {
+      "endpointId": "marketplace-payments-escrow-dispute",
+      "method": "POST",
+      "path": "/api/dynamic/marketplace-payments/escrow/dispute",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/marketplace-payments-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json"
+    },
+    {
+      "endpointId": "marketplace-payments-payment-reverse",
+      "method": "POST",
+      "path": "/api/dynamic/marketplace-payments/escrow/reverse",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/marketplace-payments-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json"
+    },
+    {
+      "endpointId": "marketplace-payments-payout-write",
+      "method": "POST",
+      "path": "/api/dynamic/marketplace-payments/payout",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/marketplace-payments-request.schema.json",
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json"
+    },
+    {
+      "endpointId": "marketplace-payments-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/marketplace-payments/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json"
+    },
+    {
+      "endpointId": "marketplace-payments-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/marketplace-payments/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/marketplace-payments-response.schema.json",
+      "bypassReason": "public marketplace payment preview"
+    }
+  ]
+}

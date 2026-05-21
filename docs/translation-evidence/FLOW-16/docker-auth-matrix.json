@@ -1,0 +1,78 @@
+{
+    "flowId":  "FLOW-16",
+    "layer":  "live-auth-and-http-contracts",
+    "generatedAt":  "2026-05-21T11:14:58.7954137Z",
+    "pass":  true,
+    "cases":  [
+                  {
+                      "name":  "public-preview",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"flow\":\"FLOW-16\",\"summary\":\"Preview checkout, escrow, refunds, split payouts, and platform revenue without private payment data.\",\"tabs\":[\"checkout\",\"escrow\",\"refunds\",\"payouts\",\"revenue\"]}"
+                  },
+                  {
+                      "name":  "missing-token",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role",
+                      "expected":  403,
+                      "actual":  403,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                  },
+                  {
+                      "name":  "cross-tenant-token",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "valid-checkout",
+                      "expected":  201,
+                      "actual":  201,
+                      "pass":  true,
+                      "body":  "{\"id\":\"order-2f62ffae0e4f3ebd\",\"cartId\":\"api-cart\",\"escrowId\":\"escrow-51e60c70d2468adb\",\"status\":\"CONFIRMED\",\"version\":\"1\",\"totalAmountCents\":10000,\"platformFeeCents\":290,\"sellerAmountCents\":9710,\"feeSplitStatus\":\"BALANCED\",\"escrowStatus\":\"HELD\"}"
+                  },
+                  {
+                      "name":  "idempotency-replay",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"id\":\"order-2f62ffae0e4f3ebd\",\"cartId\":\"api-cart\",\"escrowId\":\"escrow-51e60c70d2468adb\",\"status\":\"CONFIRMED\",\"version\":\"1\",\"totalAmountCents\":10000,\"platformFeeCents\":290,\"sellerAmountCents\":9710,\"feeSplitStatus\":\"BALANCED\",\"escrowStatus\":\"HELD\"}"
+                  },
+                  {
+                      "name":  "validation-failure",
+                      "expected":  400,
+                      "actual":  400,
+                      "pass":  true,
+                      "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"cartId\",\"reason\":\"Value is required.\"},{\"field\":\"itemId\",\"reason\":\"Value is required.\"},{\"field\":\"sellerId\",\"reason\":\"Value is required.\"},{\"field\":\"totalAmountCents\",\"reason\":\"Amount must be greater than zero.\"},{\"field\":\"quantity\",\"reason\":\"Quantity must be greater than zero.\"}]}"
+                  },
+                  {
+                      "name":  "timeout-retained",
+                      "expected":  504,
+                      "actual":  504,
+                      "pass":  true,
+                      "body":  "{\"code\":\"TIMEOUT\",\"message\":\"Payment processing timed out before confirmation.\",\"retryAfterMs\":5000,\"cartId\":\"api-timeout\"}"
+                  },
+                  {
+                      "name":  "escrow-dispute",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"escrowId\":\"escrow-api\",\"orderId\":\"order-api\",\"status\":\"DISPUTED\",\"sellerPayoutFrozen\":true,\"sellerNotified\":true}"
+                  },
+                  {
+                      "name":  "payout-write",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"orderId\":\"order-api\",\"status\":\"PAYOUT_WRITTEN\",\"payoutVaultRef\":\"vault-ref:acme-corp:seller-1\",\"version\":\"1\"}"
+                  }
+              ]
+}

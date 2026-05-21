@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "acme-payment-control",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\public-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\public-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\public-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=admin&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=checkout&lang=en&module=acme-payment-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=escrow&lang=he&module=acme-payment-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-payment-control\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=admin&lang=en&module=acme-payment-control"
+    }
+  ]
+}

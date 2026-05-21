@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-16",
+  "flowSlug": "marketplace-payments",
+  "api": {
+    "localUrl": "http://127.0.0.1:5316",
+    "containerUrl": "http://127.0.0.1:5316"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4316",
+    "evidencePort": 4316
+  }
+}

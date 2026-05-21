@@ -1,0 +1,93 @@
+{
+  "flowId": "FLOW-16",
+  "flowSlug": "marketplace-payments",
+  "policies": [
+    {
+      "policyId": "marketplace-payments-public-preview",
+      "route": "GET /api/dynamic/marketplace-payments/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/marketplace-payments/public-preview"
+      ],
+      "bypassReason": "Public marketplace payment previews are intentionally readable before login."
+    },
+    {
+      "policyId": "marketplace-payments-checkout",
+      "route": "POST /api/dynamic/marketplace-payments",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/marketplace-payments"
+      ],
+      "bypassReason": "Guest checkout is intentionally available before login."
+    },
+    {
+      "policyId": "marketplace-payments-escrow-release",
+      "route": "POST /api/dynamic/marketplace-payments/escrow/release",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "marketplace-payments-escrow-dispute",
+      "route": "POST /api/dynamic/marketplace-payments/escrow/dispute",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "marketplace-payments-payment-reverse",
+      "route": "POST /api/dynamic/marketplace-payments/escrow/reverse",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "marketplace-payments-payout-write",
+      "route": "POST /api/dynamic/marketplace-payments/payout",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "marketplace-payments-dashboard",
+      "route": "GET /api/dynamic/marketplace-payments/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

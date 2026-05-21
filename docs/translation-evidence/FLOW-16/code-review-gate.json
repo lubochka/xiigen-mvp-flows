@@ -1,0 +1,50 @@
+{
+    "flowId":  "FLOW-16",
+    "evidenceType":  "code-review-gate",
+    "generatedAt":  "2026-05-21T11:35:30.9469514Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "command":  "rg -n \"Stripe|RabbitMQ|Elastic.Clients|StackExchange.Redis|BCrypt|System.IdentityModel\" flows/FLOW-16-marketplace-payments/server -g *.cs",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  ""
+                   },
+                   {
+                       "name":  "no-free-tenant-id-service-parameters",
+                       "command":  "rg -n \"[(,]\\s*string\\s+tenantId|[(,]\\s*string\\?\\s+tenantId|[(,]\\s*TenantContext\\s+tenant\" flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Application -g *.cs",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  ""
+                   },
+                   {
+                       "name":  "no-business-throws",
+                       "command":  "rg -n \"throw new\" flows/FLOW-16-marketplace-payments/server -g *.cs",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  ""
+                   },
+                   {
+                       "name":  "microservicebase-used",
+                       "command":  "rg -n \"MicroserviceBase\u003cMarketplacePaymentsService\u003e\" flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Application/MarketplacePaymentsService.cs",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  "12:public sealed class MarketplacePaymentsService : MicroserviceBase\u003cMarketplacePaymentsService\u003e"
+                   },
+                   {
+                       "name":  "outbox-after-audit-markers",
+                       "command":  "rg -n \"StoreAuditAsync|AppendAsync\\(CreateEvent\" flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Application/MarketplacePaymentsService.cs",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  "88:            await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.TimeoutRetainedEvent, cartId, timeoutBody), cancellationToken).ConfigureAwait(false);\n110:                await StoreAuditAsync(MarketplacePaymentsConstants.CheckoutAudits, $\"checkout-forbidden:{cartId}\", \"CHECKOUT_FORBIDDEN\", rejected, cancellationToken).ConfigureAwait(false);\n111:                await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.CheckoutRejectedEvent, cartId, rejected), cancellationToken).ConfigureAwait(false);\n193:            await StoreAuditAsync(MarketplacePaymentsConstants.CheckoutAudits, $\"checkout:{cartId}\", \"CHECKOUT_RESERVED\", checkoutAudit, cancellationToken).ConfigureAwait(false);\n208:            await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.CheckoutReservedEvent, cartId, response), cancellationToken).ConfigureAwait(false);\n209:            await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.MarketplaceOrderConfirmedEvent, Convert.ToString(payment[\"orderId\"], CultureInfo.InvariantCulture)!, response), cancellationToken).ConfigureAwait(false);\n266:        await StoreAuditAsync(MarketplacePaymentsConstants.EscrowAudits, $\"release:{escrowId}:{Guid.NewGuid():N}\", \"ESCROW_RELEASED\", body, cancellationToken).ConfigureAwait(false);\n274:        await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.EscrowReleasedEvent, escrowId, response), cancellationToken).ConfigureAwait(false);\n315:        await StoreAuditAsync(MarketplacePaymentsConstants.EscrowAudits, $\"dispute:{escrowId}:{Guid.NewGuid():N}\", \"ESCROW_DISPUTED\", body, cancellationToken).ConfigureAwait(false);\n325:        await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.PayoutHoldNotifiedEvent, sellerId, response), cancellationToken).ConfigureAwait(false);\n326:        await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.EscrowDisputedEvent, escrowId, response), cancellationToken).ConfigureAwait(false);\n356:        await StoreAuditAsync(MarketplacePaymentsConstants.EscrowAudits, $\"reverse:{orderId}:{Guid.NewGuid():N}\", \"PAYMENT_REVERSED\", new Dictionary\u003cstring, object?\u003e { [\"steps\"] = MarketplacePaymentsConstants.CompensationStepNames }, cancellationToken).ConfigureAwait(false);\n365:        await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.PaymentReversedEvent, orderId, response), cancellationToken).ConfigureAwait(false);\n418:        await StoreAuditAsync(MarketplacePaymentsConstants.PayoutAudits, $\"payout:{orderId}:{Guid.NewGuid():N}\", \"PAYOUT_WRITTEN\", body, cancellationToken).ConfigureAwait(false);\n426:        await _outbox.AppendAsync(CreateEvent(MarketplacePaymentsConstants.PayoutCompletedEvent, orderId, response), cancellationToken).ConfigureAwait(false);\n518:        await StoreAuditAsync(MarketplacePaymentsConstants.PaymentAudits, $\"payment:{orderId}:{Guid.NewGuid():N}\", \"PAYMENT_CAPTURED\", paymentBody, cancellationToken).ConfigureAwait(false);\n519:        await StoreAuditAsync(MarketplacePaymentsConstants.EscrowAudits, $\"escrow-held:{escrowId}:{Guid.NewGuid():N}\", \"ESCROW_HELD\", escrowBody, cancellationToken).ConfigureAwait(false);\n574:    private async Task StoreAuditAsync(string collection, string id, string auditType, IReadOnlyDictionary\u003cstring, object?\u003e body, CancellationToken cancellationToken)"
+                   },
+                   {
+                       "name":  "no-internal-language-in-angular-surface",
+                       "command":  "rg -n \"\\bBFA\\b|\\bDNA-[1-9]\\b|AF[- ]station|arbiter|FREEDOM config|MACHINE code|DataProcessResult|ENGINE_INTERNAL|\\bT[0-9]{3}\\b|\\bCF-[0-9]{3}\\b\" flows/FLOW-16-marketplace-payments/client/angular/src/app/app.ts flows/FLOW-16-marketplace-payments/client/angular/src/app/app.html",
+                       "exitCode":  0,
+                       "pass":  true,
+                       "output":  ""
+                   }
+               ]
+}

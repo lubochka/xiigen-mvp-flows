@@ -1,0 +1,44 @@
+{
+    "flowId":  "FLOW-16",
+    "expectedPerPoint":  30,
+    "expectedTotal":  210,
+    "actualTotal":  210,
+    "pass":  true,
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  30,
+                              "manifest":  true
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  30,
+                              "manifest":  true
+                          }
+                      ]
+}

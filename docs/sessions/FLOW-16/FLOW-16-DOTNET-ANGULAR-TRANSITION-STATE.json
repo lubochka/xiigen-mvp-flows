@@ -1,0 +1,32 @@
+{
+    "flowId":  "FLOW-16",
+    "flowSlug":  "marketplace-payments",
+    "portabilityTier":  "Tier D",
+    "status":  "GREEN",
+    "generatedAt":  "2026-05-21T11:36:12.9649442Z",
+    "phases":  {
+                   "functionalCoverage":  "PASS",
+                   "dotnetUnitTests":  "PASS",
+                   "angularUnitTests":  "PASS",
+                   "angularBuild":  "PASS",
+                   "liveAuthMatrix":  "PASS",
+                   "visualEvidence":  "PASS",
+                   "tenantCascade":  "PASS",
+                   "githubActions":  "PASS",
+                   "packageReadback":  "PASS",
+                   "codeReview":  "PASS",
+                   "qaReview":  "APPROVED"
+               },
+    "evidence":  {
+                     "visualCounts":  "docs/translation-evidence/FLOW-16/visual-counts.json",
+                     "liveAuth":  "docs/translation-evidence/FLOW-16/docker-auth-matrix.json",
+                     "githubActions":  "docs/translation-evidence/FLOW-16/github-actions-cascade.json",
+                     "packages":  "docs/translation-evidence/FLOW-16/package-readback.json",
+                     "cascade":  "docs/translation-evidence/FLOW-16/layer8-cascade-evidence.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-16/code-review-gate.json",
+                     "crossTenantJwt":  "docs/translation-evidence/FLOW-16/cross-tenant-jwt-isolation.json"
+                 },
+    "noTechnicalDebt":  true,
+    "missingTests":  0,
+    "futurePhase2Items":  0
+}

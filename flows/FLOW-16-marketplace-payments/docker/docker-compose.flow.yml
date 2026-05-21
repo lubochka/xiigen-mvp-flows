@@ -1,0 +1,9 @@
+services:
+  FLOW-16-marketplace-payments-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Api/Dockerfile
+    ports:
+      - "5316:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,117 @@
+<main class="marketplace-payments-shell" data-testid="marketplace-payments-page" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-MarketplacePayments">
+    <div>
+      <p class="eyebrow">{{ translated('Marketplace Payments') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Checkout, escrow, refunds, split payouts, and revenue review stay in one tenant-safe payment surface.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ canOperate() ? 'Open payment actions' : 'Preview only' }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Marketplace payment controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Payment screens">
+      <button type="button" [class.active]="screenState() === 'checkout'" (click)="setScreenState('checkout')">{{ translated('Checkout') }}</button>
+      <button type="button" [class.active]="screenState() === 'escrow'" (click)="setScreenState('escrow')">{{ translated('Escrow') }}</button>
+      <button type="button" [class.active]="screenState() === 'admin'" (click)="setScreenState('admin')">{{ translated('Admin review') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section class="dashboard" data-testid="payment-summary">
+    <article class="metric-card">
+      <span>Checkout state</span>
+      <strong>Ready</strong>
+      <p>Buyer ownership is checked before the cart lock and inventory hold are created.</p>
+    </article>
+    <article class="metric-card">
+      <span>Split status</span>
+      <strong>Balanced</strong>
+      <p>Platform share and seller share always add up to the captured amount.</p>
+    </article>
+    <article class="metric-card">
+      <span>Escrow state</span>
+      <strong>Held</strong>
+      <p>Funds stay held until release, dispute, refund, or reversal.</p>
+    </article>
+    <article class="metric-card">
+      <span>Seller payout</span>
+      <strong>Vault ref only</strong>
+      <p>Bank details stay outside the module and only a payout reference is stored.</p>
+    </article>
+  </section>
+
+  <section class="payment-grid">
+    <form *ngIf="screenState() === 'checkout'" class="surface" data-testid="checkout-page">
+      <h2>{{ translated('Checkout') }}</h2>
+      <p>Guest and signed-in checkout use the same safety checks without exposing private tenant controls.</p>
+      <label>
+        <span>{{ translated('Cart total') }}</span>
+        <input data-testid="cart-total-input" type="number" [ngModel]="cartTotal()" name="cartTotal" (ngModelChange)="setCartTotal($event)" />
+      </label>
+      <label>
+        <span>{{ translated('Card ending') }}</span>
+        <input data-testid="card-last4-input" [ngModel]="cardLast4()" name="cardLast4" readonly />
+      </label>
+      <div class="ledger-list" data-testid="checkout-ledger">
+        <article *ngFor="let row of checkoutRows" [class]="row.tone">
+          <strong>{{ row.label }}</strong>
+          <span>{{ row.value }}</span>
+        </article>
+      </div>
+      <button data-testid="checkout-submit-button" type="button">Confirm secure checkout</button>
+    </form>
+
+    <section *ngIf="screenState() === 'escrow'" class="surface" data-testid="escrow-dashboard">
+      <h2>{{ translated('Escrow') }}</h2>
+      <p>Release and dispute actions preserve the order record and keep the seller payout synchronized.</p>
+      <div class="escrow-card" data-testid="held-escrow-card">
+        <strong>Order MP-1042</strong>
+        <span>Held for seller-1</span>
+        <em>$124.29 seller share after platform fee</em>
+      </div>
+      <label>
+        <span>Dispute reason</span>
+        <input data-testid="dispute-reason-input" [ngModel]="disputeReason()" name="disputeReason" (ngModelChange)="setDisputeReason($event)" />
+      </label>
+      <div class="action-row">
+        <button data-testid="release-funds-button" type="button" [disabled]="!canRelease()">{{ translated('Release funds') }}</button>
+        <button data-testid="open-dispute-button" type="button" [disabled]="!canOperate()">{{ translated('Open dispute') }}</button>
+      </div>
+    </section>
+
+    <section *ngIf="screenState() === 'admin'" class="surface" data-testid="refund-queue">
+      <h2>{{ translated('Refund queue') }}</h2>
+      <p>Refunds and reversals are reviewed with clear compensation steps and no hidden deletion of order state.</p>
+      <div class="ledger-list" data-testid="platform-revenue-dashboard">
+        <article *ngFor="let row of revenueRows" [class]="row.tone">
+          <strong>{{ row.label }}</strong>
+          <span>{{ row.value }}</span>
+        </article>
+      </div>
+      <button data-testid="write-payout-button" type="button" [disabled]="!canPayout()">{{ translated('Write payout') }}</button>
+    </section>
+
+    <aside class="evidence-panel">
+      <h2>Safety evidence</h2>
+      <p data-testid="scope-guard-note">The payment module reads tenant identity from the trusted request context, never from a browser field.</p>
+      <p data-testid="occ-conflict-error">If two checkouts reserve the same item at once, one wins and the other sees the current version.</p>
+      <p data-testid="timeout-retry-note">Payment timeouts keep a recovery record so the operation can be retried safely.</p>
+    </aside>
+  </section>
+</main>

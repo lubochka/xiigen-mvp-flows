@@ -1,0 +1,48 @@
+{
+    "flowId":  "FLOW-16",
+    "generatedAt":  "2026-05-21T11:43:02.4232070Z",
+    "pass":  true,
+    "expectedPackages":  8,
+    "packages":  [
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Application.0.1.1.nupkg",
+                         "bytes":  27699,
+                         "sha256":  "F40C8A0ECB3B2E29104225D80F64BD7B291F2A54AC521A941D4E46B4B422444C"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Application.0.1.2.nupkg",
+                         "bytes":  27699,
+                         "sha256":  "562A2996753880362E5FB1D775531B75EFD6B4B42AC116C6617931CFD8B0FB15"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Application.0.1.3.nupkg",
+                         "bytes":  27700,
+                         "sha256":  "FCE07E9688D02B2409691476B7E6C31AA6358773EFAEBA31B2CB18C152D36FBA"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Application.0.1.4.nupkg",
+                         "bytes":  27698,
+                         "sha256":  "07A1F81A18C0535AFE06BACF208A054941A9E057E26B2621044B2C6E866ED824"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Infrastructure.0.1.1.nupkg",
+                         "bytes":  4088,
+                         "sha256":  "5E1ADA50FF5B7D56752D2D349E1CD2AD5C7FE03521B570FB89BFFB7F3A0F4DC4"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Infrastructure.0.1.2.nupkg",
+                         "bytes":  4089,
+                         "sha256":  "92FA9D54B054555A2F13CA7D384FB7548D7D97132FE4AB027A88A1420FDF7E36"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Infrastructure.0.1.3.nupkg",
+                         "bytes":  4087,
+                         "sha256":  "93C90643B37A88466C3FF1B57544E589916179D8703224EAF1680306207644D5"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.MarketplacePayments.Infrastructure.0.1.4.nupkg",
+                         "bytes":  4089,
+                         "sha256":  "5DED6881B82B06A484449E03C738F3DC63F33CCBA559CD008557C46BB650E88D"
+                     }
+                 ]
+}

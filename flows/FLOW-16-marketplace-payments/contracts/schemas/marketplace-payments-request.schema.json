@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-16/marketplace-payments-request.schema.json",
+  "title": "FLOW-16 Marketplace Payments Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "cartId": { "type": "string", "minLength": 1 },
+    "itemId": { "type": "string", "minLength": 1 },
+    "sellerId": { "type": "string", "minLength": 1 },
+    "buyerTenantId": { "type": "string", "minLength": 1 },
+    "totalAmountCents": { "type": "integer", "minimum": 1 },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "cardNumber": { "type": "string", "minLength": 4 },
+    "escrowId": { "type": "string", "minLength": 1 },
+    "orderId": { "type": "string", "minLength": 1 },
+    "sellerAmountCents": { "type": "integer", "minimum": 1 },
+    "reason": { "type": "string" },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "fraudHold": { "type": "boolean" }
+  }
+}

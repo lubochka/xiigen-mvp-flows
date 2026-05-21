@@ -1,0 +1,55 @@
+{
+    "flowId":  "FLOW-16",
+    "generatedAt":  "2026-05-21T11:33:55.7705201Z",
+    "pass":  true,
+    "runs":  [
+                 {
+                     "repo":  "tenant-a--marketplace-payments",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--marketplace-payments/actions/runs/26222671788",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26222671788
+                 },
+                 {
+                     "repo":  "tenant-a--acme-payment-control",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--acme-payment-control/actions/runs/26222777745",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26222777745
+                 },
+                 {
+                     "repo":  "tenant-b--acme-payment-control",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--acme-payment-control/actions/runs/26222878035",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26222878035
+                 },
+                 {
+                     "repo":  "tenant-b--northwind-escrow-ledger",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--northwind-escrow-ledger/actions/runs/26222979858",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26222979858
+                 },
+                 {
+                     "repo":  "tenant-c--northwind-escrow-ledger",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--northwind-escrow-ledger/actions/runs/26223104847",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26223104847
+                 },
+                 {
+                     "repo":  "tenant-c--tessera-payment-trust",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tessera-payment-trust/actions/runs/26223213689",
+                     "workflowName":  "FLOW-16 Marketplace Payments",
+                     "runId":  26223213689
+                 }
+             ]
+}

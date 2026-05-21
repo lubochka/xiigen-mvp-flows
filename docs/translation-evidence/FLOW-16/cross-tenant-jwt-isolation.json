@@ -1,0 +1,19 @@
+{
+    "flowId":  "FLOW-16",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "cross-tenant-token-401",
+                       "expected":  401,
+                       "actual":  401,
+                       "evidenceFile":  "docker-auth-matrix.json",
+                       "case":  "cross-tenant-token"
+                   },
+                   {
+                       "name":  "tenant-cascade-repos",
+                       "expected":  "tenant A -\u003e tenant B -\u003e tenant C",
+                       "actual":  "six tenant repositories pushed and CI-green",
+                       "evidenceFile":  "layer8-cascade-evidence.json"
+                   }
+               ]
+}

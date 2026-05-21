@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-16/marketplace-payments-response.schema.json",
+  "title": "FLOW-16 Marketplace Payments Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "cartId": { "type": "string" },
+    "orderId": { "type": "string" },
+    "escrowId": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "totalAmountCents": { "type": "integer" },
+    "platformFeeCents": { "type": "integer" },
+    "sellerAmountCents": { "type": "integer" },
+    "feeSplitStatus": { "type": "string" },
+    "escrowStatus": { "type": "string" },
+    "sellerPayoutFrozen": { "type": "boolean" },
+    "sellerNotified": { "type": "boolean" },
+    "payoutVaultRef": { "type": "string" },
+    "retryAfterMs": { "type": "integer" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

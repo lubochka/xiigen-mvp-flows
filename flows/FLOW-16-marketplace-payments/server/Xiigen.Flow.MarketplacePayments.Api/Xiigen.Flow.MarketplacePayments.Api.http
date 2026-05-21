@@ -1,0 +1,69 @@
+@Xiigen.Flow.MarketplacePayments.Api_HostAddress = http://localhost:5316
+
+GET {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/api/dynamic/marketplace-payments/public-preview
+
+###
+
+POST {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/api/dynamic/marketplace-payments
+X-Tenant-Id: acme-corp
+X-Role: anonymous
+X-Idempotency-Key: demo-checkout
+Content-Type: application/json
+
+{
+  "cartId": "cart-demo",
+  "itemId": "item-demo",
+  "sellerId": "seller-1",
+  "totalAmountCents": 10000,
+  "quantity": 1,
+  "cardNumber": "4242424242424242"
+}
+
+###
+
+POST {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/api/dynamic/marketplace-payments/escrow/release
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-release
+Content-Type: application/json
+
+{
+  "orderId": "order-demo",
+  "escrowId": "escrow-demo"
+}
+
+###
+
+POST {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/api/dynamic/marketplace-payments/escrow/dispute
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+Content-Type: application/json
+
+{
+  "orderId": "order-demo",
+  "escrowId": "escrow-demo",
+  "sellerId": "seller-1",
+  "reason": "not-delivered"
+}
+
+###
+
+POST {{Xiigen.Flow.MarketplacePayments.Api_HostAddress}}/api/dynamic/marketplace-payments/payout
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: freelancer
+X-Idempotency-Key: demo-payout
+Content-Type: application/json
+
+{
+  "orderId": "order-demo",
+  "escrowId": "escrow-demo",
+  "sellerId": "seller-1",
+  "sellerAmountCents": 9700
+}

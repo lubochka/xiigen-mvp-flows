@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C1-tenant-a-installed",
+  "moduleName": "marketplace-payments",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=anonymous&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\public-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\public-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\public-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=public_visitor&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_user&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=tenant_admin&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=referral_user&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=freelancer&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=business_partner&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=event_organiser&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=platform_admin&state=admin&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=checkout&lang=en&module=marketplace-payments"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=escrow&lang=he&module=marketplace-payments"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--marketplace-payments\\docs\\e2e-snapshots\\marketplace-payments\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4316/?role=platform_support&state=admin&lang=en&module=marketplace-payments"
+    }
+  ]
+}
