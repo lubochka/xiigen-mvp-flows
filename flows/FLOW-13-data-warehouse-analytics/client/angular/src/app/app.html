@@ -1,0 +1,127 @@
+<main class="data-warehouse-analytics-shell" data-testid="page-data-warehouse-analytics" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-datawarehouseanalytics">
+    <div>
+      <p class="eyebrow">{{ translated('Data Warehouse Analytics') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Govern warehouse plans, ingest events, run tenant-safe queries, and keep quality evidence visible before analytics leave the source tenant.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ roleCta() }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Data Warehouse Analytics controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Data Warehouse Analytics states">
+      <button type="button" [class.active]="screenState() === 'dashboard'" (click)="setScreenState('dashboard')">{{ translated('Dashboard') }}</button>
+      <button type="button" [class.active]="screenState() === 'ingest'" (click)="setScreenState('ingest')">{{ translated('Ingest event') }}</button>
+      <button type="button" [class.active]="screenState() === 'plan'" (click)="setScreenState('plan')">{{ translated('Warehouse plan') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'dashboard'" class="dashboard" data-testid="warehouse-dashboard-page">
+    <article class="metric-card" data-testid="query-result-card">
+      <span>{{ translated('Query result') }}</span>
+      <strong>{{ querySummary() }}</strong>
+      <p>Query output is capped by platform policy and scoped to the active tenant.</p>
+    </article>
+    <article class="metric-card" *ngFor="let metric of kpis">
+      <span>{{ metric.label }}</span>
+      <strong>{{ metric.value }}</strong>
+      <p>{{ metric.detail }}</p>
+    </article>
+    <section class="metric-panel" data-testid="metric-facts-list">
+      <header>
+        <h2>Recent metric facts</h2>
+        <p>Facts are derived from stored events and remain readable without exposing raw source records.</p>
+      </header>
+      <table>
+        <thead>
+          <tr><th>Source</th><th>Metric</th><th>Value</th><th>Freshness</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fact of metricFacts">
+            <td>{{ fact.source }}</td>
+            <td>{{ fact.metric }}</td>
+            <td>{{ fact.value }}</td>
+            <td>{{ fact.freshness }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="quality-panel" data-testid="quality-check-panel">
+      <h2>{{ translated('Quality check') }}</h2>
+      <p data-testid="task-type-coverage">Twenty processing steps are covered by the warehouse plan.</p>
+      <p data-testid="event-schema-count">Sixteen event schemas are mapped before publication.</p>
+      <p>Lineage, freshness, aggregation, retention, and export checks are current.</p>
+    </section>
+  </section>
+
+  <section *ngIf="screenState() === 'ingest'" class="ingest-layout" data-testid="event-ingestion-page">
+    <form class="surface" data-testid="event-ingestion-form">
+      <h2>{{ translated('Ingest event') }}</h2>
+      <label>
+        <span>{{ translated('Source flow') }}</span>
+        <input data-testid="source-flow-input" [ngModel]="sourceFlowId()" name="sourceFlowId" (ngModelChange)="setSourceFlowId($event)" />
+      </label>
+      <label>
+        <span>{{ translated('Event type') }}</span>
+        <input data-testid="event-type-input" [ngModel]="eventType()" name="eventType" (ngModelChange)="setEventType($event)" />
+      </label>
+      <label>
+        <span>{{ translated('Metric value') }}</span>
+        <input data-testid="metric-value-input" type="number" [ngModel]="metricValue()" name="metricValue" (ngModelChange)="setMetricValue($event)" />
+      </label>
+      <div class="form-error" data-testid="ingest-error">{{ ingestStatus() }}</div>
+      <button data-testid="ingest-button" type="button">Store event and publish update</button>
+    </form>
+    <article class="surface lineage-summary">
+      <span>Lineage preview</span>
+      <h2>{{ sourceFlowId() }} / {{ eventType() }}</h2>
+      <p>Ingested records are stored first, then metric facts and publication events are written from the persisted record.</p>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'plan'" class="plan-layout" data-testid="warehouse-plan-page">
+    <form class="surface" data-testid="warehouse-plan-form">
+      <h2>{{ translated('Publish warehouse plan') }}</h2>
+      <label>
+        <span>Plan identifier</span>
+        <input data-testid="plan-id-input" value="tenant-wide-warehouse" />
+      </label>
+      <label>
+        <span>Warehouse zone</span>
+        <input data-testid="warehouse-zone-input" value="analytics-primary" />
+      </label>
+      <label>
+        <span>Retention days</span>
+        <input data-testid="retention-days-input" type="number" value="365" />
+      </label>
+      <div class="form-error" data-testid="form-error">Every step needs one owner and one responsibility before publication.</div>
+      <div class="conflict" data-testid="occ-conflict-error">If another operator publishes first, this screen shows the current version and asks for a fresh review.</div>
+      <button type="button">Store plan and publish event</button>
+    </form>
+    <div class="plan-grid" data-testid="event-schema-list">
+      <article class="plan-card" *ngFor="let step of pipelineSteps">
+        <span>{{ step.status }}</span>
+        <h2>{{ step.name }}</h2>
+        <strong>{{ step.owner }}</strong>
+        <p>Single responsibility, tenant-scoped storage, and quality evidence are required before the next step runs.</p>
+      </article>
+    </div>
+  </section>
+</main>

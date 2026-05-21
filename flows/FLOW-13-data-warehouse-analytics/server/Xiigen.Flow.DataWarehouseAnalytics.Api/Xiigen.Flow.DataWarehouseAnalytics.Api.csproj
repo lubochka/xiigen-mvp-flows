@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-13-data-warehouse-analytics</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.DataWarehouseAnalytics.Application\Xiigen.Flow.DataWarehouseAnalytics.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

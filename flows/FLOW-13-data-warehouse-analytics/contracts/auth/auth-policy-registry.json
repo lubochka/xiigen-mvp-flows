@@ -1,0 +1,88 @@
+{
+  "flowId": "FLOW-13",
+  "flowSlug": "data-warehouse-analytics",
+  "policies": [
+    {
+      "policyId": "data-warehouse-analytics-public-preview",
+      "route": "GET /api/dynamic/data-warehouse-analytics/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/data-warehouse-analytics/public-preview"
+      ],
+      "bypassReason": "Public marketplace previews are intentionally readable before login."
+    },
+    {
+      "policyId": "data-warehouse-analytics-plan-publish",
+      "route": "POST /api/dynamic/data-warehouse-analytics",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "data-warehouse-analytics-ingest",
+      "route": "POST /api/dynamic/data-warehouse-analytics/ingest",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "data-warehouse-analytics-query",
+      "route": "POST /api/dynamic/data-warehouse-analytics/query",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "data-warehouse-analytics-quality-check",
+      "route": "POST /api/dynamic/data-warehouse-analytics/quality-check",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "data-warehouse-analytics-dashboard",
+      "route": "GET /api/dynamic/data-warehouse-analytics/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+@Xiigen.Flow.DataWarehouseAnalytics.Api_HostAddress = http://localhost:5313
+
+GET {{Xiigen.Flow.DataWarehouseAnalytics.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.DataWarehouseAnalytics.Api_HostAddress}}/api/dynamic/data-warehouse-analytics/public-preview
+
+###
+
+POST {{Xiigen.Flow.DataWarehouseAnalytics.Api_HostAddress}}/api/dynamic/data-warehouse-analytics
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-plan
+Content-Type: application/json
+
+{
+  "planId": "warehouse-core",
+  "warehouseZone": "analytics-core",
+  "steps": [
+    { "taskType": "T169", "responsibility": "Warehouse ingestion orchestration", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T170", "responsibility": "Metric aggregation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T171", "responsibility": "Query execution", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T172", "responsibility": "Dashboard generation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T173", "responsibility": "Report scheduling", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T174", "responsibility": "Retention enforcement", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T175", "responsibility": "Lineage tracking", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T176", "responsibility": "Export preparation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T177", "responsibility": "Alert evaluation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T178", "responsibility": "Cohort analysis", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T179", "responsibility": "Funnel analysis", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T180", "responsibility": "Cross-flow correlation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T181", "responsibility": "Optimization advice", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T182", "responsibility": "Quota management", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T183", "responsibility": "Training dataset preparation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T184", "responsibility": "Warehouse health monitoring", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T185", "responsibility": "Data quality review", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T186", "responsibility": "Warehouse connector readiness", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T187", "responsibility": "Aggregate publication", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T188", "responsibility": "Governed analytics completion", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true }
+  ],
+  "eventSchemas": [
+    "xiigen.flow13.event-1.v1",
+    "xiigen.flow13.event-2.v1",
+    "xiigen.flow13.event-3.v1",
+    "xiigen.flow13.event-4.v1",
+    "xiigen.flow13.event-5.v1",
+    "xiigen.flow13.event-6.v1",
+    "xiigen.flow13.event-7.v1",
+    "xiigen.flow13.event-8.v1",
+    "xiigen.flow13.event-9.v1",
+    "xiigen.flow13.event-10.v1",
+    "xiigen.flow13.event-11.v1",
+    "xiigen.flow13.event-12.v1",
+    "xiigen.flow13.event-13.v1",
+    "xiigen.flow13.event-14.v1",
+    "xiigen.flow13.event-15.v1",
+    "xiigen.flow13.event-16.v1"
+  ]
+}
+
+###
+
+POST {{Xiigen.Flow.DataWarehouseAnalytics.Api_HostAddress}}/api/dynamic/data-warehouse-analytics/ingest
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+X-Idempotency-Key: demo-event
+Content-Type: application/json
+
+{
+  "sourceFlowId": "FLOW-03",
+  "eventType": "event.promoted",
+  "sourceRecordId": "event-1",
+  "metricName": "event_count",
+  "metricValue": 7
+}

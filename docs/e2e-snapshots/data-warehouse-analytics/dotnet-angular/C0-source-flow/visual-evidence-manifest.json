@@ -1,0 +1,169 @@
+{
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "data-warehouse-analytics",
+  "count": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=anonymous&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=anonymous&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=anonymous&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_user&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_user&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_user&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=referral_user&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=referral_user&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=referral_user&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=freelancer&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=freelancer&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=freelancer&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=business_partner&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=business_partner&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=business_partner&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=event_organiser&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=event_organiser&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=event_organiser&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_admin&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_admin&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=tenant_admin&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=platform_admin&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=platform_admin&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=platform_admin&state=dashboard&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=platform_support&state=plan&lang=en&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4313/?role=platform_support&state=ingest&lang=he&module=data-warehouse-analytics"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\data-warehouse-analytics\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4313/?role=platform_support&state=dashboard&lang=en&module=data-warehouse-analytics"
+    }
+  ]
+}

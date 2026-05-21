@@ -1,0 +1,56 @@
+{
+    "flowId":  "FLOW-13",
+    "generatedAt":  "2026-05-21T10:38:51.2913516+03:00",
+    "packages":  [
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.1.nupkg",
+                         "length":  24093,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.2.nupkg",
+                         "length":  23997,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.2.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.3.nupkg",
+                         "length":  23994,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.3.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.4.nupkg",
+                         "length":  23996,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Application.0.1.4.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.1.nupkg",
+                         "length":  4105,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.1.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.2.nupkg",
+                         "length":  4012,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.2.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.3.nupkg",
+                         "length":  4020,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.3.nupkg"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.4.nupkg",
+                         "length":  4018,
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-13\\Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.0.1.4.nupkg"
+                     }
+                 ],
+    "expectedVersions":  [
+                             "0.1.1",
+                             "0.1.2",
+                             "0.1.3",
+                             "0.1.4"
+                         ],
+    "missingVersions":  [
+
+                        ],
+    "pass":  true
+}

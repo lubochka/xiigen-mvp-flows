@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-13",
+  "flowSlug": "data-warehouse-analytics",
+  "api": {
+    "localUrl": "http://127.0.0.1:5313",
+    "containerUrl": "http://127.0.0.1:5313"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4313",
+    "evidencePort": 4313
+  }
+}

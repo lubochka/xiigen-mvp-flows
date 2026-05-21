@@ -1,0 +1,9 @@
+{
+    "flowId":  "FLOW-13",
+    "generatedAt":  "2026-05-21T10:32:34.1639881+03:00",
+    "visualCellsPerPoint":  27,
+    "cascadePointCount":  7,
+    "expectedTotal":  189,
+    "actualTotal":  189,
+    "pass":  true
+}

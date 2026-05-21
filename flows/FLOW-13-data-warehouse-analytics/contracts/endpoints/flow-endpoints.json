@@ -1,0 +1,95 @@
+{
+  "flowId": "FLOW-13",
+  "flowSlug": "data-warehouse-analytics",
+  "endpoints": [
+    {
+      "endpointId": "data-warehouse-analytics-plan-publish",
+      "method": "POST",
+      "path": "/api/dynamic/data-warehouse-analytics",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "requestSchema": "contracts/schemas/data-warehouse-analytics-request.schema.json",
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json"
+    },
+    {
+      "endpointId": "data-warehouse-analytics-ingest",
+      "method": "POST",
+      "path": "/api/dynamic/data-warehouse-analytics/ingest",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/data-warehouse-analytics-request.schema.json",
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json"
+    },
+    {
+      "endpointId": "data-warehouse-analytics-query",
+      "method": "POST",
+      "path": "/api/dynamic/data-warehouse-analytics/query",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/data-warehouse-analytics-request.schema.json",
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json"
+    },
+    {
+      "endpointId": "data-warehouse-analytics-quality-check",
+      "method": "POST",
+      "path": "/api/dynamic/data-warehouse-analytics/quality-check",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json"
+    },
+    {
+      "endpointId": "data-warehouse-analytics-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/data-warehouse-analytics/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json"
+    },
+    {
+      "endpointId": "data-warehouse-analytics-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/data-warehouse-analytics/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/data-warehouse-analytics-response.schema.json",
+      "bypassReason": "public marketplace preview"
+    }
+  ]
+}

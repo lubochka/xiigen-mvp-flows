@@ -1,0 +1,9 @@
+services:
+  flow-13-data-warehouse-analytics-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-13-data-warehouse-analytics/server/Xiigen.Flow.DataWarehouseAnalytics.Api/Dockerfile
+    ports:
+      - "5313:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,28 @@
+{
+    "flowId":  "FLOW-13",
+    "flowSlug":  "data-warehouse-analytics",
+    "portabilityTier":  "Tier D",
+    "state":  "GREEN",
+    "generatedAt":  "2026-05-21T10:38:01.8137033+03:00",
+    "phases":  {
+                   "server":  "PASS",
+                   "angular":  "PASS",
+                   "dockerAuth":  "PASS",
+                   "visualEvidence":  "PASS",
+                   "aiAdaptationCascade":  "PASS",
+                   "githubActions":  "PASS",
+                   "codeReview":  "APPROVED",
+                   "qaReview":  "APPROVED"
+               },
+    "evidence":  {
+                     "authMatrix":  "docs/translation-evidence/FLOW-13/docker-auth-matrix.json",
+                     "visualCounts":  "docs/translation-evidence/FLOW-13/visual-counts.json",
+                     "cascade":  "docs/translation-evidence/FLOW-13/layer8-cascade-evidence.json",
+                     "githubActions":  "docs/translation-evidence/FLOW-13/github-actions.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-13/code-review-gate.json",
+                     "qaReview":  "docs/translation-evidence/FLOW-13/qa-review.md"
+                 },
+    "noTechDebt":  true,
+    "noMissingTests":  true,
+    "noFuturePhase":  true
+}
