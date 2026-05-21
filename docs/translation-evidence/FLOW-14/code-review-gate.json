@@ -1,0 +1,37 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T12:01:40.0130303+03:00",
+    "checks":  [
+                   {
+                       "name":  "provider-sdk-imports-in-application",
+                       "command":  "rg provider SDK names in Application",
+                       "result":  "PASS",
+                       "hits":  0
+                   },
+                   {
+                       "name":  "business-throws-in-application",
+                       "command":  "rg throw new in Application",
+                       "result":  "PASS",
+                       "hits":  0
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "command":  "rg EtlDataIntegrationService / MicroserviceBase",
+                       "result":  "PASS",
+                       "evidence":  "EtlDataIntegrationService : MicroserviceBase\u003cEtlDataIntegrationService\u003e"
+                   },
+                   {
+                       "name":  "outbox-after-store",
+                       "command":  "manual source review of PublishPlanAsync/IngestEventAsync/ExecuteQueryAsync/RunQualityCheckAsync",
+                       "result":  "PASS",
+                       "evidence":  "documents and audits are stored before outbox AppendAsync; timeout path retains recovery outbox without committing partial plan state"
+                   },
+                   {
+                       "name":  "tenant-scope",
+                       "command":  "manual source review",
+                       "result":  "PASS",
+                       "evidence":  "tenant is read from TenantContext accessor and request tenant fields are rejected"
+                   }
+               ],
+    "verdict":  "APPROVED"
+}

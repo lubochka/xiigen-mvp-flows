@@ -1,0 +1,9 @@
+services:
+  FLOW-14-etl-data-integration-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Api/Dockerfile
+    ports:
+      - "5313:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

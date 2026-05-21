@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-14/etl-data-integration-response.schema.json",
+  "title": "FLOW-14 ETL Data Integration Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "planId": { "type": "string" },
+    "eventId": { "type": "string" },
+    "factId": { "type": "string" },
+    "queryId": { "type": "string" },
+    "qualityCheckId": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "taskTypeCoverage": { "type": "integer" },
+    "eventSchemaCount": { "type": "integer" },
+    "rowCount": { "type": "integer" },
+    "total": { "type": "number" },
+    "retryAfterMs": { "type": "integer" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

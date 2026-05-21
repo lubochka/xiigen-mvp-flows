@@ -1,0 +1,88 @@
+{
+  "flowId": "FLOW-14",
+  "flowSlug": "etl-data-integration",
+  "policies": [
+    {
+      "policyId": "etl-data-integration-public-preview",
+      "route": "GET /api/dynamic/etl-data-integration/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/etl-data-integration/public-preview"
+      ],
+      "bypassReason": "Public marketplace previews are intentionally readable before login."
+    },
+    {
+      "policyId": "etl-data-integration-plan-publish",
+      "route": "POST /api/dynamic/etl-data-integration",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "etl-data-integration-ingest",
+      "route": "POST /api/dynamic/etl-data-integration/ingest",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "etl-data-integration-query",
+      "route": "POST /api/dynamic/etl-data-integration/query",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "etl-data-integration-quality-check",
+      "route": "POST /api/dynamic/etl-data-integration/quality-check",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "etl-data-integration-dashboard",
+      "route": "GET /api/dynamic/etl-data-integration/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

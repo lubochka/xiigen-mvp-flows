@@ -1,0 +1,58 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T11:29:38.8252807+03:00",
+    "expected":  {
+                     "public-preview-200":  200,
+                     "missing-token-401":  401,
+                     "wrong-role-403":  403,
+                     "cross-tenant-token-401":  401,
+                     "valid-plan-publish-201":  201,
+                     "valid-ingest-201":  201,
+                     "valid-query-200":  200,
+                     "valid-dashboard-200":  200
+                 },
+    "cases":  [
+                  {
+                      "name":  "public-preview-200",
+                      "status":  200,
+                      "body":  "{\"flow\":\"FLOW-14\",\"summary\":\"Build ETL pipelines, ingest normalized events, monitor schema drift, and publish reverse ETL updates from tenant-safe warehouse zones.\",\"states\":[\"etl-pipeline\",\"raw-landing\",\"staging-records\",\"schema-drift\",\"reverse-etl\"]}"
+                  },
+                  {
+                      "name":  "missing-token-401",
+                      "status":  401,
+                      "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role-403",
+                      "status":  403,
+                      "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                  },
+                  {
+                      "name":  "cross-tenant-token-401",
+                      "status":  401,
+                      "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "valid-plan-publish-201",
+                      "status":  201,
+                      "body":  "{\"planId\":\"etl-core\",\"status\":\"ACTIVE\",\"version\":\"1\",\"taskTypeCoverage\":12,\"eventSchemaCount\":25,\"warehouseZone\":\"raw-to-mart\"}"
+                  },
+                  {
+                      "name":  "valid-ingest-201",
+                      "status":  201,
+                      "body":  "{\"eventId\":\"evt-FLOW-03-event-1-fc5acb8c73c84b0a9591a5042fa7200c\",\"factId\":\"fact-evt-FLOW-03-event-1-fc5acb8c73c84b0a9591a5042fa7200c\",\"status\":\"INGESTED\",\"metricValue\":42}"
+                  },
+                  {
+                      "name":  "valid-query-200",
+                      "status":  200,
+                      "body":  "{\"queryId\":\"query-22d4d81aa2a545b182e9fdf877a7bd69\",\"metricName\":\"workflow.completed\",\"rowCount\":1,\"total\":42,\"resultLimit\":500}"
+                  },
+                  {
+                      "name":  "valid-dashboard-200",
+                      "status":  200,
+                      "body":  "{\"plans\":[{\"tenant_id\":\"acme-corp\",\"plan_id\":\"etl-core\",\"warehouse_zone\":\"raw-to-mart\",\"status\":\"ACTIVE\",\"steps\":[{\"task_type\":\"T213\",\"responsibility\":\"T213 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T214\",\"responsibility\":\"T214 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T215\",\"responsibility\":\"T215 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T216\",\"responsibility\":\"T216 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T217\",\"responsibility\":\"T217 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T218\",\"responsibility\":\"T218 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T219\",\"responsibility\":\"T219 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T220\",\"responsibility\":\"T220 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T221\",\"responsibility\":\"T221 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T222\",\"responsibility\":\"T222 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T223\",\"responsibility\":\"T223 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true},{\"task_type\":\"T224\",\"responsibility\":\"T224 ETL responsibility\",\"fabric_first\":true,\"controller_mode\":\"dynamic\",\"returns_data_process_result\":true}],\"task_type_coverage\":[\"T213\",\"T214\",\"T215\",\"T216\",\"T217\",\"T218\",\"T219\",\"T220\",\"T221\",\"T222\",\"T223\",\"T224\"],\"event_schemas\":[\"xiigen.flow14.event-1.v1\",\"xiigen.flow14.event-2.v1\",\"xiigen.flow14.event-3.v1\",\"xiigen.flow14.event-4.v1\",\"xiigen.flow14.event-5.v1\",\"xiigen.flow14.event-6.v1\",\"xiigen.flow14.event-7.v1\",\"xiigen.flow14.event-8.v1\",\"xiigen.flow14.event-9.v1\",\"xiigen.flow14.event-10.v1\",\"xiigen.flow14.event-11.v1\",\"xiigen.flow14.event-12.v1\",\"xiigen.flow14.event-13.v1\",\"xiigen.flow14.event-14.v1\",\"xiigen.flow14.event-15.v1\",\"xiigen.flow14.event-16.v1\",\"xiigen.flow14.event-17.v1\",\"xiigen.flow14.event-18.v1\",\"xiigen.flow14.event-19.v1\",\"xiigen.flow14.event-20.v1\",\"xiigen.flow14.event-21.v1\",\"xiigen.flow14.event-22.v1\",\"xiigen.flow14.event-23.v1\",\"xiigen.flow14.event-24.v1\",\"xiigen.flow14.event-25.v1\"],\"created_at\":\"2026-05-21T08:29:38.2592954+00:00\"}],\"rawLandingRecords\":[{\"tenant_id\":\"acme-corp\",\"event_id\":\"evt-FLOW-03-event-1-fc5acb8c73c84b0a9591a5042fa7200c\",\"source_flow_id\":\"FLOW-03\",\"event_type\":\"workflow.completed\",\"source_record_id\":\"event-1\",\"metric_name\":\"workflow.completed\",\"metric_value\":42,\"occurred_at\":\"2026-05-21T08:29:38.2924404+00:00\",\"raw_payload\":{}}],\"stagingRecords\":[{\"tenant_id\":\"acme-corp\",\"fact_id\":\"fact-evt-FLOW-03-event-1-fc5acb8c73c84b0a9591a5042fa7200c\",\"source_flow_id\":\"FLOW-03\",\"event_type\":\"workflow.completed\",\"metric_name\":\"workflow.completed\",\"metric_value\":42,\"warehouse_zone\":\"raw-to-mart\",\"recorded_at\":\"2026-05-21T08:29:38.2924450+00:00\"}],\"driftAudits\":[],\"kpis\":{\"activePlans\":1,\"rawEvents\":1,\"metricFacts\":1,\"totalMetricValue\":42,\"qualityStatus\":\"not-run\"}}"
+                  }
+              ],
+    "failures":  0,
+    "pass":  true
+}

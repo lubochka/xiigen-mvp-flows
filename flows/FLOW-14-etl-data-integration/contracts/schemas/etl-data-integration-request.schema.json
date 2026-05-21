@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-14/etl-data-integration-request.schema.json",
+  "title": "FLOW-14 ETL Data Integration Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] }
+    ]
+  },
+  "properties": {
+    "planId": { "type": "string", "minLength": 1 },
+    "warehouseZone": { "type": "string", "minLength": 1 },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["taskType", "responsibility", "returnsDataProcessResult"],
+        "properties": {
+          "taskType": { "type": "string", "pattern": "^T[0-9]{3}$" },
+          "responsibility": { "type": "string", "minLength": 1 },
+          "providerImports": { "type": "array", "items": { "type": "string" }, "maxItems": 0 },
+          "controllerMode": { "type": "string", "not": { "const": "entity-specific" } },
+          "returnsDataProcessResult": { "const": true }
+        }
+      }
+    },
+    "eventSchemas": {
+      "type": "array",
+      "minItems": 25,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "sourceFlowId": { "type": "string", "pattern": "^FLOW-[0-9]{2}$" },
+    "eventType": { "type": "string", "minLength": 1 },
+    "sourceRecordId": { "type": "string", "minLength": 1 },
+    "metricName": { "type": "string", "minLength": 1 },
+    "metricValue": { "type": "number", "minimum": 0 },
+    "payload": { "type": "object" },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" }
+  }
+}

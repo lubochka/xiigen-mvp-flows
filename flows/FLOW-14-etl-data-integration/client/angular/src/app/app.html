@@ -1,0 +1,127 @@
+<main class="etl-data-integration-shell" data-testid="page-etl-data-integration" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-EtlDataIntegration">
+    <div>
+      <p class="eyebrow">{{ translated('ETL Data Integration') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Govern connectors, raw landing, staging records, schema drift checks, and reverse ETL publication before data leaves the tenant boundary.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ roleCta() }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="ETL Data Integration controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="ETL Data Integration states">
+      <button type="button" [class.active]="screenState() === 'dashboard'" (click)="setScreenState('dashboard')">{{ translated('Dashboard') }}</button>
+      <button type="button" [class.active]="screenState() === 'ingest'" (click)="setScreenState('ingest')">{{ translated('Ingest event') }}</button>
+      <button type="button" [class.active]="screenState() === 'plan'" (click)="setScreenState('plan')">{{ translated('ETL pipeline') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'dashboard'" class="dashboard" data-testid="etl-dashboard-page">
+    <article class="metric-card" data-testid="query-result-card">
+      <span>{{ translated('Query result') }}</span>
+      <strong>{{ querySummary() }}</strong>
+      <p>Query output is capped by platform policy and scoped to the active tenant.</p>
+    </article>
+    <article class="metric-card" *ngFor="let metric of kpis">
+      <span>{{ metric.label }}</span>
+      <strong>{{ metric.value }}</strong>
+      <p>{{ metric.detail }}</p>
+    </article>
+    <section class="metric-panel" data-testid="staging-records-list">
+      <header>
+        <h2>Recent staging records</h2>
+        <p>Records are normalized from stored events and remain readable without exposing raw source payloads.</p>
+      </header>
+      <table>
+        <thead>
+          <tr><th>Source</th><th>Metric</th><th>Value</th><th>Freshness</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of stagingRecords">
+            <td>{{ record.source }}</td>
+            <td>{{ record.metric }}</td>
+            <td>{{ record.value }}</td>
+            <td>{{ record.freshness }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="quality-panel" data-testid="schema-drift-panel">
+      <h2>{{ translated('Schema drift check') }}</h2>
+      <p data-testid="task-type-coverage">Twelve ETL steps are covered by the pipeline plan.</p>
+      <p data-testid="event-schema-count">Twenty-five event schemas are mapped before publication.</p>
+      <p>Lineage, freshness, schema drift, warehouse zones, and reverse ETL checks are current.</p>
+    </section>
+  </section>
+
+  <section *ngIf="screenState() === 'ingest'" class="ingest-layout" data-testid="event-ingestion-page">
+    <form class="surface" data-testid="event-ingestion-form">
+      <h2>{{ translated('Ingest event') }}</h2>
+      <label>
+        <span>{{ translated('Source flow') }}</span>
+        <input data-testid="source-flow-input" [ngModel]="sourceFlowId()" name="sourceFlowId" (ngModelChange)="setSourceFlowId($event)" />
+      </label>
+      <label>
+        <span>{{ translated('Event type') }}</span>
+        <input data-testid="event-type-input" [ngModel]="eventType()" name="eventType" (ngModelChange)="setEventType($event)" />
+      </label>
+      <label>
+        <span>{{ translated('Metric value') }}</span>
+        <input data-testid="metric-value-input" type="number" [ngModel]="metricValue()" name="metricValue" (ngModelChange)="setMetricValue($event)" />
+      </label>
+      <div class="form-error" data-testid="ingest-error">{{ ingestStatus() }}</div>
+      <button data-testid="ingest-button" type="button">Store raw record and publish update</button>
+    </form>
+    <article class="surface lineage-summary">
+      <span>Lineage preview</span>
+      <h2>{{ sourceFlowId() }} / {{ eventType() }}</h2>
+      <p>Ingested records are stored first, then staging records and publication events are written from the persisted source event.</p>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'plan'" class="plan-layout" data-testid="etl-pipeline-page">
+    <form class="surface" data-testid="etl-pipeline-form">
+      <h2>{{ translated('Publish ETL pipeline') }}</h2>
+      <label>
+        <span>Pipeline identifier</span>
+        <input data-testid="plan-id-input" value="tenant-wide-etl" />
+      </label>
+      <label>
+        <span>Warehouse zone</span>
+        <input data-testid="warehouse-zone-input" value="raw-to-mart" />
+      </label>
+      <label>
+        <span>Retention days</span>
+        <input data-testid="retention-days-input" type="number" value="365" />
+      </label>
+      <div class="form-error" data-testid="form-error">Every step needs one owner and one responsibility before publication.</div>
+      <div class="conflict" data-testid="occ-conflict-error">If another operator publishes first, this screen shows the current version and asks for a fresh review.</div>
+      <button type="button">Store pipeline and publish event</button>
+    </form>
+    <div class="plan-grid" data-testid="event-schema-list">
+      <article class="plan-card" *ngFor="let step of pipelineSteps">
+        <span>{{ step.status }}</span>
+        <h2>{{ step.name }}</h2>
+        <strong>{{ step.owner }}</strong>
+        <p>Single responsibility, tenant-scoped storage, and drift evidence are required before the next step runs.</p>
+      </article>
+    </div>
+  </section>
+</main>

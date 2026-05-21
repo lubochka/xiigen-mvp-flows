@@ -1,0 +1,13 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T12:01:40.0130303+03:00",
+    "language":  "he",
+    "direction":  "rtl",
+    "checkedFiles":  [
+                         "client/angular/src/app/app.ts",
+                         "client/angular/src/app/app.html",
+                         "client/angular/src/app/app.spec.ts"
+                     ],
+    "forbiddenInternalTermsInUserSurface":  0,
+    "pass":  true
+}

@@ -1,0 +1,79 @@
+@Xiigen.Flow.EtlDataIntegration.Api_HostAddress = http://localhost:5313
+
+GET {{Xiigen.Flow.EtlDataIntegration.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.EtlDataIntegration.Api_HostAddress}}/api/dynamic/etl-data-integration/public-preview
+
+###
+
+POST {{Xiigen.Flow.EtlDataIntegration.Api_HostAddress}}/api/dynamic/etl-data-integration
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-plan
+Content-Type: application/json
+
+{
+  "planId": "etl-core",
+  "warehouseZone": "raw-to-mart",
+  "steps": [
+    { "taskType": "T213", "responsibility": "Connector registration", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T214", "responsibility": "Credential reference validation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T215", "responsibility": "Raw landing append", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T216", "responsibility": "Staging normalization", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T217", "responsibility": "Schema drift detection", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T218", "responsibility": "Identity join boundary check", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T219", "responsibility": "Core model mapping", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T220", "responsibility": "Mart projection", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T221", "responsibility": "Warehouse zone publication", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T222", "responsibility": "Reverse ETL queue preparation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T223", "responsibility": "Pipeline audit consolidation", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true },
+    { "taskType": "T224", "responsibility": "Governed ETL completion", "providerImports": [], "controllerMode": "dynamic", "returnsDataProcessResult": true }
+  ],
+  "eventSchemas": [
+    "xiigen.flow14.event-1.v1",
+    "xiigen.flow14.event-2.v1",
+    "xiigen.flow14.event-3.v1",
+    "xiigen.flow14.event-4.v1",
+    "xiigen.flow14.event-5.v1",
+    "xiigen.flow14.event-6.v1",
+    "xiigen.flow14.event-7.v1",
+    "xiigen.flow14.event-8.v1",
+    "xiigen.flow14.event-9.v1",
+    "xiigen.flow14.event-10.v1",
+    "xiigen.flow14.event-11.v1",
+    "xiigen.flow14.event-12.v1",
+    "xiigen.flow14.event-13.v1",
+    "xiigen.flow14.event-14.v1",
+    "xiigen.flow14.event-15.v1",
+    "xiigen.flow14.event-16.v1",
+    "xiigen.flow14.event-17.v1",
+    "xiigen.flow14.event-18.v1",
+    "xiigen.flow14.event-19.v1",
+    "xiigen.flow14.event-20.v1",
+    "xiigen.flow14.event-21.v1",
+    "xiigen.flow14.event-22.v1",
+    "xiigen.flow14.event-23.v1",
+    "xiigen.flow14.event-24.v1",
+    "xiigen.flow14.event-25.v1"
+  ]
+}
+
+###
+
+POST {{Xiigen.Flow.EtlDataIntegration.Api_HostAddress}}/api/dynamic/etl-data-integration/ingest
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+X-Idempotency-Key: demo-event
+Content-Type: application/json
+
+{
+  "sourceFlowId": "FLOW-03",
+  "eventType": "event.promoted",
+  "sourceRecordId": "event-1",
+  "metricName": "event_count",
+  "metricValue": 7
+}

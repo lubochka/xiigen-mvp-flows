@@ -1,0 +1,95 @@
+{
+  "flowId": "FLOW-14",
+  "flowSlug": "etl-data-integration",
+  "endpoints": [
+    {
+      "endpointId": "etl-data-integration-plan-publish",
+      "method": "POST",
+      "path": "/api/dynamic/etl-data-integration",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "requestSchema": "contracts/schemas/etl-data-integration-request.schema.json",
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json"
+    },
+    {
+      "endpointId": "etl-data-integration-ingest",
+      "method": "POST",
+      "path": "/api/dynamic/etl-data-integration/ingest",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/etl-data-integration-request.schema.json",
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json"
+    },
+    {
+      "endpointId": "etl-data-integration-query",
+      "method": "POST",
+      "path": "/api/dynamic/etl-data-integration/query",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/etl-data-integration-request.schema.json",
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json"
+    },
+    {
+      "endpointId": "etl-data-integration-quality-check",
+      "method": "POST",
+      "path": "/api/dynamic/etl-data-integration/quality-check",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json"
+    },
+    {
+      "endpointId": "etl-data-integration-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/etl-data-integration/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json"
+    },
+    {
+      "endpointId": "etl-data-integration-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/etl-data-integration/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/etl-data-integration-response.schema.json",
+      "bypassReason": "public marketplace preview"
+    }
+  ]
+}

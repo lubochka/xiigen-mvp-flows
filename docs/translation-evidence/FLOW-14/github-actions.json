@@ -1,0 +1,62 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T12:01:40.0130303+03:00",
+    "runs":  [
+                 {
+                     "repo":  "tenant-a--etl-data-integration",
+                     "cascadePoint":  "C1-tenant-a-installed",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26214876991,
+                     "url":  "https://github.com/lubochka/tenant-a--etl-data-integration/actions/runs/26214876991",
+                     "title":  "Add FLOW-14 C1-tenant-a-installed"
+                 },
+                 {
+                     "repo":  "tenant-a--acme-etl-hub",
+                     "cascadePoint":  "C2-tenant-a-adapted-published",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26215007859,
+                     "url":  "https://github.com/lubochka/tenant-a--acme-etl-hub/actions/runs/26215007859",
+                     "title":  "Add FLOW-14 C2-tenant-a-adapted-published"
+                 },
+                 {
+                     "repo":  "tenant-b--acme-etl-hub",
+                     "cascadePoint":  "C3-tenant-b-installed-from-a",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26215117427,
+                     "url":  "https://github.com/lubochka/tenant-b--acme-etl-hub/actions/runs/26215117427",
+                     "title":  "Add FLOW-14 C3-tenant-b-installed-from-a"
+                 },
+                 {
+                     "repo":  "tenant-b--northwind-sync-fabric",
+                     "cascadePoint":  "C4-tenant-b-adapted-published",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26215219823,
+                     "url":  "https://github.com/lubochka/tenant-b--northwind-sync-fabric/actions/runs/26215219823",
+                     "title":  "Add FLOW-14 C4-tenant-b-adapted-published"
+                 },
+                 {
+                     "repo":  "tenant-c--northwind-sync-fabric",
+                     "cascadePoint":  "C5-tenant-c-installed-from-b",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26215330133,
+                     "url":  "https://github.com/lubochka/tenant-c--northwind-sync-fabric/actions/runs/26215330133",
+                     "title":  "Add FLOW-14 C5-tenant-c-installed-from-b"
+                 },
+                 {
+                     "repo":  "tenant-c--tessera-integration-pipeline",
+                     "cascadePoint":  "C6-tenant-c-adapted",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "databaseId":  26215437107,
+                     "url":  "https://github.com/lubochka/tenant-c--tessera-integration-pipeline/actions/runs/26215437107",
+                     "title":  "Add FLOW-14 C6-tenant-c-adapted"
+                 }
+             ],
+    "failures":  0,
+    "pass":  true
+}

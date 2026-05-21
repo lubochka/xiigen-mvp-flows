@@ -1,0 +1,144 @@
+{
+  "flowId": "FLOW-14",
+  "flowSlug": "etl-data-integration",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-14-etl-data-integration",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.EtlDataIntegration.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/etl-data-integration/dotnet-angular",
+  "sourceAliases": [
+    "etl-data-integration",
+    "etl-pipeline",
+    "connector-lifecycle",
+    "schema-drift",
+    "reverse-etl",
+    "warehouse-zones"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "referral_user",
+      "freelancer",
+      "business_partner",
+      "event_organiser",
+      "tenant_admin",
+      "platform_admin",
+      "platform_support"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "ready-after-shared-artifacts",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-13",
+      "relationship": "warehouse-target-prerequisite",
+      "reason": "ETL pipelines land curated records into warehouse zones owned by FLOW-13 before reverse ETL publication."
+    },
+    {
+      "flowId": "FLOW-11",
+      "relationship": "schema-contract-source",
+      "reason": "ETL pipeline publication validates all twenty-five CloudEvent contracts against the schema registry before ingesting upstream records."
+    },
+    {
+      "flowId": "FLOW-01..FLOW-13",
+      "relationship": "event-consumer",
+      "reason": "The ETL fabric consumes normalized domain events from upstream flows and writes tenant-scoped raw, staging, core, and mart evidence."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/etl-data-integration",
+    "requiredDocuments": [
+      "docs/flow-coverage/etl-data-integration/P1-business-logic-inventory.md",
+      "docs/flow-coverage/etl-data-integration/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/etl-data-integration/P5-ui-specs.md",
+      "docs/flow-coverage/etl-data-integration/P9-edge-cases.md",
+      "docs/flow-coverage/etl-data-integration/P10-server-specs.md",
+      "docs/flow-coverage/etl-data-integration/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 0,
+    "newCfRules": 5,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 6,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, outbox, and FREEDOM providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.EtlDataIntegration.Infrastructure/EtlDataIntegrationServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "ETL Data Integration fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, IOutboxStore, and IFreedomConfigService return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "etl-data-integration",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-etl-data-integration.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

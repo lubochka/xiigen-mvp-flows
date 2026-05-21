@@ -1,0 +1,43 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T12:01:40.0130303+03:00",
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                          }
+                      ],
+    "totalPngCount":  189,
+    "pass":  true
+}

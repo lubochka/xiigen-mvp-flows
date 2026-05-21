@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-14",
+  "flowSlug": "etl-data-integration",
+  "api": {
+    "localUrl": "http://127.0.0.1:5313",
+    "containerUrl": "http://127.0.0.1:5313"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4314",
+    "evidencePort": 4314
+  }
+}

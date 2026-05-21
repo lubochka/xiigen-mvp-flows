@@ -1,0 +1,87 @@
+{
+    "flowId":  "FLOW-14",
+    "generatedAt":  "2026-05-21T12:01:40.0130303+03:00",
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  27,
+                              "manifestPath":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\etl-data-integration\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                          }
+                      ],
+    "totalPngCount":  189,
+    "tenantRepositories":  [
+                               {
+                                   "repo":  "tenant-a--etl-data-integration",
+                                   "point":  "C1-tenant-a-installed",
+                                   "module":  "etl-data-integration",
+                                   "version":  "0.1.1",
+                                   "url":  "https://github.com/lubochka/tenant-a--etl-data-integration"
+                               },
+                               {
+                                   "repo":  "tenant-a--acme-etl-hub",
+                                   "point":  "C2-tenant-a-adapted-published",
+                                   "module":  "acme-etl-hub",
+                                   "version":  "0.1.2",
+                                   "url":  "https://github.com/lubochka/tenant-a--acme-etl-hub"
+                               },
+                               {
+                                   "repo":  "tenant-b--acme-etl-hub",
+                                   "point":  "C3-tenant-b-installed-from-a",
+                                   "module":  "acme-etl-hub",
+                                   "version":  "0.1.2",
+                                   "url":  "https://github.com/lubochka/tenant-b--acme-etl-hub"
+                               },
+                               {
+                                   "repo":  "tenant-b--northwind-sync-fabric",
+                                   "point":  "C4-tenant-b-adapted-published",
+                                   "module":  "northwind-sync-fabric",
+                                   "version":  "0.1.3",
+                                   "url":  "https://github.com/lubochka/tenant-b--northwind-sync-fabric"
+                               },
+                               {
+                                   "repo":  "tenant-c--northwind-sync-fabric",
+                                   "point":  "C5-tenant-c-installed-from-b",
+                                   "module":  "northwind-sync-fabric",
+                                   "version":  "0.1.3",
+                                   "url":  "https://github.com/lubochka/tenant-c--northwind-sync-fabric"
+                               },
+                               {
+                                   "repo":  "tenant-c--tessera-integration-pipeline",
+                                   "point":  "C6-tenant-c-adapted",
+                                   "module":  "tessera-integration-pipeline",
+                                   "version":  "0.1.4",
+                                   "url":  "https://github.com/lubochka/tenant-c--tessera-integration-pipeline"
+                               }
+                           ],
+    "pass":  true
+}

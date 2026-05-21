@@ -98,4 +98,11 @@
     <Project Path="flows/FLOW-13-data-warehouse-analytics/server/Xiigen.Flow.DataWarehouseAnalytics.Infrastructure/Xiigen.Flow.DataWarehouseAnalytics.Infrastructure.csproj" />
     <Project Path="flows/FLOW-13-data-warehouse-analytics/server/Xiigen.Flow.DataWarehouseAnalytics.Tests/Xiigen.Flow.DataWarehouseAnalytics.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-14-etl-data-integration/" />
+  <Folder Name="/flows/FLOW-14-etl-data-integration/server/">
+    <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Api/Xiigen.Flow.EtlDataIntegration.Api.csproj" />
+    <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Application/Xiigen.Flow.EtlDataIntegration.Application.csproj" />
+    <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Infrastructure/Xiigen.Flow.EtlDataIntegration.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Tests/Xiigen.Flow.EtlDataIntegration.Tests.csproj" />
+  </Folder>
 </Solution>
