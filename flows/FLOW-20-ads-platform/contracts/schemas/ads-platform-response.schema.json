@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-20/ads-platform-response.schema.json",
+  "title": "FLOW-20 Ads Platform Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "requestId": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DELIVERY_AUTHORIZED",
+        "PENDING_HUMAN_REVIEW",
+        "HUMAN_APPROVED",
+        "HUMAN_REJECTED",
+        "PLAN_COVERED",
+        "BID_ALREADY_LOCKED",
+        "ACTIVE",
+        "REVOKED"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "VALIDATION_FAILED",
+        "IDEMPOTENCY_KEY_REQUIRED",
+        "TENANT_SCOPE_FORBIDDEN",
+        "CONSENT_GATE_FAILED",
+        "BUDGET_INSUFFICIENT",
+        "FRAUD_DETECTED",
+        "CONCURRENT_UPDATE",
+        "TIMEOUT",
+        "REVIEW_NOT_FOUND",
+        "BOLA_VIOLATION"
+      ]
+    },
+    "remainingBudgetCents": { "type": "integer" },
+    "fraudScore": { "type": "number" },
+    "politicalStatus": { "type": "string" },
+    "retryAfterMs": { "type": "integer" },
+    "details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "reason"],
+        "properties": {
+          "field": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "version": { "type": "string" }
+  }
+}

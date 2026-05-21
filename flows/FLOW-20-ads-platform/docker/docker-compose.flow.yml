@@ -1,0 +1,9 @@
+services:
+  FLOW-20-ads-platform-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Api/Dockerfile
+    ports:
+      - "5320:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

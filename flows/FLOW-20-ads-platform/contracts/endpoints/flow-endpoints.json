@@ -1,0 +1,108 @@
+{
+  "flowId": "FLOW-20",
+  "flowSlug": "ads-platform",
+  "endpoints": [
+    {
+      "endpointId": "ads-platform-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/ads-platform/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json",
+      "bypassReason": "public ad-safety preview with no tenant campaign data"
+    },
+    {
+      "endpointId": "ads-platform-process-request",
+      "method": "POST",
+      "path": "/api/dynamic/ads-platform",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/ads-platform-request.schema.json",
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    },
+    {
+      "endpointId": "ads-platform-record-consent",
+      "method": "POST",
+      "path": "/api/dynamic/ads-platform/consent",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/ads-platform-request.schema.json",
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    },
+    {
+      "endpointId": "ads-platform-political-review",
+      "method": "POST",
+      "path": "/api/dynamic/ads-platform/political-review",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/ads-platform-request.schema.json",
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    },
+    {
+      "endpointId": "ads-platform-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/ads-platform/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/ads-platform-request.schema.json",
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    },
+    {
+      "endpointId": "ads-platform-operations-me",
+      "method": "GET",
+      "path": "/api/dynamic/ads-platform/operations/me",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    },
+    {
+      "endpointId": "ads-platform-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/ads-platform/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/ads-platform-response.schema.json"
+    }
+  ]
+}

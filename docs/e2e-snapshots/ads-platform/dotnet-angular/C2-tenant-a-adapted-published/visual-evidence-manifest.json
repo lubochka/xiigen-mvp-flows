@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "acme-ad-exchange",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\ad-moderator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\ad-moderator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\ad-moderator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=review&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=auction&lang=en&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=consent&lang=he&module=acme-ad-exchange"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-ad-exchange\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=review&lang=en&module=acme-ad-exchange"
+    }
+  ]
+}

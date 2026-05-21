@@ -1,0 +1,560 @@
+{
+  "flowId": "FLOW-20",
+  "flowSlug": "ads-platform",
+  "generatedAt": "2026-05-21T19:34:44.007Z",
+  "pass": true,
+  "total": 34,
+  "passed": 34,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "public preview returns 200",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/public-preview",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "flow": "FLOW-20",
+        "summary": "Preview consent-safe ad delivery, budget controls, and moderation queues without exposing tenant-private campaign data.",
+        "tabs": [
+          "auction",
+          "consent",
+          "review"
+        ]
+      }
+    },
+    {
+      "name": "process request missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "process request wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "process request cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "process request valid auth path",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "ad-live-valid-mpfw3qs4",
+        "requestId": "ad-live-valid-mpfw3qs4",
+        "status": "DELIVERY_AUTHORIZED",
+        "version": "1",
+        "remainingBudgetCents": 8000,
+        "fraudScore": 0.11,
+        "politicalStatus": "APPROVED"
+      }
+    },
+    {
+      "name": "record consent missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/consent",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "record consent wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/consent",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "record consent cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/consent",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "record consent valid auth path",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/consent",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "user-live-mpfw3qs4",
+        "userId": "user-live-mpfw3qs4",
+        "status": "ACTIVE",
+        "expiresAt": "2026-08-19T19:34:43.7972226+00:00",
+        "version": "1"
+      }
+    },
+    {
+      "name": "political review no pending item missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/political-review",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "political review no pending item wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/political-review",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "political review no pending item cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/political-review",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "political review no pending item valid auth path",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/political-review",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "pass": true,
+      "payload": {
+        "code": "REVIEW_NOT_FOUND",
+        "message": "Political content review was not found."
+      }
+    },
+    {
+      "name": "plan validate missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/plan/validate",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "plan validate wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/plan/validate",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "plan validate cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/plan/validate",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "plan validate valid auth path",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/plan/validate",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "status": "PLAN_COVERED",
+        "stepCount": 24
+      }
+    },
+    {
+      "name": "operations dashboard missing token returns 401",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/operations/me",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "operations dashboard wrong role returns 403",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/operations/me",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "operations dashboard cross-tenant token returns 401",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/operations/me",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "operations dashboard valid auth path",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/operations/me",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "deliveries": [
+          {
+            "id": "ad-live-valid-mpfw3qs4",
+            "request_id": "ad-live-valid-mpfw3qs4",
+            "bid_id": "bid-ad-live-valid-mpfw3qs4",
+            "auction_id": "auction-ad-live-valid-mpfw3qs4",
+            "ad_id": "creative-ad-live-valid-mpfw3qs4",
+            "advertiser_id": "advertiser-1",
+            "user_id": "user-1",
+            "status": "DELIVERY_AUTHORIZED",
+            "bid_amount_cents": 2000,
+            "remaining_budget_cents": 8000,
+            "fraud_score": 0.11,
+            "political_status": "APPROVED",
+            "authorized_at": "2026-05-21T19:34:43.7381832+00:00",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "kpis": {
+          "authorizedDeliveries": 1,
+          "activeConsents": 1,
+          "fraudAudits": 1,
+          "politicalReviews": 1
+        }
+      }
+    },
+    {
+      "name": "admin dashboard missing token returns 401",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/dashboard",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "admin dashboard wrong role returns 403",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/dashboard",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "admin dashboard cross-tenant token returns 401",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/dashboard",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "admin dashboard valid auth path",
+      "method": "GET",
+      "route": "/api/dynamic/ads-platform/dashboard",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "deliveries": [
+          {
+            "id": "ad-live-valid-mpfw3qs4",
+            "request_id": "ad-live-valid-mpfw3qs4",
+            "bid_id": "bid-ad-live-valid-mpfw3qs4",
+            "auction_id": "auction-ad-live-valid-mpfw3qs4",
+            "ad_id": "creative-ad-live-valid-mpfw3qs4",
+            "advertiser_id": "advertiser-1",
+            "user_id": "user-1",
+            "status": "DELIVERY_AUTHORIZED",
+            "bid_amount_cents": 2000,
+            "remaining_budget_cents": 8000,
+            "fraud_score": 0.11,
+            "political_status": "APPROVED",
+            "authorized_at": "2026-05-21T19:34:43.7381832+00:00",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "consents": [
+          {
+            "user_id": "user-live-mpfw3qs4",
+            "consent_scope": "ads-personalization",
+            "status": "ACTIVE",
+            "expires_at": "2026-08-19T19:34:43.7972226+00:00",
+            "updated_at": "2026-05-21T19:34:43.7972378+00:00",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "fraudAudits": [
+          {
+            "audit_type": "FRAUD_CHECK_PASSED",
+            "correlation_id": "corr-valid-process request-mpfw3qs4",
+            "subject": "fraud-pass:ad-live-valid-mpfw3qs4",
+            "body_hash": "4dfbb76a9f6dbc1ce21fc19ff3a2f89f0e672fab2e306d304a4f4ced20a0b1c5",
+            "created_at": "2026-05-21T19:34:43.7355570+00:00",
+            "knowledge_scope": "PLATFORM_ONLY",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "politicalReviews": [
+          {
+            "audit_type": "POLITICAL_REVIEW_APPROVED",
+            "correlation_id": "corr-valid-process request-mpfw3qs4",
+            "subject": "political-pass:ad-live-valid-mpfw3qs4",
+            "body_hash": "22cdf5316cc9704b0dd2cfcb452e11b6ecb86f85c89116aea5ec0df269f41fda",
+            "created_at": "2026-05-21T19:34:43.7414587+00:00",
+            "knowledge_scope": "PLATFORM_ONLY",
+            "tenant_id": "acme-corp"
+          }
+        ],
+        "kpis": {
+          "authorizedDeliveries": 1,
+          "activeConsents": 1,
+          "fraudAudits": 1,
+          "politicalReviews": 1
+        }
+      }
+    },
+    {
+      "name": "tenant payload rejected returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "TENANT_SCOPE_FORBIDDEN",
+        "message": "tenantId is resolved from trusted platform context, never request body."
+      }
+    },
+    {
+      "name": "idempotent replay returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "ad-live-valid-mpfw3qs4",
+        "requestId": "ad-live-valid-mpfw3qs4",
+        "status": "DELIVERY_AUTHORIZED",
+        "version": "1",
+        "remainingBudgetCents": 8000,
+        "fraudScore": 0.11,
+        "politicalStatus": "APPROVED"
+      }
+    },
+    {
+      "name": "validation failure returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "VALIDATION_FAILED",
+        "details": [
+          {
+            "field": "userId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "advertiserId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "auctionId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "bidId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "adId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "paymentMethodToken",
+            "reason": "Value is required."
+          },
+          {
+            "field": "bidAmountCents",
+            "reason": "Value must be greater than zero."
+          },
+          {
+            "field": "budgetRemainingCents",
+            "reason": "Value must be greater than zero."
+          }
+        ]
+      }
+    },
+    {
+      "name": "timeout retains outbox and returns 504",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 504,
+      "actualStatus": 504,
+      "pass": true,
+      "payload": {
+        "code": "TIMEOUT",
+        "message": "Ads platform fabric timed out before the request could commit.",
+        "retryAfterMs": 5000,
+        "requestId": "ad-timeout-live-mpfw3qs4"
+      }
+    },
+    {
+      "name": "consent gate failure returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "CONSENT_GATE_FAILED",
+        "message": "Advertising consent is missing or revoked.",
+        "userId": "user-1",
+        "order": 1,
+        "gate": "consent"
+      }
+    },
+    {
+      "name": "budget insufficient returns 402",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 402,
+      "actualStatus": 402,
+      "pass": true,
+      "payload": {
+        "code": "BUDGET_INSUFFICIENT",
+        "message": "Advertiser budget cannot cover this bid.",
+        "advertiserId": "advertiser-low-mpfw3qs4",
+        "bidAmountCents": 2000,
+        "budgetBeforeCents": 100,
+        "budgetMutation": "DECRBY",
+        "budgetAfterCents": 100
+      }
+    },
+    {
+      "name": "fraud pre-billing failure returns 409",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 409,
+      "actualStatus": 409,
+      "pass": true,
+      "payload": {
+        "code": "FRAUD_DETECTED",
+        "message": "Fraud score exceeded the pre-billing threshold.",
+        "score": 0.91,
+        "threshold": 0.7,
+        "order": 1,
+        "beforeBilling": true,
+        "bidAmountCents": 2000,
+        "rawPaymentDataPersisted": false
+      }
+    },
+    {
+      "name": "political divergent content queues human review",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform",
+      "expectedStatus": 202,
+      "actualStatus": 202,
+      "pass": true,
+      "payload": {
+        "isPoliticalContent": true,
+        "modelA": 0.92,
+        "modelB": 0.66,
+        "minScore": 0.66,
+        "divergence": 0.26,
+        "threshold": 0.65,
+        "divergenceThreshold": 0.25,
+        "usesMathMinConvergence": true,
+        "humanReviewMandatory": true,
+        "ambiguousAutoBlocked": false,
+        "id": "ad-political-live-mpfw3qs4",
+        "requestId": "ad-political-live-mpfw3qs4",
+        "bidId": "bid-ad-political-live-mpfw3qs4",
+        "adId": "creative-ad-political-live-mpfw3qs4",
+        "status": "PENDING_HUMAN_REVIEW"
+      }
+    },
+    {
+      "name": "political review valid decision returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/ads-platform/political-review",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "ad-political-live-mpfw3qs4",
+        "requestId": "ad-political-live-mpfw3qs4",
+        "status": "HUMAN_APPROVED",
+        "reviewedBy": "local-user",
+        "reviewedAt": "2026-05-21T19:34:44.0041970+00:00"
+      }
+    }
+  ]
+}

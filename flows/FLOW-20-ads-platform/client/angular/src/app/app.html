@@ -1,0 +1,154 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Advertising operations') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'auction'" (click)="setScreenState('auction')">
+          {{ translated('Auction') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'consent'" (click)="setScreenState('consent')">
+          {{ translated('Consent') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'review'" (click)="setScreenState('review')">
+          {{ translated('Review') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>{{ selectedBudget() | currency:'USD':'symbol':'1.0-0' }}</strong>
+      <span>{{ translated('Budget available') }}</span>
+    </article>
+    <article>
+      <strong>91%</strong>
+      <span>{{ translated('Consent coverage') }}</span>
+    </article>
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Review queue') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'auction'" class="workspace" data-testid="auction-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Live auction</p>
+        <h2>Budget-safe bid processing</h2>
+        <p>Each placement checks consent, reserves one bid lock, and keeps billing behind the fraud gate.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Slot</th>
+            <th>Advertiser</th>
+            <th>Bid</th>
+            <th>Budget</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of auctionRows">
+            <td>{{ row.slot }}</td>
+            <td>{{ row.advertiser }}</td>
+            <td>{{ row.bid }}</td>
+            <td>{{ row.budget }}</td>
+            <td><span class="state" [class]="row.state">{{ row.state }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Bid controls</h3>
+      <label>
+        Budget remaining
+        <input type="range" min="1200" max="12000" [ngModel]="selectedBudget()" (ngModelChange)="setSelectedBudget($event)" />
+      </label>
+      <div class="decision-line">
+        <span>Consent</span>
+        <strong>passed first</strong>
+      </div>
+      <div class="decision-line">
+        <span>Budget</span>
+        <strong>reserved once</strong>
+      </div>
+      <button type="button" [disabled]="!canOperateAuction()">{{ canOperateAuction() ? translated('Authorize bid') : translated('Preview only') }}</button>
+      <p *ngIf="publicView()" class="muted">{{ translated('No private campaign data is visible here.') }}</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'consent'" class="workspace" data-testid="consent-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Consent gate</p>
+        <h2>Audience eligibility before delivery</h2>
+        <p>Expired or revoked consent blocks the request before auction or budget state changes.</p>
+      </div>
+      <div class="consent-grid">
+        <article *ngFor="let row of consentRows" class="mini-card" [class]="row.state">
+          <strong>{{ row.audience }}</strong>
+          <span>{{ row.coverage }} covered</span>
+          <small>{{ row.expiry }} remaining</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Member controls</h3>
+      <p>People can change personalization consent without contacting support.</p>
+      <div class="toggle-row">
+        <span>Personalized ads</span>
+        <input type="checkbox" checked />
+      </div>
+      <div class="toggle-row">
+        <span>Partner measurement</span>
+        <input type="checkbox" checked />
+      </div>
+      <button type="button" [disabled]="!canManageConsent()">{{ canManageConsent() ? translated('Update consent') : translated('Preview only') }}</button>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'review'" class="workspace" data-testid="review-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Human review</p>
+        <h2>Political and fraud-sensitive creative queue</h2>
+        <p>Divergent model scores never auto-block. They create a review item with immutable decision evidence.</p>
+      </div>
+      <div class="review-stack">
+        <article *ngFor="let row of reviewRows" class="review-row">
+          <span class="state" [class]="row.state">{{ row.state }}</span>
+          <strong>{{ row.creative }}</strong>
+          <span>{{ row.signal }}</span>
+          <small>score {{ row.score }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Review action</h3>
+      <dl>
+        <div><dt>Convergence</dt><dd>minimum score</dd></div>
+        <div><dt>Divergence</dt><dd>human review</dd></div>
+        <div><dt>Billing</dt><dd>after fraud pass</dd></div>
+      </dl>
+      <button type="button" [disabled]="!canReview()">{{ canReview() ? translated('Approve creative') : translated('Preview only') }}</button>
+    </aside>
+  </section>
+</main>

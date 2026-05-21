@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-20/ads-platform-request.schema.json",
+  "title": "FLOW-20 Ads Platform Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "requestId": { "type": "string", "minLength": 1 },
+    "userId": { "type": "string", "minLength": 1 },
+    "advertiserId": { "type": "string", "minLength": 1 },
+    "auctionId": { "type": "string", "minLength": 1 },
+    "bidId": { "type": "string", "minLength": 1 },
+    "adId": { "type": "string", "minLength": 1 },
+    "bidAmountCents": { "type": "integer", "minimum": 1 },
+    "budgetRemainingCents": { "type": "integer", "minimum": 1 },
+    "paymentMethodToken": { "type": "string", "minLength": 1 },
+    "adsConsent": { "type": "boolean" },
+    "consentGranted": { "type": "boolean" },
+    "consentExpiresAt": { "type": "string", "format": "date-time" },
+    "consentScope": { "type": "string", "minLength": 1 },
+    "revoked": { "type": "boolean" },
+    "fraudScore": { "type": "number", "minimum": 0 },
+    "isPoliticalContent": { "type": "boolean" },
+    "politicalModelAScore": { "type": "number", "minimum": 0 },
+    "politicalModelBScore": { "type": "number", "minimum": 0 },
+    "requiresHumanReview": { "type": "boolean" },
+    "decision": { "type": "string", "enum": ["approve", "approved", "reject", "rejected", "APPROVE", "APPROVED", "REJECT", "REJECTED"] },
+    "expectedVersion": { "type": "string" },
+    "planSteps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "taskTypeId", "responsibility", "config"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "taskTypeId": {
+            "type": "string",
+            "enum": [
+              "T287",
+              "T288",
+              "T289",
+              "T290",
+              "T291",
+              "T292",
+              "T293",
+              "T294",
+              "T295",
+              "T296",
+              "T297",
+              "T298",
+              "T299",
+              "T300",
+              "T301",
+              "T302",
+              "T303",
+              "T304",
+              "T305",
+              "T306",
+              "T625",
+              "T626",
+              "T627",
+              "T628"
+            ]
+          },
+          "name": { "type": "string" },
+          "responsibility": { "type": "string", "minLength": 1 },
+          "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "not": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "providerSdkImport": { "const": true }
+                  },
+                  "required": ["providerSdkImport"]
+                },
+                {
+                  "properties": {
+                    "entitySpecificController": { "const": true }
+                  },
+                  "required": ["entitySpecificController"]
+                }
+              ]
+            },
+            "properties": {
+              "returns": { "const": "DataProcessResult" }
+            }
+          }
+        }
+      }
+    },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" }
+  }
+}

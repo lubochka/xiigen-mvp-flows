@@ -1,0 +1,99 @@
+{
+  "flowId": "FLOW-20",
+  "flowSlug": "ads-platform",
+  "policies": [
+    {
+      "policyId": "ads-platform-public-preview",
+      "route": "GET /api/dynamic/ads-platform/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/ads-platform/public-preview"
+      ],
+      "bypassReason": "Public ad-safety preview is intentionally readable before login and exposes no tenant campaign data."
+    },
+    {
+      "policyId": "ads-platform-process-request",
+      "route": "POST /api/dynamic/ads-platform",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ads-platform-record-consent",
+      "route": "POST /api/dynamic/ads-platform/consent",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ads-platform-political-review",
+      "route": "POST /api/dynamic/ads-platform/political-review",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ads-platform-plan-validate",
+      "route": "POST /api/dynamic/ads-platform/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ads-platform-operations-me",
+      "route": "GET /api/dynamic/ads-platform/operations/me",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ads-platform-dashboard",
+      "route": "GET /api/dynamic/ads-platform/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "ad_moderator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

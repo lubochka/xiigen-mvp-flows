@@ -1,0 +1,68 @@
+﻿{
+    "flowId":  "FLOW-20",
+    "flowSlug":  "ads-platform",
+    "generatedAt":  "2026-05-21T19:36:44.2477271Z",
+    "pass":  true,
+    "runs":  [
+                 {
+                     "repo":  "tenant-a--ads-platform",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--ads-platform/actions/runs/26247603422",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26247603422,
+                     "headSha":  "5f95cd8fab47a5d89cc0e5431e8f248d883c9615",
+                     "createdAt":  "2026-05-21T19:14:22Z"
+                 },
+                 {
+                     "repo":  "tenant-a--acme-ad-exchange",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--acme-ad-exchange/actions/runs/26243826814",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26243826814,
+                     "headSha":  "ce253dd7a7239a7fe27fe00e9ba374595cf909bf",
+                     "createdAt":  "2026-05-21T17:59:40Z"
+                 },
+                 {
+                     "repo":  "tenant-b--acme-ad-exchange",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--acme-ad-exchange/actions/runs/26243951005",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26243951005,
+                     "headSha":  "86af16d4aa173ddf14d8a736607e923f863ad5dc",
+                     "createdAt":  "2026-05-21T18:02:03Z"
+                 },
+                 {
+                     "repo":  "tenant-b--northwind-sponsored-reach",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--northwind-sponsored-reach/actions/runs/26244089376",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26244089376,
+                     "headSha":  "076896be6339cd720fbb66e462cd955cda633237",
+                     "createdAt":  "2026-05-21T18:04:46Z"
+                 },
+                 {
+                     "repo":  "tenant-c--northwind-sponsored-reach",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--northwind-sponsored-reach/actions/runs/26244234806",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26244234806,
+                     "headSha":  "191d076d1e801a42c98b86fdb9aaa993c50a73f7",
+                     "createdAt":  "2026-05-21T18:07:36Z"
+                 },
+                 {
+                     "repo":  "tenant-c--tessera-consent-ads",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tessera-consent-ads/actions/runs/26244359184",
+                     "workflowName":  "FLOW-20 ads platform",
+                     "databaseId":  26244359184,
+                     "headSha":  "81666701dd578c71b9de1978c32f90006cb99a14",
+                     "createdAt":  "2026-05-21T18:10:05Z"
+                 }
+             ]
+}

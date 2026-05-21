@@ -1,0 +1,50 @@
+﻿{
+    "flowId":  "FLOW-20",
+    "flowSlug":  "ads-platform",
+    "generatedAt":  "2026-05-21T19:37:43.5219413Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "provider SDK imports absent from application",
+                       "command":  "rg -n \"Elastic\\.Clients|NEST|RabbitMQ\\.Client|StackExchange\\.Redis|Stripe|SendGrid|Twilio|AWS|Azure\\.Messaging\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application",
+                       "hits":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no free tenant id arguments",
+                       "command":  "rg -n \"string\\s+tenantId|Guid\\s+tenantId|tenantId\\s*,\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application",
+                       "hits":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no business throws",
+                       "command":  "rg -n \"throw new|throw;\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application",
+                       "hits":  0,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "service extends MicroserviceBase",
+                       "command":  "rg -n \"class AdsPlatformService : MicroserviceBase\u003cAdsPlatformService\u003e\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application",
+                       "hits":  1,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "outbox emits CloudEvents after persisted state paths",
+                       "command":  "rg -n \"AppendAsync\\(|CreateEvent\\(\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application/AdsPlatformService.cs",
+                       "hits":  13,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "service methods return DataProcessResult",
+                       "command":  "rg -n \"DataProcessResult\u003c\" flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Application",
+                       "hits":  6,
+                       "pass":  true
+                   },
+                   {
+                       "name":  "consumer UI has no internal governance language",
+                       "command":  "rg -n \"internal language patterns\" app.html app.ts app.css",
+                       "hits":  0,
+                       "pass":  true
+                   }
+               ]
+}

@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-consent-ads",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=anonymous&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=public_marketplace_visitor&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_user&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=referral_user&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=freelancer&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=business_partner&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=tenant_admin&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\ad-moderator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\ad-moderator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "ad_moderator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\ad-moderator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=ad_moderator&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=platform_admin&state=review&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=auction&lang=en&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=consent&lang=he&module=tessera-consent-ads"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-consent-ads\\docs\\e2e-snapshots\\ads-platform\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4320/?role=platform_support&state=review&lang=en&module=tessera-consent-ads"
+    }
+  ]
+}

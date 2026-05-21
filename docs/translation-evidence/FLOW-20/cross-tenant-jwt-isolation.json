@@ -1,0 +1,19 @@
+﻿{
+    "flowId":  "FLOW-20",
+    "flowSlug":  "ads-platform",
+    "generatedAt":  "2026-05-21T19:36:44.2477271Z",
+    "pass":  true,
+    "tenantBTokenAgainstTenantC":  "401 AUTH_CROSS_TENANT_TOKEN",
+    "sourceEvidence":  "docs/translation-evidence/FLOW-20/docker-auth-matrix.json",
+    "case":  {
+                 "name":  "process request cross-tenant token returns 401",
+                 "method":  "POST",
+                 "route":  "/api/dynamic/ads-platform",
+                 "expectedStatus":  401,
+                 "actualStatus":  401,
+                 "pass":  true,
+                 "payload":  {
+                                 "code":  "AUTH_CROSS_TENANT_TOKEN"
+                             }
+             }
+}

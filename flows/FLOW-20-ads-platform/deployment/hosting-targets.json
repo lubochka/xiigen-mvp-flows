@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-20",
+  "flowSlug": "ads-platform",
+  "api": {
+    "localUrl": "http://127.0.0.1:5320",
+    "containerUrl": "http://127.0.0.1:5320"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4320",
+    "evidencePort": 4320
+  }
+}
