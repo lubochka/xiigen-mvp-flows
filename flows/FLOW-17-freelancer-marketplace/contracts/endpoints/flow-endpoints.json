@@ -1,0 +1,112 @@
+{
+  "flowId": "FLOW-17",
+  "flowSlug": "freelancer-marketplace",
+  "endpoints": [
+    {
+      "endpointId": "freelancer-marketplace-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/freelancer-marketplace/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json",
+      "bypassReason": "public freelancer marketplace preview"
+    },
+    {
+      "endpointId": "freelancer-marketplace-gig-acceptance",
+      "method": "POST",
+      "path": "/api/dynamic/freelancer-marketplace",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/freelancer-marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    },
+    {
+      "endpointId": "freelancer-marketplace-contract-update",
+      "method": "POST",
+      "path": "/api/dynamic/freelancer-marketplace/contracts",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/freelancer-marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    },
+    {
+      "endpointId": "freelancer-marketplace-milestone-release",
+      "method": "POST",
+      "path": "/api/dynamic/freelancer-marketplace/milestones/release",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/freelancer-marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    },
+    {
+      "endpointId": "freelancer-marketplace-milestone-dispute",
+      "method": "POST",
+      "path": "/api/dynamic/freelancer-marketplace/milestones/dispute",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/freelancer-marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    },
+    {
+      "endpointId": "freelancer-marketplace-review-submit",
+      "method": "POST",
+      "path": "/api/dynamic/freelancer-marketplace/reviews",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/freelancer-marketplace-request.schema.json",
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    },
+    {
+      "endpointId": "freelancer-marketplace-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/freelancer-marketplace/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/freelancer-marketplace-response.schema.json"
+    }
+  ]
+}

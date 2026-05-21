@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-freelancer-trust",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\public-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\public-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\public-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=review&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=gig&lang=en&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=milestones&lang=he&module=tessera-freelancer-trust"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-freelancer-trust\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=review&lang=en&module=tessera-freelancer-trust"
+    }
+  ]
+}

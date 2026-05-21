@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-17",
+  "flowSlug": "freelancer-marketplace",
+  "api": {
+    "localUrl": "http://127.0.0.1:5317",
+    "containerUrl": "http://127.0.0.1:5317"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4317",
+    "evidencePort": 4317
+  }
+}

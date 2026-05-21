@@ -1,0 +1,9 @@
+services:
+  FLOW-17-freelancer-marketplace-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Api/Dockerfile
+    ports:
+      - "5317:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

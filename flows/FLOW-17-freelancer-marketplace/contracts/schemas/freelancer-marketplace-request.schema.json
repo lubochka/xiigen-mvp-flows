@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-17/freelancer-marketplace-request.schema.json",
+  "title": "FLOW-17 Freelancer Marketplace Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] },
+      { "required": ["clientTenantId"] },
+      { "required": ["client_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "gigId": { "type": "string", "minLength": 1 },
+    "bidId": { "type": "string", "minLength": 1 },
+    "freelancerId": { "type": "string", "minLength": 1 },
+    "budgetCents": { "type": "integer", "minimum": 1 },
+    "contractId": { "type": "string", "minLength": 1 },
+    "contractTotalCents": { "type": "integer", "minimum": 1 },
+    "fieldsToUpdate": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["milestoneId", "amountCents"],
+        "additionalProperties": true,
+        "properties": {
+          "milestoneId": { "type": "string", "minLength": 1 },
+          "amountCents": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "milestoneId": { "type": "string", "minLength": 1 },
+    "deliveryId": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string" },
+    "engagementId": { "type": "string", "minLength": 1 },
+    "direction": {
+      "type": "string",
+      "enum": ["CLIENT_TO_FREELANCER", "FREELANCER_TO_CLIENT"]
+    },
+    "reviewerId": { "type": "string", "minLength": 1 },
+    "targetId": { "type": "string", "minLength": 1 },
+    "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "comment": { "type": "string" },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "simulateReleaseWriteFailure": { "type": "boolean" }
+  }
+}

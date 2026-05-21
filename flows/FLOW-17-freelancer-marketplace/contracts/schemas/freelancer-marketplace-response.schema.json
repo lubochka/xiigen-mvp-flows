@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-17/freelancer-marketplace-response.schema.json",
+  "title": "FLOW-17 Freelancer Marketplace Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "gigId": { "type": "string" },
+    "bidId": { "type": "string" },
+    "freelancerId": { "type": "string" },
+    "contractId": { "type": "string" },
+    "milestoneId": { "type": "string" },
+    "deliveryId": { "type": "string" },
+    "reviewId": { "type": "string" },
+    "engagementId": { "type": "string" },
+    "direction": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "acceptedAt": { "type": "string" },
+    "activatedAt": { "type": "string" },
+    "releasedAt": { "type": "string" },
+    "disputedAt": { "type": "string" },
+    "submittedAt": { "type": "string" },
+    "budgetCents": { "type": "integer" },
+    "contractTotalCents": { "type": "integer" },
+    "retryAfterMs": { "type": "integer" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "details": { "type": "array" },
+    "items": { "type": "array" }
+  }
+}

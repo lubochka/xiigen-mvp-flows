@@ -1,0 +1,57 @@
+{
+    "flowId":  "FLOW-17",
+    "flowSlug":  "freelancer-marketplace",
+    "generatedAt":  "2026-05-21T13:37:56.6880376Z",
+    "pass":  true,
+    "cascade":  [
+                    {
+                        "module":  "freelancer-marketplace",
+                        "point":  "C0-source-flow",
+                        "repo":  "xiigen-flows-dot-net-angular",
+                        "mode":  "source",
+                        "version":  "0.1.1"
+                    },
+                    {
+                        "module":  "freelancer-marketplace",
+                        "point":  "C1-tenant-a-installed",
+                        "repo":  "tenant-a--freelancer-marketplace",
+                        "mode":  "install",
+                        "version":  "0.1.1"
+                    },
+                    {
+                        "module":  "acme-talent-marketplace",
+                        "point":  "C2-tenant-a-adapted-published",
+                        "repo":  "tenant-a--acme-talent-marketplace",
+                        "mode":  "adapt-publish",
+                        "version":  "0.1.2"
+                    },
+                    {
+                        "module":  "acme-talent-marketplace",
+                        "point":  "C3-tenant-b-installed-from-a",
+                        "repo":  "tenant-b--acme-talent-marketplace",
+                        "mode":  "install-from-a",
+                        "version":  "0.1.2"
+                    },
+                    {
+                        "module":  "northwind-milestone-market",
+                        "point":  "C4-tenant-b-adapted-published",
+                        "repo":  "tenant-b--northwind-milestone-market",
+                        "mode":  "adapt-publish",
+                        "version":  "0.1.3"
+                    },
+                    {
+                        "module":  "northwind-milestone-market",
+                        "point":  "C5-tenant-c-installed-from-b",
+                        "repo":  "tenant-c--northwind-milestone-market",
+                        "mode":  "install-from-b",
+                        "version":  "0.1.3"
+                    },
+                    {
+                        "module":  "tessera-freelancer-trust",
+                        "point":  "C6-tenant-c-adapted",
+                        "repo":  "tenant-c--tessera-freelancer-trust",
+                        "mode":  "adapt",
+                        "version":  "0.1.4"
+                    }
+                ]
+}

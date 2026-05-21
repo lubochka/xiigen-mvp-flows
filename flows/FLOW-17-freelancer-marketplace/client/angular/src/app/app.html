@@ -1,0 +1,117 @@
+<main class="freelancer-marketplace-shell" data-testid="freelancer-marketplace-page" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-FreelancerMarketplace">
+    <div>
+      <p class="eyebrow">{{ translated('Freelancer Marketplace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Gig acceptance, milestone contracts, delivery release, disputes, and bidirectional reviews stay in one tenant-safe workspace.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ canOperate() ? 'Open workspace actions' : 'Preview only' }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Freelancer marketplace controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Freelancer marketplace screens">
+      <button type="button" [class.active]="screenState() === 'gig'" (click)="setScreenState('gig')">{{ translated('Gig acceptance') }}</button>
+      <button type="button" [class.active]="screenState() === 'milestones'" (click)="setScreenState('milestones')">{{ translated('Milestones') }}</button>
+      <button type="button" [class.active]="screenState() === 'review'" (click)="setScreenState('review')">{{ translated('Review') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section class="dashboard" data-testid="freelancer-marketplace-summary">
+    <article class="metric-card">
+      <span>Gig state</span>
+      <strong>Open</strong>
+      <p>Client ownership is checked before a bid can reserve the acceptance lock.</p>
+    </article>
+    <article class="metric-card">
+      <span>Bid status</span>
+      <strong>Open</strong>
+      <p>Only one acceptance can move forward for a gig at the current version.</p>
+    </article>
+    <article class="metric-card">
+      <span>Contract total</span>
+      <strong>Balanced</strong>
+      <p>Milestone amounts must match the contract total before activation.</p>
+    </article>
+    <article class="metric-card">
+      <span>Delivery gate</span>
+      <strong>Submitted</strong>
+      <p>Milestone release is blocked until delivery is visible to the client.</p>
+    </article>
+  </section>
+
+  <section class="flow-grid">
+    <form *ngIf="screenState() === 'gig'" class="surface" data-testid="gig-posting-page">
+      <h2>{{ translated('Gig acceptance') }}</h2>
+      <p>Clients accept freelancer bids after tenant ownership, bid status, and version checks all agree.</p>
+      <label>
+        <span>{{ translated('Budget') }}</span>
+        <input data-testid="gig-budget-input" type="number" [ngModel]="budget()" name="budget" (ngModelChange)="setBudget($event)" />
+      </label>
+      <div class="ledger-list" data-testid="gig-safety-ledger">
+        <article *ngFor="let row of gigRows" [class]="row.tone">
+          <strong>{{ row.label }}</strong>
+          <span>{{ row.value }}</span>
+        </article>
+      </div>
+      <button data-testid="accept-bid-button" type="button" [disabled]="!canOperate()">{{ translated('Accept bid') }}</button>
+    </form>
+
+    <section *ngIf="screenState() === 'milestones'" class="surface" data-testid="milestone-dashboard-page">
+      <h2>{{ translated('Milestones') }}</h2>
+      <p>Contract fields that identify the client, gig, and freelancer stay fixed while milestone work advances.</p>
+      <label>
+        <span>{{ translated('Milestone total') }}</span>
+        <input data-testid="milestone-total-input" type="number" [ngModel]="milestoneTotal()" name="milestoneTotal" (ngModelChange)="setMilestoneTotal($event)" />
+      </label>
+      <div class="ledger-list" data-testid="milestone-safety-ledger">
+        <article *ngFor="let row of milestoneRows" [class]="row.tone">
+          <strong>{{ row.label }}</strong>
+          <span>{{ row.value }}</span>
+        </article>
+      </div>
+      <div class="action-row">
+        <button data-testid="release-milestone-button" type="button" [disabled]="!canRelease()">{{ translated('Release milestone') }}</button>
+        <button data-testid="open-dispute-button" type="button" [disabled]="!canOperate()">{{ translated('Open dispute') }}</button>
+      </div>
+    </section>
+
+    <section *ngIf="screenState() === 'review'" class="surface" data-testid="review-panel">
+      <h2>{{ translated('Review') }}</h2>
+      <p>Reviews are append-only, directional, and stored without exposing private comment text in audit evidence.</p>
+      <label>
+        <span>Review note</span>
+        <input data-testid="review-comment-input" [ngModel]="reviewComment()" name="reviewComment" (ngModelChange)="setReviewComment($event)" />
+      </label>
+      <div class="escrow-card" data-testid="review-direction-card">
+        <strong>Client to freelancer</strong>
+        <span>One review per completed engagement direction</span>
+        <em>Audit evidence stores a comment fingerprint only</em>
+      </div>
+      <button data-testid="submit-review-button" type="button" [disabled]="!canReview()">{{ translated('Submit review') }}</button>
+    </section>
+
+    <aside class="evidence-panel">
+      <h2>Safety evidence</h2>
+      <p data-testid="scope-guard-note">The marketplace reads tenant identity from the trusted request context, never from a browser field.</p>
+      <p data-testid="occ-conflict-error">If two bid acceptances race on the same gig, one sees the current version and must retry.</p>
+      <p data-testid="timeout-retry-note">Timeouts keep recovery evidence so the operation can be retried safely.</p>
+    </aside>
+  </section>
+</main>

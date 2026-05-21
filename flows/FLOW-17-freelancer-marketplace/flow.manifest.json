@@ -1,0 +1,141 @@
+{
+  "flowId": "FLOW-17",
+  "flowSlug": "freelancer-marketplace",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-17-freelancer-marketplace",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.FreelancerMarketplace.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/freelancer-marketplace/dotnet-angular",
+  "sourceAliases": [
+    "freelancer-marketplace",
+    "gig-acceptance",
+    "milestone-contracts",
+    "delivery-gate",
+    "freelancer-reviews",
+    "dispute-workflow",
+    "marketplace-collaboration"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "public_visitor",
+      "tenant_user",
+      "tenant_admin",
+      "referral_user",
+      "freelancer",
+      "business_partner",
+      "event_organiser",
+      "platform_admin",
+      "platform_support"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "public_visitor"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-08",
+      "relationship": "gig-catalog-source",
+      "reason": "Freelancer marketplace starts from marketplace gig and service references; FLOW-17 never mutates catalog or social signals."
+    },
+    {
+      "flowId": "FLOW-12",
+      "relationship": "escrow-fabric-contract-source",
+      "reason": "Subscription billing owns payment and escrow fabric publication; FLOW-17 consumes the fabric contract through the platform package boundary."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/freelancer-marketplace",
+    "requiredDocuments": [
+      "docs/flow-coverage/freelancer-marketplace/P1-business-logic-inventory.md",
+      "docs/flow-coverage/freelancer-marketplace/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/freelancer-marketplace/P5-ui-specs.md",
+      "docs/flow-coverage/freelancer-marketplace/P9-edge-cases.md",
+      "docs/flow-coverage/freelancer-marketplace/P10-server-specs.md",
+      "docs/flow-coverage/freelancer-marketplace/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 11,
+      "partial": 0,
+        "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, outbox, and FREEDOM providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.FreelancerMarketplace.Infrastructure/FreelancerMarketplaceServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "Freelancer Marketplace fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, IOutboxStore, and IFreedomConfigService return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "freelancer-marketplace",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-freelancer-marketplace.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

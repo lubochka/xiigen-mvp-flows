@@ -1,0 +1,10 @@
+{
+    "flowId":  "FLOW-17",
+    "flowSlug":  "freelancer-marketplace",
+    "generatedAt":  "2026-05-21T13:37:56.6778622Z",
+    "pass":  true,
+    "assertion":  "A bearer token scoped to another tenant receives 401 on protected FLOW-17 routes.",
+    "evidenceSource":  "docs/translation-evidence/FLOW-17/docker-auth-matrix.json",
+    "caseName":  "cross-tenant token returns 401",
+    "expectedStatus":  401
+}

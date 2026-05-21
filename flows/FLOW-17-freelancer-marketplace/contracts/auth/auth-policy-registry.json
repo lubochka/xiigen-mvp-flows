@@ -1,0 +1,102 @@
+{
+  "flowId": "FLOW-17",
+  "flowSlug": "freelancer-marketplace",
+  "policies": [
+    {
+      "policyId": "freelancer-marketplace-public-preview",
+      "route": "GET /api/dynamic/freelancer-marketplace/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/freelancer-marketplace/public-preview"
+      ],
+      "bypassReason": "Public freelancer marketplace previews are intentionally readable before login."
+    },
+    {
+      "policyId": "freelancer-marketplace-gig-acceptance",
+      "route": "POST /api/dynamic/freelancer-marketplace",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "freelancer-marketplace-contract-update",
+      "route": "POST /api/dynamic/freelancer-marketplace/contracts",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "freelancer-marketplace-milestone-release",
+      "route": "POST /api/dynamic/freelancer-marketplace/milestones/release",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "freelancer-marketplace-milestone-dispute",
+      "route": "POST /api/dynamic/freelancer-marketplace/milestones/dispute",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "freelancer-marketplace-review-submit",
+      "route": "POST /api/dynamic/freelancer-marketplace/reviews",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "freelancer-marketplace-dashboard",
+      "route": "GET /api/dynamic/freelancer-marketplace/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

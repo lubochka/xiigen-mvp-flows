@@ -1,0 +1,44 @@
+{
+    "flowId":  "FLOW-17",
+    "flowSlug":  "freelancer-marketplace",
+    "generatedAt":  "2026-05-21T13:37:56.7337642Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "no direct provider SDK imports",
+                       "count":  0,
+                       "expected":  "0",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no free-form tenant id method parameter",
+                       "count":  0,
+                       "expected":  "0",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "rejects tenant scope payload fields",
+                       "count":  14,
+                       "expected":  "guard present",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "service extends MicroserviceBase",
+                       "count":  1,
+                       "expected":  "\u003e=1",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "uses outbox before inter-service events",
+                       "count":  14,
+                       "expected":  "\u003e=1",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "returns DataProcessResult outcomes",
+                       "count":  5,
+                       "expected":  "\u003e=1",
+                       "pass":  true
+                   }
+               ]
+}

@@ -1,0 +1,191 @@
+{
+  "flowId": "FLOW-17",
+  "flowSlug": "freelancer-marketplace",
+  "generatedAt": "2026-05-21T13:37:56.482Z",
+  "pass": true,
+  "total": 12,
+  "passed": 12,
+  "cases": [
+    {
+      "name": "public preview returns 200",
+      "method": "GET",
+      "route": "/api/dynamic/freelancer-marketplace/public-preview",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "flow": "FLOW-17",
+        "summary": "Preview freelancer gigs, milestone contracts, escrow releases, disputes, and bidirectional reviews.",
+        "tabs": [
+          "gig posting",
+          "contracts",
+          "escrow",
+          "reviews"
+        ]
+      }
+    },
+    {
+      "name": "missing token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "wrong role returns 403",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 403,
+      "actualStatus": 403,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_WRONG_ROLE"
+      }
+    },
+    {
+      "name": "cross-tenant token returns 401",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 401,
+      "actualStatus": 401,
+      "pass": true,
+      "payload": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "tenant payload rejected on contract returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace/contracts",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "TENANT_SCOPE_FORBIDDEN",
+        "message": "clientTenantId is resolved from trusted platform context, never request body."
+      }
+    },
+    {
+      "name": "valid gig acceptance returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "gig-live",
+        "gigId": "gig-live",
+        "bidId": "bid-live",
+        "freelancerId": "freelancer-1",
+        "status": "ACCEPTED",
+        "version": "1",
+        "acceptedAt": "2026-05-21T13:37:56.3888841+00:00",
+        "tenant_id": "acme-corp"
+      }
+    },
+    {
+      "name": "idempotent gig acceptance replay returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "gig-live",
+        "gigId": "gig-live",
+        "bidId": "bid-live",
+        "freelancerId": "freelancer-1",
+        "status": "ACCEPTED",
+        "version": "1",
+        "acceptedAt": "2026-05-21T13:37:56.3888841+00:00",
+        "tenant_id": "acme-corp"
+      }
+    },
+    {
+      "name": "validation failure returns 400",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "pass": true,
+      "payload": {
+        "code": "VALIDATION_FAILED",
+        "details": [
+          {
+            "field": "gigId",
+            "reason": "Value is required."
+          },
+          {
+            "field": "budgetCents",
+            "reason": "Budget must be greater than zero."
+          }
+        ]
+      }
+    },
+    {
+      "name": "timeout keeps retry evidence and returns 504",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace",
+      "expectedStatus": 504,
+      "actualStatus": 504,
+      "pass": true,
+      "payload": {
+        "code": "TIMEOUT",
+        "message": "Gig acceptance timed out before completion.",
+        "retryAfterMs": 5000,
+        "gigId": "gig-timeout"
+      }
+    },
+    {
+      "name": "contract activation returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace/contracts",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "contract-live",
+        "contractId": "contract-live",
+        "status": "ACTIVE",
+        "milestoneCount": 2,
+        "contractTotalCents": 140000,
+        "milestonesSumCents": 140000,
+        "version": "1"
+      }
+    },
+    {
+      "name": "milestone release returns 200",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace/milestones/release",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "pass": true,
+      "payload": {
+        "id": "m1",
+        "milestoneId": "m1",
+        "status": "RELEASED",
+        "version": "1"
+      }
+    },
+    {
+      "name": "review submit returns 201",
+      "method": "POST",
+      "route": "/api/dynamic/freelancer-marketplace/reviews",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "pass": true,
+      "payload": {
+        "id": "review-32980eaadf10fd9c",
+        "reviewId": "review-32980eaadf10fd9c",
+        "engagementId": "contract-live",
+        "direction": "CLIENT_TO_FREELANCER",
+        "rating": 5,
+        "version": "1"
+      }
+    }
+  ]
+}

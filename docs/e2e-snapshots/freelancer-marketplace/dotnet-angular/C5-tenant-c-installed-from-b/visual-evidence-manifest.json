@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C5-tenant-c-installed-from-b",
+  "moduleName": "northwind-milestone-market",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=anonymous&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "public_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\public-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=public_visitor&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_user&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=tenant_admin&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=referral_user&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=freelancer&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=business_partner&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=event_organiser&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_admin&state=review&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=gig&lang=en&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=milestones&lang=he&module=northwind-milestone-market"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-milestone-market\\docs\\e2e-snapshots\\freelancer-marketplace\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4317/?role=platform_support&state=review&lang=en&module=northwind-milestone-market"
+    }
+  ]
+}

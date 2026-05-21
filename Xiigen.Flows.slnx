@@ -119,4 +119,11 @@
     <Project Path="flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Infrastructure/Xiigen.Flow.MarketplacePayments.Infrastructure.csproj" />
     <Project Path="flows/FLOW-16-marketplace-payments/server/Xiigen.Flow.MarketplacePayments.Tests/Xiigen.Flow.MarketplacePayments.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-17-freelancer-marketplace/" />
+  <Folder Name="/flows/FLOW-17-freelancer-marketplace/server/">
+    <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Api/Xiigen.Flow.FreelancerMarketplace.Api.csproj" />
+    <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Application/Xiigen.Flow.FreelancerMarketplace.Application.csproj" />
+    <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Infrastructure/Xiigen.Flow.FreelancerMarketplace.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-17-freelancer-marketplace/server/Xiigen.Flow.FreelancerMarketplace.Tests/Xiigen.Flow.FreelancerMarketplace.Tests.csproj" />
+  </Folder>
 </Solution>
