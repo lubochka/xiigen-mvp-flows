@@ -1,0 +1,47 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "pass":  true,
+    "packageCount":  8,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Application.0.1.1.nupkg",
+                         "Length":  25492,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Application.0.1.2.nupkg",
+                         "Length":  25380,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Application.0.1.2.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Application.0.1.3.nupkg",
+                         "Length":  25381,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Application.0.1.3.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Application.0.1.4.nupkg",
+                         "Length":  25392,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Application.0.1.4.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.1.nupkg",
+                         "Length":  4065,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.2.nupkg",
+                         "Length":  3973,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.2.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.3.nupkg",
+                         "Length":  3968,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.3.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.4.nupkg",
+                         "Length":  3975,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-15\\Xiigen.Flow.SaasMultiTenancy.Infrastructure.0.1.4.nupkg"
+                     }
+                 ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-15/saas-multi-tenancy-request.schema.json",
+  "title": "FLOW-15 SaaS Multi-Tenancy Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "tenantSlug": { "type": "string", "minLength": 1 },
+    "workspaceName": { "type": "string", "minLength": 1 },
+    "subscriptionTier": { "type": "string", "minLength": 1 },
+    "billingContact": { "type": "string", "minLength": 1 },
+    "operatorId": { "type": "string", "minLength": 1 },
+    "key": { "type": "string", "minLength": 1 },
+    "value": {},
+    "action": { "enum": ["SUSPEND", "TERMINATE", "REACTIVATE"] },
+    "currentStatus": { "enum": ["TRIAL", "ACTIVE", "SUSPENDED", "CANCELLED", "PAUSED"] },
+    "reason": { "type": "string" },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" }
+  }
+}

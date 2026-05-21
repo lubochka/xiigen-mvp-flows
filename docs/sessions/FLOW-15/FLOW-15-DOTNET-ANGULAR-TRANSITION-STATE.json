@@ -1,0 +1,32 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "flowSlug":  "saas-multi-tenancy",
+    "portabilityTier":  "Tier D",
+    "status":  "GREEN",
+    "generatedAt":  "2026-05-21T10:20:38.3303111Z",
+    "phases":  {
+                   "functionalCoverage":  "PASS",
+                   "dotnetUnitTests":  "PASS",
+                   "angularUnitTests":  "PASS",
+                   "angularBuild":  "PASS",
+                   "liveAuthMatrix":  "PASS",
+                   "visualEvidence":  "PASS",
+                   "tenantCascade":  "PASS",
+                   "githubActions":  "PASS",
+                   "packageReadback":  "PASS",
+                   "codeReview":  "PASS",
+                   "qaReview":  "APPROVED"
+               },
+    "evidence":  {
+                     "visualCounts":  "docs/translation-evidence/FLOW-15/visual-counts.json",
+                     "liveAuth":  "docs/translation-evidence/FLOW-15/docker-auth-matrix.json",
+                     "githubActions":  "docs/translation-evidence/FLOW-15/github-actions-cascade.json",
+                     "packages":  "docs/translation-evidence/FLOW-15/package-readback.json",
+                     "cascade":  "docs/translation-evidence/FLOW-15/layer8-cascade-evidence.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-15/code-review-gate.json",
+                     "crossTenantJwt":  "docs/translation-evidence/FLOW-15/cross-tenant-jwt-isolation.json"
+                 },
+    "noTechnicalDebt":  true,
+    "missingTests":  0,
+    "futurePhase2Items":  0
+}

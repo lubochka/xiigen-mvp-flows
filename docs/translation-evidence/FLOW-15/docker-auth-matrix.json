@@ -1,0 +1,78 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "layer":  "live-auth-and-http-contracts",
+    "generatedAt":  "2026-05-21T09:40:40.5602663Z",
+    "pass":  true,
+    "cases":  [
+                  {
+                      "name":  "public-preview",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"flow\":\"FLOW-15\",\"summary\":\"Manage workspace settings, members, billing, integrations, tenant lifecycle, and quota evidence without exposing tenant scope controls in request bodies.\",\"tabs\":[\"general\",\"members\",\"billing\",\"integrations\",\"advanced\"]}"
+                  },
+                  {
+                      "name":  "missing-token",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role",
+                      "expected":  403,
+                      "actual":  403,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                  },
+                  {
+                      "name":  "cross-tenant-token",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "valid-provision",
+                      "expected":  201,
+                      "actual":  201,
+                      "pass":  true,
+                      "body":  "{\"id\":\"tenant-959574e6a0a5a169\",\"tenantSlug\":\"api-acme\",\"status\":\"ACTIVE\",\"version\":\"2\",\"subscriptionTier\":\"growth\",\"masterTenantIdSource\":\"trusted-tier-definition\",\"quotaBatchMode\":\"MULTI_EXEC\"}"
+                  },
+                  {
+                      "name":  "idempotency-replay",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"id\":\"tenant-959574e6a0a5a169\",\"tenantSlug\":\"api-acme\",\"status\":\"ACTIVE\",\"version\":\"2\",\"subscriptionTier\":\"growth\",\"masterTenantIdSource\":\"trusted-tier-definition\",\"quotaBatchMode\":\"MULTI_EXEC\"}"
+                  },
+                  {
+                      "name":  "validation-failure",
+                      "expected":  400,
+                      "actual":  400,
+                      "pass":  true,
+                      "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"tenantSlug\",\"reason\":\"Value is required.\"},{\"field\":\"workspaceName\",\"reason\":\"Value is required.\"},{\"field\":\"subscriptionTier\",\"reason\":\"Value is required.\"},{\"field\":\"billingContact\",\"reason\":\"Value is required.\"},{\"field\":\"operatorId\",\"reason\":\"Value is required.\"}]}"
+                  },
+                  {
+                      "name":  "timeout-retained",
+                      "expected":  504,
+                      "actual":  504,
+                      "pass":  true,
+                      "body":  "{\"code\":\"TIMEOUT\",\"message\":\"Tenant provisioning timed out before activation.\",\"retryAfterMs\":5000,\"tenantSlug\":\"api-timeout\"}"
+                  },
+                  {
+                      "name":  "locked-config",
+                      "expected":  409,
+                      "actual":  409,
+                      "pass":  true,
+                      "body":  "{\"code\":\"MACHINE_LOCKED_KEY\",\"message\":\"This workspace setting is controlled by the platform and cannot be changed here.\"}"
+                  },
+                  {
+                      "name":  "lifecycle-suspend",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true,
+                      "body":  "{\"tenant\":\"acme-corp\",\"status\":\"SUSPENDED\",\"changedAt\":\"2026-05-21T09:40:40.5520738+00:00\",\"cascadeToSubscriptions\":true}"
+                  }
+              ]
+}

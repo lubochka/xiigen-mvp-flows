@@ -1,0 +1,43 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "generatedAt":  "2026-05-21T10:18:58.2667726Z",
+    "pass":  true,
+    "runs":  [
+                 {
+                     "repo":  "tenant-a--saas-multi-tenancy",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--saas-multi-tenancy/actions/runs/26219294945"
+                 },
+                 {
+                     "repo":  "tenant-a--acme-workspace-control",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-a--acme-workspace-control/actions/runs/26219411523"
+                 },
+                 {
+                     "repo":  "tenant-b--acme-workspace-control",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--acme-workspace-control/actions/runs/26219531546"
+                 },
+                 {
+                     "repo":  "tenant-b--northwind-tenant-ops",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-b--northwind-tenant-ops/actions/runs/26219647387"
+                 },
+                 {
+                     "repo":  "tenant-c--northwind-tenant-ops",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--northwind-tenant-ops/actions/runs/26219751703"
+                 },
+                 {
+                     "repo":  "tenant-c--tessera-workspace-governance",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "url":  "https://github.com/lubochka/tenant-c--tessera-workspace-governance/actions/runs/26219853782"
+                 }
+             ]
+}

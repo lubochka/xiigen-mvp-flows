@@ -1,0 +1,129 @@
+<main class="saas-multi-tenancy-shell" data-testid="workspace-settings-page" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" data-testid="page-SaasMultiTenancy">
+    <div>
+      <p class="eyebrow">{{ translated('Workspace Settings') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Manage workspace identity, members, billing, integrations, quotas, and lifecycle actions with tenant-safe defaults.
+      </p>
+    </div>
+    <aside class="role-panel" [attr.data-testid]="roleTestId()">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ canEdit() ? 'Review changes' : 'Preview only' }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Workspace settings controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Workspace settings tabs">
+      <button *ngFor="let tab of tabs" type="button" [class.active]="screenState() === tab.id" (click)="setScreenState(tab.id)">
+        {{ translated(tab.label) }}
+      </button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section class="dashboard" data-testid="tenant-provisioning-page">
+    <article class="metric-card">
+      <span>Workspace status</span>
+      <strong>Active</strong>
+      <p>Provisioning is complete after machine-managed keys, quota counters, audit records, and publication events are stored.</p>
+    </article>
+    <article class="metric-card">
+      <span>Quota batch</span>
+      <strong>One batch</strong>
+      <p>Quota counters are created from the selected subscription tier in a single atomic materialization step.</p>
+    </article>
+    <article class="metric-card">
+      <span>Locked settings</span>
+      <strong>4</strong>
+      <p>Platform-controlled keys are visible but cannot be changed from workspace settings.</p>
+    </article>
+    <article class="metric-card">
+      <span>Lifecycle</span>
+      <strong>Guarded</strong>
+      <p>Suspension blocks access and cascades to subscriptions without deleting tenant records.</p>
+    </article>
+  </section>
+
+  <section class="workspace-grid">
+    <form *ngIf="screenState() === 'general'" class="surface" data-testid="general-settings-panel">
+      <h2>{{ translated('General') }}</h2>
+      <p>{{ currentTab().summary }}</p>
+      <label>
+        <span>{{ translated('Workspace name') }}</span>
+        <input data-testid="workspace-name-input" [ngModel]="workspaceName()" name="workspaceName" (ngModelChange)="setWorkspaceName($event)" [readonly]="!canEdit()" />
+      </label>
+      <label>
+        <span>Subscription tier</span>
+        <input data-testid="subscription-tier-input" value="Growth" readonly />
+      </label>
+      <div class="form-note" data-testid="machine-locked-key-note">Tenant identifier, master workspace, provisioned date, and subscription tier are protected platform settings.</div>
+      <button data-testid="save-general-button" type="button" [disabled]="!canEdit()">Save workspace details</button>
+    </form>
+
+    <section *ngIf="screenState() === 'members'" class="surface" data-testid="members-tab">
+      <h2>{{ translated('Members') }}</h2>
+      <p>{{ currentTab().summary }}</p>
+      <label>
+        <span>{{ translated('Invite member') }}</span>
+        <input data-testid="invite-email-input" [ngModel]="inviteEmail()" name="inviteEmail" (ngModelChange)="setInviteEmail($event)" [readonly]="!canEdit()" />
+      </label>
+      <div class="member-list">
+        <article class="member-row" *ngFor="let member of members">
+          <strong>{{ member.name }}</strong>
+          <span>{{ member.role }}</span>
+          <em>{{ member.status }}</em>
+          <button type="button" [disabled]="!canEdit()">Manage</button>
+        </article>
+      </div>
+    </section>
+
+    <section *ngIf="screenState() === 'billing'" class="surface" data-testid="billing-tab">
+      <h2>{{ translated('Billing') }}</h2>
+      <p>{{ currentTab().summary }}</p>
+      <label>
+        <span>{{ translated('Billing contact') }}</span>
+        <input data-testid="billing-contact-input" [ngModel]="billingContact()" name="billingContact" (ngModelChange)="setBillingContact($event)" [readonly]="!canEdit()" />
+      </label>
+      <div class="quota-list" data-testid="quota-materialization-panel">
+        <span>Users: 100</span>
+        <span>Storage: 50 GB</span>
+        <span>Monthly events: 10,000</span>
+      </div>
+      <button type="button" [disabled]="!canEdit()">Open billing portal</button>
+    </section>
+
+    <section *ngIf="screenState() === 'advanced'" class="surface" data-testid="tenant-lifecycle-page">
+      <h2>{{ translated('Advanced') }}</h2>
+      <p>{{ currentTab().summary }}</p>
+      <div class="integration-grid" data-testid="integrations-tab">
+        <article><strong>Stripe portal</strong><span>Connected</span><button type="button">Disconnect</button></article>
+        <article><strong>OAuth provider</strong><span>Ready</span><button type="button">Reconnect</button></article>
+      </div>
+      <div class="danger-zone" data-testid="danger-zone">
+        <h2>{{ translated('Danger zone') }}</h2>
+        <p>Suspension keeps records intact, blocks access, and cascades subscription handling. Type the confirmation phrase to continue.</p>
+        <input data-testid="danger-confirmation-input" [ngModel]="dangerConfirmation()" name="dangerConfirmation" (ngModelChange)="setDangerConfirmation($event)" placeholder="SUSPEND WORKSPACE" />
+        <button data-testid="suspend-workspace-button" type="button" [disabled]="!dangerEnabled()">{{ translated('Suspend workspace') }}</button>
+      </div>
+    </section>
+
+    <aside class="evidence-panel">
+      <h2>Readiness evidence</h2>
+      <p data-testid="identity-guard-note">Master workspace identity is sourced from trusted platform tier definitions, never from browser input.</p>
+      <p data-testid="occ-conflict-error">If another admin saves first, the page shows the current version before allowing another write.</p>
+      <p data-testid="timeout-retry-note">Timeouts keep the recovery record and show a retry window.</p>
+    </aside>
+  </section>
+</main>

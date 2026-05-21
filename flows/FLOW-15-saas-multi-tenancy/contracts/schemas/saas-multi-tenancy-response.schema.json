@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-15/saas-multi-tenancy-response.schema.json",
+  "title": "FLOW-15 SaaS Multi-Tenancy Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "tenantSlug": { "type": "string" },
+    "status": { "type": "string" },
+    "version": { "type": "string" },
+    "subscriptionTier": { "type": "string" },
+    "masterTenantIdSource": { "type": "string" },
+    "quotaBatchMode": { "type": "string" },
+    "batchMode": { "type": "string" },
+    "commandCount": { "type": "integer" },
+    "cascadeToSubscriptions": { "type": "boolean" },
+    "tombstoneRef": { "type": "string" },
+    "retryAfterMs": { "type": "integer" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

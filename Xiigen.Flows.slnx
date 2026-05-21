@@ -105,4 +105,11 @@
     <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Infrastructure/Xiigen.Flow.EtlDataIntegration.Infrastructure.csproj" />
     <Project Path="flows/FLOW-14-etl-data-integration/server/Xiigen.Flow.EtlDataIntegration.Tests/Xiigen.Flow.EtlDataIntegration.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-15-saas-multi-tenancy/" />
+  <Folder Name="/flows/FLOW-15-saas-multi-tenancy/server/">
+    <Project Path="flows/FLOW-15-saas-multi-tenancy/server/Xiigen.Flow.SaasMultiTenancy.Api/Xiigen.Flow.SaasMultiTenancy.Api.csproj" />
+    <Project Path="flows/FLOW-15-saas-multi-tenancy/server/Xiigen.Flow.SaasMultiTenancy.Application/Xiigen.Flow.SaasMultiTenancy.Application.csproj" />
+    <Project Path="flows/FLOW-15-saas-multi-tenancy/server/Xiigen.Flow.SaasMultiTenancy.Infrastructure/Xiigen.Flow.SaasMultiTenancy.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-15-saas-multi-tenancy/server/Xiigen.Flow.SaasMultiTenancy.Tests/Xiigen.Flow.SaasMultiTenancy.Tests.csproj" />
+  </Folder>
 </Solution>

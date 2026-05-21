@@ -1,0 +1,12 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "pass":  true,
+    "cases":  [
+                  {
+                      "expected":  401,
+                      "evidence":  "docker-auth-matrix cross-tenant-token plus tenant cascade repos C3-C6",
+                      "name":  "tenant-b-token-on-tenant-c-route",
+                      "actual":  401
+                  }
+              ]
+}

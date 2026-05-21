@@ -1,0 +1,10 @@
+﻿services:
+  FLOW-15-saas-multi-tenancy-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-15-saas-multi-tenancy/server/Xiigen.Flow.SaasMultiTenancy.Api/Dockerfile
+    ports:
+      - "5313:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+

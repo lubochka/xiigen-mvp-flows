@@ -1,0 +1,43 @@
+﻿{
+    "flowId":  "FLOW-15",
+    "generatedAt":  "2026-05-21T10:20:10.1962798Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "fabric-first-application-no-provider-sdk-imports",
+                       "command":  "rg provider SDK imports Application",
+                       "pass":  true,
+                       "details":  null
+                   },
+                   {
+                       "name":  "business-logic-no-throws",
+                       "command":  "rg throw Application",
+                       "pass":  true,
+                       "details":  null
+                   },
+                   {
+                       "name":  "service-extends-microservicebase",
+                       "command":  "rg MicroserviceBase inheritance",
+                       "pass":  true,
+                       "details":  "public sealed class SaasMultiTenancyService : MicroserviceBase\u003cSaasMultiTenancyService\u003e"
+                   },
+                   {
+                       "name":  "outbox-after-state-audit-writes",
+                       "command":  "manual line-order scan StoreAuditAsync before outbox append",
+                       "pass":  true,
+                       "details":  "[\r\n    {\r\n        \"LineNumber\":  98,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TimeoutRetainedEvent, slug, timeoutBody), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  187,\r\n        \"Line\":  \"            await StoreAuditAsync(SaasMultiTenancyConstants.ProvisionAudits, $\\\"provision-{tenantId}\\\", \\\"TENANT_PROVISIONED\\\", activeState, cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  204,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantProvisionedEvent, tenantId, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  233,\r\n        \"Line\":  \"            await StoreAuditAsync(SaasMultiTenancyConstants.ConfigAudits, $\\\"immutable-{CurrentTenant.TenantId}-{key}-{Guid.NewGuid():N}\\\", \\\"CONFIG_KEY_IMMUTABLE\\\", lockedBody, cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  234,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.ConfigKeyImmutableEvent, key, lockedBody), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  272,\r\n        \"Line\":  \"        await StoreAuditAsync(SaasMultiTenancyConstants.ConfigAudits, $\\\"config-{CurrentTenant.TenantId}-{key}-{Guid.NewGuid():N}\\\", \\\"TENANT_CONFIGURATION_UPDATED\\\", body, cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  279,\r\n        \"Line\":  \"        await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantConfigurationUpdatedEvent, key, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  317,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantLifecycleRejectedEvent, CurrentTenant.TenantId, validation.Body), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  330,\r\n        \"Line\":  \"        await StoreAuditAsync(SaasMultiTenancyConstants.LifecycleAudits, $\\\"lifecycle-{CurrentTenant.TenantId}-{Guid.NewGuid():N}\\\", $\\\"TENANT_{targetStatus}\\\", body, cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  341,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantSuspendedEvent, CurrentTenant.TenantId, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  346,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantTerminatedEvent, CurrentTenant.TenantId, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  347,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.DataPurgeRequestedEvent, CurrentTenant.TenantId, new Dictionary\\u003cstring, object?\\u003e\"\r\n    },\r\n    {\r\n        \"LineNumber\":  356,\r\n        \"Line\":  \"            await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantReactivatedEvent, CurrentTenant.TenantId, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  429,\r\n        \"Line\":  \"        await _outbox.AppendAsync(CreateEvent(SaasMultiTenancyConstants.TenantQuotaMaterializedEvent, tenant, response), cancellationToken).ConfigureAwait(false);\"\r\n    },\r\n    {\r\n        \"LineNumber\":  471,\r\n        \"Line\":  \"    private async Task StoreAuditAsync(\"\r\n    }\r\n]"
+                   },
+                   {
+                       "name":  "human-language-ui-no-engine-terms",
+                       "command":  "rg forbidden internal terms app.ts/html/css",
+                       "pass":  true,
+                       "details":  null
+                   },
+                   {
+                       "name":  "no-flow14-residue",
+                       "command":  "rg stale FLOW-14 terms FLOW-15 directory",
+                       "pass":  true,
+                       "details":  null
+                   }
+               ]
+}

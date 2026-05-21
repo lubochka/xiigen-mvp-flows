@@ -1,0 +1,147 @@
+{
+  "flowId": "FLOW-15",
+  "flowSlug": "saas-multi-tenancy",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-15-saas-multi-tenancy",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.SaasMultiTenancy.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/saas-multi-tenancy/dotnet-angular",
+  "sourceAliases": [
+    "saas-multi-tenancy",
+    "tenant-provisioning",
+    "tenant-configuration",
+    "tenant-quotas",
+    "tenant-lifecycle",
+    "workspace-settings"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "referral_user",
+      "freelancer",
+      "business_partner",
+      "event_organiser",
+      "tenant_admin",
+      "platform_admin",
+      "platform_support"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-12",
+      "relationship": "subscription-lifecycle-source",
+      "reason": "Suspension and reactivation cascade to subscription handling while PAUSED remains a billing state, not a tenant lifecycle state."
+    },
+    {
+      "flowId": "FLOW-13",
+      "relationship": "termination-data-purge-target",
+      "reason": "Tenant termination emits DataPurgeRequested instead of deleting tenant data inline."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/saas-multi-tenancy",
+    "requiredDocuments": [
+      "docs/flow-coverage/saas-multi-tenancy/P1-business-logic-inventory.md",
+      "docs/flow-coverage/saas-multi-tenancy/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/saas-multi-tenancy/P5-ui-specs.md",
+      "docs/flow-coverage/saas-multi-tenancy/P9-edge-cases.md",
+      "docs/flow-coverage/saas-multi-tenancy/P10-server-specs.md",
+      "docs/flow-coverage/saas-multi-tenancy/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 8,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, outbox, and FREEDOM providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.SaasMultiTenancy.Infrastructure/SaasMultiTenancyServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "SaaS Multi-Tenancy fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, IOutboxStore, and IFreedomConfigService return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "identityCriticalGate": {
+    "masterTenantIdSource": "trusted-tier-definition-or-platform-constant",
+    "requestBodyOverrideAllowed": false,
+    "coveredByRules": [
+      "CF-15-1",
+      "CF-15-4"
+    ]
+  },
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "saas-multi-tenancy",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-saas-multi-tenancy.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

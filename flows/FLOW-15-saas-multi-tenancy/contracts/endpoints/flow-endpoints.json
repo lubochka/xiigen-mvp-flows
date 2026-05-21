@@ -1,0 +1,84 @@
+﻿{
+  "flowId": "FLOW-15",
+  "flowSlug": "saas-multi-tenancy",
+  "endpoints": [
+    {
+      "endpointId": "saas-multi-tenancy-provision",
+      "method": "POST",
+      "path": "/api/dynamic/saas-multi-tenancy",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/saas-multi-tenancy-request.schema.json",
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json"
+    },
+    {
+      "endpointId": "saas-multi-tenancy-config-update",
+      "method": "POST",
+      "path": "/api/dynamic/saas-multi-tenancy/config",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/saas-multi-tenancy-request.schema.json",
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json"
+    },
+    {
+      "endpointId": "saas-multi-tenancy-quota-materialize",
+      "method": "POST",
+      "path": "/api/dynamic/saas-multi-tenancy/quotas/materialize",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/saas-multi-tenancy-request.schema.json",
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json"
+    },
+    {
+      "endpointId": "saas-multi-tenancy-lifecycle",
+      "method": "POST",
+      "path": "/api/dynamic/saas-multi-tenancy/lifecycle",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json"
+    },
+    {
+      "endpointId": "saas-multi-tenancy-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/saas-multi-tenancy/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json"
+    },
+    {
+      "endpointId": "saas-multi-tenancy-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/saas-multi-tenancy/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/saas-multi-tenancy-response.schema.json",
+      "bypassReason": "public marketplace preview"
+    }
+  ]
+}
+

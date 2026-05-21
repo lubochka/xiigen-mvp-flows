@@ -1,0 +1,76 @@
+﻿{
+  "flowId": "FLOW-15",
+  "flowSlug": "saas-multi-tenancy",
+  "policies": [
+    {
+      "policyId": "saas-multi-tenancy-public-preview",
+      "route": "GET /api/dynamic/saas-multi-tenancy/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/saas-multi-tenancy/public-preview"
+      ],
+      "bypassReason": "Public marketplace previews are intentionally readable before login."
+    },
+    {
+      "policyId": "saas-multi-tenancy-provision",
+      "route": "POST /api/dynamic/saas-multi-tenancy",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "tenant_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "saas-multi-tenancy-config-update",
+      "route": "POST /api/dynamic/saas-multi-tenancy/config",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "saas-multi-tenancy-quota-materialize",
+      "route": "POST /api/dynamic/saas-multi-tenancy/quotas/materialize",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "saas-multi-tenancy-lifecycle",
+      "route": "POST /api/dynamic/saas-multi-tenancy/lifecycle",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "saas-multi-tenancy-dashboard",
+      "route": "GET /api/dynamic/saas-multi-tenancy/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}
+

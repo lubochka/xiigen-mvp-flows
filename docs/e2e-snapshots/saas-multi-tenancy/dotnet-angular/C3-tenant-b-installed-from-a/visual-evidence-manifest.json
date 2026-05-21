@@ -1,0 +1,169 @@
+{
+  "cascadePoint": "C3-tenant-b-installed-from-a",
+  "moduleName": "acme-workspace-control",
+  "count": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=anonymous&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=anonymous&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=anonymous&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_user&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_user&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_user&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=referral_user&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=referral_user&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=referral_user&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=freelancer&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=freelancer&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=freelancer&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=business_partner&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=business_partner&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=business_partner&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=event_organiser&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=event_organiser&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=event_organiser&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_admin&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_admin&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=tenant_admin&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=platform_admin&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=platform_admin&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=platform_admin&state=advanced&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=platform_support&state=general&lang=en&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4315/?role=platform_support&state=members&lang=he&module=acme-workspace-control"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-workspace-control\\docs\\e2e-snapshots\\saas-multi-tenancy\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4315/?role=platform_support&state=advanced&lang=en&module=acme-workspace-control"
+    }
+  ]
+}

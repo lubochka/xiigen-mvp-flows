@@ -1,0 +1,13 @@
+﻿{
+  "flowId": "FLOW-15",
+  "flowSlug": "saas-multi-tenancy",
+  "api": {
+    "localUrl": "http://127.0.0.1:5313",
+    "containerUrl": "http://127.0.0.1:5313"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4315",
+    "evidencePort": 4315
+  }
+}
+

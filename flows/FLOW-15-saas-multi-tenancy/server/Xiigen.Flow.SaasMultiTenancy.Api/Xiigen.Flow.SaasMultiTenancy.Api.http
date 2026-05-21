@@ -1,0 +1,64 @@
+@Xiigen.Flow.SaasMultiTenancy.Api_HostAddress = http://localhost:5315
+
+GET {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/api/dynamic/saas-multi-tenancy/public-preview
+
+###
+
+POST {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/api/dynamic/saas-multi-tenancy
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-provision
+Content-Type: application/json
+
+{
+  "tenantSlug": "acme-workspace",
+  "workspaceName": "Acme Workspace",
+  "subscriptionTier": "growth",
+  "billingContact": "finance@example.test",
+  "operatorId": "operator-1"
+}
+
+###
+
+POST {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/api/dynamic/saas-multi-tenancy/config
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+Content-Type: application/json
+
+{
+  "key": "branding_primary_color",
+  "value": "#2457a6",
+  "operatorId": "operator-1"
+}
+
+###
+
+POST {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/api/dynamic/saas-multi-tenancy/quotas/materialize
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+Content-Type: application/json
+
+{
+  "subscriptionTier": "growth"
+}
+
+###
+
+POST {{Xiigen.Flow.SaasMultiTenancy.Api_HostAddress}}/api/dynamic/saas-multi-tenancy/lifecycle
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+Content-Type: application/json
+
+{
+  "action": "SUSPEND",
+  "currentStatus": "ACTIVE",
+  "reason": "payment-risk"
+}
