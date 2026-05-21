@@ -1,0 +1,124 @@
+<main class="subscription-billing-shell" [attr.dir]="language() === 'he' ? 'rtl' : 'ltr'">
+  <section class="topbar" [attr.data-testid]="roleTestId()">
+    <div>
+      <p class="eyebrow">{{ translated('Subscription Billing') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="lede">
+        Publish subscription plans, activate vault-backed payment methods, charge recurring invoices, and keep revenue analytics readable for every tenant.
+      </p>
+    </div>
+    <aside class="role-panel">
+      <span>{{ translated('Role') }}</span>
+      <strong>{{ roleLabel(role()) }}</strong>
+      <p>{{ roleHeading() }}</p>
+      <button type="button">{{ roleCta() }}</button>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="Subscription Billing controls">
+    <label>
+      <span>{{ translated('Role') }}</span>
+      <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+        <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+      </select>
+    </label>
+    <div class="segmented" aria-label="Subscription Billing states">
+      <button type="button" [class.active]="screenState() === 'dashboard'" (click)="setScreenState('dashboard')">{{ translated('Dashboard') }}</button>
+      <button type="button" [class.active]="screenState() === 'subscribe'" (click)="setScreenState('subscribe')">{{ translated('Subscribe') }}</button>
+      <button type="button" [class.active]="screenState() === 'plan'" (click)="setScreenState('plan')">{{ translated('Plan setup') }}</button>
+    </div>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" [class.active]="language() === 'en'" (click)="applyLanguage('en')">EN</button>
+      <button type="button" [class.active]="language() === 'he'" (click)="applyLanguage('he')">HE</button>
+    </div>
+  </section>
+
+  <section *ngIf="screenState() === 'dashboard'" class="dashboard" data-testid="billing-dashboard-page">
+    <article class="metric-card" data-testid="mrr-metric-card">
+      <span>{{ translated('Billing dashboard') }}</span>
+      <strong data-testid="mrr-value">$13,000</strong>
+      <p>Revenue is normalized monthly and excludes subscriber identifiers from the aggregate record.</p>
+    </article>
+    <article class="metric-card" *ngFor="let metric of metrics">
+      <span>{{ metric.label }}</span>
+      <strong>{{ metric.value }}</strong>
+      <p>{{ metric.detail }}</p>
+    </article>
+    <section class="invoice-panel" data-testid="invoice-list">
+      <header>
+        <h2>Recent invoices</h2>
+        <p>Charge events appear only after invoice state and audit evidence are stored.</p>
+      </header>
+      <div class="invoice-empty" data-testid="invoice-empty">No hidden invoice rows. Empty states remain explicit when filters remove every result.</div>
+      <table>
+        <thead>
+          <tr><th>Invoice</th><th>Customer</th><th>Amount</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let invoice of invoices">
+            <td>{{ invoice.id }}</td>
+            <td>{{ invoice.customer }}</td>
+            <td>{{ invoice.amount }}</td>
+            <td>{{ invoice.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <section *ngIf="screenState() === 'subscribe'" class="subscribe-layout" data-testid="subscribe-page">
+    <form class="surface" data-testid="subscribe-form">
+      <h2>{{ translated('Activate subscription') }}</h2>
+      <label>
+        <span>Plan</span>
+        <select data-testid="plan-select" [ngModel]="selectedPlan()" name="plan" (ngModelChange)="setSelectedPlan($event)">
+          <option *ngFor="let plan of planCards" [ngValue]="plan.id">{{ plan.name }} · {{ plan.price }} / {{ plan.interval }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Payment method') }}</span>
+        <input data-testid="payment-method-input" [ngModel]="paymentMethod()" name="paymentMethod" (ngModelChange)="setPaymentMethod($event)" />
+      </label>
+      <div class="form-error" data-testid="subscribe-error">{{ subscribeError() }}</div>
+      <button data-testid="subscribe-button" type="button">Activate with vaulted method</button>
+    </form>
+    <article class="surface plan-summary">
+      <span>{{ activePlan().status }}</span>
+      <h2>{{ activePlan().name }}</h2>
+      <strong>{{ activePlan().price }} / {{ activePlan().interval }}</strong>
+      <p>{{ activePlan().detail }}</p>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'plan'" class="plan-layout">
+    <form class="surface" data-testid="plan-publish-form">
+      <h2>{{ translated('Publish plan') }}</h2>
+      <label>
+        <span>{{ translated('Plan identifier') }}</span>
+        <input data-testid="plan-id-input" value="growth" />
+      </label>
+      <label>
+        <span>{{ translated('Plan name') }}</span>
+        <input data-testid="plan-name-input" value="Growth ledger" />
+      </label>
+      <label>
+        <span>{{ translated('Billing interval') }}</span>
+        <select data-testid="billing-interval-select">
+          <option>month</option>
+          <option>year</option>
+        </select>
+      </label>
+      <div class="form-error" data-testid="form-error">Prices must be positive integer cents before publication.</div>
+      <div class="conflict" data-testid="occ-conflict-error">If another operator publishes the same plan first, this session shows the current version and asks for a retry.</div>
+      <button type="button">Store plan and publish event</button>
+    </form>
+    <div class="plan-grid">
+      <article class="plan-card" *ngFor="let plan of planCards">
+        <span>{{ plan.status }}</span>
+        <h2>{{ plan.name }}</h2>
+        <strong>{{ plan.price }} / {{ plan.interval }}</strong>
+        <p>{{ plan.detail }}</p>
+      </article>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-12/subscription-billing-response.schema.json",
+  "title": "FLOW-12 Subscription Billing Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "planId": { "type": "string" },
+    "subscriptionId": { "type": "string" },
+    "invoiceId": { "type": "string" },
+    "status": { "type": "string" },
+    "versionPin": { "type": "string" },
+    "paymentMethodRef": { "type": "string" },
+    "paymentReference": { "type": "string" },
+    "monthly_recurring_revenue_cents": { "type": "integer" },
+    "retryAfterMs": { "type": "integer" },
+    "code": { "type": "string" },
+    "message": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

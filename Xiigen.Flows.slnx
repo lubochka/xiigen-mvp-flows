@@ -84,4 +84,11 @@
     <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Infrastructure/Xiigen.Flow.SchemaRegistryDag.Infrastructure.csproj" />
     <Project Path="flows/FLOW-11-schema-registry-dag/server/Xiigen.Flow.SchemaRegistryDag.Tests/Xiigen.Flow.SchemaRegistryDag.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-12-subscription-billing/" />
+  <Folder Name="/flows/FLOW-12-subscription-billing/server/">
+    <Project Path="flows/FLOW-12-subscription-billing/server/Xiigen.Flow.SubscriptionBilling.Api/Xiigen.Flow.SubscriptionBilling.Api.csproj" />
+    <Project Path="flows/FLOW-12-subscription-billing/server/Xiigen.Flow.SubscriptionBilling.Application/Xiigen.Flow.SubscriptionBilling.Application.csproj" />
+    <Project Path="flows/FLOW-12-subscription-billing/server/Xiigen.Flow.SubscriptionBilling.Infrastructure/Xiigen.Flow.SubscriptionBilling.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-12-subscription-billing/server/Xiigen.Flow.SubscriptionBilling.Tests/Xiigen.Flow.SubscriptionBilling.Tests.csproj" />
+  </Folder>
 </Solution>

@@ -1,0 +1,39 @@
+@Xiigen.Flow.SubscriptionBilling.Api_HostAddress = http://localhost:5312
+
+GET {{Xiigen.Flow.SubscriptionBilling.Api_HostAddress}}/health/ready
+
+###
+
+GET {{Xiigen.Flow.SubscriptionBilling.Api_HostAddress}}/api/dynamic/subscription-billing/public-preview
+
+###
+
+POST {{Xiigen.Flow.SubscriptionBilling.Api_HostAddress}}/api/dynamic/subscription-billing
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-plan
+Content-Type: application/json
+
+{
+  "planId": "growth",
+  "planName": "Growth ledger",
+  "priceCents": 9900,
+  "currency": "USD",
+  "billingInterval": "month"
+}
+
+###
+
+POST {{Xiigen.Flow.SubscriptionBilling.Api_HostAddress}}/api/dynamic/subscription-billing/subscribe
+Authorization: Bearer tenant:acme-corp:local
+X-Tenant-Id: acme-corp
+X-Role: tenant_user
+X-Idempotency-Key: demo-subscription
+Content-Type: application/json
+
+{
+  "planId": "growth",
+  "subscriberId": "subscriber-1",
+  "paymentMethodId": "pm_card_visa"
+}

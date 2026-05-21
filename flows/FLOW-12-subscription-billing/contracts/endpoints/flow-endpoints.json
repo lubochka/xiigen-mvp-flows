@@ -1,0 +1,96 @@
+{
+  "flowId": "FLOW-12",
+  "flowSlug": "subscription-billing",
+  "endpoints": [
+    {
+      "endpointId": "subscription-billing-plan-publish",
+      "method": "POST",
+      "path": "/api/dynamic/subscription-billing",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "requestSchema": "contracts/schemas/subscription-billing-request.schema.json",
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json"
+    },
+    {
+      "endpointId": "subscription-billing-subscribe",
+      "method": "POST",
+      "path": "/api/dynamic/subscription-billing/subscribe",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/subscription-billing-request.schema.json",
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json"
+    },
+    {
+      "endpointId": "subscription-billing-cycle",
+      "method": "POST",
+      "path": "/api/dynamic/subscription-billing/billing-cycle",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "requestSchema": "contracts/schemas/subscription-billing-request.schema.json",
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json"
+    },
+    {
+      "endpointId": "subscription-billing-cancel",
+      "method": "POST",
+      "path": "/api/dynamic/subscription-billing/cancel",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/subscription-billing-request.schema.json",
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json"
+    },
+    {
+      "endpointId": "subscription-billing-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/subscription-billing/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json"
+    },
+    {
+      "endpointId": "subscription-billing-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/subscription-billing/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/subscription-billing-response.schema.json",
+      "bypassReason": "public marketplace preview"
+    }
+  ]
+}

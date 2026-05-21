@@ -1,0 +1,72 @@
+{
+  "flowId": "FLOW-12",
+  "flowSlug": "subscription-billing",
+  "policies": [
+    {
+      "policyId": "subscription-billing-public-preview",
+      "route": "GET /api/dynamic/subscription-billing/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/subscription-billing/public-preview"
+      ],
+      "bypassReason": "Public marketplace previews are intentionally readable before login."
+    },
+    {
+      "policyId": "subscription-billing-plan-publish",
+      "route": "POST /api/dynamic/subscription-billing",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "subscription-billing-subscribe",
+      "route": "POST /api/dynamic/subscription-billing/subscribe",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "subscription-billing-cycle",
+      "route": "POST /api/dynamic/subscription-billing/billing-cycle",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin",
+        "platform_support",
+        "business_partner"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "subscription-billing-dashboard",
+      "route": "GET /api/dynamic/subscription-billing/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "referral_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

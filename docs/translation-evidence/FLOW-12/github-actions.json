@@ -1,0 +1,44 @@
+[
+    {
+        "repo":  "tenant-a--subscription-billing",
+        "runId":  26208190220,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--subscription-billing/actions/runs/26208190220"
+    },
+    {
+        "repo":  "tenant-a--acme-billing-ops",
+        "runId":  26208264487,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-a--acme-billing-ops/actions/runs/26208264487"
+    },
+    {
+        "repo":  "tenant-b--acme-billing-ops",
+        "runId":  26208339385,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--acme-billing-ops/actions/runs/26208339385"
+    },
+    {
+        "repo":  "tenant-b--northwind-recurring-revenue",
+        "runId":  26208409382,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-b--northwind-recurring-revenue/actions/runs/26208409382"
+    },
+    {
+        "repo":  "tenant-c--northwind-recurring-revenue",
+        "runId":  26208486455,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--northwind-recurring-revenue/actions/runs/26208486455"
+    },
+    {
+        "repo":  "tenant-c--tessera-ledger-billing",
+        "runId":  26208567583,
+        "status":  "completed",
+        "conclusion":  "success",
+        "url":  "https://github.com/lubochka/tenant-c--tessera-ledger-billing/actions/runs/26208567583"
+    }
+]

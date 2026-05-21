@@ -1,0 +1,57 @@
+{
+    "flowId":  "FLOW-12",
+    "flowSlug":  "subscription-billing",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "portabilityStatus":  "PASS",
+    "authenticationStatus":  "PASS",
+    "tenantCertificationTier":  "Tier D",
+    "sourceRepo":  "C:\\Projects\\xiigen-flows-dot-net-angular",
+    "flowPath":  "flows/FLOW-12-subscription-billing",
+    "functionalCoverage":  {
+                               "existingCfRules":  [
+                                                       "CF-12-1",
+                                                       "CF-12-2",
+                                                       "CF-12-3",
+                                                       "CF-12-4"
+                                                   ],
+                               "newCfRules":  [
+                                                  "CF-929",
+                                                  "CF-930",
+                                                  "CF-931",
+                                                  "CF-932",
+                                                  "CF-933",
+                                                  "CF-934"
+                                              ],
+                               "serverTests":  15,
+                               "angularTests":  5,
+                               "status":  "PASS"
+                           },
+    "evidence":  {
+                     "dockerAuthMatrix":  "docs/translation-evidence/FLOW-12/docker-auth-matrix.json",
+                     "githubActions":  "docs/translation-evidence/FLOW-12/github-actions.json",
+                     "visualCounts":  "docs/translation-evidence/FLOW-12/visual-counts.json",
+                     "packageReadback":  "docs/translation-evidence/FLOW-12/package-readback.json",
+                     "layer8Cascade":  "docs/translation-evidence/FLOW-12/layer8-cascade-evidence.json",
+                     "crossTenantJwtIsolation":  "docs/translation-evidence/FLOW-12/cross-tenant-jwt-isolation.json",
+                     "codeReviewGate":  "docs/translation-evidence/FLOW-12/code-review-gate.json",
+                     "uiLanguageGate":  "docs/translation-evidence/FLOW-12/ui-language-gate.json",
+                     "qaReview":  "docs/translation-evidence/FLOW-12/qa-review.md"
+                 },
+    "cascade":  {
+                    "expectedPng":  189,
+                    "actualPng":  189,
+                    "repositories":  [
+                                         "https://github.com/lubochka/tenant-a--subscription-billing",
+                                         "https://github.com/lubochka/tenant-a--acme-billing-ops",
+                                         "https://github.com/lubochka/tenant-b--acme-billing-ops",
+                                         "https://github.com/lubochka/tenant-b--northwind-recurring-revenue",
+                                         "https://github.com/lubochka/tenant-c--northwind-recurring-revenue",
+                                         "https://github.com/lubochka/tenant-c--tessera-ledger-billing"
+                                     ],
+                    "githubActionsConclusion":  "success"
+                },
+    "openIssues":  [
+
+                   ]
+}

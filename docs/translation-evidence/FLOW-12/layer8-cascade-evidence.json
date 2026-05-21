@@ -1,0 +1,81 @@
+{
+    "flowId":  "FLOW-12",
+    "cascade":  [
+                    {
+                        "repo":  "tenant-a--subscription-billing",
+                        "url":  "https://github.com/lubochka/tenant-a--subscription-billing",
+                        "commit":  "fa9a87f21537aa1ee2b82c99ac6ae211036cec36",
+                        "cascadePoint":  "C1-tenant-a-installed",
+                        "version":  "0.1.1",
+                        "mode":  "installed",
+                        "moduleName":  "subscription-billing",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    },
+                    {
+                        "repo":  "tenant-a--acme-billing-ops",
+                        "url":  "https://github.com/lubochka/tenant-a--acme-billing-ops",
+                        "commit":  "a65787505974b42daeef05551bd425f7980c282b",
+                        "cascadePoint":  "C2-tenant-a-adapted-published",
+                        "version":  "0.1.2",
+                        "mode":  "adapted-published",
+                        "moduleName":  "acme-billing-ops",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    },
+                    {
+                        "repo":  "tenant-b--acme-billing-ops",
+                        "url":  "https://github.com/lubochka/tenant-b--acme-billing-ops",
+                        "commit":  "1c8e8df3107ed67a25b47b453821ba0ce243d10b",
+                        "cascadePoint":  "C3-tenant-b-installed-from-a",
+                        "version":  "0.1.2",
+                        "mode":  "installed-from-tenant-a",
+                        "moduleName":  "acme-billing-ops",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    },
+                    {
+                        "repo":  "tenant-b--northwind-recurring-revenue",
+                        "url":  "https://github.com/lubochka/tenant-b--northwind-recurring-revenue",
+                        "commit":  "4d4ed6a224c2028157267a93529530c45f21dbb6",
+                        "cascadePoint":  "C4-tenant-b-adapted-published",
+                        "version":  "0.1.3",
+                        "mode":  "adapted-published",
+                        "moduleName":  "northwind-recurring-revenue",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    },
+                    {
+                        "repo":  "tenant-c--northwind-recurring-revenue",
+                        "url":  "https://github.com/lubochka/tenant-c--northwind-recurring-revenue",
+                        "commit":  "2ebb1a60fe7f2d7d75d4924a25efb4f7c53da233",
+                        "cascadePoint":  "C5-tenant-c-installed-from-b",
+                        "version":  "0.1.3",
+                        "mode":  "installed-from-tenant-b",
+                        "moduleName":  "northwind-recurring-revenue",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    },
+                    {
+                        "repo":  "tenant-c--tessera-ledger-billing",
+                        "url":  "https://github.com/lubochka/tenant-c--tessera-ledger-billing",
+                        "commit":  "8a213cd471ea3a6a9ac0beaea816987dc98b9ddc",
+                        "cascadePoint":  "C6-tenant-c-adapted",
+                        "version":  "0.1.4",
+                        "mode":  "adapted",
+                        "moduleName":  "tessera-ledger-billing",
+                        "localDotnetTests":  "15/15",
+                        "localAngularTests":  "5/5",
+                        "pngCount":  27
+                    }
+                ],
+    "crossTenantJwtIsolation":  {
+                                    "status":  401,
+                                    "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                                }
+}

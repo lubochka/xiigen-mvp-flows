@@ -1,0 +1,71 @@
+{
+    "flowId":  "FLOW-12",
+    "generatedAt":  "2026-05-21T05:49:06.3909978Z",
+    "baseUrl":  "http://127.0.0.1:5312",
+    "cases":  [
+                  {
+                      "name":  "public-preview-anonymous-200",
+                      "status":  200,
+                      "expected":  200,
+                      "pass":  true,
+                      "body":  "{\"flow\":\"FLOW-12\",\"summary\":\"Publish subscription plans, activate vault-backed subscriptions, charge recurring invoices, and report revenue.\",\"states\":[\"plan\",\"subscription\",\"billing-cycle\",\"analytics\"]}"
+                  },
+                  {
+                      "name":  "missing-token-401",
+                      "status":  401,
+                      "expected":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role-403",
+                      "status":  403,
+                      "expected":  403,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_WRONG_ROLE\"}"
+                  },
+                  {
+                      "name":  "cross-tenant-401",
+                      "status":  401,
+                      "expected":  401,
+                      "pass":  true,
+                      "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "plan-valid-201",
+                      "status":  201,
+                      "expected":  201,
+                      "pass":  true,
+                      "body":  "{\"planId\":\"docker-growth\",\"status\":\"ACTIVE\",\"versionPin\":\"1\",\"priceCents\":9900,\"billingInterval\":\"month\"}"
+                  },
+                  {
+                      "name":  "plan-idempotency-replay-200",
+                      "status":  200,
+                      "expected":  200,
+                      "pass":  true,
+                      "body":  "{\"planId\":\"docker-growth\",\"status\":\"ACTIVE\",\"versionPin\":\"1\",\"priceCents\":9900,\"billingInterval\":\"month\"}"
+                  },
+                  {
+                      "name":  "plan-invalid-400",
+                      "status":  400,
+                      "expected":  400,
+                      "pass":  true,
+                      "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"planId\",\"reason\":\"required\"},{\"field\":\"planName\",\"reason\":\"required\"},{\"field\":\"priceCents\",\"reason\":\"positive-integer-cents-required\"},{\"field\":\"billingInterval\",\"reason\":\"month-or-year-required\"}]}"
+                  },
+                  {
+                      "name":  "subscribe-valid-201",
+                      "status":  201,
+                      "expected":  201,
+                      "pass":  true,
+                      "body":  "{\"subscriptionId\":\"sub-acme-corp-subscriber-docker-docker-growth\",\"planId\":\"docker-growth\",\"status\":\"ACTIVE\",\"paymentMethodRef\":\"vault://payment-methods/pm_card\",\"versionPin\":\"1\"}"
+                  },
+                  {
+                      "name":  "billing-cycle-valid-200",
+                      "status":  200,
+                      "expected":  200,
+                      "pass":  true,
+                      "body":  "{\"invoiceId\":\"inv-acme-corp-sub-acme-corp-subscriber-docker-docker-growth-2026-05\",\"subscriptionId\":\"sub-acme-corp-subscriber-docker-docker-growth\",\"status\":\"CHARGED\",\"paymentReference\":\"payref-inv-acme-corp-sub-acme-corp-subscriber-docker-docker-growth-2026-05\",\"versionPin\":\"1\"}"
+                  }
+              ],
+    "passed":  true
+}

@@ -1,0 +1,77 @@
+{
+    "flowId":  "FLOW-12",
+    "verdict":  "APPROVED",
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "command":  "rg -n using (Elastic|RabbitMQ|MassTransit|StackExchange|Stripe|Azure|Amazon|NEST)|new (Elastic|RabbitMQ|Redis|Stripe|Amazon) flows\\FLOW-12-subscription-billing\\server -g \u0027*.cs\u0027",
+                       "exitCode":  1,
+                       "hitCount":  0,
+                       "hits":  [
+
+                                ]
+                   },
+                   {
+                       "name":  "no-business-throws",
+                       "command":  "rg -n throw new|throw\\s flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application -g \u0027*.cs\u0027",
+                       "exitCode":  1,
+                       "hitCount":  0,
+                       "hits":  [
+
+                                ]
+                   }
+               ],
+    "microserviceBase":  {
+                             "hitCount":  1,
+                             "hits":  [
+                                          "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:10:public sealed class SubscriptionBillingService : MicroserviceBase\u003cSubscriptionBillingService\u003e"
+                                      ]
+                         },
+    "dataProcessResult":  {
+                              "hitCount":  8,
+                              "hits":  [
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingResults.cs:39:    Task\u003cXiigen.Kernel.DataProcessResult\u003cPaymentValidationResult\u003e\u003e ValidateAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingResults.cs:43:    Task\u003cXiigen.Kernel.DataProcessResult\u003cPaymentChargeResult\u003e\u003e ChargeAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:44:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingOutcome\u003e\u003e PublishPlanAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:148:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingOutcome\u003e\u003e SubscribeAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:240:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingOutcome\u003e\u003e ProcessBillingCycleAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:390:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingOutcome\u003e\u003e CancelSubscriptionAsync(",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:430:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingOutcome\u003e\u003e RecalculateMrrAsync(CancellationToken cancellationToken = default)",
+                                           "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:458:    public async Task\u003cDataProcessResult\u003cSubscriptionBillingDashboard\u003e\u003e GetDashboardAsync(CancellationToken cancellationToken = default)"
+                                       ]
+                          },
+    "outboxAndCloudEvents":  {
+                                 "hitCount":  25,
+                                 "hits":  [
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:68:        var reservation = await _idempotency.TryReserveAsync(operationKey, IdempotencyTtl, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:88:            await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.TimeoutRetainedEvent, planId, body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:122:            var stored = await _documents.UpsertAsync(SubscriptionBillingConstants.Plans, PlanDocumentId(planId), planBody, ifMatch, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:138:            await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.PlanPublishedEvent, planId, response), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:139:            await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:172:        var reservation = await _idempotency.TryReserveAsync(operationKey, IdempotencyTtl, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:198:            await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.SubscriptionRejectedEvent, subscriberId, body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:219:        var stored = await _documents.UpsertAsync(SubscriptionBillingConstants.Subscriptions, SubscriptionDocumentId(subscriptionId), bodyToStore, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:235:        await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.SubscriptionActivatedEvent, subscriptionId, response), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:236:        await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:274:        var reservation = await _idempotency.TryReserveAsync(operationKey, IdempotencyTtl, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:291:            await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.InvoiceVoidedEvent, subscriptionId, voided), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:292:            await _idempotency.MarkSucceededAsync(operationKey, voided, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:320:                await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.TimeoutRetainedEvent, invoiceId, timeout), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:345:                await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.InvoiceChargeFailedEvent, invoiceId, failed), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:346:                await _idempotency.MarkSucceededAsync(operationKey, failed, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:364:            var stored = await _documents.UpsertAsync(SubscriptionBillingConstants.Invoices, invoiceId, invoice, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:380:            await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.InvoiceChargedEvent, invoiceId, response), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:381:            await _idempotency.MarkSucceededAsync(operationKey, response, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:413:        var stored = await _documents.UpsertAsync(SubscriptionBillingConstants.Subscriptions, SubscriptionDocumentId(subscriptionId), updated, subscription.Data.Version, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:426:        await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.SubscriptionCancelledEvent, subscriptionId, response), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:453:        await _documents.UpsertAsync(SubscriptionBillingConstants.MrrMetrics, \"active\", body, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:454:        await _outbox.AppendAsync(CreateEvent(SubscriptionBillingConstants.MrrRecordedEvent, \"active\", body), cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:510:        await _documents.UpsertAsync(SubscriptionBillingConstants.BillingAudits, id, audit, null, cancellationToken).ConfigureAwait(false);",
+                                              "flows\\FLOW-12-subscription-billing\\server\\Xiigen.Flow.SubscriptionBilling.Application\\SubscriptionBillingService.cs:513:    private CloudEventEnvelope CreateEvent("
+                                          ]
+                             },
+    "acceptedTenantMentions":  [
+                                   "Program.cs local test token parser",
+                                   "SubscriptionBillingService rejects tenantId payload fields; service methods do not accept tenant id parameters"
+                               ]
+}

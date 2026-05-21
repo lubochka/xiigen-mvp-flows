@@ -1,0 +1,18 @@
+{
+    "flowId":  "FLOW-12",
+    "localRegistry":  "artifacts/nuget/FLOW-12",
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.SubscriptionBilling.Application.0.1.1.nupkg",
+                         "Length":  25768,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-12\\Xiigen.Flow.SubscriptionBilling.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SubscriptionBilling.Infrastructure.0.1.1.nupkg",
+                         "Length":  5315,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-12\\Xiigen.Flow.SubscriptionBilling.Infrastructure.0.1.1.nupkg"
+                     }
+                 ],
+    "packageCount":  2,
+    "passed":  true
+}

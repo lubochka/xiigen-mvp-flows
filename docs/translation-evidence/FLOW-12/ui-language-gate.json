@@ -1,0 +1,10 @@
+{
+    "flowId":  "FLOW-12",
+    "verdict":  "APPROVED",
+    "command":  "rg -n \\bBFA\\b|\\bDNA-[1-9]\\b|AF[- ]station|arbiter|FREEDOM config|MACHINE code|DataProcessResult|ENGINE_INTERNAL|\\bT[0-9]{3}\\b|\\bCF-[0-9]{3}\\b flows/FLOW-12-subscription-billing/client/angular/src",
+    "hitCount":  0,
+    "hits":  [
+
+             ],
+    "hebrewRtlEvidence":  "docs/e2e-snapshots/subscription-billing/dotnet-angular/C0-source-flow/tenant-admin-C4-he-rtl-populated-desktop.png"
+}

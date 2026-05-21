@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-12/subscription-billing-request.schema.json",
+  "title": "FLOW-12 Subscription Billing Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] }
+    ]
+  },
+  "properties": {
+    "planId": { "type": "string", "minLength": 1 },
+    "planName": { "type": "string", "minLength": 1 },
+    "priceCents": { "type": "integer", "minimum": 1 },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "billingInterval": { "type": "string", "enum": ["month", "year"] },
+    "subscriberId": { "type": "string", "minLength": 1 },
+    "subscriptionId": { "type": "string", "minLength": 1 },
+    "paymentMethodId": { "type": "string", "minLength": 1 },
+    "paymentMethodToken": false,
+    "period": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+    "trialDays": { "type": "integer", "minimum": 0 },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "paymentDeclined": { "type": "boolean" }
+  }
+}

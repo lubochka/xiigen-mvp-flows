@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-12",
+  "flowSlug": "subscription-billing",
+  "api": {
+    "localUrl": "http://127.0.0.1:5312",
+    "containerUrl": "http://127.0.0.1:5312"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4312",
+    "evidencePort": 4312
+  }
+}

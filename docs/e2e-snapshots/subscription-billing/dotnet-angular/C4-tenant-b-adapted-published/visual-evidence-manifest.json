@@ -1,0 +1,169 @@
+{
+  "cascadePoint": "C4-tenant-b-adapted-published",
+  "moduleName": "northwind-recurring-revenue",
+  "count": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=anonymous&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=anonymous&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=anonymous&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_user&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_user&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_user&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=referral_user&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=referral_user&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=referral_user&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=freelancer&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=freelancer&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=freelancer&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=business_partner&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=business_partner&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=business_partner&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=event_organiser&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=event_organiser&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=event_organiser&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_admin&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_admin&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=tenant_admin&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=platform_admin&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=platform_admin&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=platform_admin&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=platform_support&state=plan&lang=en&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4312/?role=platform_support&state=subscribe&lang=he&module=northwind-recurring-revenue"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-recurring-revenue\\docs\\e2e-snapshots\\subscription-billing\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4312/?role=platform_support&state=dashboard&lang=en&module=northwind-recurring-revenue"
+    }
+  ]
+}
