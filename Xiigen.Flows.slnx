@@ -133,4 +133,11 @@
     <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Infrastructure/Xiigen.Flow.VisualFlowEngine.Infrastructure.csproj" />
     <Project Path="flows/FLOW-18-visual-flow-engine/server/Xiigen.Flow.VisualFlowEngine.Tests/Xiigen.Flow.VisualFlowEngine.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-19-durable-sagas-compliance/" />
+  <Folder Name="/flows/FLOW-19-durable-sagas-compliance/server/">
+    <Project Path="flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Api/Xiigen.Flow.DurableSagasCompliance.Api.csproj" />
+    <Project Path="flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application/Xiigen.Flow.DurableSagasCompliance.Application.csproj" />
+    <Project Path="flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Infrastructure/Xiigen.Flow.DurableSagasCompliance.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Tests/Xiigen.Flow.DurableSagasCompliance.Tests.csproj" />
+  </Folder>
 </Solution>

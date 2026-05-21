@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-19/durable-sagas-compliance-request.schema.json",
+  "title": "FLOW-19 Durable Sagas Compliance Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] },
+      { "required": ["masterTenantId"] },
+      { "required": ["master_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "sagaId": { "type": "string", "minLength": 1 },
+    "sagaType": { "type": "string", "minLength": 1 },
+    "expectedVersion": { "type": "string" },
+    "steps": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["id", "taskTypeId", "responsibility", "config"],
+        "additionalProperties": true,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "taskTypeId": {
+            "type": "string",
+            "enum": ["T621", "T622", "T623", "T624"]
+          },
+          "name": { "type": "string" },
+          "responsibility": { "type": "string", "minLength": 1 },
+          "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "not": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "providerSdkImport": { "const": true }
+                  },
+                  "required": ["providerSdkImport"]
+                },
+                {
+                  "properties": {
+                    "entitySpecificController": { "const": true }
+                  },
+                  "required": ["entitySpecificController"]
+                }
+              ]
+            },
+            "properties": {
+              "returns": { "const": "DataProcessResult" }
+            }
+          },
+          "compensation": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "eventType": { "type": "string", "minLength": 1 },
+    "actor": { "type": "string" },
+    "payload": { "type": "object", "additionalProperties": true },
+    "legalHoldActive": { "type": "boolean" },
+    "auditId": { "type": "string", "minLength": 1 },
+    "forceExpiredForTest": { "type": "boolean" },
+    "recordEstimate": { "type": "integer", "minimum": 0 },
+    "format": { "type": "string", "enum": ["csv", "json", "pdf"] },
+    "simulateSlowWrite": { "type": "boolean" },
+    "simulateFabricTimeout": { "type": "boolean" },
+    "simulateCompensationFailureAt": { "type": "string" }
+  }
+}

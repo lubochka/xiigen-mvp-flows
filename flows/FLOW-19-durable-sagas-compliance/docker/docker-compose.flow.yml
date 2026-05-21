@@ -1,0 +1,9 @@
+services:
+  FLOW-19-durable-sagas-compliance-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Api/Dockerfile
+    ports:
+      - "5317:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,24 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "portabilityTier":  "Tier D",
+    "status":  "GREEN",
+    "generatedAt":  "2026-05-21T16:38:18.2854706Z",
+    "tests":  {
+                  "dotnetSolution":  "PASS",
+                  "angularUnit":  "PASS",
+                  "angularBuild":  "PASS",
+                  "liveAuthMatrix":  "PASS",
+                  "githubActionsCascade":  "PASS"
+              },
+    "evidence":  {
+                     "visualCounts":  "docs/translation-evidence/FLOW-19/visual-counts.json",
+                     "dockerAuthMatrix":  "docs/translation-evidence/FLOW-19/docker-auth-matrix.json",
+                     "githubActionsCascade":  "docs/translation-evidence/FLOW-19/github-actions-cascade.json",
+                     "layer8Cascade":  "docs/translation-evidence/FLOW-19/layer8-cascade-evidence.json",
+                     "packageReadback":  "docs/translation-evidence/FLOW-19/package-readback.json",
+                     "crossTenantJwt":  "docs/translation-evidence/FLOW-19/cross-tenant-jwt-isolation.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-19/code-review-gate.json",
+                     "qaReview":  "docs/translation-evidence/FLOW-19/qa-review.md"
+                 }
+}

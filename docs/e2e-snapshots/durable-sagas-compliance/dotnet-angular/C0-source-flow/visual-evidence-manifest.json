@@ -1,0 +1,187 @@
+{
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "durable-sagas-compliance",
+  "count": 30,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=anonymous&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=anonymous&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=anonymous&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_user&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_user&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_user&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_admin&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_admin&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_admin&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_consumer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-consumer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_consumer&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_consumer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-consumer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_consumer&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_consumer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-consumer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_consumer&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_ops",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-ops-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_ops&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_ops",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-ops-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_ops&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "tenant_ops",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\tenant-ops-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=tenant_ops&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "saga_operator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\saga-operator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=saga_operator&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "saga_operator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\saga-operator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=saga_operator&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "saga_operator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\saga-operator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=saga_operator&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "compliance_officer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\compliance-officer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=compliance_officer&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "compliance_officer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\compliance-officer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=compliance_officer&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "compliance_officer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\compliance-officer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=compliance_officer&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_ops",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-ops-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_ops&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_ops",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-ops-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_ops&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_ops",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-ops-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=platform_ops&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_admin&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_admin&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=platform_admin&state=compliance&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_support&state=operations&lang=en&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4318/?role=platform_support&state=sagas&lang=he&module=durable-sagas-compliance"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4318/?role=platform_support&state=compliance&lang=en&module=durable-sagas-compliance"
+    }
+  ]
+}

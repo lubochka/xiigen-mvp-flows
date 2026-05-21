@@ -1,0 +1,55 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "generatedAt":  "2026-05-21T16:38:18.2854706Z",
+    "roles":  10,
+    "cellsPerRole":  3,
+    "cascadePoints":  7,
+    "expectedTotalPng":  210,
+    "actualTotalPng":  210,
+    "pass":  true,
+    "points":  [
+                   {
+                       "cascadePoint":  "C0-source-flow",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C1-tenant-a-installed",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C2-tenant-a-adapted-published",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C3-tenant-b-installed-from-a",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C4-tenant-b-adapted-published",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C5-tenant-c-installed-from-b",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C6-tenant-c-adapted",
+                       "expectedPng":  30,
+                       "actualPng":  30,
+                       "manifest":  "docs\\e2e-snapshots\\durable-sagas-compliance\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                   }
+               ]
+}

@@ -1,0 +1,44 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "generatedAt":  "2026-05-21T16:38:18.2854706Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "hits":  0,
+                       "command":  "rg -n \"Elastic\\.Clients|NEST|RabbitMQ\\.Client|StackExchange\\.Redis|Stripe|SendGrid|Twilio|AWS|Azure\\.Messaging\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application",
+                       "name":  "provider SDK imports absent from application",
+                       "pass":  true
+                   },
+                   {
+                       "hits":  0,
+                       "command":  "rg -n \"string\\s+tenantId|Guid\\s+tenantId|tenantId\\s*,\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application",
+                       "name":  "no free tenant id arguments",
+                       "pass":  true
+                   },
+                   {
+                       "hits":  0,
+                       "command":  "rg -n \"throw new|throw;\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application",
+                       "name":  "no business throws",
+                       "pass":  true
+                   },
+                   {
+                       "hits":  1,
+                       "command":  "rg -n \"class DurableSagasComplianceService : MicroserviceBase\u003cDurableSagasComplianceService\u003e\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application",
+                       "name":  "service extends MicroserviceBase",
+                       "pass":  true
+                   },
+                   {
+                       "hits":  14,
+                       "command":  "rg -n \"AppendAsync\\(|CreateEvent\\(\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application/DurableSagasComplianceService.cs",
+                       "name":  "outbox emits CloudEvents after persisted state paths",
+                       "pass":  true
+                   },
+                   {
+                       "hits":  7,
+                       "command":  "rg -n \"DataProcessResult\u003c\" flows/FLOW-19-durable-sagas-compliance/server/Xiigen.Flow.DurableSagasCompliance.Application",
+                       "name":  "service methods return DataProcessResult",
+                       "pass":  true
+                   }
+               ]
+}

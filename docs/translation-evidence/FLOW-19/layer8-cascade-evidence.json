@@ -1,0 +1,57 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "generatedAt":  "2026-05-21T16:38:18.2854706Z",
+    "pass":  true,
+    "cascade":  [
+                    {
+                        "module":  "durable-sagas-compliance",
+                        "point":  "C0-source-flow",
+                        "repo":  "xiigen-flows-dot-net-angular",
+                        "mode":  "source",
+                        "version":  "0.1.1"
+                    },
+                    {
+                        "module":  "durable-sagas-compliance",
+                        "point":  "C1-tenant-a-installed",
+                        "repo":  "tenant-a--durable-sagas-compliance",
+                        "mode":  "install",
+                        "version":  "0.1.1"
+                    },
+                    {
+                        "module":  "resilient-saga-desk",
+                        "point":  "C2-tenant-a-adapted-published",
+                        "repo":  "tenant-a--resilient-saga-desk",
+                        "mode":  "adapt-publish",
+                        "version":  "0.1.2"
+                    },
+                    {
+                        "module":  "resilient-saga-desk",
+                        "point":  "C3-tenant-b-installed-from-a",
+                        "repo":  "tenant-b--resilient-saga-desk",
+                        "mode":  "install-from-a",
+                        "version":  "0.1.2"
+                    },
+                    {
+                        "module":  "northwind-compliance-ops",
+                        "point":  "C4-tenant-b-adapted-published",
+                        "repo":  "tenant-b--northwind-compliance-ops",
+                        "mode":  "adapt-publish",
+                        "version":  "0.1.3"
+                    },
+                    {
+                        "module":  "northwind-compliance-ops",
+                        "point":  "C5-tenant-c-installed-from-b",
+                        "repo":  "tenant-c--northwind-compliance-ops",
+                        "mode":  "install-from-b",
+                        "version":  "0.1.3"
+                    },
+                    {
+                        "module":  "tessera-retention-monitor",
+                        "point":  "C6-tenant-c-adapted",
+                        "repo":  "tenant-c--tessera-retention-monitor",
+                        "mode":  "adapt",
+                        "version":  "0.1.4"
+                    }
+                ]
+}

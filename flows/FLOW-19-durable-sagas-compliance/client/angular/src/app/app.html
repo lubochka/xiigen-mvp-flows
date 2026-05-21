@@ -1,0 +1,141 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">FLOW-19</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ roleHeading() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'operations'" (click)="setScreenState('operations')">
+          {{ translated('Operations') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'sagas'" (click)="setScreenState('sagas')">
+          {{ translated('Saga dashboard') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'compliance'" (click)="setScreenState('compliance')">
+          {{ translated('Compliance audit') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>3</strong>
+      <span>active runs</span>
+    </article>
+    <article>
+      <strong>1</strong>
+      <span>compensating safely</span>
+    </article>
+    <article>
+      <strong>7y</strong>
+      <span>audit retention</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'operations'" class="workspace" data-testid="saga-operations-page">
+    <section class="panel hero-panel">
+      <p class="eyebrow">{{ translated('Estimated completion') }}</p>
+      <h2>{{ selected().title }}</h2>
+      <p>Usually takes 2 business days. We'll email when done.</p>
+      <p class="calm">{{ translated('No action needed') }}</p>
+      <div class="progress-strip" aria-label="operation progress">
+        <article *ngFor="let step of progress" [class]="step.state">
+          <span class="dot"></span>
+          <strong>{{ step.label }}</strong>
+          <small class="step-status">{{ step.timestamp }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Current run</h3>
+      <dl>
+        <div><dt>Run</dt><dd>{{ selected().id }}</dd></div>
+        <div><dt>State</dt><dd>{{ selected().state }}</dd></div>
+        <div><dt>Stage</dt><dd>{{ selected().currentStage }}</dd></div>
+      </dl>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'sagas'" class="workspace" data-testid="saga-dashboard-page">
+    <section class="card-list">
+      <article *ngFor="let card of sagaCards" class="saga-card" [class.selected]="card.id === selectedSaga()" (click)="setSelectedSaga(card.id)">
+        <span class="state" [class]="card.state">{{ card.state }}</span>
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.currentStage }}</p>
+        <small>{{ card.owner }}</small>
+      </article>
+    </section>
+
+    <aside class="panel details">
+      <h3>{{ selected().title }}</h3>
+      <div class="compensation-chain">
+        <span>Persist state</span>
+        <span>Register undo</span>
+        <span>Run step</span>
+        <span>Audit event</span>
+      </div>
+      <div class="actions" *ngIf="canOperate(); else previewOnly">
+        <button type="button">{{ translated('Retry failed step') }}</button>
+        <button type="button">{{ translated('Rollback') }}</button>
+      </div>
+      <ng-template #previewOnly><p class="muted">Preview only</p></ng-template>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'compliance'" class="workspace" data-testid="compliance-audit-page">
+    <section class="panel table-panel">
+      <div class="filter-row">
+        <label>Date range <input value="Last 30 days" /></label>
+        <label>User <input value="All users" /></label>
+        <label>State <input value="All states" /></label>
+        <button type="button" [disabled]="!canAudit()">{{ translated('Export') }} {{ exportFormat().toUpperCase() }}</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Saga</th>
+            <th>Event</th>
+            <th>Actor</th>
+            <th>Retention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of auditRows">
+            <td>{{ row.time }}</td>
+            <td>{{ row.saga }}</td>
+            <td>{{ row.event }}</td>
+            <td>{{ row.actor }}</td>
+            <td>{{ row.retention }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>{{ translated('Needs attention') }}</h3>
+      <p>Legal hold prevents purge until both retention gates are clear.</p>
+      <label>
+        Export format
+        <select [ngModel]="exportFormat()" (ngModelChange)="setExportFormat($event)">
+          <option value="csv">CSV</option>
+          <option value="pdf">PDF</option>
+        </select>
+      </label>
+    </aside>
+  </section>
+</main>

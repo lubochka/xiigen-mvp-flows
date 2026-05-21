@@ -1,0 +1,464 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "generatedAt":  "2026-05-21T15:57:11.1309729Z",
+    "pass":  true,
+    "total":  15,
+    "passed":  15,
+    "cases":  [
+                  {
+                      "name":  "public preview returns 200",
+                      "method":  "GET",
+                      "route":  "/api/dynamic/durable-sagas-compliance/public-preview",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true,
+                      "payload":  {
+                                      "flow":  "FLOW-19",
+                                      "summary":  "Preview saga progress, compensation visibility, and compliance evidence without exposing tenant-private audit payloads.",
+                                      "tabs":  [
+                                                   "operations",
+                                                   "sagas",
+                                                   "compliance"
+                                               ]
+                                  }
+                  },
+                  {
+                      "name":  "missing token returns 401",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  401,
+                      "actualStatus":  401,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "AUTH_MISSING_TOKEN"
+                                  }
+                  },
+                  {
+                      "name":  "wrong role returns 403",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  403,
+                      "actualStatus":  403,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "AUTH_WRONG_ROLE"
+                                  }
+                  },
+                  {
+                      "name":  "cross-tenant token returns 401",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  401,
+                      "actualStatus":  401,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "AUTH_CROSS_TENANT_TOKEN"
+                                  }
+                  },
+                  {
+                      "name":  "tenant payload rejected returns 400",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  400,
+                      "actualStatus":  400,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "TENANT_SCOPE_FORBIDDEN",
+                                      "message":  "tenantId is resolved from trusted platform context, never request body."
+                                  }
+                  },
+                  {
+                      "name":  "valid saga start returns 201",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "saga-live",
+                                      "sagaId":  "saga-live",
+                                      "status":  "RUNNING",
+                                      "version":  "1",
+                                      "currentStepIndex":  0,
+                                      "stepCount":  4
+                                  }
+                  },
+                  {
+                      "name":  "idempotent saga start replay returns 200",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "saga-live",
+                                      "sagaId":  "saga-live",
+                                      "status":  "RUNNING",
+                                      "version":  "1",
+                                      "currentStepIndex":  0,
+                                      "stepCount":  4
+                                  }
+                  },
+                  {
+                      "name":  "validation failure returns 400",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  400,
+                      "actualStatus":  400,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "VALIDATION_FAILED",
+                                      "details":  [
+                                                      {
+                                                          "field":  "sagaType",
+                                                          "reason":  "Value is required."
+                                                      },
+                                                      {
+                                                          "field":  "steps",
+                                                          "reason":  "At least one saga step is required."
+                                                      }
+                                                  ]
+                                  }
+                  },
+                  {
+                      "name":  "timeout retains recovery outbox and returns 504",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance",
+                      "expectedStatus":  504,
+                      "actualStatus":  504,
+                      "pass":  true,
+                      "payload":  {
+                                      "code":  "TIMEOUT",
+                                      "message":  "Saga state write timed out before completion.",
+                                      "retryAfterMs":  5000,
+                                      "sagaId":  "saga-timeout"
+                                  }
+                  },
+                  {
+                      "name":  "compensation returns 201",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance/compensate",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "saga-live",
+                                      "sagaId":  "saga-live",
+                                      "status":  "COMPENSATION_COMPLETED",
+                                      "executed":  [
+                                                       {
+                                                           "sagaId":  "saga-live",
+                                                           "stepId":  "retention-enforcer",
+                                                           "status":  "COMPENSATED"
+                                                       },
+                                                       {
+                                                           "sagaId":  "saga-live",
+                                                           "stepId":  "compliance-writer",
+                                                           "status":  "COMPENSATED"
+                                                       },
+                                                       {
+                                                           "sagaId":  "saga-live",
+                                                           "stepId":  "compensation-engine",
+                                                           "status":  "COMPENSATED"
+                                                       },
+                                                       {
+                                                           "sagaId":  "saga-live",
+                                                           "stepId":  "saga-orchestrator",
+                                                           "status":  "COMPENSATED"
+                                                       }
+                                                   ]
+                                  }
+                  },
+                  {
+                      "name":  "compliance write returns 201",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance/compliance",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "audit:saga-live:44447a387c0cfa70",
+                                      "auditId":  "audit:saga-live:44447a387c0cfa70",
+                                      "sagaId":  "saga-live",
+                                      "eventType":  "SagaCompleted",
+                                      "retentionExpiresAt":  "2027-05-21T15:57:08.1689501+00:00",
+                                      "auditHash":  "44447a387c0cfa70e03ecfdcc207a2fc133e51c97b3e06a055c9736d9c010b32",
+                                      "knowledgeScope":  "PLATFORM_ONLY",
+                                      "version":  "1"
+                                  }
+                  },
+                  {
+                      "name":  "retention enforcement archives before purge returns 201",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance/retention/enforce",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "audit:saga-live:44447a387c0cfa70",
+                                      "auditId":  "audit:saga-live:44447a387c0cfa70",
+                                      "status":  "PURGE_COMPLETED",
+                                      "archiveRef":  "archive:audit:saga-live:44447a387c0cfa70:89140b94355042fa81ee4a47ee826502"
+                                  }
+                  },
+                  {
+                      "name":  "large audit export queues background job returns 202",
+                      "method":  "POST",
+                      "route":  "/api/dynamic/durable-sagas-compliance/exports",
+                      "expectedStatus":  202,
+                      "actualStatus":  202,
+                      "pass":  true,
+                      "payload":  {
+                                      "id":  "export-a9b213b33fd94bc6b9bfea9cf7fd3e61",
+                                      "exportId":  "export-a9b213b33fd94bc6b9bfea9cf7fd3e61",
+                                      "status":  "QUEUED",
+                                      "delivery":  "EMAIL_LINK",
+                                      "format":  "pdf"
+                                  }
+                  },
+                  {
+                      "name":  "operations dashboard returns 200",
+                      "method":  "GET",
+                      "route":  "/api/dynamic/durable-sagas-compliance/operations/me",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true,
+                      "payload":  {
+                                      "operations":  [
+                                                         {
+                                                             "saga_id":  "saga-live",
+                                                             "saga_type":  "payout-processing",
+                                                             "status":  "RUNNING",
+                                                             "current_step_index":  0,
+                                                             "steps":  [
+                                                                           {
+                                                                               "id":  "saga-orchestrator",
+                                                                               "taskTypeId":  "T621",
+                                                                               "name":  "Start durable run",
+                                                                               "responsibility":  "persist before dispatch",
+                                                                               "config":  {
+                                                                                              "returns":  "DataProcessResult"
+                                                                                          }
+                                                                           },
+                                                                           {
+                                                                               "id":  "compensation-engine",
+                                                                               "taskTypeId":  "T622",
+                                                                               "name":  "Register compensation",
+                                                                               "responsibility":  "serial LIFO rollback",
+                                                                               "config":  {
+                                                                                              "returns":  "DataProcessResult"
+                                                                                          }
+                                                                           },
+                                                                           {
+                                                                               "id":  "compliance-writer",
+                                                                               "taskTypeId":  "T623",
+                                                                               "name":  "Write audit",
+                                                                               "responsibility":  "immutable compliance record",
+                                                                               "config":  {
+                                                                                              "returns":  "DataProcessResult"
+                                                                                          }
+                                                                           },
+                                                                           {
+                                                                               "id":  "retention-enforcer",
+                                                                               "taskTypeId":  "T624",
+                                                                               "name":  "Apply retention",
+                                                                               "responsibility":  "dual gate archive",
+                                                                               "config":  {
+                                                                                              "returns":  "DataProcessResult"
+                                                                                          }
+                                                                           }
+                                                                       ],
+                                                             "compensation_stack":  [
+                                                                                        {
+                                                                                            "stepId":  "saga-orchestrator",
+                                                                                            "taskTypeId":  "T621",
+                                                                                            "strategy":  "pre-stored",
+                                                                                            "registered":  true
+                                                                                        },
+                                                                                        {
+                                                                                            "stepId":  "compensation-engine",
+                                                                                            "taskTypeId":  "T622",
+                                                                                            "strategy":  "lifo",
+                                                                                            "registered":  true
+                                                                                        },
+                                                                                        {
+                                                                                            "stepId":  "compliance-writer",
+                                                                                            "taskTypeId":  "T623",
+                                                                                            "strategy":  "lifo",
+                                                                                            "registered":  true
+                                                                                        },
+                                                                                        {
+                                                                                            "stepId":  "retention-enforcer",
+                                                                                            "taskTypeId":  "T624",
+                                                                                            "strategy":  "lifo",
+                                                                                            "registered":  true
+                                                                                        }
+                                                                                    ],
+                                                             "started_at":  "2026-05-21T15:57:08.0563812+00:00",
+                                                             "updated_at":  "2026-05-21T15:57:08.0563812+00:00",
+                                                             "knowledge_scope":  "PRIVATE",
+                                                             "tenant_id":  "acme-corp"
+                                                         }
+                                                     ],
+                                      "kpis":  {
+                                                   "runningSagas":  1,
+                                                   "complianceRecords":  1,
+                                                   "compensatedSteps":  4,
+                                                   "retentionArchives":  1
+                                               }
+                                  }
+                  },
+                  {
+                      "name":  "admin dashboard returns 200",
+                      "method":  "GET",
+                      "route":  "/api/dynamic/durable-sagas-compliance/dashboard",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true,
+                      "payload":  {
+                                      "sagaRuns":  [
+                                                       {
+                                                           "saga_id":  "saga-live",
+                                                           "saga_type":  "payout-processing",
+                                                           "status":  "RUNNING",
+                                                           "current_step_index":  0,
+                                                           "steps":  [
+                                                                         {
+                                                                             "id":  "saga-orchestrator",
+                                                                             "taskTypeId":  "T621",
+                                                                             "name":  "Start durable run",
+                                                                             "responsibility":  "persist before dispatch",
+                                                                             "config":  {
+                                                                                            "returns":  "DataProcessResult"
+                                                                                        }
+                                                                         },
+                                                                         {
+                                                                             "id":  "compensation-engine",
+                                                                             "taskTypeId":  "T622",
+                                                                             "name":  "Register compensation",
+                                                                             "responsibility":  "serial LIFO rollback",
+                                                                             "config":  {
+                                                                                            "returns":  "DataProcessResult"
+                                                                                        }
+                                                                         },
+                                                                         {
+                                                                             "id":  "compliance-writer",
+                                                                             "taskTypeId":  "T623",
+                                                                             "name":  "Write audit",
+                                                                             "responsibility":  "immutable compliance record",
+                                                                             "config":  {
+                                                                                            "returns":  "DataProcessResult"
+                                                                                        }
+                                                                         },
+                                                                         {
+                                                                             "id":  "retention-enforcer",
+                                                                             "taskTypeId":  "T624",
+                                                                             "name":  "Apply retention",
+                                                                             "responsibility":  "dual gate archive",
+                                                                             "config":  {
+                                                                                            "returns":  "DataProcessResult"
+                                                                                        }
+                                                                         }
+                                                                     ],
+                                                           "compensation_stack":  [
+                                                                                      {
+                                                                                          "stepId":  "saga-orchestrator",
+                                                                                          "taskTypeId":  "T621",
+                                                                                          "strategy":  "pre-stored",
+                                                                                          "registered":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "stepId":  "compensation-engine",
+                                                                                          "taskTypeId":  "T622",
+                                                                                          "strategy":  "lifo",
+                                                                                          "registered":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "stepId":  "compliance-writer",
+                                                                                          "taskTypeId":  "T623",
+                                                                                          "strategy":  "lifo",
+                                                                                          "registered":  true
+                                                                                      },
+                                                                                      {
+                                                                                          "stepId":  "retention-enforcer",
+                                                                                          "taskTypeId":  "T624",
+                                                                                          "strategy":  "lifo",
+                                                                                          "registered":  true
+                                                                                      }
+                                                                                  ],
+                                                           "started_at":  "2026-05-21T15:57:08.0563812+00:00",
+                                                           "updated_at":  "2026-05-21T15:57:08.0563812+00:00",
+                                                           "knowledge_scope":  "PRIVATE",
+                                                           "tenant_id":  "acme-corp"
+                                                       }
+                                                   ],
+                                      "complianceRecords":  [
+                                                                {
+                                                                    "audit_id":  "audit:saga-live:44447a387c0cfa70",
+                                                                    "saga_id":  "saga-live",
+                                                                    "event_type":  "SagaCompleted",
+                                                                    "actor":  "platform-ops",
+                                                                    "written_at":  "2026-05-21T15:57:08.1689501+00:00",
+                                                                    "retention_expires_at":  "2027-05-21T15:57:08.1689501+00:00",
+                                                                    "legal_hold_active":  false,
+                                                                    "audit_hash":  "44447a387c0cfa70e03ecfdcc207a2fc133e51c97b3e06a055c9736d9c010b32",
+                                                                    "payload_hash":  "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288",
+                                                                    "knowledge_scope":  "PLATFORM_ONLY",
+                                                                    "tenant_id":  "acme-corp"
+                                                                }
+                                                            ],
+                                      "compensationRecords":  [
+                                                                  {
+                                                                      "saga_id":  "saga-live",
+                                                                      "step_id":  "retention-enforcer",
+                                                                      "status":  "COMPENSATED",
+                                                                      "compensated_at":  "2026-05-21T15:57:08.1432413+00:00",
+                                                                      "knowledge_scope":  "PRIVATE",
+                                                                      "tenant_id":  "acme-corp"
+                                                                  },
+                                                                  {
+                                                                      "saga_id":  "saga-live",
+                                                                      "step_id":  "compliance-writer",
+                                                                      "status":  "COMPENSATED",
+                                                                      "compensated_at":  "2026-05-21T15:57:08.1432736+00:00",
+                                                                      "knowledge_scope":  "PRIVATE",
+                                                                      "tenant_id":  "acme-corp"
+                                                                  },
+                                                                  {
+                                                                      "saga_id":  "saga-live",
+                                                                      "step_id":  "compensation-engine",
+                                                                      "status":  "COMPENSATED",
+                                                                      "compensated_at":  "2026-05-21T15:57:08.1432804+00:00",
+                                                                      "knowledge_scope":  "PRIVATE",
+                                                                      "tenant_id":  "acme-corp"
+                                                                  },
+                                                                  {
+                                                                      "saga_id":  "saga-live",
+                                                                      "step_id":  "saga-orchestrator",
+                                                                      "status":  "COMPENSATED",
+                                                                      "compensated_at":  "2026-05-21T15:57:08.1432903+00:00",
+                                                                      "knowledge_scope":  "PRIVATE",
+                                                                      "tenant_id":  "acme-corp"
+                                                                  }
+                                                              ],
+                                      "retentionArchives":  [
+                                                                {
+                                                                    "archive_ref":  "archive:audit:saga-live:44447a387c0cfa70:89140b94355042fa81ee4a47ee826502",
+                                                                    "audit_id":  "audit:saga-live:44447a387c0cfa70",
+                                                                    "archived_at":  "2026-05-21T15:57:08.2199993+00:00",
+                                                                    "source_hash":  "4b801b25e85e450a0fd358d6d98daf92f9cd7ba2d3dee463a6ee7bcf219d754b",
+                                                                    "knowledge_scope":  "PLATFORM_ONLY",
+                                                                    "tenant_id":  "acme-corp"
+                                                                }
+                                                            ],
+                                      "kpis":  {
+                                                   "runningSagas":  1,
+                                                   "complianceRecords":  1,
+                                                   "compensatedSteps":  4,
+                                                   "retentionArchives":  1
+                                               }
+                                  }
+                  }
+              ]
+}

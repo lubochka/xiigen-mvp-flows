@@ -1,0 +1,109 @@
+{
+  "flowId": "FLOW-19",
+  "flowSlug": "durable-sagas-compliance",
+  "policies": [
+    {
+      "policyId": "durable-sagas-compliance-public-preview",
+      "route": "GET /api/dynamic/durable-sagas-compliance/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/durable-sagas-compliance/public-preview"
+      ],
+      "bypassReason": "Public durable saga previews are intentionally readable before login."
+    },
+    {
+      "policyId": "durable-sagas-compliance-start-saga",
+      "route": "POST /api/dynamic/durable-sagas-compliance",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "tenant_ops",
+        "saga_operator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-compensate",
+      "route": "POST /api/dynamic/durable-sagas-compliance/compensate",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "tenant_ops",
+        "saga_operator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-write-audit",
+      "route": "POST /api/dynamic/durable-sagas-compliance/compliance",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-enforce-retention",
+      "route": "POST /api/dynamic/durable-sagas-compliance/retention/enforce",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-export-audit",
+      "route": "POST /api/dynamic/durable-sagas-compliance/exports",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-operations-me",
+      "route": "GET /api/dynamic/durable-sagas-compliance/operations/me",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_consumer",
+        "tenant_admin",
+        "tenant_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "durable-sagas-compliance-dashboard",
+      "route": "GET /api/dynamic/durable-sagas-compliance/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "tenant_consumer",
+        "tenant_ops",
+        "saga_operator",
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

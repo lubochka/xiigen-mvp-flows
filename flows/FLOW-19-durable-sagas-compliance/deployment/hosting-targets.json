@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-19",
+  "flowSlug": "durable-sagas-compliance",
+  "api": {
+    "localUrl": "http://127.0.0.1:5317",
+    "containerUrl": "http://127.0.0.1:5317"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4318",
+    "evidencePort": 4318
+  }
+}

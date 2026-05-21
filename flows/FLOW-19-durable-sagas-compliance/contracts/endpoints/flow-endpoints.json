@@ -1,0 +1,120 @@
+{
+  "flowId": "FLOW-19",
+  "flowSlug": "durable-sagas-compliance",
+  "endpoints": [
+    {
+      "endpointId": "durable-sagas-compliance-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/durable-sagas-compliance/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json",
+      "bypassReason": "public durable saga and compliance preview"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-start-saga",
+      "method": "POST",
+      "path": "/api/dynamic/durable-sagas-compliance",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "tenant_ops",
+        "saga_operator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/durable-sagas-compliance-request.schema.json",
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-compensate",
+      "method": "POST",
+      "path": "/api/dynamic/durable-sagas-compliance/compensate",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "tenant_ops",
+        "saga_operator",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/durable-sagas-compliance-request.schema.json",
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-write-audit",
+      "method": "POST",
+      "path": "/api/dynamic/durable-sagas-compliance/compliance",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/durable-sagas-compliance-request.schema.json",
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-enforce-retention",
+      "method": "POST",
+      "path": "/api/dynamic/durable-sagas-compliance/retention/enforce",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/durable-sagas-compliance-request.schema.json",
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-export-audit",
+      "method": "POST",
+      "path": "/api/dynamic/durable-sagas-compliance/exports",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "requestSchema": "contracts/schemas/durable-sagas-compliance-request.schema.json",
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-operations-me",
+      "method": "GET",
+      "path": "/api/dynamic/durable-sagas-compliance/operations/me",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_consumer",
+        "tenant_admin",
+        "tenant_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    },
+    {
+      "endpointId": "durable-sagas-compliance-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/durable-sagas-compliance/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "tenant_admin",
+        "tenant_consumer",
+        "tenant_ops",
+        "saga_operator",
+        "compliance_officer",
+        "platform_ops",
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/durable-sagas-compliance-response.schema.json"
+    }
+  ]
+}

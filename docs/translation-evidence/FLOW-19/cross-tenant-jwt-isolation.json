@@ -1,0 +1,19 @@
+{
+    "flowId":  "FLOW-19",
+    "flowSlug":  "durable-sagas-compliance",
+    "generatedAt":  "2026-05-21T16:38:18.2854706Z",
+    "pass":  true,
+    "tenantBTokenAgainstTenantC":  "401 AUTH_CROSS_TENANT_TOKEN",
+    "sourceEvidence":  "docs/translation-evidence/FLOW-19/docker-auth-matrix.json",
+    "case":  {
+                 "name":  "cross-tenant token returns 401",
+                 "method":  "POST",
+                 "route":  "/api/dynamic/durable-sagas-compliance",
+                 "expectedStatus":  401,
+                 "actualStatus":  401,
+                 "pass":  true,
+                 "payload":  {
+                                 "code":  "AUTH_CROSS_TENANT_TOKEN"
+                             }
+             }
+}
