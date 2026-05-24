@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-35/meta-arbitration-engine-request.schema.json",
+  "title": "Meta Arbitration Engine Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "conflictId": { "type": "string", "minLength": 1 },
+    "roundId": { "type": "string", "minLength": 1 },
+    "policySet": { "type": "string", "minLength": 1 },
+    "primaryVerdict": { "type": "string", "minLength": 1 },
+    "counterVerdict": { "type": "string", "minLength": 1 },
+    "arbiterCount": { "type": "integer", "minimum": 1 },
+    "policyWeight": { "type": "integer", "minimum": 1 },
+    "escalationReasons": { "type": "array", "items": { "type": "string" } },
+    "simulateTimeout": { "type": "boolean" }
+  },
+  "required": ["conflictId", "roundId", "policySet", "primaryVerdict", "counterVerdict", "arbiterCount", "policyWeight"]
+}

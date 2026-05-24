@@ -1,0 +1,38 @@
+﻿{
+    "flowId":  "FLOW-35",
+    "flowSlug":  "meta-arbitration-engine",
+    "generatedAt":  "2026-05-24T23:25:59.7415009Z",
+    "checks":  [
+                   {
+                       "repoName":  "acme-corp--meta-arbitration-engine",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   },
+                   {
+                       "repoName":  "acme-corp--acme-arbitration-console",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   },
+                   {
+                       "repoName":  "northwind--acme-arbitration-console",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   },
+                   {
+                       "repoName":  "northwind--model-consensus-desk",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   },
+                   {
+                       "repoName":  "tessera--model-consensus-desk",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   },
+                   {
+                       "repoName":  "tessera--governance-verdict-board",
+                       "actionsEnabled":  false,
+                       "passed":  true
+                   }
+               ],
+    "passed":  true
+}

@@ -1,0 +1,64 @@
+﻿{
+    "flowId":  "FLOW-35",
+    "flowSlug":  "meta-arbitration-engine",
+    "generatedAt":  "2026-05-24T23:11:59.4425596Z",
+    "checks":  [
+                   {
+                       "name":  "health-live",
+                       "expected":  200,
+                       "actual":  200,
+                       "passed":  true,
+                       "body":  "{\"status\":\"live\",\"flow\":\"FLOW-35\"}"
+                   },
+                   {
+                       "name":  "public-preview-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "passed":  true,
+                       "body":  "{\"flow\":\"FLOW-35\",\"summary\":\"Meta-arbitration is a platform governance surface for conflict rounds, verdict comparison, escalation briefings, and append-only decision evidence.\",\"tabs\":[\"intake\",\"panel\",\"verdicts\",\"briefings\",\"audit\"]}"
+                   },
+                   {
+                       "name":  "valid-token-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "passed":  true,
+                       "body":  "{\"id\":\"acme-corp:decision:conflict-35:round-live\",\"conflictId\":\"conflict-35\",\"roundId\":\"round-live\",\"policySet\":\"meta-arbiter-core\",\"primaryVerdict\":\"ALLOW\",\"counterVerdict\":\"BLOCK\",\"arbiterCount\":10,\"policyWeight\":85,\"decision\":\"ESCALATE\",\"escalationReasons\":[\"verdict_mismatch\"],\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T23:11:59.1136867+00:00\"}"
+                   },
+                   {
+                       "name":  "duplicate-token-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "passed":  true,
+                       "body":  "{\"id\":\"acme-corp:decision:conflict-35:round-live\",\"conflictId\":\"conflict-35\",\"roundId\":\"round-live\",\"policySet\":\"meta-arbiter-core\",\"primaryVerdict\":\"ALLOW\",\"counterVerdict\":\"BLOCK\",\"arbiterCount\":10,\"policyWeight\":85,\"decision\":\"ESCALATE\",\"escalationReasons\":[\"verdict_mismatch\"],\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T23:11:59.1136867+00:00\"}"
+                   },
+                   {
+                       "name":  "missing-token-401",
+                       "expected":  401,
+                       "actual":  401,
+                       "passed":  true,
+                       "body":  "{\"code\":\"MISSING_TOKEN\"}"
+                   },
+                   {
+                       "name":  "cross-tenant-401",
+                       "expected":  401,
+                       "actual":  401,
+                       "passed":  true,
+                       "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                   },
+                   {
+                       "name":  "wrong-role-403",
+                       "expected":  403,
+                       "actual":  403,
+                       "passed":  true,
+                       "body":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"platform_admin\"]}"
+                   },
+                   {
+                       "name":  "support-dashboard-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "passed":  true,
+                       "body":  "{\"decisions\":[{\"id\":\"acme-corp:decision:conflict-35:round-live\",\"conflictId\":\"conflict-35\",\"roundId\":\"round-live\",\"policySet\":\"meta-arbiter-core\",\"primaryVerdict\":\"ALLOW\",\"counterVerdict\":\"BLOCK\",\"arbiterCount\":10,\"policyWeight\":85,\"decision\":\"ESCALATE\",\"escalationReasons\":[\"verdict_mismatch\"],\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T23:11:59.1136867+00:00\"}],\"conflicts\":[{\"conflictId\":\"conflict-35\",\"roundId\":\"round-live\",\"decision\":\"ESCALATE\",\"tenantScope\":\"acme-corp\"}],\"briefings\":[{\"conflictId\":\"conflict-35\",\"roundId\":\"round-live\",\"decision\":\"ESCALATE\",\"options\":[\"verdict_mismatch\"],\"tenantScope\":\"acme-corp\"}],\"panels\":[{\"policySet\":\"meta-arbiter-core\",\"arbiterCount\":10,\"policyWeight\":85,\"tenantScope\":\"acme-corp\"}],\"kpis\":{\"decisionCount\":1,\"conflictCount\":1,\"briefingCount\":1,\"panelCount\":1,\"requiredRuleCount\":4}}"
+                   }
+               ],
+    "passed":  true
+}

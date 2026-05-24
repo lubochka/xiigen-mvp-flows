@@ -1,0 +1,153 @@
+﻿{
+    "flowId":  "FLOW-35",
+    "flowSlug":  "meta-arbitration-engine",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-35-meta-arbitration-engine",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.MetaArbitrationEngine.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/meta-arbitration-engine/dotnet-angular",
+    "sourceAliases":  [
+                          "meta-arbitration-engine",
+                          "meta-arbitration",
+                          "arbiter-conflict-resolution",
+                          "round-decision-engine",
+                          "escalation-briefing",
+                          "append-only-decision-log",
+                          "platform-governance-console"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "tenant_user"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+                                                   "FLOW-35 is engine-internal and uses platform-admin mutation with platform-support inspection.",
+                                                   "Package signing remains a Tier 3 production hardening concern, but Tier D portability evidence is complete with local package readback and Actions disabled."
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-00",
+                                 "relationship":  "bootstrap-prerequisite",
+                                 "reason":  "FLOW-35 writes arbitration decisions only after the platform contract and package skeleton are active."
+                             },
+                             {
+                                 "flowId":  "FLOW-25",
+                                 "relationship":  "bfa-governance-prerequisite",
+                                 "reason":  "FLOW-35 resolves conflicts between governance arbiters and must preserve BFA verdict evidence."
+                             },
+                             {
+                                 "flowId":  "FLOW-27",
+                                 "relationship":  "human-gate-prerequisite",
+                                 "reason":  "FLOW-35 escalates or halts when automated and human gates disagree."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-35",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/meta-arbitration-engine/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/meta-arbitration-engine/P5-ui-specs.md",
+                                                         "docs/flow-coverage/meta-arbitration-engine/P9-edge-cases.md",
+                                                         "docs/flow-coverage/meta-arbitration-engine/P10-server-specs.md",
+                                                         "docs/flow-coverage/meta-arbitration-engine/P11-impl-readiness.md",
+                                                         "docs/design-reviews/ROLE-ANALYSIS-BATCH-07.md",
+                                                         "docs/sessions/FLOW-35/FLOW-35-MOBILITY-AUTH-STATE.json",
+                                                         "docs/sessions/FLOW-35/FLOW-35-PLAN-STATE.json",
+                                                         "docs/sessions/FLOW-35/FLOW-35-RECONCILIATION-STATE.md"
+                                                     ],
+                               "existingCfRules":  0,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.MetaArbitrationEngine.Infrastructure/MetaArbitrationEngineServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Meta Arbitration Engine fabric replacement",
+                                             "contract":  "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow35_module_name",
+                       "defaultModuleName":  "meta-arbitration-engine",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-meta-arbitration-engine.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}
+

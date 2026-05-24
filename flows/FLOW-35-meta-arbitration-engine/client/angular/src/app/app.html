@@ -1,0 +1,103 @@
+﻿<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Arbitration control room') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Arbitration states">
+    <button type="button" [class.active]="screenState() === 'intake'" (click)="setScreenState('intake')">{{ translated('Intake') }}</button>
+    <button type="button" [class.active]="screenState() === 'panel'" (click)="setScreenState('panel')">{{ translated('Panel') }}</button>
+    <button type="button" [class.active]="screenState() === 'verdicts'" (click)="setScreenState('verdicts')">{{ translated('Verdicts') }}</button>
+    <button type="button" [class.active]="screenState() === 'briefings'" (click)="setScreenState('briefings')">{{ translated('Briefings') }}</button>
+    <button type="button" [class.active]="screenState() === 'audit'" (click)="setScreenState('audit')">{{ translated('Audit') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Arbitration metrics">
+    <div>
+      <span>{{ translated('Conflicts') }}</span>
+      <strong>1</strong>
+      <small>idempotent arbitration decision</small>
+    </div>
+    <div>
+      <span>{{ translated('Arbiters') }}</span>
+      <strong>10</strong>
+      <small>meta panel coverage</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>arbitration gates clear</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Decision lifecycle</p>
+      <h2>Conflict rounds become append-only decisions, and every escalation or halt includes an operator briefing before events move downstream</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of arbitrationRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can resolve conflicts, apply meta policies, and publish escalation briefings.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect arbitration audit evidence without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators apply meta-arbiter policies, compare verdicts, and write decision evidence.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review conflict history, briefings, and append-only decision logs.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of arbitrationSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'verdicts'">
+    <p class="eyebrow">Verdict comparison</p>
+    <h2>Conflicting arbiter outcomes fail closed until the meta panel records a decision or escalation</h2>
+    <p>Each comparison is stored as tenant-scoped evidence and replayed through the outbox worker.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'briefings'">
+    <p class="eyebrow">Escalation briefing</p>
+    <h2>Every ESCALATE or HALT outcome produces options for the operator before generation resumes</h2>
+    <p>Briefing readback evidence proves the engine can move across tenant forks without GitHub Actions.</p>
+  </section>
+</main>
+

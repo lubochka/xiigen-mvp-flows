@@ -1,0 +1,39 @@
+﻿{
+    "flowId":  "FLOW-35",
+    "flowSlug":  "meta-arbitration-engine",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "generatedAt":  "2026-05-24T23:26:56.6401171Z",
+    "cfRules":  [
+                    "CF-1031",
+                    "CF-1032",
+                    "CF-1033",
+                    "CF-1034"
+                ],
+    "roles":  [
+                  "platform_admin",
+                  "platform_support"
+              ],
+    "expectedPng":  42,
+    "actualPng":  42,
+    "tenantRepoCount":  6,
+    "actionsDisabled":  true,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.MetaArbitrationEngine.Application.0.1.1.nupkg",
+                         "Length":  22751
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.MetaArbitrationEngine.Infrastructure.0.1.1.nupkg",
+                         "Length":  4048
+                     }
+                 ],
+    "evidenceFiles":  [
+                          "live-api-auth-matrix.json",
+                          "code-review-gate.json",
+                          "qa-review-gate.json",
+                          "tenant-cascade-repos.json",
+                          "visual-evidence-summary.json",
+                          "github-actions-disabled.json"
+                      ]
+}

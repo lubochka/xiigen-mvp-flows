@@ -244,4 +244,11 @@
     <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Infrastructure/Xiigen.Flow.MarketplacePluginAdapter.Infrastructure.csproj" />
     <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Tests/Xiigen.Flow.MarketplacePluginAdapter.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-35-meta-arbitration-engine/" />
+  <Folder Name="/flows/FLOW-35-meta-arbitration-engine/server/">
+    <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Api/Xiigen.Flow.MetaArbitrationEngine.Api.csproj" />
+    <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Application/Xiigen.Flow.MetaArbitrationEngine.Application.csproj" />
+    <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Infrastructure/Xiigen.Flow.MetaArbitrationEngine.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Tests/Xiigen.Flow.MetaArbitrationEngine.Tests.csproj" />
+  </Folder>
 </Solution>

@@ -1,0 +1,50 @@
+{
+  "flowId": "FLOW-35",
+  "flowSlug": "meta-arbitration-engine",
+  "endpoints": [
+    {
+      "endpointId": "flow35-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/meta-arbitration-engine/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/meta-arbitration-engine-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "endpointId": "flow35-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/meta-arbitration-engine/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/meta-arbitration-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/meta-arbitration-engine-response.schema.json"
+    },
+    {
+      "endpointId": "flow35-conflict-resolve",
+      "method": "POST",
+      "path": "/api/dynamic/meta-arbitration-engine",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/meta-arbitration-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/meta-arbitration-engine-response.schema.json"
+    },
+    {
+      "endpointId": "flow35-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/meta-arbitration-engine/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/meta-arbitration-engine-request.schema.json",
+      "responseSchema": "contracts/schemas/meta-arbitration-engine-response.schema.json"
+    },
+    {
+      "endpointId": "flow35-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/meta-arbitration-engine/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/meta-arbitration-engine-response.schema.json"
+    }
+  ]
+}

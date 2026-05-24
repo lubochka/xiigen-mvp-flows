@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-35/meta-arbitration-engine-response.schema.json",
+  "title": "Meta Arbitration Engine Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "conflictId": { "type": "string" },
+    "roundId": { "type": "string" },
+    "policySet": { "type": "string" },
+    "primaryVerdict": { "type": "string" },
+    "counterVerdict": { "type": "string" },
+    "decision": { "type": "string", "enum": ["ACCEPT", "ESCALATE", "HALT"] },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "escalationReasons": { "type": "array", "items": { "type": "string" } },
+    "updatedAt": { "type": "string" }
+  }
+}

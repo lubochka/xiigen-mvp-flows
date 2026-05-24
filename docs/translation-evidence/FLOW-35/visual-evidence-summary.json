@@ -1,0 +1,44 @@
+﻿[
+    {
+        "point":  "C0-source-flow",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C1-tenant-a-installed",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C2-tenant-a-adapted-published",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C3-tenant-b-installed-from-a",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C4-tenant-b-adapted-published",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C5-tenant-c-installed-from-b",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    },
+    {
+        "point":  "C6-tenant-c-adapted",
+        "expected":  6,
+        "actual":  6,
+        "zeroByte":  0
+    }
+]

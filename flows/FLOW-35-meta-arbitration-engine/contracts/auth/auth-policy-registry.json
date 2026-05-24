@@ -1,0 +1,48 @@
+{
+  "flowId": "FLOW-35",
+  "flowSlug": "meta-arbitration-engine",
+  "roles": {
+    "primary": ["platform_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "tenant_user"
+  },
+  "policies": [
+    {
+      "policyId": "flow35-public-preview",
+      "route": "GET /api/dynamic/meta-arbitration-engine/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/meta-arbitration-engine/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "policyId": "flow35-rules-validate",
+      "route": "POST /api/dynamic/meta-arbitration-engine/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow35-conflict-resolve",
+      "route": "POST /api/dynamic/meta-arbitration-engine",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow35-plan-validate",
+      "route": "POST /api/dynamic/meta-arbitration-engine/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow35-dashboard",
+      "route": "GET /api/dynamic/meta-arbitration-engine/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support"],
+      "bypassPaths": []
+    }
+  ]
+}

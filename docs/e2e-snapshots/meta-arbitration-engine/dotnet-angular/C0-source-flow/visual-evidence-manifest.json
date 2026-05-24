@@ -1,0 +1,57 @@
+{
+  "flowId": "FLOW-35",
+  "flowSlug": "meta-arbitration-engine",
+  "expectedCount": 6,
+  "actualCount": 6,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "intake",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 108645
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "verdicts",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 125831
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "briefings",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 108369
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "intake",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 107132
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "verdicts",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 124088
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "briefings",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\meta-arbitration-engine\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 107782
+    }
+  ]
+}

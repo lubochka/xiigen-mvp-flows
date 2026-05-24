@@ -1,0 +1,44 @@
+﻿{
+    "flowId":  "FLOW-35",
+    "flowSlug":  "meta-arbitration-engine",
+    "generatedAt":  "2026-05-24T23:12:49.5072081Z",
+    "productionFilesScanned":  6,
+    "passed":  true,
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "passed":  true,
+                       "detail":  "No direct provider SDK imports in production C#."
+                   },
+                   {
+                       "name":  "no-free-tenant-id-parameter",
+                       "passed":  true,
+                       "detail":  "No free tenant id parameter in production services."
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "passed":  true,
+                       "detail":  "Application service extends MicroserviceBase\u003cT\u003e."
+                   },
+                   {
+                       "name":  "data-process-result",
+                       "passed":  true,
+                       "detail":  "Public service operations return DataProcessResult\u003cT\u003e."
+                   },
+                   {
+                       "name":  "outbox-before-event",
+                       "passed":  true,
+                       "detail":  "State writes are present before CloudEvent outbox appends."
+                   },
+                   {
+                       "name":  "cloud-events-envelope",
+                       "passed":  true,
+                       "detail":  "Outbox messages use CloudEventEnvelope."
+                   },
+                   {
+                       "name":  "cf-rules-present",
+                       "passed":  true,
+                       "detail":  "CF-1031 through CF-1034 are registered."
+                   }
+               ]
+}
