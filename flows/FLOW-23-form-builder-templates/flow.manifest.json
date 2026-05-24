@@ -1,0 +1,147 @@
+{
+  "flowId": "FLOW-23",
+  "flowSlug": "form-builder-templates",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-23-form-builder-templates",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.FormBuilderTemplates.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/form-builder-templates/dotnet-angular",
+  "sourceAliases": [
+    "form-builder-templates",
+    "content-version-publisher",
+    "template-schema-validator",
+    "template-version-publisher",
+    "template-instantiation-engine",
+    "template-usage-analytics",
+    "template-gallery",
+    "visual-editor-extended"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "template_designer",
+      "template_reviewer",
+      "form_operator",
+      "template_publisher",
+      "tenant_admin",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-21",
+      "relationship": "instantiation-workflow-source",
+      "reason": "Form template instantiation can feed dynamic workflow automation events."
+    },
+    {
+      "flowId": "FLOW-24",
+      "relationship": "submission-moderation-source",
+      "reason": "Published form templates can route submitted payload metadata through content moderation before workflow dispatch."
+    },
+    {
+      "flowId": "FLOW-28",
+      "relationship": "cms-extension-source",
+      "reason": "Blog CMS modules can consume reusable form template definitions and gallery metadata."
+    }
+  ],
+  "coInstallDependencies": [
+    {
+      "flowId": "FLOW-28",
+      "reason": "CMS cluster blog modules depend on reusable form template definitions and should be validated with them."
+    }
+  ],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/form-builder-templates",
+    "requiredDocuments": [
+      "docs/flow-coverage/form-builder-templates/P1-business-logic-inventory.md",
+      "docs/flow-coverage/form-builder-templates/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/form-builder-templates/P5-ui-specs.md",
+      "docs/flow-coverage/form-builder-templates/P9-edge-cases.md",
+      "docs/flow-coverage/form-builder-templates/P10-server-specs.md",
+      "docs/flow-coverage/form-builder-templates/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 12,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 11,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.FormBuilderTemplates.Infrastructure/FormBuilderTemplatesServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "Form Builder Templates fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "form-builder-templates",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-form-builder-templates.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

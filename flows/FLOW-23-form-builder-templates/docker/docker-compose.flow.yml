@@ -1,0 +1,9 @@
+services:
+  FLOW-23-form-builder-templates-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Api/Dockerfile
+    ports:
+      - "5323:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

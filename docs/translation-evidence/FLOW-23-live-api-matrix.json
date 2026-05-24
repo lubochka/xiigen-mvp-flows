@@ -1,0 +1,11 @@
+﻿{
+    "save":  201,
+    "replay":  200,
+    "invalid":  400,
+    "wrongRole":  403,
+    "crossTenant":  401,
+    "publish":  201,
+    "instantiate":  201,
+    "usage":  201,
+    "dashboard":  200
+}

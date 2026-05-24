@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-23/form-builder-templates-request.schema.json",
+  "title": "FLOW-23 Form Builder Templates Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "templateId": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "schema": { "type": "object" },
+    "requiredFields": { "type": "array", "items": { "type": "string" } },
+    "defaults": { "type": "object" },
+    "bindings": { "type": "object" },
+    "contextId": { "type": "string", "minLength": 1 },
+    "eventType": { "type": "string", "minLength": 1 },
+    "responseTimeMs": { "type": "integer", "minimum": 0 },
+    "success": { "type": "boolean" },
+    "planSteps": { "type": "array", "items": { "type": "object" } },
+    "simulateTimeout": { "type": "boolean" }
+  }
+}

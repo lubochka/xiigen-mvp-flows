@@ -1,0 +1,10 @@
+{
+    "flow":  "FLOW-23",
+    "providerSdkImports":  false,
+    "freeTenantParameters":  false,
+    "businessThrows":  false,
+    "microserviceBase":  true,
+    "dataProcessResult":  true,
+    "outboxBeforeQueue":  true,
+    "status":  "APPROVED"
+}

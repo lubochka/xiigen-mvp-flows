@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-23",
+  "flowSlug": "form-builder-templates",
+  "api": {
+    "localUrl": "http://127.0.0.1:5321",
+    "containerUrl": "http://127.0.0.1:5321"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4321",
+    "evidencePort": 4321
+  }
+}

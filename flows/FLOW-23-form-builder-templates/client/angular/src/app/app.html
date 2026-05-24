@@ -1,0 +1,131 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Template operations') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'builder'" (click)="setScreenState('builder')">
+          {{ translated('Builder') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'gallery'" (click)="setScreenState('gallery')">
+          {{ translated('Gallery') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'submissions'" (click)="setScreenState('submissions')">
+          {{ translated('Submissions') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>7</strong>
+      <span>{{ translated('Published templates') }}</span>
+    </article>
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Review checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ activeFields() }}</strong>
+      <span>{{ translated('Active fields') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'builder'" class="workspace" data-testid="builder-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Schema-first builder</p>
+        <h2>Versioned form template definitions</h2>
+        <p>Each reusable template keeps a schema, required fields, data-slot bindings, and an optimistic version token.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Template</th>
+            <th>Fields</th>
+            <th>Version</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of templateRows">
+            <td>{{ row.name }}</td>
+            <td>{{ row.fields }}</td>
+            <td>{{ row.version }}</td>
+            <td><span class="state" [class]="row.status">{{ row.status }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Builder controls</h3>
+      <label>
+        Active fields
+        <input type="range" min="3" max="12" [ngModel]="activeFields()" (ngModelChange)="setActiveFields($event)" />
+      </label>
+      <p *ngIf="!canDesign()" class="notice">This role can browse the template gallery only.</p>
+      <p *ngIf="canDesign()" class="notice success">Template schema changes can be saved as a protected draft.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'gallery'" class="workspace" data-testid="gallery-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Review gate</p>
+        <h2>Template gallery readiness</h2>
+        <p>Schema checks, layout constraints, and read-only template mode must pass before a template appears in the gallery.</p>
+      </div>
+      <div class="timeline">
+        <article *ngFor="let row of reviewRows" [class]="row.status">
+          <strong>{{ row.check }}</strong>
+          <span>{{ row.owner }}</span>
+          <small>{{ row.status }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Reviewer posture</h3>
+      <p *ngIf="canReview()" class="notice success">This role can approve at least one gallery readiness check.</p>
+      <p *ngIf="!canReview()" class="notice">Review actions are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'submissions'" class="workspace" data-testid="submissions-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Submission pipeline</p>
+        <h2>PII-free aggregate usage</h2>
+        <p>Template usage records retain aggregate timing and success signals without storing submitted form values.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of usageRows">
+          <span>{{ row.metric }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.note }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Instantiation status</h3>
+      <p *ngIf="canOperate()" class="notice success">This role can instantiate published templates and inspect aggregate outcomes.</p>
+      <p *ngIf="!canOperate()" class="notice">Submission operations are hidden for this role.</p>
+    </aside>
+  </section>
+</main>

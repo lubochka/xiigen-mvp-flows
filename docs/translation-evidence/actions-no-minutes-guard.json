@@ -1,0 +1,11 @@
+{
+    "flowGithubDirs":  [
+
+                       ],
+    "rootGithub":  false,
+    "prepareScriptsDisableActions":  23,
+    "workflowFiles":  [
+
+                      ],
+    "ciGithubActions":  false
+}

@@ -161,4 +161,11 @@
     <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Infrastructure/Xiigen.Flow.CmsPublishing.Infrastructure.csproj" />
     <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Tests/Xiigen.Flow.CmsPublishing.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-23-form-builder-templates/" />
+  <Folder Name="/flows/FLOW-23-form-builder-templates/server/">
+    <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Api/Xiigen.Flow.FormBuilderTemplates.Api.csproj" />
+    <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Application/Xiigen.Flow.FormBuilderTemplates.Application.csproj" />
+    <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Infrastructure/Xiigen.Flow.FormBuilderTemplates.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Tests/Xiigen.Flow.FormBuilderTemplates.Tests.csproj" />
+  </Folder>
 </Solution>

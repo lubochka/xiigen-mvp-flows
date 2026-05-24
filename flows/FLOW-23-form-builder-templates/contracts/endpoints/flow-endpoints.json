@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-23",
+  "flowSlug": "form-builder-templates",
+  "endpoints": [
+    {
+      "endpointId": "form-builder-templates-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/form-builder-templates/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "bypassReason": "Public template preview exposes only generic form builder capabilities."
+    },
+    {
+      "endpointId": "form-builder-templates-save-template",
+      "method": "POST",
+      "path": "/api/dynamic/form-builder-templates",
+      "authPosture": "policy",
+      "requiredRoles": ["template_designer", "template_publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "requestSchema": "contracts/schemas/form-builder-templates-request.schema.json"
+    },
+    {
+      "endpointId": "form-builder-templates-publish-template",
+      "method": "POST",
+      "path": "/api/dynamic/form-builder-templates/publish",
+      "authPosture": "policy",
+      "requiredRoles": ["template_publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "requestSchema": "contracts/schemas/form-builder-templates-request.schema.json"
+    },
+    {
+      "endpointId": "form-builder-templates-instantiate-template",
+      "method": "POST",
+      "path": "/api/dynamic/form-builder-templates/instantiate",
+      "authPosture": "policy",
+      "requiredRoles": ["form_operator", "template_designer", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "requestSchema": "contracts/schemas/form-builder-templates-request.schema.json"
+    },
+    {
+      "endpointId": "form-builder-templates-record-usage",
+      "method": "POST",
+      "path": "/api/dynamic/form-builder-templates/usage",
+      "authPosture": "policy",
+      "requiredRoles": ["form_operator", "template_designer", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "requestSchema": "contracts/schemas/form-builder-templates-request.schema.json"
+    },
+    {
+      "endpointId": "form-builder-templates-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/form-builder-templates/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["template_designer", "template_publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json",
+      "requestSchema": "contracts/schemas/form-builder-templates-request.schema.json"
+    },
+    {
+      "endpointId": "form-builder-templates-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/form-builder-templates/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "template_designer", "template_reviewer", "form_operator", "template_publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/form-builder-templates-response.schema.json"
+    }
+  ]
+}

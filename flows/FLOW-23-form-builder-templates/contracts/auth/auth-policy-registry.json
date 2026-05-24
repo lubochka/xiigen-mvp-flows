@@ -1,0 +1,56 @@
+{
+  "flowId": "FLOW-23",
+  "flowSlug": "form-builder-templates",
+  "policies": [
+    {
+      "policyId": "form-builder-templates-public-preview",
+      "route": "GET /api/dynamic/form-builder-templates/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/form-builder-templates/public-preview"],
+      "bypassReason": "Public template preview is intentionally readable before login and exposes no tenant-private drafts, submissions, or usage metrics."
+    },
+    {
+      "policyId": "form-builder-templates-save-template",
+      "route": "POST /api/dynamic/form-builder-templates",
+      "authPosture": "policy",
+      "allowedRoles": ["template_designer", "template_publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "form-builder-templates-publish-template",
+      "route": "POST /api/dynamic/form-builder-templates/publish",
+      "authPosture": "policy",
+      "allowedRoles": ["template_publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "form-builder-templates-instantiate-template",
+      "route": "POST /api/dynamic/form-builder-templates/instantiate",
+      "authPosture": "policy",
+      "allowedRoles": ["form_operator", "template_designer", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "form-builder-templates-record-usage",
+      "route": "POST /api/dynamic/form-builder-templates/usage",
+      "authPosture": "policy",
+      "allowedRoles": ["form_operator", "template_designer", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "form-builder-templates-plan-validate",
+      "route": "POST /api/dynamic/form-builder-templates/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["template_designer", "template_publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "form-builder-templates-dashboard",
+      "route": "GET /api/dynamic/form-builder-templates/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "template_designer", "template_reviewer", "form_operator", "template_publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

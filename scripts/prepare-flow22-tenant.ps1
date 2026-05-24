@@ -1,4 +1,4 @@
-﻿param(
+param(
     [Parameter(Mandatory = $true)][string]$RepoName,
     [Parameter(Mandatory = $true)][string]$TenantId,
     [Parameter(Mandatory = $true)][string]$ModuleName,
@@ -35,12 +35,13 @@ if (Test-Path $target) {
     Write-Output "Moved existing tenant workspace to $stale"
 }
 
-robocopy $source $target /E /XD .git node_modules dist .angular bin obj TestResults /XF *.log | Out-Null
+robocopy $source $target /E /XD .git .github node_modules dist .angular bin obj TestResults /XF *.log | Out-Null
 if ($LASTEXITCODE -gt 7) {
     throw "robocopy failed with $LASTEXITCODE"
 }
 
 $removePaths = @(
+    'ci',
     'flows\FLOW-00-bundle-activation',
     'flows\FLOW-01-user-registration',
     'flows\FLOW-02-profile-enrichment',
@@ -228,65 +229,7 @@ $package.name = "@xiigen/$RepoName-angular"
 $package.version = $Version
 $package | ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 $packagePath
 
-New-Item -ItemType Directory -Force -Path (Join-Path $target '.github\workflows') | Out-Null
-$workflow = @"
-name: FLOW-22 cms publishing
-
-on:
-  push:
-  pull_request:
-
-jobs:
-  FLOW-22:
-    runs-on: windows-latest
-    steps:
-      - name: Enable Windows long paths
-        run: git config --global core.longpaths true
-      - uses: actions/checkout@v5
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: '10.0.x'
-      - uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-      - name: Restore .NET
-        run: dotnet restore Xiigen.Flows.slnx
-      - name: Build .NET
-        run: dotnet build Xiigen.Flows.slnx --configuration Release --no-restore
-      - name: Test .NET
-        run: dotnet test Xiigen.Flows.slnx --configuration Release --no-build
-      - name: Install Angular
-        working-directory: flows/FLOW-22-cms-publishing/client/angular
-        run: npm ci
-      - name: Build Angular
-        working-directory: flows/FLOW-22-cms-publishing/client/angular
-        run: npm run build
-      - name: Test Angular
-        working-directory: flows/FLOW-22-cms-publishing/client/angular
-        run: npm test
-      - name: Install Playwright Chromium
-        working-directory: flows/FLOW-22-cms-publishing/client/angular
-        run: npx playwright install chromium
-      - name: Capture visual evidence
-        working-directory: flows/FLOW-22-cms-publishing/client/angular
-        shell: pwsh
-        env:
-          XIIGEN_CASCADE_POINT: $CascadePoint
-          XIIGEN_FLOW_MODULE_NAME: $ModuleName
-        run: |
-          `$p = Start-Process -FilePath node -ArgumentList @('scripts/serve-flow22-dist.mjs') -PassThru -WindowStyle Hidden
-          try {
-            Start-Sleep -Seconds 5
-            node scripts/capture-flow22-evidence.mjs
-          } finally {
-            Stop-Process -Id `$p.Id -Force -ErrorAction SilentlyContinue
-          }
-      - uses: actions/upload-artifact@v5
-        with:
-          name: FLOW-22-visual-evidence
-          path: docs/e2e-snapshots/cms-publishing/dotnet-angular/**/*.png
-"@
-$workflow | Set-Content -Encoding UTF8 (Join-Path $target '.github\workflows\flow-ci.yml')
+# GitHub Actions are intentionally not generated for tenant repositories.
 
 Set-Location $target
 $env:DOTNET_ROOT = 'C:\Projects\.dotnet'
@@ -329,10 +272,9 @@ if ($remoteExists) {
 } else {
     Invoke-CheckedNative gh repo create "lubochka/$RepoName" --private --description "XIIGen FLOW-22 $CascadePoint tenant repository"
 }
+Invoke-CheckedNative gh api -X PUT "repos/lubochka/$RepoName/actions/permissions" "-F" "enabled=false"
+
 Invoke-CheckedNative git remote add origin "https://github.com/lubochka/$RepoName.git"
 Invoke-CheckedNative git push -u origin main --force
 Set-Location $source
 Write-Output "TENANT_REPO_READY $RepoName $CascadePoint"
-
-
-

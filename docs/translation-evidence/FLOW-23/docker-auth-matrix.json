@@ -1,0 +1,8 @@
+{
+    "flow":  "FLOW-23",
+    "authMatrix":  "PASS",
+    "missingToken":  401,
+    "wrongRole":  403,
+    "crossTenant":  401,
+    "liveApiEvidence":  "docs/translation-evidence/FLOW-23-live-api-matrix.json"
+}

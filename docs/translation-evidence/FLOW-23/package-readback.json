@@ -1,0 +1,17 @@
+{
+    "flow":  "FLOW-23",
+    "packageCount":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.FormBuilderTemplates.Application.0.1.1.nupkg",
+                         "Length":  24497,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-23\\Xiigen.Flow.FormBuilderTemplates.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.FormBuilderTemplates.Infrastructure.0.1.1.nupkg",
+                         "Length":  4041,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-23\\Xiigen.Flow.FormBuilderTemplates.Infrastructure.0.1.1.nupkg"
+                     }
+                 ],
+    "readbackStatus":  "PASS"
+}

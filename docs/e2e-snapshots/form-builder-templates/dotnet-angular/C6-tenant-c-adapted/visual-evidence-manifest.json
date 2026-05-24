@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-23",
+  "slug": "form-builder-templates",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-form-orchestrator",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-designer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-designer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-designer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\form-operator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\form-operator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\form-operator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\template-publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=submissions&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=builder&lang=en&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=gallery&lang=he&module=tessera-form-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-form-orchestrator\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=submissions&lang=en&module=tessera-form-orchestrator"
+    }
+  ]
+}

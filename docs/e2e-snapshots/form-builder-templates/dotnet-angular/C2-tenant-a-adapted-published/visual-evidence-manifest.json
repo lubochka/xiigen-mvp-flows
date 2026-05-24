@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-23",
+  "slug": "form-builder-templates",
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "acme-form-studio",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-designer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-designer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "template_designer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-designer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_designer&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "template_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_reviewer&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\form-operator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\form-operator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "form_operator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\form-operator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=form_operator&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "template_publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\template-publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=template_publisher&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=submissions&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=builder&lang=en&module=acme-form-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=gallery&lang=he&module=acme-form-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-form-studio\\docs\\e2e-snapshots\\form-builder-templates\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=submissions&lang=en&module=acme-form-studio"
+    }
+  ]
+}

@@ -1,0 +1,1702 @@
+[
+    {
+        "repo":  "acme-corp--acme-community-intake-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-curated-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-durable-sagas-compliance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-marketplace-payments",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-saas-multi-tenancy",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-visual-flow-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-enterprise-warehouse-analytics",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-help-center-cms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-intake-template-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-launch-bundles",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-learning-rewards",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-policy-gate-console",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-pro-matching",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-safety-console",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--acme-strict-privacy-ads-platform",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--adaptive-rag-deep-research",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--ads-platform",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--blog-cms-modules",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--client-push-f40",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--data-warehouse-analytics",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--design-intelligence-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--design-system-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--durable-sagas-compliance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--dynamic-forms-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--etl-data-integration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--event-attendance-acme-onsite-check-in",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--event-management-acme-curated-events",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--feature-registry",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--human-interaction-gate",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--meta-flow-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--oss-curriculum-f39",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--quiet-community-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--rag-quality-feedback",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--rag-quality-feedback-f38",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--reviews-reputation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--saas-multi-tenancy",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--schema-registry-dag",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--sharable-flows-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--subscription-billing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--system-initiation-bootstrap",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--tenant-lifecycle-manager",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--transactional-event-participation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--user-registration-acme-pro-members",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--visual-flow-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-corp--visual-flow-engine-failed-25464540958",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "acme-pro-members--user-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "amdocs_lotus",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "Askapedia",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "askapediaweb",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "bizguide-client",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "bizguid-server",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "CanvaToCode",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "cytest",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "dynamic_app",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "DynamicServer",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "exam",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "excelReader",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "FigmaCodeGenerator",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "figma-to-code",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "FigmaToCode-design-gen",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "flow-01-user-registration-fork-demo",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "GenAITest",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "GenieDynamicApp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "GenieDynamicMobile",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "GenieDynamicServer",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "genieMobileClient",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "genieServer",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "genieSkills",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "geniesoft",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "geniesoftGameMVP",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "geniesoftGameMVPServer",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "genietasks",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "keshet-test",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "keshet-test-app",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "launchapp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "launchAppServer",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "LaunchPlatform",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "llm_mvp_core",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "LoansCalculator",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "LoansCalculatorApp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "max-facebook",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "max-server",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "max-working-api",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-approval-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-blog-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-community-intake-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-enterprise-durable-sagas-compliance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-enterprise-freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-enterprise-visual-flow-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-extension-control-room",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-research-router",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-strict-privacy-ads-platform",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--acme-tenant-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--client-push-f40",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--design-intelligence-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--design-system-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--event-attendance-northwind-sponsor-check-in",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--event-management-northwind-sponsor-forums",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--feature-registry",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--fresh-trust-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind-guild--user-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-controlled-marketplace-payments",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-controlled-saas-multi-tenancy",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-curated-freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-durable-sagas-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-editorial-ops-cms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-exchange-etl-data-integration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-exchange-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-exchange-warehouse-analytics",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-intake-automation-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-launch-bundles",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-momentum-rewards",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-operations-gallery",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-partner-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-partner-matching",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-retail-ads-optimization",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-revenue-recovery-billing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-schema-lineage-dag",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-trust-review",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-trust-signal-reviews",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--northwind-visual-governance-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--oss-curriculum-f39",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--rag-quality-feedback-f38",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--risk-sentinel-console",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--sharable-flows-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--system-initiation-bootstrap",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "northwind--user-registration-northwind-guild",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "oranbit_shikun",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "orchestrator-mvp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "oxi-ang-user",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "PdfExtractor",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "quantabizclient",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "quantabizdynamicclient",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "quantabizserver",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "quantaWiz",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "quantaWizWeb",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "react_table_dynamic",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "select-options-from-database-for-contact-form-7",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "sqlink-task",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-ad-exchange",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-billing-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-contract-map",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-editorial-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-etl-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-fast-release-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-flow-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-form-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-insight-warehouse",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-payment-control",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-talent-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-trust-reviews",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--acme-workspace-control",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--ads-platform",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--bundle-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--cms-publishing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--data-warehouse-analytics",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--durable-sagas-compliance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--dynamic-forms-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--etl-data-integration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--marketplace-payments",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--resilient-saga-desk",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--reviews-reputation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--saas-multi-tenancy",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--schema-registry-dag",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--subscription-billing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--tenant-a-user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--transactional-event-participation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--user-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-a--visual-flow-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-ad-exchange",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-billing-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-contract-map",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-editorial-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-etl-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-fast-release-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-flow-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-form-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-insight-warehouse",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-payment-control",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-talent-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-trust-reviews",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--acme-workspace-control",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-automation-canvas",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-compliance-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-content-pipeline",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-escrow-ledger",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-exchange-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-metric-observatory",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-milestone-market",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-recurring-revenue",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-reputation-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-schema-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-sponsored-reach",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-sync-fabric",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-tenant-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--northwind-workflow-forms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--resilient-saga-desk",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-a-user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-b--tenant-b-user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-automation-canvas",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-compliance-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-content-pipeline",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-escrow-ledger",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-exchange-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-metric-observatory",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-milestone-market",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-recurring-revenue",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-reputation-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-schema-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-sponsored-reach",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-sync-fabric",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-tenant-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--northwind-workflow-forms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-b-user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-activation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-completion-gamification",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-event-attendance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-event-management",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-friend-request-social-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-profile-enrichment",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tenant-c-user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-community-reputation",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-community-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-consent-ads",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-contract-dag",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-flow-orchestrator",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-form-orchestrator",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-freelancer-trust",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-integration-pipeline",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-ledger-billing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-payment-trust",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-publishing-desk",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-quality-warehouse",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-retention-monitor",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tenant-c--tessera-workspace-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--cascade-ledger-console",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--client-push-f40",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--community-bridge-feed",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--design-intelligence-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--design-system-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--event-attendance-tessera-circle-check-in",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--event-management-tessera-residency-circles",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--feature-registry",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-content-hub",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-durable-sagas-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-flow-foundry",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-intake-automation-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-knowledge-ops",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-lifecycle-control",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--northwind-review-router",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--oss-curriculum-f39",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--rag-quality-feedback-f38",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--sharable-flows-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--system-initiation-bootstrap",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-adaptive-learning-rewards",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-collection-forms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-collective-intake-workflows",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-ads-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-billing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-bundles",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-etl-data-integration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-freelancer-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-marketplace",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-marketplace-payments",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-matching",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-saas-multi-tenancy",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-ticketing",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-community-warehouse-analytics",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-durable-retention-governance",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-editorial-atelier-cms",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-moderation-studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-schema-custody-dag",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--tessera-visual-federation-engine",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--user-groups-communities",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--user-registration",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera-collective--user-registration-tessera-welcome-circle",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "tessera--tessera-community-trust-reviews",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "test-webhook",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "usefulSkills",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "VisualizeDemo",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "WebFlowToCode",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "wizGameserver",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xfinder",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xfinderApp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen_smart_domains",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen_visual_code",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen_visual_studio",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen-flows-dot-net-angular",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen-mvp",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen-planning",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen-platform-dot-net-angular",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "xiigen-poc",
+        "enabled":  false,
+        "allowedActions":  null
+    },
+    {
+        "repo":  "Xiigen-Wordpress-Plugin",
+        "enabled":  false,
+        "allowedActions":  null
+    }
+]

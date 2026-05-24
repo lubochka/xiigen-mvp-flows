@@ -1,0 +1,13 @@
+{
+    "flowId":  "FLOW-23",
+    "flowSlug":  "form-builder-templates",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "status":  "GREEN",
+    "serverTests":  "13/13",
+    "angularTests":  "5/5",
+    "visualEvidence":  "168/168",
+    "tenantCascade":  "6/6",
+    "actionsEnabled":  false,
+    "evidenceRoot":  "docs/translation-evidence/FLOW-23"
+}

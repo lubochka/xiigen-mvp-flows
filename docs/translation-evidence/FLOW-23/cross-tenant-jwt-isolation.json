@@ -1,0 +1,7 @@
+{
+    "flow":  "FLOW-23",
+    "crossTenantJwtIsolation":  "PASS",
+    "testedBy":  "live API matrix",
+    "evidence":  "docs/translation-evidence/FLOW-23-live-api-matrix.json",
+    "expected401":  true
+}

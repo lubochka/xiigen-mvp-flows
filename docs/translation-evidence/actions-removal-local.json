@@ -1,0 +1,692 @@
+[
+    {
+        "repo":  "tenant-a--acme-ad-exchange",
+        "path":  "C:\\Projects\\tenant-a--acme-ad-exchange\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-billing-ops",
+        "path":  "C:\\Projects\\tenant-a--acme-billing-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-contract-map",
+        "path":  "C:\\Projects\\tenant-a--acme-contract-map\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-editorial-hub",
+        "path":  "C:\\Projects\\tenant-a--acme-editorial-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-etl-hub",
+        "path":  "C:\\Projects\\tenant-a--acme-etl-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-fast-release-ticketing",
+        "path":  "C:\\Projects\\tenant-a--acme-fast-release-ticketing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-flow-studio",
+        "path":  "C:\\Projects\\tenant-a--acme-flow-studio\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-form-studio",
+        "path":  "C:\\Projects\\tenant-a--acme-form-studio\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-insight-warehouse",
+        "path":  "C:\\Projects\\tenant-a--acme-insight-warehouse\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-payment-control",
+        "path":  "C:\\Projects\\tenant-a--acme-payment-control\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-talent-marketplace",
+        "path":  "C:\\Projects\\tenant-a--acme-talent-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-trust-reviews",
+        "path":  "C:\\Projects\\tenant-a--acme-trust-reviews\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--acme-workspace-control",
+        "path":  "C:\\Projects\\tenant-a--acme-workspace-control\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--ads-platform",
+        "path":  "C:\\Projects\\tenant-a--ads-platform\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--bundle-activation",
+        "path":  "C:\\Projects\\tenant-a--bundle-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--cms-publishing",
+        "path":  "C:\\Projects\\tenant-a--cms-publishing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--completion-gamification",
+        "path":  "C:\\Projects\\tenant-a--completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--data-warehouse-analytics",
+        "path":  "C:\\Projects\\tenant-a--data-warehouse-analytics\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--durable-sagas-compliance",
+        "path":  "C:\\Projects\\tenant-a--durable-sagas-compliance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--dynamic-forms-workflows",
+        "path":  "C:\\Projects\\tenant-a--dynamic-forms-workflows\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--etl-data-integration",
+        "path":  "C:\\Projects\\tenant-a--etl-data-integration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--event-attendance",
+        "path":  "C:\\Projects\\tenant-a--event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--event-management",
+        "path":  "C:\\Projects\\tenant-a--event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--freelancer-marketplace",
+        "path":  "C:\\Projects\\tenant-a--freelancer-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-a--friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--marketplace",
+        "path":  "C:\\Projects\\tenant-a--marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--marketplace-payments",
+        "path":  "C:\\Projects\\tenant-a--marketplace-payments\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--profile-enrichment",
+        "path":  "C:\\Projects\\tenant-a--profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--resilient-saga-desk",
+        "path":  "C:\\Projects\\tenant-a--resilient-saga-desk\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--reviews-reputation",
+        "path":  "C:\\Projects\\tenant-a--reviews-reputation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--saas-multi-tenancy",
+        "path":  "C:\\Projects\\tenant-a--saas-multi-tenancy\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--schema-registry-dag",
+        "path":  "C:\\Projects\\tenant-a--schema-registry-dag\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--subscription-billing",
+        "path":  "C:\\Projects\\tenant-a--subscription-billing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-activation",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-completion-gamification",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-event-attendance",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-event-management",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-marketplace",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-profile-enrichment",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-registration",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--tenant-a-user-groups-communities",
+        "path":  "C:\\Projects\\tenant-a--tenant-a-user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--transactional-event-participation",
+        "path":  "C:\\Projects\\tenant-a--transactional-event-participation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--user-groups-communities",
+        "path":  "C:\\Projects\\tenant-a--user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--user-registration",
+        "path":  "C:\\Projects\\tenant-a--user-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-a--visual-flow-engine",
+        "path":  "C:\\Projects\\tenant-a--visual-flow-engine\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-ad-exchange",
+        "path":  "C:\\Projects\\tenant-b--acme-ad-exchange\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-billing-ops",
+        "path":  "C:\\Projects\\tenant-b--acme-billing-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-contract-map",
+        "path":  "C:\\Projects\\tenant-b--acme-contract-map\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-editorial-hub",
+        "path":  "C:\\Projects\\tenant-b--acme-editorial-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-etl-hub",
+        "path":  "C:\\Projects\\tenant-b--acme-etl-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-fast-release-ticketing",
+        "path":  "C:\\Projects\\tenant-b--acme-fast-release-ticketing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-flow-studio",
+        "path":  "C:\\Projects\\tenant-b--acme-flow-studio\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-form-studio",
+        "path":  "C:\\Projects\\tenant-b--acme-form-studio\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-insight-warehouse",
+        "path":  "C:\\Projects\\tenant-b--acme-insight-warehouse\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-payment-control",
+        "path":  "C:\\Projects\\tenant-b--acme-payment-control\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-talent-marketplace",
+        "path":  "C:\\Projects\\tenant-b--acme-talent-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-trust-reviews",
+        "path":  "C:\\Projects\\tenant-b--acme-trust-reviews\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--acme-workspace-control",
+        "path":  "C:\\Projects\\tenant-b--acme-workspace-control\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-automation-canvas",
+        "path":  "C:\\Projects\\tenant-b--northwind-automation-canvas\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-compliance-ops",
+        "path":  "C:\\Projects\\tenant-b--northwind-compliance-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-content-pipeline",
+        "path":  "C:\\Projects\\tenant-b--northwind-content-pipeline\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-escrow-ledger",
+        "path":  "C:\\Projects\\tenant-b--northwind-escrow-ledger\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-exchange-ticketing",
+        "path":  "C:\\Projects\\tenant-b--northwind-exchange-ticketing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-metric-observatory",
+        "path":  "C:\\Projects\\tenant-b--northwind-metric-observatory\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-milestone-market",
+        "path":  "C:\\Projects\\tenant-b--northwind-milestone-market\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-recurring-revenue",
+        "path":  "C:\\Projects\\tenant-b--northwind-recurring-revenue\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-reputation-hub",
+        "path":  "C:\\Projects\\tenant-b--northwind-reputation-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-schema-governance",
+        "path":  "C:\\Projects\\tenant-b--northwind-schema-governance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-sponsored-reach",
+        "path":  "C:\\Projects\\tenant-b--northwind-sponsored-reach\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-sync-fabric",
+        "path":  "C:\\Projects\\tenant-b--northwind-sync-fabric\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-tenant-ops",
+        "path":  "C:\\Projects\\tenant-b--northwind-tenant-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--northwind-workflow-forms",
+        "path":  "C:\\Projects\\tenant-b--northwind-workflow-forms\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--resilient-saga-desk",
+        "path":  "C:\\Projects\\tenant-b--resilient-saga-desk\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-activation",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-completion-gamification",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-event-attendance",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-event-management",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-marketplace",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-profile-enrichment",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-registration",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-a-user-groups-communities",
+        "path":  "C:\\Projects\\tenant-b--tenant-a-user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-activation",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-completion-gamification",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-event-attendance",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-event-management",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-marketplace",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-profile-enrichment",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-registration",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-b--tenant-b-user-groups-communities",
+        "path":  "C:\\Projects\\tenant-b--tenant-b-user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-automation-canvas",
+        "path":  "C:\\Projects\\tenant-c--northwind-automation-canvas\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-compliance-ops",
+        "path":  "C:\\Projects\\tenant-c--northwind-compliance-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-content-pipeline",
+        "path":  "C:\\Projects\\tenant-c--northwind-content-pipeline\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-escrow-ledger",
+        "path":  "C:\\Projects\\tenant-c--northwind-escrow-ledger\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-exchange-ticketing",
+        "path":  "C:\\Projects\\tenant-c--northwind-exchange-ticketing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-metric-observatory",
+        "path":  "C:\\Projects\\tenant-c--northwind-metric-observatory\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-milestone-market",
+        "path":  "C:\\Projects\\tenant-c--northwind-milestone-market\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-recurring-revenue",
+        "path":  "C:\\Projects\\tenant-c--northwind-recurring-revenue\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-reputation-hub",
+        "path":  "C:\\Projects\\tenant-c--northwind-reputation-hub\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-schema-governance",
+        "path":  "C:\\Projects\\tenant-c--northwind-schema-governance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-sponsored-reach",
+        "path":  "C:\\Projects\\tenant-c--northwind-sponsored-reach\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-sync-fabric",
+        "path":  "C:\\Projects\\tenant-c--northwind-sync-fabric\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-tenant-ops",
+        "path":  "C:\\Projects\\tenant-c--northwind-tenant-ops\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--northwind-workflow-forms",
+        "path":  "C:\\Projects\\tenant-c--northwind-workflow-forms\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-activation",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-completion-gamification",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-event-attendance",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-event-management",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-marketplace",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-profile-enrichment",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-registration",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-b-user-groups-communities",
+        "path":  "C:\\Projects\\tenant-c--tenant-b-user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-activation",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-activation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-completion-gamification",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-completion-gamification\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-event-attendance",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-attendance\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-event-management",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-event-management\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-friend-request-social-feed",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-friend-request-social-feed\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-marketplace",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-marketplace\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-profile-enrichment",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-profile-enrichment\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-registration",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-registration\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tenant-c-user-groups-communities",
+        "path":  "C:\\Projects\\tenant-c--tenant-c-user-groups-communities\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-community-reputation",
+        "path":  "C:\\Projects\\tenant-c--tessera-community-reputation\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-community-ticketing",
+        "path":  "C:\\Projects\\tenant-c--tessera-community-ticketing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-consent-ads",
+        "path":  "C:\\Projects\\tenant-c--tessera-consent-ads\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-contract-dag",
+        "path":  "C:\\Projects\\tenant-c--tessera-contract-dag\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-flow-orchestrator",
+        "path":  "C:\\Projects\\tenant-c--tessera-flow-orchestrator\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-form-orchestrator",
+        "path":  "C:\\Projects\\tenant-c--tessera-form-orchestrator\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-freelancer-trust",
+        "path":  "C:\\Projects\\tenant-c--tessera-freelancer-trust\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-integration-pipeline",
+        "path":  "C:\\Projects\\tenant-c--tessera-integration-pipeline\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-ledger-billing",
+        "path":  "C:\\Projects\\tenant-c--tessera-ledger-billing\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-payment-trust",
+        "path":  "C:\\Projects\\tenant-c--tessera-payment-trust\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-publishing-desk",
+        "path":  "C:\\Projects\\tenant-c--tessera-publishing-desk\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-quality-warehouse",
+        "path":  "C:\\Projects\\tenant-c--tessera-quality-warehouse\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-retention-monitor",
+        "path":  "C:\\Projects\\tenant-c--tessera-retention-monitor\\.github\\workflows",
+        "filesRemoved":  1
+    },
+    {
+        "repo":  "tenant-c--tessera-workspace-governance",
+        "path":  "C:\\Projects\\tenant-c--tessera-workspace-governance\\.github\\workflows",
+        "filesRemoved":  1
+    }
+]
