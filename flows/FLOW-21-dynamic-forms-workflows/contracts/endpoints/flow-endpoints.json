@@ -1,0 +1,109 @@
+{
+  "flowId": "FLOW-21",
+  "flowSlug": "dynamic-forms-workflows",
+  "endpoints": [
+    {
+      "endpointId": "dynamic-forms-workflows-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/dynamic-forms-workflows/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "bypassReason": "Public form capability preview is intentionally readable before login and exposes no tenant submission data."
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-publish-schema",
+      "method": "POST",
+      "path": "/api/dynamic/dynamic-forms-workflows",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "requestSchema": "contracts/schemas/dynamic-forms-workflows-request.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-submit-form",
+      "method": "POST",
+      "path": "/api/dynamic/dynamic-forms-workflows/submissions",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "requestSchema": "contracts/schemas/dynamic-forms-workflows-request.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-dispatch-automation",
+      "method": "POST",
+      "path": "/api/dynamic/dynamic-forms-workflows/automation/dispatch",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "requestSchema": "contracts/schemas/dynamic-forms-workflows-request.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-collect-analytics",
+      "method": "POST",
+      "path": "/api/dynamic/dynamic-forms-workflows/analytics",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "requestSchema": "contracts/schemas/dynamic-forms-workflows-request.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/dynamic-forms-workflows/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json",
+      "requestSchema": "contracts/schemas/dynamic-forms-workflows-request.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-operations-me",
+      "method": "GET",
+      "path": "/api/dynamic/dynamic-forms-workflows/operations/me",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json"
+    },
+    {
+      "endpointId": "dynamic-forms-workflows-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/dynamic-forms-workflows/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "responseSchema": "contracts/schemas/dynamic-forms-workflows-response.schema.json"
+    }
+  ]
+}

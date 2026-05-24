@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Xiigen.Flow.DynamicFormsWorkflows.Infrastructure</PackageId>
+    <Version>0.1.1</Version>
+    <IsPackable>true</IsPackable>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\..\..\artifacts\nuget\FLOW-21</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.DynamicFormsWorkflows.Application\Xiigen.Flow.DynamicFormsWorkflows.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Fabrics.InMemory" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Auth" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Fabrics.Scheduler" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Freedom" Version="0.1.0" />
+  </ItemGroup>
+</Project>
+

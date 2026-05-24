@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-21/dynamic-forms-workflows-response.schema.json",
+  "title": "FLOW-21 Dynamic Forms Workflows Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "formId": {
+      "type": "string"
+    },
+    "submissionId": {
+      "type": "string"
+    },
+    "ruleId": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PUBLISHED",
+        "SUBMITTED",
+        "AUTOMATION_DISPATCHED",
+        "AUTOMATION_ALREADY_DISPATCHED",
+        "ANALYTICS_RECORDED",
+        "PLAN_COVERED"
+      ]
+    },
+    "code": {
+      "type": "string",
+      "enum": [
+        "VALIDATION_FAILED",
+        "IDEMPOTENCY_KEY_REQUIRED",
+        "TENANT_SCOPE_FORBIDDEN",
+        "CONCURRENT_UPDATE",
+        "TIMEOUT",
+        "SCHEMA_NOT_FOUND",
+        "SUBMISSION_NOT_FOUND",
+        "BOLA_VIOLATION"
+      ]
+    },
+    "currentVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retryAfterMs": {
+      "type": "integer"
+    },
+    "fieldCount": {
+      "type": "integer"
+    },
+    "workflowRuleCount": {
+      "type": "integer"
+    },
+    "piiPersisted": {
+      "type": "boolean"
+    },
+    "details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "field",
+          "reason"
+        ],
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}

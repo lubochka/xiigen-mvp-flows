@@ -1,0 +1,156 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Form operations') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'schema'" (click)="setScreenState('schema')">
+          {{ translated('Schema') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'workflow'" (click)="setScreenState('workflow')">
+          {{ translated('Workflow') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'analytics'" (click)="setScreenState('analytics')">
+          {{ translated('Analytics') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>7</strong>
+      <span>{{ translated('Published versions') }}</span>
+    </article>
+    <article>
+      <strong>126</strong>
+      <span>{{ translated('Submissions today') }}</span>
+    </article>
+    <article>
+      <strong>18</strong>
+      <span>{{ translated('Workflow dispatches') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'schema'" class="workspace" data-testid="schema-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Schema publisher</p>
+        <h2>Versioned fields with role visibility</h2>
+        <p>Published form definitions are immutable without the latest version check, so editors cannot overwrite someone else's changes.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Visible to</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of fieldRows">
+            <td>{{ row.key }}</td>
+            <td>{{ row.type }}</td>
+            <td>{{ row.visibleTo }}</td>
+            <td><span class="state" [class]="row.state">{{ row.state }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Authoring controls</h3>
+      <label>
+        Required fields
+        <input type="range" min="1" max="6" [ngModel]="requiredFields()" (ngModelChange)="setRequiredFields($event)" />
+      </label>
+      <div class="decision-line">
+        <span>Current requirement</span>
+        <strong>{{ requiredFields() }} fields</strong>
+      </div>
+      <div class="decision-line">
+        <span>Version check</span>
+        <strong>required</strong>
+      </div>
+      <button type="button" [disabled]="!canAuthor()">{{ canAuthor() ? translated('Publish schema') : translated('Preview only') }}</button>
+      <p *ngIf="publicView()" class="muted">{{ translated('No private submission data is visible here.') }}</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'workflow'" class="workspace" data-testid="workflow-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Workflow routing</p>
+        <h2>Conditional branches after validation</h2>
+        <p>Submissions must match the published schema before any workflow branch or dispatch message is created.</p>
+      </div>
+      <div class="workflow-stack">
+        <article *ngFor="let row of workflowRows" class="workflow-row">
+          <span class="state" [class]="row.state">{{ row.state }}</span>
+          <strong>{{ row.trigger }}</strong>
+          <span>{{ row.branch }}</span>
+          <small>{{ row.next }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Dispatch lock</h3>
+      <p>Each submission and rule pair can dispatch once. Repeated attempts replay the original result.</p>
+      <div class="decision-line">
+        <span>Lock scope</span>
+        <strong>submission + rule</strong>
+      </div>
+      <div class="decision-line">
+        <span>Order</span>
+        <strong>after validation</strong>
+      </div>
+      <button type="button" [disabled]="!canDispatch()">{{ canDispatch() ? translated('Dispatch workflow') : translated('Preview only') }}</button>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'analytics'" class="workspace" data-testid="analytics-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Submission analytics</p>
+        <h2>Aggregate metrics without respondent details</h2>
+        <p>Analytics records are append-only and store counters, durations, and routing totals instead of personal answers.</p>
+      </div>
+      <div class="metric-grid">
+        <article *ngFor="let row of metricRows" class="metric-card">
+          <strong>{{ row.value }}</strong>
+          <span>{{ row.metric }}</span>
+          <small>{{ row.note }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Submitter view</h3>
+      <p>Signed-in users see the fields allowed for their role and get clear validation before workflow processing begins.</p>
+      <div class="decision-line">
+        <span>Validation</span>
+        <strong>before dispatch</strong>
+      </div>
+      <div class="decision-line">
+        <span>Analytics</span>
+        <strong>aggregate only</strong>
+      </div>
+      <button type="button" [disabled]="!canSubmit()">{{ canSubmit() ? translated('Submit form') : translated('Preview only') }}</button>
+    </aside>
+  </section>
+</main>

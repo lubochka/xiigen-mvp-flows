@@ -1,0 +1,13 @@
+﻿{
+  "flowId": "FLOW-21",
+  "flowSlug": "dynamic-forms-workflows",
+  "api": {
+    "localUrl": "http://127.0.0.1:5321",
+    "containerUrl": "http://127.0.0.1:5321"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4321",
+    "evidencePort": 4321
+  }
+}
+

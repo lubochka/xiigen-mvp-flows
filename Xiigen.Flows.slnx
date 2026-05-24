@@ -147,4 +147,11 @@
     <Project Path="flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Infrastructure/Xiigen.Flow.AdsPlatform.Infrastructure.csproj" />
     <Project Path="flows/FLOW-20-ads-platform/server/Xiigen.Flow.AdsPlatform.Tests/Xiigen.Flow.AdsPlatform.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-21-dynamic-forms-workflows/" />
+  <Folder Name="/flows/FLOW-21-dynamic-forms-workflows/server/">
+    <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Api/Xiigen.Flow.DynamicFormsWorkflows.Api.csproj" />
+    <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Application/Xiigen.Flow.DynamicFormsWorkflows.Application.csproj" />
+    <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Infrastructure/Xiigen.Flow.DynamicFormsWorkflows.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Tests/Xiigen.Flow.DynamicFormsWorkflows.Tests.csproj" />
+  </Folder>
 </Solution>

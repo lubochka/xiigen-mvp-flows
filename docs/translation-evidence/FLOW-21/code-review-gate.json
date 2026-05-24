@@ -1,0 +1,36 @@
+﻿{
+    "flowId":  "FLOW-21",
+    "flowSlug":  "dynamic-forms-workflows",
+    "generatedAt":  "2026-05-24T05:12:23.8199189Z",
+    "pass":  true,
+    "checks":  [
+                   {
+                       "name":  "provider-sdk-imports",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "free-tenant-id-params",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "business-throw-statements",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "data-process-result",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "human-language-ui",
+                       "result":  "PASS"
+                   },
+                   {
+                       "name":  "outbox-after-state",
+                       "result":  "PASS"
+                   }
+               ]
+}

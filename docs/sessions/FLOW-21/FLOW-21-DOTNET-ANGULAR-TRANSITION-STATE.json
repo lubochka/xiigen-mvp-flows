@@ -1,0 +1,24 @@
+﻿{
+    "flowId":  "FLOW-21",
+    "flowSlug":  "dynamic-forms-workflows",
+    "portabilityTier":  "Tier D",
+    "status":  "GREEN",
+    "generatedAt":  "2026-05-24T05:12:23.8199189Z",
+    "tests":  {
+                  "liveAuthMatrix":  "PASS",
+                  "githubActionsCascade":  "PASS",
+                  "dotnetSolution":  "PASS",
+                  "angularBuild":  "PASS",
+                  "angularUnit":  "PASS"
+              },
+    "evidence":  {
+                     "githubActionsCascade":  "docs/translation-evidence/FLOW-21/github-actions-cascade.json",
+                     "crossTenantJwt":  "docs/translation-evidence/FLOW-21/cross-tenant-jwt-isolation.json",
+                     "visualCounts":  "docs/translation-evidence/FLOW-21/visual-counts.json",
+                     "layer8Cascade":  "docs/translation-evidence/FLOW-21/layer8-cascade-evidence.json",
+                     "packageReadback":  "docs/translation-evidence/FLOW-21/package-readback.json",
+                     "dockerAuthMatrix":  "docs/translation-evidence/FLOW-21/docker-auth-matrix.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-21/code-review-gate.json",
+                     "qaReview":  "docs/translation-evidence/FLOW-21/qa-review.md"
+                 }
+}

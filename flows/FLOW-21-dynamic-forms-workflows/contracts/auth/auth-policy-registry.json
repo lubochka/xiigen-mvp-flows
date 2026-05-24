@@ -1,0 +1,98 @@
+{
+  "flowId": "FLOW-21",
+  "flowSlug": "dynamic-forms-workflows",
+  "policies": [
+    {
+      "policyId": "dynamic-forms-workflows-public-preview",
+      "route": "GET /api/dynamic/dynamic-forms-workflows/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": [
+        "/api/dynamic/dynamic-forms-workflows/public-preview"
+      ],
+      "bypassReason": "Public form capability preview is intentionally readable before login and exposes no tenant submission data."
+    },
+    {
+      "policyId": "dynamic-forms-workflows-publish-schema",
+      "route": "POST /api/dynamic/dynamic-forms-workflows",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-submit-form",
+      "route": "POST /api/dynamic/dynamic-forms-workflows/submissions",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-dispatch-automation",
+      "route": "POST /api/dynamic/dynamic-forms-workflows/automation/dispatch",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-collect-analytics",
+      "route": "POST /api/dynamic/dynamic-forms-workflows/analytics",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-plan-validate",
+      "route": "POST /api/dynamic/dynamic-forms-workflows/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-operations-me",
+      "route": "GET /api/dynamic/dynamic-forms-workflows/operations/me",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "dynamic-forms-workflows-dashboard",
+      "route": "GET /api/dynamic/dynamic-forms-workflows/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "tenant_user",
+        "freelancer",
+        "business_partner",
+        "event_organiser",
+        "tenant_admin",
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}

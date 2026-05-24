@@ -1,0 +1,148 @@
+{
+  "flowId": "FLOW-21",
+  "flowSlug": "dynamic-forms-workflows",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-21-dynamic-forms-workflows",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.DynamicFormsWorkflows.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/dynamic-forms-workflows/dotnet-angular",
+  "sourceAliases": [
+    "dynamic-forms-workflows",
+    "form-schema-publisher",
+    "form-submission-processor",
+    "automation-dispatcher",
+    "submission-analytics-collector",
+    "workflow-state-machine",
+    "conditional-form-logic"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "freelancer",
+      "business_partner",
+      "event_organiser",
+      "tenant_admin",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-11",
+      "relationship": "event-contract-source",
+      "reason": "Dynamic forms workflows publishes CloudEvents and uses schema-registry contracts for form schemas, submissions, automation dispatches, and analytics envelopes."
+    },
+    {
+      "flowId": "FLOW-22",
+      "relationship": "workflow-consumer",
+      "reason": "CMS workflow integrations can consume published form and workflow events through CloudEvents."
+    },
+    {
+      "flowId": "FLOW-23",
+      "relationship": "template-source",
+      "reason": "Template builder content can seed reusable form schemas and workflow variants."
+    },
+    {
+      "flowId": "FLOW-27",
+      "relationship": "approval-workflow-consumer",
+      "reason": "Approval workflows can consume form submission events for business review paths."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/dynamic-forms-workflows",
+    "requiredDocuments": [
+      "docs/flow-coverage/dynamic-forms-workflows/P1-business-logic-inventory.md",
+      "docs/flow-coverage/dynamic-forms-workflows/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/dynamic-forms-workflows/P5-ui-specs.md",
+      "docs/flow-coverage/dynamic-forms-workflows/P9-edge-cases.md",
+      "docs/flow-coverage/dynamic-forms-workflows/P10-server-specs.md",
+      "docs/flow-coverage/dynamic-forms-workflows/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 11,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": [
+      "Development",
+      "Test"
+    ],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.DynamicFormsWorkflows.Infrastructure/DynamicFormsWorkflowsServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "Dynamic Forms Workflows fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "dynamic-forms-workflows",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-dynamic-forms-workflows.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

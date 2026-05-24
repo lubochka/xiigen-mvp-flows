@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-21/dynamic-forms-workflows-request.schema.json",
+  "title": "FLOW-21 Dynamic Forms Workflows Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "tenantId"
+        ]
+      },
+      {
+        "required": [
+          "tenant_id"
+        ]
+      },
+      {
+        "required": [
+          "flowTenantId"
+        ]
+      },
+      {
+        "required": [
+          "flow_tenant_id"
+        ]
+      },
+      {
+        "required": [
+          "ownerTenantId"
+        ]
+      },
+      {
+        "required": [
+          "owner_tenant_id"
+        ]
+      },
+      {
+        "required": [
+          "masterTenantId"
+        ]
+      },
+      {
+        "required": [
+          "master_tenant_id"
+        ]
+      },
+      {
+        "required": [
+          "formTenantId"
+        ]
+      },
+      {
+        "required": [
+          "form_tenant_id"
+        ]
+      }
+    ]
+  },
+  "properties": {
+    "formId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "submissionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ruleId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metricName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "branch": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "type"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "visibleToRoles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rules": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "workflowRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ruleId"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "ruleId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": "string"
+          },
+          "targetState": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "values": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "planSteps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "taskTypeId",
+          "responsibility",
+          "config"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "taskTypeId": {
+            "type": "string",
+            "enum": [
+              "T307",
+              "T308",
+              "T309",
+              "T310",
+              "T311",
+              "T312",
+              "T313",
+              "T314",
+              "T315",
+              "T316",
+              "T317",
+              "T318",
+              "T319",
+              "T320",
+              "T321",
+              "T322",
+              "T323",
+              "T324",
+              "T325",
+              "T326",
+              "T327",
+              "T328",
+              "T329",
+              "T330",
+              "T331",
+              "T332",
+              "T333",
+              "T334",
+              "T335",
+              "T336",
+              "T337",
+              "T338",
+              "T339",
+              "T340",
+              "T629",
+              "T630",
+              "T631",
+              "T632"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "responsibility": {
+            "type": "string",
+            "minLength": 1
+          },
+          "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "not": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "providerSdkImport": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "providerSdkImport"
+                  ]
+                },
+                {
+                  "properties": {
+                    "entitySpecificController": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "entitySpecificController"
+                  ]
+                }
+              ]
+            },
+            "properties": {
+              "returns": {
+                "const": "DataProcessResult"
+              }
+            }
+          }
+        }
+      }
+    },
+    "simulateSlowWrite": {
+      "type": "boolean"
+    },
+    "simulateFabricTimeout": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+﻿{
+    "flowId":  "FLOW-21",
+    "flowSlug":  "dynamic-forms-workflows",
+    "generatedAt":  "2026-05-24T05:12:23.8199189Z",
+    "roles":  7,
+    "cellsPerRole":  3,
+    "cascadePoints":  7,
+    "expectedTotalPng":  147,
+    "actualTotalPng":  147,
+    "pass":  true,
+    "points":  [
+                   {
+                       "cascadePoint":  "C0-source-flow",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C1-tenant-a-installed",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C2-tenant-a-adapted-published",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C3-tenant-b-installed-from-a",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C4-tenant-b-adapted-published",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C5-tenant-c-installed-from-b",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                   },
+                   {
+                       "cascadePoint":  "C6-tenant-c-adapted",
+                       "expectedPng":  21,
+                       "actualPng":  21,
+                       "manifest":  "docs\\e2e-snapshots\\dynamic-forms-workflows\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                   }
+               ]
+}

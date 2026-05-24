@@ -1,0 +1,24 @@
+﻿{
+    "flowId":  "FLOW-21",
+    "flowSlug":  "dynamic-forms-workflows",
+    "generatedAt":  "2026-05-24T05:12:23.8199189Z",
+    "pass":  true,
+    "checks":  [
+                   "public-preview-200",
+                   "missing-token-401",
+                   "wrong-role-403",
+                   "cross-tenant-token-401",
+                   "schema-publish-201",
+                   "idempotent-replay-200",
+                   "stale-version-409",
+                   "validation-400-no-partial-write",
+                   "timeout-504-outbox-retained",
+                   "submission-201",
+                   "hidden-field-400",
+                   "automation-201",
+                   "automation-duplicate-200",
+                   "analytics-201",
+                   "analytics-pii-400",
+                   "dashboard-200"
+               ]
+}
