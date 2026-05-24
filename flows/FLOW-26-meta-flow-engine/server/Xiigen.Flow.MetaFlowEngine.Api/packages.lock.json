@@ -1,0 +1,67 @@
+﻿{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "Xiigen.Auth": {
+        "type": "Transitive",
+        "resolved": "0.1.0",
+        "contentHash": "EIhXuYjJpEGTJdSKzQ96/Qi7dkB/xayz9AKIUK6KQCqQWo0RB74mI61G1e0vDtNhhNvLD60Hw3X/BrbKeNF7xg==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Fabrics.InMemory": {
+        "type": "Transitive",
+        "resolved": "0.1.1",
+        "contentHash": "2FHXNq/eah74E2A/3lDB0eQ7WIq/Rg8yxYlZXY0FfFl0ZhQGX4ughuWeIkC5rqjmYKgtG2No4YGoGLB9Dwgutw==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Fabrics.Scheduler": {
+        "type": "Transitive",
+        "resolved": "0.1.0",
+        "contentHash": "0Qsmhrqwef2pYOHBPZiSqsq50hPE24VMRPybVTCLnpCdKQce7fxm4SNBy9K7HB4tXQp86Bgf+kMny0moQBkHpw==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Freedom": {
+        "type": "Transitive",
+        "resolved": "0.1.0",
+        "contentHash": "OLG1yWz2G0or8Bug0ZWPO5TjCBLlVS4IdDzZQ+v+IWmFgeH+zkImS1ZlC/UpttajQKZ5B/Qk/3Qm4rkewp7BNg==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Kernel": {
+        "type": "Transitive",
+        "resolved": "0.1.1",
+        "contentHash": "oqZbiCQT6LRx4kJ79PLznifnJC/zD5aJcIEhvrp7S5uVCU50/lrzbLfGQ7/MzSTf9J5CKJxZUVnZ3y6nqIUAMg=="
+      },
+      "Xiigen.Flow.MetaFlowEngine.application": {
+        "type": "Project",
+        "dependencies": {
+          "Xiigen.Auth": "[0.1.0, )",
+          "Xiigen.Fabrics.Scheduler": "[0.1.0, )",
+          "Xiigen.Freedom": "[0.1.0, )",
+          "Xiigen.Kernel": "[0.1.1, )"
+        }
+      },
+      "Xiigen.Flow.MetaFlowEngine.infrastructure": {
+        "type": "Project",
+        "dependencies": {
+          "Xiigen.Auth": "[0.1.0, )",
+          "Xiigen.Fabrics.InMemory": "[0.1.1, )",
+          "Xiigen.Fabrics.Scheduler": "[0.1.0, )",
+          "Xiigen.Flow.MetaFlowEngine.Application": "[0.1.1, )",
+          "Xiigen.Freedom": "[0.1.0, )",
+          "Xiigen.Kernel": "[0.1.1, )"
+        }
+      }
+    }
+  }
+}
+
+
+

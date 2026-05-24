@@ -182,4 +182,11 @@
     <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure/Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.csproj" />
     <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Tests/Xiigen.Flow.BfaCrossFlowGovernance.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-26-meta-flow-engine/" />
+  <Folder Name="/flows/FLOW-26-meta-flow-engine/server/">
+    <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Api/Xiigen.Flow.MetaFlowEngine.Api.csproj" />
+    <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Application/Xiigen.Flow.MetaFlowEngine.Application.csproj" />
+    <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Infrastructure/Xiigen.Flow.MetaFlowEngine.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Tests/Xiigen.Flow.MetaFlowEngine.Tests.csproj" />
+  </Folder>
 </Solution>

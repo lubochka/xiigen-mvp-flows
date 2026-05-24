@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-26-meta-flow-engine</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.MetaFlowEngine.Application\Xiigen.Flow.MetaFlowEngine.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.MetaFlowEngine.Infrastructure\Xiigen.Flow.MetaFlowEngine.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+

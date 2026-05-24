@@ -1,0 +1,12 @@
+﻿services:
+  FLOW-26-meta-flow-engine-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Api/Dockerfile
+    ports:
+      - "5324:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+

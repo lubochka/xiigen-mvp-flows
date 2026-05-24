@@ -1,0 +1,17 @@
+﻿{
+    "flowId":  "FLOW-26",
+    "noProviderSdkImports":  true,
+    "noFreeTenantIdParameters":  true,
+    "microserviceBasePresent":  true,
+    "dataProcessResultPresent":  true,
+    "outboxPresent":  true,
+    "scannedFiles":  [
+                         "server\\Xiigen.Flow.MetaFlowEngine.Api\\Program.cs",
+                         "server\\Xiigen.Flow.MetaFlowEngine.Application\\MetaFlowEngineBfaRuleRegistry.cs",
+                         "server\\Xiigen.Flow.MetaFlowEngine.Application\\MetaFlowEngineConstants.cs",
+                         "server\\Xiigen.Flow.MetaFlowEngine.Application\\MetaFlowEngineResults.cs",
+                         "server\\Xiigen.Flow.MetaFlowEngine.Application\\MetaFlowEngineService.cs",
+                         "server\\Xiigen.Flow.MetaFlowEngine.Infrastructure\\MetaFlowEngineServiceCollectionExtensions.cs"
+                     ],
+    "passed":  true
+}

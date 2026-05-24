@@ -1,0 +1,136 @@
+{
+  "flow": "FLOW-26",
+  "slug": "meta-flow-engine",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-self-extension",
+  "expected": 21,
+  "actual": 21,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=anonymous&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=anonymous&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=anonymous&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=platform_support&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=platform_support&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=platform_support&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=flow_architect&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=flow_architect&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=flow_architect&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=prompt_approver&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=prompt_approver&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=prompt_approver&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=human_decision_maker&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=human_decision_maker&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=human_decision_maker&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=tenant_admin&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=tenant_admin&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=tenant_admin&state=promotion&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=platform_admin&state=gaps&lang=en&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4326/?role=platform_admin&state=genesis&lang=he&module=tessera-self-extension"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-self-extension\\docs\\e2e-snapshots\\meta-flow-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4326/?role=platform_admin&state=promotion&lang=en&module=tessera-self-extension"
+    }
+  ]
+}

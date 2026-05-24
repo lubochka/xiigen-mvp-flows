@@ -1,0 +1,14 @@
+﻿{
+    "flowId":  "FLOW-26",
+    "packageCount":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.MetaFlowEngine.Application.0.1.1.nupkg",
+                         "Length":  26370
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.MetaFlowEngine.Infrastructure.0.1.1.nupkg",
+                         "Length":  3989
+                     }
+                 ]
+}

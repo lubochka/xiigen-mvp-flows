@@ -1,0 +1,248 @@
+﻿{
+    "flowId":  "FLOW-26",
+    "generatedAt":  "2026-05-24T13:38:14.8032249Z",
+    "allPassed":  true,
+    "checks":  [
+                   {
+                       "name":  "public-preview",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "response":  {
+                                        "flow":  "FLOW-26",
+                                        "summary":  "Preview the governance arbiter, rule-pack coverage, impact analysis, stress-test posture, and release gate without exposing tenant-private change data.",
+                                        "tabs":  [
+                                                     "rules",
+                                                     "impact",
+                                                     "release"
+                                                 ]
+                                    }
+                   },
+                   {
+                       "name":  "missing-token",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "response":  {
+                                        "code":  "MISSING_TOKEN"
+                                    }
+                   },
+                   {
+                       "name":  "cross-tenant-token",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "response":  {
+                                        "code":  "AUTH_CROSS_TENANT_TOKEN"
+                                    }
+                   },
+                   {
+                       "name":  "wrong-role",
+                       "expected":  403,
+                       "actual":  403,
+                       "pass":  true,
+                       "response":  {
+                                        "code":  "WRONG_ROLE",
+                                        "allowedRoles":  [
+                                                             "flow_architect",
+                                                             "prompt_approver",
+                                                             "tenant_admin",
+                                                             "platform_admin"
+                                                         ]
+                                    }
+                   },
+                   {
+                       "name":  "rules-valid",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "response":  {
+                                        "code":  "RULE_PACK_VALID",
+                                        "ruleCount":  42,
+                                        "requiredCount":  42,
+                                        "coverage":  "CF-510-CF-544+CF-989-CF-995"
+                                    }
+                   },
+                   {
+                       "name":  "gap-scan",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "response":  {
+                                        "scanId":  "acme-corp:scan:gap-1:85cbd5701ba4aa182b85bb6ed5579393",
+                                        "proposedChangeId":  "gap-1",
+                                        "sourceFlow":  "FLOW-26",
+                                        "conflicts":  [
+                                                          {
+                                                              "ruleId":  "CF-477",
+                                                              "severity":  "CRITICAL",
+                                                              "subject":  "FactorySpec.fabricResolution",
+                                                              "reason":  "Required field removal breaks dependent flows."
+                                                          }
+                                                      ],
+                                        "compositeSeverity":  "CRITICAL",
+                                        "state":  "PENDING_RESOLUTION",
+                                        "tenantId":  "acme-corp"
+                                    }
+                   },
+                   {
+                       "name":  "plan-analyze",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "response":  {
+                                        "impactId":  "acme-corp:impact:76f355835475fd9145d5d5f106be4213:321d488c025554d69828b08ef2c8005e",
+                                        "conflictScanId":  "acme-corp:scan:gap-1:85cbd5701ba4aa182b85bb6ed5579393",
+                                        "direct":  [
+                                                       "FLOW-11",
+                                                       "FLOW-25"
+                                                   ],
+                                        "transitive":  [
+                                                           "FLOW-26"
+                                                       ],
+                                        "totalUniqueFlows":  3,
+                                        "maxHopReached":  3,
+                                        "circularDependencyDetected":  false,
+                                        "tenantId":  "acme-corp"
+                                    }
+                   },
+                   {
+                       "name":  "stress-run",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "response":  {
+                                        "stressRunId":  "acme-corp:stress:6d0e3a2305df955a42a6e02486a0d2b3",
+                                        "status":  "PASS",
+                                        "stressTestCount":  25,
+                                        "coverage":  "ST-300-ST-324",
+                                        "tenantId":  "acme-corp"
+                                    }
+                   },
+                   {
+                       "name":  "self-build-submit",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "response":  {
+                                        "proposedChangeId":  "gap-1",
+                                        "contentHash":  "8122701ab9cd60734d2c12834173748f",
+                                        "state":  "INTAKE_RECEIVED",
+                                        "version":  "1"
+                                    }
+                   },
+                   {
+                       "name":  "promotion-approve",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "response":  {
+                                        "releaseGateId":  "acme-corp:release:gap-1:a3efa347f5446ccc1414e7edaed33ac9",
+                                        "proposedChangeId":  "gap-1",
+                                        "decision":  "REFACTOR_FLOWS",
+                                        "rationale":  "Generated capability is promoted only after evidence and human approval.",
+                                        "status":  "APPROVED",
+                                        "auditMode":  "APPEND_ONLY",
+                                        "tenantId":  "acme-corp"
+                                    }
+                   },
+                   {
+                       "name":  "plan-coverage",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "response":  {
+                                        "code":  "PLAN_COVERAGE_OK",
+                                        "taskTypeCount":  24,
+                                        "singleResponsibility":  true,
+                                        "requiredTasks":  [
+                                                              "T389",
+                                                              "T390",
+                                                              "T391",
+                                                              "T392",
+                                                              "T393",
+                                                              "T394",
+                                                              "T395",
+                                                              "T396",
+                                                              "T397",
+                                                              "T398",
+                                                              "T399",
+                                                              "T400",
+                                                              "T401",
+                                                              "T402",
+                                                              "T403",
+                                                              "T404",
+                                                              "T405",
+                                                              "T406",
+                                                              "T407",
+                                                              "T408",
+                                                              "T409",
+                                                              "T410",
+                                                              "T411",
+                                                              "T412"
+                                                          ]
+                                    }
+                   },
+                   {
+                       "name":  "dashboard",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "response":  {
+                                        "rulePacks":  [
+
+                                                      ],
+                                        "conflicts":  [
+                                                          {
+                                                              "scanId":  "acme-corp:scan:gap-1:85cbd5701ba4aa182b85bb6ed5579393",
+                                                              "proposedChangeId":  "gap-1",
+                                                              "sourceFlow":  "FLOW-26",
+                                                              "conflicts":  [
+                                                                                {
+                                                                                    "ruleId":  "CF-477",
+                                                                                    "severity":  "CRITICAL",
+                                                                                    "subject":  "FactorySpec.fabricResolution",
+                                                                                    "reason":  "Required field removal breaks dependent flows."
+                                                                                }
+                                                                            ],
+                                                              "compositeSeverity":  "CRITICAL",
+                                                              "state":  "PENDING_RESOLUTION",
+                                                              "tenantId":  "acme-corp"
+                                                          }
+                                                      ],
+                                        "impactReports":  [
+                                                              {
+                                                                  "impactId":  "acme-corp:impact:76f355835475fd9145d5d5f106be4213:321d488c025554d69828b08ef2c8005e",
+                                                                  "conflictScanId":  "acme-corp:scan:gap-1:85cbd5701ba4aa182b85bb6ed5579393",
+                                                                  "direct":  [
+                                                                                 "FLOW-11",
+                                                                                 "FLOW-25"
+                                                                             ],
+                                                                  "transitive":  [
+                                                                                     "FLOW-26"
+                                                                                 ],
+                                                                  "totalUniqueFlows":  3,
+                                                                  "maxHopReached":  3,
+                                                                  "circularDependencyDetected":  false,
+                                                                  "tenantId":  "acme-corp"
+                                                              }
+                                                          ],
+                                        "stressRuns":  [
+                                                           {
+                                                               "stressRunId":  "acme-corp:stress:6d0e3a2305df955a42a6e02486a0d2b3",
+                                                               "status":  "PASS",
+                                                               "stressTestCount":  25,
+                                                               "coverage":  "ST-300-ST-324",
+                                                               "tenantId":  "acme-corp"
+                                                           }
+                                                       ],
+                                        "kpis":  {
+                                                     "ruleCount":  42,
+                                                     "stressTestCount":  25,
+                                                     "conflictCount":  1,
+                                                     "impactReportCount":  1
+                                                 }
+                                    }
+                   }
+               ]
+}

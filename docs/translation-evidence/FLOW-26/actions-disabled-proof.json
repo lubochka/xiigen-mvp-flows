@@ -1,0 +1,43 @@
+﻿{
+    "flowId":  "FLOW-26",
+    "checkedAt":  "2026-05-24T13:53:14.5505176Z",
+    "allDisabled":  true,
+    "repositories":  [
+                         {
+                             "repo":  "tenant-a--self-build-engine",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         },
+                         {
+                             "repo":  "tenant-a--acme-self-build-engine",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         },
+                         {
+                             "repo":  "tenant-b--acme-self-build-engine",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         },
+                         {
+                             "repo":  "tenant-b--northwind-meta-flow-engine",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         },
+                         {
+                             "repo":  "tenant-c--northwind-meta-flow-engine",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         },
+                         {
+                             "repo":  "tenant-c--tessera-self-extension",
+                             "enabled":  false,
+                             "verifiedDisabled":  true,
+                             "localGithubDirectoryExists":  false
+                         }
+                     ]
+}

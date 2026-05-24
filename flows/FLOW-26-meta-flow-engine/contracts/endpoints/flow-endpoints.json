@@ -1,0 +1,123 @@
+﻿{
+    "flowId":  "FLOW-26",
+    "flowSlug":  "meta-flow-engine",
+    "endpoints":  [
+                      {
+                          "endpointId":  "meta-flow-engine-public-preview",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/meta-flow-engine/public-preview",
+                          "authPosture":  "anonymous",
+                          "requiredRoles":  [
+
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "bypassReason":  "Public self-build preview exposes no tenant-private build runs."
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-rules-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/rules/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "flow_architect",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-change-submit",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/changes/submit",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "flow_architect",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-conflicts-scan",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/conflicts/scan",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "platform_support",
+                                                "flow_architect",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-impact-analyze",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/impact/analyze",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "flow_architect",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-stress-run",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/stress/run",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "platform_support",
+                                                "flow_architect",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-release-approve",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/release/approve",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-plan-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/meta-flow-engine/plan/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json",
+                          "requestSchema":  "contracts/schemas/meta-flow-engine-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "meta-flow-engine-dashboard",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/meta-flow-engine/dashboard",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "flow_architect",
+                                                "platform_support",
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/meta-flow-engine-response.schema.json"
+                      }
+                  ]
+}

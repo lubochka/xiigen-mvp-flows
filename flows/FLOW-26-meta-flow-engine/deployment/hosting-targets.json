@@ -1,0 +1,15 @@
+﻿{
+  "flowId": "FLOW-26",
+  "flowSlug": "meta-flow-engine",
+  "api": {
+    "localUrl": "http://127.0.0.1:5326",
+    "containerUrl": "http://127.0.0.1:5326"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4326",
+    "evidencePort": 4326
+  }
+}
+
+
+
