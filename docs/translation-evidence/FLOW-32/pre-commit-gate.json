@@ -1,0 +1,6 @@
+{
+    "flowId":  "FLOW-32",
+    "command":  "scripts/pre-commit-check.ps1",
+    "exitCode":  0,
+    "log":  "docs/translation-evidence/FLOW-32/pre-commit-gate.log"
+}

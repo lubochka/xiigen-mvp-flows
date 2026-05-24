@@ -1,0 +1,147 @@
+{
+    "flowId":  "FLOW-32",
+    "sourcePackages":  [
+                           {
+                               "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                               "Length":  24629
+                           },
+                           {
+                               "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                               "Length":  4068
+                           }
+                       ],
+    "tenantPackages":  [
+                           {
+                               "repo":  "tenant-a--sharable-flows-marketplace",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.0.nupkg",
+                                                    "Length":  24496
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.0.nupkg",
+                                                    "Length":  3959
+                                                }
+                                            ]
+                           },
+                           {
+                               "repo":  "tenant-a--acme-curated-flow-store",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.1.nupkg",
+                                                    "Length":  24519
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.1.nupkg",
+                                                    "Length":  3981
+                                                }
+                                            ]
+                           },
+                           {
+                               "repo":  "tenant-b--acme-curated-flow-store",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.1.nupkg",
+                                                    "Length":  24518
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.1.nupkg",
+                                                    "Length":  3985
+                                                }
+                                            ]
+                           },
+                           {
+                               "repo":  "tenant-b--northwind-partner-template-exchange",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.2.nupkg",
+                                                    "Length":  24536
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.2.nupkg",
+                                                    "Length":  3996
+                                                }
+                                            ]
+                           },
+                           {
+                               "repo":  "tenant-c--northwind-partner-template-exchange",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.2.nupkg",
+                                                    "Length":  24539
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.2.nupkg",
+                                                    "Length":  3994
+                                                }
+                                            ]
+                           },
+                           {
+                               "repo":  "tenant-c--tessera-community-pattern-library",
+                               "packageCount":  4,
+                               "packages":  [
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.0.1.1.nupkg",
+                                                    "Length":  24629
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Application.1.0.3.nupkg",
+                                                    "Length":  24543
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.0.1.1.nupkg",
+                                                    "Length":  4068
+                                                },
+                                                {
+                                                    "Name":  "Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.1.0.3.nupkg",
+                                                    "Length":  3990
+                                                }
+                                            ]
+                           }
+                       ]
+}

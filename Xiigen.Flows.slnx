@@ -224,4 +224,10 @@
     <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Infrastructure/Xiigen.Flow.DesignIntelligenceEngine.Infrastructure.csproj" />
     <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Tests/Xiigen.Flow.DesignIntelligenceEngine.Tests.csproj" />
   </Folder>
-</Solution>
+  <Folder Name="/flows/FLOW-32-sharable-flows-marketplace/" />
+  <Folder Name="/flows/FLOW-32-sharable-flows-marketplace/server/">
+    <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Api/Xiigen.Flow.SharableFlowsMarketplace.Api.csproj" />
+    <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Application/Xiigen.Flow.SharableFlowsMarketplace.Application.csproj" />
+    <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Infrastructure/Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Tests/Xiigen.Flow.SharableFlowsMarketplace.Tests.csproj" />
+  </Folder></Solution>

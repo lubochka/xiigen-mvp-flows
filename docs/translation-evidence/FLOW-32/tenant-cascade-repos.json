@@ -1,0 +1,60 @@
+{
+    "flowId":  "FLOW-32",
+    "generatedAt":  "2026-05-24T21:08:52.4829107Z",
+    "repos":  [
+                  {
+                      "repo":  "tenant-a--sharable-flows-marketplace",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "version":  "1.0.0",
+                      "mode":  "installed",
+                      "commit":  "e0d61d84ca2a037f2cd13de6a99854361cb0006c",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tenant-a--acme-curated-flow-store",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "version":  "1.0.1",
+                      "mode":  "adapted-published",
+                      "commit":  "6552d39bdb6878509da09ea96a21985e53db88ed",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tenant-b--acme-curated-flow-store",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "version":  "1.0.1",
+                      "mode":  "installed-from-a",
+                      "commit":  "916bb45efac7ace17d1ff474f9ca5645416f04ac",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tenant-b--northwind-partner-template-exchange",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "version":  "1.0.2",
+                      "mode":  "adapted-published",
+                      "commit":  "2c9e29a653f0542cd741247ab49914861e9899f4",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tenant-c--northwind-partner-template-exchange",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "version":  "1.0.2",
+                      "mode":  "installed-from-b",
+                      "commit":  "f30de85422284a5c331eca3329a26546facb280c",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tenant-c--tessera-community-pattern-library",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "version":  "1.0.3",
+                      "mode":  "adapted",
+                      "commit":  "551f0a3655717a5525248e8594829bd9880b231e",
+                      "actionsDisabled":  true
+                  }
+              ]
+}

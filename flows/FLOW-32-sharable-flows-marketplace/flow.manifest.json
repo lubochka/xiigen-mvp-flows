@@ -1,0 +1,116 @@
+{
+  "flowId": "FLOW-32",
+  "flowSlug": "sharable-flows-marketplace",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-32-sharable-flows-marketplace",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.SharableFlowsMarketplace.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/sharable-flows-marketplace/dotnet-angular",
+  "sourceAliases": [
+    "sharable-flows-marketplace",
+    "marketplace-package-creator",
+    "artifact-publisher",
+    "artifact-verifier",
+    "artifact-certifier",
+    "artifact-notarizer",
+    "marketplace-installer",
+    "binding-document-manager",
+    "template-discovery-engine",
+    "governance-migration-orchestrator",
+    "rag-blueprint-exporter",
+    "rag-blueprint-importer",
+    "rag-blueprint-publisher",
+    "usage-meter",
+    "revenue-settlement-engine",
+    "marketplace-analytics-aggregator",
+    "fraud-detection-service",
+    "sandbox-environment-provisioner"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": ["anonymous", "public_marketplace_visitor", "tenant_user", "tenant_admin", "freelancer", "business_partner", "platform_admin"],
+    "partial": ["referral_user", "platform_support"],
+    "inherited": ["event_organiser"],
+    "wrongRoleForProtectedRoute": "tenant_user"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [
+      "FLOW-32 shares logic packages and RAG blueprints only; tenant runtime data, documents, embeddings, and literal secrets are excluded by implementation and tests.",
+      "Package signing remains a Tier 3 production hardening concern, but Tier D portability evidence is complete with local package readback and Actions disabled."
+    ],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": ["source-code", "generated-contracts", "configuration-template", "test-fixtures", "documentation", "visual-evidence", "synthetic-data"],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    { "flowId": "FLOW-08", "relationship": "marketplace-pattern-compatibility", "reason": "FLOW-32 uses marketplace browse and install patterns without sharing product entities." },
+    { "flowId": "FLOW-17", "relationship": "publisher-and-fraud-boundary", "reason": "FLOW-32 publisher trust and fraud review must stay separate from freelancer marketplace trust." },
+    { "flowId": "FLOW-18", "relationship": "flow-version-publish-compatibility", "reason": "FLOW-32 packages flow logic and references published flow versions without owning the visual editor registry." },
+    { "flowId": "FLOW-25", "relationship": "bfa-governance-prerequisite", "reason": "Package upgrades and migrations must pass BFA impact analysis before acceptance." },
+    { "flowId": "FLOW-29", "relationship": "rag-blueprint-boundary", "reason": "FLOW-32 shares RAG blueprints but never shares private datasets, vector stores, or embeddings." }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p10-and-active-session-state",
+    "sourceDocsRoot": "docs/sessions/FLOW-32",
+    "requiredDocuments": [
+      "docs/business-flows/32-sharable-flows-marketplace.md",
+      "docs/flow-coverage/sharable-flows-marketplace/P1-business-logic-inventory.md",
+      "docs/flow-coverage/sharable-flows-marketplace/P5-ui-specs.md",
+      "docs/flow-coverage/sharable-flows-marketplace/P9-edge-cases.md",
+      "docs/flow-coverage/sharable-flows-marketplace/P10-server-specs.md",
+      "docs/flow-coverage/sharable-flows-marketplace/P11-impl-readiness.md",
+      "docs/design-reviews/ROLE-ANALYSIS-BATCH-07.md",
+      "docs/sessions/FLOW-32/FLOW-32-MOBILITY-AUTH-STATE.json",
+      "docs/portability/flow-32/adaptation-surface-sharable-flows-marketplace.json"
+    ],
+    "existingCfRules": 0,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": { "tested": 4, "partial": 0, "notTested": 0 },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.SharableFlowsMarketplace.Infrastructure/SharableFlowsMarketplaceServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    { "name": "Sharable Flows Marketplace fabric replacement", "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.", "currentProvider": "Xiigen.Fabrics.InMemory" }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow32_module_name",
+    "defaultModuleName": "sharable-flows-marketplace",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-sharable-flows-marketplace.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": ["C0-source-flow", "C1-tenant-a-installed", "C2-tenant-a-adapted-published", "C3-tenant-b-installed-from-a", "C4-tenant-b-adapted-published", "C5-tenant-c-installed-from-b", "C6-tenant-c-adapted"]
+  }
+}

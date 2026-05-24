@@ -1,0 +1,25 @@
+@Xiigen.Flow.SharableFlowsMarketplace.Api_HostAddress = http://localhost:5332
+
+GET {{Xiigen.Flow.SharableFlowsMarketplace.Api_HostAddress}}/health/live
+
+###
+GET {{Xiigen.Flow.SharableFlowsMarketplace.Api_HostAddress}}/api/dynamic/sharable-flows-marketplace/public-preview
+
+###
+POST {{Xiigen.Flow.SharableFlowsMarketplace.Api_HostAddress}}/api/dynamic/sharable-flows-marketplace
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: freelancer
+X-Idempotency-Key: publish-1
+Content-Type: application/json
+
+{
+  "packageSlug": "curated-flow-store",
+  "displayName": "Curated Flow Store",
+  "semanticVersion": "1.0.0",
+  "license": "usage-share",
+  "pricingModel": "per-install",
+  "logicManifest": "flow definitions, prompts, schemas",
+  "ragBlueprint": "hybrid-search-blueprint",
+  "artifactCount": 4
+}

@@ -1,0 +1,50 @@
+{
+    "flowId":  "FLOW-32",
+    "verdict":  "PASS",
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "no-free-tenant-id-parameters",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "data-process-result",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "outbox-append",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "cloud-events-envelope",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "cf-1019",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "cf-1020",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "cf-1021",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "cf-1022",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "no-github-actions",
+                       "passed":  true
+                   }
+               ]
+}

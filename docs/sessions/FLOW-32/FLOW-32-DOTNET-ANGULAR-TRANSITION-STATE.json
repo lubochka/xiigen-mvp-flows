@@ -1,0 +1,16 @@
+{
+  "flowId": "FLOW-32",
+  "flowSlug": "sharable-flows-marketplace",
+  "portabilityTier": "Tier D",
+  "status": "completed",
+  "completedAt": "2026-05-24T21:09:10Z",
+  "server": { "testsPassed": 10, "testsFailed": 0 },
+  "client": { "testsPassed": 5, "testsFailed": 0, "build": "PASS" },
+  "liveAuthMatrix": "docs/translation-evidence/FLOW-32/live-api-matrix.json",
+  "visualEvidence": "docs/translation-evidence/FLOW-32/visual-counts.json",
+  "tenantCascade": "docs/translation-evidence/FLOW-32/tenant-cascade-repos.json",
+  "actionsDisabledProof": "docs/translation-evidence/FLOW-32/actions-disabled-proof.json",
+  "codeReview": "docs/translation-evidence/FLOW-32/code-review-gate.json",
+  "qaReview": "docs/translation-evidence/FLOW-32/qa-review.md",
+  "openIssues": []
+}

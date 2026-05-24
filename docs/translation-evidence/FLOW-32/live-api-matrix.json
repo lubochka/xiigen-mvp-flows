@@ -1,0 +1,114 @@
+{
+  "flowId": "FLOW-32",
+  "flowSlug": "sharable-flows-marketplace",
+  "total": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "name": "public-preview",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "body": "{\"flow\":\"FLOW-32\",\"summary\":\"Browse shareable flow packages, RAG blueprints, install modes, publisher listings, and logic-only marketplace templates without exposing tenant data.\",\"tabs\":[\"discover\",\"publish\",\"install\",\"settlement\",\"sandbox\"]}"
+    },
+    {
+      "name": "missing-token",
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "body": "{\"code\":\"MISSING_TOKEN\"}"
+    },
+    {
+      "name": "wrong-role",
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "body": "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"freelancer\",\"business_partner\",\"platform_admin\"]}"
+    },
+    {
+      "name": "cross-tenant",
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "body": "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+    },
+    {
+      "name": "rules-validate",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "body": "{\"code\":\"RULE_PACK_VALID\",\"ruleCount\":4,\"coverage\":\"CF-1019-CF-1022\"}"
+    },
+    {
+      "name": "publish-first",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "body": "{\"id\":\"acme-corp:package:curated-flow-store-node\",\"packageSlug\":\"curated-flow-store-node\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:bb6b089654c45678da53bba74ee18599\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:48:29.6001221+00:00\"}"
+    },
+    {
+      "name": "publish-replay",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "body": "{\"id\":\"acme-corp:package:curated-flow-store-node\",\"packageSlug\":\"curated-flow-store-node\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:bb6b089654c45678da53bba74ee18599\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:48:29.6001221+00:00\"}"
+    },
+    {
+      "name": "publish-conflict",
+      "expected": 409,
+      "actual": 409,
+      "passed": true,
+      "body": "{\"code\":\"CONCURRENT_UPDATE\",\"currentVersion\":1,\"reason\":\"concurrent_update\",\"ruleId\":\"CF-1019\"}"
+    },
+    {
+      "name": "publish-timeout",
+      "expected": 504,
+      "actual": 504,
+      "passed": true,
+      "body": "{\"code\":\"TIMEOUT\",\"retryAfterMs\":5000,\"outboxRetained\":true,\"ruleId\":\"CF-1022\"}"
+    },
+    {
+      "name": "install",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "body": "{\"installId\":\"acme-corp:install:c162ac4b3e579cca8557c59a770de8d6\",\"packageSlug\":\"curated-flow-store-node\",\"installMode\":\"linked-copy\",\"dependencyPolicy\":\"prompt\",\"connectorBindingRef\":\"vault://tenant/acme/flow32/binding\",\"tenantScope\":\"acme-corp\",\"copiedPlane\":\"logic-only\",\"tenantDataCopied\":false}"
+    },
+    {
+      "name": "rag-blueprint",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "body": "{\"blueprintId\":\"acme-corp:blueprint:hybrid-search-blueprint-node\",\"blueprintSlug\":\"hybrid-search-blueprint-node\",\"retrievalStrategy\":\"hybrid-vector-graph\",\"promptProfile\":\"marketplace-safe\",\"schemaRef\":\"schema://FLOW-32/rag-blueprint\",\"logicPlaneOnly\":true,\"tenantScope\":\"acme-corp\"}"
+    },
+    {
+      "name": "settlement",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "body": "{\"settlementId\":\"acme-corp:settlement:curated-flow-store-node:2026-05\",\"packageSlug\":\"curated-flow-store-node\",\"meterEvent\":\"template.install\",\"periodKey\":\"2026-05\",\"amountCents\":1299,\"currency\":\"USD\",\"mathMode\":\"integer-cents-only\",\"tenantScope\":\"acme-corp\"}"
+    },
+    {
+      "name": "sandbox",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "body": "{\"sandboxId\":\"acme-corp:sandbox:sandbox-12ca72f96c5e\",\"packageSlug\":\"curated-flow-store-node\",\"sandboxProfile\":\"preview-install\",\"ttlHours\":24,\"tenantPrefix\":\"sandbox-\",\"tenantScope\":\"acme-corp\"}"
+    },
+    {
+      "name": "plan-validate",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "body": "{\"code\":\"TASK_COVERAGE_OK\",\"taskTypeCount\":20,\"requiredTasks\":[\"T516\",\"T517\",\"T518\",\"T519\",\"T520\",\"T521\",\"T522\",\"T523\",\"T524\",\"T525\",\"T526\",\"T527\",\"T528\",\"T529\",\"T530\",\"T531\",\"T532\",\"T533\",\"T534\",\"T535\"]}"
+    },
+    {
+      "name": "dashboard",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "body": "{\"packages\":[{\"id\":\"acme-corp:package:curated-flow-store\",\"packageSlug\":\"curated-flow-store\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:5222c97597855e9676966470a56b07b2\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:39:44.7916000+00:00\"},{\"id\":\"acme-corp:package:curated-flow-store-v3\",\"packageSlug\":\"curated-flow-store-v3\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:3656218cf33d5bc8cc77aac386143be1\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:41:28.5529604+00:00\"},{\"id\":\"acme-corp:package:x\",\"packageSlug\":\"x\",\"displayName\":\"X\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage\",\"pricingModel\":\"install\",\"artifactCount\":1,\"contentAddress\":\"sha256:c659facdf9ab31eb5d02292a91da134a\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:43:49.7991627+00:00\"},{\"id\":\"acme-corp:package:curated-flow-store-v4\",\"packageSlug\":\"curated-flow-store-v4\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:46cda1a26f77b2f5029cd5fdb49c0f71\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:44:28.2779989+00:00\"},{\"id\":\"acme-corp:package:curated-flow-store-node\",\"packageSlug\":\"curated-flow-store-node\",\"displayName\":\"Curated Flow Store\",\"semanticVersion\":\"1.0.0\",\"license\":\"usage-share\",\"pricingModel\":\"per-install\",\"artifactCount\":4,\"contentAddress\":\"sha256:bb6b089654c45678da53bba74ee18599\",\"immutability\":\"published-version-never-overwritten\",\"logicPlaneOnly\":true,\"tenantDataIncluded\":false,\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-24T20:48:29.6001221+00:00\"}],\"installs\":[{\"installId\":\"acme-corp:install:64b98e61edbb327294a64b99e90d6604\",\"packageSlug\":\"curated-flow-store\",\"installMode\":\"linked-copy\",\"dependencyPolicy\":\"prompt\",\"connectorBindingRef\":\"vault://tenant/acme/flow32/binding\",\"tenantScope\":\"acme-corp\",\"copiedPlane\":\"logic-only\",\"tenantDataCopied\":false},{\"installId\":\"acme-corp:install:7c5417981341abef898f334e8f60a621\",\"packageSlug\":\"curated-flow-store-v3\",\"installMode\":\"linked-copy\",\"dependencyPolicy\":\"prompt\",\"connectorBindingRef\":\"vault://tenant/acme/flow32/binding\",\"tenantScope\":\"acme-corp\",\"copiedPlane\":\"logic-only\",\"tenantDataCopied\":false},{\"installId\":\"acme-corp:install:15feb7237a50f247f737a54e7df2cee2\",\"packageSlug\":\"curated-flow-store-v4\",\"installMode\":\"linked-copy\",\"dependencyPolicy\":\"prompt\",\"connectorBindingRef\":\"vault://tenant/acme/flow32/binding\",\"tenantScope\":\"acme-corp\",\"copiedPlane\":\"logic-only\",\"tenantDataCopied\":false},{\"installId\":\"acme-corp:install:c162ac4b3e579cca8557c59a770de8d6\",\"packageSlug\":\"curated-flow-store-node\",\"installMode\":\"linked-copy\",\"dependencyPolicy\":\"prompt\",\"connectorBindingRef\":\"vault://tenant/acme/flow32/binding\",\"tenantScope\":\"acme-corp\",\"copiedPlane\":\"logic-only\",\"tenantDataCopied\":false}],\"blueprints\":[{\"blueprintId\":\"acme-corp:blueprint:hybrid-search-blueprint\",\"blueprintSlug\":\"hybrid-search-blueprint\",\"retrievalStrategy\":\"hybrid-vector-graph\",\"promptProfile\":\"marketplace-safe\",\"schemaRef\":\"schema://FLOW-32/rag-blueprint\",\"logicPlaneOnly\":true,\"tenantScope\":\"acme-corp\"},{\"blueprintId\":\"acme-corp:blueprint:hybrid-search-blueprint-v3\",\"blueprintSlug\":\"hybrid-search-blueprint-v3\",\"retrievalStrategy\":\"hybrid-vector-graph\",\"promptProfile\":\"marketplace-safe\",\"schemaRef\":\"schema://FLOW-32/rag-blueprint\",\"logicPlaneOnly\":true,\"tenantScope\":\"acme-corp\"},{\"blueprintId\":\"acme-corp:blueprint:hybrid-search-blueprint-v4\",\"blueprintSlug\":\"hybrid-search-blueprint-v4\",\"retrievalStrategy\":\"hybrid-vector-graph\",\"promptProfile\":\"marketplace-safe\",\"schemaRef\":\"schema://FLOW-32/rag-blueprint\",\"logicPlaneOnly\":true,\"tenantScope\":\"acme-corp\"},{\"blueprintId\":\"acme-corp:blueprint:hybrid-search-blueprint-node\",\"blueprintSlug\":\"hybrid-search-blueprint-node\",\"retrievalStrategy\":\"hybrid-vector-graph\",\"promptProfile\":\"marketplace-safe\",\"schemaRef\":\"schema://FLOW-32/rag-blueprint\",\"logicPlaneOnly\":true,\"tenantScope\":\"acme-corp\"}],\"settlements\":[{\"settlementId\":\"acme-corp:settlement:curated-flow-store:2026-05\",\"packageSlug\":\"curated-flow-store\",\"meterEvent\":\"template.install\",\"periodKey\":\"2026-05\",\"amountCents\":1299,\"currency\":\"USD\",\"mathMode\":\"integer-cents-only\",\"tenantScope\":\"acme-corp\"},{\"settlementId\":\"acme-corp:settlement:curated-flow-store-v3:2026-05\",\"packageSlug\":\"curated-flow-store-v3\",\"meterEvent\":\"template.install\",\"periodKey\":\"2026-05\",\"amountCents\":1299,\"currency\":\"USD\",\"mathMode\":\"integer-cents-only\",\"tenantScope\":\"acme-corp\"},{\"settlementId\":\"acme-corp:settlement:curated-flow-store-v4:2026-05\",\"packageSlug\":\"curated-flow-store-v4\",\"meterEvent\":\"template.install\",\"periodKey\":\"2026-05\",\"amountCents\":1299,\"currency\":\"USD\",\"mathMode\":\"integer-cents-only\",\"tenantScope\":\"acme-corp\"},{\"settlementId\":\"acme-corp:settlement:curated-flow-store-node:2026-05\",\"packageSlug\":\"curated-flow-store-node\",\"meterEvent\":\"template.install\",\"periodKey\":\"2026-05\",\"amountCents\":1299,\"currency\":\"USD\",\"mathMode\":\"integer-cents-only\",\"tenantScope\":\"acme-corp\"}],\"kpis\":{\"packageCount\":5,\"installCount\":4,\"blueprintCount\":4,\"settlementCount\":4,\"requiredRuleCount\":4}}"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+    "flowId":  "FLOW-32",
+    "cascadePoints":  7,
+    "roles":  10,
+    "cellsPerRole":  3,
+    "expectedPngCount":  210,
+    "actualPngCount":  210,
+    "zeroByteCount":  0,
+    "manifestCount":  7,
+    "points":  [
+                   {
+                       "point":  "C0-source-flow",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C1-tenant-a-installed",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C2-tenant-a-adapted-published",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C3-tenant-b-installed-from-a",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C4-tenant-b-adapted-published",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C5-tenant-c-installed-from-b",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   },
+                   {
+                       "point":  "C6-tenant-c-adapted",
+                       "actual":  30,
+                       "expected":  30,
+                       "zeroByte":  0
+                   }
+               ]
+}

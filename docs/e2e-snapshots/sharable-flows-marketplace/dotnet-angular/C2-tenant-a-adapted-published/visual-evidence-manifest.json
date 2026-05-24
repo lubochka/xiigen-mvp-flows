@@ -1,0 +1,249 @@
+{
+  "flowId": "FLOW-32",
+  "flowSlug": "sharable-flows-marketplace",
+  "expectedCount": 30,
+  "actualCount": 30,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "bytes": 105446
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "bytes": 98497
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "bytes": 104646
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "bytes": 106736
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "bytes": 99800
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "bytes": 105832
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "bytes": 105254
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "bytes": 98354
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "bytes": 104462
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 104464
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 97204
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 103849
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C2-en-populated-desktop.png",
+      "bytes": 98323
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C4-he-rtl-populated-desktop.png",
+      "bytes": 91291
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\freelancer-C6-en-populated-mobile.png",
+      "bytes": 99637
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C2-en-populated-desktop.png",
+      "bytes": 99157
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C4-he-rtl-populated-desktop.png",
+      "bytes": 92216
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\business-partner-C6-en-populated-mobile.png",
+      "bytes": 100259
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 109442
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 102441
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 108496
+    },
+    {
+      "role": "referral_user",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C2-en-populated-desktop.png",
+      "bytes": 105302
+    },
+    {
+      "role": "referral_user",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C4-he-rtl-populated-desktop.png",
+      "bytes": 98541
+    },
+    {
+      "role": "referral_user",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\referral-user-C6-en-populated-mobile.png",
+      "bytes": 104513
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 100720
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 93499
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 101292
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2",
+      "lang": "en",
+      "state": "discover",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C2-en-populated-desktop.png",
+      "bytes": 100779
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4",
+      "lang": "he",
+      "state": "publish",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "bytes": 94154
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6",
+      "lang": "en",
+      "state": "settlement",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\sharable-flows-marketplace\\dotnet-angular\\C2-tenant-a-adapted-published\\event-organiser-C6-en-populated-mobile.png",
+      "bytes": 101339
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Marketplace workspace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">?????</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Marketplace states">
+    <button type="button" [class.active]="screenState() === 'discover'" (click)="setScreenState('discover')">{{ translated('Discover') }}</button>
+    <button type="button" [class.active]="screenState() === 'publish'" (click)="setScreenState('publish')">{{ translated('Publish') }}</button>
+    <button type="button" [class.active]="screenState() === 'install'" (click)="setScreenState('install')">{{ translated('Install') }}</button>
+    <button type="button" [class.active]="screenState() === 'settlement'" (click)="setScreenState('settlement')">{{ translated('Settlement') }}</button>
+    <button type="button" [class.active]="screenState() === 'sandbox'" (click)="setScreenState('sandbox')">{{ translated('Sandbox') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Marketplace metrics">
+    <div>
+      <span>{{ translated('Packages') }}</span>
+      <strong>128</strong>
+      <small>listed flow templates</small>
+    </div>
+    <div>
+      <span>{{ translated('Installs') }}</span>
+      <strong>2,416</strong>
+      <small>tenant copies</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>trust checks clear</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Marketplace lifecycle</p>
+      <h2>Tenants share logic packages while private data, secrets, documents, and embeddings stay isolated</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of packageRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="publicView()" class="notice">This role can browse public cards and compare versions, ratings, and install counts.</p>
+      <p *ngIf="canPublish()" class="notice success">This role can prepare a logic package or RAG blueprint for review.</p>
+      <p *ngIf="canInstall()" class="notice success">This role can install a linked or snapshot copy after dependency checks pass.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canCurate()">Curators approve listings, inspect artifact trust, manage featured placement, and review fraud signals.</p>
+      <p *ngIf="canInspect() && !canCurate()">Inspectors can review package history and tenant install traces without publishing controls.</p>
+      <p *ngIf="publicView()">Public browsing shows safe package metadata only. Install and publishing controls remain hidden.</p>
+      <p *ngIf="role() === 'event_organiser'">Compatible event-flow templates are visible as recommendations, with install handled by tenant admins.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of marketplaceSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'settlement'">
+    <p class="eyebrow">Settlement queue</p>
+    <h2>Usage events become integer-cent payout records with bounded dimensions</h2>
+    <p>Downloads, installs, upgrades, flow runs, and RAG queries are attributed to package and tenant scopes before payout calculation.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'sandbox'">
+    <p class="eyebrow">Sandbox preview</p>
+    <h2>Preview tenants use a sandbox prefix and never touch production resources</h2>
+    <p>Sandbox runs expire by policy and keep connector rebinding separate from installed tenant flows.</p>
+  </section>
+</main>

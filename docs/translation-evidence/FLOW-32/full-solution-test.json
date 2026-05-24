@@ -1,0 +1,6 @@
+{
+    "flowId":  "FLOW-32",
+    "command":  "dotnet test Xiigen.Flows.slnx -c Release",
+    "exitCode":  0,
+    "log":  "docs/translation-evidence/FLOW-32/full-solution-test.log"
+}

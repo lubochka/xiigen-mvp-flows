@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-32/sharable-flows-marketplace-request.schema.json",
+  "title": "Sharable Flows Marketplace Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "packageSlug": { "type": "string", "minLength": 1 },
+    "displayName": { "type": "string", "minLength": 1 },
+    "semanticVersion": { "type": "string", "minLength": 1 },
+    "license": { "type": "string", "minLength": 1 },
+    "pricingModel": { "type": "string", "minLength": 1 },
+    "logicManifest": { "type": "string", "minLength": 1 },
+    "ragBlueprint": { "type": "string", "minLength": 1 },
+    "artifactCount": { "type": "integer", "minimum": 1 }
+  },
+  "required": ["packageSlug", "displayName", "semanticVersion", "license", "pricingModel", "logicManifest", "ragBlueprint", "artifactCount"]
+}

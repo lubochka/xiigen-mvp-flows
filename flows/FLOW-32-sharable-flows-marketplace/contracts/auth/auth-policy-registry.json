@@ -1,0 +1,21 @@
+{
+  "flowId": "FLOW-32",
+  "flowSlug": "sharable-flows-marketplace",
+  "roles": {
+    "primary": ["anonymous", "public_marketplace_visitor", "tenant_user", "tenant_admin", "freelancer", "business_partner", "platform_admin"],
+    "partial": ["referral_user", "platform_support"],
+    "inherited": ["event_organiser"],
+    "wrongRoleForProtectedRoute": "tenant_user"
+  },
+  "policies": [
+    { "policyId": "flow32-public-preview", "route": "GET /api/dynamic/sharable-flows-marketplace/public-preview", "authPosture": "anonymous", "allowedRoles": [], "bypassPaths": ["/api/dynamic/sharable-flows-marketplace/public-preview"], "bypassReason": "Public marketplace browse exposes package metadata only and no tenant-private state." },
+    { "policyId": "flow32-rules-validate", "route": "POST /api/dynamic/sharable-flows-marketplace/rules/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-package-publish", "route": "POST /api/dynamic/sharable-flows-marketplace", "authPosture": "policy", "allowedRoles": ["freelancer", "business_partner", "platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-template-install", "route": "POST /api/dynamic/sharable-flows-marketplace/install", "authPosture": "policy", "allowedRoles": ["tenant_admin", "platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-rag-blueprint-publish", "route": "POST /api/dynamic/sharable-flows-marketplace/rag-blueprints/publish", "authPosture": "policy", "allowedRoles": ["freelancer", "business_partner", "platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-settlement-record", "route": "POST /api/dynamic/sharable-flows-marketplace/settlements/record", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-sandbox-provision", "route": "POST /api/dynamic/sharable-flows-marketplace/sandboxes/provision", "authPosture": "policy", "allowedRoles": ["tenant_admin", "platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-plan-validate", "route": "POST /api/dynamic/sharable-flows-marketplace/plan/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow32-dashboard", "route": "GET /api/dynamic/sharable-flows-marketplace/dashboard", "authPosture": "policy", "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"], "bypassPaths": [] }
+  ]
+}

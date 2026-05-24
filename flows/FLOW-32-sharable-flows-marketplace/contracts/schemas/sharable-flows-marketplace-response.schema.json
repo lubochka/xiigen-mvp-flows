@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-32/sharable-flows-marketplace-response.schema.json",
+  "title": "Sharable Flows Marketplace Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "packageSlug": { "type": "string" },
+    "semanticVersion": { "type": "string" },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "logicPlaneOnly": { "type": "boolean" },
+    "tenantDataIncluded": { "type": "boolean" }
+  }
+}

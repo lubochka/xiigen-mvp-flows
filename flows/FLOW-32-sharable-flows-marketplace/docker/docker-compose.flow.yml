@@ -1,0 +1,13 @@
+services:
+  FLOW-32-sharable-flows-marketplace-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+

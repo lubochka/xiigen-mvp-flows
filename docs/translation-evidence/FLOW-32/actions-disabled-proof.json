@@ -1,0 +1,37 @@
+{
+    "flowId":  "FLOW-32",
+    "verifiedAt":  "2026-05-24T21:09:05.9554289Z",
+    "repos":  [
+                  {
+                      "repo":  "lubochka/tenant-a--sharable-flows-marketplace",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  },
+                  {
+                      "repo":  "lubochka/tenant-a--acme-curated-flow-store",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--acme-curated-flow-store",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--northwind-partner-template-exchange",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--northwind-partner-template-exchange",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--tessera-community-pattern-library",
+                      "actionsEnabled":  false,
+                      "allowedActions":  null
+                  }
+              ],
+    "disabledCount":  6
+}
