@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-22",
+  "slug": "cms-publishing",
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "cms-publishing",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-editor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-editor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\content-editor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\legal-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\legal-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\legal-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=analytics&lang=en&module=cms-publishing"
+    }
+  ]
+}

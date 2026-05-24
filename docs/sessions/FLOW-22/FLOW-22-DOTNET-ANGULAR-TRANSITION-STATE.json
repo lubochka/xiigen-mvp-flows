@@ -1,0 +1,42 @@
+{
+  "flowId": "FLOW-22",
+  "flowSlug": "cms-publishing",
+  "portabilityTier": "Tier D",
+  "status": "GREEN",
+  "updatedAt": "2026-05-24T06:59:00Z",
+  "repositories": {
+    "platform": "C:\\Projects\\xiigen-platform-dot-net-angular",
+    "flows": "C:\\Projects\\xiigen-flows-dot-net-angular"
+  },
+  "phases": {
+    "functionalCoverage": {
+      "status": "PASS",
+      "evidence": "docs/translation-evidence/FLOW-22/docker-auth-matrix.json"
+    },
+    "authMatrix": {
+      "status": "PASS",
+      "checks": 16,
+      "failures": 0
+    },
+    "visualEvidence": {
+      "status": "PASS",
+      "cascadePoints": 7,
+      "pngExpected": 168,
+      "pngActual": 168,
+      "evidence": "docs/translation-evidence/FLOW-22/visual-counts.json"
+    },
+    "tenantCascade": {
+      "status": "PASS",
+      "evidence": "docs/translation-evidence/FLOW-22/layer8-cascade-evidence.json"
+    },
+    "codeReview": {
+      "status": "PASS",
+      "evidence": "docs/translation-evidence/FLOW-22/code-review-gate.json"
+    },
+    "qaReview": {
+      "status": "APPROVED",
+      "evidence": "docs/translation-evidence/FLOW-22/qa-review.md"
+    }
+  },
+  "openIssues": []
+}

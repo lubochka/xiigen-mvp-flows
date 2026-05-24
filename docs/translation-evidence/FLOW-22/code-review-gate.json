@@ -1,0 +1,66 @@
+﻿{
+    "flow":  "FLOW-22",
+    "verdict":  "PASS",
+    "scope":  "Production server files and visible Angular UI files; unit-test assertion text excluded from production-vocabulary scan.",
+    "scans":  {
+                  "providerSdkImports":  {
+                                             "pass":  true,
+                                             "hits":  [
+
+                                                      ]
+                                         },
+                  "freeTenantIdParameters":  {
+                                                 "pass":  true,
+                                                 "hits":  [
+
+                                                          ]
+                                             },
+                  "businessThrows":  {
+                                         "pass":  true,
+                                         "hits":  [
+
+                                                  ]
+                                     },
+                  "microserviceBase":  {
+                                           "pass":  true,
+                                           "hits":  [
+                                                        "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:11:public sealed class CmsPublishingService : MicroserviceBase\u003cCmsPublishingService\u003e"
+                                                    ]
+                                       },
+                  "dataProcessResult":  {
+                                            "pass":  true,
+                                            "hits":  [
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:71:    public async Task\u003cDataProcessResult\u003cCmsPublishingOutcome\u003e\u003e PublishContentAsync(",
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:235:    public async Task\u003cDataProcessResult\u003cCmsPublishingOutcome\u003e\u003e RecordApprovalAsync(",
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:315:    public async Task\u003cDataProcessResult\u003cCmsPublishingOutcome\u003e\u003e SchedulePublishAsync(",
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:381:    public async Task\u003cDataProcessResult\u003cCmsPublishingOutcome\u003e\u003e RecordAnalyticsAsync(",
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:451:    public DataProcessResult\u003cCmsPublishingOutcome\u003e ValidatePlanCoverage(IReadOnlyDictionary\u003cstring, object?\u003e request)",
+                                                         "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:479:    public async Task\u003cDataProcessResult\u003cCmsPublishingDashboard\u003e\u003e GetDashboardAsync(CancellationToken cancellationToken = default)"
+                                                     ]
+                                        },
+                  "outboxBeforeResponse":  {
+                                               "pass":  true,
+                                               "hits":  [
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingBfaRuleRegistry.cs:14:        new(\"CF-976\", CmsPublishingConstants.FlowId, \"DNA8_ORDERING\", \"Fabric timeout returns TIMEOUT while retaining outbox evidence for retry.\", \"BUILD_FAILURE\", \"FLOW_SCOPED\", \"GLOBAL\", \"MASTER_TENANT_ID\")",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:50:    private readonly IOutboxStore _outbox;",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:56:        IOutboxStore outbox,",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:68:        _outbox = outbox;",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:206:            await _outbox.AppendAsync(envelope, cancellationToken).ConfigureAwait(false);",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:214:                    [\"outboxRetained\"] = true",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:215:                }, stateWritten: true, outboxRetained: true));",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:227:            return Success(Outcome(201, response, stateWritten: true, outboxRetained: true));",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:301:        await _outbox.AppendAsync(Envelope(decision == \"APPROVE\" ? \"xiigen.cms.content.approved\" : \"xiigen.cms.content.rejected\", contentId, body), cancellationToken).ConfigureAwait(false);",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:367:        await _outbox.AppendAsync(Envelope(\"xiigen.cms.content.scheduled\", contentId, body), cancellationToken).ConfigureAwait(false);",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:439:        await _outbox.AppendAsync(Envelope(\"xiigen.cms.analytics.recorded\", contentId, body), cancellationToken).ConfigureAwait(false);",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:561:    private static CmsPublishingOutcome Outcome(int httpStatus, IReadOnlyDictionary\u003cstring, object?\u003e body, bool stateWritten, bool outboxRetained = false) =\u003e",
+                                                            "flows\\FLOW-22-cms-publishing\\server\\Xiigen.Flow.CmsPublishing.Application\\CmsPublishingService.cs:562:        new(httpStatus, body, stateWritten, outboxRetained);"
+                                                        ]
+                                           },
+                  "uiInternalVocabulary":  {
+                                               "pass":  true,
+                                               "hits":  [
+
+                                                        ]
+                                           }
+              }
+}

@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-22",
+  "slug": "cms-publishing",
+  "cascadePoint": "C3-tenant-b-installed-from-a",
+  "moduleName": "acme-editorial-hub",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-editor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-editor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\content-editor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\legal-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\legal-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\legal-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=analytics&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=drafts&lang=en&module=acme-editorial-hub"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=approvals&lang=he&module=acme-editorial-hub"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-editorial-hub\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=analytics&lang=en&module=acme-editorial-hub"
+    }
+  ]
+}

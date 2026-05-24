@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-22/cms-publishing-request.schema.json",
+  "title": "FLOW-22 CMS Publishing Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] },
+      { "required": ["contentTenantId"] },
+      { "required": ["content_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "contentId": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "body": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "minLength": 1 },
+    "stage": { "type": "string", "enum": ["EDITOR_REVIEW", "LEGAL_REVIEW", "FINAL_APPROVAL"] },
+    "decision": { "type": "string", "enum": ["APPROVE", "REJECT"] },
+    "publishAt": { "type": "string", "format": "date-time" },
+    "metricType": { "type": "string", "enum": ["VIEW", "ENGAGEMENT", "SHARE"] },
+    "value": {},
+    "userId": { "type": "string" },
+    "planSteps": { "type": "array", "items": { "type": "object" } },
+    "simulateTimeout": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "flowId": "FLOW-22",
+  "flowSlug": "cms-publishing",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-22-cms-publishing",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.CmsPublishing.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "ci/github-actions/flow-ci.yml",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/cms-publishing/dotnet-angular",
+  "sourceAliases": [
+    "cms-publishing",
+    "content-version-publisher",
+    "content-approval-workflow",
+    "content-schedule-dispatcher",
+    "content-analytics-aggregator",
+    "versioned-publishing",
+    "slug-registry"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "tenant_user",
+      "content_author",
+      "content_editor",
+      "legal_reviewer",
+      "publisher",
+      "tenant_admin",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-21",
+      "relationship": "workflow-automation-source",
+      "reason": "CMS approvals and scheduled publishing can consume dynamic workflow automation events."
+    },
+    {
+      "flowId": "FLOW-24",
+      "relationship": "content-moderation-source",
+      "reason": "CMS content can be routed through content moderation before publication."
+    },
+    {
+      "flowId": "FLOW-28",
+      "relationship": "cms-extension-consumer",
+      "reason": "Blog CMS modules extend the core CMS publishing lifecycle."
+    }
+  ],
+  "coInstallDependencies": [
+    {
+      "flowId": "FLOW-28",
+      "reason": "CMS cluster blog modules depend on the core content publishing lifecycle and should be validated with it."
+    }
+  ],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/cms-publishing",
+    "requiredDocuments": [
+      "docs/flow-coverage/cms-publishing/P1-business-logic-inventory.md",
+      "docs/flow-coverage/cms-publishing/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/cms-publishing/P5-ui-specs.md",
+      "docs/flow-coverage/cms-publishing/P9-edge-cases.md",
+      "docs/flow-coverage/cms-publishing/P10-server-specs.md",
+      "docs/flow-coverage/cms-publishing/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 4,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 11,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.CmsPublishing.Infrastructure/CmsPublishingServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "CMS Publishing fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "cms-publishing",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-cms-publishing.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

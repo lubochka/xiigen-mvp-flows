@@ -1,0 +1,56 @@
+{
+  "flowId": "FLOW-22",
+  "flowSlug": "cms-publishing",
+  "policies": [
+    {
+      "policyId": "cms-publishing-public-preview",
+      "route": "GET /api/dynamic/cms-publishing/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/cms-publishing/public-preview"],
+      "bypassReason": "Public CMS preview is intentionally readable before login and exposes no tenant-private drafts, schedules, approvals, or analytics."
+    },
+    {
+      "policyId": "cms-publishing-publish-content",
+      "route": "POST /api/dynamic/cms-publishing",
+      "authPosture": "policy",
+      "allowedRoles": ["content_author", "content_editor", "publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "cms-publishing-record-approval",
+      "route": "POST /api/dynamic/cms-publishing/approvals",
+      "authPosture": "policy",
+      "allowedRoles": ["content_editor", "legal_reviewer", "publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "cms-publishing-schedule",
+      "route": "POST /api/dynamic/cms-publishing/schedule",
+      "authPosture": "policy",
+      "allowedRoles": ["publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "cms-publishing-analytics",
+      "route": "POST /api/dynamic/cms-publishing/analytics",
+      "authPosture": "policy",
+      "allowedRoles": ["content_editor", "publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "cms-publishing-plan-validate",
+      "route": "POST /api/dynamic/cms-publishing/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "cms-publishing-dashboard",
+      "route": "GET /api/dynamic/cms-publishing/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "content_author", "content_editor", "legal_reviewer", "publisher", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

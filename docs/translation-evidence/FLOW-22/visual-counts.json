@@ -1,0 +1,58 @@
+﻿{
+    "flow":  "FLOW-22",
+    "expectedCascadePoints":  7,
+    "actualCascadePoints":  7,
+    "expectedPngTotal":  168,
+    "actualPngTotal":  168,
+    "points":  [
+                   {
+                       "cascadePoint":  "C0-source-flow",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "cms-publishing"
+                   },
+                   {
+                       "cascadePoint":  "C1-tenant-a-installed",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "cms-publishing"
+                   },
+                   {
+                       "cascadePoint":  "C2-tenant-a-adapted-published",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "acme-editorial-hub"
+                   },
+                   {
+                       "cascadePoint":  "C3-tenant-b-installed-from-a",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "acme-editorial-hub"
+                   },
+                   {
+                       "cascadePoint":  "C4-tenant-b-adapted-published",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "northwind-content-pipeline"
+                   },
+                   {
+                       "cascadePoint":  "C5-tenant-c-installed-from-b",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "northwind-content-pipeline"
+                   },
+                   {
+                       "cascadePoint":  "C6-tenant-c-adapted",
+                       "pngCount":  24,
+                       "manifestExpected":  24,
+                       "manifestActual":  24,
+                       "moduleName":  "tessera-publishing-desk"
+                   }
+               ]
+}

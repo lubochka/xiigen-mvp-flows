@@ -1,0 +1,22 @@
+﻿{
+    "flow":  "FLOW-22",
+    "verdict":  "PASS",
+    "source":  "docker-auth-matrix.json",
+    "checks":  [
+                   {
+                       "name":  "missing token 401",
+                       "expectedStatus":  401,
+                       "observedStatus":  401
+                   },
+                   {
+                       "name":  "wrong role 403",
+                       "expectedStatus":  403,
+                       "observedStatus":  403
+                   },
+                   {
+                       "name":  "cross tenant token 401",
+                       "expectedStatus":  401,
+                       "observedStatus":  401
+                   }
+               ]
+}

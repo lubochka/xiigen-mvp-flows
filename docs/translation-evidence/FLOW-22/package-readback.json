@@ -1,0 +1,21 @@
+﻿{
+    "flow":  "FLOW-22",
+    "packageSource":  "artifacts/nuget/FLOW-22",
+    "expectedPackages":  [
+                             "Xiigen.Flow.CmsPublishing.Application.0.1.1.nupkg",
+                             "Xiigen.Flow.CmsPublishing.Infrastructure.0.1.1.nupkg"
+                         ],
+    "actualPackages":  [
+                           {
+                               "Name":  "Xiigen.Flow.CmsPublishing.Application.0.1.1.nupkg",
+                               "Length":  23829,
+                               "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-22\\Xiigen.Flow.CmsPublishing.Application.0.1.1.nupkg"
+                           },
+                           {
+                               "Name":  "Xiigen.Flow.CmsPublishing.Infrastructure.0.1.1.nupkg",
+                               "Length":  3990,
+                               "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-22\\Xiigen.Flow.CmsPublishing.Infrastructure.0.1.1.nupkg"
+                           }
+                       ],
+    "pass":  true
+}

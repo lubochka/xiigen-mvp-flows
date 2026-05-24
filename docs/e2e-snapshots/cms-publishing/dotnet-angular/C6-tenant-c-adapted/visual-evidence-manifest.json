@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-22",
+  "slug": "cms-publishing",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-publishing-desk",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-editor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-editor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\content-editor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\legal-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\legal-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\legal-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=analytics&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=drafts&lang=en&module=tessera-publishing-desk"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=approvals&lang=he&module=tessera-publishing-desk"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-publishing-desk\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=analytics&lang=en&module=tessera-publishing-desk"
+    }
+  ]
+}

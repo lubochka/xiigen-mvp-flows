@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-22",
+  "flowSlug": "cms-publishing",
+  "endpoints": [
+    {
+      "endpointId": "cms-publishing-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/cms-publishing/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "bypassReason": "Public CMS preview exposes only generic publishing capabilities."
+    },
+    {
+      "endpointId": "cms-publishing-publish-content",
+      "method": "POST",
+      "path": "/api/dynamic/cms-publishing",
+      "authPosture": "policy",
+      "requiredRoles": ["content_author", "content_editor", "publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "requestSchema": "contracts/schemas/cms-publishing-request.schema.json"
+    },
+    {
+      "endpointId": "cms-publishing-record-approval",
+      "method": "POST",
+      "path": "/api/dynamic/cms-publishing/approvals",
+      "authPosture": "policy",
+      "requiredRoles": ["content_editor", "legal_reviewer", "publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "requestSchema": "contracts/schemas/cms-publishing-request.schema.json"
+    },
+    {
+      "endpointId": "cms-publishing-schedule",
+      "method": "POST",
+      "path": "/api/dynamic/cms-publishing/schedule",
+      "authPosture": "policy",
+      "requiredRoles": ["publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "requestSchema": "contracts/schemas/cms-publishing-request.schema.json"
+    },
+    {
+      "endpointId": "cms-publishing-analytics",
+      "method": "POST",
+      "path": "/api/dynamic/cms-publishing/analytics",
+      "authPosture": "policy",
+      "requiredRoles": ["content_editor", "publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "requestSchema": "contracts/schemas/cms-publishing-request.schema.json"
+    },
+    {
+      "endpointId": "cms-publishing-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/cms-publishing/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json",
+      "requestSchema": "contracts/schemas/cms-publishing-request.schema.json"
+    },
+    {
+      "endpointId": "cms-publishing-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/cms-publishing/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "content_author", "content_editor", "legal_reviewer", "publisher", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/cms-publishing-response.schema.json"
+    }
+  ]
+}

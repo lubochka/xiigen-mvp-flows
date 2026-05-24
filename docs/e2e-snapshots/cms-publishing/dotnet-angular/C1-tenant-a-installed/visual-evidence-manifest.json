@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-22",
+  "slug": "cms-publishing",
+  "cascadePoint": "C1-tenant-a-installed",
+  "moduleName": "cms-publishing",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=anonymous&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_user&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_author&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-editor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-editor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "content_editor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\content-editor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=content_editor&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\legal-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\legal-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "legal_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\legal-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=legal_reviewer&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\publisher-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\publisher-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "publisher",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\publisher-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=publisher&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=tenant_admin&state=analytics&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=drafts&lang=en&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=approvals&lang=he&module=cms-publishing"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--cms-publishing\\docs\\e2e-snapshots\\cms-publishing\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4321/?role=platform_admin&state=analytics&lang=en&module=cms-publishing"
+    }
+  ]
+}

@@ -154,4 +154,11 @@
     <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Infrastructure/Xiigen.Flow.DynamicFormsWorkflows.Infrastructure.csproj" />
     <Project Path="flows/FLOW-21-dynamic-forms-workflows/server/Xiigen.Flow.DynamicFormsWorkflows.Tests/Xiigen.Flow.DynamicFormsWorkflows.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-22-cms-publishing/" />
+  <Folder Name="/flows/FLOW-22-cms-publishing/server/">
+    <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Api/Xiigen.Flow.CmsPublishing.Api.csproj" />
+    <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Application/Xiigen.Flow.CmsPublishing.Application.csproj" />
+    <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Infrastructure/Xiigen.Flow.CmsPublishing.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-22-cms-publishing/server/Xiigen.Flow.CmsPublishing.Tests/Xiigen.Flow.CmsPublishing.Tests.csproj" />
+  </Folder>
 </Solution>

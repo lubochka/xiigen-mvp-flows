@@ -1,0 +1,224 @@
+﻿{
+    "flow":  "FLOW-22",
+    "slug":  "cms-publishing",
+    "verdict":  "PASS",
+    "cascadePoints":  7,
+    "visualEvidence":  {
+                           "expectedPngTotal":  168,
+                           "actualPngTotal":  168,
+                           "points":  [
+                                          {
+                                              "cascadePoint":  "C0-source-flow",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "cms-publishing"
+                                          },
+                                          {
+                                              "cascadePoint":  "C1-tenant-a-installed",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "cms-publishing"
+                                          },
+                                          {
+                                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "acme-editorial-hub"
+                                          },
+                                          {
+                                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "acme-editorial-hub"
+                                          },
+                                          {
+                                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "northwind-content-pipeline"
+                                          },
+                                          {
+                                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "northwind-content-pipeline"
+                                          },
+                                          {
+                                              "cascadePoint":  "C6-tenant-c-adapted",
+                                              "pngCount":  24,
+                                              "manifestExpected":  24,
+                                              "manifestActual":  24,
+                                              "moduleName":  "tessera-publishing-desk"
+                                          }
+                                      ]
+                       },
+    "tenantRepositories":  {
+                               "value":  [
+                                             {
+                                                 "repo":  "tenant-a--cms-publishing",
+                                                 "tenant":  "tenant-a",
+                                                 "module":  "cms-publishing",
+                                                 "cascadePoint":  "C1-tenant-a-installed",
+                                                 "version":  "0.1.1",
+                                                 "mode":  "install",
+                                                 "path":  "C:\\Projects\\tenant-a--cms-publishing",
+                                                 "remote":  "https://github.com/lubochka/tenant-a--cms-publishing"
+                                             },
+                                             {
+                                                 "repo":  "tenant-a--acme-editorial-hub",
+                                                 "tenant":  "tenant-a",
+                                                 "module":  "acme-editorial-hub",
+                                                 "cascadePoint":  "C2-tenant-a-adapted-published",
+                                                 "version":  "0.1.2",
+                                                 "mode":  "adapt-publish",
+                                                 "path":  "C:\\Projects\\tenant-a--acme-editorial-hub",
+                                                 "remote":  "https://github.com/lubochka/tenant-a--acme-editorial-hub"
+                                             },
+                                             {
+                                                 "repo":  "tenant-b--acme-editorial-hub",
+                                                 "tenant":  "tenant-b",
+                                                 "module":  "acme-editorial-hub",
+                                                 "cascadePoint":  "C3-tenant-b-installed-from-a",
+                                                 "version":  "0.1.2",
+                                                 "mode":  "install-from-tenant-a",
+                                                 "path":  "C:\\Projects\\tenant-b--acme-editorial-hub",
+                                                 "remote":  "https://github.com/lubochka/tenant-b--acme-editorial-hub"
+                                             },
+                                             {
+                                                 "repo":  "tenant-b--northwind-content-pipeline",
+                                                 "tenant":  "tenant-b",
+                                                 "module":  "northwind-content-pipeline",
+                                                 "cascadePoint":  "C4-tenant-b-adapted-published",
+                                                 "version":  "0.1.3",
+                                                 "mode":  "adapt-publish",
+                                                 "path":  "C:\\Projects\\tenant-b--northwind-content-pipeline",
+                                                 "remote":  "https://github.com/lubochka/tenant-b--northwind-content-pipeline"
+                                             },
+                                             {
+                                                 "repo":  "tenant-c--northwind-content-pipeline",
+                                                 "tenant":  "tenant-c",
+                                                 "module":  "northwind-content-pipeline",
+                                                 "cascadePoint":  "C5-tenant-c-installed-from-b",
+                                                 "version":  "0.1.3",
+                                                 "mode":  "install-from-tenant-b",
+                                                 "path":  "C:\\Projects\\tenant-c--northwind-content-pipeline",
+                                                 "remote":  "https://github.com/lubochka/tenant-c--northwind-content-pipeline"
+                                             },
+                                             {
+                                                 "repo":  "tenant-c--tessera-publishing-desk",
+                                                 "tenant":  "tenant-c",
+                                                 "module":  "tessera-publishing-desk",
+                                                 "cascadePoint":  "C6-tenant-c-adapted",
+                                                 "version":  "0.1.4",
+                                                 "mode":  "adapt",
+                                                 "path":  "C:\\Projects\\tenant-c--tessera-publishing-desk",
+                                                 "remote":  "https://github.com/lubochka/tenant-c--tessera-publishing-desk"
+                                             }
+                                         ],
+                               "Count":  6
+                           },
+    "githubActions":  {
+                          "flow":  "FLOW-22",
+                          "expectedRuns":  6,
+                          "successfulRuns":  6,
+                          "runs":  [
+                                       {
+                                           "repo":  "tenant-a--cms-publishing",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "9012dfe7921a8a130f9248f9786407ce95c35f89",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-a--cms-publishing/actions/runs/26354339965",
+                                           "updatedAt":  "2026-05-24T06:48:59Z"
+                                       },
+                                       {
+                                           "repo":  "tenant-a--acme-editorial-hub",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "c94c38f4eceb100fb549427a42043397940d4c00",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-a--acme-editorial-hub/actions/runs/26354378095",
+                                           "updatedAt":  "2026-05-24T06:51:09Z"
+                                       },
+                                       {
+                                           "repo":  "tenant-b--acme-editorial-hub",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "638cc5455ef98d694e175589edfb196985c461fc",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-b--acme-editorial-hub/actions/runs/26354412069",
+                                           "updatedAt":  "2026-05-24T06:52:55Z"
+                                       },
+                                       {
+                                           "repo":  "tenant-b--northwind-content-pipeline",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "ab4b7731a5da7789bcdfe5f81253b3121e4058a3",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-b--northwind-content-pipeline/actions/runs/26354450359",
+                                           "updatedAt":  "2026-05-24T06:54:47Z"
+                                       },
+                                       {
+                                           "repo":  "tenant-c--northwind-content-pipeline",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "a812d0fc57e696708f849c89d06073312bebca90",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-c--northwind-content-pipeline/actions/runs/26354485995",
+                                           "updatedAt":  "2026-05-24T06:56:53Z"
+                                       },
+                                       {
+                                           "repo":  "tenant-c--tessera-publishing-desk",
+                                           "status":  "completed",
+                                           "conclusion":  "success",
+                                           "headSha":  "324a2c2feda8635faf4023ca7556819c8859ab5b",
+                                           "workflowName":  "FLOW-22 cms publishing",
+                                           "url":  "https://github.com/lubochka/tenant-c--tessera-publishing-desk/actions/runs/26354522703",
+                                           "updatedAt":  "2026-05-24T06:59:45Z"
+                                       }
+                                   ]
+                      },
+    "adaptationHistory":  [
+                              {
+                                  "point":  "C0-source-flow",
+                                  "module":  "cms-publishing",
+                                  "action":  "source implementation"
+                              },
+                              {
+                                  "point":  "C1-tenant-a-installed",
+                                  "module":  "cms-publishing",
+                                  "action":  "tenant A install"
+                              },
+                              {
+                                  "point":  "C2-tenant-a-adapted-published",
+                                  "module":  "acme-editorial-hub",
+                                  "action":  "tenant A adaptation and publish"
+                              },
+                              {
+                                  "point":  "C3-tenant-b-installed-from-a",
+                                  "module":  "acme-editorial-hub",
+                                  "action":  "tenant B install from tenant A package"
+                              },
+                              {
+                                  "point":  "C4-tenant-b-adapted-published",
+                                  "module":  "northwind-content-pipeline",
+                                  "action":  "tenant B adaptation and publish"
+                              },
+                              {
+                                  "point":  "C5-tenant-c-installed-from-b",
+                                  "module":  "northwind-content-pipeline",
+                                  "action":  "tenant C install from tenant B package"
+                              },
+                              {
+                                  "point":  "C6-tenant-c-adapted",
+                                  "module":  "tessera-publishing-desk",
+                                  "action":  "tenant C adaptation"
+                              }
+                          ]
+}

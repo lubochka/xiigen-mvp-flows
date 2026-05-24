@@ -1,0 +1,130 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Editorial operations') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'drafts'" (click)="setScreenState('drafts')">
+          {{ translated('Drafts') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'approvals'" (click)="setScreenState('approvals')">
+          {{ translated('Approvals') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'analytics'" (click)="setScreenState('analytics')">
+          {{ translated('Analytics') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>7</strong>
+      <span>{{ translated('Published versions') }}</span>
+    </article>
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Pending approvals') }}</span>
+    </article>
+    <article>
+      <strong>{{ scheduledItems() }}</strong>
+      <span>{{ translated('Scheduled releases') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'drafts'" class="workspace" data-testid="drafts-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Versioned publisher</p>
+        <h2>Immutable content releases</h2>
+        <p>Published content keeps an optimistic version token so stale editors cannot overwrite newer work.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Slug</th>
+            <th>Version</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of contentRows">
+            <td>{{ row.title }}</td>
+            <td>{{ row.slug }}</td>
+            <td>{{ row.version }}</td>
+            <td><span class="state" [class]="row.status">{{ row.status }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Authoring controls</h3>
+      <label>
+        Scheduled releases
+        <input type="range" min="1" max="9" [ngModel]="scheduledItems()" (ngModelChange)="setScheduledItems($event)" />
+      </label>
+      <p *ngIf="!canAuthor()" class="notice">This role can browse published pages only.</p>
+      <p *ngIf="canAuthor()" class="notice success">Drafts can be submitted for review with version protection.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'approvals'" class="workspace" data-testid="approvals-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Approval workflow</p>
+        <h2>Sequential role gates</h2>
+        <p>Each stage has one owner role and must finish before the next approval stage opens.</p>
+      </div>
+      <div class="timeline">
+        <article *ngFor="let row of approvalRows" [class]="row.status">
+          <strong>{{ row.stage }}</strong>
+          <span>{{ row.owner }}</span>
+          <small>{{ row.status }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Reviewer posture</h3>
+      <p *ngIf="canApprove()" class="notice success">This role can act on at least one approval lane.</p>
+      <p *ngIf="!canApprove()" class="notice">Approval actions are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'analytics'" class="workspace" data-testid="analytics-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Content performance</p>
+        <h2>Append-only aggregate metrics</h2>
+        <p>Analytics records keep team-level trends and exclude personal contact details from the storage path.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of metricRows">
+          <span>{{ row.metric }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.note }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Dispatch status</h3>
+      <p class="notice success">Outbox events are retained for scheduled release and analytics retry.</p>
+    </aside>
+  </section>
+</main>

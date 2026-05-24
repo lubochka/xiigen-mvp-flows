@@ -1,0 +1,61 @@
+﻿{
+    "flow":  "FLOW-22",
+    "expectedRuns":  6,
+    "successfulRuns":  6,
+    "runs":  [
+                 {
+                     "repo":  "tenant-a--cms-publishing",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "9012dfe7921a8a130f9248f9786407ce95c35f89",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-a--cms-publishing/actions/runs/26354339965",
+                     "updatedAt":  "2026-05-24T06:48:59Z"
+                 },
+                 {
+                     "repo":  "tenant-a--acme-editorial-hub",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "c94c38f4eceb100fb549427a42043397940d4c00",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-a--acme-editorial-hub/actions/runs/26354378095",
+                     "updatedAt":  "2026-05-24T06:51:09Z"
+                 },
+                 {
+                     "repo":  "tenant-b--acme-editorial-hub",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "638cc5455ef98d694e175589edfb196985c461fc",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-b--acme-editorial-hub/actions/runs/26354412069",
+                     "updatedAt":  "2026-05-24T06:52:55Z"
+                 },
+                 {
+                     "repo":  "tenant-b--northwind-content-pipeline",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "ab4b7731a5da7789bcdfe5f81253b3121e4058a3",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-b--northwind-content-pipeline/actions/runs/26354450359",
+                     "updatedAt":  "2026-05-24T06:54:47Z"
+                 },
+                 {
+                     "repo":  "tenant-c--northwind-content-pipeline",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "a812d0fc57e696708f849c89d06073312bebca90",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-c--northwind-content-pipeline/actions/runs/26354485995",
+                     "updatedAt":  "2026-05-24T06:56:53Z"
+                 },
+                 {
+                     "repo":  "tenant-c--tessera-publishing-desk",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "headSha":  "324a2c2feda8635faf4023ca7556819c8859ab5b",
+                     "workflowName":  "FLOW-22 cms publishing",
+                     "url":  "https://github.com/lubochka/tenant-c--tessera-publishing-desk/actions/runs/26354522703",
+                     "updatedAt":  "2026-05-24T06:59:45Z"
+                 }
+             ]
+}

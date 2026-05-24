@@ -1,0 +1,118 @@
+{
+    "flow":  "FLOW-22",
+    "checks":  [
+                   {
+                       "name":  "public preview 200",
+                       "pass":  true,
+                       "expected":  200,
+                       "actual":  200,
+                       "body":  "{\"flow\":\"FLOW-22\",\"summary\":\"Preview CMS publishing, approval stages, scheduled release, and aggregate engagement without exposing tenant-private drafts.\",\"tabs\":[\"drafts\",\"approvals\",\"schedule\",\"analytics\"]}"
+                   },
+                   {
+                       "name":  "missing token 401",
+                       "pass":  true,
+                       "expected":  401,
+                       "actual":  401,
+                       "body":  "{\"code\":\"MISSING_TOKEN\"}"
+                   },
+                   {
+                       "name":  "wrong role 403",
+                       "pass":  true,
+                       "expected":  403,
+                       "actual":  403,
+                       "body":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"content_author\",\"content_editor\",\"publisher\",\"tenant_admin\",\"platform_admin\"]}"
+                   },
+                   {
+                       "name":  "cross tenant token 401",
+                       "pass":  true,
+                       "expected":  401,
+                       "actual":  401,
+                       "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                   },
+                   {
+                       "name":  "publish content 201",
+                       "pass":  true,
+                       "expected":  201,
+                       "actual":  201,
+                       "body":  "{\"id\":\"article-live\",\"version\":\"1\",\"status\":\"PUBLISHED\",\"slug\":\"live-article\",\"publishedAt\":\"2026-05-24T06:29:55.3026436+00:00\"}"
+                   },
+                   {
+                       "name":  "idempotent publish replay 200",
+                       "pass":  true,
+                       "expected":  200,
+                       "actual":  200,
+                       "body":  "{\"id\":\"article-live\",\"version\":\"1\",\"status\":\"PUBLISHED\",\"slug\":\"live-article\",\"publishedAt\":\"2026-05-24T06:29:55.3026436+00:00\"}"
+                   },
+                   {
+                       "name":  "immutable/stale publish 409",
+                       "pass":  true,
+                       "expected":  409,
+                       "actual":  409,
+                       "body":  "{\"code\":\"CONTENT_IMMUTABLE\",\"contentId\":\"article-live\",\"currentVersion\":\"1\"}"
+                   },
+                   {
+                       "name":  "validation no partial 400",
+                       "pass":  true,
+                       "expected":  400,
+                       "actual":  400,
+                       "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"title\",\"reason\":\"Title is required.\"}]}"
+                   },
+                   {
+                       "name":  "timeout retained 504",
+                       "pass":  true,
+                       "expected":  504,
+                       "actual":  504,
+                       "body":  "{\"code\":\"TIMEOUT\",\"retryAfterMs\":5000,\"outboxRetained\":true}"
+                   },
+                   {
+                       "name":  "approval 201",
+                       "pass":  true,
+                       "expected":  201,
+                       "actual":  201,
+                       "body":  "{\"id\":\"acme-corp:article-live:LEGAL_REVIEW\",\"contentId\":\"article-live\",\"stage\":\"LEGAL_REVIEW\",\"decision\":\"APPROVE\",\"decidedAt\":\"2026-05-24T06:29:55.4161700+00:00\"}"
+                   },
+                   {
+                       "name":  "approval wrong role 403",
+                       "pass":  true,
+                       "expected":  403,
+                       "actual":  403,
+                       "body":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"content_editor\",\"legal_reviewer\",\"publisher\",\"tenant_admin\",\"platform_admin\"]}"
+                   },
+                   {
+                       "name":  "schedule 201",
+                       "pass":  true,
+                       "expected":  201,
+                       "actual":  201,
+                       "body":  "{\"id\":\"acme-corp:article-live:2026-05-24T10:29:55.4529534+00:00\",\"contentId\":\"article-live\",\"publishAt\":\"2026-05-24T10:29:55.4529534+00:00\",\"status\":\"SCHEDULED\"}"
+                   },
+                   {
+                       "name":  "analytics 201",
+                       "pass":  true,
+                       "expected":  201,
+                       "actual":  201,
+                       "body":  "{\"id\":\"acme-corp:article-live:VIEW:dc9766aeedd24bd393d5b81c312722d9\",\"contentId\":\"article-live\",\"metricType\":\"VIEW\",\"piiScrubbed\":true}"
+                   },
+                   {
+                       "name":  "analytics rejects pii 400",
+                       "pass":  true,
+                       "expected":  400,
+                       "actual":  400,
+                       "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"authorEmail\",\"reason\":\"PII is not accepted in analytics records.\"}]}"
+                   },
+                   {
+                       "name":  "plan coverage 200",
+                       "pass":  true,
+                       "expected":  200,
+                       "actual":  200,
+                       "body":  "{\"code\":\"PLAN_COVERAGE_OK\",\"taskTypeCount\":40,\"singleResponsibility\":true,\"fabricFirst\":true,\"dynamicEndpointOnly\":true,\"dataProcessResult\":true}"
+                   },
+                   {
+                       "name":  "dashboard 200",
+                       "pass":  true,
+                       "expected":  200,
+                       "actual":  200,
+                       "body":  "{\"content\":[{\"contentId\":\"article-live\",\"title\":\"Live article\",\"body\":\"body\",\"slug\":\"live-article\",\"status\":\"PUBLISHED\",\"tenantId\":\"acme-corp\",\"versionNumber\":1,\"publishedAt\":\"2026-05-24T06:29:55.3026436+00:00\",\"immutabilityLocked\":true,\"knowledgeScope\":\"PRIVATE\",\"id\":\"acme-corp:article-live\",\"version\":\"1\",\"updatedAt\":\"2026-05-24T06:29:55.3033387+00:00\"},{\"contentId\":\"timeout-live\",\"title\":\"Timeout\",\"body\":\"body\",\"slug\":\"timeout\",\"status\":\"PUBLISHED\",\"tenantId\":\"acme-corp\",\"versionNumber\":1,\"publishedAt\":\"2026-05-24T06:29:55.3929330+00:00\",\"immutabilityLocked\":true,\"knowledgeScope\":\"PRIVATE\",\"id\":\"acme-corp:timeout-live\",\"version\":\"1\",\"updatedAt\":\"2026-05-24T06:29:55.3929424+00:00\"}],\"approvals\":[{\"approvalId\":\"acme-corp:article-live:LEGAL_REVIEW\",\"contentId\":\"article-live\",\"stage\":\"LEGAL_REVIEW\",\"decision\":\"APPROVE\",\"tenantId\":\"acme-corp\",\"decidedBy\":\"local-user\",\"decidedAt\":\"2026-05-24T06:29:55.4161700+00:00\",\"knowledgeScope\":\"PRIVATE\",\"id\":\"acme-corp:article-live:LEGAL_REVIEW\",\"version\":\"1\",\"updatedAt\":\"2026-05-24T06:29:55.4162147+00:00\"}],\"schedules\":[{\"lockId\":\"acme-corp:article-live:2026-05-24T10:29:55.4529534+00:00\",\"contentId\":\"article-live\",\"tenantId\":\"acme-corp\",\"publishAt\":\"2026-05-24T10:29:55.4529534+00:00\",\"expiresAt\":\"2026-05-25T06:29:55.4833006+00:00\",\"knowledgeScope\":\"PRIVATE\",\"id\":\"acme-corp:article-live:2026-05-24T10:29:55.4529534+00:00\",\"version\":\"1\",\"updatedAt\":\"2026-05-24T06:29:55.4833125+00:00\"}],\"analytics\":[{\"metricId\":\"acme-corp:article-live:VIEW:dc9766aeedd24bd393d5b81c312722d9\",\"contentId\":\"article-live\",\"metricType\":\"VIEW\",\"value\":9,\"userHash\":\"3d0941964aa3ebdcb00ccef58b1bb399f9f898465e9886d5aec7f31090a0fb30\",\"tenantId\":\"acme-corp\",\"recordedAt\":\"2026-05-24T06:29:55.5122837+00:00\",\"piiScrubbed\":true,\"knowledgeScope\":\"PRIVATE\",\"id\":\"acme-corp:article-live:VIEW:dc9766aeedd24bd393d5b81c312722d9\",\"version\":\"1\",\"updatedAt\":\"2026-05-24T06:29:55.5123001+00:00\"}],\"kpis\":{\"contentCount\":2,\"approvalCount\":1,\"scheduledCount\":1,\"analyticsCount\":1}}"
+                   }
+               ],
+    "failures":  0
+}

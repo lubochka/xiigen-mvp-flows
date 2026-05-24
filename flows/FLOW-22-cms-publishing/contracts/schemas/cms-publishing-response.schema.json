@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-22/cms-publishing-response.schema.json",
+  "title": "FLOW-22 CMS Publishing Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "slug": { "type": "string" },
+    "publishedAt": { "type": "string" },
+    "code": { "type": "string" },
+    "details": { "type": "array" },
+    "currentVersion": { "type": ["string", "null"] },
+    "retryAfterMs": { "type": "integer" },
+    "outboxRetained": { "type": "boolean" }
+  }
+}

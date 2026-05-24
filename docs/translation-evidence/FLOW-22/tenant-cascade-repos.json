@@ -1,0 +1,62 @@
+﻿[
+    {
+        "repo":  "tenant-a--cms-publishing",
+        "tenant":  "tenant-a",
+        "module":  "cms-publishing",
+        "cascadePoint":  "C1-tenant-a-installed",
+        "version":  "0.1.1",
+        "mode":  "install",
+        "path":  "C:\\Projects\\tenant-a--cms-publishing",
+        "remote":  "https://github.com/lubochka/tenant-a--cms-publishing"
+    },
+    {
+        "repo":  "tenant-a--acme-editorial-hub",
+        "tenant":  "tenant-a",
+        "module":  "acme-editorial-hub",
+        "cascadePoint":  "C2-tenant-a-adapted-published",
+        "version":  "0.1.2",
+        "mode":  "adapt-publish",
+        "path":  "C:\\Projects\\tenant-a--acme-editorial-hub",
+        "remote":  "https://github.com/lubochka/tenant-a--acme-editorial-hub"
+    },
+    {
+        "repo":  "tenant-b--acme-editorial-hub",
+        "tenant":  "tenant-b",
+        "module":  "acme-editorial-hub",
+        "cascadePoint":  "C3-tenant-b-installed-from-a",
+        "version":  "0.1.2",
+        "mode":  "install-from-tenant-a",
+        "path":  "C:\\Projects\\tenant-b--acme-editorial-hub",
+        "remote":  "https://github.com/lubochka/tenant-b--acme-editorial-hub"
+    },
+    {
+        "repo":  "tenant-b--northwind-content-pipeline",
+        "tenant":  "tenant-b",
+        "module":  "northwind-content-pipeline",
+        "cascadePoint":  "C4-tenant-b-adapted-published",
+        "version":  "0.1.3",
+        "mode":  "adapt-publish",
+        "path":  "C:\\Projects\\tenant-b--northwind-content-pipeline",
+        "remote":  "https://github.com/lubochka/tenant-b--northwind-content-pipeline"
+    },
+    {
+        "repo":  "tenant-c--northwind-content-pipeline",
+        "tenant":  "tenant-c",
+        "module":  "northwind-content-pipeline",
+        "cascadePoint":  "C5-tenant-c-installed-from-b",
+        "version":  "0.1.3",
+        "mode":  "install-from-tenant-b",
+        "path":  "C:\\Projects\\tenant-c--northwind-content-pipeline",
+        "remote":  "https://github.com/lubochka/tenant-c--northwind-content-pipeline"
+    },
+    {
+        "repo":  "tenant-c--tessera-publishing-desk",
+        "tenant":  "tenant-c",
+        "module":  "tessera-publishing-desk",
+        "cascadePoint":  "C6-tenant-c-adapted",
+        "version":  "0.1.4",
+        "mode":  "adapt",
+        "path":  "C:\\Projects\\tenant-c--tessera-publishing-desk",
+        "remote":  "https://github.com/lubochka/tenant-c--tessera-publishing-desk"
+    }
+]
