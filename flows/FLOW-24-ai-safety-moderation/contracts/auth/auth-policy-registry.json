@@ -1,0 +1,84 @@
+{
+  "flowId": "FLOW-24",
+  "flowSlug": "ai-safety-moderation",
+  "policies": [
+    {
+      "policyId": "ai-safety-moderation-public-preview",
+      "route": "GET /api/dynamic/ai-safety-moderation/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/ai-safety-moderation/public-preview"],
+      "bypassReason": "Public learning-safety preview exposes no tenant-private learner records."
+    },
+    {
+      "policyId": "ai-safety-moderation-consent",
+      "route": "POST /api/dynamic/ai-safety-moderation/consent",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-compose-lesson",
+      "route": "POST /api/dynamic/ai-safety-moderation/lesson/compose",
+      "authPosture": "policy",
+      "allowedRoles": ["content_author", "educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-grade-quiz",
+      "route": "POST /api/dynamic/ai-safety-moderation/quiz/grade",
+      "authPosture": "policy",
+      "allowedRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-streak",
+      "route": "POST /api/dynamic/ai-safety-moderation/streak/evaluate",
+      "authPosture": "policy",
+      "allowedRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-schedule",
+      "route": "POST /api/dynamic/ai-safety-moderation/lesson/schedule",
+      "authPosture": "policy",
+      "allowedRoles": ["educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-domain-pack",
+      "route": "POST /api/dynamic/ai-safety-moderation/domain-pack/deliver",
+      "authPosture": "policy",
+      "allowedRoles": ["educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-calendar-sync",
+      "route": "POST /api/dynamic/ai-safety-moderation/calendar/sync",
+      "authPosture": "policy",
+      "allowedRoles": ["educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-progress",
+      "route": "POST /api/dynamic/ai-safety-moderation/progress/track",
+      "authPosture": "policy",
+      "allowedRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-plan-validate",
+      "route": "POST /api/dynamic/ai-safety-moderation/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "ai-safety-moderation-dashboard",
+      "route": "GET /api/dynamic/ai-safety-moderation/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["student", "parent_guardian", "educator", "safety_reviewer", "content_author", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

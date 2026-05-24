@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-24",
+  "slug": "ai-safety-moderation",
+  "cascadePoint": "C1-tenant-a-installed",
+  "moduleName": "ai-safety-moderation",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "student",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\student-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "student",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\student-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "student",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\student-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\parent-guardian-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\parent-guardian-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\parent-guardian-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "educator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\educator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "educator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\educator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "educator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\educator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\safety-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\safety-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\safety-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=progress&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=consent&lang=en&module=ai-safety-moderation"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=lesson&lang=he&module=ai-safety-moderation"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--ai-safety-moderation\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=progress&lang=en&module=ai-safety-moderation"
+    }
+  ]
+}

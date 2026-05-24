@@ -1,0 +1,149 @@
+﻿{
+  "flowId": "FLOW-24",
+  "flowSlug": "ai-safety-moderation",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-24-ai-safety-moderation",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.AiSafetyModeration.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/ai-safety-moderation/dotnet-angular",
+  "sourceAliases": [
+    "ai-safety-moderation",
+    "learning-calendar",
+    "personal-ai-tutor",
+    "consent-and-enrollment-gate",
+    "safety-gate-token",
+    "server-side-quiz-grading",
+    "learning-streak-evaluator",
+    "calendar-fabric-sync",
+    "domain-pack-delivery"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "student",
+      "parent_guardian",
+      "educator",
+      "safety_reviewer",
+      "content_author",
+      "tenant_admin",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-05",
+      "relationship": "gamification-ledger-source",
+      "reason": "Quiz completion queues append-only learning reward events for the gamification ledger."
+    },
+    {
+      "flowId": "FLOW-40",
+      "relationship": "learning-progress-push-source",
+      "reason": "Progress, lesson publication, and calendar sync can emit learner-facing updates through the approved push transport."
+    },
+    {
+      "flowId": "FLOW-29",
+      "relationship": "rag-domain-pack-source",
+      "reason": "Domain pack delivery can consume approved learning retrieval packs when FREEDOM config enables them."
+    }
+  ],
+  "coInstallDependencies": [
+    {
+      "flowId": "FLOW-05",
+      "reason": "Gamification ledger integration should be validated with quiz completion events."
+    }
+  ],
+  "functionalCoverage": {
+    "coverageMode": "flow-coverage-p1-p11",
+    "sourceDocsRoot": "docs/flow-coverage/ai-safety-moderation",
+    "requiredDocuments": [
+      "docs/flow-coverage/ai-safety-moderation/P1-business-logic-inventory.md",
+      "docs/flow-coverage/ai-safety-moderation/P2-ui-gap-analysis.md",
+      "docs/flow-coverage/ai-safety-moderation/P5-ui-specs.md",
+      "docs/flow-coverage/ai-safety-moderation/P9-edge-cases.md",
+      "docs/flow-coverage/ai-safety-moderation/P10-server-specs.md",
+      "docs/flow-coverage/ai-safety-moderation/P11-impl-readiness.md"
+    ],
+    "existingCfRules": 4,
+    "newCfRules": 15,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 11,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.AiSafetyModeration.Infrastructure/AiSafetyModerationServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "AI Safety Moderation fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "ai-safety-moderation",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-ai-safety-moderation.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}
+

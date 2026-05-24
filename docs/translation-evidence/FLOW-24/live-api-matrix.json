@@ -1,0 +1,177 @@
+{
+    "flow":  "FLOW-24",
+    "slug":  "ai-safety-moderation",
+    "generatedAt":  "2026-05-24T14:54:19.6315366+03:00",
+    "total":  15,
+    "passed":  15,
+    "failed":  0,
+    "results":  [
+                    {
+                        "name":  "public-preview-200",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true,
+                        "body":  {
+                                     "flow":  "FLOW-24",
+                                     "summary":  "Preview the learning safety gate, consent posture, moderated lesson flow, and aggregate progress without exposing tenant-private records.",
+                                     "tabs":  [
+                                                  "consent",
+                                                  "lesson",
+                                                  "progress"
+                                              ]
+                                 }
+                    },
+                    {
+                        "name":  "missing-token-401",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "MISSING_TOKEN"
+                                 }
+                    },
+                    {
+                        "name":  "cross-tenant-401",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "AUTH_CROSS_TENANT_TOKEN"
+                                 }
+                    },
+                    {
+                        "name":  "wrong-role-403",
+                        "expected":  403,
+                        "actual":  403,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "WRONG_ROLE",
+                                     "allowedRoles":  [
+                                                          "tenant_admin",
+                                                          "platform_admin"
+                                                      ]
+                                 }
+                    },
+                    {
+                        "name":  "consent-granted-201",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true,
+                        "body":  {
+                                     "studentId":  "student-1",
+                                     "consentType":  "learning",
+                                     "outcome":  "GRANTED",
+                                     "downstreamBlocked":  false,
+                                     "version":  "1"
+                                 }
+                    },
+                    {
+                        "name":  "lesson-compose-201",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true,
+                        "body":  {
+                                     "lessonId":  "lesson-1",
+                                     "status":  "PUBLISHED",
+                                     "safetyGateToken":  "sgt-4990833c26411e04a3109067fa4a1eaf",
+                                     "order":  [
+                                                   "compose",
+                                                   "safety_gate",
+                                                   "publish"
+                                               ]
+                                 }
+                    },
+                    {
+                        "name":  "quiz-client-score-400",
+                        "expected":  400,
+                        "actual":  400,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "CLIENT_SCORE_REJECTED",
+                                     "serverRecomputeRequired":  true
+                                 }
+                    },
+                    {
+                        "name":  "quiz-server-score-201",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true,
+                        "body":  {
+                                     "attemptId":  "acme-corp:quiz-2:aaf5c1b58a7203bd88147d0b3b06c6f3",
+                                     "scorePercent":  50,
+                                     "correct":  1,
+                                     "total":  2,
+                                     "gamificationDispatch":  "queued_async"
+                                 }
+                    },
+                    {
+                        "name":  "streak-client-timezone-400",
+                        "expected":  400,
+                        "actual":  400,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "CLIENT_TIMEZONE_REJECTED",
+                                     "timezoneSource":  "profile"
+                                 }
+                    },
+                    {
+                        "name":  "domain-pack-skip-200",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true,
+                        "body":  {
+                                     "status":  "SKIPPED",
+                                     "skipped":  true,
+                                     "reason":  "FREEDOM_CONFIG_MISSING"
+                                 }
+                    },
+                    {
+                        "name":  "calendar-direct-sdk-400",
+                        "expected":  400,
+                        "actual":  400,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "CALENDAR_SDK_DIRECT_IMPORT_REJECTED"
+                                 }
+                    },
+                    {
+                        "name":  "calendar-fabric-201",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true,
+                        "body":  {
+                                     "status":  "SYNCED",
+                                     "source_flow":  "FLOW-24"
+                                 }
+                    },
+                    {
+                        "name":  "progress-skip-200",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true,
+                        "body":  {
+                                     "status":  "SKIPPED",
+                                     "reason":  "FREEDOM_CONFIG_MISSING"
+                                 }
+                    },
+                    {
+                        "name":  "progress-token-required-403",
+                        "expected":  403,
+                        "actual":  403,
+                        "pass":  true,
+                        "body":  {
+                                     "code":  "SAFETY_GATE_TOKEN_REQUIRED"
+                                 }
+                    },
+                    {
+                        "name":  "progress-track-201",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true,
+                        "body":  {
+                                     "status":  "TRACKED",
+                                     "progressPercent":  80
+                                 }
+                    }
+                ]
+}

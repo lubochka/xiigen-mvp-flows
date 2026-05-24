@@ -1,0 +1,129 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Learning safety') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'consent'" (click)="setScreenState('consent')">
+          {{ translated('Consent') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'lesson'" (click)="setScreenState('lesson')">
+          {{ translated('Lesson') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'progress'" (click)="setScreenState('progress')">
+          {{ translated('Progress') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Open consent gates') }}</span>
+    </article>
+    <article>
+      <strong>1</strong>
+      <span>{{ translated('Published lessons') }}</span>
+    </article>
+    <article>
+      <strong>{{ safetyScore() }}</strong>
+      <span>{{ translated('Safety score') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'consent'" class="workspace" data-testid="consent-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Consent-first learning</p>
+        <h2>Every outcome waits for the learner gate</h2>
+        <p>Denied, pending, or withdrawn consent blocks lessons, calendar sync, progress insights, and rewards before state changes.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Gate</th>
+            <th>Outcome</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of gates">
+            <td>{{ row.gate }}</td>
+            <td>{{ row.outcome }}</td>
+            <td>{{ row.effect }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Consent posture</h3>
+      <p *ngIf="publicView()" class="notice">Public visitors cannot view learner-specific consent records.</p>
+      <p *ngIf="!publicView()" class="notice success">This role sees the current gate state without changing tenant scope.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'lesson'" class="workspace" data-testid="lesson-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Moderated content</p>
+        <h2>Compose, safety gate, publish</h2>
+        <p>AI lessons become visible only when a safety token is present and the review path has not blocked the prompt.</p>
+      </div>
+      <div class="timeline">
+        <article *ngFor="let row of lessons" [class]="row.safety">
+          <strong>{{ row.topic }}</strong>
+          <span>{{ row.source }}</span>
+          <small>{{ row.safety }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Safety review</h3>
+      <label>
+        Safety score
+        <input type="range" min="60" max="100" [ngModel]="safetyScore()" (ngModelChange)="setSafetyScore($event)" />
+      </label>
+      <p *ngIf="canReview()" class="notice success">This role can approve the moderation token.</p>
+      <p *ngIf="!canReview()" class="notice">Moderation approval is hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'progress'" class="workspace" data-testid="progress-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Learning telemetry</p>
+        <h2>Server-scored progress and safe skips</h2>
+        <p>Quiz scores are recomputed on the server, streaks use profile timezone, and optional packs skip safely when configuration is absent.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of progressRows">
+          <span>{{ row.signal }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.guard }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Progress controls</h3>
+      <p *ngIf="canOperate()" class="notice success">This role can schedule lessons and sync calendars through connectors.</p>
+      <p *ngIf="!canOperate()" class="notice">Scheduling and connector actions are hidden for this role.</p>
+    </aside>
+  </section>
+</main>

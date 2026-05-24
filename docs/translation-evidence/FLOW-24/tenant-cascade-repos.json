@@ -1,0 +1,54 @@
+{
+    "flow":  "FLOW-24",
+    "generatedAt":  "2026-05-24T15:08:36.5599548+03:00",
+    "repos":  [
+                  {
+                      "repo":  "tenant-a--ai-safety-moderation",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  },
+                  {
+                      "repo":  "tenant-a--acme-learning-safety",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  },
+                  {
+                      "repo":  "tenant-b--acme-learning-safety",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  },
+                  {
+                      "repo":  "tenant-b--northwind-safe-tutor",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  },
+                  {
+                      "repo":  "tenant-c--northwind-safe-tutor",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  },
+                  {
+                      "repo":  "tenant-c--tessera-learning-guardian",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "visualExpected":  24,
+                      "visualActual":  24,
+                      "actionsFiles":  0,
+                      "pushed":  true
+                  }
+              ]
+}

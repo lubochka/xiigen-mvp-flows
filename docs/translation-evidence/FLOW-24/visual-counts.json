@@ -1,0 +1,51 @@
+{
+    "flow":  "FLOW-24",
+    "generatedAt":  "2026-05-24T15:08:57.4449405+03:00",
+    "expectedTotal":  168,
+    "actualTotal":  168,
+    "pngTotal":  168,
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "expected":  24,
+                              "actual":  24,
+                              "pngCount":  24
+                          }
+                      ]
+}

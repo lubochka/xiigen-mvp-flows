@@ -168,4 +168,11 @@
     <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Infrastructure/Xiigen.Flow.FormBuilderTemplates.Infrastructure.csproj" />
     <Project Path="flows/FLOW-23-form-builder-templates/server/Xiigen.Flow.FormBuilderTemplates.Tests/Xiigen.Flow.FormBuilderTemplates.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-24-ai-safety-moderation/" />
+  <Folder Name="/flows/FLOW-24-ai-safety-moderation/server/">
+    <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Api/Xiigen.Flow.AiSafetyModeration.Api.csproj" />
+    <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Application/Xiigen.Flow.AiSafetyModeration.Application.csproj" />
+    <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Infrastructure/Xiigen.Flow.AiSafetyModeration.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Tests/Xiigen.Flow.AiSafetyModeration.Tests.csproj" />
+  </Folder>
 </Solution>

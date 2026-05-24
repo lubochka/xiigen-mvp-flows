@@ -1,0 +1,32 @@
+﻿{
+    "flowId":  "FLOW-24",
+    "flowSlug":  "ai-safety-moderation",
+    "portabilityTier":  "Tier D",
+    "portabilityStatus":  "PASS",
+    "authenticationStatus":  "PASS",
+    "tenantCertificationTier":  "Tier D",
+    "tierDComplete":  true,
+    "generatedAt":  "2026-05-24T15:10:31.7135613+03:00",
+    "evidence":  {
+                     "unitTests":  "15/15 dotnet tests passing",
+                     "angularTests":  "5/5 Angular tests passing",
+                     "liveApiMatrix":  "docs/translation-evidence/FLOW-24/live-api-matrix.json",
+                     "visualEvidence":  "docs/translation-evidence/FLOW-24/visual-counts.json",
+                     "tenantCascade":  "docs/translation-evidence/FLOW-24/tenant-cascade-repos.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-24/code-review-gate.json",
+                     "qaReview":  "docs/translation-evidence/FLOW-24/qa-review.md",
+                     "actionsDisabled":  "docs/translation-evidence/FLOW-24/actions-disabled-proof.json"
+                 },
+    "cascadePoints":  [
+                          "C0-source-flow",
+                          "C1-tenant-a-installed",
+                          "C2-tenant-a-adapted-published",
+                          "C3-tenant-b-installed-from-a",
+                          "C4-tenant-b-adapted-published",
+                          "C5-tenant-c-installed-from-b",
+                          "C6-tenant-c-adapted"
+                      ],
+    "openIssues":  [
+
+                   ]
+}

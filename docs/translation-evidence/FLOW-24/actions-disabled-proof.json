@@ -1,0 +1,37 @@
+{
+    "flow":  "FLOW-24",
+    "generatedAt":  "2026-05-24T15:10:01.3041718+03:00",
+    "sourceTrackedActionFiles":  0,
+    "tenantRepos":  [
+                        {
+                            "repo":  "tenant-a--ai-safety-moderation",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        },
+                        {
+                            "repo":  "tenant-a--acme-learning-safety",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        },
+                        {
+                            "repo":  "tenant-b--acme-learning-safety",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        },
+                        {
+                            "repo":  "tenant-b--northwind-safe-tutor",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        },
+                        {
+                            "repo":  "tenant-c--northwind-safe-tutor",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        },
+                        {
+                            "repo":  "tenant-c--tessera-learning-guardian",
+                            "actionsEnabled":  false,
+                            "trackedActionFiles":  0
+                        }
+                    ]
+}

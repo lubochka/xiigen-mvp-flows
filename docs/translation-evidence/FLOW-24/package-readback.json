@@ -1,0 +1,18 @@
+{
+    "flow":  "FLOW-24",
+    "generatedAt":  "2026-05-24T15:10:13.4943868+03:00",
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.AiSafetyModeration.Application.0.1.1.nupkg",
+                         "Length":  28442,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-24\\Xiigen.Flow.AiSafetyModeration.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.AiSafetyModeration.Infrastructure.0.1.1.nupkg",
+                         "Length":  4014,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-24\\Xiigen.Flow.AiSafetyModeration.Infrastructure.0.1.1.nupkg"
+                     }
+                 ],
+    "applicationPackagePresent":  true,
+    "infrastructurePackagePresent":  true
+}

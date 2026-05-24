@@ -1,0 +1,104 @@
+{
+  "flowId": "FLOW-24",
+  "flowSlug": "ai-safety-moderation",
+  "endpoints": [
+    {
+      "endpointId": "ai-safety-moderation-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/ai-safety-moderation/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "bypassReason": "Public learning-safety preview exposes no tenant-private learner records."
+    },
+    {
+      "endpointId": "ai-safety-moderation-consent",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/consent",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-compose-lesson",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/lesson/compose",
+      "authPosture": "policy",
+      "requiredRoles": ["content_author", "educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-grade-quiz",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/quiz/grade",
+      "authPosture": "policy",
+      "requiredRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-streak",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/streak/evaluate",
+      "authPosture": "policy",
+      "requiredRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-schedule",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/lesson/schedule",
+      "authPosture": "policy",
+      "requiredRoles": ["educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-domain-pack",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/domain-pack/deliver",
+      "authPosture": "policy",
+      "requiredRoles": ["educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-calendar-sync",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/calendar/sync",
+      "authPosture": "policy",
+      "requiredRoles": ["educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-progress",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/progress/track",
+      "authPosture": "policy",
+      "requiredRoles": ["student", "parent_guardian", "educator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/ai-safety-moderation/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json",
+      "requestSchema": "contracts/schemas/ai-safety-moderation-request.schema.json"
+    },
+    {
+      "endpointId": "ai-safety-moderation-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/ai-safety-moderation/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["student", "parent_guardian", "educator", "safety_reviewer", "content_author", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/ai-safety-moderation-response.schema.json"
+    }
+  ]
+}

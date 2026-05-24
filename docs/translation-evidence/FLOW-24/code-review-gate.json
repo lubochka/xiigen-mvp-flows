@@ -1,0 +1,37 @@
+{
+    "flow":  "FLOW-24",
+    "generatedAt":  "2026-05-24T15:09:46.1781851+03:00",
+    "total":  7,
+    "passed":  7,
+    "failed":  0,
+    "checks":  [
+                   {
+                       "check":  "no-provider-sdk-imports",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "no-free-tenant-id-parameter",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "microservice-base",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "data-process-result",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "outbox-before-queue",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "no-github-actions-tracked",
+                       "pass":  true
+                   },
+                   {
+                       "check":  "no-stale-flow23-semantics",
+                       "pass":  true
+                   }
+               ]
+}

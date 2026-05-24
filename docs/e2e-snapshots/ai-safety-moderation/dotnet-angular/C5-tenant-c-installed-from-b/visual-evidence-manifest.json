@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-24",
+  "slug": "ai-safety-moderation",
+  "cascadePoint": "C5-tenant-c-installed-from-b",
+  "moduleName": "northwind-safe-tutor",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=anonymous&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "student",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\student-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "student",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\student-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "student",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\student-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=student&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\parent-guardian-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\parent-guardian-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "parent_guardian",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\parent-guardian-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=parent_guardian&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "educator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\educator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "educator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\educator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "educator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\educator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=educator&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\safety-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\safety-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "safety_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\safety-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=safety_reviewer&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "content_author",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\content-author-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "content_author",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\content-author-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "content_author",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\content-author-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=content_author&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=tenant_admin&state=progress&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=consent&lang=en&module=northwind-safe-tutor"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=lesson&lang=he&module=northwind-safe-tutor"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-safe-tutor\\docs\\e2e-snapshots\\ai-safety-moderation\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4322/?role=platform_admin&state=progress&lang=en&module=northwind-safe-tutor"
+    }
+  ]
+}

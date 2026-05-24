@@ -1,0 +1,20 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-24/ai-safety-moderation-response.schema.json",
+  "title": "FLOW-24 AI Safety Moderation Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "templateId": { "type": "string" },
+    "piiScrubbed": { "type": "boolean" },
+    "code": { "type": "string" },
+    "details": { "type": "array" },
+    "currentVersion": { "type": ["string", "null"] },
+    "retryAfterMs": { "type": "integer" },
+    "outboxRetained": { "type": "boolean" }
+  }
+}
+

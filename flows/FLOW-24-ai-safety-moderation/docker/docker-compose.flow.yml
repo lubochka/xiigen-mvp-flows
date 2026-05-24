@@ -1,0 +1,10 @@
+﻿services:
+  FLOW-24-ai-safety-moderation-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Api/Dockerfile
+    ports:
+      - "5324:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+

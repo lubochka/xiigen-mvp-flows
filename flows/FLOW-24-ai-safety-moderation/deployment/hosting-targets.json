@@ -1,0 +1,13 @@
+﻿{
+  "flowId": "FLOW-24",
+  "flowSlug": "ai-safety-moderation",
+  "api": {
+    "localUrl": "http://127.0.0.1:5321",
+    "containerUrl": "http://127.0.0.1:5321"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4322",
+    "evidencePort": 4322
+  }
+}
+
