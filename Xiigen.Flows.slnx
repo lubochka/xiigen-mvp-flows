@@ -203,4 +203,11 @@
     <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Infrastructure/Xiigen.Flow.BlogCmsModules.Infrastructure.csproj" />
     <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Tests/Xiigen.Flow.BlogCmsModules.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-29-adaptive-rag-deep-research/" />
+  <Folder Name="/flows/FLOW-29-adaptive-rag-deep-research/server/">
+    <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Api/Xiigen.Flow.AdaptiveRagDeepResearch.Api.csproj" />
+    <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Application/Xiigen.Flow.AdaptiveRagDeepResearch.Application.csproj" />
+    <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure/Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Tests/Xiigen.Flow.AdaptiveRagDeepResearch.Tests.csproj" />
+  </Folder>
 </Solution>

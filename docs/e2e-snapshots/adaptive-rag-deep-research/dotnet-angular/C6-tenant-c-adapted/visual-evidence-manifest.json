@@ -1,0 +1,172 @@
+{
+  "flow": "FLOW-29",
+  "slug": "adaptive-rag-deep-research",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-research-orchestrator",
+  "expected": 27,
+  "actual": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\prompt-approver-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\human-decision-maker-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\agency-access-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\agency-access-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\agency-access-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=promotion&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=routing&lang=en&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=graph&lang=he&module=tessera-research-orchestrator"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-research-orchestrator\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=promotion&lang=en&module=tessera-research-orchestrator"
+    }
+  ]
+}

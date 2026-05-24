@@ -1,0 +1,16 @@
+{
+  "flowId": "FLOW-29",
+  "flowSlug": "adaptive-rag-deep-research",
+  "api": {
+    "localUrl": "http://127.0.0.1:5329",
+    "containerUrl": "http://127.0.0.1:5329"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4329",
+    "evidencePort": 4329
+  }
+}
+
+
+
+

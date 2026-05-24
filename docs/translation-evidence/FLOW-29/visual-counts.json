@@ -1,0 +1,45 @@
+﻿{
+    "flow":  "FLOW-29",
+    "slug":  "adaptive-rag-deep-research",
+    "expectedPerPoint":  27,
+    "expectedTotal":  189,
+    "actualTotal":  189,
+    "points":  [
+                   {
+                       "cascadePoint":  "C0-source-flow",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C1-tenant-a-installed",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C2-tenant-a-adapted-published",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C3-tenant-b-installed-from-a",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C4-tenant-b-adapted-published",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C5-tenant-c-installed-from-b",
+                       "pngCount":  27,
+                       "manifest":  true
+                   },
+                   {
+                       "cascadePoint":  "C6-tenant-c-adapted",
+                       "pngCount":  27,
+                       "manifest":  true
+                   }
+               ],
+    "allPass":  true
+}

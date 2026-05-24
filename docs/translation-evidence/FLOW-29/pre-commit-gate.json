@@ -1,0 +1,7 @@
+﻿{
+    "flow":  "FLOW-29",
+    "slug":  "adaptive-rag-deep-research",
+    "command":  "scripts/pre-commit-check.ps1",
+    "passed":  true,
+    "checkedAt":  "2026-05-24T18:23:01.5851932Z"
+}

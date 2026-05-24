@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-29-adaptive-rag-deep-research</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.AdaptiveRagDeepResearch.Application\Xiigen.Flow.AdaptiveRagDeepResearch.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure\Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+

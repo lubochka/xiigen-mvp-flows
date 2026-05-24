@@ -1,0 +1,160 @@
+﻿{
+    "flowId":  "FLOW-29",
+    "flowSlug":  "adaptive-rag-deep-research",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-29-adaptive-rag-deep-research",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.AdaptiveRagDeepResearch.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/adaptive-rag-deep-research/dotnet-angular",
+    "sourceAliases":  [
+                          "adaptive-rag-deep-research",
+                          "adaptive-rag",
+                          "deep-research",
+                          "hybrid-rag-routing",
+                          "graphrag-control-plane",
+                          "prompt-promotion",
+                          "feedback-learning",
+                          "rag-quality-feedback"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "anonymous",
+                                  "public_marketplace_visitor",
+                                  "tenant_user",
+                                  "tenant_admin",
+                                  "prompt_approver",
+                                  "human_decision_maker",
+                                  "agency_access",
+                                  "platform_admin",
+                                  "platform_support"
+                              ],
+                  "partial":  [
+
+                              ],
+                  "wrongRoleForProtectedRoute":  "anonymous"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-13",
+                                 "relationship":  "analytics-rag-consumer-compatibility",
+                                 "reason":  "Adaptive RAG routing and bandit policy must not override explicit FLOW-13 AI analytics configuration."
+                             },
+                             {
+                                 "flowId":  "FLOW-24",
+                                 "relationship":  "ai-safety-review-dependency",
+                                 "reason":  "Prompt patches, hallucination checks, and generated research outputs must pass AI safety moderation before promotion."
+                             },
+                             {
+                                 "flowId":  "FLOW-25",
+                                 "relationship":  "bfa-governance-prerequisite",
+                                 "reason":  "Routing, graph edit, and promotion changes must pass BFA impact analysis before acceptance."
+                             },
+                             {
+                                 "flowId":  "FLOW-38",
+                                 "relationship":  "rag-quality-feedback",
+                                 "reason":  "Feedback aggregation and quality regression thresholds align with RAG quality feedback evidence."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "engine-design-and-bfa-stress-corpus",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-29",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/adaptive-rag-deep-research/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/adaptive-rag-deep-research/P5-ui-specs.md",
+                                                         "docs/flow-coverage/adaptive-rag-deep-research/P9-edge-cases.md",
+                                                         "docs/flow-coverage/adaptive-rag-deep-research/P10-server-specs.md",
+                                                         "docs/flow-coverage/adaptive-rag-deep-research/P11-impl-readiness.md",
+                                                         "docs/business-flows/29-adaptive-rag-deep-research.md",
+                                                         "docs/xiigenDesign/V62_BFA_STRESS_TEST_MERGED.md"
+                                                     ],
+                               "existingCfRules":  26,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  21,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure/AdaptiveRagDeepResearchServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Adaptive RAG Deep Research fabric replacement",
+                                             "contract":  "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow_module_name",
+                       "defaultModuleName":  "adaptive-rag-deep-research",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-adaptive-rag-deep-research.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}

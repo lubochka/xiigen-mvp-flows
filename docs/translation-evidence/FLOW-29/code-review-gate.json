@@ -1,0 +1,33 @@
+﻿{
+    "flow":  "FLOW-29",
+    "slug":  "adaptive-rag-deep-research",
+    "checkedAt":  "2026-05-24T18:16:49.9866219Z",
+    "passed":  6,
+    "failed":  0,
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no-free-tenant-parameters",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "data-process-result",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "outbox-after-state",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "canonical-roles",
+                       "pass":  true
+                   }
+               ]
+}

@@ -1,0 +1,122 @@
+﻿{
+    "flow":  "FLOW-29",
+    "slug":  "adaptive-rag-deep-research",
+    "checkedAt":  "2026-05-24T17:58:21.9677318Z",
+    "total":  16,
+    "passed":  16,
+    "failed":  0,
+    "checks":  [
+                   {
+                       "name":  "public-preview-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"flow\":\"FLOW-29\",\"summary\":\"Coordinate tenant-scoped adaptive RAG routing, GraphRAG edits, prompt promotion, feedback learning, and stress evidence without cross-tenant leakage.\",\"tabs\":[\"routing\",\"graph\",\"promotion\",\"feedback\"]}"
+                   },
+                   {
+                       "name":  "missing-token-401",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  "{\"code\":\"MISSING_TOKEN\"}"
+                   },
+                   {
+                       "name":  "cross-tenant-token-401",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                   },
+                   {
+                       "name":  "wrong-role-403",
+                       "expected":  403,
+                       "actual":  403,
+                       "pass":  true,
+                       "body":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"tenant_user\",\"tenant_admin\",\"prompt_approver\",\"human_decision_maker\",\"agency_access\",\"platform_admin\"]}"
+                   },
+                   {
+                       "name":  "rules-valid-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"code\":\"RULE_PACK_VALID\",\"ruleCount\":30,\"requiredCount\":30,\"coverage\":\"CF-601-CF-626+CF-1007-CF-1010\"}"
+                   },
+                   {
+                       "name":  "validation-400",
+                       "expected":  400,
+                       "actual":  400,
+                       "pass":  true,
+                       "body":  "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"researchGoal\",\"reason\":\"researchGoal is required.\"},{\"field\":\"query\",\"reason\":\"query is required.\"},{\"field\":\"retrievalMode\",\"reason\":\"retrievalMode is required.\"},{\"field\":\"traceId\",\"reason\":\"traceId is required.\"},{\"field\":\"budgetCapTokens\",\"reason\":\"budgetCapTokens must be greater than zero.\"}],\"ruleId\":\"CF-1009\"}"
+                   },
+                   {
+                       "name":  "research-create-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"researchRunId\":\"tenant-a:research:ed050249232995b9b407e8b4ebe4d40e\",\"researchGoal\":\"Compare tenant-safe retrieval plans\",\"query\":\"Which adaptive RAG path should this tenant use?\",\"retrievalMode\":\"hybrid-graphrag\",\"traceId\":\"trace-live-29\",\"budgetCapTokens\":4000,\"tenantId\":\"tenant-a\",\"version\":1,\"indexVersion\":\"v2\",\"rollbackTarget\":\"v1\",\"searchNamespace\":\"arag::tenant-a\",\"hybridFusionShape\":\"compatible\",\"storedAt\":\"2026-05-24T17:58:21.1296057+00:00\"}"
+                   },
+                   {
+                       "name":  "research-replay-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"researchRunId\":\"tenant-a:research:ed050249232995b9b407e8b4ebe4d40e\",\"researchGoal\":\"Compare tenant-safe retrieval plans\",\"query\":\"Which adaptive RAG path should this tenant use?\",\"retrievalMode\":\"hybrid-graphrag\",\"traceId\":\"trace-live-29\",\"budgetCapTokens\":4000,\"tenantId\":\"tenant-a\",\"version\":1,\"indexVersion\":\"v2\",\"rollbackTarget\":\"v1\",\"searchNamespace\":\"arag::tenant-a\",\"hybridFusionShape\":\"compatible\",\"storedAt\":\"2026-05-24T17:58:21.1296057+00:00\"}"
+                   },
+                   {
+                       "name":  "concurrency-conflict-409",
+                       "expected":  409,
+                       "actual":  409,
+                       "pass":  true,
+                       "body":  "{\"code\":\"CONCURRENT_UPDATE\",\"currentVersion\":1,\"ruleId\":\"CF-1007\"}"
+                   },
+                   {
+                       "name":  "routing-policy-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"policyId\":\"tenant-a:policy:d448fcb320821076eaf6cd9c8988a7b3\",\"experimentId\":\"exp-live\",\"allocationKey\":\"637db563398c3aec4c393cc9e206c37d\",\"status\":\"queued\",\"tenantId\":\"tenant-a\",\"feedbackRunCount\":130,\"windowHours\":30}"
+                   },
+                   {
+                       "name":  "prompt-promote-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"promotionId\":\"tenant-a:prompt:b4387549f8ee2e580b96edf2118489f4\",\"promptId\":\"prompt-live\",\"versionId\":\"v1\",\"targetStage\":\"INJECTED\",\"status\":\"approved\",\"tenantId\":\"tenant-a\"}"
+                   },
+                   {
+                       "name":  "graph-edit-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"graphEditId\":\"tenant-a:graph:cc79c4a3bd74e4332d0769c6635155d0\",\"editType\":\"community-link\",\"communityRebuildMode\":\"queued\",\"tenantId\":\"tenant-a\"}"
+                   },
+                   {
+                       "name":  "feedback-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"feedbackId\":\"tenant-a:feedback:36a94d4346a1be83e6ec8da07d6312b7\",\"traceId\":\"trace-live-29\",\"feedbackType\":\"answer-quality\",\"score\":\"positive\",\"tenantId\":\"tenant-a\"}"
+                   },
+                   {
+                       "name":  "stress-run-201",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  "{\"stressRunId\":\"tenant-a:stress:e0f7c6efcde5cf78ff1865b287e8154d\",\"status\":\"PASS\",\"stressTestCount\":21,\"coverage\":\"ST-369-ST-389\",\"tenantId\":\"tenant-a\"}"
+                   },
+                   {
+                       "name":  "plan-validate-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"code\":\"PLAN_COVERAGE_OK\",\"taskTypeCount\":27,\"singleResponsibility\":true,\"t441First\":true,\"requiredTasks\":[\"T441\",\"T442\",\"T443\",\"T444\",\"T445\",\"T446\",\"T447\",\"T448\",\"T449\",\"T450\",\"T451\",\"T452\",\"T453\",\"T454\",\"T455\",\"T456\",\"T457\",\"T458\",\"T459\",\"T460\",\"T461\",\"T462\",\"T463\",\"T464\",\"T465\",\"T466\",\"T467\"]}"
+                   },
+                   {
+                       "name":  "dashboard-200",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  "{\"researchRuns\":[{\"researchRunId\":\"tenant-a:research:ed050249232995b9b407e8b4ebe4d40e\",\"researchGoal\":\"Compare tenant-safe retrieval plans\",\"query\":\"Which adaptive RAG path should this tenant use?\",\"retrievalMode\":\"hybrid-graphrag\",\"traceId\":\"trace-live-29\",\"budgetCapTokens\":4000,\"tenantId\":\"tenant-a\",\"version\":1,\"indexVersion\":\"v2\",\"rollbackTarget\":\"v1\",\"searchNamespace\":\"arag::tenant-a\",\"hybridFusionShape\":\"compatible\",\"storedAt\":\"2026-05-24T17:58:21.1296057+00:00\"}],\"routingPolicies\":[{\"policyId\":\"tenant-a:policy:d448fcb320821076eaf6cd9c8988a7b3\",\"experimentId\":\"exp-live\",\"allocationKey\":\"637db563398c3aec4c393cc9e206c37d\",\"status\":\"queued\",\"tenantId\":\"tenant-a\",\"feedbackRunCount\":130,\"windowHours\":30}],\"promptPromotions\":[{\"promotionId\":\"tenant-a:prompt:b4387549f8ee2e580b96edf2118489f4\",\"promptId\":\"prompt-live\",\"versionId\":\"v1\",\"targetStage\":\"INJECTED\",\"status\":\"approved\",\"tenantId\":\"tenant-a\"}],\"graphEdits\":[{\"graphEditId\":\"tenant-a:graph:cc79c4a3bd74e4332d0769c6635155d0\",\"editType\":\"community-link\",\"communityRebuildMode\":\"queued\",\"tenantId\":\"tenant-a\"}],\"feedback\":[{\"feedbackId\":\"tenant-a:feedback:36a94d4346a1be83e6ec8da07d6312b7\",\"traceId\":\"trace-live-29\",\"feedbackType\":\"answer-quality\",\"score\":\"positive\",\"tenantId\":\"tenant-a\"}],\"kpis\":{\"ruleCount\":30,\"stressTestCount\":21,\"researchRuns\":1,\"routingPolicies\":1,\"feedbackItems\":1}}"
+                   }
+               ]
+}

@@ -1,0 +1,18 @@
+﻿{
+    "flowId":  "FLOW-29",
+    "flowSlug":  "adaptive-rag-deep-research",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "status":  "APPROVED",
+    "checkedAt":  "2026-05-24T18:23:01.6651257Z",
+    "serverTests":  "14/14",
+    "angularTests":  "5/5",
+    "liveApiMatrix":  "16/16",
+    "visualEvidence":  "189/189",
+    "tenantCascade":  "6/6",
+    "actionsDisabled":  "6/6",
+    "codeReview":  "PASS",
+    "qaReview":  "APPROVED",
+    "fullSolution":  "PASS",
+    "techDebt":  "NONE"
+}

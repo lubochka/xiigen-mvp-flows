@@ -1,0 +1,35 @@
+@Xiigen.Flow.AdaptiveRagDeepResearch.Api_HostAddress = http://localhost:5329
+
+GET {{Xiigen.Flow.AdaptiveRagDeepResearch.Api_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+GET {{Xiigen.Flow.AdaptiveRagDeepResearch.Api_HostAddress}}/api/dynamic/adaptive-rag-deep-research/public-preview
+Accept: application/json
+
+###
+
+POST {{Xiigen.Flow.AdaptiveRagDeepResearch.Api_HostAddress}}/api/dynamic/adaptive-rag-deep-research
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-research
+
+{
+  "researchGoal": "Compare tenant-safe retrieval plans",
+  "query": "Which adaptive RAG path should this tenant use?",
+  "retrievalMode": "hybrid-graphrag",
+  "traceId": "trace-demo-29",
+  "budgetCapTokens": 4000
+}
+
+###
+
+GET {{Xiigen.Flow.AdaptiveRagDeepResearch.Api_HostAddress}}/api/dynamic/adaptive-rag-deep-research/dashboard
+Accept: application/json
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: platform_support

@@ -1,0 +1,141 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Research workspace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'routing'" (click)="setScreenState('routing')">
+          {{ translated('Routing') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'graph'" (click)="setScreenState('graph')">
+          {{ translated('Graph') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'promotion'" (click)="setScreenState('promotion')">
+          {{ translated('Promotion') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Research runs') }}</span>
+    </article>
+    <article>
+      <strong>21</strong>
+      <span>{{ translated('Stress checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ readinessScore() }}</strong>
+      <span>{{ translated('Readiness') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'routing'" class="workspace" data-testid="routing-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Routing control</p>
+        <h2>Research requests keep tenant scope, routing policy, and budget evidence visible</h2>
+        <p>Every run records the retrieval strategy, trace, rollback target, and tenant-owned search namespace before dispatching downstream work.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Research goal</th>
+            <th>Strategy</th>
+            <th>Guard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of researchRows">
+            <td>{{ row.goal }}</td>
+            <td><span class="state active">{{ row.strategy }}</span></td>
+            <td>{{ row.guard }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Research authority</h3>
+      <p *ngIf="publicView()" class="notice">Public visitors see the capability summary only.</p>
+      <p *ngIf="canResearch()" class="notice success">This role can submit tenant-scoped research and inspect traceable results.</p>
+      <p *ngIf="!canResearch() && !publicView()" class="notice">Research actions are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'graph'" class="workspace" data-testid="graph-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Graph operations</p>
+        <h2>Graph changes are approved, queued, and configured from runtime policy</h2>
+        <p>Community rebuilds never block the query path, traversal limits come from configuration, and graph edits carry explicit approval.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of ragSignals">
+          <span>{{ row.label }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.detail }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Graph authority</h3>
+      <label>
+        Readiness score
+        <input type="range" min="60" max="100" [ngModel]="readinessScore()" (ngModelChange)="setReadinessScore($event)" />
+      </label>
+      <p *ngIf="canConfigure()" class="notice success">This role can approve graph edits and routing policy changes.</p>
+      <p *ngIf="!canConfigure()" class="notice">Graph editing controls are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'promotion'" class="workspace" data-testid="promotion-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Promotion evidence</p>
+        <h2>Prompt and asset promotion advances only after quality and feedback gates pass</h2>
+        <p>Prompt versions remain immutable, regression thresholds block unsafe releases, and learning updates wait for enough feedback evidence.</p>
+      </div>
+      <div class="timeline">
+        <article class="active">
+          <strong>Generated</strong>
+          <span>candidate captured</span>
+          <small>trace attached</small>
+        </article>
+        <article class="review">
+          <strong>Injected</strong>
+          <span>quality gate passed</span>
+          <small>one step only</small>
+        </article>
+        <article class="published">
+          <strong>Minimal</strong>
+          <span>feedback window ready</span>
+          <small>policy update queued</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Promotion authority</h3>
+      <p *ngIf="canConfigure()" class="notice success">This role can review prompt promotion and routing changes.</p>
+      <p *ngIf="canInspect() && !canConfigure()" class="notice success">This role can inspect evidence without changing controls.</p>
+      <p *ngIf="!canInspect() && !canConfigure()" class="notice">Promotion evidence is hidden for this role.</p>
+    </aside>
+  </section>
+</main>

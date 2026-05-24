@@ -1,0 +1,13 @@
+services:
+  FLOW-29-adaptive-rag-deep-research-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+

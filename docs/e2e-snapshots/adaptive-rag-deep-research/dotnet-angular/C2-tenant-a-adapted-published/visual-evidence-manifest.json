@@ -1,0 +1,172 @@
+{
+  "flow": "FLOW-29",
+  "slug": "adaptive-rag-deep-research",
+  "cascadePoint": "C2-tenant-a-adapted-published",
+  "moduleName": "acme-research-router",
+  "expected": 27,
+  "actual": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=anonymous&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=public_marketplace_visitor&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_user&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=tenant_admin&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\prompt-approver-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\prompt-approver-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "prompt_approver",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\prompt-approver-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=prompt_approver&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\human-decision-maker-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\human-decision-maker-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\human-decision-maker-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=human_decision_maker&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\agency-access-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\agency-access-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "agency_access",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\agency-access-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=agency_access&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=platform_admin&state=promotion&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=routing&lang=en&module=acme-research-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=graph&lang=he&module=acme-research-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-a--acme-research-router\\docs\\e2e-snapshots\\adaptive-rag-deep-research\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4329/?role=platform_support&state=promotion&lang=en&module=acme-research-router"
+    }
+  ]
+}

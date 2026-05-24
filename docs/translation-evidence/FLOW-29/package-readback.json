@@ -1,0 +1,20 @@
+﻿{
+    "flow":  "FLOW-29",
+    "slug":  "adaptive-rag-deep-research",
+    "packageCount":  2,
+    "checkedAt":  "2026-05-24T18:23:33.3019679Z",
+    "packages":  [
+                     {
+                         "name":  "Xiigen.Flow.AdaptiveRagDeepResearch.Application.0.1.1.nupkg",
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-29\\Xiigen.Flow.AdaptiveRagDeepResearch.Application.0.1.1.nupkg",
+                         "length":  27296,
+                         "sha256":  "CF9257980DDDFED8D3E3D180DC2CF6984350DBA3B7BDFD4278DB8CF27CABD9DA"
+                     },
+                     {
+                         "name":  "Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure.0.1.1.nupkg",
+                         "path":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-29\\Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure.0.1.1.nupkg",
+                         "length":  4088,
+                         "sha256":  "AE66EA1B7A998C45834036F2D7D3E01D1C4FD0877315E4A3F2D155495A0DE92F"
+                     }
+                 ]
+}

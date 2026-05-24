@@ -1,0 +1,50 @@
+﻿[
+    {
+        "repo":  "tenant-a--adaptive-rag-deep-research",
+        "tenant":  "tenant-a",
+        "cascadePoint":  "C1-tenant-a-installed",
+        "moduleName":  "adaptive-rag-deep-research",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-a--adaptive-rag-deep-research"
+    },
+    {
+        "repo":  "tenant-a--acme-research-router",
+        "tenant":  "tenant-a",
+        "cascadePoint":  "C2-tenant-a-adapted-published",
+        "moduleName":  "acme-research-router",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-a--acme-research-router"
+    },
+    {
+        "repo":  "tenant-b--acme-research-router",
+        "tenant":  "tenant-b",
+        "cascadePoint":  "C3-tenant-b-installed-from-a",
+        "moduleName":  "acme-research-router",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-b--acme-research-router"
+    },
+    {
+        "repo":  "tenant-b--northwind-knowledge-router",
+        "tenant":  "tenant-b",
+        "cascadePoint":  "C4-tenant-b-adapted-published",
+        "moduleName":  "northwind-knowledge-router",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-b--northwind-knowledge-router"
+    },
+    {
+        "repo":  "tenant-c--northwind-knowledge-router",
+        "tenant":  "tenant-c",
+        "cascadePoint":  "C5-tenant-c-installed-from-b",
+        "moduleName":  "northwind-knowledge-router",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-c--northwind-knowledge-router"
+    },
+    {
+        "repo":  "tenant-c--tessera-research-orchestrator",
+        "tenant":  "tenant-c",
+        "cascadePoint":  "C6-tenant-c-adapted",
+        "moduleName":  "tessera-research-orchestrator",
+        "actionsEnabled":  false,
+        "githubUrl":  "https://github.com/lubochka/tenant-c--tessera-research-orchestrator"
+    }
+]

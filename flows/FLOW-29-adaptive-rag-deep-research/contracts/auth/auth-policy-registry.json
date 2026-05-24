@@ -1,0 +1,77 @@
+{
+  "flowId": "FLOW-29",
+  "flowSlug": "adaptive-rag-deep-research",
+  "policies": [
+    {
+      "policyId": "adaptive-rag-deep-research-public-preview",
+      "route": "GET /api/dynamic/adaptive-rag-deep-research/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/adaptive-rag-deep-research/public-preview"],
+      "bypassReason": "Public adaptive RAG preview exposes no tenant-private research or control-plane data."
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-rules-validate",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-submit",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "tenant_admin", "prompt_approver", "human_decision_maker", "agency_access", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-routing-policy",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/routing-policy",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "prompt_approver", "human_decision_maker", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-prompts-promote",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/prompts/promote",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "prompt_approver", "human_decision_maker", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-graph-edit",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/graph/edit",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "prompt_approver", "human_decision_maker", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-feedback",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/feedback",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "tenant_admin", "prompt_approver", "human_decision_maker", "agency_access", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-stress-run",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/stress/run",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-plan-validate",
+      "route": "POST /api/dynamic/adaptive-rag-deep-research/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "prompt_approver", "human_decision_maker", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "adaptive-rag-deep-research-dashboard",
+      "route": "GET /api/dynamic/adaptive-rag-deep-research/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}
