@@ -1,0 +1,11 @@
+{
+  "flowId": "FLOW-33",
+  "flowSlug": "system-initiation-bootstrap",
+  "endpoints": [
+    { "endpointId": "flow33-public-preview", "method": "GET", "path": "/api/dynamic/system-initiation-bootstrap/public-preview", "authPosture": "anonymous", "requiredRoles": [], "responseSchema": "contracts/schemas/system-initiation-bootstrap-response.schema.json", "bypassReason": "Anonymous first-run bootstrap preview exposes safe status metadata only." },
+    { "endpointId": "flow33-rules-validate", "method": "POST", "path": "/api/dynamic/system-initiation-bootstrap/rules/validate", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/system-initiation-bootstrap-request.schema.json", "responseSchema": "contracts/schemas/system-initiation-bootstrap-response.schema.json" },
+    { "endpointId": "flow33-bootstrap-start", "method": "POST", "path": "/api/dynamic/system-initiation-bootstrap", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/system-initiation-bootstrap-request.schema.json", "responseSchema": "contracts/schemas/system-initiation-bootstrap-response.schema.json" },
+    { "endpointId": "flow33-plan-validate", "method": "POST", "path": "/api/dynamic/system-initiation-bootstrap/plan/validate", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/system-initiation-bootstrap-request.schema.json", "responseSchema": "contracts/schemas/system-initiation-bootstrap-response.schema.json" },
+    { "endpointId": "flow33-dashboard", "method": "GET", "path": "/api/dynamic/system-initiation-bootstrap/dashboard", "authPosture": "policy", "requiredRoles": ["platform_admin", "platform_support"], "responseSchema": "contracts/schemas/system-initiation-bootstrap-response.schema.json" }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-33",
+  "flowSlug": "system-initiation-bootstrap",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2",
+      "lang": "en",
+      "state": "plan",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "bytes": 105987
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4",
+      "lang": "he",
+      "state": "gaps",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "bytes": 118123
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6",
+      "lang": "en",
+      "state": "smoke",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "bytes": 104937
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "plan",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 107114
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "gaps",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 119175
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "smoke",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 106382
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "plan",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 106729
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "gaps",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 118865
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "smoke",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\system-initiation-bootstrap\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 106147
+    }
+  ]
+}

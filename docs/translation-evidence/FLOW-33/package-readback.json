@@ -1,0 +1,16 @@
+{
+    "flowId":  "FLOW-33",
+    "packageCount":  2,
+    "packages":  [
+                     {
+                         "Name":  "Xiigen.Flow.SystemInitiationBootstrap.Application.0.1.1.nupkg",
+                         "Length":  21731,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-33\\Xiigen.Flow.SystemInitiationBootstrap.Application.0.1.1.nupkg"
+                     },
+                     {
+                         "Name":  "Xiigen.Flow.SystemInitiationBootstrap.Infrastructure.0.1.1.nupkg",
+                         "Length":  4074,
+                         "FullName":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-33\\Xiigen.Flow.SystemInitiationBootstrap.Infrastructure.0.1.1.nupkg"
+                     }
+                 ]
+}

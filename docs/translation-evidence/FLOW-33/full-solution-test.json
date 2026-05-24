@@ -1,0 +1,6 @@
+{
+    "flowId":  "FLOW-33",
+    "command":  "C:\\Projects\\.dotnet\\dotnet.exe test Xiigen.Flows.slnx -c Release",
+    "exitCode":  0,
+    "passed":  true
+}

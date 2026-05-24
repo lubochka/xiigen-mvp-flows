@@ -1,0 +1,30 @@
+{
+    "flowId":  "FLOW-33",
+    "verdict":  "PASS",
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no-free-tenant-id-parameter",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "data-process-result",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "outbox-before-events",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "bfa-rules-cf1023-cf1026",
+                       "pass":  true
+                   }
+               ]
+}

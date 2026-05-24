@@ -1,0 +1,47 @@
+{
+    "flowId":  "FLOW-33",
+    "repos":  [
+                  {
+                      "repo":  "lubochka/tenant-a--system-initiation-bootstrap",
+                      "localPath":  "C:\\Projects\\tenant-a--system-initiation-bootstrap",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "version":  "1.0.1",
+                      "commit":  "83678dc48085bebf24a65c92412a374335f0d6f0"
+                  },
+                  {
+                      "repo":  "lubochka/tenant-a--acme-bootstrap-control-room",
+                      "localPath":  "C:\\Projects\\tenant-a--acme-bootstrap-control-room",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "version":  "1.0.2",
+                      "commit":  "13c27a4662d48e43c11e6214fdb226048921a050"
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--acme-bootstrap-control-room",
+                      "localPath":  "C:\\Projects\\tenant-b--acme-bootstrap-control-room",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "version":  "1.0.3",
+                      "commit":  "a2e02c21103af90100a247e08cdc64dcb76377d1"
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--northwind-self-build-workbench",
+                      "localPath":  "C:\\Projects\\tenant-b--northwind-self-build-workbench",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "version":  "1.0.4",
+                      "commit":  "e8e0748dbf47cd9d9f7d480e2a9a55df5bf174e3"
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--northwind-self-build-workbench",
+                      "localPath":  "C:\\Projects\\tenant-c--northwind-self-build-workbench",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "version":  "1.0.5",
+                      "commit":  "1f0fd23d2793dace4863a3f6b32b09e71ce28ce0"
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--tessera-initiation-studio",
+                      "localPath":  "C:\\Projects\\tenant-c--tessera-initiation-studio",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "version":  "1.0.6",
+                      "commit":  "5669a31aaca4b83162267c1312ff373f40a2879c"
+                  }
+              ]
+}

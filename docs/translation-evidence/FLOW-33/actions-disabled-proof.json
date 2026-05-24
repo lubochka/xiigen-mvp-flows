@@ -1,0 +1,30 @@
+{
+    "flowId":  "FLOW-33",
+    "checkedAt":  "2026-05-24T21:56:04.0511119Z",
+    "repos":  [
+                  {
+                      "repo":  "lubochka/tenant-a--system-initiation-bootstrap",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-a--acme-bootstrap-control-room",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--acme-bootstrap-control-room",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--northwind-self-build-workbench",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--northwind-self-build-workbench",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--tessera-initiation-studio",
+                      "actionsEnabled":  false
+                  }
+              ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-33/system-initiation-bootstrap-request.schema.json",
+  "title": "System Initiation Bootstrap Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "planBundleRef": { "type": "string", "minLength": 1 },
+    "schemaRegistryRef": { "type": "string", "minLength": 1 },
+    "factoryRegistryRef": { "type": "string", "minLength": 1 },
+    "skillsIndexRef": { "type": "string", "minLength": 1 },
+    "smokeFlowId": { "type": "string", "minLength": 1 },
+    "requiredFactoryCount": { "type": "integer", "minimum": 1 },
+    "coreFlowCount": { "type": "integer", "minimum": 1 },
+    "missingFactories": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["planBundleRef", "schemaRegistryRef", "factoryRegistryRef", "skillsIndexRef", "smokeFlowId", "requiredFactoryCount", "coreFlowCount"]
+}

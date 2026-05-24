@@ -1,0 +1,17 @@
+{
+  "flowId": "FLOW-33",
+  "flowSlug": "system-initiation-bootstrap",
+  "roles": {
+    "primary": ["platform_admin"],
+    "partial": ["platform_support", "anonymous"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "tenant_user"
+  },
+  "policies": [
+    { "policyId": "flow33-public-preview", "route": "GET /api/dynamic/system-initiation-bootstrap/public-preview", "authPosture": "anonymous", "allowedRoles": [], "bypassPaths": ["/api/dynamic/system-initiation-bootstrap/public-preview"], "bypassReason": "Anonymous first-run bootstrap preview exposes safe status metadata only." },
+    { "policyId": "flow33-rules-validate", "route": "POST /api/dynamic/system-initiation-bootstrap/rules/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow33-bootstrap-start", "route": "POST /api/dynamic/system-initiation-bootstrap", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow33-plan-validate", "route": "POST /api/dynamic/system-initiation-bootstrap/plan/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow33-dashboard", "route": "GET /api/dynamic/system-initiation-bootstrap/dashboard", "authPosture": "policy", "allowedRoles": ["platform_admin", "platform_support"], "bypassPaths": [] }
+  ]
+}

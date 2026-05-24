@@ -1,0 +1,87 @@
+{
+    "flowId":  "FLOW-33",
+    "total":  13,
+    "passed":  13,
+    "failed":  0,
+    "runId":  "2388102a38414cebbe20c872ed51fe2b",
+    "results":  [
+                    {
+                        "name":  "public-preview-anonymous",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "dashboard-missing-token",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "dashboard-wrong-role",
+                        "expected":  403,
+                        "actual":  403,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "dashboard-cross-tenant",
+                        "expected":  401,
+                        "actual":  401,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "dashboard-platform-admin",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "dashboard-platform-support",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "rules-validate-platform-admin",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "plan-validate-platform-admin",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "bootstrap-platform-admin",
+                        "expected":  201,
+                        "actual":  201,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "bootstrap-idempotent-replay",
+                        "expected":  200,
+                        "actual":  200,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "bootstrap-wrong-role",
+                        "expected":  403,
+                        "actual":  403,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "bootstrap-validation",
+                        "expected":  400,
+                        "actual":  400,
+                        "pass":  true
+                    },
+                    {
+                        "name":  "bootstrap-timeout",
+                        "expected":  504,
+                        "actual":  504,
+                        "pass":  true
+                    }
+                ]
+}

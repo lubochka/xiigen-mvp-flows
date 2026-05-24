@@ -230,4 +230,11 @@
     <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Application/Xiigen.Flow.SharableFlowsMarketplace.Application.csproj" />
     <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Infrastructure/Xiigen.Flow.SharableFlowsMarketplace.Infrastructure.csproj" />
     <Project Path="flows/FLOW-32-sharable-flows-marketplace/server/Xiigen.Flow.SharableFlowsMarketplace.Tests/Xiigen.Flow.SharableFlowsMarketplace.Tests.csproj" />
+  </Folder>
+  <Folder Name="/flows/FLOW-33-system-initiation-bootstrap/" />
+  <Folder Name="/flows/FLOW-33-system-initiation-bootstrap/server/">
+    <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Api/Xiigen.Flow.SystemInitiationBootstrap.Api.csproj" />
+    <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Application/Xiigen.Flow.SystemInitiationBootstrap.Application.csproj" />
+    <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Infrastructure/Xiigen.Flow.SystemInitiationBootstrap.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Tests/Xiigen.Flow.SystemInitiationBootstrap.Tests.csproj" />
   </Folder></Solution>

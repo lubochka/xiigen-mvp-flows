@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "Xiigen.Auth": {
+        "type": "Direct",
+        "requested": "[0.1.0, )",
+        "resolved": "0.1.0",
+        "contentHash": "EIhXuYjJpEGTJdSKzQ96/Qi7dkB/xayz9AKIUK6KQCqQWo0RB74mI61G1e0vDtNhhNvLD60Hw3X/BrbKeNF7xg==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Fabrics.InMemory": {
+        "type": "Direct",
+        "requested": "[0.1.1, )",
+        "resolved": "0.1.1",
+        "contentHash": "2FHXNq/eah74E2A/3lDB0eQ7WIq/Rg8yxYlZXY0FfFl0ZhQGX4ughuWeIkC5rqjmYKgtG2No4YGoGLB9Dwgutw==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Fabrics.Scheduler": {
+        "type": "Direct",
+        "requested": "[0.1.0, )",
+        "resolved": "0.1.0",
+        "contentHash": "0Qsmhrqwef2pYOHBPZiSqsq50hPE24VMRPybVTCLnpCdKQce7fxm4SNBy9K7HB4tXQp86Bgf+kMny0moQBkHpw==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Freedom": {
+        "type": "Direct",
+        "requested": "[0.1.0, )",
+        "resolved": "0.1.0",
+        "contentHash": "OLG1yWz2G0or8Bug0ZWPO5TjCBLlVS4IdDzZQ+v+IWmFgeH+zkImS1ZlC/UpttajQKZ5B/Qk/3Qm4rkewp7BNg==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Kernel": {
+        "type": "Direct",
+        "requested": "[0.1.1, )",
+        "resolved": "0.1.1",
+        "contentHash": "oqZbiCQT6LRx4kJ79PLznifnJC/zD5aJcIEhvrp7S5uVCU50/lrzbLfGQ7/MzSTf9J5CKJxZUVnZ3y6nqIUAMg==",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "10.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Transitive",
+        "resolved": "10.0.0",
+        "contentHash": "L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA=="
+      },
+      "Microsoft.Extensions.Logging.Abstractions": {
+        "type": "Transitive",
+        "resolved": "10.0.0",
+        "contentHash": "FU/IfjDfwaMuKr414SSQNTIti/69bHEMb+QKrskRb26oVqpx3lNFXMjs/RC9ZUuhBhcwDM2BwOgoMw+PZ+beqQ==",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0"
+        }
+      },
+      "Xiigen.Flow.SystemInitiationBootstrap.application": {
+        "type": "Project",
+        "dependencies": {
+          "Xiigen.Auth": "[0.1.0, )",
+          "Xiigen.Fabrics.Scheduler": "[0.1.0, )",
+          "Xiigen.Freedom": "[0.1.0, )",
+          "Xiigen.Kernel": "[0.1.1, )"
+        }
+      }
+    }
+  }
+}
+
+
+
+

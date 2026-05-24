@@ -1,0 +1,7 @@
+{
+    "flowId":  "FLOW-33",
+    "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\pre-commit-check.ps1",
+    "exitCode":  0,
+    "passed":  true,
+    "rerunAfterCleanup":  true
+}

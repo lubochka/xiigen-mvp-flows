@@ -1,0 +1,18 @@
+{
+    "flowId":  "FLOW-33",
+    "flowSlug":  "system-initiation-bootstrap",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "completedAt":  "2026-05-24T21:56:22.8788224Z",
+    "gates":  {
+                  "serverTests":  "PASS",
+                  "angularTests":  "PASS",
+                  "angularBuild":  "PASS",
+                  "liveApiAuth":  "PASS",
+                  "visualEvidence":  "PASS",
+                  "tenantCascade":  "PASS",
+                  "actionsDisabled":  "PASS",
+                  "codeReview":  "PASS",
+                  "qaReview":  "APPROVED"
+              }
+}
