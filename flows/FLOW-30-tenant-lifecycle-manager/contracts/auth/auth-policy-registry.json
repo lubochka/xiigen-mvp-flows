@@ -1,0 +1,56 @@
+{
+  "flowId": "FLOW-30",
+  "flowSlug": "tenant-lifecycle-manager",
+  "policies": [
+    {
+      "policyId": "tenant-lifecycle-manager-public-preview",
+      "route": "GET /api/dynamic/tenant-lifecycle-manager/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/tenant-lifecycle-manager/public-preview"],
+      "bypassReason": "Public lifecycle preview exposes no tenant-private state or platform mutation controls."
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-rules-validate",
+      "route": "POST /api/dynamic/tenant-lifecycle-manager/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-provision",
+      "route": "POST /api/dynamic/tenant-lifecycle-manager",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-health",
+      "route": "POST /api/dynamic/tenant-lifecycle-manager/health",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-offboarding",
+      "route": "POST /api/dynamic/tenant-lifecycle-manager/offboarding",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-plan-validate",
+      "route": "POST /api/dynamic/tenant-lifecycle-manager/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "tenant-lifecycle-manager-dashboard",
+      "route": "GET /api/dynamic/tenant-lifecycle-manager/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    }
+  ]
+}

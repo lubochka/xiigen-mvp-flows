@@ -1,0 +1,64 @@
+{
+  "flow": "FLOW-30",
+  "slug": "tenant-lifecycle-manager",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-lifecycle-studio",
+  "expected": 9,
+  "actual": 9,
+  "evidence": [
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=provisioning&lang=en&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=health&lang=he&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=offboarding&lang=en&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=provisioning&lang=en&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=health&lang=he&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=offboarding&lang=en&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=provisioning&lang=en&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=health&lang=he&module=tessera-lifecycle-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-lifecycle-studio\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=offboarding&lang=en&module=tessera-lifecycle-studio"
+    }
+  ]
+}

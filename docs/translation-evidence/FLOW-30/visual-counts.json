@@ -1,0 +1,10 @@
+{
+    "generatedAt":  "2026-05-24T19:34:02.3649427Z",
+    "flow":  "FLOW-30",
+    "cascadePoints":  7,
+    "expected":  63,
+    "actualPng":  63,
+    "manifestActual":  63,
+    "zeroByte":  0,
+    "status":  "PASS"
+}

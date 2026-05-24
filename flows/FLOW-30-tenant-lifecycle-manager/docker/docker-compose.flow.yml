@@ -1,0 +1,13 @@
+services:
+  FLOW-30-tenant-lifecycle-manager-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+

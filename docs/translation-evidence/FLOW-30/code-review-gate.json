@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-05-24T19:34:20.390026Z",
+  "flow": "FLOW-30",
+  "checks": [
+    {
+      "name": "no provider SDK imports in flow application/api/infrastructure",
+      "status": "PASS"
+    },
+    {
+      "name": "no free tenant id parameter in service code",
+      "status": "PASS"
+    },
+    {
+      "name": "service extends MicroserviceBase<TenantLifecycleManagerService>",
+      "status": "PASS"
+    },
+    {
+      "name": "service methods return DataProcessResult<T>",
+      "status": "PASS"
+    },
+    {
+      "name": "outbox AppendAsync after document UpsertAsync for mutations",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,154 @@
+{
+    "flowId":  "FLOW-30",
+    "flowSlug":  "tenant-lifecycle-manager",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-30-tenant-lifecycle-manager",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.TenantLifecycleManager.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/tenant-lifecycle-manager/dotnet-angular",
+    "sourceAliases":  [
+                          "tenant-lifecycle-manager",
+                          "tenant-lifecycle",
+                          "tenant-provisioning",
+                          "tenant-health",
+                          "tenant-offboarding",
+                          "quota-enforcement",
+                          "tenant-audit",
+                          "platform-lifecycle"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "tenant_admin",
+                                  "platform_admin",
+                                  "platform_support"
+                              ],
+                  "partial":  [
+
+                              ],
+                  "wrongRoleForProtectedRoute":  "tenant_user"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-13",
+                                 "relationship":  "analytics-consumer-compatibility",
+                                 "reason":  "Tenant lifecycle health and usage telemetry must remain compatible with the analytics pipeline."
+                             },
+                             {
+                                 "flowId":  "FLOW-24",
+                                 "relationship":  "moderation-safety-dependency",
+                                 "reason":  "Tenant policy and offboarding notices that are AI-assisted must pass safety review before publication."
+                             },
+                             {
+                                 "flowId":  "FLOW-25",
+                                 "relationship":  "bfa-governance-prerequisite",
+                                 "reason":  "Tenant lifecycle mutations must pass BFA impact analysis before acceptance."
+                             },
+                             {
+                                 "flowId":  "FLOW-15",
+                                 "relationship":  "tenant-user-facing-surface",
+                                 "reason":  "FLOW-15 remains the tenant-facing SaaS lifecycle surface; FLOW-30 owns platform engine orchestration."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-30",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/tenant-lifecycle-manager/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/tenant-lifecycle-manager/P5-ui-specs.md",
+                                                         "docs/flow-coverage/tenant-lifecycle-manager/P9-edge-cases.md",
+                                                         "docs/flow-coverage/tenant-lifecycle-manager/P10-server-specs.md",
+                                                         "docs/flow-coverage/tenant-lifecycle-manager/P11-impl-readiness.md",
+                                                         "docs/design-reviews/ROLE-ANALYSIS-BATCH-06.md",
+                                                         "docs/sessions/FLOW-30/FLOW-30-MOBILITY-AUTH-STATE.json"
+                                                     ],
+                               "existingCfRules":  0,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.TenantLifecycleManager.Infrastructure/TenantLifecycleManagerServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Tenant Lifecycle Manager fabric replacement",
+                                             "contract":  "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow_module_name",
+                       "defaultModuleName":  "tenant-lifecycle-manager",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-tenant-lifecycle-manager.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}

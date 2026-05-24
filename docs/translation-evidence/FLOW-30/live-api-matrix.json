@@ -1,0 +1,216 @@
+{
+  "generatedAt": "2026-05-24T19:15:24.179Z",
+  "flow": "FLOW-30",
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "public-preview",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "flow": "FLOW-30",
+        "summary": "Coordinate tenant provisioning, health scoring, quota checks, and offboarding without exposing platform controls to tenant users.",
+        "tabs": [
+          "provisioning",
+          "health",
+          "offboarding",
+          "audit"
+        ]
+      }
+    },
+    {
+      "name": "missing-token",
+      "expected": 401,
+      "actual": 401,
+      "body": {
+        "code": "MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "wrong-role",
+      "expected": 403,
+      "actual": 403,
+      "body": {
+        "code": "WRONG_ROLE",
+        "allowedRoles": [
+          "platform_admin"
+        ]
+      }
+    },
+    {
+      "name": "cross-tenant-token",
+      "expected": 401,
+      "actual": 401,
+      "body": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "rules-validate",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "code": "RULE_PACK_VALID",
+        "ruleCount": 4,
+        "coverage": "CF-1011-CF-1014"
+      }
+    },
+    {
+      "name": "provision-first",
+      "expected": 201,
+      "actual": 201,
+      "body": {
+        "id": "acme-corp:lifecycle:73f1fd5361e4ae943bfd62ce9afd5bc1",
+        "targetTenantKey": "tenant-acme-lifecycle",
+        "planCode": "enterprise",
+        "region": "us-east",
+        "requestedBy": "platform-admin",
+        "quotaUnits": 42,
+        "state": "provisioning",
+        "healthScore": 100,
+        "tenantId": "acme-corp",
+        "version": 1,
+        "updatedAt": "2026-05-24T19:15:24.1105357+00:00"
+      }
+    },
+    {
+      "name": "provision-replay",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "id": "acme-corp:lifecycle:73f1fd5361e4ae943bfd62ce9afd5bc1",
+        "targetTenantKey": "tenant-acme-lifecycle",
+        "planCode": "enterprise",
+        "region": "us-east",
+        "requestedBy": "platform-admin",
+        "quotaUnits": 42,
+        "state": "provisioning",
+        "healthScore": 100,
+        "tenantId": "acme-corp",
+        "version": 1,
+        "updatedAt": "2026-05-24T19:15:24.1105357+00:00"
+      }
+    },
+    {
+      "name": "concurrency-conflict",
+      "expected": 409,
+      "actual": 409,
+      "body": {
+        "code": "CONCURRENT_UPDATE",
+        "currentVersion": 1,
+        "reason": "concurrent_update",
+        "ruleId": "CF-1011"
+      }
+    },
+    {
+      "name": "timeout-retains-outbox",
+      "expected": 504,
+      "actual": 504,
+      "body": {
+        "code": "TIMEOUT",
+        "retryAfterMs": 5000,
+        "outboxRetained": true,
+        "ruleId": "CF-1014"
+      }
+    },
+    {
+      "name": "health",
+      "expected": 201,
+      "actual": 201,
+      "body": {
+        "healthId": "acme-corp:health:feae320581a225e0bbec02588aefcc35",
+        "targetTenantKey": "tenant-acme-lifecycle",
+        "probeId": "bootstrap",
+        "status": "healthy",
+        "healthScore": 96,
+        "tenantId": "acme-corp",
+        "recordedAt": "2026-05-24T19:15:24.1433252+00:00"
+      }
+    },
+    {
+      "name": "offboarding",
+      "expected": 201,
+      "actual": 201,
+      "body": {
+        "offboardingId": "acme-corp:offboarding:cc69c80bbe750c5a7c81e16a9c14f0b3",
+        "targetTenantKey": "tenant-acme-lifecycle",
+        "reason": "contract-ended",
+        "effectiveDate": "2026-06-30",
+        "state": "offboarding",
+        "tenantId": "acme-corp"
+      }
+    },
+    {
+      "name": "plan-validate",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "code": "PLAN_COVERAGE_OK",
+        "taskTypeCount": 10,
+        "requiredTasks": [
+          "T470",
+          "T471",
+          "T472",
+          "T473",
+          "T474",
+          "T475",
+          "T476",
+          "T477",
+          "T478",
+          "T479"
+        ]
+      }
+    },
+    {
+      "name": "dashboard",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "lifecycles": [
+          {
+            "id": "acme-corp:lifecycle:73f1fd5361e4ae943bfd62ce9afd5bc1",
+            "targetTenantKey": "tenant-acme-lifecycle",
+            "planCode": "enterprise",
+            "region": "us-east",
+            "requestedBy": "platform-admin",
+            "quotaUnits": 42,
+            "state": "provisioning",
+            "healthScore": 100,
+            "tenantId": "acme-corp",
+            "version": 1,
+            "updatedAt": "2026-05-24T19:15:24.1105357+00:00"
+          }
+        ],
+        "healthChecks": [
+          {
+            "healthId": "acme-corp:health:feae320581a225e0bbec02588aefcc35",
+            "targetTenantKey": "tenant-acme-lifecycle",
+            "probeId": "bootstrap",
+            "status": "healthy",
+            "healthScore": 96,
+            "tenantId": "acme-corp",
+            "recordedAt": "2026-05-24T19:15:24.1433252+00:00"
+          }
+        ],
+        "offboardingRuns": [
+          {
+            "offboardingId": "acme-corp:offboarding:cc69c80bbe750c5a7c81e16a9c14f0b3",
+            "targetTenantKey": "tenant-acme-lifecycle",
+            "reason": "contract-ended",
+            "effectiveDate": "2026-06-30",
+            "state": "offboarding",
+            "tenantId": "acme-corp"
+          }
+        ],
+        "kpis": {
+          "lifecycleCount": 1,
+          "healthCheckCount": 1,
+          "offboardingCount": 1,
+          "requiredRuleCount": 4
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/flows/FLOW-30/tenant-lifecycle-manager-response.schema.json",
+  "title": "Tenant Lifecycle Manager Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "healthId": { "type": "string" },
+    "offboardingId": { "type": "string" },
+    "code": { "type": "string" },
+    "version": { "type": "integer" },
+    "currentVersion": { "type": "integer" },
+    "state": { "type": "string" },
+    "targetTenantKey": { "type": "string" },
+    "outboxRetained": { "type": "boolean" },
+    "retryAfterMs": { "type": "integer" },
+    "details": { "type": "array" }
+  }
+}

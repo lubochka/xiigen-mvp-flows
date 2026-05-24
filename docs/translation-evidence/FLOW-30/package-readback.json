@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-05-24T19:34:20.389289Z",
+  "flow": "FLOW-30",
+  "packages": [
+    {
+      "package": "Xiigen.Flow.TenantLifecycleManager.Application",
+      "version": "0.1.1",
+      "path": "artifacts/nuget/FLOW-30/Xiigen.Flow.TenantLifecycleManager.Application.0.1.1.nupkg"
+    },
+    {
+      "package": "Xiigen.Flow.TenantLifecycleManager.Infrastructure",
+      "version": "0.1.1",
+      "path": "artifacts/nuget/FLOW-30/Xiigen.Flow.TenantLifecycleManager.Infrastructure.0.1.1.nupkg"
+    }
+  ],
+  "status": "PASS"
+}

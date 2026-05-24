@@ -210,4 +210,11 @@
     <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure/Xiigen.Flow.AdaptiveRagDeepResearch.Infrastructure.csproj" />
     <Project Path="flows/FLOW-29-adaptive-rag-deep-research/server/Xiigen.Flow.AdaptiveRagDeepResearch.Tests/Xiigen.Flow.AdaptiveRagDeepResearch.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-30-tenant-lifecycle-manager/" />
+  <Folder Name="/flows/FLOW-30-tenant-lifecycle-manager/server/">
+    <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Api/Xiigen.Flow.TenantLifecycleManager.Api.csproj" />
+    <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Application/Xiigen.Flow.TenantLifecycleManager.Application.csproj" />
+    <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Infrastructure/Xiigen.Flow.TenantLifecycleManager.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Tests/Xiigen.Flow.TenantLifecycleManager.Tests.csproj" />
+  </Folder>
 </Solution>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-30-tenant-lifecycle-manager</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.TenantLifecycleManager.Application\Xiigen.Flow.TenantLifecycleManager.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.TenantLifecycleManager.Infrastructure\Xiigen.Flow.TenantLifecycleManager.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+

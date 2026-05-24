@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-30",
+  "flowSlug": "tenant-lifecycle-manager",
+  "endpoints": [
+    {
+      "endpointId": "tenant-lifecycle-manager-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/tenant-lifecycle-manager/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "bypassReason": "Public lifecycle preview exposes no tenant-private state or platform mutation controls."
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/tenant-lifecycle-manager/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "requestSchema": "contracts/schemas/tenant-lifecycle-manager-request.schema.json"
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-provision",
+      "method": "POST",
+      "path": "/api/dynamic/tenant-lifecycle-manager",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "requestSchema": "contracts/schemas/tenant-lifecycle-manager-request.schema.json"
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-health",
+      "method": "POST",
+      "path": "/api/dynamic/tenant-lifecycle-manager/health",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "requestSchema": "contracts/schemas/tenant-lifecycle-manager-request.schema.json"
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-offboarding",
+      "method": "POST",
+      "path": "/api/dynamic/tenant-lifecycle-manager/offboarding",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "requestSchema": "contracts/schemas/tenant-lifecycle-manager-request.schema.json"
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/tenant-lifecycle-manager/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json",
+      "requestSchema": "contracts/schemas/tenant-lifecycle-manager-request.schema.json"
+    },
+    {
+      "endpointId": "tenant-lifecycle-manager-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/tenant-lifecycle-manager/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/tenant-lifecycle-manager-response.schema.json"
+    }
+  ]
+}

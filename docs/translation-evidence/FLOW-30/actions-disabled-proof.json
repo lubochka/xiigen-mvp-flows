@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-05-24T19:34:20.388632Z",
+  "flow": "FLOW-30",
+  "policy": "GitHub Actions disabled for every tenant repo via gh api repos/{owner}/{repo}/actions/permissions enabled=false",
+  "repos": [
+    {
+      "repo": "tenant-a--tenant-lifecycle-manager",
+      "actionsDisabled": true
+    },
+    {
+      "repo": "tenant-a--acme-lifecycle-console",
+      "actionsDisabled": true
+    },
+    {
+      "repo": "tenant-b--acme-lifecycle-console",
+      "actionsDisabled": true
+    },
+    {
+      "repo": "tenant-b--northwind-lifecycle-control",
+      "actionsDisabled": true
+    },
+    {
+      "repo": "tenant-c--northwind-lifecycle-control",
+      "actionsDisabled": true
+    },
+    {
+      "repo": "tenant-c--tessera-lifecycle-studio",
+      "actionsDisabled": true
+    }
+  ],
+  "status": "PASS"
+}

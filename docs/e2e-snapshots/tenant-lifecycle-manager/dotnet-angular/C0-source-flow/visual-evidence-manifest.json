@@ -1,0 +1,64 @@
+{
+  "flow": "FLOW-30",
+  "slug": "tenant-lifecycle-manager",
+  "cascadePoint": "C0-source-flow",
+  "moduleName": "tenant-lifecycle-manager",
+  "expected": 9,
+  "actual": 9,
+  "evidence": [
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=provisioning&lang=en&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=health&lang=he&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=offboarding&lang=en&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=provisioning&lang=en&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=health&lang=he&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=offboarding&lang=en&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=provisioning&lang=en&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=health&lang=he&module=tenant-lifecycle-manager"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\tenant-lifecycle-manager\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=offboarding&lang=en&module=tenant-lifecycle-manager"
+    }
+  ]
+}

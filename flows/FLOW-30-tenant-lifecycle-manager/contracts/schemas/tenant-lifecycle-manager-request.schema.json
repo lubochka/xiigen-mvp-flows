@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/flows/FLOW-30/tenant-lifecycle-manager-request.schema.json",
+  "title": "Tenant Lifecycle Manager Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "targetTenantKey": { "type": "string", "minLength": 1 },
+    "planCode": { "type": "string", "minLength": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "requestedBy": { "type": "string", "minLength": 1 },
+    "quotaUnits": { "type": "integer", "minimum": 1 },
+    "probeId": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "minLength": 1 },
+    "healthScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "reason": { "type": "string", "minLength": 1 },
+    "effectiveDate": { "type": "string", "minLength": 1 },
+    "rules": { "type": "array" },
+    "planSteps": { "type": "array" },
+    "simulateTimeout": { "type": "boolean" }
+  },
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] }
+    ]
+  }
+}
