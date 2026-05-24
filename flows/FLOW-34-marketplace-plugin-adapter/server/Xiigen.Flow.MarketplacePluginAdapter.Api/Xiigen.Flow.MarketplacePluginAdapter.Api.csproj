@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-34-marketplace-plugin-adapter</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.MarketplacePluginAdapter.Application\Xiigen.Flow.MarketplacePluginAdapter.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.MarketplacePluginAdapter.Infrastructure\Xiigen.Flow.MarketplacePluginAdapter.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+

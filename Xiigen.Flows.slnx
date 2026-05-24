@@ -237,4 +237,11 @@
     <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Application/Xiigen.Flow.SystemInitiationBootstrap.Application.csproj" />
     <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Infrastructure/Xiigen.Flow.SystemInitiationBootstrap.Infrastructure.csproj" />
     <Project Path="flows/FLOW-33-system-initiation-bootstrap/server/Xiigen.Flow.SystemInitiationBootstrap.Tests/Xiigen.Flow.SystemInitiationBootstrap.Tests.csproj" />
-  </Folder></Solution>
+  </Folder>  <Folder Name="/flows/FLOW-34-marketplace-plugin-adapter/" />
+  <Folder Name="/flows/FLOW-34-marketplace-plugin-adapter/server/">
+    <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Api/Xiigen.Flow.MarketplacePluginAdapter.Api.csproj" />
+    <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Application/Xiigen.Flow.MarketplacePluginAdapter.Application.csproj" />
+    <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Infrastructure/Xiigen.Flow.MarketplacePluginAdapter.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-34-marketplace-plugin-adapter/server/Xiigen.Flow.MarketplacePluginAdapter.Tests/Xiigen.Flow.MarketplacePluginAdapter.Tests.csproj" />
+  </Folder>
+</Solution>

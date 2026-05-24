@@ -1,0 +1,71 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "flowSlug":  "marketplace-plugin-adapter",
+    "endpoints":  [
+                      {
+                          "endpointId":  "flow34-public-preview",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/marketplace-plugin-adapter/public-preview",
+                          "authPosture":  "anonymous",
+                          "requiredRoles":  [
+
+                                            ],
+                          "responseSchema":  "contracts/schemas/marketplace-plugin-adapter-response.schema.json",
+                          "bypassReason":  "Anonymous marketplace preview exposes safe listing metadata only."
+                      },
+                      {
+                          "endpointId":  "flow34-rules-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/marketplace-plugin-adapter/rules/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "business_partner",
+                                                "platform_admin"
+                                            ],
+                          "requestSchema":  "contracts/schemas/marketplace-plugin-adapter-request.schema.json",
+                          "responseSchema":  "contracts/schemas/marketplace-plugin-adapter-response.schema.json"
+                      },
+                      {
+                          "endpointId":  "flow34-adapter-start",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/marketplace-plugin-adapter",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "business_partner",
+                                                "platform_admin"
+                                            ],
+                          "requestSchema":  "contracts/schemas/marketplace-plugin-adapter-request.schema.json",
+                          "responseSchema":  "contracts/schemas/marketplace-plugin-adapter-response.schema.json"
+                      },
+                      {
+                          "endpointId":  "flow34-adapter-plan-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/marketplace-plugin-adapter/plan/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "business_partner",
+                                                "platform_admin"
+                                            ],
+                          "requestSchema":  "contracts/schemas/marketplace-plugin-adapter-request.schema.json",
+                          "responseSchema":  "contracts/schemas/marketplace-plugin-adapter-response.schema.json"
+                      },
+                      {
+                          "endpointId":  "flow34-dashboard",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/marketplace-plugin-adapter/dashboard",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_user",
+                                                "tenant_admin",
+                                                "business_partner",
+                                                "platform_admin",
+                                                "freelancer",
+                                                "platform_support"
+                                            ],
+                          "responseSchema":  "contracts/schemas/marketplace-plugin-adapter-response.schema.json"
+                      }
+                  ]
+}

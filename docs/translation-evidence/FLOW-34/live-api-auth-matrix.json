@@ -1,0 +1,57 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "checks":  [
+                   {
+                       "name":  "health live",
+                       "actual":  200,
+                       "expected":  200
+                   },
+                   {
+                       "name":  "anonymous public preview",
+                       "actual":  200,
+                       "expected":  200
+                   },
+                   {
+                       "name":  "missing token protected",
+                       "actual":  401,
+                       "expected":  401
+                   },
+                   {
+                       "name":  "wrong role protected",
+                       "actual":  403,
+                       "expected":  403
+                   },
+                   {
+                       "name":  "cross tenant protected",
+                       "actual":  401,
+                       "expected":  401
+                   },
+                   {
+                       "name":  "tenant admin creates adapter",
+                       "actual":  201,
+                       "expected":  201
+                   },
+                   {
+                       "name":  "idempotent replay",
+                       "actual":  200,
+                       "expected":  200
+                   },
+                   {
+                       "name":  "validation rejects boundary",
+                       "actual":  400,
+                       "expected":  400
+                   },
+                   {
+                       "name":  "timeout retains outbox",
+                       "actual":  504,
+                       "expected":  504
+                   },
+                   {
+                       "name":  "support dashboard inspect",
+                       "actual":  200,
+                       "expected":  200
+                   }
+               ],
+    "failedCount":  0,
+    "generatedAt":  "2026-05-24T22:31:07.8787426Z"
+}

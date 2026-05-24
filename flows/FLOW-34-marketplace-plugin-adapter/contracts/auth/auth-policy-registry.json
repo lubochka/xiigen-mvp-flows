@@ -1,0 +1,91 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "flowSlug":  "marketplace-plugin-adapter",
+    "roles":  {
+                  "primary":  [
+                                  "public_marketplace_visitor",
+                                  "tenant_user",
+                                  "tenant_admin",
+                                  "business_partner",
+                                  "platform_admin"
+                              ],
+                  "partial":  [
+                                  "anonymous",
+                                  "freelancer",
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "public_marketplace_visitor"
+              },
+    "policies":  [
+                     {
+                         "policyId":  "flow34-public-preview",
+                         "route":  "GET /api/dynamic/marketplace-plugin-adapter/public-preview",
+                         "authPosture":  "anonymous",
+                         "allowedRoles":  [
+
+                                          ],
+                         "bypassPaths":  [
+                                             "/api/dynamic/marketplace-plugin-adapter/public-preview"
+                                         ],
+                         "bypassReason":  "Anonymous marketplace preview exposes safe listing metadata only."
+                     },
+                     {
+                         "policyId":  "flow34-rules-validate",
+                         "route":  "POST /api/dynamic/marketplace-plugin-adapter/rules/validate",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_admin",
+                                              "business_partner",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "flow34-bootstrap-start",
+                         "route":  "POST /api/dynamic/marketplace-plugin-adapter",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_admin",
+                                              "business_partner",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "flow34-plan-validate",
+                         "route":  "POST /api/dynamic/marketplace-plugin-adapter/plan/validate",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_admin",
+                                              "business_partner",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "flow34-dashboard",
+                         "route":  "GET /api/dynamic/marketplace-plugin-adapter/dashboard",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_user",
+                                              "tenant_admin",
+                                              "business_partner",
+                                              "platform_admin",
+                                              "freelancer",
+                                              "platform_support"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     }
+                 ]
+}

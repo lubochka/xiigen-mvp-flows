@@ -1,0 +1,16 @@
+{
+  "flowId": "FLOW-34",
+  "flowSlug": "marketplace-plugin-adapter",
+  "api": {
+    "localUrl": "http://127.0.0.1:5330",
+    "containerUrl": "http://127.0.0.1:5330"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4334",
+    "evidencePort": 4334
+  }
+}
+
+
+
+

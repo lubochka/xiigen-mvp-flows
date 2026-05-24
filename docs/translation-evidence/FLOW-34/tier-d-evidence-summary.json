@@ -1,0 +1,67 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "flowSlug":  "marketplace-plugin-adapter",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "generatedAt":  "2026-05-24T22:45:41.5443637Z",
+    "visualEvidence":  {
+                           "cascadePoints":  7,
+                           "roles":  8,
+                           "cellsPerPoint":  3,
+                           "expected":  168,
+                           "actual":  168,
+                           "zeroByte":  0
+                       },
+    "tenantCascade":  [
+                          {
+                              "repo":  "acme-corp--marketplace-plugin-adapter",
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          },
+                          {
+                              "repo":  "acme-corp--acme-adapter-studio",
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          },
+                          {
+                              "repo":  "northwind--acme-adapter-studio",
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          },
+                          {
+                              "repo":  "northwind--partner-adapter-exchange",
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          },
+                          {
+                              "repo":  "tessera--partner-adapter-exchange",
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          },
+                          {
+                              "repo":  "tessera--community-adapter-library",
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "actionsEnabled":  false,
+                              "visualExpected":  24,
+                              "visualActual":  24,
+                              "zeroByte":  0
+                          }
+                      ],
+    "actionsDisabled":  true,
+    "liveApiAuthMatrix":  "docs/translation-evidence/FLOW-34/live-api-auth-matrix.json"
+}

@@ -1,0 +1,54 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "generatedAt":  "2026-05-24T22:45:21.4337161Z",
+    "tenantRepos":  [
+                        {
+                            "repo":  "acme-corp--marketplace-plugin-adapter",
+                            "cascadePoint":  "C1-tenant-a-installed",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        },
+                        {
+                            "repo":  "acme-corp--acme-adapter-studio",
+                            "cascadePoint":  "C2-tenant-a-adapted-published",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        },
+                        {
+                            "repo":  "northwind--acme-adapter-studio",
+                            "cascadePoint":  "C3-tenant-b-installed-from-a",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        },
+                        {
+                            "repo":  "northwind--partner-adapter-exchange",
+                            "cascadePoint":  "C4-tenant-b-adapted-published",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        },
+                        {
+                            "repo":  "tessera--partner-adapter-exchange",
+                            "cascadePoint":  "C5-tenant-c-installed-from-b",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        },
+                        {
+                            "repo":  "tessera--community-adapter-library",
+                            "cascadePoint":  "C6-tenant-c-adapted",
+                            "actionsEnabled":  false,
+                            "visualExpected":  24,
+                            "visualActual":  24,
+                            "zeroByte":  0
+                        }
+                    ]
+}

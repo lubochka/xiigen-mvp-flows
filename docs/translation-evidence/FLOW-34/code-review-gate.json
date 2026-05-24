@@ -1,0 +1,39 @@
+﻿{
+    "flowId":  "FLOW-34",
+    "verdict":  "APPROVED",
+    "checks":  [
+                   {
+                       "name":  "no provider SDK imports",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "no free tenant id parameter",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "MicroserviceBase generic service",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "DataProcessResult returned",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "outbox append present",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "CloudEvents envelope present",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "BFA CF-1027..CF-1030 registered",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "GitHub Actions absent from flow",
+                       "passed":  true
+                   }
+               ],
+    "generatedAt":  "2026-05-24T22:46:18.8682998Z"
+}

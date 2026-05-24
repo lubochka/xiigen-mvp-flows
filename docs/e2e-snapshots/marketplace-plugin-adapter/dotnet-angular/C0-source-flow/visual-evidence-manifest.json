@@ -1,0 +1,201 @@
+{
+  "flowId": "FLOW-34",
+  "flowSlug": "marketplace-plugin-adapter",
+  "expectedCount": 24,
+  "actualCount": 24,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\anonymous-C2-en-populated-desktop.png",
+      "bytes": 111591
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\anonymous-C4-he-rtl-populated-desktop.png",
+      "bytes": 131986
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\anonymous-C6-en-populated-mobile.png",
+      "bytes": 113602
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "bytes": 117114
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "bytes": 137382
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "bytes": 117654
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-user-C2-en-populated-desktop.png",
+      "bytes": 107403
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "bytes": 127959
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-user-C6-en-populated-mobile.png",
+      "bytes": 110606
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 114228
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 134977
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 115323
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\business-partner-C2-en-populated-desktop.png",
+      "bytes": 114700
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\business-partner-C4-he-rtl-populated-desktop.png",
+      "bytes": 135410
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\business-partner-C6-en-populated-mobile.png",
+      "bytes": 115717
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 114534
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 135204
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 115567
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\freelancer-C2-en-populated-desktop.png",
+      "bytes": 107351
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\freelancer-C4-he-rtl-populated-desktop.png",
+      "bytes": 127855
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\freelancer-C6-en-populated-mobile.png",
+      "bytes": 110563
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "planning",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 112602
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "validation",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 133086
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "package",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\marketplace-plugin-adapter\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 115043
+    }
+  ]
+}
