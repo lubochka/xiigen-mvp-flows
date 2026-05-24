@@ -1,0 +1,64 @@
+{
+  "flow": "FLOW-31",
+  "slug": "design-intelligence-engine",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-design-assurance-ledger",
+  "expected": 9,
+  "actual": 9,
+  "evidence": [
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=analysis&lang=en&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=tokens&lang=he&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=tenant_admin&state=governance&lang=en&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=analysis&lang=en&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=tokens&lang=he&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_admin&state=governance&lang=en&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=analysis&lang=en&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=tokens&lang=he&module=tessera-design-assurance-ledger"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-design-assurance-ledger\\docs\\e2e-snapshots\\design-intelligence-engine\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4330/?role=platform_support&state=governance&lang=en&module=tessera-design-assurance-ledger"
+    }
+  ]
+}

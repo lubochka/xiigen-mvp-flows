@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Design Intelligence Engine Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "code": { "type": "string" },
+    "version": { "type": "integer" },
+    "designFileKey": { "type": "string" },
+    "screenName": { "type": "string" },
+    "componentCount": { "type": "integer" },
+    "tokenCount": { "type": "integer" },
+    "governanceStatus": { "type": "string" },
+    "retryAfterMs": { "type": "integer" },
+    "outboxRetained": { "type": "boolean" }
+  }
+}

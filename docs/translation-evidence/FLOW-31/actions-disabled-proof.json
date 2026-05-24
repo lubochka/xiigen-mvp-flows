@@ -1,0 +1,43 @@
+{
+    "flow":  "FLOW-31",
+    "checkedAt":  "2026-05-24T20:14:07.9969499Z",
+    "allDisabled":  true,
+    "repos":  [
+                  {
+                      "repo":  "lubochka/tenant-a--design-intelligence-engine",
+                      "url":  "https://github.com/lubochka/tenant-a--design-intelligence-engine",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-a--acme-design-quality-office",
+                      "url":  "https://github.com/lubochka/tenant-a--acme-design-quality-office",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--acme-design-quality-office",
+                      "url":  "https://github.com/lubochka/tenant-b--acme-design-quality-office",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--northwind-interface-control",
+                      "url":  "https://github.com/lubochka/tenant-b--northwind-interface-control",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--northwind-interface-control",
+                      "url":  "https://github.com/lubochka/tenant-c--northwind-interface-control",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--tessera-design-assurance-ledger",
+                      "url":  "https://github.com/lubochka/tenant-c--tessera-design-assurance-ledger",
+                      "visibility":  "PRIVATE",
+                      "actionsEnabled":  false
+                  }
+              ]
+}

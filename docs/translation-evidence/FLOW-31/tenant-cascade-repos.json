@@ -1,0 +1,71 @@
+{
+    "flow":  "FLOW-31",
+    "repos":  [
+                  {
+                      "repo":  "lubochka/tenant-a--design-intelligence-engine",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "moduleName":  "design-intelligence-engine",
+                      "version":  "1.0.0",
+                      "localCommit":  "d3e6ffec443172d23b71bc6f5f7bb47c6d890dd8",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "lubochka/tenant-a--acme-design-quality-office",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "moduleName":  "acme-design-quality-office",
+                      "version":  "1.0.1",
+                      "localCommit":  "1c7d783aa2799200f4a38f03a5689187a3ce4b7b",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--acme-design-quality-office",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "moduleName":  "acme-design-quality-office",
+                      "version":  "1.0.1",
+                      "localCommit":  "76a37d445bd9ec61fe2990d752eb1a4f99e2ec08",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "lubochka/tenant-b--northwind-interface-control",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "moduleName":  "northwind-interface-control",
+                      "version":  "1.0.2",
+                      "localCommit":  "ca985bb38ff6673865c14bc0fe4728e9fb2de901",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--northwind-interface-control",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "moduleName":  "northwind-interface-control",
+                      "version":  "1.0.2",
+                      "localCommit":  "155f771a1c425b950382460e57e9baa9cb57ee9c",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "lubochka/tenant-c--tessera-design-assurance-ledger",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "moduleName":  "tessera-design-assurance-ledger",
+                      "version":  "1.0.3",
+                      "localCommit":  "33ea6bf8f80e911babed2726809417004ecf3bb3",
+                      "localTests":  "dotnet 9/9, angular 5/5, build PASS, visual PASS",
+                      "pngCount":  9,
+                      "actionsDisabled":  true
+                  }
+              ]
+}

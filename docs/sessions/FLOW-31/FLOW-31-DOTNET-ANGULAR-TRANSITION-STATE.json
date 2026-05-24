@@ -1,0 +1,20 @@
+{
+    "flowId":  "FLOW-31",
+    "flowSlug":  "design-intelligence-engine",
+    "implementationSlug":  "design-system-governance",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "updatedAt":  "2026-05-24T20:15:06.7464961Z",
+    "status":  "complete-green-state",
+    "serverTests":  "9/9",
+    "angularTests":  "5/5",
+    "liveApiMatrix":  "14/14",
+    "visualEvidence":  "63/63 PNG, zero-byte 0",
+    "tenantCascade":  "6/6 tenant repos local green, pushed, Actions disabled",
+    "codeReview":  "PASS",
+    "qaReview":  "APPROVED",
+    "notes":  [
+                  "Canonical FLOW-31 slug is design-intelligence-engine.",
+                  "Historical NestJS source substrate design-system-governance is recorded as source alias and dependency attribution."
+              ]
+}

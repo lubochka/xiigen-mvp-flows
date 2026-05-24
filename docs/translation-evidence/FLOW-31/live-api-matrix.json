@@ -1,0 +1,273 @@
+{
+  "flow": "FLOW-31",
+  "total": 14,
+  "passed": 14,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "public-preview",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": {
+        "flow": "FLOW-31",
+        "summary": "Translate Figma and design-system evidence into token extraction, component compliance, and governance reports without leaking tenant design data.",
+        "tabs": [
+          "analysis",
+          "tokens",
+          "compliance",
+          "governance"
+        ]
+      }
+    },
+    {
+      "name": "missing-token",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": {
+        "code": "MISSING_TOKEN"
+      }
+    },
+    {
+      "name": "wrong-role",
+      "expected": 403,
+      "actual": 403,
+      "pass": true,
+      "body": {
+        "code": "WRONG_ROLE",
+        "allowedRoles": [
+          "platform_admin"
+        ]
+      }
+    },
+    {
+      "name": "cross-tenant",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": {
+        "code": "AUTH_CROSS_TENANT_TOKEN"
+      }
+    },
+    {
+      "name": "rules-validate",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": {
+        "code": "RULE_PACK_VALID",
+        "ruleCount": 4,
+        "coverage": "CF-1015-CF-1018"
+      }
+    },
+    {
+      "name": "analysis-first",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": {
+        "id": "acme-corp:analysis:f56cf9d9218738ef2da06465382e3b14",
+        "designFileKey": "figma-31-homepage",
+        "screenName": "checkout-home",
+        "requestedBy": "platform-admin",
+        "componentCount": 2,
+        "tokenCount": 2,
+        "confidenceScore": 91,
+        "status": "analysis_ready",
+        "sourceAlias": "design-system-governance",
+        "tenantScope": "acme-corp",
+        "version": 1,
+        "updatedAt": "2026-05-24T20:00:28.3448795+00:00"
+      }
+    },
+    {
+      "name": "analysis-replay",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": {
+        "id": "acme-corp:analysis:f56cf9d9218738ef2da06465382e3b14",
+        "designFileKey": "figma-31-homepage",
+        "screenName": "checkout-home",
+        "requestedBy": "platform-admin",
+        "componentCount": 2,
+        "tokenCount": 2,
+        "confidenceScore": 91,
+        "status": "analysis_ready",
+        "sourceAlias": "design-system-governance",
+        "tenantScope": "acme-corp",
+        "version": 1,
+        "updatedAt": "2026-05-24T20:00:28.3448795+00:00"
+      }
+    },
+    {
+      "name": "analysis-conflict",
+      "expected": 409,
+      "actual": 409,
+      "pass": true,
+      "body": {
+        "code": "CONCURRENT_UPDATE",
+        "currentVersion": 1,
+        "reason": "concurrent_update",
+        "ruleId": "CF-1015"
+      }
+    },
+    {
+      "name": "analysis-timeout",
+      "expected": 504,
+      "actual": 504,
+      "pass": true,
+      "body": {
+        "code": "TIMEOUT",
+        "retryAfterMs": 5000,
+        "outboxRetained": true,
+        "ruleId": "CF-1018"
+      }
+    },
+    {
+      "name": "tokens-extract",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": {
+        "tokenRunId": "acme-corp:tokens:096447515144b944d7254218f4931e54",
+        "designFileKey": "figma-31-homepage",
+        "extractionProfile": "figma31-default",
+        "tokenCount": 1,
+        "normalizedNamespace": "figma31::acme-corp::figma-31-homepage",
+        "tenantScope": "acme-corp",
+        "recordedAt": "2026-05-24T20:00:28.3873191+00:00"
+      }
+    },
+    {
+      "name": "compliance-validate",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": {
+        "complianceId": "acme-corp:compliance:982424af61add632550308e17db41d84",
+        "designFileKey": "figma-31-homepage",
+        "ruleSet": "design-governance-default",
+        "componentCount": 1,
+        "governanceStatus": "approved",
+        "tenantScope": "acme-corp"
+      }
+    },
+    {
+      "name": "governance-publish",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": {
+        "reportId": "acme-corp:governance:a6b07114c22280ce13a30f56f088d909",
+        "designFileKey": "figma-31-homepage",
+        "reportName": "homepage-governance",
+        "releaseChannel": "platform-admin",
+        "state": "published",
+        "tenantScope": "acme-corp"
+      }
+    },
+    {
+      "name": "plan-validate",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": {
+        "code": "TASK_COVERAGE_OK",
+        "taskTypeCount": 27,
+        "requiredTasks": [
+          "T489",
+          "T490",
+          "T491",
+          "T492",
+          "T493",
+          "T494",
+          "T495",
+          "T496",
+          "T497",
+          "T498",
+          "T499",
+          "T500",
+          "T501",
+          "T502",
+          "T503",
+          "T504",
+          "T505",
+          "T506",
+          "T507",
+          "T508",
+          "T509",
+          "T510",
+          "T511",
+          "T512",
+          "T513",
+          "T514",
+          "T515"
+        ]
+      }
+    },
+    {
+      "name": "dashboard",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": {
+        "analyses": [
+          {
+            "id": "acme-corp:analysis:f56cf9d9218738ef2da06465382e3b14",
+            "designFileKey": "figma-31-homepage",
+            "screenName": "checkout-home",
+            "requestedBy": "platform-admin",
+            "componentCount": 2,
+            "tokenCount": 2,
+            "confidenceScore": 91,
+            "status": "analysis_ready",
+            "sourceAlias": "design-system-governance",
+            "tenantScope": "acme-corp",
+            "version": 1,
+            "updatedAt": "2026-05-24T20:00:28.3448795+00:00"
+          }
+        ],
+        "tokenRuns": [
+          {
+            "tokenRunId": "acme-corp:tokens:096447515144b944d7254218f4931e54",
+            "designFileKey": "figma-31-homepage",
+            "extractionProfile": "figma31-default",
+            "tokenCount": 1,
+            "normalizedNamespace": "figma31::acme-corp::figma-31-homepage",
+            "tenantScope": "acme-corp",
+            "recordedAt": "2026-05-24T20:00:28.3873191+00:00"
+          }
+        ],
+        "complianceRuns": [
+          {
+            "complianceId": "acme-corp:compliance:982424af61add632550308e17db41d84",
+            "designFileKey": "figma-31-homepage",
+            "ruleSet": "design-governance-default",
+            "componentCount": 1,
+            "governanceStatus": "approved",
+            "tenantScope": "acme-corp"
+          }
+        ],
+        "governanceReports": [
+          {
+            "reportId": "acme-corp:governance:a6b07114c22280ce13a30f56f088d909",
+            "designFileKey": "figma-31-homepage",
+            "reportName": "homepage-governance",
+            "releaseChannel": "platform-admin",
+            "state": "published",
+            "tenantScope": "acme-corp"
+          }
+        ],
+        "kpis": {
+          "analysisCount": 1,
+          "tokenRunCount": 1,
+          "complianceCount": 1,
+          "governanceReportCount": 1,
+          "requiredRuleCount": 4
+        }
+      }
+    }
+  ]
+}

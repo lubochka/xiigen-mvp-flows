@@ -217,4 +217,11 @@
     <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Infrastructure/Xiigen.Flow.TenantLifecycleManager.Infrastructure.csproj" />
     <Project Path="flows/FLOW-30-tenant-lifecycle-manager/server/Xiigen.Flow.TenantLifecycleManager.Tests/Xiigen.Flow.TenantLifecycleManager.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-31-design-intelligence-engine/" />
+  <Folder Name="/flows/FLOW-31-design-intelligence-engine/server/">
+    <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Api/Xiigen.Flow.DesignIntelligenceEngine.Api.csproj" />
+    <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Application/Xiigen.Flow.DesignIntelligenceEngine.Application.csproj" />
+    <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Infrastructure/Xiigen.Flow.DesignIntelligenceEngine.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Tests/Xiigen.Flow.DesignIntelligenceEngine.Tests.csproj" />
+  </Folder>
 </Solution>

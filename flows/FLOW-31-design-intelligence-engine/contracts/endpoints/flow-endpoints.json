@@ -1,0 +1,77 @@
+{
+  "flowId": "FLOW-31",
+  "flowSlug": "design-intelligence-engine",
+  "endpoints": [
+    {
+      "endpointId": "design-intelligence-engine-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/design-intelligence-engine/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "bypassReason": "Public design preview exposes no tenant-private state or platform mutation controls."
+    },
+    {
+      "endpointId": "design-intelligence-engine-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-analysis",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-tokens-extract",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine/tokens/extract",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-compliance-validate",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine/compliance/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-governance-publish",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine/governance/publish",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/design-intelligence-engine/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json",
+      "requestSchema": "contracts/schemas/design-intelligence-engine-request.schema.json"
+    },
+    {
+      "endpointId": "design-intelligence-engine-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/design-intelligence-engine/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/design-intelligence-engine-response.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+    "flow":  "FLOW-31",
+    "sourcePackages":  [
+                           {
+                               "Name":  "Xiigen.Flow.DesignIntelligenceEngine.Application.0.1.1.nupkg",
+                               "Length":  23426
+                           },
+                           {
+                               "Name":  "Xiigen.Flow.DesignIntelligenceEngine.Infrastructure.0.1.1.nupkg",
+                               "Length":  4070
+                           }
+                       ],
+    "tenantPackageVersions":  [
+                                  {
+                                      "repo":  "tenant-a--design-intelligence-engine",
+                                      "tenant":  "tenant-a",
+                                      "point":  "C1-tenant-a-installed",
+                                      "module":  "design-intelligence-engine",
+                                      "version":  "1.0.0"
+                                  },
+                                  {
+                                      "repo":  "tenant-a--acme-design-quality-office",
+                                      "tenant":  "tenant-a",
+                                      "point":  "C2-tenant-a-adapted-published",
+                                      "module":  "acme-design-quality-office",
+                                      "version":  "1.0.1"
+                                  },
+                                  {
+                                      "repo":  "tenant-b--acme-design-quality-office",
+                                      "tenant":  "tenant-b",
+                                      "point":  "C3-tenant-b-installed-from-a",
+                                      "module":  "acme-design-quality-office",
+                                      "version":  "1.0.1"
+                                  },
+                                  {
+                                      "repo":  "tenant-b--northwind-interface-control",
+                                      "tenant":  "tenant-b",
+                                      "point":  "C4-tenant-b-adapted-published",
+                                      "module":  "northwind-interface-control",
+                                      "version":  "1.0.2"
+                                  },
+                                  {
+                                      "repo":  "tenant-c--northwind-interface-control",
+                                      "tenant":  "tenant-c",
+                                      "point":  "C5-tenant-c-installed-from-b",
+                                      "module":  "northwind-interface-control",
+                                      "version":  "1.0.2"
+                                  },
+                                  {
+                                      "repo":  "tenant-c--tessera-design-assurance-ledger",
+                                      "tenant":  "tenant-c",
+                                      "point":  "C6-tenant-c-adapted",
+                                      "module":  "tessera-design-assurance-ledger",
+                                      "version":  "1.0.3"
+                                  }
+                              ]
+}

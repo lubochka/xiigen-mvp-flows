@@ -1,0 +1,16 @@
+{
+  "flowId": "FLOW-31",
+  "flowSlug": "design-intelligence-engine",
+  "api": {
+    "localUrl": "http://127.0.0.1:5330",
+    "containerUrl": "http://127.0.0.1:5330"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4330",
+    "evidencePort": 4330
+  }
+}
+
+
+
+

@@ -1,0 +1,7 @@
+{
+    "flow":  "FLOW-31",
+    "exitCode":  0,
+    "command":  "dotnet test Xiigen.Flows.slnx -c Release",
+    "log":  "docs/translation-evidence/FLOW-31/full-solution-test.log",
+    "passed":  true
+}

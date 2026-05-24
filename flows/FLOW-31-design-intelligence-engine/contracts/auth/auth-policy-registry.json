@@ -1,0 +1,63 @@
+{
+  "flowId": "FLOW-31",
+  "flowSlug": "design-intelligence-engine",
+  "policies": [
+    {
+      "policyId": "design-intelligence-engine-public-preview",
+      "route": "GET /api/dynamic/design-intelligence-engine/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/design-intelligence-engine/public-preview"],
+      "bypassReason": "Public design preview exposes no tenant-private state or platform mutation controls."
+    },
+    {
+      "policyId": "design-intelligence-engine-rules-validate",
+      "route": "POST /api/dynamic/design-intelligence-engine/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-analysis",
+      "route": "POST /api/dynamic/design-intelligence-engine",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-tokens-extract",
+      "route": "POST /api/dynamic/design-intelligence-engine/tokens/extract",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-compliance-validate",
+      "route": "POST /api/dynamic/design-intelligence-engine/compliance/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-governance-publish",
+      "route": "POST /api/dynamic/design-intelligence-engine/governance/publish",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-plan-validate",
+      "route": "POST /api/dynamic/design-intelligence-engine/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "design-intelligence-engine-dashboard",
+      "route": "GET /api/dynamic/design-intelligence-engine/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

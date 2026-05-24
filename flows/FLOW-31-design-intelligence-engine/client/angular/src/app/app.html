@@ -1,0 +1,140 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Design workspace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'analysis'" (click)="setScreenState('analysis')">
+          {{ translated('Analysis') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'tokens'" (click)="setScreenState('tokens')">
+          {{ translated('Tokens') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'governance'" (click)="setScreenState('governance')">
+          {{ translated('Governance') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Design runs') }}</span>
+    </article>
+    <article>
+      <strong>4</strong>
+      <span>{{ translated('Compliance checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ readinessScore() }}</strong>
+      <span>{{ translated('Readiness') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'analysis'" class="workspace" data-testid="analysis-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Design analysis</p>
+        <h2>Figma screens become tenant-scoped design intelligence records before dispatch</h2>
+        <p>Every analysis keeps file keys, component maps, token sets, confidence, version, and audit evidence in one traceable result.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Design item</th>
+            <th>State</th>
+            <th>Guard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of researchRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state active">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Analysis authority</h3>
+      <p *ngIf="canAnalyze()" class="notice success">This role can run design analysis and inspect traceable results.</p>
+      <p *ngIf="!canAnalyze()" class="notice">Analysis mutation controls are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'tokens'" class="workspace" data-testid="tokens-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Token extraction</p>
+        <h2>Token and component evidence stays readable without exposing internal implementation labels</h2>
+        <p>Support can inspect design safety signals while platform admins retain extraction and publication authority.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of ragSignals">
+          <span>{{ row.label }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.detail }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Token readiness</h3>
+      <label>
+        Readiness score
+        <input type="range" min="60" max="100" [ngModel]="readinessScore()" (ngModelChange)="setReadinessScore($event)" />
+      </label>
+      <p *ngIf="canConfigure()" class="notice success">This role can adjust design intelligence settings.</p>
+      <p *ngIf="!canConfigure()" class="notice">Mutation controls are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'governance'" class="workspace" data-testid="governance-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Governance publishing</p>
+        <h2>Governance reports preserve compliance evidence before tenant publication</h2>
+        <p>Rule set, release channel, retained audit entries, and outbox retry state remain visible across the publication timeline.</p>
+      </div>
+      <div class="timeline">
+        <article class="active">
+          <strong>Analyzed</strong>
+          <span>screen captured</span>
+          <small>component map attached</small>
+        </article>
+        <article class="review">
+          <strong>Validated</strong>
+          <span>evidence preserved</span>
+          <small>token namespace retained</small>
+        </article>
+        <article class="published">
+          <strong>Published</strong>
+          <span>report released</span>
+          <small>tenant console updated</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Governance authority</h3>
+      <p *ngIf="canConfigure()" class="notice success">This role can publish governance reports and preserve release evidence.</p>
+      <p *ngIf="canInspect() && !canConfigure()" class="notice success">This role can inspect evidence without changing controls.</p>
+      <p *ngIf="!canInspect() && !canConfigure()" class="notice">Governance evidence is hidden for this role.</p>
+    </aside>
+  </section>
+</main>

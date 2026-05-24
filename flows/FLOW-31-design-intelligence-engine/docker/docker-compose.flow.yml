@@ -1,0 +1,13 @@
+services:
+  FLOW-31-design-intelligence-engine-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-31-design-intelligence-engine/server/Xiigen.Flow.DesignIntelligenceEngine.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+

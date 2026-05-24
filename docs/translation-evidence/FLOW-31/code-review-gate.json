@@ -1,0 +1,34 @@
+{
+    "flow":  "FLOW-31",
+    "verdict":  "PASS",
+    "checks":  [
+                   {
+                       "name":  "no-provider-sdk-imports",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "no-free-tenant-id-parameter",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "service-extends-microservicebase",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "returns-dataprocessresult",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "outbox-append-present",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "cloudevent-envelope-present",
+                       "pass":  true
+                   },
+                   {
+                       "name":  "all-cf-rules-present",
+                       "pass":  true
+                   }
+               ]
+}
