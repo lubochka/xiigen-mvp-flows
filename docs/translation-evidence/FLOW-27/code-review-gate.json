@@ -1,0 +1,15 @@
+﻿{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "verdict":  "PASS",
+    "checks":  {
+                   "noProviderSdkImportsInProduction":  true,
+                   "noFreeTenantIdParameters":  true,
+                   "noBusinessThrows":  true,
+                   "microserviceBaseGenericPresent":  true,
+                   "dataProcessResultPresent":  true,
+                   "outboxAppendPresent":  true,
+                   "tenantContextReadFromBase":  true
+               },
+    "generatedAt":  "2026-05-24T16:05:18.7488944Z"
+}

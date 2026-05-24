@@ -1,0 +1,10 @@
+﻿{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "verdict":  "PASS",
+    "command":  "C:\\Users\\lubao\\.dotnet\\dotnet.exe test Xiigen.Flows.slnx -c Release",
+    "failed":  0,
+    "flow27TestsPassed":  14,
+    "allSolutionTestsPassed":  true,
+    "ranAt":  "2026-05-24T16:07:55.5590371Z"
+}

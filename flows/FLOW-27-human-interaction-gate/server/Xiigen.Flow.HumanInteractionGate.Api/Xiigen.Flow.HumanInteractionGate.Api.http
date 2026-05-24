@@ -1,0 +1,35 @@
+@Xiigen.Flow.HumanInteractionGate.Api_HostAddress = http://localhost:5327
+
+GET {{Xiigen.Flow.HumanInteractionGate.Api_HostAddress}}/health/live
+Accept: application/json
+
+###
+
+GET {{Xiigen.Flow.HumanInteractionGate.Api_HostAddress}}/api/dynamic/human-interaction-gate/public-preview
+Accept: application/json
+
+###
+
+POST {{Xiigen.Flow.HumanInteractionGate.Api_HostAddress}}/api/dynamic/human-interaction-gate/gates/open
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin
+X-Idempotency-Key: demo-open
+
+{
+  "runId": "run-demo",
+  "nodeId": "human-gate-1",
+  "title": "Approve generated flow promotion",
+  "blockingPolicy": "blocking",
+  "assigneePolicy": { "type": "single", "targets": ["u1"] }
+}
+
+###
+
+GET {{Xiigen.Flow.HumanInteractionGate.Api_HostAddress}}/api/dynamic/human-interaction-gate/dashboard
+Accept: application/json
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: tenant_admin

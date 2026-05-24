@@ -1,0 +1,118 @@
+{
+  "flow": "FLOW-27",
+  "slug": "human-interaction-gate",
+  "cascadePoint": "C4-tenant-b-adapted-published",
+  "moduleName": "northwind-review-router",
+  "expected": 18,
+  "actual": 18,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=anonymous&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=anonymous&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=anonymous&state=completion&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_user&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_user&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_user&state=completion&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_admin&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_admin&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=tenant_admin&state=completion&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=platform_admin&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=platform_admin&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=platform_admin&state=completion&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=platform_support&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=platform_support&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=platform_support&state=completion&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\human-decision-maker-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=human_decision_maker&state=queue&lang=en&module=northwind-review-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\human-decision-maker-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4327/?role=human_decision_maker&state=claims&lang=he&module=northwind-review-router"
+    },
+    {
+      "role": "human_decision_maker",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--northwind-review-router\\docs\\e2e-snapshots\\human-interaction-gate\\dotnet-angular\\C4-tenant-b-adapted-published\\human-decision-maker-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4327/?role=human_decision_maker&state=completion&lang=en&module=northwind-review-router"
+    }
+  ]
+}

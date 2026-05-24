@@ -1,0 +1,73 @@
+{
+    "flowId":  "FLOW-27",
+    "checkedAt":  "2026-05-24T15:35:36.3314761Z",
+    "allPassed":  true,
+    "checks":  [
+                   {
+                       "name":  "public-preview-200",
+                       "passed":  true,
+                       "status":  200,
+                       "body":  "{\"flow\":\"FLOW-27\",\"summary\":\"Preview human approval queues, gate status, claim ownership, and dependency readiness without exposing tenant-private task data.\",\"tabs\":[\"queue\",\"claims\",\"completion\"]}"
+                   },
+                   {
+                       "name":  "missing-token-401",
+                       "passed":  true,
+                       "status":  401,
+                       "body":  "The remote server returned an error: (401) Unauthorized."
+                   },
+                   {
+                       "name":  "cross-tenant-token-401",
+                       "passed":  true,
+                       "status":  401,
+                       "body":  "The remote server returned an error: (401) Unauthorized."
+                   },
+                   {
+                       "name":  "wrong-role-403",
+                       "passed":  true,
+                       "status":  403,
+                       "body":  "The remote server returned an error: (403) Forbidden."
+                   },
+                   {
+                       "name":  "rules-valid-200",
+                       "passed":  true,
+                       "status":  200,
+                       "body":  "{\"code\":\"RULE_PACK_VALID\",\"ruleCount\":28,\"requiredCount\":28,\"coverage\":\"CF-545-CF-565+CF-996-CF-1002\"}"
+                   },
+                   {
+                       "name":  "gate-open-201",
+                       "passed":  true,
+                       "status":  201,
+                       "body":  "{\"taskId\":\"acme-corp:task:run-live:human-gate-1\",\"runId\":\"run-live\",\"nodeId\":\"human-gate-1\",\"title\":\"Approve generated flow promotion\",\"status\":\"waiting_for_user\",\"blockingPolicy\":\"blocking\",\"assigneePolicy\":{\"targets\":[\"u1\"],\"type\":\"single\"},\"answers\":[],\"dueAt\":\"2026-05-31T15:35:35.2940497+00:00\",\"tenantId\":\"acme-corp\",\"version\":1,\"source_flow\":\"FLOW-27\"}"
+                   },
+                   {
+                       "name":  "task-claim-201",
+                       "passed":  true,
+                       "status":  201,
+                       "body":  "{\"claimId\":\"acme-corp:claim:40ae4c6ce20b129f7747e28f5cb8e496:u1\",\"taskId\":\"acme-corp:task:run-live:human-gate-1\",\"claimantUserId\":\"u1\",\"status\":\"active\",\"expiresAt\":\"2026-05-24T15:40:35.3374911+00:00\",\"tenantId\":\"acme-corp\"}"
+                   },
+                   {
+                       "name":  "task-answer-201",
+                       "passed":  true,
+                       "status":  201,
+                       "body":  "{\"taskId\":\"acme-corp:task:run-live:human-gate-1\",\"runId\":\"run-live\",\"nodeId\":\"human-gate-1\",\"title\":\"Approve generated flow promotion\",\"status\":\"answered\",\"blockingPolicy\":\"blocking\",\"assigneePolicy\":{\"targets\":[\"u1\"],\"type\":\"single\"},\"answers\":[{\"answererUserId\":\"u1\",\"decision\":\"APPROVE\",\"answeredAt\":\"2026-05-24T15:35:35.3791721+00:00\"}],\"dueAt\":\"2026-05-31T15:35:35.2940497+00:00\",\"tenantId\":\"acme-corp\",\"version\":2,\"source_flow\":\"FLOW-27\",\"answeredCount\":1,\"neededCount\":1}"
+                   },
+                   {
+                       "name":  "stress-run-201",
+                       "passed":  true,
+                       "status":  201,
+                       "body":  "{\"stressRunId\":\"acme-corp:stress:e0f7c6efcde5cf78ff1865b287e8154d\",\"status\":\"PASS\",\"stressTestCount\":21,\"coverage\":\"ST-325-ST-345\",\"tenantId\":\"acme-corp\"}"
+                   },
+                   {
+                       "name":  "completion-evaluate-201",
+                       "passed":  true,
+                       "status":  201,
+                       "body":  "{\"completionId\":\"acme-corp:completion:run-live:ad5b4f8d5523891bded18e8d6bdb0219\",\"runId\":\"run-live\",\"ready\":true,\"openRequiredTasks\":[],\"failedRequiredTerminalNodes\":[],\"pendingJudgeGateIds\":[],\"status\":\"READY\",\"tenantId\":\"acme-corp\"}"
+                   },
+                   {
+                       "name":  "dashboard-200",
+                       "passed":  true,
+                       "status":  200,
+                       "body":  "{\"openTasks\":[{\"taskId\":\"acme-corp:task:run-live:human-gate-1\",\"runId\":\"run-live\",\"nodeId\":\"human-gate-1\",\"title\":\"Approve generated flow promotion\",\"status\":\"answered\",\"blockingPolicy\":\"blocking\",\"assigneePolicy\":{\"targets\":[\"u1\"],\"type\":\"single\"},\"answers\":[{\"answererUserId\":\"u1\",\"decision\":\"APPROVE\",\"answeredAt\":\"2026-05-24T15:35:35.3791721+00:00\"}],\"dueAt\":\"2026-05-31T15:35:35.2940497+00:00\",\"tenantId\":\"acme-corp\",\"version\":2,\"source_flow\":\"FLOW-27\",\"answeredCount\":1,\"neededCount\":1}],\"claims\":[{\"claimId\":\"acme-corp:claim:40ae4c6ce20b129f7747e28f5cb8e496:u1\",\"taskId\":\"acme-corp:task:run-live:human-gate-1\",\"claimantUserId\":\"u1\",\"status\":\"active\",\"expiresAt\":\"2026-05-24T15:40:35.3374911+00:00\",\"tenantId\":\"acme-corp\"}],\"completionEvaluations\":[{\"completionId\":\"acme-corp:completion:run-live:ad5b4f8d5523891bded18e8d6bdb0219\",\"runId\":\"run-live\",\"ready\":true,\"openRequiredTasks\":[],\"failedRequiredTerminalNodes\":[],\"pendingJudgeGateIds\":[],\"status\":\"READY\",\"tenantId\":\"acme-corp\"}],\"kpis\":{\"ruleCount\":28,\"stressTestCount\":21,\"openTaskCount\":0,\"claimCount\":1}}"
+                   }
+               ]
+}

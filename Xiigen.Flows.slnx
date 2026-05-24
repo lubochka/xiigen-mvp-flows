@@ -189,4 +189,11 @@
     <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Infrastructure/Xiigen.Flow.MetaFlowEngine.Infrastructure.csproj" />
     <Project Path="flows/FLOW-26-meta-flow-engine/server/Xiigen.Flow.MetaFlowEngine.Tests/Xiigen.Flow.MetaFlowEngine.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-27-human-interaction-gate/" />
+  <Folder Name="/flows/FLOW-27-human-interaction-gate/server/">
+    <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Api/Xiigen.Flow.HumanInteractionGate.Api.csproj" />
+    <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Application/Xiigen.Flow.HumanInteractionGate.Application.csproj" />
+    <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Infrastructure/Xiigen.Flow.HumanInteractionGate.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Tests/Xiigen.Flow.HumanInteractionGate.Tests.csproj" />
+  </Folder>
 </Solution>

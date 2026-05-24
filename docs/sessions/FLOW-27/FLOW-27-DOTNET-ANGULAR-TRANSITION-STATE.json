@@ -1,0 +1,87 @@
+﻿{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "moduleName":  "Human Interaction Gate",
+    "portabilityTier":  "Tier D",
+    "status":  "COMPLETE",
+    "verdict":  "GREEN",
+    "noTechDebt":  true,
+    "noMissingTests":  true,
+    "noFuturePhase":  true,
+    "implementedSpecs":  {
+                             "bfaRules":  "CF-545-CF-565 + CF-996-CF-1002",
+                             "stressTests":  "ST-325-ST-345",
+                             "taskTypes":  "T413-T422",
+                             "roles":  [
+                                           "anonymous",
+                                           "tenant_user",
+                                           "tenant_admin",
+                                           "platform_admin",
+                                           "platform_support",
+                                           "human_decision_maker"
+                                       ]
+                         },
+    "tests":  {
+                  "liveAuthApiMatrix":  "11/11 PASS",
+                  "fullSolution":  "PASS, 0 failures",
+                  "dotnetFlow27":  "14/14 PASS",
+                  "angularFlow27":  "5/5 PASS",
+                  "preCommitGate":  "PASS, 0 failures"
+              },
+    "visualEvidence":  {
+                           "actualPng":  126,
+                           "expectedPng":  126,
+                           "cascadePoints":  [
+                                                 "C0-source-flow",
+                                                 "C1-tenant-a-installed",
+                                                 "C2-tenant-a-adapted-published",
+                                                 "C3-tenant-b-installed-from-a",
+                                                 "C4-tenant-b-adapted-published",
+                                                 "C5-tenant-c-installed-from-b",
+                                                 "C6-tenant-c-adapted"
+                                             ]
+                       },
+    "tenantCascade":  [
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-a--human-interaction-gate",
+                              "cascadePoint":  "C1-tenant-a-installed"
+                          },
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-a--acme-approval-ops",
+                              "cascadePoint":  "C2-tenant-a-adapted-published"
+                          },
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-b--acme-approval-ops",
+                              "cascadePoint":  "C3-tenant-b-installed-from-a"
+                          },
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-b--northwind-review-router",
+                              "cascadePoint":  "C4-tenant-b-adapted-published"
+                          },
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-c--northwind-review-router",
+                              "cascadePoint":  "C5-tenant-c-installed-from-b"
+                          },
+                          {
+                              "actionsDisabled":  true,
+                              "repo":  "lubochka/tenant-c--tessera-human-gate-studio",
+                              "cascadePoint":  "C6-tenant-c-adapted"
+                          }
+                      ],
+    "evidencePaths":  [
+                          "docs/translation-evidence/FLOW-27/live-api-matrix.json",
+                          "docs/translation-evidence/FLOW-27/visual-counts.json",
+                          "docs/translation-evidence/FLOW-27/code-review-gate.json",
+                          "docs/translation-evidence/FLOW-27/actions-disabled-proof.json",
+                          "docs/translation-evidence/FLOW-27/package-readback.json",
+                          "docs/translation-evidence/FLOW-27/tenant-cascade-repos.json",
+                          "docs/translation-evidence/FLOW-27/qa-review.md",
+                          "docs/translation-evidence/FLOW-27/pre-commit-gate.json"
+                      ],
+    "completedAt":  "2026-05-24T16:12:04.0682946Z"
+}

@@ -1,0 +1,140 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Human approval console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'queue'" (click)="setScreenState('queue')">
+          {{ translated('Queue') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'claims'" (click)="setScreenState('claims')">
+          {{ translated('Claims') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'completion'" (click)="setScreenState('completion')">
+          {{ translated('Completion') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>28</strong>
+      <span>{{ translated('Open tasks') }}</span>
+    </article>
+    <article>
+      <strong>21</strong>
+      <span>{{ translated('Stress checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ readinessScore() }}</strong>
+      <span>{{ translated('Readiness') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'queue'" class="workspace" data-testid="queue-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Approval queue</p>
+        <h2>Human decisions block only the nodes that truly depend on them</h2>
+        <p>Gate tasks are tenant-scoped, deduplicated per run and node, and visible only to eligible reviewers.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>State</th>
+            <th>Guard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of gateRows">
+            <td>{{ row.task }}</td>
+            <td>{{ row.state }}</td>
+            <td>{{ row.guard }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Reviewer posture</h3>
+      <p *ngIf="publicView()" class="notice">Public visitors cannot inspect tenant task queues.</p>
+      <p *ngIf="canAnswer()" class="notice success">This role can answer assigned tasks after claim and status checks.</p>
+      <p *ngIf="!publicView() && !canAnswer()" class="notice">This role can inspect tasks but cannot answer them.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'claims'" class="workspace" data-testid="claims-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Claim control</p>
+        <h2>Claim expiry releases ownership without closing the task</h2>
+        <p>Expired claims reject stale answers, preserve the gate state, and notify the eligible group for reassignment.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of claimRows">
+          <span>{{ row.signal }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.rule }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Claim authority</h3>
+      <label>
+        Readiness score
+        <input type="range" min="60" max="100" [ngModel]="readinessScore()" (ngModelChange)="setReadinessScore($event)" />
+      </label>
+      <p *ngIf="canInspect()" class="notice success">This role can inspect claim ownership and task history.</p>
+      <p *ngIf="!canInspect()" class="notice">Claim history is hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'completion'" class="workspace" data-testid="completion-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Completion gate</p>
+        <h2>Runs cannot complete while required human tasks remain open</h2>
+        <p>Required terminal nodes, open blocking tasks, and pending judge verdicts all fail closed before readiness is declared.</p>
+      </div>
+      <div class="timeline">
+        <article class="critical">
+          <strong>Blocking task open</strong>
+          <span>run remains blocked</span>
+          <small>required human input</small>
+        </article>
+        <article class="high">
+          <strong>Judge verdict pending</strong>
+          <span>wait for review</span>
+          <small>quality gate</small>
+        </article>
+        <article class="none">
+          <strong>All required paths complete</strong>
+          <span>ready can be declared</span>
+          <small>audited transition</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Completion authority</h3>
+      <p *ngIf="canConfigure()" class="notice success">This role can configure gate policies and completion checks.</p>
+      <p *ngIf="!canConfigure()" class="notice">Completion controls are hidden for this role.</p>
+    </aside>
+  </section>
+</main>

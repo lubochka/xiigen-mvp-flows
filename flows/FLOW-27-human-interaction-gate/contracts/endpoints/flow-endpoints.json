@@ -1,0 +1,126 @@
+{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "endpoints":  [
+                      {
+                          "endpointId":  "human-interaction-gate-public-preview",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/human-interaction-gate/public-preview",
+                          "authPosture":  "anonymous",
+                          "requiredRoles":  [
+
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "bypassReason":  "Public human gate preview exposes no tenant-private task queue data."
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-rules-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/rules/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "platform_support",
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-gate-open",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/gates/open",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-task-claim",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/tasks/claim",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_user",
+                                                "human_decision_maker",
+                                                "platform_support",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-task-answer",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/tasks/answer",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_user",
+                                                "human_decision_maker",
+                                                "platform_support",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-stress-run",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/stress/run",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "platform_support",
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-completion-evaluate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/completion/evaluate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-plan-validate",
+                          "method":  "POST",
+                          "path":  "/api/dynamic/human-interaction-gate/plan/validate",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json",
+                          "requestSchema":  "contracts/schemas/human-interaction-gate-request.schema.json"
+                      },
+                      {
+                          "endpointId":  "human-interaction-gate-dashboard",
+                          "method":  "GET",
+                          "path":  "/api/dynamic/human-interaction-gate/dashboard",
+                          "authPosture":  "policy",
+                          "requiredRoles":  [
+                                                "tenant_user",
+                                                "platform_support",
+                                                "human_decision_maker",
+                                                "tenant_admin",
+                                                "platform_admin"
+                                            ],
+                          "responseSchema":  "contracts/schemas/human-interaction-gate-response.schema.json"
+                      }
+                  ]
+}

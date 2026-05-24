@@ -1,0 +1,128 @@
+{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "policies":  [
+                     {
+                         "policyId":  "human-interaction-gate-public-preview",
+                         "route":  "GET /api/dynamic/human-interaction-gate/public-preview",
+                         "authPosture":  "anonymous",
+                         "allowedRoles":  [
+
+                                          ],
+                         "bypassPaths":  [
+                                             "/api/dynamic/human-interaction-gate/public-preview"
+                                         ],
+                         "bypassReason":  "Public human gate preview exposes no tenant-private task queue data."
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-rules-validate",
+                         "route":  "POST /api/dynamic/human-interaction-gate/rules/validate",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "platform_support",
+                                              "human_decision_maker",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-gate-open",
+                         "route":  "POST /api/dynamic/human-interaction-gate/gates/open",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "human_decision_maker",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-task-claim",
+                         "route":  "POST /api/dynamic/human-interaction-gate/tasks/claim",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_user",
+                                              "human_decision_maker",
+                                              "platform_support",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-task-answer",
+                         "route":  "POST /api/dynamic/human-interaction-gate/tasks/answer",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_user",
+                                              "human_decision_maker",
+                                              "platform_support",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-stress-run",
+                         "route":  "POST /api/dynamic/human-interaction-gate/stress/run",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "platform_support",
+                                              "human_decision_maker",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-completion-evaluate",
+                         "route":  "POST /api/dynamic/human-interaction-gate/completion/evaluate",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-plan-validate",
+                         "route":  "POST /api/dynamic/human-interaction-gate/plan/validate",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     },
+                     {
+                         "policyId":  "human-interaction-gate-dashboard",
+                         "route":  "GET /api/dynamic/human-interaction-gate/dashboard",
+                         "authPosture":  "policy",
+                         "allowedRoles":  [
+                                              "tenant_user",
+                                              "platform_support",
+                                              "human_decision_maker",
+                                              "tenant_admin",
+                                              "platform_admin"
+                                          ],
+                         "bypassPaths":  [
+
+                                         ]
+                     }
+                 ]
+}

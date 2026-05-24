@@ -1,0 +1,15 @@
+{
+  "flowId": "FLOW-27",
+  "flowSlug": "human-interaction-gate",
+  "api": {
+    "localUrl": "http://127.0.0.1:5327",
+    "containerUrl": "http://127.0.0.1:5327"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4327",
+    "evidencePort": 4327
+  }
+}
+
+
+

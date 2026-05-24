@@ -1,0 +1,38 @@
+﻿[
+    {
+        "repo":  "lubochka/tenant-a--human-interaction-gate",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:43.1678030Z"
+    },
+    {
+        "repo":  "lubochka/tenant-a--acme-approval-ops",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:43.7874877Z"
+    },
+    {
+        "repo":  "lubochka/tenant-b--acme-approval-ops",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:44.6036736Z"
+    },
+    {
+        "repo":  "lubochka/tenant-b--northwind-review-router",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:45.2321333Z"
+    },
+    {
+        "repo":  "lubochka/tenant-c--northwind-review-router",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:45.8414329Z"
+    },
+    {
+        "repo":  "lubochka/tenant-c--tessera-human-gate-studio",
+        "enabled":  false,
+        "allowedActions":  null,
+        "verifiedAt":  "2026-05-24T16:04:46.3719611Z"
+    }
+]

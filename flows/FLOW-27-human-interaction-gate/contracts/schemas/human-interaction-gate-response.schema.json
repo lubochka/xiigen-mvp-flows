@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-27/human-interaction-gate-response.schema.json",
+  "title": "FLOW-27 Human Interaction Gate Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "proposedChangeId": { "type": "string" },
+    "scanId": { "type": "string" },
+    "impactId": { "type": "string" },
+    "stressRunId": { "type": "string" },
+    "releaseGateId": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "code": { "type": "string" },
+    "details": { "type": "array" },
+    "contentHash": { "type": "string" },
+    "compositeSeverity": { "type": "string" },
+    "conflicts": { "type": "array" },
+    "direct": { "type": "array" },
+    "transitive": { "type": "array" },
+    "stressTestCount": { "type": "integer" },
+    "ruleCount": { "type": "integer" },
+    "failClosed": { "type": "boolean" }
+  }
+}
+
+
+

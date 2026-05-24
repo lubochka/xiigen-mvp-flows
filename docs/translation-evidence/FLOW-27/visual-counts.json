@@ -1,0 +1,48 @@
+﻿{
+    "flowId":  "FLOW-27",
+    "flowSlug":  "human-interaction-gate",
+    "roles":  [
+                  "anonymous",
+                  "tenant_user",
+                  "tenant_admin",
+                  "platform_admin",
+                  "platform_support",
+                  "human_decision_maker"
+              ],
+    "cellsPerRole":  3,
+    "cascadePoints":  7,
+    "expectedPng":  126,
+    "actualPng":  126,
+    "pass":  true,
+    "byCascade":  [
+                      {
+                          "cascadePoint":  "C0-source-flow",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C1-tenant-a-installed",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C2-tenant-a-adapted-published",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C3-tenant-b-installed-from-a",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C4-tenant-b-adapted-published",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C5-tenant-c-installed-from-b",
+                          "pngCount":  18
+                      },
+                      {
+                          "cascadePoint":  "C6-tenant-c-adapted",
+                          "pngCount":  18
+                      }
+                  ],
+    "generatedAt":  "2026-05-24T16:04:42.1263436Z"
+}
