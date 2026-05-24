@@ -1,0 +1,42 @@
+﻿{
+    "flowId":  "FLOW-28",
+    "checkedAt":  "2026-05-24T17:14:58.6619182Z",
+    "repositories":  [
+                         {
+                             "repo":  "tenant-a--blog-cms-modules",
+                             "cascadePoint":  "C1-tenant-a-installed",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         },
+                         {
+                             "repo":  "tenant-a--acme-blog-studio",
+                             "cascadePoint":  "C2-tenant-a-adapted-published",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         },
+                         {
+                             "repo":  "tenant-b--acme-blog-studio",
+                             "cascadePoint":  "C3-tenant-b-installed-from-a",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         },
+                         {
+                             "repo":  "tenant-b--northwind-content-hub",
+                             "cascadePoint":  "C4-tenant-b-adapted-published",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         },
+                         {
+                             "repo":  "tenant-c--northwind-content-hub",
+                             "cascadePoint":  "C5-tenant-c-installed-from-b",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         },
+                         {
+                             "repo":  "tenant-c--tessera-publishing-modules",
+                             "cascadePoint":  "C6-tenant-c-adapted",
+                             "actionsEnabled":  false,
+                             "localGithubDirectoryPresent":  false
+                         }
+                     ]
+}

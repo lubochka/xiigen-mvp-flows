@@ -1,0 +1,8 @@
+﻿{
+    "flowId":  "FLOW-28",
+    "command":  "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/pre-commit-check.ps1",
+    "result":  "PASS",
+    "failures":  0,
+    "includes":  "restore, build, full solution tests, FLOW-00 Angular build/test/evidence",
+    "completedAt":  "2026-05-24T17:22:10.7039242Z"
+}

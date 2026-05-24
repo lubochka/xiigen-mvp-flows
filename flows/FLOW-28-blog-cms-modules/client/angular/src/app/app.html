@@ -1,0 +1,141 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Publishing workspace') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'reader'" (click)="setScreenState('reader')">
+          {{ translated('Reader') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'author'" (click)="setScreenState('author')">
+          {{ translated('Authoring') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'operations'" (click)="setScreenState('operations')">
+          {{ translated('Operations') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>3</strong>
+      <span>{{ translated('Published items') }}</span>
+    </article>
+    <article>
+      <strong>24</strong>
+      <span>{{ translated('Stress checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ readinessScore() }}</strong>
+      <span>{{ translated('Readiness') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'reader'" class="workspace" data-testid="reader-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Public content</p>
+        <h2>Readers get safe published content without private tenant controls</h2>
+        <p>Public pages show approved articles, safe comments, and visible moderation outcomes without exposing tenant work queues.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Article</th>
+            <th>State</th>
+            <th>Safety guard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of contentRows">
+            <td>{{ row.title }}</td>
+            <td><span class="state" [class]="row.state">{{ row.state }}</span></td>
+            <td>{{ row.guard }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Reader posture</h3>
+      <p *ngIf="publicView()" class="notice success">This role can read public articles and submit guarded comments.</p>
+      <p *ngIf="canComment() && !publicView()" class="notice success">This role can comment while retaining tenant-scoped identity.</p>
+      <p *ngIf="!canComment()" class="notice">Comment entry is hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'author'" class="workspace" data-testid="author-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Authoring control</p>
+        <h2>Drafts autosave by revision and publish through explicit review pools</h2>
+        <p>Editors keep draft revisions, avoid route collisions, and cannot publish through a reviewer pool that would deadlock.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of publishingSignals">
+          <span>{{ row.label }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.detail }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Author authority</h3>
+      <label>
+        Readiness score
+        <input type="range" min="60" max="100" [ngModel]="readinessScore()" (ngModelChange)="setReadinessScore($event)" />
+      </label>
+      <p *ngIf="canAuthor()" class="notice success">This role can draft, autosave, and request publication.</p>
+      <p *ngIf="!canAuthor()" class="notice">Authoring tools are hidden for this role.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'operations'" class="workspace" data-testid="operations-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Publishing operations</p>
+        <h2>Publishing state is written before events and search updates are exposed</h2>
+        <p>Operational reviewers can verify tenant isolation, publication events, route safety, comment moderation, and retained timeout work.</p>
+      </div>
+      <div class="timeline">
+        <article class="active">
+          <strong>Draft stored</strong>
+          <span>revision retained</span>
+          <small>idempotent save</small>
+        </article>
+        <article class="review">
+          <strong>Review pool selected</strong>
+          <span>no deadlock</span>
+          <small>separate approvers</small>
+        </article>
+        <article class="published">
+          <strong>Published safely</strong>
+          <span>event after state</span>
+          <small>search-ready content</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Operations authority</h3>
+      <p *ngIf="canConfigure()" class="notice success">This role can configure route, review, and publication controls.</p>
+      <p *ngIf="canInspect() && !canConfigure()" class="notice success">This role can inspect evidence without changing publication controls.</p>
+      <p *ngIf="!canInspect() && !canConfigure()" class="notice">Operational evidence is hidden for this role.</p>
+    </aside>
+  </section>
+</main>

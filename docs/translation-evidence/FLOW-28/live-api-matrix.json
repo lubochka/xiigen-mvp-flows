@@ -1,0 +1,154 @@
+{
+  "flowId": "FLOW-28",
+  "slug": "blog-cms-modules",
+  "baseUrl": "http://127.0.0.1:5328",
+  "expected": 16,
+  "actual": 16,
+  "failures": 0,
+  "checks": [
+    {
+      "name": "public-preview-200",
+      "method": "GET",
+      "path": "/api/dynamic/blog-cms-modules/public-preview",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"flow\":\"FLOW-28\",\"summary\":\"Read public blog modules, author content, publish safely, moderate comments, and validate tenant-scoped module behavior.\",\"tabs\":[\"reader\",\"author\",\"modules\",\"moderation\"]}"
+    },
+    {
+      "name": "missing-token-401",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "response": "{\"code\":\"MISSING_TOKEN\"}"
+    },
+    {
+      "name": "cross-tenant-token-401",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 401,
+      "actual": 401,
+      "passed": true,
+      "response": "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+    },
+    {
+      "name": "wrong-role-403",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/publish",
+      "expected": 403,
+      "actual": 403,
+      "passed": true,
+      "response": "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"tenant_admin\",\"platform_admin\"]}"
+    },
+    {
+      "name": "rules-valid-200",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/rules/validate",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"code\":\"RULE_PACK_VALID\",\"ruleCount\":39,\"requiredCount\":39,\"coverage\":\"CF-566-CF-600+CF-1003-CF-1006\"}"
+    },
+    {
+      "name": "content-validation-400",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 400,
+      "actual": 400,
+      "passed": true,
+      "response": "{\"code\":\"VALIDATION_FAILED\",\"details\":[{\"field\":\"authorUserId\",\"reason\":\"authorUserId is required.\"}]}"
+    },
+    {
+      "name": "content-create-201",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "response": "{\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"title\":\"Composable tenant publishing\",\"body\":\"Article body with safe markdown\",\"slug\":\"/blog/tenant-publishing\",\"visibility\":\"public\",\"authorUserId\":\"author-1\",\"status\":\"draft\",\"version\":1,\"tenantId\":\"acme-corp\",\"source_flow\":\"FLOW-28\",\"searchIndexed\":false,\"indexName\":\"blog-content-acme-corp\",\"storedAt\":\"2026-05-24T16:58:23.1341988+00:00\"}"
+    },
+    {
+      "name": "content-create-replay-200",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"title\":\"Composable tenant publishing\",\"body\":\"Article body with safe markdown\",\"slug\":\"/blog/tenant-publishing\",\"visibility\":\"public\",\"authorUserId\":\"author-1\",\"status\":\"draft\",\"version\":1,\"tenantId\":\"acme-corp\",\"source_flow\":\"FLOW-28\",\"searchIndexed\":false,\"indexName\":\"blog-content-acme-corp\",\"storedAt\":\"2026-05-24T16:58:23.1341988+00:00\"}"
+    },
+    {
+      "name": "concurrency-conflict-409",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "expected": 409,
+      "actual": 409,
+      "passed": true,
+      "response": "{\"code\":\"CONCURRENT_UPDATE\",\"currentVersion\":1,\"reason\":\"concurrent_update\",\"ruleId\":\"CF-1003\"}"
+    },
+    {
+      "name": "draft-autosave-201",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/drafts/autosave",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "response": "{\"draftId\":\"acme-corp:draft:526a2e1b9bd5898372761fa12437e9f2\",\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"revisionId\":\"rev-1\",\"body\":\"Draft body\",\"sessionKey\":\"blog:session:acme-corp:rev-1:da17bf759546c462068fe1c6b8cac543\",\"tenantId\":\"acme-corp\",\"version\":1}"
+    },
+    {
+      "name": "publish-201",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/publish",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "response": "{\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"title\":\"Composable tenant publishing\",\"body\":\"Article body with safe markdown\",\"slug\":\"/blog/tenant-publishing\",\"visibility\":\"public\",\"authorUserId\":\"author-1\",\"status\":\"published\",\"version\":2,\"tenantId\":\"acme-corp\",\"source_flow\":\"FLOW-28\",\"searchIndexed\":true,\"indexName\":\"blog-content-acme-corp\",\"storedAt\":\"2026-05-24T16:58:23.1341988+00:00\",\"publishedAt\":\"2026-05-24T16:58:23.1803522+00:00\",\"canonicalCacheInvalidated\":true,\"canonicalInvalidationEvent\":\"CANONICAL_INVALIDATE_ALL\"}"
+    },
+    {
+      "name": "comment-201",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/comments",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "response": "{\"commentId\":\"acme-corp:comment:eb75f91e2f5672715e3263cec6d406f7\",\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"commentHtml\":\"Helpful comment\",\"status\":\"approved\",\"rateLimitMode\":\"user\",\"tenantId\":\"acme-corp\"}"
+    },
+    {
+      "name": "stress-run-201",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/stress/run",
+      "expected": 201,
+      "actual": 201,
+      "passed": true,
+      "response": "{\"stressRunId\":\"acme-corp:stress:46dfba60fed6d3cd2750ac1e9e1c7c9c\",\"status\":\"PASS\",\"stressTestCount\":24,\"coverage\":\"ST-345-ST-368\",\"tenantId\":\"acme-corp\"}"
+    },
+    {
+      "name": "plan-validate-200",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/plan/validate",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"code\":\"PLAN_COVERAGE_OK\",\"taskTypeCount\":18,\"singleResponsibility\":true,\"t440First\":true,\"requiredTasks\":[\"T423\",\"T424\",\"T425\",\"T426\",\"T427\",\"T428\",\"T429\",\"T430\",\"T431\",\"T432\",\"T433\",\"T434\",\"T435\",\"T436\",\"T437\",\"T438\",\"T439\",\"T440\"]}"
+    },
+    {
+      "name": "dashboard-200",
+      "method": "GET",
+      "path": "/api/dynamic/blog-cms-modules/dashboard",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"content\":[{\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"title\":\"Composable tenant publishing\",\"body\":\"Article body with safe markdown\",\"slug\":\"/blog/tenant-publishing\",\"visibility\":\"public\",\"authorUserId\":\"author-1\",\"status\":\"published\",\"version\":2,\"tenantId\":\"acme-corp\",\"source_flow\":\"FLOW-28\",\"searchIndexed\":true,\"indexName\":\"blog-content-acme-corp\",\"storedAt\":\"2026-05-24T16:58:23.1341988+00:00\",\"publishedAt\":\"2026-05-24T16:58:23.1803522+00:00\",\"canonicalCacheInvalidated\":true,\"canonicalInvalidationEvent\":\"CANONICAL_INVALIDATE_ALL\"}],\"drafts\":[{\"draftId\":\"acme-corp:draft:526a2e1b9bd5898372761fa12437e9f2\",\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"revisionId\":\"rev-1\",\"body\":\"Draft body\",\"sessionKey\":\"blog:session:acme-corp:rev-1:da17bf759546c462068fe1c6b8cac543\",\"tenantId\":\"acme-corp\",\"version\":1}],\"comments\":[{\"commentId\":\"acme-corp:comment:eb75f91e2f5672715e3263cec6d406f7\",\"contentId\":\"acme-corp:content:83d8c5ecf895c609e3bc025b4927312e\",\"commentHtml\":\"Helpful comment\",\"status\":\"approved\",\"rateLimitMode\":\"user\",\"tenantId\":\"acme-corp\"}],\"kpis\":{\"ruleCount\":39,\"stressTestCount\":24,\"publishedCount\":1,\"commentCount\":1}}"
+    },
+    {
+      "name": "cross-tenant-dashboard-isolated-200",
+      "method": "GET",
+      "path": "/api/dynamic/blog-cms-modules/dashboard",
+      "expected": 200,
+      "actual": 200,
+      "passed": true,
+      "response": "{\"content\":[],\"drafts\":[],\"comments\":[],\"kpis\":{\"ruleCount\":39,\"stressTestCount\":24,\"publishedCount\":0,\"commentCount\":0}}"
+    }
+  ]
+}

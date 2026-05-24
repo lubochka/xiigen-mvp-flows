@@ -1,0 +1,8 @@
+﻿{
+    "flowId":  "FLOW-28",
+    "command":  "C:\\Users\\lubao\\.dotnet\\dotnet.exe test Xiigen.Flows.slnx -c Release",
+    "result":  "PASS",
+    "failures":  0,
+    "flow28Tests":  "14 passed",
+    "completedAt":  "2026-05-24T17:18:55.6537605Z"
+}

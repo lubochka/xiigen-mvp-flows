@@ -1,0 +1,172 @@
+{
+  "flow": "FLOW-28",
+  "slug": "blog-cms-modules",
+  "cascadePoint": "C3-tenant-b-installed-from-a",
+  "moduleName": "acme-blog-studio",
+  "expected": 27,
+  "actual": 27,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=anonymous&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=anonymous&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=anonymous&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=public_marketplace_visitor&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=public_marketplace_visitor&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "public_marketplace_visitor",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\public-marketplace-visitor-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=public_marketplace_visitor&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_user&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_user&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_user",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-user-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_user&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_admin&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_admin&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=tenant_admin&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=freelancer&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=freelancer&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "freelancer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\freelancer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=freelancer&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=business_partner&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=business_partner&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "business_partner",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\business-partner-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=business_partner&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=event_organiser&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=event_organiser&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "event_organiser",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\event-organiser-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=event_organiser&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=platform_admin&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=platform_admin&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=platform_admin&state=operations&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=platform_support&state=reader&lang=en&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4328/?role=platform_support&state=author&lang=he&module=acme-blog-studio"
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-b--acme-blog-studio\\docs\\e2e-snapshots\\blog-cms-modules\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4328/?role=platform_support&state=operations&lang=en&module=acme-blog-studio"
+    }
+  ]
+}

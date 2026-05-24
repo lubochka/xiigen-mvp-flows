@@ -1,0 +1,73 @@
+﻿{
+    "flowId":  "FLOW-28",
+    "slug":  "blog-cms-modules",
+    "verdict":  "APPROVED",
+    "failures":  0,
+    "checks":  [
+                   {
+                       "name":  "provider-sdk-imports",
+                       "pattern":  "Elastic\\.Clients\\.Elasticsearch|StackExchange\\.Redis|RabbitMQ|MassTransit|googleapis",
+                       "expectedZero":  true,
+                       "hitCount":  0,
+                       "passed":  true,
+                       "matches":  [
+
+                                   ]
+                   },
+                   {
+                       "name":  "free-tenant-parameters",
+                       "pattern":  "string\\s+tenantId|Guid\\s+tenantId",
+                       "expectedZero":  true,
+                       "hitCount":  0,
+                       "passed":  true,
+                       "matches":  [
+
+                                   ]
+                   },
+                   {
+                       "name":  "business-throws",
+                       "pattern":  "throw new",
+                       "expectedZero":  true,
+                       "hitCount":  0,
+                       "passed":  true,
+                       "matches":  [
+
+                                   ]
+                   },
+                   {
+                       "name":  "microservice-base",
+                       "pattern":  "MicroserviceBase\u003cBlogCmsModulesService\u003e",
+                       "expectedZero":  false,
+                       "hitCount":  1,
+                       "passed":  true,
+                       "matches":  [
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:10:public sealed class BlogCmsModulesService : MicroserviceBase\u003cBlogCmsModulesService\u003e"
+                                   ]
+                   },
+                   {
+                       "name":  "outbox-present",
+                       "pattern":  "AppendAsync",
+                       "expectedZero":  false,
+                       "hitCount":  6,
+                       "passed":  true,
+                       "matches":  [
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:57:            await _outbox.AppendAsync(Envelope(\"blog.content.timeout-retained\", ScopedId($\"timeout:{Hash(idempotencyKey!)}\"), new Dictionary\u003cstring, object?\u003e { [\"retryAfterMs\"] = 5000, [\"tenantId\"] = CurrentTenant.TenantId }), cancellationToken).ConfigureAwait(false);",
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:93:        await _outbox.AppendAsync(Envelope(status == \"published\" ? \"blog.content.published\" : \"blog.content.draft-saved\", contentId, body), cancellationToken).ConfigureAwait(false);",
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:111:        await _outbox.AppendAsync(Envelope(\"blog.draft.revision.stored\", draftId, body), cancellationToken).ConfigureAwait(false);",
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:131:        await _outbox.AppendAsync(Envelope(\"blog.content.published\", ReadString(request, \"contentId\"), updated), cancellationToken).ConfigureAwait(false);",
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:149:        await _outbox.AppendAsync(Envelope(\"blog.comment.submitted\", commentId, body), cancellationToken).ConfigureAwait(false);",
+                                       "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-28-blog-cms-modules\\server\\Xiigen.Flow.BlogCmsModules.Application\\BlogCmsModulesService.cs:167:        await _outbox.AppendAsync(Envelope(\"blog.cms.stress.completed\", runId, body), cancellationToken).ConfigureAwait(false);"
+                                   ]
+                   },
+                   {
+                       "name":  "ui-internal-acronyms",
+                       "pattern":  "DNA/AF/DataProcessResult/CF/T",
+                       "expectedZero":  true,
+                       "hitCount":  0,
+                       "passed":  true,
+                       "matches":  [
+
+                                   ]
+                   }
+               ]
+}

@@ -196,4 +196,11 @@
     <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Infrastructure/Xiigen.Flow.HumanInteractionGate.Infrastructure.csproj" />
     <Project Path="flows/FLOW-27-human-interaction-gate/server/Xiigen.Flow.HumanInteractionGate.Tests/Xiigen.Flow.HumanInteractionGate.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-28-blog-cms-modules/" />
+  <Folder Name="/flows/FLOW-28-blog-cms-modules/server/">
+    <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Api/Xiigen.Flow.BlogCmsModules.Api.csproj" />
+    <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Application/Xiigen.Flow.BlogCmsModules.Application.csproj" />
+    <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Infrastructure/Xiigen.Flow.BlogCmsModules.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-28-blog-cms-modules/server/Xiigen.Flow.BlogCmsModules.Tests/Xiigen.Flow.BlogCmsModules.Tests.csproj" />
+  </Folder>
 </Solution>

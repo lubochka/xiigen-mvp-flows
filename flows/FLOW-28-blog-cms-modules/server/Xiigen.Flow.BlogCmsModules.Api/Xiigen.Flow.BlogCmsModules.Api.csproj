@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-28-blog-cms-modules</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.BlogCmsModules.Application\Xiigen.Flow.BlogCmsModules.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.BlogCmsModules.Infrastructure\Xiigen.Flow.BlogCmsModules.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+

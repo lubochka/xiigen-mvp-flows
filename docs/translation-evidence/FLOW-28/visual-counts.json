@@ -1,0 +1,46 @@
+﻿{
+    "flowId":  "FLOW-28",
+    "slug":  "blog-cms-modules",
+    "roles":  9,
+    "cells":  3,
+    "cascadePoints":  7,
+    "expected":  189,
+    "actual":  189,
+    "perCascade":  [
+                       {
+                           "cascadePoint":  "C0-source-flow",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C1-tenant-a-installed",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C2-tenant-a-adapted-published",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C3-tenant-b-installed-from-a",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C4-tenant-b-adapted-published",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C5-tenant-c-installed-from-b",
+                           "pngCount":  27,
+                           "manifest":  true
+                       },
+                       {
+                           "cascadePoint":  "C6-tenant-c-adapted",
+                           "pngCount":  27,
+                           "manifest":  true
+                       }
+                   ]
+}

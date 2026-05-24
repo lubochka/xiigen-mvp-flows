@@ -1,0 +1,16 @@
+﻿{
+  "flowId": "FLOW-28",
+  "flowSlug": "blog-cms-modules",
+  "api": {
+    "localUrl": "http://127.0.0.1:5328",
+    "containerUrl": "http://127.0.0.1:5328"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4328",
+    "evidencePort": 4328
+  }
+}
+
+
+
+

@@ -1,0 +1,70 @@
+{
+  "flowId": "FLOW-28",
+  "flowSlug": "blog-cms-modules",
+  "policies": [
+    {
+      "policyId": "blog-cms-modules-public-preview",
+      "route": "GET /api/dynamic/blog-cms-modules/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/blog-cms-modules/public-preview"],
+      "bypassReason": "Public Blog/CMS preview exposes no tenant-private authoring data."
+    },
+    {
+      "policyId": "blog-cms-modules-rules-validate",
+      "route": "POST /api/dynamic/blog-cms-modules/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-content-create",
+      "route": "POST /api/dynamic/blog-cms-modules",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-draft-autosave",
+      "route": "POST /api/dynamic/blog-cms-modules/drafts/autosave",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-content-publish",
+      "route": "POST /api/dynamic/blog-cms-modules/publish",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-comments-submit",
+      "route": "POST /api/dynamic/blog-cms-modules/comments",
+      "authPosture": "policy",
+      "allowedRoles": ["anonymous", "public_marketplace_visitor", "tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-stress-run",
+      "route": "POST /api/dynamic/blog-cms-modules/stress/run",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-plan-validate",
+      "route": "POST /api/dynamic/blog-cms-modules/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "blog-cms-modules-dashboard",
+      "route": "GET /api/dynamic/blog-cms-modules/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "flowId": "FLOW-28",
+  "flowSlug": "blog-cms-modules",
+  "endpoints": [
+    {
+      "endpointId": "blog-cms-modules-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/blog-cms-modules/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "bypassReason": "Public Blog/CMS preview exposes no tenant-private authoring data."
+    },
+    {
+      "endpointId": "blog-cms-modules-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-content-create",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-draft-autosave",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/drafts/autosave",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-content-publish",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/publish",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-comments-submit",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/comments",
+      "authPosture": "policy",
+      "requiredRoles": ["anonymous", "public_marketplace_visitor", "tenant_user", "tenant_admin", "freelancer", "business_partner", "event_organiser", "platform_admin", "platform_support"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-stress-run",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/stress/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/blog-cms-modules/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json",
+      "requestSchema": "contracts/schemas/blog-cms-modules-request.schema.json"
+    },
+    {
+      "endpointId": "blog-cms-modules-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/blog-cms-modules/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_support", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/blog-cms-modules-response.schema.json"
+    }
+  ]
+}
