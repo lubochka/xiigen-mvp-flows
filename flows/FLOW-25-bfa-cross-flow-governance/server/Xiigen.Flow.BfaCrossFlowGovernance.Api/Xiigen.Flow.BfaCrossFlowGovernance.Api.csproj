@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-25-bfa-cross-flow-governance</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.BfaCrossFlowGovernance.Application\Xiigen.Flow.BfaCrossFlowGovernance.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure\Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+

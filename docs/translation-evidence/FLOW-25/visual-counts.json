@@ -1,0 +1,44 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "expectedPerPoint":  24,
+    "expectedTotal":  168,
+    "actualTotal":  168,
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C0-source-flow\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C1-tenant-a-installed\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C2-tenant-a-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C3-tenant-b-installed-from-a\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C4-tenant-b-adapted-published\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\visual-evidence-manifest.json"
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  24,
+                              "manifest":  "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\visual-evidence-manifest.json"
+                          }
+                      ],
+    "pass":  true
+}

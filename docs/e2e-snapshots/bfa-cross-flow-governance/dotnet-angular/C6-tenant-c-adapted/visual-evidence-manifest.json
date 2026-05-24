@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-25",
+  "slug": "bfa-cross-flow-governance",
+  "cascadePoint": "C6-tenant-c-adapted",
+  "moduleName": "tessera-governance-review",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\governance-operator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\governance-operator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\governance-operator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\arbiter-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\arbiter-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\arbiter-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\flow-architect-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\impact-analyst-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\impact-analyst-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\impact-analyst-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\release-manager-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\release-manager-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\release-manager-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=release&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=rules&lang=en&module=tessera-governance-review"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=impact&lang=he&module=tessera-governance-review"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--tessera-governance-review\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=release&lang=en&module=tessera-governance-review"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "flowId": "FLOW-25",
+  "flowSlug": "bfa-cross-flow-governance",
+  "endpoints": [
+    {
+      "endpointId": "bfa-cross-flow-governance-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/bfa-cross-flow-governance/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "bypassReason": "Public governance preview exposes no tenant-private change records."
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["governance_operator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-change-submit",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/changes/submit",
+      "authPosture": "policy",
+      "requiredRoles": ["governance_operator", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-conflicts-scan",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/conflicts/scan",
+      "authPosture": "policy",
+      "requiredRoles": ["arbiter_reviewer", "impact_analyst", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-impact-analyze",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/impact/analyze",
+      "authPosture": "policy",
+      "requiredRoles": ["flow_architect", "impact_analyst", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-stress-run",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/stress/run",
+      "authPosture": "policy",
+      "requiredRoles": ["arbiter_reviewer", "impact_analyst", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-release-approve",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/release/approve",
+      "authPosture": "policy",
+      "requiredRoles": ["release_manager", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/bfa-cross-flow-governance/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json",
+      "requestSchema": "contracts/schemas/bfa-cross-flow-governance-request.schema.json"
+    },
+    {
+      "endpointId": "bfa-cross-flow-governance-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/bfa-cross-flow-governance/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["governance_operator", "arbiter_reviewer", "flow_architect", "impact_analyst", "release_manager", "tenant_admin", "platform_admin"],
+      "responseSchema": "contracts/schemas/bfa-cross-flow-governance-response.schema.json"
+    }
+  ]
+}

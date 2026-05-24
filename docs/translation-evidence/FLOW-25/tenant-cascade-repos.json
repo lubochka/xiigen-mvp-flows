@@ -1,0 +1,73 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "generatedAt":  "2026-05-24T13:12:16.2448773Z",
+    "repos":  [
+                  {
+                      "repoName":  "tenant-a--governance-arbiter",
+                      "githubUrl":  "https://github.com/lubochka/tenant-a--governance-arbiter",
+                      "localPath":  "C:\\Projects\\tenant-a--governance-arbiter",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "moduleName":  "governance-arbiter",
+                      "version":  "0.1.1",
+                      "commit":  "4e123e1ac54fe51a1c46333dd7fa9d0e111eb025",
+                      "branch":  "main"
+                  },
+                  {
+                      "repoName":  "tenant-a--acme-flow-governance",
+                      "githubUrl":  "https://github.com/lubochka/tenant-a--acme-flow-governance",
+                      "localPath":  "C:\\Projects\\tenant-a--acme-flow-governance",
+                      "tenantId":  "tenant-a",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "moduleName":  "acme-flow-governance",
+                      "version":  "0.1.2",
+                      "commit":  "2490d854ad8a91711e3b75806516fbc692011757",
+                      "branch":  "main"
+                  },
+                  {
+                      "repoName":  "tenant-b--acme-flow-governance",
+                      "githubUrl":  "https://github.com/lubochka/tenant-b--acme-flow-governance",
+                      "localPath":  "C:\\Projects\\tenant-b--acme-flow-governance",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "moduleName":  "acme-flow-governance",
+                      "version":  "0.1.2",
+                      "commit":  "57bf95834de5568925c816c26a1fcefd7f6ec582",
+                      "branch":  "main"
+                  },
+                  {
+                      "repoName":  "tenant-b--northwind-impact-arbiter",
+                      "githubUrl":  "https://github.com/lubochka/tenant-b--northwind-impact-arbiter",
+                      "localPath":  "C:\\Projects\\tenant-b--northwind-impact-arbiter",
+                      "tenantId":  "tenant-b",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "moduleName":  "northwind-impact-arbiter",
+                      "version":  "0.1.3",
+                      "commit":  "6a4cb54196051221af796ecdd33c854af12b9bed",
+                      "branch":  "main"
+                  },
+                  {
+                      "repoName":  "tenant-c--northwind-impact-arbiter",
+                      "githubUrl":  "https://github.com/lubochka/tenant-c--northwind-impact-arbiter",
+                      "localPath":  "C:\\Projects\\tenant-c--northwind-impact-arbiter",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "moduleName":  "northwind-impact-arbiter",
+                      "version":  "0.1.3",
+                      "commit":  "239485c8585c53267e12dc2129b3ee186f10dae1",
+                      "branch":  "main"
+                  },
+                  {
+                      "repoName":  "tenant-c--tessera-governance-review",
+                      "githubUrl":  "https://github.com/lubochka/tenant-c--tessera-governance-review",
+                      "localPath":  "C:\\Projects\\tenant-c--tessera-governance-review",
+                      "tenantId":  "tenant-c",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "moduleName":  "tessera-governance-review",
+                      "version":  "0.1.4",
+                      "commit":  "a5906a9a5580a1247c015ecf73d8dc1355c26ed3",
+                      "branch":  "main"
+                  }
+              ]
+}

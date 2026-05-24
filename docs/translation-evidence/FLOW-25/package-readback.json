@@ -1,0 +1,18 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "packageRoot":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-25",
+    "packages":  [
+                     {
+                         "file":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-25\\Xiigen.Flow.BfaCrossFlowGovernance.Application.0.1.1.nupkg",
+                         "name":  "Xiigen.Flow.BfaCrossFlowGovernance.Application.0.1.1.nupkg",
+                         "bytes":  26083
+                     },
+                     {
+                         "file":  "C:\\Projects\\xiigen-flows-dot-net-angular\\artifacts\\nuget\\FLOW-25\\Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.0.1.1.nupkg",
+                         "name":  "Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.0.1.1.nupkg",
+                         "bytes":  4062
+                     }
+                 ],
+    "applicationPackage":  "Xiigen.Flow.BfaCrossFlowGovernance.Application.0.1.1.nupkg",
+    "infrastructurePackage":  "Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.0.1.1.nupkg"
+}

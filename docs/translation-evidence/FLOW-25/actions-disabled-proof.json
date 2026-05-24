@@ -1,0 +1,43 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "generatedAt":  "2026-05-24T13:12:19.8945267Z",
+    "repos":  [
+                  {
+                      "repoName":  "tenant-a--governance-arbiter",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  },
+                  {
+                      "repoName":  "tenant-a--acme-flow-governance",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  },
+                  {
+                      "repoName":  "tenant-b--acme-flow-governance",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  },
+                  {
+                      "repoName":  "tenant-b--northwind-impact-arbiter",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  },
+                  {
+                      "repoName":  "tenant-c--northwind-impact-arbiter",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  },
+                  {
+                      "repoName":  "tenant-c--tessera-governance-review",
+                      "enabled":  false,
+                      "allowed_actions":  null,
+                      "verifiedDisabled":  true
+                  }
+              ],
+    "allDisabled":  true
+}

@@ -1,0 +1,130 @@
+<main class="shell" [attr.data-testid]="roleTestId()">
+  <header class="topbar">
+    <section>
+      <p class="eyebrow">{{ translated('Governance arbiter') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="subhead">{{ summary() }}</p>
+    </section>
+
+    <section class="controls" aria-label="view controls">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <div class="segmented">
+        <button type="button" [class.active]="screenState() === 'rules'" (click)="setScreenState('rules')">
+          {{ translated('Rules') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'impact'" (click)="setScreenState('impact')">
+          {{ translated('Impact') }}
+        </button>
+        <button type="button" [class.active]="screenState() === 'release'" (click)="setScreenState('release')">
+          {{ translated('Release') }}
+        </button>
+      </div>
+      <button type="button" class="icon-button" (click)="applyLanguage(language() === 'en' ? 'he' : 'en')">
+        {{ language() === 'en' ? 'HE' : 'EN' }}
+      </button>
+    </section>
+  </header>
+
+  <section class="summary-band">
+    <article>
+      <strong>72</strong>
+      <span>{{ translated('Active rules') }}</span>
+    </article>
+    <article>
+      <strong>25</strong>
+      <span>{{ translated('Stress checks') }}</span>
+    </article>
+    <article>
+      <strong>{{ readinessScore() }}</strong>
+      <span>{{ translated('Readiness') }}</span>
+    </article>
+  </section>
+
+  <section *ngIf="screenState() === 'rules'" class="workspace" data-testid="rules-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Rule envelope</p>
+        <h2>Change intake starts only after the rule pack is complete</h2>
+        <p>Missing, duplicate, or unscoped governance entries fail closed before conflict scanning writes state or emits events.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Gate</th>
+            <th>Outcome</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of ruleRows">
+            <td>{{ row.gate }}</td>
+            <td>{{ row.outcome }}</td>
+            <td>{{ row.effect }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="panel details">
+      <h3>Rule posture</h3>
+      <p *ngIf="publicView()" class="notice">Public visitors cannot validate or submit change records.</p>
+      <p *ngIf="canOperate()" class="notice success">This role can validate the rule pack and submit scoped changes.</p>
+      <p *ngIf="!publicView() && !canOperate()" class="notice">This role can inspect the posture but cannot submit changes.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'impact'" class="workspace" data-testid="impact-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Blast radius</p>
+        <h2>Breaking changes route to arbitration with evidence</h2>
+        <p>Required field removals, endpoint removals, and removed transitions produce a traceable conflict before human resolution.</p>
+      </div>
+      <div class="timeline">
+        <article *ngFor="let row of conflicts" [class]="row.severity">
+          <strong>{{ row.subject }}</strong>
+          <span>{{ row.route }}</span>
+          <small>{{ row.severity }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Impact controls</h3>
+      <label>
+        Readiness score
+        <input type="range" min="60" max="100" [ngModel]="readinessScore()" (ngModelChange)="setReadinessScore($event)" />
+      </label>
+      <p *ngIf="canReview()" class="notice success">This role can review conflict evidence and stress proof.</p>
+      <p *ngIf="!canReview()" class="notice">Conflict evidence is visible, but review actions are hidden.</p>
+    </aside>
+  </section>
+
+  <section *ngIf="screenState() === 'release'" class="workspace" data-testid="release-page">
+    <section class="panel table-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Release gate</p>
+        <h2>Approval requires scan, impact, and stress evidence</h2>
+        <p>The release gate stays closed until every required proof exists, then writes audit state before the resolved event is queued.</p>
+      </div>
+      <div class="metrics-grid">
+        <article *ngFor="let row of releaseMetrics">
+          <span>{{ row.signal }}</span>
+          <strong>{{ row.value }}</strong>
+          <small>{{ row.guard }}</small>
+        </article>
+      </div>
+    </section>
+
+    <aside class="panel details">
+      <h3>Release authority</h3>
+      <p *ngIf="canApprove()" class="notice success">This role can close the gate after the evidence set is complete.</p>
+      <p *ngIf="!canApprove()" class="notice">Release approval is hidden for this role.</p>
+    </aside>
+  </section>
+</main>

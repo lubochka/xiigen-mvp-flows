@@ -1,0 +1,14 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "gate":  "code-review",
+    "generatedAt":  "2026-05-24T13:12:19.9921736Z",
+    "checks":  [
+                   "no provider SDK imports",
+                   "no free tenant id parameters",
+                   "MicroserviceBase\u003cT\u003e",
+                   "DataProcessResult\u003cT\u003e",
+                   "outbox append after state write",
+                   "tenant payload rejected"
+               ],
+    "verdict":  "APPROVED"
+}

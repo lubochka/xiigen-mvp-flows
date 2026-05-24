@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Fabrics.InMemory" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Auth" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Fabrics.Scheduler" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Freedom" Version="0.1.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.BfaCrossFlowGovernance.Application\Xiigen.Flow.BfaCrossFlowGovernance.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure\Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
+
+

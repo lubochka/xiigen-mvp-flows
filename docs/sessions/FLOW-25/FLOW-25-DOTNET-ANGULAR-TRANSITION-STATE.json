@@ -1,0 +1,15 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "flowSlug":  "bfa-cross-flow-governance",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "generatedAt":  "2026-05-24T13:12:19.9965432Z",
+    "unitTests":  "15/15 passed",
+    "angularTests":  "5/5 passed",
+    "visualEvidence":  "168/168 PNGs",
+    "liveApiMatrix":  "PASS",
+    "tenantCascade":  "C0-C6 complete",
+    "actionsDisabled":  true,
+    "codeReview":  "APPROVED",
+    "qaReview":  "APPROVED"
+}

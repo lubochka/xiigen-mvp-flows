@@ -1,0 +1,198 @@
+﻿{
+    "flowId":  "FLOW-25",
+    "generatedAt":  "2026-05-24T12:57:42.6601605Z",
+    "matrix":  [
+                   {
+                       "name":  "public-preview",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  {
+                                    "flow":  "FLOW-25",
+                                    "summary":  "Preview the governance arbiter, rule-pack coverage, impact analysis, stress-test posture, and release gate without exposing tenant-private change data.",
+                                    "tabs":  [
+                                                 "rules",
+                                                 "impact",
+                                                 "release"
+                                             ]
+                                }
+                   },
+                   {
+                       "name":  "missing-token",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  {
+                                    "code":  "MISSING_TOKEN"
+                                }
+                   },
+                   {
+                       "name":  "cross-tenant-token",
+                       "expected":  401,
+                       "actual":  401,
+                       "pass":  true,
+                       "body":  {
+                                    "code":  "AUTH_CROSS_TENANT_TOKEN"
+                                }
+                   },
+                   {
+                       "name":  "wrong-role",
+                       "expected":  403,
+                       "actual":  403,
+                       "pass":  true,
+                       "body":  {
+                                    "code":  "WRONG_ROLE",
+                                    "allowedRoles":  [
+                                                         "governance_operator",
+                                                         "tenant_admin",
+                                                         "platform_admin"
+                                                     ]
+                                }
+                   },
+                   {
+                       "name":  "rules-valid",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  {
+                                    "code":  "RULE_PACK_VALID",
+                                    "ruleCount":  72,
+                                    "requiredCount":  72,
+                                    "coverage":  "CF-473-CF-544"
+                                }
+                   },
+                   {
+                       "name":  "conflict-scan",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  {
+                                    "scanId":  "acme-corp:scan:change-live-1:515cd43714b6e27642125993c2f37414",
+                                    "proposedChangeId":  "change-live-1",
+                                    "sourceFlow":  "FLOW-01",
+                                    "conflicts":  [
+                                                      {
+                                                          "ruleId":  "CF-477",
+                                                          "severity":  "CRITICAL",
+                                                          "subject":  "UserProfile.billingAddress",
+                                                          "reason":  "Required field removal breaks dependent flows."
+                                                      }
+                                                  ],
+                                    "compositeSeverity":  "CRITICAL",
+                                    "state":  "PENDING_RESOLUTION",
+                                    "tenantId":  "acme-corp"
+                                }
+                   },
+                   {
+                       "name":  "impact-analysis",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  {
+                                    "impactId":  "acme-corp:impact:8055875f433cc25852615e449c381ee7:b5383a48c6a5811fe8ed7df9a5a3039f",
+                                    "conflictScanId":  "acme-corp:scan:change-live-1:515cd43714b6e27642125993c2f37414",
+                                    "direct":  [
+                                                   "FLOW-01",
+                                                   "FLOW-12"
+                                               ],
+                                    "transitive":  [
+                                                       "FLOW-24"
+                                                   ],
+                                    "totalUniqueFlows":  3,
+                                    "maxHopReached":  3,
+                                    "circularDependencyDetected":  false,
+                                    "tenantId":  "acme-corp"
+                                }
+                   },
+                   {
+                       "name":  "stress-run",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  {
+                                    "stressRunId":  "acme-corp:stress:502a4039dd5455fb5920792a39d0c745",
+                                    "status":  "PASS",
+                                    "stressTestCount":  25,
+                                    "coverage":  "ST-300-ST-324",
+                                    "tenantId":  "acme-corp"
+                                }
+                   },
+                   {
+                       "name":  "release-approve",
+                       "expected":  201,
+                       "actual":  201,
+                       "pass":  true,
+                       "body":  {
+                                    "releaseGateId":  "acme-corp:release:change-live-1:3feadc99f9330a0d0dc15989219edec2",
+                                    "proposedChangeId":  "change-live-1",
+                                    "decision":  "REFACTOR_FLOWS",
+                                    "rationale":  "Refactor affected flows through governed release path.",
+                                    "status":  "APPROVED",
+                                    "auditMode":  "APPEND_ONLY",
+                                    "tenantId":  "acme-corp"
+                                }
+                   },
+                   {
+                       "name":  "dashboard",
+                       "expected":  200,
+                       "actual":  200,
+                       "pass":  true,
+                       "body":  {
+                                    "rulePacks":  [
+
+                                                  ],
+                                    "conflicts":  [
+                                                      {
+                                                          "scanId":  "acme-corp:scan:change-live-1:515cd43714b6e27642125993c2f37414",
+                                                          "proposedChangeId":  "change-live-1",
+                                                          "sourceFlow":  "FLOW-01",
+                                                          "conflicts":  [
+                                                                            {
+                                                                                "ruleId":  "CF-477",
+                                                                                "severity":  "CRITICAL",
+                                                                                "subject":  "UserProfile.billingAddress",
+                                                                                "reason":  "Required field removal breaks dependent flows."
+                                                                            }
+                                                                        ],
+                                                          "compositeSeverity":  "CRITICAL",
+                                                          "state":  "PENDING_RESOLUTION",
+                                                          "tenantId":  "acme-corp"
+                                                      }
+                                                  ],
+                                    "impactReports":  [
+                                                          {
+                                                              "impactId":  "acme-corp:impact:8055875f433cc25852615e449c381ee7:b5383a48c6a5811fe8ed7df9a5a3039f",
+                                                              "conflictScanId":  "acme-corp:scan:change-live-1:515cd43714b6e27642125993c2f37414",
+                                                              "direct":  [
+                                                                             "FLOW-01",
+                                                                             "FLOW-12"
+                                                                         ],
+                                                              "transitive":  [
+                                                                                 "FLOW-24"
+                                                                             ],
+                                                              "totalUniqueFlows":  3,
+                                                              "maxHopReached":  3,
+                                                              "circularDependencyDetected":  false,
+                                                              "tenantId":  "acme-corp"
+                                                          }
+                                                      ],
+                                    "stressRuns":  [
+                                                       {
+                                                           "stressRunId":  "acme-corp:stress:502a4039dd5455fb5920792a39d0c745",
+                                                           "status":  "PASS",
+                                                           "stressTestCount":  25,
+                                                           "coverage":  "ST-300-ST-324",
+                                                           "tenantId":  "acme-corp"
+                                                       }
+                                                   ],
+                                    "kpis":  {
+                                                 "ruleCount":  72,
+                                                 "stressTestCount":  25,
+                                                 "conflictCount":  1,
+                                                 "impactReportCount":  1
+                                             }
+                                }
+                   }
+               ],
+    "pass":  true
+}

@@ -1,0 +1,148 @@
+{
+  "flowId": "FLOW-25",
+  "flowSlug": "bfa-cross-flow-governance",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-25-bfa-cross-flow-governance",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.BfaCrossFlowGovernance.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/bfa-cross-flow-governance/dotnet-angular",
+  "sourceAliases": [
+    "bfa-cross-flow-governance",
+    "bfa-conflict-arbitration",
+    "business-flow-arbiter",
+    "change-intake-parser",
+    "dependency-index-query",
+    "static-conflict-detector",
+    "semantic-impact-analyzer",
+    "blast-radius-calculator",
+    "arbitration-state-machine",
+    "decision-audit-trail"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "anonymous",
+      "governance_operator",
+      "arbiter_reviewer",
+      "flow_architect",
+      "impact_analyst",
+      "release_manager",
+      "tenant_admin",
+      "platform_admin"
+    ],
+    "partial": [],
+    "wrongRoleForProtectedRoute": "anonymous"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "visual-evidence",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-11",
+      "relationship": "schema-and-dag-contract-authority",
+      "reason": "Governance arbitration validates flow definition and schema changes against the DAG and contract registry."
+    },
+    {
+      "flowId": "FLOW-22",
+      "relationship": "cms-template-governance-target",
+      "reason": "Published site and template changes must pass the governance rule envelope before deployment."
+    },
+    {
+      "flowId": "FLOW-23",
+      "relationship": "form-template-governance-target",
+      "reason": "Generated form templates and data binding changes are checked for cross-flow impact."
+    },
+    {
+      "flowId": "FLOW-24",
+      "relationship": "minor-safety-force-proceed-block",
+      "reason": "Learning safety changes cannot use force-proceed when minor safety gates are affected."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "engine-design-and-bfa-stress-corpus",
+    "sourceDocsRoot": "docs/sessions/FLOW-25",
+    "requiredDocuments": [
+      "docs/sessions/FLOW-25/FLOW-25-DESIGN-SIMULATION-R1.md",
+      "docs/sessions/FLOW-25/FLOW-25-IMPLEMENTATION-PLAN-v1.md",
+      "docs/xiigenDesign/V62_BFA_STRESS_TEST_MERGED.md",
+      "docs/xiigenDesign/TASK_TYPES_CATALOG_MERGED.md",
+      "docs/xiigenDesign/UNIFIED_SOURCE_INDEX_MERGED.md"
+    ],
+    "existingCfRules": 37,
+    "newCfRules": 35,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 14,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+    "realProviderReplacementPath": "server/Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure/BfaCrossFlowGovernanceServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "BFA Cross-Flow Governance fabric replacement",
+      "contract": "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow_module_name",
+    "defaultModuleName": "bfa-cross-flow-governance",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-bfa-cross-flow-governance.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": [
+      "C0-source-flow",
+      "C1-tenant-a-installed",
+      "C2-tenant-a-adapted-published",
+      "C3-tenant-b-installed-from-a",
+      "C4-tenant-b-adapted-published",
+      "C5-tenant-c-installed-from-b",
+      "C6-tenant-c-adapted"
+    ]
+  }
+}

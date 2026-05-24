@@ -1,0 +1,154 @@
+{
+  "flow": "FLOW-25",
+  "slug": "bfa-cross-flow-governance",
+  "cascadePoint": "C5-tenant-c-installed-from-b",
+  "moduleName": "northwind-impact-arbiter",
+  "expected": 24,
+  "actual": 24,
+  "evidence": [
+    {
+      "role": "anonymous",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "anonymous",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\anonymous-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=anonymous&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\governance-operator-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\governance-operator-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "governance_operator",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\governance-operator-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=governance_operator&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\arbiter-reviewer-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\arbiter-reviewer-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "arbiter_reviewer",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\arbiter-reviewer-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=arbiter_reviewer&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-architect-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-architect-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "flow_architect",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\flow-architect-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=flow_architect&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\impact-analyst-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\impact-analyst-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "impact_analyst",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\impact-analyst-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=impact_analyst&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\release-manager-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\release-manager-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "release_manager",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\release-manager-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=release_manager&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=tenant_admin&state=release&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C2-en-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=rules&lang=en&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4-he-rtl-populated-desktop",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=impact&lang=he&module=northwind-impact-arbiter"
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6-en-populated-mobile",
+      "path": "C:\\Projects\\tenant-c--northwind-impact-arbiter\\docs\\e2e-snapshots\\bfa-cross-flow-governance\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "url": "http://127.0.0.1:4323/?role=platform_admin&state=release&lang=en&module=northwind-impact-arbiter"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+﻿services:
+  FLOW-25-bfa-cross-flow-governance-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Api/Dockerfile
+    ports:
+      - "5324:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+

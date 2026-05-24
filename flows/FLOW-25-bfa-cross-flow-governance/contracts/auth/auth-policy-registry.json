@@ -1,0 +1,70 @@
+{
+  "flowId": "FLOW-25",
+  "flowSlug": "bfa-cross-flow-governance",
+  "policies": [
+    {
+      "policyId": "bfa-cross-flow-governance-public-preview",
+      "route": "GET /api/dynamic/bfa-cross-flow-governance/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/bfa-cross-flow-governance/public-preview"],
+      "bypassReason": "Public governance preview exposes no tenant-private change records."
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-rules-validate",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["governance_operator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-change-submit",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/changes/submit",
+      "authPosture": "policy",
+      "allowedRoles": ["governance_operator", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-conflicts-scan",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/conflicts/scan",
+      "authPosture": "policy",
+      "allowedRoles": ["arbiter_reviewer", "impact_analyst", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-impact-analyze",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/impact/analyze",
+      "authPosture": "policy",
+      "allowedRoles": ["flow_architect", "impact_analyst", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-stress-run",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/stress/run",
+      "authPosture": "policy",
+      "allowedRoles": ["arbiter_reviewer", "impact_analyst", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-release-approve",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/release/approve",
+      "authPosture": "policy",
+      "allowedRoles": ["release_manager", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-plan-validate",
+      "route": "POST /api/dynamic/bfa-cross-flow-governance/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "bfa-cross-flow-governance-dashboard",
+      "route": "GET /api/dynamic/bfa-cross-flow-governance/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["governance_operator", "arbiter_reviewer", "flow_architect", "impact_analyst", "release_manager", "tenant_admin", "platform_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

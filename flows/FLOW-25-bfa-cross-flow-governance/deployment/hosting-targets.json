@@ -1,0 +1,14 @@
+﻿{
+  "flowId": "FLOW-25",
+  "flowSlug": "bfa-cross-flow-governance",
+  "api": {
+    "localUrl": "http://127.0.0.1:5321",
+    "containerUrl": "http://127.0.0.1:5321"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4323",
+    "evidencePort": 4323
+  }
+}
+
+

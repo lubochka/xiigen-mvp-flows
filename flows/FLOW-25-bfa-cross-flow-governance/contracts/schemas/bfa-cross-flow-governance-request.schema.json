@@ -1,0 +1,39 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-25/bfa-cross-flow-governance-request.schema.json",
+  "title": "FLOW-25 BFA Cross-Flow Governance Request",
+  "type": "object",
+  "additionalProperties": true,
+  "not": {
+    "anyOf": [
+      { "required": ["tenantId"] },
+      { "required": ["tenant_id"] },
+      { "required": ["flowTenantId"] },
+      { "required": ["flow_tenant_id"] },
+      { "required": ["ownerTenantId"] },
+      { "required": ["owner_tenant_id"] }
+    ]
+  },
+  "properties": {
+    "proposedChangeId": { "type": "string", "minLength": 1 },
+    "changeType": { "type": "string", "enum": ["ENTITY_SCHEMA", "FLOW_DAG", "API_CONTRACT", "CODE_AST"] },
+    "sourceFlow": { "type": "string", "pattern": "^FLOW-[0-9]{2}$" },
+    "diffBlobRef": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "rules": { "type": "array", "items": { "type": "object" } },
+    "removedRequiredFields": { "type": "array", "items": { "type": "string" } },
+    "removedEndpoints": { "type": "array", "items": { "type": "string" } },
+    "transitionRemoved": { "type": "boolean" },
+    "aiCriticalWithoutEvidence": { "type": "boolean" },
+    "conflictScanId": { "type": "string", "minLength": 1 },
+    "impactId": { "type": "string", "minLength": 1 },
+    "stressRunId": { "type": "string", "minLength": 1 },
+    "impactedFlows": { "type": "array", "items": { "type": "string", "pattern": "^FLOW-[0-9]{2}$" } },
+    "stressResults": { "type": "array", "items": { "type": "object" } },
+    "decision": { "type": "string", "enum": ["REFACTOR_FLOWS", "REJECT_CHANGE", "COMPAT_MODE", "FORCE_PROCEED"] },
+    "rationale": { "type": "string" },
+    "planSteps": { "type": "array", "items": { "type": "object" } },
+    "maxTraversalDepth": { "type": "integer", "minimum": 1, "maximum": 5 }
+  }
+}
+
+

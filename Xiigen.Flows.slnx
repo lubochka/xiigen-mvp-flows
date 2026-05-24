@@ -175,4 +175,11 @@
     <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Infrastructure/Xiigen.Flow.AiSafetyModeration.Infrastructure.csproj" />
     <Project Path="flows/FLOW-24-ai-safety-moderation/server/Xiigen.Flow.AiSafetyModeration.Tests/Xiigen.Flow.AiSafetyModeration.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-25-bfa-cross-flow-governance/" />
+  <Folder Name="/flows/FLOW-25-bfa-cross-flow-governance/server/">
+    <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Api/Xiigen.Flow.BfaCrossFlowGovernance.Api.csproj" />
+    <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Application/Xiigen.Flow.BfaCrossFlowGovernance.Application.csproj" />
+    <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure/Xiigen.Flow.BfaCrossFlowGovernance.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-25-bfa-cross-flow-governance/server/Xiigen.Flow.BfaCrossFlowGovernance.Tests/Xiigen.Flow.BfaCrossFlowGovernance.Tests.csproj" />
+  </Folder>
 </Solution>
