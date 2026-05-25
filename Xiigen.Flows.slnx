@@ -272,4 +272,11 @@
     <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Infrastructure/Xiigen.Flow.RagQualityFeedback.Infrastructure.csproj" />
     <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Tests/Xiigen.Flow.RagQualityFeedback.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-39-oss-curriculum/" />
+  <Folder Name="/flows/FLOW-39-oss-curriculum/server/">
+    <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Api/Xiigen.Flow.OssCurriculum.Api.csproj" />
+    <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Application/Xiigen.Flow.OssCurriculum.Application.csproj" />
+    <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Infrastructure/Xiigen.Flow.OssCurriculum.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Tests/Xiigen.Flow.OssCurriculum.Tests.csproj" />
+  </Folder>
 </Solution>

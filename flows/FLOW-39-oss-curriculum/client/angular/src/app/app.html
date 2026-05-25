@@ -1,0 +1,108 @@
+﻿<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Learning feedback console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">×¢×‘×¨×™×ª</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="OSS curriculum states">
+    <button type="button" [class.active]="screenState() === 'tiers'" (click)="setScreenState('tiers')">{{ translated('Tiers') }}</button>
+    <button type="button" [class.active]="screenState() === 'shadow'" (click)="setScreenState('shadow')">{{ translated('Shadow') }}</button>
+    <button type="button" [class.active]="screenState() === 'signals'" (click)="setScreenState('signals')">{{ translated('Signals') }}</button>
+    <button type="button" [class.active]="screenState() === 'progress'" (click)="setScreenState('progress')">{{ translated('Progress') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="OSS curriculum metrics">
+    <div>
+      <span>{{ translated('Cycles reviewed') }}</span>
+      <strong>4</strong>
+      <small>curriculum services mapped to T597 through T600</small>
+    </div>
+    <div>
+      <span>{{ translated('Pattern updates') }}</span>
+      <strong>3</strong>
+      <small>canonical learning signals stored per OSS result</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>feedback evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Learning loop lifecycle</p>
+      <h2>Tier assignments, OSS shadow runs, learning signals, and plateau recommendations move through the outbox before queue dispatch</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of feedbackRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can assign tiers, queue shadow runs, collect signals, and record progress checks.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect curriculum evidence without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators validate DPO triples, submit shadow runs, and decide when pre-seeding recommendations are ready.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review tier assignments, retained timeout evidence, and broker dispatch history.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of feedbackSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'shadow'">
+    <p class="eyebrow">Asynchronous comparison</p>
+    <h2>Shadow runs are stored with ossModel and cycleId before the broker sees the event</h2>
+    <p>The primary cycle never waits for OSS model grades; traceability is preserved for later signal collection.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'signals'">
+    <p class="eyebrow">Canonical signal set</p>
+    <h2>Only grade trend, RAG context size, and graph context size are accepted</h2>
+    <p>Extra or missing signals fail the service gate so learning data stays comparable across OSS models.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'progress'">
+    <p class="eyebrow">Plateau handling</p>
+    <h2>Three static grades recommend pre-seeding without taking automatic action</h2>
+    <p>Curriculum progress is advisory: no model swap, no hidden route change, no tenant-scope shortcut.</p>
+  </section>
+</main>
+

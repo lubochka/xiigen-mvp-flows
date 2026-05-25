@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-39",
+  "flowSlug": "oss-curriculum",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "tiers",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 115918
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "shadow",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 137619
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "progress",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 110060
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "tiers",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 112161
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "shadow",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 133943
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "progress",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 108288
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "tiers",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 113906
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "shadow",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 135906
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "progress",
+      "path": "C:\\Projects\\tessera--northwind-shadow-run-training-hub\\docs\\e2e-snapshots\\oss-curriculum\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 108912
+    }
+  ]
+}

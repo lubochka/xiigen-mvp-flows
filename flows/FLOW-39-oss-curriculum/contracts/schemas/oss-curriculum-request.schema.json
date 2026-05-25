@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-39/oss-curriculum-request.schema.json",
+  "title": "OSS Curriculum Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "dpoTripleId": { "type": "string", "minLength": 1 },
+    "taskTypeId": { "type": "string", "minLength": 1 },
+    "archetype": { "type": "string", "enum": ["ROUTING", "DATA_PIPELINE", "PROCESSING", "ORCHESTRATION", "SCHEDULED"] },
+    "status": { "type": "string", "enum": ["VALIDATED"] },
+    "winningNodeId": { "type": "string", "minLength": 1 },
+    "cycleId": { "type": "string", "minLength": 1 },
+    "curriculumTier": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "ossModels": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "shadowRunId": { "type": "string", "minLength": 1 },
+    "ossModel": { "type": "string", "minLength": 1 },
+    "grade": { "type": "number", "minimum": 0 },
+    "ragContextSize": { "type": "integer", "minimum": 0 },
+    "graphContextSize": { "type": "integer", "minimum": 0 },
+    "station": { "type": "string", "minLength": 1 },
+    "minCycles": { "type": "integer", "minimum": 1 },
+    "simulateTimeout": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,23 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-39/oss-curriculum-response.schema.json",
+  "title": "OSS Curriculum Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "cycleId": { "type": "string" },
+    "patternId": { "type": "string" },
+    "retrievalId": { "type": "string" },
+    "outcome": { "type": "string" },
+    "previousQualityScore": { "type": "number" },
+    "delta": { "type": "number" },
+    "newQualityScore": { "type": "number" },
+    "af9Score": { "type": "number" },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "updatedAt": { "type": "string" },
+    "extractedRuleCount": { "type": "integer" }
+  }
+}
+

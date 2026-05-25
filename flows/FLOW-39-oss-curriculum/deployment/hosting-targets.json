@@ -1,0 +1,19 @@
+﻿{
+  "flowId": "FLOW-39",
+  "flowSlug": "oss-curriculum",
+  "api": {
+    "localUrl": "http://127.0.0.1:5330",
+    "containerUrl": "http://127.0.0.1:5330"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4339",
+    "evidencePort": 4339
+  }
+}
+
+
+
+
+
+
+

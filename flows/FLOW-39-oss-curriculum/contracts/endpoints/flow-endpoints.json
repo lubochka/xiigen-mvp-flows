@@ -1,0 +1,77 @@
+{
+  "flowId": "FLOW-39",
+  "flowSlug": "oss-curriculum",
+  "endpoints": [
+    {
+      "endpointId": "flow39-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/oss-curriculum/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe OSS curriculum metadata only."
+    },
+    {
+      "endpointId": "flow39-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-tier-assign",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-shadow-runs",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum/shadow-runs",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-signals",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum/signals",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-progress",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum/progress",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/oss-curriculum/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/oss-curriculum-request.schema.json",
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    },
+    {
+      "endpointId": "flow39-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/oss-curriculum/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/oss-curriculum-response.schema.json"
+    }
+  ]
+}

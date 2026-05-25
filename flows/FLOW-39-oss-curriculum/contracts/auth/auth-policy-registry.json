@@ -1,0 +1,71 @@
+﻿{
+  "flowId": "FLOW-39",
+  "flowSlug": "oss-curriculum",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow39-public-preview",
+      "route": "GET /api/dynamic/oss-curriculum/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/oss-curriculum/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe OSS curriculum metadata only."
+    },
+    {
+      "policyId": "flow39-rules-validate",
+      "route": "POST /api/dynamic/oss-curriculum/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-tier-assign",
+      "route": "POST /api/dynamic/oss-curriculum",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-shadow-runs",
+      "route": "POST /api/dynamic/oss-curriculum/shadow-runs",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-signals",
+      "route": "POST /api/dynamic/oss-curriculum/signals",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-progress",
+      "route": "POST /api/dynamic/oss-curriculum/progress",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-plan-validate",
+      "route": "POST /api/dynamic/oss-curriculum/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow39-dashboard",
+      "route": "GET /api/dynamic/oss-curriculum/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}
+
+
