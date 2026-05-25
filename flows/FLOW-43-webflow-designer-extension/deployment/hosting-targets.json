@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-43",
+  "flowSlug": "webflow-designer-extension",
+  "api": {
+    "localUrl": "http://127.0.0.1:5340",
+    "containerUrl": "http://127.0.0.1:5340"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4340",
+    "evidencePort": 4340
+  }
+}

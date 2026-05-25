@@ -1,0 +1,59 @@
+{
+  "flowId": "FLOW-43",
+  "flowSlug": "webflow-designer-extension",
+  "endpoints": [
+    {
+      "endpointId": "flow43-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/webflow-designer-extension/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe Webflow Designer Extension metadata only."
+    },
+    {
+      "endpointId": "flow43-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/webflow-designer-extension/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/webflow-designer-extension-request.schema.json",
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json"
+    },
+    {
+      "endpointId": "flow43-run",
+      "method": "POST",
+      "path": "/api/dynamic/webflow-designer-extension/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/webflow-designer-extension-request.schema.json",
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json"
+    },
+    {
+      "endpointId": "flow43-publication",
+      "method": "POST",
+      "path": "/api/dynamic/webflow-designer-extension/publication",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/webflow-designer-extension-request.schema.json",
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json"
+    },
+    {
+      "endpointId": "flow43-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/webflow-designer-extension/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/webflow-designer-extension-request.schema.json",
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json"
+    },
+    {
+      "endpointId": "flow43-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/webflow-designer-extension/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/webflow-designer-extension-response.schema.json"
+    }
+  ]
+}

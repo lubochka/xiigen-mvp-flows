@@ -1,0 +1,9 @@
+services:
+  FLOW-43-webflow-designer-extension-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Api/Dockerfile
+    ports:
+      - "5340:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,63 @@
+{
+    "flowId":  "FLOW-43",
+    "flowSlug":  "webflow-designer-extension",
+    "pass":  true,
+    "cases":  [
+                  {
+                      "name":  "public-preview anonymous",
+                      "method":  "GET",
+                      "path":  "/api/dynamic/webflow-designer-extension/public-preview",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "missing-token run",
+                      "method":  "POST",
+                      "path":  "/api/dynamic/webflow-designer-extension/run",
+                      "expectedStatus":  401,
+                      "actualStatus":  401,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "wrong-role run",
+                      "method":  "POST",
+                      "path":  "/api/dynamic/webflow-designer-extension/run",
+                      "expectedStatus":  403,
+                      "actualStatus":  403,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "cross-tenant run",
+                      "method":  "POST",
+                      "path":  "/api/dynamic/webflow-designer-extension/run",
+                      "expectedStatus":  401,
+                      "actualStatus":  401,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "tenant-admin run",
+                      "method":  "POST",
+                      "path":  "/api/dynamic/webflow-designer-extension/run",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "platform-admin publication",
+                      "method":  "POST",
+                      "path":  "/api/dynamic/webflow-designer-extension/publication",
+                      "expectedStatus":  201,
+                      "actualStatus":  201,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "platform-support dashboard",
+                      "method":  "GET",
+                      "path":  "/api/dynamic/webflow-designer-extension/dashboard",
+                      "expectedStatus":  200,
+                      "actualStatus":  200,
+                      "pass":  true
+                  }
+              ]
+}

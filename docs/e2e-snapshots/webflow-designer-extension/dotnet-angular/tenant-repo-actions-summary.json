@@ -1,0 +1,55 @@
+{
+    "flowId":  "FLOW-43",
+    "flowSlug":  "webflow-designer-extension",
+    "pass":  true,
+    "repos":  [
+                  {
+                      "repo":  "acme-corp--webflow-designer-extension",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "tenantId":  "acme-corp",
+                      "moduleName":  "webflow-designer-extension",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "acme-corp--acme-webflow-layout-kit",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "tenantId":  "acme-corp",
+                      "moduleName":  "acme-webflow-layout-kit",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "northwind--acme-webflow-layout-kit",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "tenantId":  "northwind",
+                      "moduleName":  "acme-webflow-layout-kit",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "northwind--northwind-webflow-css-bridge",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "tenantId":  "northwind",
+                      "moduleName":  "northwind-webflow-css-bridge",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "tessera--northwind-webflow-css-bridge",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "tenantId":  "tessera",
+                      "moduleName":  "northwind-webflow-css-bridge",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "tessera--tessera-webflow-style-adapter",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "tenantId":  "tessera",
+                      "moduleName":  "tessera-webflow-style-adapter",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  }
+              ]
+}

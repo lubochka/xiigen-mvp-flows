@@ -1,0 +1,114 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Webflow Designer Extension console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Webflow Designer Extension states">
+    <button type="button" [class.active]="screenState() === 'shorthands'" (click)="setScreenState('shorthands')">{{ translated('Shorthands') }}</button>
+    <button type="button" [class.active]="screenState() === 'routing'" (click)="setScreenState('routing')">{{ translated('Routing') }}</button>
+    <button type="button" [class.active]="screenState() === 'diff'" (click)="setScreenState('diff')">{{ translated('Diff') }}</button>
+    <button type="button" [class.active]="screenState() === 'package'" (click)="setScreenState('package')">{{ translated('Package') }}</button>
+    <button type="button" [class.active]="screenState() === 'publication'" (click)="setScreenState('publication')">{{ translated('Publication') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Webflow Designer Extension metrics">
+    <div>
+      <span>{{ translated('Mapped elements') }}</span>
+      <strong>50+</strong>
+      <small>layout, media, navigation, commerce, forms, and unknown types stay covered</small>
+    </div>
+    <div>
+      <span>{{ translated('Package checks') }}</span>
+      <strong>7</strong>
+      <small>all Webflow adapter rules covered by local tests and visual evidence</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>Tier D adapter evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Adapter lifecycle</p>
+      <h2>Webflow Designer CSS becomes pipeline-compatible style data with a native validation diff</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adapterRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can validate adapter rules, record package publication, and inspect Webflow parity outcomes.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect package evidence and validation-diff counts without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators validate the Webflow adapter package and approve tenant-safe marketplace adoption.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review CSS expansion, routing, validation diff, and publication evidence.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of adapterSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'routing'">
+    <p class="eyebrow">Element routing</p>
+    <h2>Advanced Designer categories route to non-empty style maps</h2>
+    <p>Navigation, tabs, slider, dropdown, lightbox, symbols, commerce, embeds, maps, media, and forms all preserve usable properties.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'diff'">
+    <p class="eyebrow">Validation diff</p>
+    <h2>Pipeline CSS is compared against native Webflow CSS before publication evidence is accepted</h2>
+    <p>Pipeline-only, native-only, and value-difference buckets keep parity problems visible.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'package'">
+    <p class="eyebrow">Package boundary</p>
+    <h2>The package remains pure and importable without the live Webflow Designer runtime</h2>
+    <p>Runtime Webflow SDK access stays outside parser and adapter modules.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'publication'">
+    <p class="eyebrow">Publication</p>
+    <h2>The local registry readback confirms the package includes STEP-1 invariants and the functional spec</h2>
+    <p>Global publication stays behind platform approval and per-use pricing metadata.</p>
+  </section>
+</main>

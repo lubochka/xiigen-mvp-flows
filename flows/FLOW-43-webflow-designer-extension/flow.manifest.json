@@ -1,0 +1,142 @@
+{
+    "flowId":  "FLOW-43",
+    "flowSlug":  "webflow-designer-extension",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-43-webflow-designer-extension",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.WebflowDesignerExtension.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/webflow-designer-extension/dotnet-angular",
+    "sourceAliases":  [
+                          "webflow-designer-extension",
+                          "webflow-css-shorthand-parser",
+                          "webflow-element-property-router",
+                          "webflow-validation-diff",
+                          "@xiigen/webflow-designer-extension"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin",
+                                  "tenant_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "platform_support"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+                                                   "FLOW-43 is an external adapter package with platform-admin approval, tenant-admin package review, and platform-support inspection.",
+                                                   "Webflow Designer Extension implements pure CSS shorthand expansion, advanced element property routing, unknown CSS pass-through, validation diff evidence, package evidence, local registry readback, and global publication approval locally before real Webflow Designer SDK replacement."
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-00",
+                                 "relationship":  "bootstrap-prerequisite",
+                                 "reason":  "FLOW-43 packages only after the platform contract and package skeleton are active."
+                             },
+                             {
+                                 "flowId":  "FLOW-37",
+                                 "relationship":  "platform-governance-readback",
+                                 "reason":  "FLOW-43 uses design-system governance evidence to keep external adapter package publication inspectable without leaking tenant data."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "adapters/webflow/FT-W1-DESIGNER/docs",
+                               "requiredDocuments":  [
+                                                         "adapters/webflow/FT-W1-DESIGNER/docs/FUNCTIONAL-SPEC.md",
+                                                         "adapters/webflow/FT-W1-DESIGNER/docs/STEP-1-INVARIANTS.md",
+                                                         "adapters/webflow/FT-W1-DESIGNER/src/webflow-designer-adapter.ts",
+                                                         "adapters/webflow/FT-W1-DESIGNER/src/css-parser.ts",
+                                                         "adapters/webflow/FT-W1-DESIGNER/__tests__/webflow-designer-adapter.spec.ts"
+                                                     ],
+                               "existingCfRules":  0,
+                               "newCfRules":  7,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document and outbox providers; Webflow Designer runtime is not required for the pure CSS parser, property router, or validation diff test path.",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.WebflowDesignerExtension.Infrastructure/WebflowDesignerExtensionServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Webflow Designer runtime replacement",
+                                             "contract":  "IDocumentStore and IOutboxStore return DataProcessResult and read tenant scope from TenantContext; real Webflow runtime access remains outside pure parser and adapter modules.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow43_module_name",
+                       "defaultModuleName":  "webflow-designer-extension",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-webflow-designer-extension.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}

@@ -1,0 +1,55 @@
+{
+  "flowId": "FLOW-43",
+  "flowSlug": "webflow-designer-extension",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow43-public-preview",
+      "route": "GET /api/dynamic/webflow-designer-extension/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/webflow-designer-extension/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe Webflow Designer Extension metadata only."
+    },
+    {
+      "policyId": "flow43-rules-validate",
+      "route": "POST /api/dynamic/webflow-designer-extension/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow43-run",
+      "route": "POST /api/dynamic/webflow-designer-extension/run",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow43-publication",
+      "route": "POST /api/dynamic/webflow-designer-extension/publication",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow43-plan-validate",
+      "route": "POST /api/dynamic/webflow-designer-extension/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow43-dashboard",
+      "route": "GET /api/dynamic/webflow-designer-extension/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

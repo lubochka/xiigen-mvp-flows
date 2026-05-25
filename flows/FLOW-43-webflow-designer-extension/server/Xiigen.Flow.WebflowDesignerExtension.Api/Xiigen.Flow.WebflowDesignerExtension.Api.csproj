@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-43-webflow-designer-extension</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.WebflowDesignerExtension.Application\Xiigen.Flow.WebflowDesignerExtension.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.WebflowDesignerExtension.Infrastructure\Xiigen.Flow.WebflowDesignerExtension.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

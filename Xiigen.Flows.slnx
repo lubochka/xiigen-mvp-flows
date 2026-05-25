@@ -300,4 +300,10 @@
     <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Infrastructure/Xiigen.Flow.MiroShapeAdapter.Infrastructure.csproj" />
     <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Tests/Xiigen.Flow.MiroShapeAdapter.Tests.csproj" />
   </Folder>
-</Solution>
+  <Folder Name="/flows/FLOW-43-webflow-designer-extension/" />
+  <Folder Name="/flows/FLOW-43-webflow-designer-extension/server/">
+    <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Api/Xiigen.Flow.WebflowDesignerExtension.Api.csproj" />
+    <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Application/Xiigen.Flow.WebflowDesignerExtension.Application.csproj" />
+    <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Infrastructure/Xiigen.Flow.WebflowDesignerExtension.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Tests/Xiigen.Flow.WebflowDesignerExtension.Tests.csproj" />
+  </Folder></Solution>

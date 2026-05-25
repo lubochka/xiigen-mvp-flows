@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FLOW-43 Webflow Designer Extension Response",
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "flow": { "type": "string" },
+    "packageName": { "type": "string" },
+    "elementCount": { "type": "integer" },
+    "routeCount": { "type": "integer" },
+    "diffCount": { "type": "integer" },
+    "ruleCount": { "type": "integer" },
+    "taskTypeCount": { "type": "integer" }
+  },
+  "additionalProperties": true
+}
