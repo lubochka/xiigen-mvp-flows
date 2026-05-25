@@ -1,0 +1,70 @@
+{
+    "flowId":  "FLOW-41",
+    "flowSlug":  "canva-text-adapter",
+    "generatedAt":  "2026-05-25T11:48:41.7932679Z",
+    "repos":  [
+                  {
+                      "repo":  "acme-corp--canva-text-adapter",
+                      "tenant":  "acme-corp",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  },
+                  {
+                      "repo":  "acme-corp--acme-canva-brand-text-kit",
+                      "tenant":  "acme-corp",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  },
+                  {
+                      "repo":  "northwind--acme-canva-brand-text-kit",
+                      "tenant":  "northwind",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  },
+                  {
+                      "repo":  "northwind--northwind-canva-campaign-adapter",
+                      "tenant":  "northwind",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  },
+                  {
+                      "repo":  "tessera--northwind-canva-campaign-adapter",
+                      "tenant":  "tessera",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  },
+                  {
+                      "repo":  "tessera--tessera-canva-editorial-adapter",
+                      "tenant":  "tessera",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "actionsDisabled":  true,
+                      "result":  "PASS",
+                      "hasGithubDirectory":  false,
+                      "hasXiigenDirectory":  false,
+                      "githubActionsEnabled":  false
+                  }
+              ],
+    "total":  6,
+    "passed":  6,
+    "failed":  0
+}

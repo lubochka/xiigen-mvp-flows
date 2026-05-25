@@ -286,4 +286,11 @@
     <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Infrastructure/Xiigen.Flow.ClientPush.Infrastructure.csproj" />
     <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Tests/Xiigen.Flow.ClientPush.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-41-canva-text-adapter/" />
+  <Folder Name="/flows/FLOW-41-canva-text-adapter/server/">
+    <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Api/Xiigen.Flow.CanvaTextAdapter.Api.csproj" />
+    <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Application/Xiigen.Flow.CanvaTextAdapter.Application.csproj" />
+    <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Infrastructure/Xiigen.Flow.CanvaTextAdapter.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Tests/Xiigen.Flow.CanvaTextAdapter.Tests.csproj" />
+  </Folder>
 </Solution>

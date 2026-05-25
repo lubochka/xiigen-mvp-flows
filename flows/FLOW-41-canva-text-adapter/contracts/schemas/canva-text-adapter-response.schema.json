@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-41/canva-text-adapter-response.schema.json",
+  "title": "Canva Text Adapter Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "runId": { "type": "string" },
+    "tenantScope": { "type": "string" },
+    "readCount": { "type": "integer" },
+    "styleCount": { "type": "integer" },
+    "written": { "type": "integer" },
+    "failed": { "type": "integer" },
+    "packageName": { "type": "string" },
+    "version": { "type": ["integer", "string"] },
+    "scope": { "type": "string" },
+    "approvedForTenantAdoption": { "type": "boolean" },
+    "pricingModel": { "type": "string" },
+    "recordedAt": { "type": "string" },
+    "code": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

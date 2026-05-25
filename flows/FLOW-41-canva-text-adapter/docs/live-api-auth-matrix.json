@@ -1,0 +1,66 @@
+{
+    "flowId":  "FLOW-41",
+    "flowSlug":  "canva-text-adapter",
+    "generatedAt":  "2026-05-25T11:29:40.4062173Z",
+    "total":  8,
+    "passed":  8,
+    "failed":  0,
+    "tests":  [
+                  {
+                      "name":  "public-preview-anonymous",
+                      "expected":  200,
+                      "actual":  200,
+                      "result":  "PASS",
+                      "response":  "{\"flow\":\"FLOW-41\",\"packageName\":\"@xiigen/canva-text-elements-adapter\",\"summary\":\"Canva text elements are mapped into the shared XIIGen/Figma-shaped contract and written back through a user-triggered Canva payload.\",\"tabs\":[\"read mapping\",\"style bridge\",\"write payload\",\"publication\"]}"
+                  },
+                  {
+                      "name":  "missing-token-401",
+                      "expected":  401,
+                      "actual":  401,
+                      "result":  "PASS",
+                      "response":  "{\"code\":\"MISSING_TOKEN\"}"
+                  },
+                  {
+                      "name":  "wrong-role-403",
+                      "expected":  403,
+                      "actual":  403,
+                      "result":  "PASS",
+                      "response":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"platform_admin\"]}"
+                  },
+                  {
+                      "name":  "cross-tenant-token-401",
+                      "expected":  401,
+                      "actual":  401,
+                      "result":  "PASS",
+                      "response":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                  },
+                  {
+                      "name":  "platform-admin-run-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "result":  "PASS",
+                      "response":  "{\"id\":\"acme-corp:run:run-live-001\",\"runId\":\"run-live-001\",\"tenantScope\":\"acme-corp\",\"readCount\":1,\"styleCount\":1,\"written\":1,\"failed\":0,\"packageName\":\"@xiigen/canva-text-elements-adapter\",\"version\":1,\"recordedAt\":\"2026-05-25T11:29:39.6732510+00:00\"}"
+                  },
+                  {
+                      "name":  "tenant-admin-run-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "result":  "PASS",
+                      "response":  "{\"id\":\"northwind:run:run-live-001\",\"runId\":\"run-live-001\",\"tenantScope\":\"northwind\",\"readCount\":1,\"styleCount\":1,\"written\":1,\"failed\":0,\"packageName\":\"@xiigen/canva-text-elements-adapter\",\"version\":1,\"recordedAt\":\"2026-05-25T11:29:39.7474288+00:00\"}"
+                  },
+                  {
+                      "name":  "platform-support-dashboard-200",
+                      "expected":  200,
+                      "actual":  200,
+                      "result":  "PASS",
+                      "response":  "{\"adapterRuns\":[{\"id\":\"northwind:run:run-live-001\",\"runId\":\"run-live-001\",\"tenantScope\":\"northwind\",\"readCount\":1,\"styleCount\":1,\"written\":1,\"failed\":0,\"packageName\":\"@xiigen/canva-text-elements-adapter\",\"version\":1,\"recordedAt\":\"2026-05-25T11:29:39.7474288+00:00\"}],\"publications\":[],\"kpis\":{\"runCount\":1,\"publicationCount\":0,\"requiredRuleCount\":7}}"
+                  },
+                  {
+                      "name":  "platform-admin-publication-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "result":  "PASS",
+                      "response":  "{\"id\":\"acme-corp:publication:@xiigen/canva-text-elements-adapter:1.0.1\",\"packageName\":\"@xiigen/canva-text-elements-adapter\",\"version\":\"1.0.1\",\"tenantScope\":\"acme-corp\",\"scope\":\"GLOBAL\",\"approvedForTenantAdoption\":true,\"pricingModel\":\"PER_USE\",\"recordedAt\":\"2026-05-25T11:29:40.3574205+00:00\"}"
+                  }
+              ]
+}

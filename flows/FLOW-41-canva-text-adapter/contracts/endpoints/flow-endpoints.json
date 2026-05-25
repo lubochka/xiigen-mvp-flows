@@ -1,0 +1,59 @@
+{
+  "flowId": "FLOW-41",
+  "flowSlug": "canva-text-adapter",
+  "endpoints": [
+    {
+      "endpointId": "flow41-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/canva-text-adapter/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe Canva Text Adapter metadata only."
+    },
+    {
+      "endpointId": "flow41-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/canva-text-adapter/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/canva-text-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow41-run",
+      "method": "POST",
+      "path": "/api/dynamic/canva-text-adapter/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/canva-text-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow41-publication",
+      "method": "POST",
+      "path": "/api/dynamic/canva-text-adapter/publication",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/canva-text-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow41-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/canva-text-adapter/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/canva-text-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow41-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/canva-text-adapter/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/canva-text-adapter-response.schema.json"
+    }
+  ]
+}

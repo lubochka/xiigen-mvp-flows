@@ -1,0 +1,53 @@
+{
+    "flowId":  "FLOW-41",
+    "flowSlug":  "canva-text-adapter",
+    "generatedAt":  "2026-05-25T11:32:31.5358504Z",
+    "cascadePoints":  [
+                          {
+                              "point":  "C0-source-flow",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C1-tenant-a-installed",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C2-tenant-a-adapted-published",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C3-tenant-b-installed-from-a",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C4-tenant-b-adapted-published",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C5-tenant-c-installed-from-b",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          },
+                          {
+                              "point":  "C6-tenant-c-adapted",
+                              "expected":  9,
+                              "actual":  9,
+                              "zeroByte":  0
+                          }
+                      ],
+    "totalExpected":  63,
+    "totalActual":  63,
+    "totalZeroByte":  0,
+    "verdict":  "PASS"
+}

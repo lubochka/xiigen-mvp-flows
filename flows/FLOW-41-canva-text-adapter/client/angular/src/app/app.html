@@ -1,0 +1,107 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Canva Text Adapter console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">×¢×‘×¨×™×ª</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Canva Text Adapter states">
+    <button type="button" [class.active]="screenState() === 'read'" (click)="setScreenState('read')">{{ translated('Read') }}</button>
+    <button type="button" [class.active]="screenState() === 'style'" (click)="setScreenState('style')">{{ translated('Style') }}</button>
+    <button type="button" [class.active]="screenState() === 'write'" (click)="setScreenState('write')">{{ translated('Write') }}</button>
+    <button type="button" [class.active]="screenState() === 'publication'" (click)="setScreenState('publication')">{{ translated('Publication') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Canva Text Adapter metrics">
+    <div>
+      <span>{{ translated('Mapped elements') }}</span>
+      <strong>3</strong>
+      <small>element, style, and source records stay aligned</small>
+    </div>
+    <div>
+      <span>{{ translated('Package checks') }}</span>
+      <strong>7</strong>
+      <small>all adapter rules covered by local tests and visual evidence</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>C5 adapter evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Adapter lifecycle</p>
+      <h2>Canva text records become shared XIIGen style inputs, then return as user-triggered Canva write payloads</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of pushRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can validate adapter rules, record package publication, and inspect mapping outcomes.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect package evidence and write-failure counts without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators validate the Canva adapter package and approve tenant-safe marketplace adoption.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review read mapping, write payloads, and publication evidence.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of pushSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'style'">
+    <p class="eyebrow">Style bridge</p>
+    <h2>Canva weight and alignment values normalize into the canonical shared style vocabulary</h2>
+    <p>Regular and bold weights, start and center and end alignment, and RGB colors are deterministic.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'write'">
+    <p class="eyebrow">Write payload</p>
+    <h2>Enhanced shared styles are converted back to Canva payloads one item at a time</h2>
+    <p>Writer failures are counted and the rest of the batch continues.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'publication'">
+    <p class="eyebrow">Publication</p>
+    <h2>The local registry readback confirms the package includes STEP-1 invariants and the functional spec</h2>
+    <p>Global publication stays behind platform approval and per-use pricing metadata.</p>
+  </section>
+</main>
