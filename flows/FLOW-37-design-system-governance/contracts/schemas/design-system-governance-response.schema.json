@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-37/design-system-governance-response.schema.json",
+  "title": "Design System Governance Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "designSystemId": { "type": "string" },
+    "stackFamily": { "type": "string" },
+    "tokenSetName": { "type": "string" },
+    "genesisFrame": { "type": "string" },
+    "targetStack": { "type": "string" },
+    "compatibilityScore": { "type": "integer" },
+    "designDebtScore": { "type": "integer" },
+    "tokenConsistencyScore": { "type": "integer" },
+    "classification": { "type": "string", "enum": ["APPROVED", "NEEDS_REVIEW", "BLOCKED"] },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "updatedAt": { "type": "string" }
+  }
+}

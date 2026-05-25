@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-37",
+  "flowSlug": "design-system-governance",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 114151
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 133768
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 111552
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 113276
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 132724
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 110642
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 113416
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 133095
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\acme-corp--design-system-governance\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 110844
+    }
+  ]
+}

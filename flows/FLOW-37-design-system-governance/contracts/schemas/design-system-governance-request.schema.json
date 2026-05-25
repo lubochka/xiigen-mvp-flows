@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-37/design-system-governance-request.schema.json",
+  "title": "Design System Governance Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "designSystemId": { "type": "string", "minLength": 1 },
+    "stackFamily": { "type": "string", "minLength": 1 },
+    "tokenSetName": { "type": "string", "minLength": 1 },
+    "genesisFrame": { "type": "string", "minLength": 1 },
+    "targetStack": { "type": "string", "minLength": 1 },
+    "compatibilityScore": { "type": "integer", "minimum": 1 },
+    "designDebtScore": { "type": "integer", "minimum": 0 },
+    "tokenConsistencyScore": { "type": "integer", "minimum": 1 },
+    "excludedIncompatibilities": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "simulateTimeout": { "type": "boolean" }
+  },
+  "required": [
+    "designSystemId",
+    "stackFamily",
+    "tokenSetName",
+    "genesisFrame",
+    "targetStack",
+    "compatibilityScore",
+    "designDebtScore",
+    "tokenConsistencyScore"
+  ]
+}

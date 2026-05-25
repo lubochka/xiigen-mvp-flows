@@ -1,0 +1,101 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Design governance console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Design system governance states">
+    <button type="button" [class.active]="screenState() === 'classification'" (click)="setScreenState('classification')">{{ translated('Classification') }}</button>
+    <button type="button" [class.active]="screenState() === 'prompts'" (click)="setScreenState('prompts')">{{ translated('Prompts') }}</button>
+    <button type="button" [class.active]="screenState() === 'debt'" (click)="setScreenState('debt')">{{ translated('Debt') }}</button>
+    <button type="button" [class.active]="screenState() === 'compatibility'" (click)="setScreenState('compatibility')">{{ translated('Compatibility') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Design system governance metrics">
+    <div>
+      <span>{{ translated('Reviewed systems') }}</span>
+      <strong>3</strong>
+      <small>stack-aware design surfaces</small>
+    </div>
+    <div>
+      <span>{{ translated('Prompt frames') }}</span>
+      <strong>4</strong>
+      <small>incompatibilities excluded before generation</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>design governance evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Design-system lifecycle</p>
+      <h2>Stack compatibility, prompt exclusions, design debt, and token consistency are reviewed before a generated surface moves downstream</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of governanceRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can classify design systems, update prompt exclusions, and publish readiness evidence.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect governance evidence without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators register governed design systems and review stack-specific readiness.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review classifications, prompt exclusions, debt signals, and compatibility outcomes.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of governanceSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'prompts'">
+    <p class="eyebrow">Genesis prompt exclusions</p>
+    <h2>Known stack incompatibilities are removed before generated Angular or .NET surfaces are produced</h2>
+    <p>Every exclusion is tenant scoped and backed by the design-system classification record.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'debt'">
+    <p class="eyebrow">Design debt</p>
+    <h2>Complexity and token consistency are measured together so release readiness cannot ignore visual system drift</h2>
+    <p>Debt signals are visible to support and tenant operators while mutation stays limited to approved roles.</p>
+  </section>
+</main>

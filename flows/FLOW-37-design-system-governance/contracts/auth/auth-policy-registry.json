@@ -1,0 +1,48 @@
+{
+  "flowId": "FLOW-37",
+  "flowSlug": "design-system-governance",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow37-public-preview",
+      "route": "GET /api/dynamic/design-system-governance/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/design-system-governance/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "policyId": "flow37-rules-validate",
+      "route": "POST /api/dynamic/design-system-governance/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow37-governance-register",
+      "route": "POST /api/dynamic/design-system-governance",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow37-plan-validate",
+      "route": "POST /api/dynamic/design-system-governance/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow37-dashboard",
+      "route": "GET /api/dynamic/design-system-governance/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "flowId": "FLOW-37",
+  "flowSlug": "design-system-governance",
+  "endpoints": [
+    {
+      "endpointId": "flow37-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/design-system-governance/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/design-system-governance-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "endpointId": "flow37-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/design-system-governance/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/design-system-governance-request.schema.json",
+      "responseSchema": "contracts/schemas/design-system-governance-response.schema.json"
+    },
+    {
+      "endpointId": "flow37-governance-register",
+      "method": "POST",
+      "path": "/api/dynamic/design-system-governance",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/design-system-governance-request.schema.json",
+      "responseSchema": "contracts/schemas/design-system-governance-response.schema.json"
+    },
+    {
+      "endpointId": "flow37-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/design-system-governance/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/design-system-governance-request.schema.json",
+      "responseSchema": "contracts/schemas/design-system-governance-response.schema.json"
+    },
+    {
+      "endpointId": "flow37-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/design-system-governance/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/design-system-governance-response.schema.json"
+    }
+  ]
+}

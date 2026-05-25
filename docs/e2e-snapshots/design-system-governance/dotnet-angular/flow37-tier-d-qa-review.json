@@ -1,0 +1,63 @@
+{
+  "flowId": "FLOW-37",
+  "flowSlug": "design-system-governance",
+  "verdict": "APPROVED",
+  "portabilityTier": "Tier D",
+  "reviewedAt": "2026-05-25T06:45:00Z",
+  "codeReview": {
+    "verdict": "APPROVED",
+    "checks": [
+      "No provider SDK imports in flow service code",
+      "No free-form tenant id service parameters",
+      "MicroserviceBase inheritance present",
+      "DataProcessResult outcome contract present",
+      "State is written before CloudEvent outbox append"
+    ]
+  },
+  "qaReview": {
+    "verdict": "APPROVED",
+    "serverTests": {
+      "command": "dotnet test flows/FLOW-37-design-system-governance/server/Xiigen.Flow.DesignSystemGovernance.Tests/Xiigen.Flow.DesignSystemGovernance.Tests.csproj -c Release --no-build",
+      "failed": 0,
+      "passed": 13
+    },
+    "clientTests": {
+      "command": "npm test",
+      "failed": 0,
+      "passed": 6
+    },
+    "solutionTests": {
+      "command": "dotnet test Xiigen.Flows.slnx -c Release --no-build",
+      "failed": 0
+    },
+    "visualEvidence": {
+      "cascadePoints": 7,
+      "rolesPerPoint": 3,
+      "cellsPerRole": 3,
+      "expectedPng": 63,
+      "actualPng": 63,
+      "zeroBytePng": 0
+    },
+    "authMatrix": {
+      "validTokenMutation": 201,
+      "idempotentReplay": 200,
+      "tenantAdminMutation": 201,
+      "missingToken": 401,
+      "crossTenantToken": 401,
+      "wrongRole": 403,
+      "supportDashboard": 200
+    },
+    "tenantCascadeRepositories": [
+      "lubochka/acme-corp--design-system-governance",
+      "lubochka/acme-corp--acme-stack-governance-hub",
+      "lubochka/northwind--acme-stack-governance-hub",
+      "lubochka/northwind--northwind-stack-readiness-console",
+      "lubochka/tessera--northwind-stack-readiness-console",
+      "lubochka/tessera--tessera-design-portability-lab"
+    ],
+    "githubActions": {
+      "disabledForAllTenantRepositories": true
+    }
+  },
+  "openIssues": []
+}

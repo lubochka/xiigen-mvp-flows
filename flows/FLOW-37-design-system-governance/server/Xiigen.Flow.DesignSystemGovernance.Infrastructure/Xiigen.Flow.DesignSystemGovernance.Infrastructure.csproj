@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Xiigen.Flow.DesignSystemGovernance.Infrastructure</PackageId>
+    <Version>0.1.1</Version>
+    <IsPackable>true</IsPackable>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\..\..\artifacts\nuget\FLOW-37</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.DesignSystemGovernance.Application\Xiigen.Flow.DesignSystemGovernance.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Fabrics.InMemory" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Kernel" Version="0.1.1" />
+    <PackageReference Include="Xiigen.Auth" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Fabrics.Scheduler" Version="0.1.0" />
+    <PackageReference Include="Xiigen.Freedom" Version="0.1.0" />
+  </ItemGroup>
+</Project>
+
+
+
+
+

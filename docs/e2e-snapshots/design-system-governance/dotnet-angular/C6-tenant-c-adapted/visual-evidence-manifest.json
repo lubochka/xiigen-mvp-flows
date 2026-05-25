@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-37",
+  "flowSlug": "design-system-governance",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 113828
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 133768
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 112400
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 112930
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 132724
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 111488
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "classification",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 113058
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "prompts",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 133095
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "debt",
+      "path": "C:\\Projects\\tessera--tessera-design-portability-lab\\docs\\e2e-snapshots\\design-system-governance\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 111698
+    }
+  ]
+}
