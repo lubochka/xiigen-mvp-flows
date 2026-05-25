@@ -1,0 +1,56 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "pass": true,
+  "results": [
+    {
+      "name": "public-preview",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": "{\"flow\":\"FLOW-46\",\"packageName\":\"@xiigen/platform-agent\",\"summary\":\"Platform Agent orchestrates super-engine assistance with master-scope governance, audited tenant action publishing, super-judge arbi"
+    },
+    {
+      "name": "missing-token-run",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": "{\"code\":\"MISSING_TOKEN\"}"
+    },
+    {
+      "name": "wrong-role-run",
+      "expected": 403,
+      "actual": 403,
+      "pass": true,
+      "body": "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"platform_admin\"]}"
+    },
+    {
+      "name": "cross-tenant-run",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+    },
+    {
+      "name": "platform-admin-run",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": "{\"sessionId\":\"api-ok\",\"userIntent\":\"agent review\",\"af9Verdict\":\"PASS\",\"superJudgeVerdict\":\"DEFER_TO_AF9\",\"grade\":\"PASSED\",\"platformPatternsMatched\":0,\"actionsProposed\":0,\"contributionsRecorded\":0,\"ten"
+    },
+    {
+      "name": "platform-admin-action",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": "{\"actionId\":\"api-action\",\"sessionId\":\"api-ok\",\"actionType\":\"APPLY_GLOBAL\",\"tenantScope\":\"master\",\"targetTenantId\":\"master\",\"knowledgeScope\":\"GLOBAL\",\"status\":\"EMITTED\",\"storedAt\":\"2026-05-25T17:17:14."
+    },
+    {
+      "name": "tenant-admin-dashboard",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": "{\"sessions\":[],\"actions\":[],\"contributions\":[],\"metrics\":{\"sessionCount\":0,\"actionCount\":0,\"contributionCount\":0,\"requiredRuleCount\":17}}"
+    }
+  ]
+}

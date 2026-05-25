@@ -1,0 +1,128 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Platform Agent console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">?????</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Platform Agent states">
+    <button type="button" [class.active]="screenState() === 'run'" (click)="setScreenState('run')">{{ translated('Run') }}</button>
+    <button type="button" [class.active]="screenState() === 'scope'" (click)="setScreenState('scope')">{{ translated('Scope') }}</button>
+    <button type="button" [class.active]="screenState() === 'judge'" (click)="setScreenState('judge')">{{ translated('Judge') }}</button>
+    <button type="button" [class.active]="screenState() === 'actions'" (click)="setScreenState('actions')">{{ translated('Actions') }}</button>
+    <button type="button" [class.active]="screenState() === 'patterns'" (click)="setScreenState('patterns')">{{ translated('Patterns') }}</button>
+    <button type="button" [class.active]="screenState() === 'evidence'" (click)="setScreenState('evidence')">{{ translated('Evidence') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Platform Agent metrics">
+    <div>
+      <span>{{ translated('Agent sessions') }}</span>
+      <strong>1</strong>
+      <small>completed session record written before the completion event</small>
+    </div>
+    <div>
+      <span>{{ translated('Rule coverage') }}</span>
+      <strong>17</strong>
+      <small>scope, cost, privacy, idempotency, ordering, and concurrency rules</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>Tier D agent evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Agent lifecycle</p>
+      <h2>The platform assistant runs from master scope, enriches context, gates the decision, and publishes auditable actions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of agentRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can run agent sessions, publish platform actions, and approve shared pattern contribution.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect agent sessions, action audits, and evidence without mutation controls.</p>
+      <p *ngIf="role() === 'tenant_admin'" class="notice success">This role can inspect adapted tenant proposals and verify private pattern handling.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators own the master-scope run, super-judge review, and action publishing path.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review sessions, proposals, and contribution evidence while mutation actions remain unavailable.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of agentSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'run'">
+    <p class="eyebrow">Agent run</p>
+    <h2>Session completion is idempotent and emits exactly one completion event</h2>
+    <p>The same session id can be replayed without duplicating state or publication side effects.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'scope'">
+    <p class="eyebrow">Scope gateway</p>
+    <h2>Cross-tenant work is allowed only as a bounded, audited exception</h2>
+    <p>The audit record is written in master scope before any target tenant action is attempted.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'judge'">
+    <p class="eyebrow">Super judge</p>
+    <h2>Zero evidence defers to the normal review result with zero model cost</h2>
+    <p>Overrides require a clear discriminating constraint before training data is written.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'actions'">
+    <p class="eyebrow">Action publishing</p>
+    <h2>Advice, edit proposals, new flow drafts, and global templates follow distinct write paths</h2>
+    <p>Every action stores state before its publication event is appended.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'patterns'">
+    <p class="eyebrow">Pattern contribution</p>
+    <h2>Tenant-derived reusable patterns are sanitized before they can be shared</h2>
+    <p>Sanitizer failure records a stopped contribution and does not write to shared memory.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'evidence'">
+    <p class="eyebrow">Portability evidence</p>
+    <h2>Tenant cascade evidence proves the adapted assistant keeps the same governance contract</h2>
+    <p>Every tenant repo keeps Actions disabled, captures three role cells, and records the marketplace adaptation chain.</p>
+  </section>
+</main>

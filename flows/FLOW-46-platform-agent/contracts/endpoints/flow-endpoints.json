@@ -1,0 +1,14 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "endpoints": [
+    { "endpointId": "flow46-public-preview", "method": "GET", "path": "/api/dynamic/platform-agent/public-preview", "authPosture": "anonymous", "requiredRoles": [], "responseSchema": "contracts/schemas/platform-agent-response.schema.json", "bypassReason": "Anonymous preview exposes safe Platform Agent metadata only." },
+    { "endpointId": "flow46-rules-validate", "method": "POST", "path": "/api/dynamic/platform-agent/rules/validate", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/platform-agent-request.schema.json", "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-plan-validate", "method": "POST", "path": "/api/dynamic/platform-agent/plan/validate", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/platform-agent-request.schema.json", "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-run", "method": "POST", "path": "/api/dynamic/platform-agent/run", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/platform-agent-request.schema.json", "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-actions", "method": "POST", "path": "/api/dynamic/platform-agent/actions", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/platform-agent-request.schema.json", "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-contributions", "method": "POST", "path": "/api/dynamic/platform-agent/contributions", "authPosture": "policy", "requiredRoles": ["platform_admin"], "requestSchema": "contracts/schemas/platform-agent-request.schema.json", "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-dashboard", "method": "GET", "path": "/api/dynamic/platform-agent/dashboard", "authPosture": "policy", "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"], "responseSchema": "contracts/schemas/platform-agent-response.schema.json" },
+    { "endpointId": "flow46-sessions", "method": "GET", "path": "/api/agent/sessions", "authPosture": "policy", "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"], "responseSchema": "contracts/schemas/platform-agent-response.schema.json" }
+  ]
+}

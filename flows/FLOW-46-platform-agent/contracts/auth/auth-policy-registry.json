@@ -1,0 +1,15 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "roles": { "primary": ["platform_admin"], "partial": ["platform_support", "tenant_admin"], "inherited": [], "wrongRoleForProtectedRoute": "tenant_admin" },
+  "policies": [
+    { "policyId": "flow46-public-preview", "route": "GET /api/dynamic/platform-agent/public-preview", "authPosture": "anonymous", "allowedRoles": [], "bypassPaths": ["/api/dynamic/platform-agent/public-preview"], "bypassReason": "Anonymous preview exposes safe Platform Agent metadata only." },
+    { "policyId": "flow46-rules-validate", "route": "POST /api/dynamic/platform-agent/rules/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-plan-validate", "route": "POST /api/dynamic/platform-agent/plan/validate", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-run", "route": "POST /api/dynamic/platform-agent/run", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-actions", "route": "POST /api/dynamic/platform-agent/actions", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-contributions", "route": "POST /api/dynamic/platform-agent/contributions", "authPosture": "policy", "allowedRoles": ["platform_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-dashboard", "route": "GET /api/dynamic/platform-agent/dashboard", "authPosture": "policy", "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"], "bypassPaths": [] },
+    { "policyId": "flow46-sessions", "route": "GET /api/agent/sessions", "authPosture": "policy", "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"], "bypassPaths": [] }
+  ]
+}

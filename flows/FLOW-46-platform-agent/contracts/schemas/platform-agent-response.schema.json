@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-46/platform-agent-response.schema.json",
+  "title": "FLOW-46 Platform Agent Response",
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "patternsSeeded": { "type": "integer", "minimum": 0 },
+    "planningDecisionsSeeded": { "type": "integer", "minimum": 0 },
+    "ragPatternsSeeded": { "type": "integer", "minimum": 0 },
+    "bootstrapRunId": { "type": "string" },
+    "seedCount": { "type": "integer", "minimum": 0 },
+    "retrievedCount": { "type": "integer", "minimum": 0 },
+    "summarizedGroups": { "type": "integer", "minimum": 0 },
+    "completionStatus": { "type": "string", "enum": ["COMPLETE", "PARTIAL", "FAILED"] }
+  },
+  "additionalProperties": true
+}

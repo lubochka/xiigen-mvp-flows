@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "run",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 123615
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "judge",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 117076
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "scope",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 135587
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "run",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 123502
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "judge",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 116919
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "scope",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 135814
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "run",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 123671
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "judge",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 117025
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "scope",
+      "path": "C:\\Projects\\acme-corp--platform-agent\\docs\\e2e-snapshots\\platform-agent\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 135445
+    }
+  ]
+}

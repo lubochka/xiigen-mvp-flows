@@ -1,0 +1,90 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-46-platform-agent",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.PlatformAgent.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/platform-agent/dotnet-angular",
+  "sourceAliases": ["platform-agent", "AgentRunOrchestrator", "TenantScopeGateway", "PlatformContextEnricher", "SuperJudgeArbiter", "AgentActionPublisher", "PatternContributor"],
+  "nativeAdapterPackages": [],
+  "roles": { "primary": ["platform_admin"], "partial": ["platform_support", "tenant_admin"], "inherited": [], "wrongRoleForProtectedRoute": "tenant_admin" },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [
+      "FLOW-46 is the canonical platform-agent flow from the merged engine architecture.",
+      "FLOW-46 intentionally preserves one bounded cross-tenant context switch for TenantScopeGateway and verifies audit-before-switch behavior."
+    ],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": ["source-code", "generated-contracts", "configuration-template", "test-fixtures", "documentation", "visual-evidence", "synthetic-data"],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    { "flowId": "FLOW-00", "relationship": "bootstrap-prerequisite", "reason": "FLOW-46 packages only after the platform contract and package skeleton are active." },
+    { "flowId": "FLOW-35", "relationship": "arbiter-governance-reference", "reason": "FLOW-46 consumes review and super-judge semantics from the meta-arbitration line." },
+    { "flowId": "FLOW-45", "relationship": "history-bootstrap-reference", "reason": "FLOW-46 enriches agent runs with global platform patterns seeded by history bootstrap." }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "merged-engine-architecture-and-platform-agent-source",
+    "sourceDocsRoot": "server/src/engine/flows/platform-agent",
+    "requiredDocuments": [
+      "docs/xiigenDesign/ENGINE_ARCHITECTURE_MERGED.md",
+      "server/src/engine-contracts/platform-agent-contracts.ts",
+      "server/src/engine-contracts/platform-agent-bfa-rules.ts",
+      "server/src/engine/flows/platform-agent/agent-run-orchestrator.service.ts",
+      "server/src/engine/flows/platform-agent/tenant-scope-gateway.service.ts",
+      "server/src/engine/flows/platform-agent/platform-context-enricher.service.ts",
+      "server/src/engine/flows/platform-agent/super-judge-arbiter.service.ts",
+      "server/src/engine/flows/platform-agent/agent-action-publisher.service.ts",
+      "server/src/engine/flows/platform-agent/pattern-contributor.service.ts"
+    ],
+    "existingCfRules": 3,
+    "newCfRules": 14,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": { "tested": 7, "partial": 0, "notTested": 0 },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document and outbox providers for deterministic local platform-agent verification.",
+    "realProviderReplacementPath": "server/Xiigen.Flow.PlatformAgent.Infrastructure/PlatformAgentServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    { "name": "Platform Agent document/outbox provider replacement", "contract": "IDocumentStore and IOutboxStore return DataProcessResult and read tenant scope from TenantContext; Elasticsearch and MassTransit providers can replace the in-memory providers without changing application logic.", "currentProvider": "Xiigen.Fabrics.InMemory" }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow46_module_name",
+    "defaultModuleName": "platform-agent",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-platform-agent.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": ["C0-source-flow", "C1-tenant-a-installed", "C2-tenant-a-adapted-published", "C3-tenant-b-installed-from-a", "C4-tenant-b-adapted-published", "C5-tenant-c-installed-from-b", "C6-tenant-c-adapted"]
+  }
+}

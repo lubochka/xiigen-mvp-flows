@@ -1,0 +1,13 @@
+{
+  "flowId": "FLOW-46",
+  "flowSlug": "platform-agent",
+  "api": {
+    "localUrl": "http://127.0.0.1:5342",
+    "containerUrl": "http://127.0.0.1:5342"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4342",
+    "evidencePort": 4342
+  }
+}
+
