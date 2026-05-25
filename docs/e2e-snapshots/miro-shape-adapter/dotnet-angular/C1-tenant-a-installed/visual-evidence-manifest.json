@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-42",
+  "flowSlug": "miro-shape-adapter",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "read",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 121552
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "classify",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 135258
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "spatial",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 145052
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "read",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 120276
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "classify",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 133764
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "spatial",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 143757
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "read",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 120617
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "classify",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 134137
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "spatial",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\miro-shape-adapter\\dotnet-angular\\C1-tenant-a-installed\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 143607
+    }
+  ]
+}

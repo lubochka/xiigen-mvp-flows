@@ -1,0 +1,114 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Miro Shape Adapter console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Miro Shape Adapter states">
+    <button type="button" [class.active]="screenState() === 'read'" (click)="setScreenState('read')">{{ translated('Read') }}</button>
+    <button type="button" [class.active]="screenState() === 'classify'" (click)="setScreenState('classify')">{{ translated('Classify') }}</button>
+    <button type="button" [class.active]="screenState() === 'spatial'" (click)="setScreenState('spatial')">{{ translated('Spatial') }}</button>
+    <button type="button" [class.active]="screenState() === 'write'" (click)="setScreenState('write')">{{ translated('Write') }}</button>
+    <button type="button" [class.active]="screenState() === 'publication'" (click)="setScreenState('publication')">{{ translated('Publication') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Miro Shape Adapter metrics">
+    <div>
+      <span>{{ translated('Mapped board items') }}</span>
+      <strong>6</strong>
+      <small>cards, shapes, connectors, text, frames, and sticky notes stay aligned</small>
+    </div>
+    <div>
+      <span>{{ translated('Package checks') }}</span>
+      <strong>9</strong>
+      <small>all Miro adapter rules covered by local tests and visual evidence</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>C5 adapter evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Adapter lifecycle</p>
+      <h2>Miro board items become shared architecture inputs, then return as user-triggered Miro writeback payloads</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adapterRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can validate adapter rules, record package publication, and inspect mapping outcomes.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect package evidence and write-failure counts without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators validate the Miro adapter package and approve tenant-safe marketplace adoption.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review board mapping, spatial grouping, write payloads, and publication evidence.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of adapterSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'classify'">
+    <p class="eyebrow">Shape classifier</p>
+    <h2>R1 through R10 classify every Miro item before it reaches the architecture engine</h2>
+    <p>Frames, sticky notes, connectors, headings, text, cards, containers, avatars, badges, and fallback structures all carry confidence scores.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'spatial'">
+    <p class="eyebrow">Spatial analyzer</p>
+    <h2>Containment and 5dp tolerance produce row, column, or absolute layout evidence</h2>
+    <p>Board geometry remains visible as roots, children, gaps, and padding instead of disappearing into a flat element list.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'write'">
+    <p class="eyebrow">Writeback</p>
+    <h2>Enhanced shared architecture elements are converted back to Miro payloads one item at a time</h2>
+    <p>Writer failures are counted and the rest of the batch continues.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'publication'">
+    <p class="eyebrow">Publication</p>
+    <h2>The local registry readback confirms the package includes STEP-1 invariants and the functional spec</h2>
+    <p>Global publication stays behind platform approval and per-use pricing metadata.</p>
+  </section>
+</main>

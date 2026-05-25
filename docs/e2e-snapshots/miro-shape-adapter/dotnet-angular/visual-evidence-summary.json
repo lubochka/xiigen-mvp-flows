@@ -1,0 +1,9 @@
+{
+    "flowId":  "FLOW-42",
+    "flowSlug":  "miro-shape-adapter",
+    "generatedAt":  "2026-05-25T12:52:40.6078740Z",
+    "expectedPngCount":  63,
+    "actualPngCount":  63,
+    "zeroByteCount":  0,
+    "pass":  true
+}

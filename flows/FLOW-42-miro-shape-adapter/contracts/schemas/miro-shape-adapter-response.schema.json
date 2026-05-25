@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-42/miro-shape-adapter-response.schema.json",
+  "title": "Miro Shape Adapter Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "runId": { "type": "string" },
+    "tenantScope": { "type": "string" },
+    "readCount": { "type": "integer" },
+    "styleCount": { "type": "integer" },
+    "classificationCount": { "type": "integer" },
+    "rootCount": { "type": "integer" },
+    "written": { "type": "integer" },
+    "failed": { "type": "integer" },
+    "packageName": { "type": "string" },
+    "version": { "type": ["integer", "string"] },
+    "scope": { "type": "string" },
+    "approvedForTenantAdoption": { "type": "boolean" },
+    "pricingModel": { "type": "string" },
+    "recordedAt": { "type": "string" },
+    "code": { "type": "string" },
+    "details": { "type": "array" }
+  }
+}

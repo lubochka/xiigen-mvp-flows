@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-42/miro-shape-adapter-request.schema.json",
+  "title": "Miro Shape Adapter Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "runId": { "type": "string", "minLength": 1 },
+    "boardItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "style", "position", "geometry"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "enum": ["card", "connector", "shape", "text", "frame", "sticky_note"] },
+          "title": { "type": ["string", "null"] },
+          "content": { "type": ["string", "null"] },
+          "shape": { "type": ["string", "null"], "enum": ["rectangle", "circle", "ellipse", "triangle", null] },
+          "style": {
+            "type": "object",
+            "required": ["fillColor", "borderColor", "textColor"],
+            "properties": {
+              "fillColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "borderColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "textColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "fontSize": { "type": ["number", "null"], "minimum": 0 },
+              "borderRadius": { "type": ["number", "null"], "minimum": 0 }
+            }
+          },
+          "position": {
+            "type": "object",
+            "required": ["x", "y"],
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            }
+          },
+          "geometry": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": {
+              "width": { "type": "number", "minimum": 0 },
+              "height": { "type": "number", "minimum": 0 }
+            }
+          },
+          "startItem": {
+            "type": ["object", "null"],
+            "required": ["id"],
+            "properties": { "id": { "type": "string", "minLength": 1 } }
+          },
+          "endItem": {
+            "type": ["object", "null"],
+            "required": ["id"],
+            "properties": { "id": { "type": "string", "minLength": 1 } }
+          }
+        }
+      }
+    },
+    "enhanced": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["element", "style"],
+        "properties": {
+          "element": {
+            "type": "object",
+            "required": ["type", "label", "color", "x", "y", "width", "height"],
+            "properties": {
+              "type": { "type": "string", "enum": ["COMPONENT", "RELATION", "BOUNDARY", "LABEL", "STRUCTURE"] },
+              "label": { "type": "string", "minLength": 1 },
+              "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "width": { "type": "number", "minimum": 0 },
+              "height": { "type": "number", "minimum": 0 },
+              "fromId": { "type": ["string", "null"] },
+              "toId": { "type": ["string", "null"] }
+            }
+          },
+          "style": {
+            "type": "object",
+            "required": ["fillColor", "borderColor", "textColor", "elementType"],
+            "properties": {
+              "fillColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "borderColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "textColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+              "elementType": { "type": "string", "enum": ["COMPONENT", "RELATION", "BOUNDARY", "LABEL", "STRUCTURE"] }
+            }
+          }
+        }
+      }
+    },
+    "packageName": { "type": "string", "const": "@xiigen/miro-ai-architect" },
+    "version": { "type": "string", "const": "1.0.0" },
+    "includesStep1Invariants": { "type": "boolean" },
+    "includesFunctionalSpec": { "type": "boolean" },
+    "localRegistryReadback": { "type": "boolean" },
+    "approvedForTenantAdoption": { "type": "boolean" },
+    "pricingModel": { "type": "string", "enum": ["PER_USE"] },
+    "rules": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+    "planSteps": { "type": "array", "items": { "type": "object", "additionalProperties": true } }
+  }
+}

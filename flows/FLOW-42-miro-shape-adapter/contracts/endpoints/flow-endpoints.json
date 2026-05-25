@@ -1,0 +1,59 @@
+{
+  "flowId": "FLOW-42",
+  "flowSlug": "miro-shape-adapter",
+  "endpoints": [
+    {
+      "endpointId": "flow42-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/miro-shape-adapter/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe Miro Shape Adapter metadata only."
+    },
+    {
+      "endpointId": "flow42-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/miro-shape-adapter/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/miro-shape-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow42-run",
+      "method": "POST",
+      "path": "/api/dynamic/miro-shape-adapter/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/miro-shape-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow42-publication",
+      "method": "POST",
+      "path": "/api/dynamic/miro-shape-adapter/publication",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/miro-shape-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow42-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/miro-shape-adapter/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/miro-shape-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow42-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/miro-shape-adapter/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/miro-shape-adapter-response.schema.json"
+    }
+  ]
+}

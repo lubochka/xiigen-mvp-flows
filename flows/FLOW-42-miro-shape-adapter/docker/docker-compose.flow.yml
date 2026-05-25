@@ -1,0 +1,9 @@
+services:
+  FLOW-42-miro-shape-adapter-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Api/Dockerfile
+    ports:
+      - "5340:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

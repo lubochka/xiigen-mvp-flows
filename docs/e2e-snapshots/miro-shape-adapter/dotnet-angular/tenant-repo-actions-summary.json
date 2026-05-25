@@ -1,0 +1,43 @@
+{
+    "flowId":  "FLOW-42",
+    "generatedAt":  "2026-05-25T13:08:35.1323059Z",
+    "repos":  [
+                  {
+                      "repo":  "acme-corp--miro-shape-adapter",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "acme-corp--acme-miro-architecture-kit",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "northwind--acme-miro-architecture-kit",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "northwind--northwind-miro-board-architect",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "tessera--northwind-miro-board-architect",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  },
+                  {
+                      "repo":  "tessera--tessera-miro-system-map",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "actionsEnabled":  false,
+                      "pass":  true
+                  }
+              ],
+    "pass":  true
+}

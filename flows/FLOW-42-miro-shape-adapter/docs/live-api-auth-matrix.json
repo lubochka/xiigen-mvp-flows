@@ -1,0 +1,56 @@
+{
+    "flowId":  "FLOW-42",
+    "flowSlug":  "miro-shape-adapter",
+    "generatedAt":  "2026-05-25T12:29:34.2633361Z",
+    "cases":  [
+                  {
+                      "name":  "public-preview-anonymous-200",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "rules-missing-token-401",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "run-wrong-role-403",
+                      "expected":  403,
+                      "actual":  403,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "run-cross-tenant-401",
+                      "expected":  401,
+                      "actual":  401,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "run-platform-admin-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "run-tenant-admin-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "publication-platform-admin-201",
+                      "expected":  201,
+                      "actual":  201,
+                      "pass":  true
+                  },
+                  {
+                      "name":  "dashboard-platform-support-200",
+                      "expected":  200,
+                      "actual":  200,
+                      "pass":  true
+                  }
+              ],
+    "pass":  true
+}

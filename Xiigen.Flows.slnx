@@ -293,4 +293,11 @@
     <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Infrastructure/Xiigen.Flow.CanvaTextAdapter.Infrastructure.csproj" />
     <Project Path="flows/FLOW-41-canva-text-adapter/server/Xiigen.Flow.CanvaTextAdapter.Tests/Xiigen.Flow.CanvaTextAdapter.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-42-miro-shape-adapter/" />
+  <Folder Name="/flows/FLOW-42-miro-shape-adapter/server/">
+    <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Api/Xiigen.Flow.MiroShapeAdapter.Api.csproj" />
+    <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Application/Xiigen.Flow.MiroShapeAdapter.Application.csproj" />
+    <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Infrastructure/Xiigen.Flow.MiroShapeAdapter.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-42-miro-shape-adapter/server/Xiigen.Flow.MiroShapeAdapter.Tests/Xiigen.Flow.MiroShapeAdapter.Tests.csproj" />
+  </Folder>
 </Solution>

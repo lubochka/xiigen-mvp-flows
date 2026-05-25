@@ -1,0 +1,146 @@
+{
+    "flowId":  "FLOW-42",
+    "flowSlug":  "miro-shape-adapter",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-42-miro-shape-adapter",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.MiroShapeAdapter.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/miro-shape-adapter/dotnet-angular",
+    "sourceAliases":  [
+                          "miro-shape-adapter",
+                          "miro-board-read-adapter",
+                          "miro-shape-classifier",
+                          "miro-spatial-analyzer",
+                          "miro-writeback",
+                          "@xiigen/miro-ai-architect"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin",
+                                  "tenant_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "platform_support"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+                                                   "FLOW-42 is an external adapter package with platform-admin approval, tenant-admin package review, and platform-support inspection.",
+                                                   "Miro Shape Adapter implements pure Miro board-item read mapping, shape classification, spatial layout inference, writeback payload generation, write-failure counting, package evidence, local registry readback, and global publication approval locally before real Miro SDK replacement."
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-00",
+                                 "relationship":  "bootstrap-prerequisite",
+                                 "reason":  "FLOW-42 packages only after the platform contract and package skeleton are active."
+                             },
+                             {
+                                 "flowId":  "FLOW-37",
+                                 "relationship":  "platform-governance-readback",
+                                 "reason":  "FLOW-42 uses design-system governance evidence to keep external adapter package publication inspectable without leaking tenant data."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-42",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/miro-shape-adapter/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/miro-shape-adapter/P5-ui-specs.md",
+                                                         "docs/flow-coverage/miro-shape-adapter/P9-edge-cases.md",
+                                                         "docs/flow-coverage/miro-shape-adapter/P10-server-specs.md",
+                                                         "docs/flow-coverage/miro-shape-adapter/P11-impl-readiness.md",
+                                                         "docs/sessions/FLOW-42/FLOW-42-MOBILITY-AUTH-STATE.json",
+                                                         "docs/sessions/FLOW-42/FLOW-42-RAG.md",
+                                                         "docs/sessions/FLOW-42/FLOW-42-STEP-1-INVARIANTS.md"
+                                                     ],
+                               "existingCfRules":  3,
+                               "newCfRules":  6,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document and outbox providers with an in-memory Miro writer mock registered only for Development/Test",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.MiroShapeAdapter.Infrastructure/MiroShapeAdapterServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Miro Shape Adapter writer replacement",
+                                             "contract":  "IDocumentStore, IOutboxStore, and IMiroWriter return DataProcessResult and read tenant scope from TenantContext when state is stored.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow42_module_name",
+                       "defaultModuleName":  "miro-shape-adapter",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-miro-shape-adapter.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}
