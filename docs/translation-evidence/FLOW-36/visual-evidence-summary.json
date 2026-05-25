@@ -1,0 +1,58 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "generatedAt":  "2026-05-25T05:51:26.6562311Z",
+    "totalPng":  63,
+    "rows":  [
+                 {
+                     "cascadePoint":  "C0-source-flow",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C1-tenant-a-installed",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C2-tenant-a-adapted-published",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C3-tenant-b-installed-from-a",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C4-tenant-b-adapted-published",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C5-tenant-c-installed-from-b",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 },
+                 {
+                     "cascadePoint":  "C6-tenant-c-adapted",
+                     "expected":  9,
+                     "actual":  9,
+                     "zeroByte":  0,
+                     "passed":  true
+                 }
+             ],
+    "passed":  true
+}

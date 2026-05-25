@@ -1,0 +1,48 @@
+{
+  "flowId": "FLOW-36",
+  "flowSlug": "feature-registry",
+  "roles": {
+    "primary": ["platform_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "tenant_user"
+  },
+  "policies": [
+    {
+      "policyId": "flow36-public-preview",
+      "route": "GET /api/dynamic/feature-registry/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/feature-registry/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "policyId": "flow36-rules-validate",
+      "route": "POST /api/dynamic/feature-registry/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow36-feature-register",
+      "route": "POST /api/dynamic/feature-registry",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow36-plan-validate",
+      "route": "POST /api/dynamic/feature-registry/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow36-dashboard",
+      "route": "GET /api/dynamic/feature-registry/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

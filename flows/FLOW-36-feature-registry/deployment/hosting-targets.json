@@ -1,0 +1,17 @@
+﻿{
+  "flowId": "FLOW-36",
+  "flowSlug": "feature-registry",
+  "api": {
+    "localUrl": "http://127.0.0.1:5330",
+    "containerUrl": "http://127.0.0.1:5330"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4336",
+    "evidencePort": 4336
+  }
+}
+
+
+
+
+

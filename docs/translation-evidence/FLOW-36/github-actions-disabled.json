@@ -1,0 +1,38 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "checkedAt":  "2026-05-25T05:51:43.5486767Z",
+    "passed":  true,
+    "repos":  [
+                  {
+                      "repo":  "acme-corp--feature-registry",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  },
+                  {
+                      "repo":  "acme-corp--acme-feature-porting-control",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  },
+                  {
+                      "repo":  "northwind--acme-feature-porting-control",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  },
+                  {
+                      "repo":  "northwind--northwind-platform-readiness-hub",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  },
+                  {
+                      "repo":  "tessera--northwind-platform-readiness-hub",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  },
+                  {
+                      "repo":  "tessera--tessera-porting-lab",
+                      "actionsEnabled":  false,
+                      "passed":  true
+                  }
+              ]
+}

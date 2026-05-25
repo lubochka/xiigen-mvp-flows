@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-36/feature-registry-request.schema.json",
+  "title": "Feature Registry Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "ftId": { "type": "string", "minLength": 1 },
+    "capabilityName": { "type": "string", "minLength": 1 },
+    "sourcePlatform": { "type": "string", "minLength": 1 },
+    "targetPlatform": { "type": "string", "minLength": 1 },
+    "classificationSource": { "type": "string", "minLength": 1 },
+    "portingCandidate": { "type": "boolean" },
+    "signalScore": { "type": "integer", "minimum": 1 },
+    "costEstimate": { "type": "integer", "minimum": 0 },
+    "tenantPortingCandidateOverride": { "type": "boolean" },
+    "simulateTimeout": { "type": "boolean" }
+  },
+  "required": ["ftId", "capabilityName", "sourcePlatform", "targetPlatform", "classificationSource", "portingCandidate", "signalScore", "costEstimate"]
+}

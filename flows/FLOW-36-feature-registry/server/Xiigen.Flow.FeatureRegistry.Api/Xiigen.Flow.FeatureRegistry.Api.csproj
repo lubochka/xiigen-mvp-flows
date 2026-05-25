@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-36-feature-registry</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.FeatureRegistry.Application\Xiigen.Flow.FeatureRegistry.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.FeatureRegistry.Infrastructure\Xiigen.Flow.FeatureRegistry.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+
+

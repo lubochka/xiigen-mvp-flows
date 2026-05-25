@@ -1,0 +1,84 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "checkedAt":  "2026-05-25T05:40:02.8899823Z",
+    "expected":  [
+                     200,
+                     200,
+                     201,
+                     200,
+                     401,
+                     401,
+                     403,
+                     200,
+                     200
+                 ],
+    "actual":  [
+                   200,
+                   200,
+                   201,
+                   200,
+                   401,
+                   401,
+                   403,
+                   200,
+                   200
+               ],
+    "passed":  true,
+    "checks":  [
+                   {
+                       "method":  "GET",
+                       "path":  "/health/live",
+                       "status":  200,
+                       "body":  "{\"status\":\"live\",\"flow\":\"FLOW-36\"}"
+                   },
+                   {
+                       "method":  "GET",
+                       "path":  "/api/dynamic/feature-registry/public-preview",
+                       "status":  200,
+                       "body":  "{\"flow\":\"FLOW-36\",\"summary\":\"Feature registry is a platform governance surface for FT-ID management, porting decisions, adapter readiness, and simulation evidence.\",\"tabs\":[\"features\",\"signals\",\"decisions\",\"adapters\",\"simulations\"]}"
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/api/dynamic/feature-registry",
+                       "status":  201,
+                       "body":  "{\"id\":\"acme-corp:feature:FT-567\",\"ftId\":\"FT-567\",\"capabilityName\":\"Feature extractor portability\",\"sourcePlatform\":\"nestjs-react\",\"targetPlatform\":\"dotnet-angular\",\"classificationSource\":\"machine-registry\",\"portingCandidate\":true,\"signalScore\":91,\"costEstimate\":42,\"decision\":\"APPROVE\",\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-25T05:40:02.4563770+00:00\"}"
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/api/dynamic/feature-registry",
+                       "status":  200,
+                       "body":  "{\"id\":\"acme-corp:feature:FT-567\",\"ftId\":\"FT-567\",\"capabilityName\":\"Feature extractor portability\",\"sourcePlatform\":\"nestjs-react\",\"targetPlatform\":\"dotnet-angular\",\"classificationSource\":\"machine-registry\",\"portingCandidate\":true,\"signalScore\":91,\"costEstimate\":42,\"decision\":\"APPROVE\",\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-25T05:40:02.4563770+00:00\"}"
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/api/dynamic/feature-registry",
+                       "status":  401,
+                       "body":  "{\"code\":\"MISSING_TOKEN\"}"
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/api/dynamic/feature-registry",
+                       "status":  401,
+                       "body":  "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+                   },
+                   {
+                       "method":  "POST",
+                       "path":  "/api/dynamic/feature-registry",
+                       "status":  403,
+                       "body":  "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"platform_admin\"]}"
+                   },
+                   {
+                       "method":  "GET",
+                       "path":  "/api/dynamic/feature-registry/dashboard",
+                       "status":  200,
+                       "body":  "{\"features\":[{\"id\":\"acme-corp:feature:FT-567\",\"ftId\":\"FT-567\",\"capabilityName\":\"Feature extractor portability\",\"sourcePlatform\":\"nestjs-react\",\"targetPlatform\":\"dotnet-angular\",\"classificationSource\":\"machine-registry\",\"portingCandidate\":true,\"signalScore\":91,\"costEstimate\":42,\"decision\":\"APPROVE\",\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-25T05:40:02.4563770+00:00\"}],\"signals\":[{\"ftId\":\"FT-567\",\"signalScore\":91,\"costEstimate\":42,\"tenantScope\":\"acme-corp\"}],\"adapters\":[{\"ftId\":\"FT-567\",\"targetPlatform\":\"dotnet-angular\",\"adapterPlan\":\"FT-567:dotnet-angular\",\"tenantScope\":\"acme-corp\"}],\"simulations\":[{\"ftId\":\"FT-567\",\"decision\":\"APPROVE\",\"simulationStatus\":\"PASS\",\"tenantScope\":\"acme-corp\"}],\"kpis\":{\"featureCount\":1,\"signalCount\":1,\"adapterCount\":1,\"simulationCount\":1,\"requiredRuleCount\":18}}"
+                   },
+                   {
+                       "method":  "GET",
+                       "path":  "/api/dynamic/feature-registry/dashboard",
+                       "status":  200,
+                       "body":  "{\"features\":[{\"id\":\"acme-corp:feature:FT-567\",\"ftId\":\"FT-567\",\"capabilityName\":\"Feature extractor portability\",\"sourcePlatform\":\"nestjs-react\",\"targetPlatform\":\"dotnet-angular\",\"classificationSource\":\"machine-registry\",\"portingCandidate\":true,\"signalScore\":91,\"costEstimate\":42,\"decision\":\"APPROVE\",\"tenantScope\":\"acme-corp\",\"version\":1,\"updatedAt\":\"2026-05-25T05:40:02.4563770+00:00\"}],\"signals\":[{\"ftId\":\"FT-567\",\"signalScore\":91,\"costEstimate\":42,\"tenantScope\":\"acme-corp\"}],\"adapters\":[{\"ftId\":\"FT-567\",\"targetPlatform\":\"dotnet-angular\",\"adapterPlan\":\"FT-567:dotnet-angular\",\"tenantScope\":\"acme-corp\"}],\"simulations\":[{\"ftId\":\"FT-567\",\"decision\":\"APPROVE\",\"simulationStatus\":\"PASS\",\"tenantScope\":\"acme-corp\"}],\"kpis\":{\"featureCount\":1,\"signalCount\":1,\"adapterCount\":1,\"simulationCount\":1,\"requiredRuleCount\":18}}"
+                   }
+               ]
+}

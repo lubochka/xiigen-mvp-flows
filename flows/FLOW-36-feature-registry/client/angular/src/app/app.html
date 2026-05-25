@@ -1,0 +1,103 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Feature registry console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Feature registry states">
+    <button type="button" [class.active]="screenState() === 'features'" (click)="setScreenState('features')">{{ translated('Features') }}</button>
+    <button type="button" [class.active]="screenState() === 'signals'" (click)="setScreenState('signals')">{{ translated('Signals') }}</button>
+    <button type="button" [class.active]="screenState() === 'decisions'" (click)="setScreenState('decisions')">{{ translated('Decisions') }}</button>
+    <button type="button" [class.active]="screenState() === 'adapters'" (click)="setScreenState('adapters')">{{ translated('Adapters') }}</button>
+    <button type="button" [class.active]="screenState() === 'simulations'" (click)="setScreenState('simulations')">{{ translated('Simulations') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Feature registry metrics">
+    <div>
+      <span>{{ translated('FT records') }}</span>
+      <strong>7</strong>
+      <small>topology-backed feature tasks</small>
+    </div>
+    <div>
+      <span>{{ translated('Candidates') }}</span>
+      <strong>3</strong>
+      <small>approval paths under review</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>porting evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Feature lifecycle</p>
+      <h2>Stable FT records move through signal aggregation, cost estimation, decision gating, adapter planning, and simulation before publication</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of featureRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can manage FT records, approve candidates, and publish adapter simulation evidence.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect registry audit evidence without mutation controls.</p>
+      <p *ngIf="role() === 'tenant_admin'" class="notice success">This role can inspect active tenant capabilities without authoring platform registry records.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators classify features, approve porting candidates, and verify generated adapter plans.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review feature records, porting status, and simulator outcomes.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of featureSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'decisions'">
+    <p class="eyebrow">Porting decision</p>
+    <h2>Non-candidate features fail closed as PROHIBITED before cost estimation or adapter generation starts</h2>
+    <p>Candidate features continue only when machine-owned classification, signal score, cost estimate, and simulator evidence agree.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'simulations'">
+    <p class="eyebrow">Simulator readback</p>
+    <h2>Approved adapter plans produce simulation records before a tenant can install the package through the cascade</h2>
+    <p>Every readback is tenant scoped and replayable through local Docker evidence with GitHub Actions disabled.</p>
+  </section>
+</main>

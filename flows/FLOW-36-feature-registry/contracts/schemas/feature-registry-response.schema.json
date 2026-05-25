@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-36/feature-registry-response.schema.json",
+  "title": "Feature Registry Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string" },
+    "ftId": { "type": "string" },
+    "capabilityName": { "type": "string" },
+    "sourcePlatform": { "type": "string" },
+    "targetPlatform": { "type": "string" },
+    "classificationSource": { "type": "string" },
+    "portingCandidate": { "type": "boolean" },
+    "signalScore": { "type": "integer" },
+    "costEstimate": { "type": "integer" },
+    "decision": { "type": "string", "enum": ["PROHIBITED", "APPROVE", "DEFER", "BLOCK"] },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "updatedAt": { "type": "string" }
+  }
+}

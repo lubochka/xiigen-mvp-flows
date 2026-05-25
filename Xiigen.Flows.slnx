@@ -251,4 +251,11 @@
     <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Infrastructure/Xiigen.Flow.MetaArbitrationEngine.Infrastructure.csproj" />
     <Project Path="flows/FLOW-35-meta-arbitration-engine/server/Xiigen.Flow.MetaArbitrationEngine.Tests/Xiigen.Flow.MetaArbitrationEngine.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-36-feature-registry/" />
+  <Folder Name="/flows/FLOW-36-feature-registry/server/">
+    <Project Path="flows/FLOW-36-feature-registry/server/Xiigen.Flow.FeatureRegistry.Api/Xiigen.Flow.FeatureRegistry.Api.csproj" />
+    <Project Path="flows/FLOW-36-feature-registry/server/Xiigen.Flow.FeatureRegistry.Application/Xiigen.Flow.FeatureRegistry.Application.csproj" />
+    <Project Path="flows/FLOW-36-feature-registry/server/Xiigen.Flow.FeatureRegistry.Infrastructure/Xiigen.Flow.FeatureRegistry.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-36-feature-registry/server/Xiigen.Flow.FeatureRegistry.Tests/Xiigen.Flow.FeatureRegistry.Tests.csproj" />
+  </Folder>
 </Solution>

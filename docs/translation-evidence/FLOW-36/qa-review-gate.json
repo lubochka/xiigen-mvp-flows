@@ -1,0 +1,36 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "reviewedAt":  "2026-05-25T05:52:25.9228948Z",
+    "verdict":  "APPROVED",
+    "sections":  [
+                     {
+                         "name":  "Functional P10/P11 coverage",
+                         "status":  "PASS",
+                         "evidence":  "CF-808, CF-809, CF-813, and CF-1035..CF-1049 implemented and covered by 11 server tests"
+                     },
+                     {
+                         "name":  "Auth matrix",
+                         "status":  "PASS",
+                         "evidence":  "docs/translation-evidence/FLOW-36/live-api-auth-matrix.json"
+                     },
+                     {
+                         "name":  "Visual evidence",
+                         "status":  "PASS",
+                         "evidence":  "63 PNG across C0..C6, zeroByte=0"
+                     },
+                     {
+                         "name":  "Tenant cascade",
+                         "status":  "PASS",
+                         "evidence":  "6 tenant repositories built, tested, captured, pushed, Actions disabled"
+                     },
+                     {
+                         "name":  "Code review",
+                         "status":  "PASS",
+                         "evidence":  "docs/translation-evidence/FLOW-36/code-review-gate.json"
+                     }
+                 ],
+    "openIssues":  [
+
+                   ]
+}

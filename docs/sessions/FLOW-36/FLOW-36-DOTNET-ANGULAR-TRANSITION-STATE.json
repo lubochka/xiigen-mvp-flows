@@ -1,0 +1,53 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "updatedAt":  "2026-05-25T05:52:25.9228948Z",
+    "implementedIn":  "C:\\Projects\\xiigen-flows-dot-net-angular\\flows\\FLOW-36-feature-registry",
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support",
+                                  "tenant_admin"
+                              ],
+                  "wrongRoleForProtectedRoute":  "tenant_user"
+              },
+    "cfRules":  {
+                    "existing":  [
+                                     "CF-808",
+                                     "CF-809",
+                                     "CF-813"
+                                 ],
+                    "added":  [
+                                  "CF-1035",
+                                  "CF-1036",
+                                  "CF-1037",
+                                  "CF-1038",
+                                  "CF-1039",
+                                  "CF-1040",
+                                  "CF-1041",
+                                  "CF-1042",
+                                  "CF-1043",
+                                  "CF-1044",
+                                  "CF-1045",
+                                  "CF-1046",
+                                  "CF-1047",
+                                  "CF-1048",
+                                  "CF-1049"
+                              ]
+                },
+    "evidence":  {
+                     "liveAuth":  "docs/translation-evidence/FLOW-36/live-api-auth-matrix.json",
+                     "visual":  "docs/translation-evidence/FLOW-36/visual-evidence-summary.json",
+                     "cascade":  "docs/translation-evidence/FLOW-36/tenant-cascade-repos.json",
+                     "actions":  "docs/translation-evidence/FLOW-36/github-actions-disabled.json",
+                     "codeReview":  "docs/translation-evidence/FLOW-36/code-review-gate.json",
+                     "qa":  "docs/translation-evidence/FLOW-36/qa-review-gate.json"
+                 },
+    "openIssues":  [
+
+                   ]
+}

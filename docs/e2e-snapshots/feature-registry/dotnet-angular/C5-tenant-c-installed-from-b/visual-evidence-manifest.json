@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-36",
+  "flowSlug": "feature-registry",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "features",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 113886
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "decisions",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 130517
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "simulations",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 111600
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "features",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 109992
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "decisions",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 126486
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "simulations",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 109701
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "features",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 110249
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "decisions",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 126804
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "simulations",
+      "path": "C:\\Projects\\tessera--northwind-platform-readiness-hub\\docs\\e2e-snapshots\\feature-registry\\dotnet-angular\\C5-tenant-c-installed-from-b\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 109831
+    }
+  ]
+}

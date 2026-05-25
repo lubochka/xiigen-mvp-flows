@@ -1,0 +1,32 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "portabilityTier":  "Tier D",
+    "tierDComplete":  true,
+    "generatedAt":  "2026-05-25T05:52:25.9228948Z",
+    "tests":  {
+                  "dotnetSolution":  "PASS",
+                  "flowServer":  "11 passed, 0 failed",
+                  "angular":  "6 passed, 0 failed",
+                  "angularBuild":  "PASS"
+              },
+    "auth":  {
+                 "passed":  true,
+                 "checks":  9
+             },
+    "visuals":  {
+                    "passed":  true,
+                    "totalPng":  63,
+                    "zeroByte":  0
+                },
+    "cascade":  {
+                    "passed":  true,
+                    "tenantRepos":  6,
+                    "actionsDisabled":  true
+                },
+    "codeReview":  "APPROVED",
+    "qaReview":  "APPROVED",
+    "openIssues":  [
+
+                   ]
+}

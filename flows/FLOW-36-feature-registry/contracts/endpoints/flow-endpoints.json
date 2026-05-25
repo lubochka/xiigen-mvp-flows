@@ -1,0 +1,50 @@
+{
+  "flowId": "FLOW-36",
+  "flowSlug": "feature-registry",
+  "endpoints": [
+    {
+      "endpointId": "flow36-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/feature-registry/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/feature-registry-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe platform governance metadata only."
+    },
+    {
+      "endpointId": "flow36-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/feature-registry/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/feature-registry-request.schema.json",
+      "responseSchema": "contracts/schemas/feature-registry-response.schema.json"
+    },
+    {
+      "endpointId": "flow36-feature-register",
+      "method": "POST",
+      "path": "/api/dynamic/feature-registry",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/feature-registry-request.schema.json",
+      "responseSchema": "contracts/schemas/feature-registry-response.schema.json"
+    },
+    {
+      "endpointId": "flow36-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/feature-registry/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/feature-registry-request.schema.json",
+      "responseSchema": "contracts/schemas/feature-registry-response.schema.json"
+    },
+    {
+      "endpointId": "flow36-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/feature-registry/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/feature-registry-response.schema.json"
+    }
+  ]
+}

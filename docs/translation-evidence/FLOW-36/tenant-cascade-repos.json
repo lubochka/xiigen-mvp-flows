@@ -1,0 +1,55 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "generatedAt":  "2026-05-25T05:51:03.5721773Z",
+    "repos":  [
+                  {
+                      "repo":  "acme-corp--feature-registry",
+                      "tenantId":  "acme-corp",
+                      "cascadePoint":  "C1-tenant-a-installed",
+                      "version":  "1.0.1",
+                      "url":  "https://github.com/lubochka/acme-corp--feature-registry",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "acme-corp--acme-feature-porting-control",
+                      "tenantId":  "acme-corp",
+                      "cascadePoint":  "C2-tenant-a-adapted-published",
+                      "version":  "1.0.2",
+                      "url":  "https://github.com/lubochka/acme-corp--acme-feature-porting-control",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "northwind--acme-feature-porting-control",
+                      "tenantId":  "northwind",
+                      "cascadePoint":  "C3-tenant-b-installed-from-a",
+                      "version":  "1.0.3",
+                      "url":  "https://github.com/lubochka/northwind--acme-feature-porting-control",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "northwind--northwind-platform-readiness-hub",
+                      "tenantId":  "northwind",
+                      "cascadePoint":  "C4-tenant-b-adapted-published",
+                      "version":  "1.0.4",
+                      "url":  "https://github.com/lubochka/northwind--northwind-platform-readiness-hub",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tessera--northwind-platform-readiness-hub",
+                      "tenantId":  "tessera",
+                      "cascadePoint":  "C5-tenant-c-installed-from-b",
+                      "version":  "1.0.5",
+                      "url":  "https://github.com/lubochka/tessera--northwind-platform-readiness-hub",
+                      "actionsDisabled":  true
+                  },
+                  {
+                      "repo":  "tessera--tessera-porting-lab",
+                      "tenantId":  "tessera",
+                      "cascadePoint":  "C6-tenant-c-adapted",
+                      "version":  "1.0.6",
+                      "url":  "https://github.com/lubochka/tessera--tessera-porting-lab",
+                      "actionsDisabled":  true
+                  }
+              ]
+}

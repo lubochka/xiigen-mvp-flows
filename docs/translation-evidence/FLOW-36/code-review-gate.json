@@ -1,0 +1,36 @@
+﻿{
+    "flowId":  "FLOW-36",
+    "flowSlug":  "feature-registry",
+    "checkedAt":  "2026-05-25T05:51:58.4898524Z",
+    "passed":  true,
+    "checks":  [
+                   {
+                       "id":  "no-provider-sdk-imports",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "no-free-tenant-id-parameter",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "microservice-base",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "data-process-result",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "outbox-before-event",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "cloud-event-envelope",
+                       "passed":  true
+                   },
+                   {
+                       "id":  "cf-rules-present",
+                       "passed":  true
+                   }
+               ]
+}
