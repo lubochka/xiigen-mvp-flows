@@ -279,4 +279,11 @@
     <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Infrastructure/Xiigen.Flow.OssCurriculum.Infrastructure.csproj" />
     <Project Path="flows/FLOW-39-oss-curriculum/server/Xiigen.Flow.OssCurriculum.Tests/Xiigen.Flow.OssCurriculum.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-40-client-push/" />
+  <Folder Name="/flows/FLOW-40-client-push/server/">
+    <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Api/Xiigen.Flow.ClientPush.Api.csproj" />
+    <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Application/Xiigen.Flow.ClientPush.Application.csproj" />
+    <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Infrastructure/Xiigen.Flow.ClientPush.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Tests/Xiigen.Flow.ClientPush.Tests.csproj" />
+  </Folder>
 </Solution>

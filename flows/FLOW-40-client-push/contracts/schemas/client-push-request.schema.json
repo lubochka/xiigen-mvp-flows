@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-40/client-push-request.schema.json",
+  "title": "Client Push Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "correlationId": { "type": "string", "minLength": 1 },
+    "connectionId": { "type": "string", "minLength": 1 },
+    "eventId": { "type": "string", "minLength": 1 },
+    "eventType": { "type": "string", "minLength": 1 },
+    "targetDomain": { "type": "string", "minLength": 1 },
+    "activeFlowState": { "type": "object", "additionalProperties": true },
+    "data": { "type": "object", "additionalProperties": true },
+    "runId": { "type": "string", "minLength": 1 },
+    "keepaliveIntervalMs": { "type": "integer", "minimum": 1 },
+    "droppedThresholdMs": { "type": "integer", "minimum": 1 },
+    "rules": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "planSteps": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+    "simulateTimeout": { "type": "boolean" },
+    "expiredCorrelation": { "type": "boolean" }
+  }
+}

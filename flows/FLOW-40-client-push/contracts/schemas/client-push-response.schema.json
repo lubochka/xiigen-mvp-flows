@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-40/client-push-response.schema.json",
+  "title": "Client Push Response",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "correlationId": { "type": "string" },
+    "connectionId": { "type": "string" },
+    "eventId": { "type": "string" },
+    "eventType": { "type": "string" },
+    "delivered": { "type": "boolean" },
+    "reason": { "type": "string" },
+    "activeConnections": { "type": "integer" },
+    "cleanedConnections": { "type": "integer" },
+    "keepaliveSent": { "type": "integer" },
+    "outboxRetained": { "type": "boolean" },
+    "tenantScope": { "type": "string" },
+    "version": { "type": "integer" },
+    "updatedAt": { "type": "string" }
+  }
+}

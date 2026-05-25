@@ -1,0 +1,62 @@
+﻿[
+    {
+        "name":  "register-created",
+        "status":  201,
+        "content":  "{\"id\":\"acme-corp:connection:corr-live-1\",\"correlationId\":\"corr-live-1\",\"registered\":true,\"tenantScope\":\"acme-corp\",\"connectionInfo\":{\"tenantId\":\"acme-corp\",\"correlationId\":\"corr-live-1\",\"connectedAt\":\"2026-05-25T10:16:45.6012151+00:00\",\"lastAcknowledgedAt\":\"2026-05-25T10:16:45.6012151+00:00\"},\"activeFlowState\":{\"stage\":\"connected\"},\"version\":1,\"registeredAt\":\"2026-05-25T10:16:45.6017590+00:00\"}"
+    },
+    {
+        "name":  "register-replay",
+        "status":  200,
+        "content":  "{\"id\":\"acme-corp:connection:corr-live-1\",\"correlationId\":\"corr-live-1\",\"registered\":true,\"tenantScope\":\"acme-corp\",\"connectionInfo\":{\"tenantId\":\"acme-corp\",\"correlationId\":\"corr-live-1\",\"connectedAt\":\"2026-05-25T10:16:45.6012151+00:00\",\"lastAcknowledgedAt\":\"2026-05-25T10:16:45.6012151+00:00\"},\"activeFlowState\":{\"stage\":\"connected\"},\"version\":1,\"registeredAt\":\"2026-05-25T10:16:45.6017590+00:00\"}"
+    },
+    {
+        "name":  "missing-token",
+        "status":  401,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "cross-tenant-token",
+        "status":  401,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "wrong-role",
+        "status":  403,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "invalid-registration",
+        "status":  400,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "bridge-delivered",
+        "status":  201,
+        "content":  "{\"id\":\"acme-corp:delivery:event-live-1\",\"correlationId\":\"corr-live-1\",\"eventId\":\"event-live-1\",\"eventType\":\"xiigen.platform.updated\",\"delivered\":true,\"recipientCount\":1,\"tenantScope\":\"acme-corp\",\"version\":1,\"deliveredAt\":\"2026-05-25T10:16:45.6928788+00:00\"}"
+    },
+    {
+        "name":  "prohibited-domain",
+        "status":  400,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "missing-connection",
+        "status":  200,
+        "content":  "{\"delivered\":false,\"recipientCount\":0,\"discarded\":true,\"reason\":\"connection_not_found_no_retry\"}"
+    },
+    {
+        "name":  "timeout-retains-outbox",
+        "status":  504,
+        "content":  "You cannot call a method on a null-valued expression."
+    },
+    {
+        "name":  "keepalive",
+        "status":  201,
+        "content":  "{\"id\":\"acme-corp:keepalive:keepalive-live-1\",\"pinged\":1,\"cleaned\":0,\"keepaliveIntervalMs\":15000,\"droppedThresholdMs\":45000,\"tenantScope\":\"acme-corp\",\"version\":1,\"checkedAt\":\"2026-05-25T10:16:45.7376231+00:00\"}"
+    },
+    {
+        "name":  "dashboard",
+        "status":  200,
+        "content":  "{\"connections\":[{\"id\":\"acme-corp:connection:corr-live-1\",\"correlationId\":\"corr-live-1\",\"registered\":true,\"tenantScope\":\"acme-corp\",\"connectionInfo\":{\"tenantId\":\"acme-corp\",\"correlationId\":\"corr-live-1\",\"connectedAt\":\"2026-05-25T10:16:45.6012151+00:00\",\"lastAcknowledgedAt\":\"2026-05-25T10:16:45.6012151+00:00\"},\"activeFlowState\":{\"stage\":\"connected\"},\"version\":1,\"registeredAt\":\"2026-05-25T10:16:45.6017590+00:00\"}],\"deliveries\":[{\"id\":\"acme-corp:delivery:event-live-1\",\"correlationId\":\"corr-live-1\",\"eventId\":\"event-live-1\",\"eventType\":\"xiigen.platform.updated\",\"delivered\":true,\"recipientCount\":1,\"tenantScope\":\"acme-corp\",\"version\":1,\"deliveredAt\":\"2026-05-25T10:16:45.6928788+00:00\"}],\"keepaliveRuns\":[{\"id\":\"acme-corp:keepalive:keepalive-live-1\",\"pinged\":1,\"cleaned\":0,\"keepaliveIntervalMs\":15000,\"droppedThresholdMs\":45000,\"tenantScope\":\"acme-corp\",\"version\":1,\"checkedAt\":\"2026-05-25T10:16:45.7376231+00:00\"}],\"kpis\":{\"connectionCount\":1,\"deliveryCount\":1,\"keepaliveRunCount\":1,\"requiredRuleCount\":6}}"
+    }
+]

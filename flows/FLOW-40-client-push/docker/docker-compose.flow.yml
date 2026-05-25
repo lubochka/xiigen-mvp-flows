@@ -1,0 +1,16 @@
+services:
+  FLOW-40-client-push-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-40-client-push/server/Xiigen.Flow.ClientPush.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+
+
+
+

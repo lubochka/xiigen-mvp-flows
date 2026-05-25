@@ -1,0 +1,145 @@
+{
+    "flowId":  "FLOW-40",
+    "flowSlug":  "client-push",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-40-client-push",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.ClientPush.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/client-push/dotnet-angular",
+    "sourceAliases":  [
+                          "client-push",
+                          "sse-connection-manager",
+                          "flow-event-bridge",
+                          "sse-keepalive-scheduler"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin",
+                                  "tenant_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "platform_support"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+                                                   "FLOW-40 is engine-internal and uses platform-admin and tenant-admin mutation with platform-support inspection.",
+                                                   "Client Push implements tenant-scoped SSE connection registration, platform event bridging, keepalive cleanup, idempotency replay, optimistic concurrency, cross-tenant isolation, and timeout outbox retention locally before real provider replacement."
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-00",
+                                 "relationship":  "bootstrap-prerequisite",
+                                 "reason":  "FLOW-40 packages only after the platform contract and package skeleton are active."
+                             },
+                             {
+                                 "flowId":  "FLOW-37",
+                                 "relationship":  "platform-governance-readback",
+                                 "reason":  "FLOW-40 uses design-system governance evidence to keep operator-facing push channels inspectable without leaking tenant data."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-40",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/client-push/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/client-push/P5-ui-specs.md",
+                                                         "docs/flow-coverage/client-push/P9-edge-cases.md",
+                                                         "docs/flow-coverage/client-push/P10-server-specs.md",
+                                                         "docs/flow-coverage/client-push/P11-impl-readiness.md",
+                                                         "docs/sessions/FLOW-40/FLOW-40-MOBILITY-AUTH-STATE.json",
+                                                         "docs/sessions/FLOW-40/FLOW-40-RAG.md",
+                                                         "docs/sessions/FLOW-40/FLOW-40-STEP-1-INVARIANTS.md"
+                                                     ],
+                               "existingCfRules":  2,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document, idempotency, outbox, and tenant-scoped Client Push SSE connection pool providers",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.ClientPush.Infrastructure/ClientPushServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "Client Push SSE fabric replacement",
+                                             "contract":  "IDocumentStore, IIdempotencyStore, IOutboxStore, and IClientPushConnectionPool return DataProcessResult and read tenant scope from TenantContext.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow40_module_name",
+                       "defaultModuleName":  "client-push",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-client-push.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}
+

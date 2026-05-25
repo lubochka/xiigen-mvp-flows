@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-40-client-push</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.ClientPush.Application\Xiigen.Flow.ClientPush.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.ClientPush.Infrastructure\Xiigen.Flow.ClientPush.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+
+
+
+

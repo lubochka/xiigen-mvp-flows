@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-40",
+  "flowSlug": "client-push",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "connections",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 102401
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "bridge",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 117374
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "audit",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 129433
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "connections",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 100370
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "bridge",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 115239
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "audit",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 127466
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "connections",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 101740
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "bridge",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 116801
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "audit",
+      "path": "C:\\Projects\\xiigen-flows-dot-net-angular\\docs\\e2e-snapshots\\client-push\\dotnet-angular\\C0-source-flow\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 128320
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+﻿[
+    {
+        "repo":  "acme-corp--client-push",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    },
+    {
+        "repo":  "acme-corp--acme-live-event-bridge",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    },
+    {
+        "repo":  "northwind--acme-live-event-bridge",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    },
+    {
+        "repo":  "northwind--northwind-sse-ops-console",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    },
+    {
+        "repo":  "tessera--northwind-sse-ops-console",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    },
+    {
+        "repo":  "tessera--tessera-realtime-client-bridge",
+        "enabled":  false,
+        "localGithubDir":  false,
+        "localXiigenDir":  false
+    }
+]

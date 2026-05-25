@@ -1,0 +1,68 @@
+{
+  "flowId": "FLOW-40",
+  "flowSlug": "client-push",
+  "endpoints": [
+    {
+      "endpointId": "flow40-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/client-push/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/client-push-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe Client Push metadata only."
+    },
+    {
+      "endpointId": "flow40-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/client-push/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/client-push-request.schema.json",
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    },
+    {
+      "endpointId": "flow40-connection-register",
+      "method": "POST",
+      "path": "/api/dynamic/client-push",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/client-push-request.schema.json",
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    },
+    {
+      "endpointId": "flow40-bridge",
+      "method": "POST",
+      "path": "/api/dynamic/client-push/bridge",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/client-push-request.schema.json",
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    },
+    {
+      "endpointId": "flow40-keepalive",
+      "method": "POST",
+      "path": "/api/dynamic/client-push/keepalive",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/client-push-request.schema.json",
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    },
+    {
+      "endpointId": "flow40-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/client-push/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/client-push-request.schema.json",
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    },
+    {
+      "endpointId": "flow40-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/client-push/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/client-push-response.schema.json"
+    }
+  ]
+}

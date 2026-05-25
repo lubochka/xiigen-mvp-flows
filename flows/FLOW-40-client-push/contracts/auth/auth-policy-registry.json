@@ -1,0 +1,64 @@
+{
+  "flowId": "FLOW-40",
+  "flowSlug": "client-push",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow40-public-preview",
+      "route": "GET /api/dynamic/client-push/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/client-push/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe Client Push metadata only."
+    },
+    {
+      "policyId": "flow40-rules-validate",
+      "route": "POST /api/dynamic/client-push/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow40-connection-register",
+      "route": "POST /api/dynamic/client-push",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow40-bridge",
+      "route": "POST /api/dynamic/client-push/bridge",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow40-keepalive",
+      "route": "POST /api/dynamic/client-push/keepalive",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow40-plan-validate",
+      "route": "POST /api/dynamic/client-push/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow40-dashboard",
+      "route": "GET /api/dynamic/client-push/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}
+
+
