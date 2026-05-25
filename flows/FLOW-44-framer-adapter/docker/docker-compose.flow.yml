@@ -1,0 +1,9 @@
+services:
+  FLOW-44-framer-adapter-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Api/Dockerfile
+    ports:
+      - "5340:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development

@@ -306,4 +306,11 @@
     <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Application/Xiigen.Flow.WebflowDesignerExtension.Application.csproj" />
     <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Infrastructure/Xiigen.Flow.WebflowDesignerExtension.Infrastructure.csproj" />
     <Project Path="flows/FLOW-43-webflow-designer-extension/server/Xiigen.Flow.WebflowDesignerExtension.Tests/Xiigen.Flow.WebflowDesignerExtension.Tests.csproj" />
+  </Folder>
+  <Folder Name="/flows/FLOW-44-framer-adapter/" />
+  <Folder Name="/flows/FLOW-44-framer-adapter/server/">
+    <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Api/Xiigen.Flow.FramerAdapter.Api.csproj" />
+    <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Application/Xiigen.Flow.FramerAdapter.Application.csproj" />
+    <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Infrastructure/Xiigen.Flow.FramerAdapter.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Tests/Xiigen.Flow.FramerAdapter.Tests.csproj" />
   </Folder></Solution>

@@ -1,0 +1,71 @@
+{
+    "flowId":  "FLOW-44",
+    "flowSlug":  "framer-adapter",
+    "checkedAtUtc":  "2026-05-25T15:23:56.2903057Z",
+    "roles":  [
+                  "tenant-admin",
+                  "platform-admin",
+                  "platform-support"
+              ],
+    "cells":  [
+                  "C2-en-populated-desktop",
+                  "C4-he-rtl-populated-desktop",
+                  "C6-en-populated-mobile"
+              ],
+    "expectedCascadePoints":  7,
+    "expectedPngCount":  63,
+    "actualPngCount":  63,
+    "zeroByteCount":  0,
+    "cascadePoints":  [
+                          {
+                              "cascadePoint":  "C0-source-flow",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C1-tenant-a-installed",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C2-tenant-a-adapted-published",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C3-tenant-b-installed-from-a",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C4-tenant-b-adapted-published",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C5-tenant-c-installed-from-b",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          },
+                          {
+                              "cascadePoint":  "C6-tenant-c-adapted",
+                              "pngCount":  9,
+                              "zeroByteCount":  0,
+                              "manifestPresent":  true,
+                              "pass":  true
+                          }
+                      ],
+    "pass":  true
+}

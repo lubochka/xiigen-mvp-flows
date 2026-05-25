@@ -1,0 +1,59 @@
+{
+  "flowId": "FLOW-44",
+  "flowSlug": "framer-adapter",
+  "endpoints": [
+    {
+      "endpointId": "flow44-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/framer-adapter/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe Framer Text Elements Adapter metadata only."
+    },
+    {
+      "endpointId": "flow44-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/framer-adapter/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/framer-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow44-run",
+      "method": "POST",
+      "path": "/api/dynamic/framer-adapter/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/framer-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow44-publication",
+      "method": "POST",
+      "path": "/api/dynamic/framer-adapter/publication",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin"],
+      "requestSchema": "contracts/schemas/framer-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow44-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/framer-adapter/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/framer-adapter-request.schema.json",
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json"
+    },
+    {
+      "endpointId": "flow44-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/framer-adapter/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/framer-adapter-response.schema.json"
+    }
+  ]
+}

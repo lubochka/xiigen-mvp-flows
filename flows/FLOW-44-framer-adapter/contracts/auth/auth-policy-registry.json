@@ -1,0 +1,55 @@
+{
+  "flowId": "FLOW-44",
+  "flowSlug": "framer-adapter",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow44-public-preview",
+      "route": "GET /api/dynamic/framer-adapter/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/framer-adapter/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe Framer Text Elements Adapter metadata only."
+    },
+    {
+      "policyId": "flow44-rules-validate",
+      "route": "POST /api/dynamic/framer-adapter/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow44-run",
+      "route": "POST /api/dynamic/framer-adapter/run",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow44-publication",
+      "route": "POST /api/dynamic/framer-adapter/publication",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow44-plan-validate",
+      "route": "POST /api/dynamic/framer-adapter/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow44-dashboard",
+      "route": "GET /api/dynamic/framer-adapter/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

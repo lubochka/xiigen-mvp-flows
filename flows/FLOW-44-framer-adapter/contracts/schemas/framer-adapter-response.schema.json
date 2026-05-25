@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FLOW-44 Framer Text Elements Adapter Response",
+  "type": "object",
+  "properties": {
+    "code": { "type": "string" },
+    "flow": { "type": "string" },
+    "packageName": { "type": "string" },
+    "sourceNodeCount": { "type": "integer" },
+    "textNodeCount": { "type": "integer" },
+    "writeCount": { "type": "integer" },
+    "failedWriteCount": { "type": "integer" },
+    "storedState": { "type": "string" },
+    "ruleCount": { "type": "integer" },
+    "taskTypeCount": { "type": "integer" }
+  },
+  "additionalProperties": true
+}

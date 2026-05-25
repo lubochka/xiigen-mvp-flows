@@ -1,0 +1,51 @@
+{
+    "flowId":  "FLOW-44",
+    "flowSlug":  "framer-adapter",
+    "checkedAtUtc":  "2026-05-25T15:23:56.2152516Z",
+    "expectedActionsEnabled":  false,
+    "repositories":  [
+                         {
+                             "repository":  "acme-corp--framer-adapter",
+                             "cascadePoint":  "C1-tenant-a-installed",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/acme-corp--framer-adapter",
+                             "pass":  true
+                         },
+                         {
+                             "repository":  "acme-corp--acme-framer-text-kit",
+                             "cascadePoint":  "C2-tenant-a-adapted-published",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/acme-corp--acme-framer-text-kit",
+                             "pass":  true
+                         },
+                         {
+                             "repository":  "northwind--acme-framer-text-kit",
+                             "cascadePoint":  "C3-tenant-b-installed-from-a",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/northwind--acme-framer-text-kit",
+                             "pass":  true
+                         },
+                         {
+                             "repository":  "northwind--northwind-framer-copy-bridge",
+                             "cascadePoint":  "C4-tenant-b-adapted-published",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/northwind--northwind-framer-copy-bridge",
+                             "pass":  true
+                         },
+                         {
+                             "repository":  "tessera--northwind-framer-copy-bridge",
+                             "cascadePoint":  "C5-tenant-c-installed-from-b",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/tessera--northwind-framer-copy-bridge",
+                             "pass":  true
+                         },
+                         {
+                             "repository":  "tessera--tessera-framer-text-adapter",
+                             "cascadePoint":  "C6-tenant-c-adapted",
+                             "actionsEnabled":  false,
+                             "githubUrl":  "https://github.com/lubochka/tessera--tessera-framer-text-adapter",
+                             "pass":  true
+                         }
+                     ],
+    "pass":  true
+}

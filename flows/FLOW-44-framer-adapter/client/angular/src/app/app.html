@@ -1,0 +1,120 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Framer Text Elements Adapter console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="Framer Text Elements Adapter states">
+    <button type="button" [class.active]="screenState() === 'filter'" (click)="setScreenState('filter')">{{ translated('Filter') }}</button>
+    <button type="button" [class.active]="screenState() === 'style'" (click)="setScreenState('style')">{{ translated('Style') }}</button>
+    <button type="button" [class.active]="screenState() === 'write'" (click)="setScreenState('write')">{{ translated('Write') }}</button>
+    <button type="button" [class.active]="screenState() === 'storage'" (click)="setScreenState('storage')">{{ translated('Storage') }}</button>
+    <button type="button" [class.active]="screenState() === 'publication'" (click)="setScreenState('publication')">{{ translated('Publication') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="Framer Text Elements Adapter metrics">
+    <div>
+      <span>{{ translated('Mapped text nodes') }}</span>
+      <strong>1 / mixed</strong>
+      <small>text nodes are kept; frames, images, and components are ignored</small>
+    </div>
+    <div>
+      <span>{{ translated('Package checks') }}</span>
+      <strong>7</strong>
+      <small>all Framer adapter rules covered by local tests and visual evidence</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>Tier D adapter evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Adapter lifecycle</p>
+      <h2>Framer text nodes become shared XIIGen text elements with deterministic style payloads</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of adapterRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can validate adapter rules, record package publication, and inspect Framer write payload evidence.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect package evidence and plugin-data state without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators validate the Framer adapter package and approve tenant-safe marketplace adoption.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review text filtering, style mapping, write payloads, and publication evidence.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of adapterSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'filter'">
+    <p class="eyebrow">Text-node filter</p>
+    <h2>Only Framer text nodes enter the shared text model</h2>
+    <p>Mixed selections keep text content, id, name, width, and height while non-text nodes remain outside the adapter output.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'style'">
+    <p class="eyebrow">Style mapping</p>
+    <h2>Font weights and paint values normalize before runtime writes</h2>
+    <p>Numeric, named, hex, rgb, and rgba inputs produce stable Framer style names and solid paint payloads.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'write'">
+    <p class="eyebrow">Runtime write</p>
+    <h2>Text updates use a Framer facade, not a live runtime dependency</h2>
+    <p>Generated payloads carry node id, text aliases, typography, fills, and opacity for later real Framer Plugin API replacement.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'storage'">
+    <p class="eyebrow">Plugin data</p>
+    <h2>State is serialized through plugin-data semantics</h2>
+    <p>The flow records getPluginData and setPluginData compatible state without localStorage or browser-only fallbacks.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'publication'">
+    <p class="eyebrow">Publication</p>
+    <h2>The local registry readback confirms the package includes STEP-1 invariants and the functional spec</h2>
+    <p>Global publication stays behind platform approval and per-use pricing metadata.</p>
+  </section>
+</main>
