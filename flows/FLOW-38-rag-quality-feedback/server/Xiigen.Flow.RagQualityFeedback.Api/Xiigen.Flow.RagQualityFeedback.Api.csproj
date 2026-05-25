@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-38-rag-quality-feedback</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.RagQualityFeedback.Application\Xiigen.Flow.RagQualityFeedback.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.RagQualityFeedback.Infrastructure\Xiigen.Flow.RagQualityFeedback.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+
+
+
+
+
+

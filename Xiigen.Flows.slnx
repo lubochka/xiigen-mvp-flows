@@ -265,4 +265,11 @@
     <Project Path="flows/FLOW-37-design-system-governance/server/Xiigen.Flow.DesignSystemGovernance.Infrastructure/Xiigen.Flow.DesignSystemGovernance.Infrastructure.csproj" />
     <Project Path="flows/FLOW-37-design-system-governance/server/Xiigen.Flow.DesignSystemGovernance.Tests/Xiigen.Flow.DesignSystemGovernance.Tests.csproj" />
   </Folder>
+  <Folder Name="/flows/FLOW-38-rag-quality-feedback/" />
+  <Folder Name="/flows/FLOW-38-rag-quality-feedback/server/">
+    <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Api/Xiigen.Flow.RagQualityFeedback.Api.csproj" />
+    <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Application/Xiigen.Flow.RagQualityFeedback.Application.csproj" />
+    <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Infrastructure/Xiigen.Flow.RagQualityFeedback.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Tests/Xiigen.Flow.RagQualityFeedback.Tests.csproj" />
+  </Folder>
 </Solution>

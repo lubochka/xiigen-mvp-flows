@@ -1,0 +1,27 @@
+﻿@Xiigen.Flow.RagQualityFeedback.Api_HostAddress = http://localhost:5332
+
+GET {{Xiigen.Flow.RagQualityFeedback.Api_HostAddress}}/health/live
+
+###
+GET {{Xiigen.Flow.RagQualityFeedback.Api_HostAddress}}/api/dynamic/rag-quality-feedback/public-preview
+
+###
+POST {{Xiigen.Flow.RagQualityFeedback.Api_HostAddress}}/api/dynamic/rag-quality-feedback
+Authorization: Bearer local-acme-corp-token
+X-Tenant-Id: acme-corp
+X-Role: platform_admin
+X-Idempotency-Key: bootstrap-1
+Content-Type: application/json
+
+{
+  "planBundleRef": "plan-bundle://xiigen/dotnet-angular/bootstrap-v1",
+  "schemaRegistryRef": "schema://xiigen/core-bootstrap",
+  "factoryRegistryRef": "registry://xiigen/factories/core",
+  "skillsIndexRef": "rag://skills/v18",
+  "smokeFlowId": "FLOW-SMOKE-01",
+  "requiredFactoryCount": 5,
+  "coreFlowCount": 1,
+  "missingFactories": []
+}
+
+

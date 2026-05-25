@@ -1,0 +1,49 @@
+﻿{
+  "flowId": "FLOW-38",
+  "flowSlug": "rag-quality-feedback",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow38-public-preview",
+      "route": "GET /api/dynamic/rag-quality-feedback/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/rag-quality-feedback/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe RAG feedback metadata only."
+    },
+    {
+      "policyId": "flow38-rules-validate",
+      "route": "POST /api/dynamic/rag-quality-feedback/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow38-feedback-record",
+      "route": "POST /api/dynamic/rag-quality-feedback",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow38-plan-validate",
+      "route": "POST /api/dynamic/rag-quality-feedback/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow38-dashboard",
+      "route": "GET /api/dynamic/rag-quality-feedback/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}
+

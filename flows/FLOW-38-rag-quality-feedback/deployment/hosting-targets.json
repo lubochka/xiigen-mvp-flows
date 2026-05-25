@@ -1,0 +1,18 @@
+﻿{
+  "flowId": "FLOW-38",
+  "flowSlug": "rag-quality-feedback",
+  "api": {
+    "localUrl": "http://127.0.0.1:5330",
+    "containerUrl": "http://127.0.0.1:5330"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4338",
+    "evidencePort": 4338
+  }
+}
+
+
+
+
+
+

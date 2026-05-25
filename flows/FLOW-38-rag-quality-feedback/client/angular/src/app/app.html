@@ -1,0 +1,101 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('Learning feedback console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>Language</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="RAG quality feedback states">
+    <button type="button" [class.active]="screenState() === 'outcomes'" (click)="setScreenState('outcomes')">{{ translated('Outcomes') }}</button>
+    <button type="button" [class.active]="screenState() === 'quality'" (click)="setScreenState('quality')">{{ translated('Quality') }}</button>
+    <button type="button" [class.active]="screenState() === 'rules'" (click)="setScreenState('rules')">{{ translated('Rules') }}</button>
+    <button type="button" [class.active]="screenState() === 'signals'" (click)="setScreenState('signals')">{{ translated('Signals') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="RAG quality feedback metrics">
+    <div>
+      <span>{{ translated('Cycles reviewed') }}</span>
+      <strong>3</strong>
+      <small>learning outcomes with traceable pattern references</small>
+    </div>
+    <div>
+      <span>{{ translated('Pattern updates') }}</span>
+      <strong>±0.05</strong>
+      <small>fixed quality adjustment with score clamping</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>feedback evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Learning loop lifecycle</p>
+      <h2>Cycle outcomes, pattern quality updates, distilled guidance, and escalation signals are recorded before the next retrieval pass</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of feedbackRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can record cycle outcomes, apply quality updates, and publish distilled guidance.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect feedback evidence without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators review learning outcomes and decide which retrieval guidance is ready for future use.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review quality changes, retained timeout evidence, and escalation signals.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of feedbackSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'rules'">
+    <p class="eyebrow">Distilled guidance</p>
+    <h2>Successful cycles can seed concise guidance for future retrieval context</h2>
+    <p>Wasted cycles never produce guidance; they only lower trust in the retrieved pattern.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'signals'">
+    <p class="eyebrow">Escalation signals</p>
+    <h2>Very low confidence outcomes create review signals instead of silently updating pattern trust</h2>
+    <p>Support can inspect these signals while tenant updates remain scoped to approved operators.</p>
+  </section>
+</main>

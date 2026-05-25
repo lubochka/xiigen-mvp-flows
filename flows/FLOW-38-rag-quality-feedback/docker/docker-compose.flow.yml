@@ -1,0 +1,15 @@
+﻿services:
+  FLOW-38-rag-quality-feedback-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-38-rag-quality-feedback/server/Xiigen.Flow.RagQualityFeedback.Api/Dockerfile
+    ports:
+      - "5327:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+
+
+
+
+

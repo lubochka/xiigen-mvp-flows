@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/schemas/FLOW-38/rag-quality-feedback-request.schema.json",
+  "title": "RAG Quality Feedback Request",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "cycleId": { "type": "string", "minLength": 1 },
+    "patternId": { "type": "string", "minLength": 1 },
+    "retrievalId": { "type": "string", "minLength": 1 },
+    "outcome": { "type": "string", "enum": ["SUCCESS_WITHIN_BUDGET", "WASTED_CYCLE", "ESCALATION_REQUIRED"] },
+    "previousQualityScore": { "type": "number", "minimum": 0, "maximum": 1 },
+    "af9Score": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+    "hasDpoTriple": { "type": "boolean" },
+    "distilledRuleCandidate": { "type": "string" },
+    "distilledRuleConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "simulateTimeout": { "type": "boolean" }
+  },
+  "required": ["cycleId", "patternId", "retrievalId", "outcome", "previousQualityScore", "af9Score"]
+}

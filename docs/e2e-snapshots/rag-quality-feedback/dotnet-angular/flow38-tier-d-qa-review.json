@@ -1,0 +1,56 @@
+{
+  "flowId": "FLOW-38",
+  "flowSlug": "rag-quality-feedback",
+  "qaVerdict": "APPROVED",
+  "portabilityTier": "Tier D",
+  "reviewedAt": "2026-05-25T07:48:00Z",
+  "serverEvidence": {
+    "dotnetBuild": "Xiigen.Flows.slnx Release build passed with 0 warnings and 0 errors",
+    "unitTests": "Xiigen.Flow.RagQualityFeedback.Tests passed 14/14",
+    "authMatrix": {
+      "validToken": 201,
+      "idempotencyReplay": 200,
+      "missingToken": 401,
+      "crossTenantToken": 401,
+      "wrongRole": 403,
+      "supportDashboard": 200
+    }
+  },
+  "clientEvidence": {
+    "angularTests": "6/6 passed",
+    "angularBuild": "ng build passed",
+    "visualEvidence": {
+      "cascadePoints": 7,
+      "expectedPng": 63,
+      "actualPng": 63,
+      "zeroBytePng": 0,
+      "roles": ["platform_admin", "platform_support", "tenant_admin"],
+      "cellsPerPoint": ["C2-en-populated-desktop", "C4-he-rtl-populated-desktop", "C6-en-populated-mobile"]
+    }
+  },
+  "functionalCoverage": {
+    "p10Rules": ["CF-1054", "CF-1055", "CF-1056", "CF-1057"],
+    "taskTypes": ["T594-CYCLE-OUTCOME-CLASSIFIER", "T595-RAG-QUALITY-UPDATER", "T596-DISTILLED-RULE-EXTRACTOR"],
+    "implementedExpectations": [
+      "cycle outcome classification",
+      "cycleId plus patternId idempotency",
+      "fixed quality delta and score clamp",
+      "no DPO triple produces no update",
+      "wasted cycle blocks distilled guidance",
+      "timeout retains outbox retry evidence",
+      "tenant-scoped dashboard readback"
+    ]
+  },
+  "tenantCascade": {
+    "repositories": [
+      "lubochka/acme-corp--rag-quality-feedback",
+      "lubochka/acme-corp--acme-rag-quality-lab",
+      "lubochka/northwind--acme-rag-quality-lab",
+      "lubochka/northwind--northwind-retrieval-feedback-hub",
+      "lubochka/tessera--northwind-retrieval-feedback-hub",
+      "lubochka/tessera--tessera-rag-learning-loop"
+    ],
+    "githubActionsDisabled": true
+  },
+  "openIssues": []
+}

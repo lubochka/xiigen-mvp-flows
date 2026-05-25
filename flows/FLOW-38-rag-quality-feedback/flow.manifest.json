@@ -1,0 +1,151 @@
+﻿{
+    "flowId":  "FLOW-38",
+    "flowSlug":  "rag-quality-feedback",
+    "sourceRepo":  "xiigen-flows-dot-net-angular",
+    "sourcePath":  "flows/FLOW-38-rag-quality-feedback",
+    "serverStack":  "dotnet-aspnet",
+    "clientStack":  "angular",
+    "ownershipMode":  "flow-microservice",
+    "contractsPath":  "contracts",
+    "serverEntrypoint":  "server/Xiigen.Flow.RagQualityFeedback.Api",
+    "clientEntrypoint":  "client/angular",
+    "dockerComposePath":  "docker/docker-compose.flow.yml",
+    "ciTemplatePath":  "not-applicable-github-actions-disabled",
+    "hostingTargetsPath":  "deployment/hosting-targets.json",
+    "evidencePath":  "docs/e2e-snapshots/rag-quality-feedback/dotnet-angular",
+    "sourceAliases":  [
+                          "rag-quality-feedback",
+                          "learning-loop-rag-quality",
+                          "cycle-outcome-classifier",
+                          "rag-quality-updater",
+                          "distilled-rule-extractor",
+                          "feedback-widget"
+                      ],
+    "nativeAdapterPackages":  [
+
+                              ],
+    "roles":  {
+                  "primary":  [
+                                  "platform_admin",
+                                  "tenant_admin"
+                              ],
+                  "partial":  [
+                                  "platform_support"
+                              ],
+                  "inherited":  [
+
+                                ],
+                  "wrongRoleForProtectedRoute":  "platform_support"
+              },
+    "certification":  {
+                          "readinessStatus":  "implemented",
+                          "requiresTenantCascade":  true,
+                          "requiresPlaywrightPng":  true,
+                          "knownConstraints":  [
+                                                   "FLOW-38 is engine-internal and uses platform-admin and tenant-admin mutation with platform-support inspection.",
+                                                   "RAG quality feedback implements the FLOW-38 cycle outcome, quality update, distilled rule, and timeout retention invariants locally before real provider replacement."
+                                               ],
+                          "portabilityTier":  "Tier D",
+                          "tierDComplete":  true
+                      },
+    "packageMode":  "flow-microservice-package",
+    "tenantForkNaming":  "{tenantId}--{moduleName}",
+    "codeBundle":  {
+                       "classification":  "internal-code",
+                       "containsTenantRuntimeData":  false,
+                       "allowedDataClasses":  [
+                                                  "source-code",
+                                                  "generated-contracts",
+                                                  "configuration-template",
+                                                  "test-fixtures",
+                                                  "documentation",
+                                                  "visual-evidence",
+                                                  "synthetic-data"
+                                              ],
+                       "secretPolicy":  "vault-reference-only",
+                       "piiPolicy":  "synthetic-only"
+                   },
+    "endpointDescriptorsPath":  "contracts/endpoints/flow-endpoints.json",
+    "flowDependencies":  [
+                             {
+                                 "flowId":  "FLOW-00",
+                                 "relationship":  "bootstrap-prerequisite",
+                                 "reason":  "FLOW-38 packages only after the platform contract and package skeleton are active."
+                             },
+                             {
+                                 "flowId":  "FLOW-29",
+                                 "relationship":  "rag-pattern-source",
+                                 "reason":  "FLOW-38 consumes retrieval patterns and outcome signals created by the adaptive RAG research flow."
+                             },
+                             {
+                                 "flowId":  "FLOW-37",
+                                 "relationship":  "capability-gap-readback",
+                                 "reason":  "FLOW-38 closes the learning loop for capability gap signals attributed during governance review."
+                             }
+                         ],
+    "coInstallDependencies":  [
+
+                              ],
+    "functionalCoverage":  {
+                               "coverageMode":  "flow-coverage-p10-and-active-session-state",
+                               "sourceDocsRoot":  "docs/sessions/FLOW-38",
+                               "requiredDocuments":  [
+                                                         "docs/flow-coverage/rag-quality-feedback/P1-business-logic-inventory.md",
+                                                         "docs/flow-coverage/rag-quality-feedback/P5-ui-specs.md",
+                                                         "docs/flow-coverage/rag-quality-feedback/P9-edge-cases.md",
+                                                         "docs/flow-coverage/rag-quality-feedback/P10-server-specs.md",
+                                                         "docs/flow-coverage/rag-quality-feedback/P11-impl-readiness.md",
+                                                         "docs/sessions/FLOW-38/FLOW-38-MOBILITY-AUTH-STATE.json",
+                                                         "docs/sessions/FLOW-38/FLOW-38-RAG.md",
+                                                         "docs/sessions/FLOW-38/FLOW-38-STEP-1-INVARIANTS.md"
+                                                     ],
+                               "existingCfRules":  0,
+                               "newCfRules":  4,
+                               "bfaRulesFile":  "implemented",
+                               "testDirectory":  "implemented",
+                               "p3Automation":  {
+                                                    "tested":  4,
+                                                    "partial":  0,
+                                                    "notTested":  0
+                                                },
+                               "readinessStatus":  "IMPLEMENTED",
+                               "executorGuide":  "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+                           },
+    "externalDependencyStrategy":  {
+                                       "executionPolicy":  "local-docker-first-then-official-docs-mock",
+                                       "dockerFirst":  true,
+                                       "mockProviderRequiredWhenDockerUnavailable":  true,
+                                       "officialDocsRequiredForMocks":  true,
+                                       "mockRegistrationEnvironments":  [
+                                                                            "Development",
+                                                                            "Test"
+                                                                        ],
+                                       "realProviderE2eRequired":  true,
+                                       "technicalConstraintsAllowed":  false,
+                                       "implementedProvider":  "Xiigen.Fabrics.InMemory document, idempotency, and outbox providers",
+                                       "realProviderReplacementPath":  "server/Xiigen.Flow.RagQualityFeedback.Infrastructure/RagQualityFeedbackServiceCollectionExtensions.cs"
+                                   },
+    "realProviderReplacementTests":  [
+                                         {
+                                             "name":  "RAG Quality Feedback fabric replacement",
+                                             "contract":  "IDocumentStore, IIdempotencyStore, and IOutboxStore return DataProcessResult and read tenant scope from TenantContext.",
+                                             "currentProvider":  "Xiigen.Fabrics.InMemory"
+                                         }
+                                     ],
+    "adaptation":  {
+                       "flowModuleNameFreedomKey":  "flow38_module_name",
+                       "defaultModuleName":  "rag-quality-feedback",
+                       "adaptationSurfacePath":  "docs/adaptation-surface/adaptation-plan-type-a-rag-quality-feedback.md",
+                       "aiAdaptationRequired":  true,
+                       "marketplaceListingRequired":  true,
+                       "cascadePoints":  [
+                                             "C0-source-flow",
+                                             "C1-tenant-a-installed",
+                                             "C2-tenant-a-adapted-published",
+                                             "C3-tenant-b-installed-from-a",
+                                             "C4-tenant-b-adapted-published",
+                                             "C5-tenant-c-installed-from-b",
+                                             "C6-tenant-c-adapted"
+                                         ]
+                   }
+}

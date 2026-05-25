@@ -1,0 +1,51 @@
+﻿{
+  "flowId": "FLOW-38",
+  "flowSlug": "rag-quality-feedback",
+  "endpoints": [
+    {
+      "endpointId": "flow38-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/rag-quality-feedback/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/rag-quality-feedback-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe RAG feedback metadata only."
+    },
+    {
+      "endpointId": "flow38-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/rag-quality-feedback/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/rag-quality-feedback-request.schema.json",
+      "responseSchema": "contracts/schemas/rag-quality-feedback-response.schema.json"
+    },
+    {
+      "endpointId": "flow38-feedback-record",
+      "method": "POST",
+      "path": "/api/dynamic/rag-quality-feedback",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/rag-quality-feedback-request.schema.json",
+      "responseSchema": "contracts/schemas/rag-quality-feedback-response.schema.json"
+    },
+    {
+      "endpointId": "flow38-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/rag-quality-feedback/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/rag-quality-feedback-request.schema.json",
+      "responseSchema": "contracts/schemas/rag-quality-feedback-response.schema.json"
+    },
+    {
+      "endpointId": "flow38-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/rag-quality-feedback/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/rag-quality-feedback-response.schema.json"
+    }
+  ]
+}
+

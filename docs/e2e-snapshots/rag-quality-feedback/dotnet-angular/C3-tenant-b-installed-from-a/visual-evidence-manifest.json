@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-38",
+  "flowSlug": "rag-quality-feedback",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "outcomes",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 107758
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "rules",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 121607
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "signals",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 107430
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "outcomes",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 105535
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "rules",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 119574
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "signals",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 106281
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "outcomes",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 107318
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "rules",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 121143
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "signals",
+      "path": "C:\\Projects\\northwind--acme-rag-quality-lab\\docs\\e2e-snapshots\\rag-quality-feedback\\dotnet-angular\\C3-tenant-b-installed-from-a\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 106605
+    }
+  ]
+}
