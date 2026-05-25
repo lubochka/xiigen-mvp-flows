@@ -1,0 +1,120 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-45-history-bootstrap",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "angular",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.HistoryBootstrap.Api",
+  "clientEntrypoint": "client/angular",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "evidencePath": "docs/e2e-snapshots/history-bootstrap/dotnet-angular",
+  "sourceAliases": [
+    "history-bootstrap",
+    "BootstrapFromDocumentsService",
+    "ArchPhilosophyRetriever",
+    "PhilosophyPatternSummarizer",
+    "HistoryBootstrapOrchestrator"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "certification": {
+    "readinessStatus": "implemented",
+    "requiresTenantCascade": true,
+    "requiresPlaywrightPng": true,
+    "knownConstraints": [
+      "FLOW-45 is the canonical history-bootstrap flow from the merged engine architecture, not the stale cycle-chain alias.",
+      "History Bootstrap implements approved source validation, global ARCH_PATTERN scope, DESIGN_REASONING and RAG routing, summary storage before queue, idempotent orchestration, and tenant-scoped dashboard readback."
+    ],
+    "portabilityTier": "Tier D",
+    "tierDComplete": true
+  },
+  "packageMode": "flow-microservice-package",
+  "tenantForkNaming": "{tenantId}--{moduleName}",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": ["source-code", "generated-contracts", "configuration-template", "test-fixtures", "documentation", "visual-evidence", "synthetic-data"],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-00",
+      "relationship": "bootstrap-prerequisite",
+      "reason": "FLOW-45 packages only after the platform contract and package skeleton are active."
+    },
+    {
+      "flowId": "FLOW-29",
+      "relationship": "rag-seed-consumer",
+      "reason": "FLOW-29 and later RAG consumers read history-bootstrap pattern summaries and global architecture memories."
+    },
+    {
+      "flowId": "FLOW-33",
+      "relationship": "system-initiation-seed",
+      "reason": "FLOW-45 is part of the system-initiation bootstrap path documented in the NestJS baseline."
+    }
+  ],
+  "coInstallDependencies": [],
+  "functionalCoverage": {
+    "coverageMode": "merged-engine-architecture-and-bootstrap-source",
+    "sourceDocsRoot": "server/src/bootstrap",
+    "requiredDocuments": [
+      "docs/xiigenDesign/ENGINE_ARCHITECTURE_MERGED.md",
+      "docs/business-flows/FLOW-BY-FLOW-STATUS.md",
+      "server/src/bootstrap/bootstrap-from-documents.service.ts",
+      "server/src/bootstrap/arch-philosophy-retriever.service.ts",
+      "server/src/bootstrap/philosophy-pattern-summarizer.service.ts",
+      "server/src/bootstrap/history-bootstrap-orchestrator.service.ts",
+      "server/test/system-initiation-bootstrap-v2/phase-45-a.spec.ts",
+      "server/test/system-initiation-bootstrap-v2/phase-45-bcd.spec.ts"
+    ],
+    "existingCfRules": 2,
+    "newCfRules": 5,
+    "bfaRulesFile": "implemented",
+    "testDirectory": "implemented",
+    "p3Automation": {
+      "tested": 4,
+      "partial": 0,
+      "notTested": 0
+    },
+    "readinessStatus": "IMPLEMENTED",
+    "executorGuide": "FLOW-FUNCTIONAL-COVERAGE-EXECUTOR-GUIDE.md"
+  },
+  "externalDependencyStrategy": {
+    "executionPolicy": "local-docker-first-then-official-docs-mock",
+    "dockerFirst": true,
+    "mockProviderRequiredWhenDockerUnavailable": true,
+    "officialDocsRequiredForMocks": true,
+    "mockRegistrationEnvironments": ["Development", "Test"],
+    "realProviderE2eRequired": true,
+    "technicalConstraintsAllowed": false,
+    "implementedProvider": "Xiigen.Fabrics.InMemory document and outbox providers for local deterministic bootstrap verification.",
+    "realProviderReplacementPath": "server/Xiigen.Flow.HistoryBootstrap.Infrastructure/HistoryBootstrapServiceCollectionExtensions.cs"
+  },
+  "realProviderReplacementTests": [
+    {
+      "name": "History Bootstrap document/outbox provider replacement",
+      "contract": "IDocumentStore and IOutboxStore return DataProcessResult and read tenant scope from TenantContext; Elasticsearch and MassTransit providers can replace the in-memory providers without changing application logic.",
+      "currentProvider": "Xiigen.Fabrics.InMemory"
+    }
+  ],
+  "adaptation": {
+    "flowModuleNameFreedomKey": "flow45_module_name",
+    "defaultModuleName": "history-bootstrap",
+    "adaptationSurfacePath": "docs/adaptation-surface/adaptation-plan-type-a-history-bootstrap.md",
+    "aiAdaptationRequired": true,
+    "marketplaceListingRequired": true,
+    "cascadePoints": ["C0-source-flow", "C1-tenant-a-installed", "C2-tenant-a-adapted-published", "C3-tenant-b-installed-from-a", "C4-tenant-b-adapted-published", "C5-tenant-c-installed-from-b", "C6-tenant-c-adapted"]
+  }
+}

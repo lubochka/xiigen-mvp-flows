@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/FLOW-45/history-bootstrap-request.schema.json",
+  "title": "FLOW-45 History Bootstrap Request",
+  "type": "object",
+  "properties": {
+    "bootstrapRunId": { "type": "string", "minLength": 1 },
+    "summarizationRunId": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["patternId", "patternType"],
+        "properties": {
+          "patternId": { "type": "string", "minLength": 1 },
+          "patternType": { "type": "string", "enum": ["ARCH_PATTERN", "DESIGN_REASONING", "RAG_PATTERN", "RAG"] },
+          "title": { "type": "string" },
+          "problem": { "type": "string" },
+          "solution": { "type": "string" },
+          "tradeoff": { "type": "string" },
+          "taskTypeId": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rules": { "type": "array", "items": { "type": "object" } },
+    "planSteps": { "type": "array", "items": { "type": "object" } }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,76 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "endpoints": [
+    {
+      "endpointId": "flow45-public-preview",
+      "method": "GET",
+      "path": "/api/dynamic/history-bootstrap/public-preview",
+      "authPosture": "anonymous",
+      "requiredRoles": [],
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json",
+      "bypassReason": "Anonymous preview exposes safe History Bootstrap metadata only."
+    },
+    {
+      "endpointId": "flow45-rules-validate",
+      "method": "POST",
+      "path": "/api/dynamic/history-bootstrap/rules/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/history-bootstrap-request.schema.json",
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-plan-validate",
+      "method": "POST",
+      "path": "/api/dynamic/history-bootstrap/plan/validate",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/history-bootstrap-request.schema.json",
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-seed",
+      "method": "POST",
+      "path": "/api/dynamic/history-bootstrap/seed",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/history-bootstrap-request.schema.json",
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-patterns",
+      "method": "GET",
+      "path": "/api/dynamic/history-bootstrap/patterns",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-summaries",
+      "method": "POST",
+      "path": "/api/dynamic/history-bootstrap/summaries",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/history-bootstrap-request.schema.json",
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-run",
+      "method": "POST",
+      "path": "/api/dynamic/history-bootstrap/run",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "tenant_admin"],
+      "requestSchema": "contracts/schemas/history-bootstrap-request.schema.json",
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    },
+    {
+      "endpointId": "flow45-dashboard",
+      "method": "GET",
+      "path": "/api/dynamic/history-bootstrap/dashboard",
+      "authPosture": "policy",
+      "requiredRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "responseSchema": "contracts/schemas/history-bootstrap-response.schema.json"
+    }
+  ]
+}

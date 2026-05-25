@@ -1,0 +1,120 @@
+<main class="workspace" [attr.data-testid]="roleTestId()">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">{{ translated('History Bootstrap console') }}</p>
+      <h1>{{ pageTitle() }}</h1>
+      <p class="summary">{{ summary() }}</p>
+    </div>
+    <div class="control-panel">
+      <label>
+        <span>{{ translated('Role') }}</span>
+        <select [ngModel]="role()" (ngModelChange)="setRole($event)">
+          <option *ngFor="let item of roles" [ngValue]="item">{{ roleLabel(item) }}</option>
+        </select>
+      </label>
+      <label>
+        <span>{{ translated('Language') }}</span>
+        <select [ngModel]="language()" (ngModelChange)="applyLanguage($event)">
+          <option value="en">English</option>
+          <option value="he">עברית</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="History Bootstrap states">
+    <button type="button" [class.active]="screenState() === 'seed'" (click)="setScreenState('seed')">{{ translated('Seed') }}</button>
+    <button type="button" [class.active]="screenState() === 'retrieve'" (click)="setScreenState('retrieve')">{{ translated('Retrieve') }}</button>
+    <button type="button" [class.active]="screenState() === 'summarize'" (click)="setScreenState('summarize')">{{ translated('Summarize') }}</button>
+    <button type="button" [class.active]="screenState() === 'orchestrate'" (click)="setScreenState('orchestrate')">{{ translated('Orchestrate') }}</button>
+    <button type="button" [class.active]="screenState() === 'evidence'" (click)="setScreenState('evidence')">{{ translated('Evidence') }}</button>
+  </nav>
+
+  <section class="metrics" aria-label="History Bootstrap metrics">
+    <div>
+      <span>{{ translated('Architecture records') }}</span>
+      <strong>4</strong>
+      <small>seeded from approved global architecture history sources</small>
+    </div>
+    <div>
+      <span>{{ translated('Rule coverage') }}</span>
+      <strong>7</strong>
+      <small>all History Bootstrap rules covered by unit, API, and visual evidence</small>
+    </div>
+    <div>
+      <span>{{ translated('Readiness') }}</span>
+      <strong>{{ readinessScore() }}%</strong>
+      <small>Tier D bootstrap evidence complete</small>
+    </div>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel primary">
+      <p class="eyebrow">Bootstrap lifecycle</p>
+      <h2>Architecture history becomes global, retrievable platform memory before dependent flows run</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>State</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of bootstrapRows">
+            <td>{{ row.label }}</td>
+            <td><span class="state-pill">{{ row.state }}</span></td>
+            <td>{{ row.detail }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="canOperate()" class="notice success">This role can run the seed, summary, and orchestration path while preserving global knowledge scope.</p>
+      <p *ngIf="role() === 'platform_support'" class="notice success">This role can inspect bootstrap evidence, summary groups, and completion records without mutation controls.</p>
+    </article>
+
+    <aside class="panel side">
+      <p class="eyebrow">Role surface</p>
+      <h3>{{ roleLabel(role()) }}</h3>
+      <p *ngIf="canOperate()">Operators certify the architecture-history bootstrap and keep tenant-adapted modules aligned with approved platform memory.</p>
+      <p *ngIf="canInspect() && !canOperate()">Inspectors review global-scope records, grouped summaries, and completion evidence.</p>
+    </aside>
+  </section>
+
+  <section class="signal-list">
+    <article *ngFor="let signal of bootstrapSignals">
+      <span>{{ signal.label }}</span>
+      <strong>{{ signal.value }}</strong>
+      <p>{{ signal.detail }}</p>
+    </article>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'seed'">
+    <p class="eyebrow">Document seed</p>
+    <h2>Only approved history sources can seed architecture memory</h2>
+    <p>The parser rejects tenant runtime files and converts approved records into global, flow-scoped history patterns.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'retrieve'">
+    <p class="eyebrow">Pattern retrieval</p>
+    <h2>Architecture patterns are retrieved with global scope only</h2>
+    <p>Retrieval filters keep historical platform patterns available to later flows without leaking tenant-local data.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'summarize'">
+    <p class="eyebrow">Philosophy summary</p>
+    <h2>Pattern groups are stored before any completion event is emitted</h2>
+    <p>Summaries group design reasoning, architecture patterns, and RAG seeds by type for downstream memory consumers.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'orchestrate'">
+    <p class="eyebrow">Bootstrap orchestration</p>
+    <h2>The same run id can be replayed without duplicated state</h2>
+    <p>Completion records and idempotency records are written before the history-bootstrap completion event.</p>
+  </section>
+
+  <section class="panel" *ngIf="screenState() === 'evidence'">
+    <p class="eyebrow">Portability evidence</p>
+    <h2>Tenant cascade evidence proves the adapted module keeps the same bootstrap contract</h2>
+    <p>Every tenant repo keeps Actions disabled, captures three role cells, and records the marketplace adaptation chain.</p>
+  </section>
+</main>

@@ -1,0 +1,57 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "generatedAt": "2026-05-25T16:33:29.685Z",
+  "pass": true,
+  "cases": [
+    {
+      "name": "public-preview anonymous 200",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": "{\"flow\":\"FLOW-45\",\"packageName\":\"@xiigen/history-bootstrap\",\"summary\":\"History bootstrap seeds architecture decisions, global patterns, RAG-ready summaries, and completion records before dependent flows read platform memory.\",\"tabs\":[\"seed\",\"retrieve\",\"summarize\",\"orchestrate\",\"evidence\"]}"
+    },
+    {
+      "name": "missing-token run 401",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": "{\"code\":\"MISSING_TOKEN\"}"
+    },
+    {
+      "name": "wrong-role run 403",
+      "expected": 403,
+      "actual": 403,
+      "pass": true,
+      "body": "{\"code\":\"WRONG_ROLE\",\"allowedRoles\":[\"platform_admin\",\"tenant_admin\"]}"
+    },
+    {
+      "name": "cross-tenant run 401",
+      "expected": 401,
+      "actual": 401,
+      "pass": true,
+      "body": "{\"code\":\"AUTH_CROSS_TENANT_TOKEN\"}"
+    },
+    {
+      "name": "tenant-admin run 201",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": "{\"bootstrapRunId\":\"run-live-001\",\"seedCount\":3,\"retrievedCount\":2,\"summarizedGroups\":2,\"completionStatus\":\"COMPLETE\",\"tenantScope\":\"acme-corp\",\"completedAt\":\"2026-05-25T16:33:29.6590573+00:00\"}"
+    },
+    {
+      "name": "platform-admin seed 201",
+      "expected": 201,
+      "actual": 201,
+      "pass": true,
+      "body": "{\"patternsSeeded\":4,\"planningDecisionsSeeded\":1,\"ragPatternsSeeded\":3,\"patternsFailed\":0,\"source\":\"history-seeds/arch-philosophy.json\"}"
+    },
+    {
+      "name": "platform-support dashboard 200",
+      "expected": 200,
+      "actual": 200,
+      "pass": true,
+      "body": "{\"completions\":[{\"bootstrapRunId\":\"run-live-001\",\"seedCount\":3,\"retrievedCount\":2,\"summarizedGroups\":2,\"completionStatus\":\"COMPLETE\",\"tenantScope\":\"acme-corp\",\"completedAt\":\"2026-05-25T16:33:29.6590573+00:00\"}],\"summaries\":[{\"summarizationRunId\":\"run-live-001-summary\",\"tenantScope\":\"acme-corp\",\"patternType\":\"ARCH_PATTERN\",\"patternCount\":1,\"patternIds\":[\"HB-001\"],\"knowledgeScope\":\"GLOBAL\",\"summarizedAt\":\"2026-05-25T16:33:29.6580794+00:00\"},{\"summarizationRunId\":\"run-live-001-summary\",\"tenantScope\":\"acme-corp\",\"patternType\":\"RAG_PATTERN\",\"patternCount\":1,\"patternIds\":[\"HB-003\"],\"knowledgeScope\":\"GLOBAL\",\"summarizedAt\":\"2026-05-25T16:33:29.6580940+00:00\"}],\"kpis\":{\"completionCount\":1,\"summaryCount\":2,\"requiredRuleCount\":7}}"
+    }
+  ]
+}

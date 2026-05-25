@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>xiigen-FLOW-45-history-bootstrap</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xiigen.Flow.HistoryBootstrap.Application\Xiigen.Flow.HistoryBootstrap.Application.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.HistoryBootstrap.Infrastructure\Xiigen.Flow.HistoryBootstrap.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
+

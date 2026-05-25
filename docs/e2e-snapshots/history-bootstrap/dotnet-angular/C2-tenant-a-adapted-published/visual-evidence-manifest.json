@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 129615
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 126048
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 136460
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 127072
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 123567
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 134688
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 128930
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 125298
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\acme-corp--acme-history-rag-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C2-tenant-a-adapted-published\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 135517
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "api": {
+    "localUrl": "http://127.0.0.1:5341",
+    "containerUrl": "http://127.0.0.1:5341"
+  },
+  "client": {
+    "localUrl": "http://127.0.0.1:4341",
+    "evidencePort": 4341
+  }
+}
+

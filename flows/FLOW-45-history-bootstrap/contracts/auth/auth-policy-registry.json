@@ -1,0 +1,69 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "roles": {
+    "primary": ["platform_admin", "tenant_admin"],
+    "partial": ["platform_support"],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "platform_support"
+  },
+  "policies": [
+    {
+      "policyId": "flow45-public-preview",
+      "route": "GET /api/dynamic/history-bootstrap/public-preview",
+      "authPosture": "anonymous",
+      "allowedRoles": [],
+      "bypassPaths": ["/api/dynamic/history-bootstrap/public-preview"],
+      "bypassReason": "Anonymous preview exposes safe History Bootstrap metadata only."
+    },
+    {
+      "policyId": "flow45-rules-validate",
+      "route": "POST /api/dynamic/history-bootstrap/rules/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-plan-validate",
+      "route": "POST /api/dynamic/history-bootstrap/plan/validate",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-seed",
+      "route": "POST /api/dynamic/history-bootstrap/seed",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-patterns",
+      "route": "GET /api/dynamic/history-bootstrap/patterns",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-summaries",
+      "route": "POST /api/dynamic/history-bootstrap/summaries",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-run",
+      "route": "POST /api/dynamic/history-bootstrap/run",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "tenant_admin"],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow45-dashboard",
+      "route": "GET /api/dynamic/history-bootstrap/dashboard",
+      "authPosture": "policy",
+      "allowedRoles": ["platform_admin", "platform_support", "tenant_admin"],
+      "bypassPaths": []
+    }
+  ]
+}

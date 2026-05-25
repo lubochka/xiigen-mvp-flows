@@ -1,0 +1,10 @@
+﻿services:
+  flow-45-history-bootstrap-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-45-history-bootstrap/server/Xiigen.Flow.HistoryBootstrap.Api/Dockerfile
+    ports:
+      - "5341:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+

@@ -313,4 +313,11 @@
     <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Application/Xiigen.Flow.FramerAdapter.Application.csproj" />
     <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Infrastructure/Xiigen.Flow.FramerAdapter.Infrastructure.csproj" />
     <Project Path="flows/FLOW-44-framer-adapter/server/Xiigen.Flow.FramerAdapter.Tests/Xiigen.Flow.FramerAdapter.Tests.csproj" />
+  </Folder>
+  <Folder Name="/flows/FLOW-45-history-bootstrap/" />
+  <Folder Name="/flows/FLOW-45-history-bootstrap/server/">
+    <Project Path="flows/FLOW-45-history-bootstrap/server/Xiigen.Flow.HistoryBootstrap.Api/Xiigen.Flow.HistoryBootstrap.Api.csproj" />
+    <Project Path="flows/FLOW-45-history-bootstrap/server/Xiigen.Flow.HistoryBootstrap.Application/Xiigen.Flow.HistoryBootstrap.Application.csproj" />
+    <Project Path="flows/FLOW-45-history-bootstrap/server/Xiigen.Flow.HistoryBootstrap.Infrastructure/Xiigen.Flow.HistoryBootstrap.Infrastructure.csproj" />
+    <Project Path="flows/FLOW-45-history-bootstrap/server/Xiigen.Flow.HistoryBootstrap.Tests/Xiigen.Flow.HistoryBootstrap.Tests.csproj" />
   </Folder></Solution>

@@ -1,0 +1,81 @@
+{
+  "flowId": "FLOW-45",
+  "flowSlug": "history-bootstrap",
+  "expectedCount": 9,
+  "actualCount": 9,
+  "zeroByteCount": 0,
+  "evidence": [
+    {
+      "role": "platform_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C2-en-populated-desktop.png",
+      "bytes": 127455
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 126048
+    },
+    {
+      "role": "platform_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-admin-C6-en-populated-mobile.png",
+      "bytes": 135717
+    },
+    {
+      "role": "platform_support",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C2-en-populated-desktop.png",
+      "bytes": 124983
+    },
+    {
+      "role": "platform_support",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C4-he-rtl-populated-desktop.png",
+      "bytes": 123567
+    },
+    {
+      "role": "platform_support",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\platform-support-C6-en-populated-mobile.png",
+      "bytes": 133969
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C2",
+      "lang": "en",
+      "state": "seed",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C2-en-populated-desktop.png",
+      "bytes": 126745
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C4",
+      "lang": "he",
+      "state": "summarize",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C4-he-rtl-populated-desktop.png",
+      "bytes": 125298
+    },
+    {
+      "role": "tenant_admin",
+      "cell": "C6",
+      "lang": "en",
+      "state": "orchestrate",
+      "path": "C:\\Projects\\tessera--tessera-history-bootstrap\\docs\\e2e-snapshots\\history-bootstrap\\dotnet-angular\\C6-tenant-c-adapted\\tenant-admin-C6-en-populated-mobile.png",
+      "bytes": 134780
+    }
+  ]
+}

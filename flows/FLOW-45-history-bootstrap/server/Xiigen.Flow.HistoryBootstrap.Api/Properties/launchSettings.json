@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "Xiigen.Flow.HistoryBootstrap.Api": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5340",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
