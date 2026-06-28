@@ -1,0 +1,70 @@
+{
+  "flowId": "FLOW-47",
+  "flowSlug": "design-conversion-intake",
+  "sourceRepo": "xiigen-flows-dot-net-angular",
+  "sourcePath": "flows/FLOW-47-design-conversion-intake",
+  "serverStack": "dotnet-aspnet",
+  "clientStack": "not-applicable",
+  "ownershipMode": "flow-microservice",
+  "contractsPath": "contracts",
+  "serverEntrypoint": "server/Xiigen.Flow.DesignConversionIntake.Api",
+  "clientEntrypoint": "not-applicable",
+  "dockerComposePath": "docker/docker-compose.flow.yml",
+  "ciTemplatePath": "not-applicable-github-actions-disabled",
+  "hostingTargetsPath": "deployment/hosting-targets.json",
+  "sourceAliases": [
+    "design-conversion-intake",
+    "DesignConversionJobIntake",
+    "DesignConversionJobStatus",
+    "DesignConversionCoreDispatch"
+  ],
+  "nativeAdapterPackages": [],
+  "roles": {
+    "primary": [
+      "platform_admin"
+    ],
+    "partial": [
+      "platform_support"
+    ],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "tenant_admin"
+  },
+  "certification": {
+    "readinessStatus": "scaffold",
+    "knownConstraints": [
+      "FLOW-47 contains only platform-facing intake/status APIs.",
+      "FLOW-47 uses scaffold fake core dispatch and configurable file-backed job storage.",
+      "FLOW-47 intentionally does not implement rendering, ML, training, Figma, or Canva integration."
+    ],
+    "portabilityTier": "Tier D",
+    "tierDComplete": false
+  },
+  "packageMode": "flow-microservice-package",
+  "codeBundle": {
+    "classification": "internal-code",
+    "containsTenantRuntimeData": false,
+    "allowedDataClasses": [
+      "source-code",
+      "generated-contracts",
+      "configuration-template",
+      "test-fixtures",
+      "documentation",
+      "synthetic-data"
+    ],
+    "secretPolicy": "vault-reference-only",
+    "piiPolicy": "synthetic-only"
+  },
+  "endpointDescriptorsPath": "contracts/endpoints/flow-endpoints.json",
+  "flowDependencies": [
+    {
+      "flowId": "FLOW-46",
+      "relationship": "platform-agent-reference",
+      "reason": "FLOW-47 follows the platform-facing job intake/status style without editing platform-agent code."
+    }
+  ],
+  "externalDependencyStrategy": {
+    "executionPolicy": "fake-core-client-until-real-core-contract",
+    "implementedProvider": "ScaffoldFakeDesignConversionCoreClient and FileBackedDesignConversionJobStore",
+    "realProviderReplacementPath": "server/Xiigen.Flow.DesignConversionIntake.Infrastructure/DesignConversionIntakeServiceCollectionExtensions.cs"
+  }
+}

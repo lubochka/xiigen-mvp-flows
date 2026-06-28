@@ -1,0 +1,10 @@
+services:
+  FLOW-47-design-conversion-intake-api:
+    build:
+      context: ../../..
+      dockerfile: flows/FLOW-47-design-conversion-intake/server/Xiigen.Flow.DesignConversionIntake.Api/Dockerfile
+    ports:
+      - "5347:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+

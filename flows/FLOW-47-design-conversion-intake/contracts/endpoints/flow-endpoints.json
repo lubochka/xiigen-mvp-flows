@@ -1,0 +1,29 @@
+{
+  "flowId": "FLOW-47",
+  "flowSlug": "design-conversion-intake",
+  "endpoints": [
+    {
+      "endpointId": "flow47-submit-design-conversion-job",
+      "method": "POST",
+      "path": "/flow-47/design-conversion/jobs",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "platform_admin"
+      ],
+      "requestSchema": "contracts/schemas/design-conversion-submit-job.schema.json",
+      "responseSchema": "contracts/schemas/design-conversion-job-status.schema.json"
+    },
+    {
+      "endpointId": "flow47-get-design-conversion-job-status",
+      "method": "GET",
+      "path": "/flow-47/design-conversion/jobs/{jobId}",
+      "authPosture": "policy",
+      "requiredRoles": [
+        "platform_admin",
+        "platform_support"
+      ],
+      "responseSchema": "contracts/schemas/design-conversion-job-status.schema.json"
+    }
+  ]
+}
+

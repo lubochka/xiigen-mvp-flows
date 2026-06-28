@@ -1,0 +1,28 @@
+@host = http://localhost:5347
+@tenant = master
+@token = Bearer local-master-token
+
+POST {{host}}/flow-47/design-conversion/jobs
+X-Tenant-Id: {{tenant}}
+X-Role: platform_admin
+Authorization: {{token}}
+Idempotency-Key: demo-design-conversion
+Content-Type: application/json
+
+{
+  "tenantId": "master",
+  "sourceType": "figma-file",
+  "sourceUri": "figma://file/demo",
+  "outputTargets": ["angular"],
+  "options": {
+    "scaffold": true
+  }
+}
+
+###
+
+GET {{host}}/flow-47/design-conversion/jobs/dcj-replace-me
+X-Tenant-Id: {{tenant}}
+X-Role: platform_support
+Authorization: {{token}}
+
