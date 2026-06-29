@@ -1,0 +1,44 @@
+﻿# xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response
+
+## Meaning
+xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response implements local project behavior with return type object?>. It has no detected internal callee. It is called by xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:38::xiigen-flows-dot-net-angular::EventAttendanceService.SubmitRsvpAsync, xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:189::xiigen-flows-dot-net-angular::EventAttendanceService.CancelRsvpAsync, xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:264::xiigen-flows-dot-net-angular::EventAttendanceService.CheckInAsync, xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:350::xiigen-flows-dot-net-angular::EventAttendanceService.OpenFeedbackWindowAsync, xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:397::xiigen-flows-dot-net-angular::EventAttendanceService.SubmitFeedbackAsync, xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:518::xiigen-flows-dot-net-angular::EventAttendanceService.PromoteNextWaitlistedAsync, xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:38::xiigen-flows-dot-net-angular::CompletionGamificationService.SubmitCompletionAsync, xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:241::xiigen-flows-dot-net-angular::CompletionGamificationService.GetDashboardAsync, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:38::xiigen-flows-dot-net-angular::UserGroupsCommunitiesService.SubmitMembershipAsync, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:175::xiigen-flows-dot-net-angular::UserGroupsCommunitiesService.DiscoverGroupsAsync, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:232::xiigen-flows-dot-net-angular::in.ReviewJoinRequestAsync, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:285::xiigen-flows-dot-net-angular::in.UpdateTierAsync, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:465::xiigen-flows-dot-net-angular::in.LeaveMembershipAsync, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:40::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.SubmitFriendRequestAsync, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:204::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync, xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:117::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.CF1004_OwnerResponseRequiresOwnershipAllowsRevisionAfterPolicyRejectAndDoesNotUpdateReputation, xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:226::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.CF917_SecondaryResponseConcurrency_AllowsOneWinnerAndOneLoser.
+
+## Location
+flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:290
+
+## Parameters
+- string reviewId
+- bool ownerConfirmed
+- bool simulateSlowWrite
+
+## Return
+object?> returned by xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response
+
+## Called By
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:38::xiigen-flows-dot-net-angular::EventAttendanceService.SubmitRsvpAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:189::xiigen-flows-dot-net-angular::EventAttendanceService.CancelRsvpAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:264::xiigen-flows-dot-net-angular::EventAttendanceService.CheckInAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:350::xiigen-flows-dot-net-angular::EventAttendanceService.OpenFeedbackWindowAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:397::xiigen-flows-dot-net-angular::EventAttendanceService.SubmitFeedbackAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-04-event-attendance\server\Xiigen.Flow.EventAttendance.Application\EventAttendanceService.cs:518::xiigen-flows-dot-net-angular::EventAttendanceService.PromoteNextWaitlistedAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:38::xiigen-flows-dot-net-angular::CompletionGamificationService.SubmitCompletionAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:241::xiigen-flows-dot-net-angular::CompletionGamificationService.GetDashboardAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:38::xiigen-flows-dot-net-angular::UserGroupsCommunitiesService.SubmitMembershipAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:175::xiigen-flows-dot-net-angular::UserGroupsCommunitiesService.DiscoverGroupsAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:232::xiigen-flows-dot-net-angular::in.ReviewJoinRequestAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:285::xiigen-flows-dot-net-angular::in.UpdateTierAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:465::xiigen-flows-dot-net-angular::in.LeaveMembershipAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:40::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.SubmitFriendRequestAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:204::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:117::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.CF1004_OwnerResponseRequiresOwnershipAllowsRevisionAfterPolicyRejectAndDoesNotUpdateReputation
+- xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:226::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.CF917_SecondaryResponseConcurrency_AllowsOneWinnerAndOneLoser
+
+## Calls
+- none recorded
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:290::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response

@@ -1,0 +1,42 @@
+﻿# xiigen-flows-dot-net-angular::SubscriptionBillingService.ProcessBillingCycleAsync
+
+## Meaning
+xiigen-flows-dot-net-angular::SubscriptionBillingService.ProcessBillingCycleAsync implements local project behavior with return type Task<DataProcessResult<SubscriptionBillingOutcome>>. It delegates to xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:496::xiigen-flows-dot-net-angular::SubscriptionBillingService.StoreAuditAsync, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:610::xiigen-flows-dot-net-angular::SubscriptionBillingService.ResolveDunningScheduleAsync, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:664::xiigen-flows-dot-net-angular::StatusCodes.ReadBool, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:681::xiigen-flows-dot-net-angular::StatusCodes.ReadInt, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Infrastructure\SubscriptionBillingServiceCollectionExtensions.cs:47::xiigen-flows-dot-net-angular::InMemorySubscriptionPaymentFabric.ChargeAsync, xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:481::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.RejectsTenantScope, xiigen-flows-dot-net-angular::flows\FLOW-16-marketplace-payments\server\Xiigen.Flow.MarketplacePayments.Application\MarketplacePaymentsService.cs:661::xiigen-flows-dot-net-angular::was.ErrorBody, xiigen-flows-dot-net-angular::flows\FLOW-23-form-builder-templates\server\Xiigen.Flow.FormBuilderTemplates.Application\FormBuilderTemplatesService.cs:230::xiigen-flows-dot-net-angular::FormBuilderTemplatesService.AuditAsync, xiigen-flows-dot-net-angular::flows\FLOW-24-ai-safety-moderation\server\Xiigen.Flow.AiSafetyModeration.Application\AiSafetyModerationService.cs:313::xiigen-flows-dot-net-angular::AiSafetyModerationService.ReserveAsync. It is called by xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:181::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF12_1_CancelledSubscriptionVoidsInvoiceWithoutChargeAttemptOrAudit, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:202::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.BillingSuccessStoresInvoiceAndAuditBeforeChargeEvent, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:221::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF933_BillingConcurrencyAllowsOneWinnerAndOneLoser, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:237::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF934_BillingIdempotencyReplaysCachedInvoiceWithoutDoubleCharge, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:255::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF12_3_MrrNormalizesAnnualPlansAndUsesFreedomDunningSchedule.
+
+## Location
+flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:240
+
+## Parameters
+- IReadOnlyDictionary<string
+- object?> request
+- string? idempotencyKey
+- CancellationToken cancellationToken
+
+## Return
+Task<DataProcessResult<SubscriptionBillingOutcome>> returned by xiigen-flows-dot-net-angular::SubscriptionBillingService.ProcessBillingCycleAsync
+
+## Called By
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:181::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF12_1_CancelledSubscriptionVoidsInvoiceWithoutChargeAttemptOrAudit
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:202::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.BillingSuccessStoresInvoiceAndAuditBeforeChargeEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:221::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF933_BillingConcurrencyAllowsOneWinnerAndOneLoser
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:237::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF934_BillingIdempotencyReplaysCachedInvoiceWithoutDoubleCharge
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Tests\SubscriptionBillingServiceTests.cs:255::xiigen-flows-dot-net-angular::SubscriptionBillingServiceTests.CF12_3_MrrNormalizesAnnualPlansAndUsesFreedomDunningSchedule
+
+## Calls
+- xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:496::xiigen-flows-dot-net-angular::SubscriptionBillingService.StoreAuditAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:610::xiigen-flows-dot-net-angular::SubscriptionBillingService.ResolveDunningScheduleAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:664::xiigen-flows-dot-net-angular::StatusCodes.ReadBool
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:681::xiigen-flows-dot-net-angular::StatusCodes.ReadInt
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Infrastructure\SubscriptionBillingServiceCollectionExtensions.cs:47::xiigen-flows-dot-net-angular::InMemorySubscriptionPaymentFabric.ChargeAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:481::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.RejectsTenantScope
+- xiigen-flows-dot-net-angular::flows\FLOW-16-marketplace-payments\server\Xiigen.Flow.MarketplacePayments.Application\MarketplacePaymentsService.cs:661::xiigen-flows-dot-net-angular::was.ErrorBody
+- xiigen-flows-dot-net-angular::flows\FLOW-23-form-builder-templates\server\Xiigen.Flow.FormBuilderTemplates.Application\FormBuilderTemplatesService.cs:230::xiigen-flows-dot-net-angular::FormBuilderTemplatesService.AuditAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-24-ai-safety-moderation\server\Xiigen.Flow.AiSafetyModeration.Application\AiSafetyModerationService.cs:313::xiigen-flows-dot-net-angular::AiSafetyModerationService.ReserveAsync
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:240::xiigen-flows-dot-net-angular::SubscriptionBillingService.ProcessBillingCycleAsync

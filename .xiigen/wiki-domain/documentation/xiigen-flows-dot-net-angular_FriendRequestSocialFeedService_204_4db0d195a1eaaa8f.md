@@ -1,0 +1,44 @@
+﻿# xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync
+
+## Meaning
+xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync implements local project behavior with return type Task<DataProcessResult<FriendRequestSocialFeedOutcome>>. It delegates to xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString, xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:753::xiigen-flows-dot-net-angular::in.ReadDouble, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:388::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.AcceptCoreAsync, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:611::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RequestResponse, xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:290::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response, xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:664::xiigen-flows-dot-net-angular::StatusCodes.ReadBool, xiigen-flows-dot-net-angular::flows\FLOW-24-ai-safety-moderation\server\Xiigen.Flow.AiSafetyModeration.Application\AiSafetyModerationService.cs:313::xiigen-flows-dot-net-angular::AiSafetyModerationService.ReserveAsync. It is called by xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:50::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0702_AcceptanceWritesBidirectionalGraphBeforeConnectionEvent, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:75::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0703_ZeroFeedScore_IsStoredAndPublished, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:95::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0704_TenantPrivateScope_DoesNotLeakConnectionsOrFeedsAcrossTenants, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:190::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF888_ResponseValidation_RejectsInvalidDecision, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:208::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF889_ResponseIdempotency_ReplaysWithoutDuplicateConnectionsOrFeed, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:226::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF890_ResponseConcurrency_AllowsOneWinnerAndOneConflict, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:242::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF891_ResponseTimeout_RetainsOutboxAndDoesNotCreateConnection, xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:328::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.AcceptPairAsync.
+
+## Location
+flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:204
+
+## Parameters
+- string requestId
+- IReadOnlyDictionary<string
+- object?> request
+- string? ifMatch
+- string? idempotencyKey
+- CancellationToken cancellationToken
+
+## Return
+Task<DataProcessResult<FriendRequestSocialFeedOutcome>> returned by xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync
+
+## Called By
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:50::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0702_AcceptanceWritesBidirectionalGraphBeforeConnectionEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:75::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0703_ZeroFeedScore_IsStoredAndPublished
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:95::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF0704_TenantPrivateScope_DoesNotLeakConnectionsOrFeedsAcrossTenants
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:190::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF888_ResponseValidation_RejectsInvalidDecision
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:208::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF889_ResponseIdempotency_ReplaysWithoutDuplicateConnectionsOrFeed
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:226::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF890_ResponseConcurrency_AllowsOneWinnerAndOneConflict
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:242::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.CF891_ResponseTimeout_RetainsOutboxAndDoesNotCreateConnection
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Tests\FriendRequestSocialFeedServiceTests.cs:328::xiigen-flows-dot-net-angular::FriendRequestSocialFeedServiceTests.AcceptPairAsync
+
+## Calls
+- xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString
+- xiigen-flows-dot-net-angular::flows\FLOW-06-user-groups-communities\server\Xiigen.Flow.UserGroupsCommunities.Application\UserGroupsCommunitiesService.cs:753::xiigen-flows-dot-net-angular::in.ReadDouble
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:388::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.AcceptCoreAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:611::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RequestResponse
+- xiigen-flows-dot-net-angular::flows\FLOW-10-reviews-reputation\server\Xiigen.Flow.ReviewsReputation.Tests\ReviewsReputationServiceTests.cs:290::xiigen-flows-dot-net-angular::ReviewsReputationServiceTests.Response
+- xiigen-flows-dot-net-angular::flows\FLOW-12-subscription-billing\server\Xiigen.Flow.SubscriptionBilling.Application\SubscriptionBillingService.cs:664::xiigen-flows-dot-net-angular::StatusCodes.ReadBool
+- xiigen-flows-dot-net-angular::flows\FLOW-24-ai-safety-moderation\server\Xiigen.Flow.AiSafetyModeration.Application\AiSafetyModerationService.cs:313::xiigen-flows-dot-net-angular::AiSafetyModerationService.ReserveAsync
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:204::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.RespondToFriendRequestAsync

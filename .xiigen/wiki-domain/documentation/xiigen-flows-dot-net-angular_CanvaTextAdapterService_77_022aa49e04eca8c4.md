@@ -1,0 +1,43 @@
+﻿# xiigen-flows-dot-net-angular::CanvaTextAdapterService.RunAdapterAsync
+
+## Meaning
+xiigen-flows-dot-net-angular::CanvaTextAdapterService.RunAdapterAsync implements local project behavior with return type Task<DataProcessResult<CanvaTextAdapterOutcome>>. It delegates to xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString, xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:25::xiigen-flows-dot-net-angular::CanvaTextAdapterService.ReadSelection, xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:54::xiigen-flows-dot-net-angular::CanvaTextAdapterService.WriteToCanvasAsync, xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:191::xiigen-flows-dot-net-angular::CanvaTextAdapterService.ValidateRunRequest. It is called by xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:134::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent, xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:152::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState, xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:183::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.DashboardIsTenantScoped, xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:184::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent, xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:203::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState, xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:235::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.DashboardIsTenantScoped, xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:153::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent, xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:171::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState, xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:202::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.DashboardIsTenantScoped, xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:202::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent, xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:221::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState, xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:252::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.DashboardIsTenantScoped.
+
+## Location
+flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:77
+
+## Parameters
+- IReadOnlyDictionary<string
+- object?> request
+- ICanvaWriter writer
+- CancellationToken cancellationToken
+
+## Return
+Task<DataProcessResult<CanvaTextAdapterOutcome>> returned by xiigen-flows-dot-net-angular::CanvaTextAdapterService.RunAdapterAsync
+
+## Called By
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:134::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:152::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Tests\CanvaTextAdapterServiceTests.cs:183::xiigen-flows-dot-net-angular::CanvaTextAdapterServiceTests.DashboardIsTenantScoped
+- xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:184::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:203::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState
+- xiigen-flows-dot-net-angular::flows\FLOW-42-miro-shape-adapter\server\Xiigen.Flow.MiroShapeAdapter.Tests\MiroShapeAdapterServiceTests.cs:235::xiigen-flows-dot-net-angular::MiroShapeAdapterServiceTests.DashboardIsTenantScoped
+- xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:153::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:171::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState
+- xiigen-flows-dot-net-angular::flows\FLOW-43-webflow-designer-extension\server\Xiigen.Flow.WebflowDesignerExtension.Tests\WebflowDesignerExtensionServiceTests.cs:202::xiigen-flows-dot-net-angular::WebflowDesignerExtensionServiceTests.DashboardIsTenantScoped
+- xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:202::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.RunAdapterPersistsTenantScopedRunAndOutboxEvent
+- xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:221::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.RunAdapterRejectsMissingFieldsWithoutPartialState
+- xiigen-flows-dot-net-angular::flows\FLOW-44-framer-adapter\server\Xiigen.Flow.FramerAdapter.Tests\FramerAdapterServiceTests.cs:252::xiigen-flows-dot-net-angular::FramerAdapterServiceTests.DashboardIsTenantScoped
+
+## Calls
+- xiigen-flows-dot-net-angular::flows\FLOW-05-completion-gamification\server\Xiigen.Flow.CompletionGamification.Application\CompletionGamificationService.cs:732::xiigen-flows-dot-net-angular::CompletionGamificationService.ReadString
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:25::xiigen-flows-dot-net-angular::CanvaTextAdapterService.ReadSelection
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:54::xiigen-flows-dot-net-angular::CanvaTextAdapterService.WriteToCanvasAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:191::xiigen-flows-dot-net-angular::CanvaTextAdapterService.ValidateRunRequest
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-41-canva-text-adapter\server\Xiigen.Flow.CanvaTextAdapter.Application\CanvaTextAdapterService.cs:77::xiigen-flows-dot-net-angular::CanvaTextAdapterService.RunAdapterAsync

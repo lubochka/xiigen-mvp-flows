@@ -1,0 +1,28 @@
+﻿# xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.ReadDouble
+
+## Meaning
+xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.ReadDouble implements local project behavior with return type double?. It has no detected internal callee. No internal caller was detected.
+
+## Location
+flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:701
+
+## Parameters
+- IReadOnlyDictionary<string
+- object?>? values
+- string key
+
+## Return
+double? returned by xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.ReadDouble
+
+## Called By
+- none recorded
+
+## Calls
+- none recorded
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-07-friend-request-social-feed\server\Xiigen.Flow.FriendRequestSocialFeed.Application\FriendRequestSocialFeedService.cs:701::xiigen-flows-dot-net-angular::FriendRequestSocialFeedService.ReadDouble

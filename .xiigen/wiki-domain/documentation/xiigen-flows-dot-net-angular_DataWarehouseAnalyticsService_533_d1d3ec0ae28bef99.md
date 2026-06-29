@@ -1,0 +1,44 @@
+﻿# xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ReadDecimal
+
+## Meaning
+xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ReadDecimal implements local project behavior with return type decimal. It has no detected internal callee. It is called by xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:38::xiigen-flows-dot-net-angular::MarketplaceService.PublishListingAsync, xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:232::xiigen-flows-dot-net-angular::MarketplaceService.ValidateListing, xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:250::xiigen-flows-dot-net-angular::MarketplaceService.ResolvePriceCapAsync, xiigen-flows-dot-net-angular::flows\FLOW-09-transactional-event-participation\server\Xiigen.Flow.TransactionalEventParticipation.Application\TransactionalEventParticipationService.cs:38::xiigen-flows-dot-net-angular::TransactionalEventParticipationService.StartParticipationAsync, xiigen-flows-dot-net-angular::flows\FLOW-09-transactional-event-participation\server\Xiigen.Flow.TransactionalEventParticipation.Application\TransactionalEventParticipationService.cs:351::xiigen-flows-dot-net-angular::TransactionalEventParticipationService.ValidateParticipation, xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:150::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.IngestEventAsync, xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:232::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ExecuteQueryAsync, xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:291::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.GetDashboardAsync, xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:462::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ValidateEventIngestionRequest, xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:150::xiigen-flows-dot-net-angular::EtlDataIntegrationService.IngestEventAsync, xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:232::xiigen-flows-dot-net-angular::EtlDataIntegrationService.ExecuteQueryAsync, xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:291::xiigen-flows-dot-net-angular::EtlDataIntegrationService.GetDashboardAsync, xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:462::xiigen-flows-dot-net-angular::EtlDataIntegrationService.ValidateEventIngestionRequest, xiigen-flows-dot-net-angular::flows\FLOW-29-adaptive-rag-deep-research\server\Xiigen.Flow.AdaptiveRagDeepResearch.Application\AdaptiveRagDeepResearchService.cs:123::xiigen-flows-dot-net-angular::AdaptiveRagDeepResearchService.PromotePromptAsync, xiigen-flows-dot-net-angular::flows\FLOW-38-rag-quality-feedback\server\Xiigen.Flow.RagQualityFeedback.Application\RagQualityFeedbackService.cs:48::xiigen-flows-dot-net-angular::RagQualityFeedbackService.RecordFeedbackAsync, xiigen-flows-dot-net-angular::flows\FLOW-38-rag-quality-feedback\server\Xiigen.Flow.RagQualityFeedback.Application\RagQualityFeedbackService.cs:197::xiigen-flows-dot-net-angular::RagQualityFeedbackService.BuildDistilledRules, xiigen-flows-dot-net-angular::flows\FLOW-39-oss-curriculum\server\Xiigen.Flow.OssCurriculum.Application\OssCurriculumService.cs:194::xiigen-flows-dot-net-angular::OssCurriculumService.CollectSignalsAsync.
+
+## Location
+flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:533
+
+## Parameters
+- IReadOnlyDictionary<string
+- object?> body
+- string key
+
+## Return
+decimal returned by xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ReadDecimal
+
+## Called By
+- xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:38::xiigen-flows-dot-net-angular::MarketplaceService.PublishListingAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:232::xiigen-flows-dot-net-angular::MarketplaceService.ValidateListing
+- xiigen-flows-dot-net-angular::flows\FLOW-08-marketplace\server\Xiigen.Flow.Marketplace.Application\MarketplaceService.cs:250::xiigen-flows-dot-net-angular::MarketplaceService.ResolvePriceCapAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-09-transactional-event-participation\server\Xiigen.Flow.TransactionalEventParticipation.Application\TransactionalEventParticipationService.cs:38::xiigen-flows-dot-net-angular::TransactionalEventParticipationService.StartParticipationAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-09-transactional-event-participation\server\Xiigen.Flow.TransactionalEventParticipation.Application\TransactionalEventParticipationService.cs:351::xiigen-flows-dot-net-angular::TransactionalEventParticipationService.ValidateParticipation
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:150::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.IngestEventAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:232::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ExecuteQueryAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:291::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.GetDashboardAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:462::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ValidateEventIngestionRequest
+- xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:150::xiigen-flows-dot-net-angular::EtlDataIntegrationService.IngestEventAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:232::xiigen-flows-dot-net-angular::EtlDataIntegrationService.ExecuteQueryAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:291::xiigen-flows-dot-net-angular::EtlDataIntegrationService.GetDashboardAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-14-etl-data-integration\server\Xiigen.Flow.EtlDataIntegration.Application\EtlDataIntegrationService.cs:462::xiigen-flows-dot-net-angular::EtlDataIntegrationService.ValidateEventIngestionRequest
+- xiigen-flows-dot-net-angular::flows\FLOW-29-adaptive-rag-deep-research\server\Xiigen.Flow.AdaptiveRagDeepResearch.Application\AdaptiveRagDeepResearchService.cs:123::xiigen-flows-dot-net-angular::AdaptiveRagDeepResearchService.PromotePromptAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-38-rag-quality-feedback\server\Xiigen.Flow.RagQualityFeedback.Application\RagQualityFeedbackService.cs:48::xiigen-flows-dot-net-angular::RagQualityFeedbackService.RecordFeedbackAsync
+- xiigen-flows-dot-net-angular::flows\FLOW-38-rag-quality-feedback\server\Xiigen.Flow.RagQualityFeedback.Application\RagQualityFeedbackService.cs:197::xiigen-flows-dot-net-angular::RagQualityFeedbackService.BuildDistilledRules
+- xiigen-flows-dot-net-angular::flows\FLOW-39-oss-curriculum\server\Xiigen.Flow.OssCurriculum.Application\OssCurriculumService.cs:194::xiigen-flows-dot-net-angular::OssCurriculumService.CollectSignalsAsync
+
+## Calls
+- none recorded
+
+## Stack And Version
+Target framework: unknown
+C# language version: CSharp5_or_CSharp6_review_required
+
+## Evidence
+- xiigen-flows-dot-net-angular::flows\FLOW-13-data-warehouse-analytics\server\Xiigen.Flow.DataWarehouseAnalytics.Application\DataWarehouseAnalyticsService.cs:533::xiigen-flows-dot-net-angular::DataWarehouseAnalyticsService.ReadDecimal
