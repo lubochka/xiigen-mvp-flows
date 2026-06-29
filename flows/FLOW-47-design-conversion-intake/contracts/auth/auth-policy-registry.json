@@ -1,0 +1,36 @@
+{
+  "flowId": "FLOW-47",
+  "flowSlug": "design-conversion-intake",
+  "roles": {
+    "primary": [
+      "platform_admin"
+    ],
+    "partial": [
+      "platform_support"
+    ],
+    "inherited": [],
+    "wrongRoleForProtectedRoute": "tenant_admin"
+  },
+  "policies": [
+    {
+      "policyId": "flow47-submit-design-conversion-job",
+      "route": "POST /flow-47/design-conversion/jobs",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "platform_admin"
+      ],
+      "bypassPaths": []
+    },
+    {
+      "policyId": "flow47-get-design-conversion-job-status",
+      "route": "GET /flow-47/design-conversion/jobs/{jobId}",
+      "authPosture": "policy",
+      "allowedRoles": [
+        "platform_admin",
+        "platform_support"
+      ],
+      "bypassPaths": []
+    }
+  ]
+}
+

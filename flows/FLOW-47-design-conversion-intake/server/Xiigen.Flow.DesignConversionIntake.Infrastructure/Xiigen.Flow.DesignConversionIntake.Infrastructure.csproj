@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Xiigen.Flow.DesignConversionIntake.Infrastructure</PackageId>
+    <Version>0.1.0</Version>
+    <IsPackable>true</IsPackable>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\artifacts\nuget\FLOW-47</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xiigen.Fabrics.InMemory" Version="0.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\llm_mvp_core\44.DesignConversionDomain\44.DesignConversionDomain.csproj" />
+    <ProjectReference Include="..\Xiigen.Flow.DesignConversionIntake.Application\Xiigen.Flow.DesignConversionIntake.Application.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "Xiigen.Fabrics.InMemory": {
+        "type": "Transitive",
+        "resolved": "0.1.1",
+        "contentHash": "2FHXNq/eah74E2A/3lDB0eQ7WIq/Rg8yxYlZXY0FfFl0ZhQGX4ughuWeIkC5rqjmYKgtG2No4YGoGLB9Dwgutw==",
+        "dependencies": {
+          "Xiigen.Kernel": "0.1.1"
+        }
+      },
+      "Xiigen.Kernel": {
+        "type": "Transitive",
+        "resolved": "0.1.1",
+        "contentHash": "oqZbiCQT6LRx4kJ79PLznifnJC/zD5aJcIEhvrp7S5uVCU50/lrzbLfGQ7/MzSTf9J5CKJxZUVnZ3y6nqIUAMg=="
+      },
+      "44.designconversiondomain": {
+        "type": "Project",
+        "dependencies": {
+          "Core": "[1.0.0, )"
+        }
+      },
+      "core": {
+        "type": "Project",
+        "dependencies": {
+          "SemanticCompiler29": "[1.0.0, )"
+        }
+      },
+      "SemanticCompiler29": {
+        "type": "Project"
+      },
+      "xiigen.flow.designconversionintake.application": {
+        "type": "Project",
+        "dependencies": {
+          "Xiigen.Kernel": "[0.1.1, )"
+        }
+      },
+      "xiigen.flow.designconversionintake.infrastructure": {
+        "type": "Project",
+        "dependencies": {
+          "44.DesignConversionDomain": "[1.0.0, )",
+          "Xiigen.Fabrics.InMemory": "[0.1.1, )",
+          "Xiigen.Flow.DesignConversionIntake.Application": "[0.1.0, )"
+        }
+      }
+    }
+  }
+}

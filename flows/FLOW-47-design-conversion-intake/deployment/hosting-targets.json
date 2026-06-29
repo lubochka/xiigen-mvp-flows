@@ -1,0 +1,12 @@
+{
+  "flowId": "FLOW-47",
+  "targets": [
+    {
+      "name": "local-development",
+      "runtime": "aspnetcore",
+      "port": 5347,
+      "status": "scaffold"
+    }
+  ]
+}
+

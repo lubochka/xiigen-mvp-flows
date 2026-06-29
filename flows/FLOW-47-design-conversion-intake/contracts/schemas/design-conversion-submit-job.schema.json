@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/flow-47/design-conversion-submit-job.schema.json",
+  "title": "FLOW-47 design conversion submit job request",
+  "type": "object",
+  "required": [
+    "sourceType",
+    "sourceUri"
+  ],
+  "properties": {
+    "tenantId": {
+      "type": "string",
+      "description": "Optional echo of the platform tenant header. If supplied it must match X-Tenant-Id."
+    },
+    "sourceType": {
+      "type": "string",
+      "enum": [
+        "figma-file",
+        "canva-design",
+        "image",
+        "html",
+        "unknown"
+      ]
+    },
+    "sourceUri": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outputTargets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "angular"
+      ]
+    },
+    "idempotencyKey": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
+

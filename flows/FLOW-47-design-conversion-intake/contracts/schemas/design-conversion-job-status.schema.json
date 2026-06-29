@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://xiigen.local/contracts/flow-47/design-conversion-job-status.schema.json",
+  "title": "FLOW-47 design conversion job status",
+  "type": "object",
+  "required": [
+    "jobId",
+    "tenantId",
+    "status"
+  ],
+  "properties": {
+    "jobId": {
+      "type": "string"
+    },
+    "tenantId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "completed",
+        "failed",
+        "dispatch_failed",
+        "not_found"
+      ]
+    },
+    "idempotencyKey": {
+      "type": "string"
+    },
+    "sourceType": {
+      "type": "string"
+    },
+    "sourceUri": {
+      "type": "string"
+    },
+    "outputTargets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coreProviderJobId": {
+      "type": "string"
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "verdictId": {
+          "type": "string"
+        },
+        "score": {
+          "type": "number"
+        },
+        "passed": {
+          "type": "boolean"
+        },
+        "defects": {
+          "type": "array"
+        },
+        "comparisonArtifacts": {
+          "type": "array"
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "currentHtml": {
+          "type": "string"
+        },
+        "currentCss": {
+          "type": "string"
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
