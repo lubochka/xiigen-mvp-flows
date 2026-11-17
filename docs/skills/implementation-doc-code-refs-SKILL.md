@@ -19,16 +19,16 @@ restates what the syntax says is useless documentation. Citations must reflect t
 
 ### Layer 1 — WHY (mandatory, most important)
 Explain why this condition, threshold, or decision exists:
-- ✅ "> **Почему `X-Idempotency-Key` обязателен:** без него повторный POST мог бы создать
-  второго пользователя. Ключ резервируется в `IIdempotencyStore` на 24 часа, поэтому
-  ретрай сети безопасен."
+- ✅ "> **Why `X-Idempotency-Key` is required:** without it, a repeated POST could create
+  a second user. The key is reserved in `IIdempotencyStore` for 24 hours, making
+  a network retry safe."
 - ❌ `// idempotency check`
 
 ### Layer 2 — HOW (mandatory when calling another component)
 When a code block calls a method, explain what happens INSIDE it:
-- ✅ "> **Что происходит внутри `TryReserveAsync` пошагово:** 1. строит ключ
-  `flow:register:tenant:key` 2. атомарно пытается записать резерв 3. если ключ уже занят —
-  возвращает `IsFailure` с кодом `CONCURRENT_UPDATE`."
+- ✅ "> **What happens inside `TryReserveAsync`, step by step:** 1. Build the key
+  `flow:register:tenant:key`. 2. Atomically try to record a reservation. 3. If the key is already taken,
+  return `IsFailure` with code `CONCURRENT_UPDATE`."
 - ❌ `// calls _idempotency`
 
 ### Layer 3 — WHAT (secondary, the code shows this)
@@ -43,7 +43,7 @@ Comments inside code blocks focus on values and outcomes:
 2. Inside code blocks: show concrete example values in comments, this stack:
    ```csharp
    // flows/.../UserRegistrationService.cs:44
-   // idempotencyKey == null → нельзя гарантировать единственную регистрацию
+   // idempotencyKey == null → cannot guarantee a single registration
    return Failure<UserRegistrationOutcome>(
        "BAD_REQUEST",                                 // → ErrorResult → HTTP 400
        "X-Idempotency-Key header is required",
@@ -52,7 +52,7 @@ Comments inside code blocks focus on values and outcomes:
 3. When a condition blocks something, show ALL blocking conditions with reasons, e.g.
    the status-code mapping in `Program.cs:247` (`ErrorResult`):
    ```csharp
-   // Сопоставление доменного Error.Code → HTTP-статус (Program.cs:247):
+   // Map domain Error.Code → HTTP status (Program.cs:247):
    // "CONCURRENT_UPDATE" / "DUPLICATE_EMAIL" → 409
    // "VALIDATION_FAILED" / "BAD_REQUEST" / "INVALID_TOKEN" → 400
    // "EXPIRED_TOKEN" → 410; "RATE_LIMIT_EXCEEDED" → 429; "TIMEOUT" → 504
@@ -64,19 +64,19 @@ immediately under the quote, never an appendix-only reference):
 
 ```text
 file + line + short quote:
-сейчас:
-почему плохо/ок:
-должно стать:
-какие файлы/classes/records/methods/data rows:
-как работает:
-какие sets/тесты:
-какие tests/e2e/qa:
+current behavior:
+why this is wrong/acceptable:
+required behavior:
+affected files/classes/records/methods/data rows:
+how it works:
+affected datasets/tests:
+affected tests/e2e/qa:
 lifecycle:
 ```
 
 ## What NOT to do
 
-- ❌ Code block + comment that just renames the method call: `// сервис регистрирует пользователя`.
+- ❌ Code block + comment that just renames the method call: `// the service registers the user`.
 - ❌ `// returns result` — what result? show `IsSuccess`/`Data.HttpStatus`/`Error.Code`.
 - ❌ Calling a method and explaining nothing about its non-obvious internals.
 - ❌ Threshold/constant without explaining why that value was chosen (e.g. the 24h
@@ -90,7 +90,7 @@ lifecycle:
 For every code block in §3, verify:
 - [ ] Has at least one WHY explanation (blockquote or comment)
 - [ ] If it calls another method → internals explained or linked to §2
-- [ ] All thresholds/constants have a "почему X" explanation
+- [ ] All thresholds/constants have a "why X" explanation
 - [ ] All conditions show ALL branches with reasons (e.g. full `Error.Code` → status map)
 - [ ] Example values shown in comments (`IsSuccess`/`Data`/`Error.Code`, not just type names)
 - [ ] Every citation is a real `path:line` in this repo reflecting code as implemented

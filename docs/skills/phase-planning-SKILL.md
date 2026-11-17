@@ -44,6 +44,9 @@ CURRENT_TASK_DERIVATION:
   evidence_text_created_subrequirement=false
 ```
 
+The Russian marker literals above are intentional: `Цитата:` means "Quote:",
+`Вот задание!!!` means "Here is the task!!!", and `Задание:` means "Task:".
+
 For every requirement row, map: `Requirement ID | Conversation source | Plan section |
 Gate/test | Artifact | Status (mapped/unmapped/contradicted) | Next action`.
 
@@ -66,16 +69,16 @@ substeps, counts per status, completed phase list, current phase/step, remaining
 a plain-language sentence per phase, and a `requirement → phase → evidence` matrix. Counts must
 equal the row statuses.
 
-Every Luba-facing status block (Russian before machine labels):
+Every Luba-facing status block (English unless the user requests another language, before machine labels):
 
 ```text
-Фаза X из Y: <человеческое название>. Смысл фазы: <что эта фаза решает для продукта>.
-Шаг X.Y из X.N: <человеческое название>. Смысл шага: <что этот шаг проверяет/создаёт>.
-Статус: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <одна русская фраза>
-Позиция: всего <Y> фаз; сделано <n>; текущая <X>/<X.Y>; осталось <n> фаз и <n> шагов.
-Сделано / В процессе / Осталось / Review нашёл / Что исправлено / Что осталось.
-Следующее действие: <next bounded sub-agent work order, or NONE>
-Commit/continuation allowed: <да/нет>
+Phase X of Y: <human-readable name>. Purpose: <what this phase solves for the product>.
+Step X.Y of X.N: <human-readable name>. Purpose: <what this step verifies/creates>.
+Status: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <one plain-language sentence>
+Position: <Y> phases total; <n> done; current <X>/<X.Y>; <n> phases and <n> steps remaining.
+Done / In progress / Remaining / Review findings / What was fixed / What remains.
+Next action: <next bounded sub-agent work order, or NONE>
+Commit/continuation allowed: <yes/no>
 opaque codes: <technical labels only after the human explanation, or NONE>
 ```
 

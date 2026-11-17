@@ -17,8 +17,8 @@
 >   `.xiigen/wiki-domain` manifest touched.
 > - The log is per-flow (file id ties to `FLOW-NN`), kept under
 >   `docs/session-files/` or per-flow `docs/`.
-> - The Russian-first Human-Readable Plan/Execution Log block is mandatory, not
->   just the JSON schema.
+> - The English-first Human-Readable Plan/Execution Log block (unless the user
+>   requests another language) is mandatory, not just the JSON schema.
 > - Domain return type cited is `DataProcessResult<T>` — **not** core
 >   `OperationResult<T>`.
 

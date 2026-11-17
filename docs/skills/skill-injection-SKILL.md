@@ -27,10 +27,10 @@ Governs how skill files are selected and injected as context into generation,
 implementation, and planning steps. Without skill injection, generated/written
 flow code may violate DNA rules or miss required patterns.
 
-Коротко (RU): в рабочем приказе и пакете возврата нельзя ограничиться короткими
-метками вроде `SK-DNA` или `SK-TEST`. Нужно человеческим языком назвать, какие
-файлы/секции проверяются, какие источники прочитаны, где граница текущего
-артефакта, и почему это не разрешает прямое исполнение родительской сессией.
+A work order and its returned packet must go beyond short labels such as
+`SK-DNA` or `SK-TEST`. Explain in plain language which files/sections are being
+checked, which sources were read, the current artifact's scope, and why this
+does not authorize the parent session to execute the work directly.
 
 ---
 

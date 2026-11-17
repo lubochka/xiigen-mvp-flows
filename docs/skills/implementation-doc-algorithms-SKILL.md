@@ -19,17 +19,17 @@ are NOT sufficient — name the exact **class AND the implementing method/functi
 **parameters** it takes, and the **actual step-by-step algorithm**.
 
 This is a no-code algorithm section. It explains what happens, where, and in what order,
-with class/method refs, but it does not dump code. Default language is Russian unless
-Luba asks otherwise.
+with class/method refs, but it does not dump code. Default language is English unless
+the user requests another language.
 
 ## Required structure for each component description
 
 ### 1. Human analogy first (mandatory)
 Start with an analogy that a non-programmer can understand:
-- ✅ "Представь регистратора в отеле: он принимает анкету, проверяет, что заполнены
-  обязательные поля, не пускает двух гостей в один номер по одному ключу (идемпотентность),
-  и только потом заводит запись."
-- ❌ "Этот сервис вызывает `_idempotency.TryReserveAsync` и пишет в `IDocumentStore`."
+- ✅ "Imagine a hotel receptionist: they receive a form, check that the required
+  fields are filled in, prevent two guests from using the same key for one room (idempotency),
+  and only then create a record."
+- ❌ "This service calls `_idempotency.TryReserveAsync` and writes to `IDocumentStore`."
 
 ### 2. What happens during initialization / construction
 Concrete description of what the component holds and how it is wired:
@@ -52,33 +52,33 @@ Step-by-step numbered list of what the method does:
 4. What comes out (with real example value) — `DataProcessResult.Ok` carrying
    `UserRegistrationOutcome(HttpStatus: 201, Body, Stored: true, OutboxRecorded: true)`.
 
-### 4. "Что НЕ делает" section (mandatory)
+### 4. "What it does NOT do" section (mandatory)
 Explicitly state what the component does NOT do:
 - ❌ It does NOT throw for business failures — every failure is `Failure<T>(code, message, details)`.
 - ❌ It does NOT instantiate fabric stores directly — all come through DI (Fabric First).
 - ❌ It does NOT trust client-supplied tenant — tenant comes from `ITenantContextAccessor`.
 
 ### 5. Parameter signatures with examples
-After the text description, add a `**Сигнатуры и типы данных:**` block with C# signatures
+After the text description, add a `**Signatures and data types:**` block with C# signatures
 and real field values:
 
 **Example of correct parameter block (this stack):**
 ```csharp
-// Application-метод flow регистрации:
+// Application method for the registration flow:
 Task<DataProcessResult<UserRegistrationOutcome>> RegisterAsync(
     IReadOnlyDictionary<string, object?> request, // { "email": "...", "password": "..." }
-    string? ifMatch,                              // ETag из заголовка If-Match, может быть null
-    string? idempotencyKey,                       // "register-1" — обязателен
+    string? ifMatch,                              // ETag from the If-Match header; may be null
+    string? idempotencyKey,                       // "register-1" — required
     CancellationToken cancellationToken = default)
 
-// Что лежит в успешном результате:
+// Contents of a successful result:
 UserRegistrationOutcome(
-    HttpStatus: 201,                              // код для Results.Json
+    HttpStatus: 201,                              // status code for Results.Json
     Body: { "accountStatus": "PENDING_VERIFICATION" },
-    Stored: true,                                 // запись создана в IDocumentStore
-    OutboxRecorded: true)                         // событие записано в IOutboxStore
+    Stored: true,                                 // record created in IDocumentStore
+    OutboxRecorded: true)                         // event recorded in IOutboxStore
 
-// Доменный результат-обёртка (НЕ core OperationResult<T>):
+// Domain result wrapper (NOT core OperationResult<T>):
 // DataProcessResult<T> { bool IsSuccess; bool IsFailure; T? Data; DataProcessError? Error; }
 // DataProcessError(string Code, string Message, IReadOnlyDictionary<string,object?>? Details)
 ```
@@ -86,10 +86,10 @@ UserRegistrationOutcome(
 ## Status annotation
 
 Every component description must end with its implementation status:
-- **✅ Полная** — all public methods implemented and covered by `[Fact]`/`[Theory]` tests.
-- **⚠️ Частичная** — state exactly which methods work and which are stubs (e.g.
-  `RegisterAsync` рабочий; `ExportFlowDataAsync` всегда возвращает `Failure("NOT_READY", ...)`).
-- **🔶 Скелет** — state what is saved (contract fields/record shape), what always returns
+- **✅ Complete** — all public methods implemented and covered by `[Fact]`/`[Theory]` tests.
+- **⚠️ Partial** — state exactly which methods work and which are stubs (e.g.
+  `RegisterAsync` works; `ExportFlowDataAsync` always returns `Failure("NOT_READY", ...)`).
+- **🔶 Skeleton** — state what is saved (contract fields/record shape), what always returns
   a stub `Failure`/empty outcome, and WHY.
 
 > **Note.** Do NOT use the core `✅ Bootstrap` symbol — it marks a deterministic
@@ -102,8 +102,8 @@ Before submitting §1/§2, verify each component description:
 - [ ] Names the exact class AND implementing method, its parameters, and a step-by-step algorithm (not a functional summary)
 - [ ] Has a human analogy (not a technical summary)
 - [ ] Shows concrete example values (not just type names), drawn from real domain records
-- [ ] Has "Что НЕ делает" section (includes the no-throw / Fabric-First / tenant-from-accessor facts)
-- [ ] Has `**Сигнатуры и типы данных:**` block with real C# signatures returning `Task<DataProcessResult<T>>`
+- [ ] Has "What it does NOT do" section (includes the no-throw / Fabric-First / tenant-from-accessor facts)
+- [ ] Has `**Signatures and data types:**` block with real C# signatures returning `Task<DataProcessResult<T>>`
 - [ ] States implementation status (no core `Bootstrap` symbol)
 
 ## Integration

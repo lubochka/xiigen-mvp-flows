@@ -52,7 +52,7 @@ or `wait for answer` are internal checks only. They do not override:
 continue while next_action is known;
 use the current branch unless Luba explicitly asks to switch;
 run only the verification allowed by the active phase;
-answer in Luba's language (Russian unless she asks otherwise);
+answer in English unless the user requests another language;
 commit/push when the phase deliverable requires it.
 ```
 

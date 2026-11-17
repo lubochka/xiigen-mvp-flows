@@ -37,16 +37,16 @@ Load for any session that adds, modifies, or reviews flow code or tests.
 Do not start implementation from an architecture, trainable, code-review,
 documentation, or audit report that fails the Human-Readable Architecture
 Artifact Gate. Code execution must reject table-only, shortcode-heavy,
-English-only when Russian was required, schema-only, or prompt/spec inputs.
+text in a language other than the one requested by the user, schema-only, or prompt/spec inputs.
 
 For suspicious Dictionary/counter/KNN/scorer/selector/private-method repairs,
 the controlling artifact must pass the Concrete Repair Blueprint Gate: exact
 classes/records/methods/tests/data rows, affected sets/checkpoints/manifests,
 and lifecycle paths must be named. Generic "wrap in ILogicalUnit", "add KNN",
-or "chosen/rejected/quarantine" text is not a решение.
+or "chosen/rejected/quarantine" text is not a solution.
 
 Do not start implementation from an audit that claims "Architecture audit
-sufficient/complete", "достаточно", "готово", or "закрыто" unless it passed
+sufficient/complete", "достаточно" ("sufficient"), "готово" ("ready"), or "закрыто" ("closed") unless it passed
 the Audit Sufficiency Boundary Gate: exact bounded scope, green breadth
 challenge, parent review question answered, and Delta-Severity Feedback Gate
 recorded for later same-domain BLOCKING/HIGH misses.
@@ -74,7 +74,7 @@ worker. A code executor that runs longer than 10 minutes without a
 protocol/evidence packet is over-scoped: request or interrupt for the packet,
 close if needed, split the scope, and continue.
 
-Every code-execution packet must open with human-readable Russian/plain
+Every code-execution packet must open with plain English unless the user requests another
 language: total phases/steps, done/in-progress/remaining, what the phase solves,
 what the current step solves, what evidence exists, what is not proven, and the
 next bounded action. Machine labels and paths may follow only after this

@@ -91,19 +91,19 @@ ledger/checklist/generated rows are counted as cycles; when parent/self review i
 as sub-agent review; or when `dotnet test`/`dotnet build`/Playwright/git is described as
 executed without execution evidence.
 
-## 5. Status board template (human-first, Russian before machine labels)
+## 5. Status board template (human-first, English unless the user requests another language, before machine labels)
 
 ```text
-Фаза X из Y: <человеческое название>. Смысл фазы: <что эта фаза решает для продукта>.
-Шаг X.Y из X.N: <человеческое название>. Смысл шага: <что этот шаг проверяет/создаёт>.
-Статус: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <одна русская фраза>
-Позиция: всего <Y> фаз; сделано <n>; текущая <X>/<X.Y>; осталось <n> фаз и <n> шагов.
-Сделано: <counts + concrete artifacts>.
-В процессе: <current action and who/what is doing it>.
-Осталось: 1. <step + meaning>  2. <step + meaning>
-Review нашёл: <...>   Что исправлено: <...>   Что осталось: <...>
-Следующее действие: <next bounded sub-agent work order, or NONE>
-Commit/continuation allowed: <да/нет; что именно>
+Phase X of Y: <human-readable name>. Purpose: <what this phase solves for the product>.
+Step X.Y of X.N: <human-readable name>. Purpose: <what this step verifies/creates>.
+Status: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <one plain-language sentence>
+Position: <Y> phases total; <n> done; current <X>/<X.Y>; <n> phases and <n> steps remaining.
+Done: <counts + concrete artifacts>.
+In progress: <current action and who/what is doing it>.
+Remaining: 1. <step + meaning>  2. <step + meaning>
+Review findings: <...>   What was fixed: <...>   What remains: <...>
+Next action: <next bounded sub-agent work order, or NONE>
+Commit/continuation allowed: <yes/no; exactly what is allowed>
 opaque codes: <technical labels only after the human explanation, or NONE>
 ```
 
@@ -138,7 +138,7 @@ Every subtask gets a solved block, not an executor prompt:
 ```text
 human explanation:
 refs:                                   # path:line in this repo, or "future file, no current citation exists"
-algorithm:                              # plain Russian, class + method + parameters + steps
+algorithm:                              # plain English unless the user requests another language; class + method + parameters + steps
 concrete files/classes/methods:         # per-flow layers
 Gate B / test strategy:                 # dotnet test filter / dotnet build / Playwright + the test layers
 owner:

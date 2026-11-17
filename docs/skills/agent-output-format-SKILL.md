@@ -2,7 +2,7 @@
 
 > **Stack adaptation (xiigen flows).** The three-file rule, the generic SESSION-0
 > plan-review gates, the Authority Requirements Ledger, the ban on a machine log
-> standing in for a human status, and the Russian-first execution board ported
+> standing in for a human status, and the English-first execution board (unless the user requests another language) ported
 > from `llm_mvp_core/docs/skills/agent-output-format-SKILL.md` (G07). The
 > universal part (every plan produces three files — REFERENCE for humans, STATE
 > for navigation, EXECUTION for the executor, never merged; SESSION-0 with an
@@ -224,13 +224,13 @@ full Execution Board and No-Machine-Log-To-User rules. The minimum a status must
 carry:
 
 ```text
-Фаза X из Y: <name>. Смысл фазы: <what this phase solves for the flow/user>.
-Шаг X.Y из X.N: <name>. Смысл шага: <what this step checks/creates>.
-Статус: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <one human sentence>
-Сделано: <counts + concrete artifacts>.
-В процессе: <current action and who is doing it>.
-Осталось: <numbered remaining steps + human meaning>.
-Следующее действие: <next bounded action, or NONE>.
+Phase X of Y: <name>. Purpose: <what this phase solves for the flow/user>.
+Step X.Y of X.N: <name>. Purpose: <what this step checks/creates>.
+Status: DONE | IN_PROGRESS | NEEDS_FIX | REVIEWING | BLOCKED_WITH_REASON. <one human sentence>
+Done: <counts + concrete artifacts>.
+In progress: <current action and who is doing it>.
+Remaining: <numbered remaining steps + human meaning>.
+Next action: <next bounded action, or NONE>.
 ```
 
 A bare phase code, `passed: true`, or a JSON/STATE label is not a valid
@@ -260,5 +260,5 @@ user-facing status unless preceded by this human explanation.
 
 - `session-file-authoring-SKILL.md` governs the internal crystallization of each session file
 - `session-output-contract-SKILL.md` governs whether the right files are produced
-- `output-readability-gate-SKILL.md` governs the Russian-first board and machine-status bans
+- `output-readability-gate-SKILL.md` governs the English-first board (unless the user requests another language) and machine-status bans
 - `session-execution-log-SKILL.md` is the post-gate EXECUTION-LOG companion to the STATE file

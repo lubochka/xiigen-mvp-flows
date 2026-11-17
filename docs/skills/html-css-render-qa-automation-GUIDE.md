@@ -1,28 +1,28 @@
 # html-css-render-qa-automation-GUIDE.md — Server-side render-QA contract for Angular candidates (xiigen flows)
 ## v1.0: ported from llm_mvp_core html-css-render-qa-automation-GUIDE → Angular 21 / ng build + Playwright
 
-## Краткое резюме (RU)
+## Summary
 
-Этот guide задаёт **server-side render-QA (Quality Assurance) контракт** для
-Angular-кандидатов в xiigen flows. Render-QA проверяет, что собранный
-(`ng build`) HTML (HyperText Markup Language) / CSS (Cascading Style Sheets)
-экран per-flow можно детерминированно воспроизвести в управляемом рендерере
-(Playwright) на фиксированной viewport-матрице и сравнить с design-источником.
-Это **evidence-слой**, а не обучаемая final authority. Обучаемая модель
-качества (G12) остаётся в `llm_mvp_core` и потребляется через манифест.
+This guide defines the **server-side render-QA (Quality Assurance) contract** for
+Angular candidates in xiigen flows. Render-QA verifies that a built
+(`ng build`) per-flow HTML (HyperText Markup Language) / CSS (Cascading Style Sheets)
+screen can be reproduced deterministically in a controlled renderer
+(Playwright) across a fixed viewport matrix and compared with the design source.
+This is an **evidence layer**, not a trainable final authority. The trainable
+quality model (G12) remains in `llm_mvp_core` and is consumed through a manifest.
 
-Граница источника: в flows design-источник приходит как `.xiigen/wiki-domain`
-манифест, а не как Figma/Canva payload. he-RTL (`dir="rtl"`) — отдельный
-state-ряд матрицы.
+Source boundary: in flows, the design source arrives as a `.xiigen/wiki-domain`
+manifest, not as a Figma/Canva payload. he-RTL (`dir="rtl"`) is a separate
+state row in the matrix.
 
-## When to use / Когда использовать
+## When to use
 
-Используй этот guide, когда план или work order упоминает Angular rendering,
-screenshot capture, visual diff, responsive QA, artifact contract, server-side
-rendering, browser automation или скриншот-зависимое evidence для per-flow
-клиента (`flows/FLOW-NN-<slug>/client/angular`).
+Use this guide when a plan or work order mentions Angular rendering,
+screenshot capture, visual diff, responsive QA, artifact contracts, server-side
+rendering, browser automation, or screenshot-dependent evidence for a per-flow
+client (`flows/FLOW-NN-<slug>/client/angular`).
 
-## Inputs / Входы
+## Inputs
 
 - Candidate: a built Angular bundle (`ng build` output) with a declared entry
   route and asset references.
@@ -36,7 +36,7 @@ rendering, browser automation или скриншот-зависимое evidenc
 - Expected artifact destination (`flows/FLOW-NN/docs` or `artifacts/`) and
   retention policy.
 
-## Outputs/artifacts / Выходы и артефакты
+## Outputs/artifacts
 
 Render-QA must emit a multi-resolution screenshot artifact contract:
 
@@ -56,7 +56,7 @@ Render-QA must emit a multi-resolution screenshot artifact contract:
 - `qa_status`: `passed_for_eval`, `failed_render`, `failed_assets`, `unstable`,
   `needs_review`, or `quarantine`.
 
-## Required gates / Обязательные gates
+## Required gates
 
 - **Multi-resolution gate**: the plan must define at least desktop, tablet, and
   mobile viewports; production gates may add theme/state/direction variants
@@ -77,7 +77,7 @@ Render-QA must emit a multi-resolution screenshot artifact contract:
 - **Internal authority gate**: render-QA can block promotion or create
   correction evidence, but it **cannot prove trained model quality by itself**.
 
-## Forbidden substitutes / Запрещённые подмены
+## Forbidden substitutes
 
 - A developer's manual browser screenshot is not a server-side QA artifact.
 - A single desktop screenshot is not responsive evidence.
@@ -87,7 +87,7 @@ Render-QA must emit a multi-resolution screenshot artifact contract:
 - Ignoring missing fonts/assets is forbidden; missing assets must be reported.
 - Render retry loops cannot hide unstable Angular output.
 
-## Setup note (flows) / Замечание по настройке
+## Setup note (flows)
 
 `@playwright/test` is already in each per-flow `client/angular/package.json`, but
 `playwright.config.ts` does **not** exist yet — creating a deterministic config
@@ -96,7 +96,7 @@ output, screenshot output dir) is the first work item when this contract is
 applied to a flow. Drive role/state via the `?role=…&state=…` query params so
 each row is deterministic.
 
-## How it feeds the plan / Как это питает план
+## How it feeds the plan
 
 A render-QA work order runs **before** visual metrics and before any
 `visual-diff-taxonomy-and-metrics-GUIDE.md` verdict. The plan must define the

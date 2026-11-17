@@ -1,29 +1,29 @@
 # visual-diff-taxonomy-and-metrics-GUIDE.md — 8-category visual-diff taxonomy + severity + metrics (xiigen flows)
 ## v1.0: ported from llm_mvp_core visual-diff-taxonomy-and-metrics-GUIDE → Angular 21 evidence layer (no model training)
 
-## Краткое резюме (RU)
+## Summary
 
-Этот guide задаёт **визуальную таксономию и метрики** для сравнения
-design-источника с собранным Angular-кандидатом в xiigen flows: как описывать
-отличие source ↔ rendered, какие числа собирать, и где проходит граница между
-QA/eval evidence и обучаемой model quality.
+This guide defines the **visual taxonomy and metrics** for comparing a design
+source with a built Angular candidate in xiigen flows: how to describe
+source ↔ rendered differences, which measurements to collect, and where the boundary
+lies between QA/evaluation evidence and trained-model quality.
 
-**Важная граница для flows.** Held-out eval, ablation/no-hidden-determinism и
-negative-DPO (Direct Preference Optimization) — это **core-ML
-evaluation/training-машинерия (G12 / R5 / R6)** и **остаётся в `llm_mvp_core`**.
-Во flows этот guide ведёт **только evidence-слой** (visual-diff source ↔
-rendered): модель не обучается, held-out/ablation ворота не строятся,
-DPO-привязки нет. `dominant_error_category` фиксируется как причина дефекта, но
-**без привязки к DPO-ряду** (это делает ядро).
+**Boundary for flows.** Held-out evaluation, ablation/no-hidden-determinism, and
+negative-DPO (Direct Preference Optimization) are **core-ML
+evaluation/training mechanisms (G12 / R5 / R6)** and **remain in `llm_mvp_core`**.
+In flows, this guide governs **only the evidence layer** (source ↔ rendered
+visual differences): it does not train a model, create held-out/ablation gates,
+or bind findings to DPO. `dominant_error_category` records the cause of a defect,
+**without binding it to a DPO row** (the core does that).
 
-## When to use / Когда использовать
+## When to use
 
-Используй этот guide для plan/review/work order, где есть visual diff, visual
-quality, screenshot comparison или design-to-code accuracy для per-flow Angular
-клиента. **Не** используй его для построения held-out/ablation/DPO во flows — это
-ядро.
+Use this guide for a plan, review, or work order involving visual differences,
+visual quality, screenshot comparison, or design-to-code accuracy for a per-flow
+Angular client. **Do not** use it to build held-out/ablation/DPO mechanisms in flows;
+those belong to the core.
 
-## Inputs / Входы
+## Inputs
 
 - Original design refs and the normalized `.xiigen/wiki-domain` design tree.
 - Rendered candidate screenshot refs from server-side render-QA
@@ -35,7 +35,7 @@ quality, screenshot comparison или design-to-code accuracy для per-flow An
 - Optional external visual AI (Artificial Intelligence) provider evidence **only
   after explicit Luba approval**.
 
-## Outputs/artifacts / Выходы и артефакты
+## Outputs/artifacts
 
 Visual evaluation produces a taxonomy-based verdict (written to
 `flows/FLOW-NN/docs` or `artifacts/`):
@@ -52,7 +52,7 @@ Visual evaluation produces a taxonomy-based verdict (written to
 - `verdict`: `accept_candidate`, `reject_candidate`, `quarantine`,
   `needs_human_review`, or `insufficient_evidence`.
 
-## Required gates / Обязательные gates (flows scope)
+## Required gates (flows scope)
 
 - **Taxonomy coverage gate**: every visual verdict classifies findings using:
   layout, typography, color, spacing, responsiveness, image/crop, asset-missing,
@@ -80,7 +80,7 @@ Flows produces the visual-diff **evidence**; the model quality claim, its
 held-out proof, and its DPO training live in `llm_mvp_core` and are consumed via
 manifest.
 
-## Taxonomy / Таксономия
+## Taxonomy
 
 - **Layout**: hierarchy, grid, alignment, order, nesting, constraints, overflow,
   z-index, component placement.
@@ -101,7 +101,7 @@ manifest.
 RTL note: under `dir="rtl"`, layout/spacing/image findings include mirroring
 correctness (logical vs physical properties) as a first-class check.
 
-## Metrics / Метрики
+## Metrics
 
 - Layout match rate per viewport.
 - Typography match rate per text group.
@@ -117,7 +117,7 @@ correctness (logical vs physical properties) as a first-class check.
 held-out visual quality before/after training — are **not** computed in flows;
 they are `llm_mvp_core` metrics.)
 
-## Forbidden substitutes / Запрещённые подмены
+## Forbidden substitutes
 
 - Pixel similarity alone is not visual quality.
 - A visual AI provider response is not a trained-model quality proof.
@@ -126,7 +126,7 @@ they are `llm_mvp_core` metrics.)
 - A high render success rate cannot replace structured taxonomy findings.
 - A deterministic diff threshold cannot be described as semantic learning.
 
-## How it feeds the plan / Как это питает план
+## How it feeds the plan
 
 Define the visual taxonomy and metrics for the flow's design-conversion
 **evidence** before reporting visual quality. The plan must require local metric

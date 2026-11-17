@@ -126,7 +126,7 @@ modifies a contract.
   has a `note for` annotation; a legend table follows; a per-connection simulation table
   covers every arrow with example input + expected `DataProcessResult<T>` / `Results.Json`
   outcome.
-- §1 — algorithm descriptions in Russian, plain language, WITHOUT code fragments, WITH class
+- §1 — algorithm descriptions in plain English unless the user requests another language, WITHOUT code fragments, WITH class
   references: exact class + implementing method + parameters + step-by-step.
 - §2 — per algorithm: where the logic sits (file + class + method + parameters), a detailed
   step-by-step explanation (not a functional summary), human analogy, concrete example values,
@@ -137,7 +137,7 @@ modifies a contract.
 
 **Hard fail when:** Part A is absent; present as a heading only with "will be written later";
 §0 is a flowchart image rather than a class diagram; §0 lacks `note for` on every class or
-lacks a legend; §1 is English-only prose; §1/§2 names a class but not the implementing method,
+lacks a legend; §1 does not use the required language (English by default, or the language requested by the user); §1/§2 names a class but not the implementing method,
 its parameters, and a step-by-step algorithm; §2/§3 citations do not exist in the current repo;
 §2 or §3 is missing; or Part A describes what will be built rather than what is implemented.
 
@@ -227,7 +227,7 @@ per-branch simulation for every branch. See `implementation-doc-uml-SKILL.md` an
 
 ## FC-15 — Implementation doc: algorithm descriptions — HARD FAIL
 Each algorithm names the exact class + implementing method + parameters + step-by-step in
-Russian, with human analogy, example values, "что НЕ делает", and a `Task<DataProcessResult<T>>`
+English unless the user requests another language, with human analogy, example values, "what it does NOT do", and a `Task<DataProcessResult<T>>`
 signature block. See `implementation-doc-algorithms-SKILL.md`.
 
 ## FC-16 — Implementation doc: code references — HARD FAIL

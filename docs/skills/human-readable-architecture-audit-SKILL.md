@@ -3,10 +3,10 @@
 > **Stack adaptation (xiigen flows).** The human-readable architecture/audit gate
 > ported from `llm_mvp_core/docs/skills/human-readable-architecture-audit-SKILL.md`
 > (G07). The universal part (the audit is readable by Luba as a human architect,
-> Russian summary first; mandatory PlantUML / Mermaid `classDiagram` importable to
+> English summary first unless the user requests another language; mandatory PlantUML / Mermaid `classDiagram` importable to
 > draw.io plus data-flow simulations; a no-code algorithm explanation naming the
-> actual classes/methods; per-finding code quotes with `file:line` plus `сейчас` /
-> `почему` / `должно стать`; the Concrete Repair Blueprint Gate; the Audit
+> actual classes/methods; per-finding code quotes with `file:line` plus `current behavior` /
+> `why` / `required behavior`; the Concrete Repair Blueprint Gate; the Audit
 > Sufficiency Boundary and Delta-Severity Feedback gates) is taken from core.
 > Adapted here:
 > - UML is **per-flow**: the `net10.0` server (`Xiigen.Flow.<Name>.{Api,Application,
@@ -34,19 +34,19 @@
 Load this skill for architect, planning, plan review, code review,
 documentation, and audit artifacts that explain a flow's architecture, server
 services, Angular surfaces, contracts, or code risks. Also load it when Luba asks
-for a Russian architecture explanation, UML, no-code algorithms, code quotes, or
+for a human-readable architecture explanation, UML, no-code algorithms, code quotes, or
 a human-readable architecture audit; when an audit claims sufficiency / completion
 / closure; or when a later broader audit in the same area finds BLOCKING/HIGH
 issues.
 
 ## Human-Readable Architecture Artifact Gate
 
-The artifact must be readable by Luba as a human architect, in Russian unless
-Luba explicitly asks for another language. Machine labels may exist, but they are
+The artifact must be readable by Luba as a human architect, in English unless
+the user explicitly requests another language. Machine labels may exist, but they are
 secondary anchors. They cannot be the main explanation.
 
 Hard fail:
-- table-only, shortcode-heavy, English-only, schema-first, or schema-only text;
+- table-only, shortcode-heavy, schema-first, or schema-only text, or text that ignores the requested language;
 - prompt/spec text that tells a future executor what to invent;
 - code dumps without a no-code explanation;
 - generic rows such as "wrap in a service", "add a contract", "add tests",
@@ -57,7 +57,7 @@ Hard fail:
 Every architecture, code-review, documentation, or audit artifact that touches a
 flow's architecture must include:
 
-1. A clear Russian summary in human terms.
+1. A clear English summary in human terms unless the user requests another language.
 2. A solved architecture block for every major area: problem, selected design,
    rejected alternatives, UML, data flow, current code refs, future
    files/classes/methods/signatures/dependencies, deterministic-vs-learned
@@ -70,13 +70,13 @@ flow's architecture must include:
    class/function references, but not a code dump.
 5. A code-quote section. For each finding, give exact file + line + short quote
    (`flows/FLOW-NN-<slug>/server/**/*.cs` or `client/angular/**/*.ts`), then:
-   - сейчас;
-   - почему плохо/ок;
-   - должно стать;
-   - какие файлы/classes/records/methods/data rows;
-   - как работает (для flows: deterministic/helper — **не** learned, G12);
-   - какие contracts/manifests (`flow.manifest.json`, `.xiigen/wiki-domain`);
-   - какие tests/e2e/qa (xUnit / `ng test` / Playwright);
+   - current behavior;
+   - why this is wrong/acceptable;
+   - required behavior;
+   - affected files/classes/records/methods/data rows;
+   - how it works (for flows: deterministic/helper — **not** learned, G12);
+   - affected contracts/manifests (`flow.manifest.json`, `.xiigen/wiki-domain`);
+   - affected tests/e2e/qa (xUnit / `ng test` / Playwright);
    - lifecycle (request -> service -> result -> UI).
 6. A concrete solution immediately under each problem quote. A later appendix is
    not enough.
@@ -115,9 +115,9 @@ For every problem quote, the repair must name concrete artifacts, not labels:
 
 ```text
 current quote (file:line):
-сейчас:
-почему плохо/ок:
-должно стать:
+current behavior:
+why this is wrong/acceptable:
+required behavior:
 replacement class/service/component:
 input/output records and DataProcessResult<T> shape:
 old private method replaced by:
@@ -132,8 +132,8 @@ tests, and contract/manifest changes.
 
 ## Audit Sufficiency Boundary Gate
 
-A readable audit may still be too narrow. Do not claim "достаточно", "готово",
-"закрыто", "architecture audit sufficient", or "architecture audit complete"
+A readable audit may still be too narrow. Do not claim "достаточно" ("sufficient"), "готово" ("ready"),
+"закрыто" ("closed"), "architecture audit sufficient", or "architecture audit complete"
 unless the audit scope was broad enough and the breadth challenge pass is green.
 
 Allowed bounded wording:
@@ -142,7 +142,7 @@ Allowed bounded wording:
 
 Forbidden completion wording:
 - "Architecture audit sufficient/complete" without a green breadth challenge;
-- "готово/закрыто" when the audit only checked selected quotes, one file, one
+- "готово/закрыто" ("ready/closed") when the audit only checked selected quotes, one file, one
   service, one endpoint, or one Angular component;
 - any schema-only or prompt/spec completion claim that hides unexamined adjacent
   runtime zones.
@@ -199,7 +199,7 @@ governance repair first.
 ## Review Verdict
 
 Reject the artifact when:
-- the Russian human summary is missing;
+- the human summary is missing or does not use the required language (English by default, or the language requested by the user);
 - UML has no concrete simulation examples;
 - algorithm text is code-first rather than no-code;
 - code quotes lack adjacent concrete solutions;

@@ -17,29 +17,29 @@ Every implementation documentation section (Part A) must begin with two UML subs
 - **§1 Human-language flowcharts** — explain what happens in plain language, not method names
 
 The default language for `note for` annotations, decision-node text, and arrow labels
-is Russian unless Luba asks otherwise.
+is English unless the user requests another language.
 
 ## §0 Class Diagram — required elements
 
 1. **Mermaid `classDiagram` block** importable via draw.io Extras → Edit Diagram.
    - PlantUML is also acceptable when it is importable to draw.io and carries the
      same class responsibilities, relationship legend, and simulations.
-2. Every class must have a `note for ClassName "..."` annotation in Russian explaining in 1-3 lines:
+2. Every class must have a `note for ClassName "..."` annotation in English (unless the user requests another language) explaining in 1-3 lines:
    - What this class does (not its method names) — e.g. a per-flow `Application`
      service, an `Infrastructure` adapter, a minimal-API endpoint module, or an
      Angular 21 standalone component;
-   - Its status: ПОЛНОСТЬЮ РЕАЛИЗОВАНА / ЧАСТИЧНО / ЗАГЛУШКА / СКЕЛЕТ.
+   - Its status: FULLY IMPLEMENTED / PARTIAL / STUB / SKELETON.
 3. All relationship arrows must be present and used between the per-flow layers:
    - implementation (`<|..`) — service implements its flow interface;
    - inheritance (`--|>`) — service extends `MicroserviceBase<TSelf>`;
    - composition/association (`-->`) — `Api` endpoint module → `Application` service →
      `Infrastructure` adapter / `Xiigen.Kernel` fabric store;
    - dependency (`..>`) — transient call dependency.
-4. **Legend table** immediately after the mermaid block with columns: Класс | Что делает | Статус.
+4. **Legend table** immediately after the mermaid block with columns: Class | What it does | Status.
 
 **What the `note for` must say (example, this stack):**
 ```
-note for UserRegistrationService "ПОЛНОСТЬЮ РЕАЛИЗОВАНА\nApplication-сервис flow регистрации →\nпринимает body+идемпотентность →\nвозвращает DataProcessResult<UserRegistrationOutcome>"
+note for UserRegistrationService "FULLY IMPLEMENTED\nApplication service for the registration flow →\naccepts body+idempotency →\nreturns DataProcessResult<UserRegistrationOutcome>"
 ```
 
 5. **Per-connection simulation table (REQUIRED).** For EVERY relationship arrow
@@ -49,10 +49,10 @@ note for UserRegistrationService "ПОЛНОСТЬЮ РЕАЛИЗОВАНА\nApp
    (`DataProcessResult<T>.IsSuccess`/`.Error`, `Results.Json` status code). Use this
    table immediately after the legend:
 
-| Соединение (A → B) | Пример входа (симуляция) | Ожидаемый результат по этой ветке |
+| Connection (A → B) | Example input (simulation) | Expected result on this branch |
 |---|---|---|
 | Program (MapPost) → UserRegistrationService | body `{email, password}`, `X-Idempotency-Key: register-1` | `RegisterAsync` → `DataProcessResult.IsSuccess=true`, `Data.HttpStatus=201` |
-| UserRegistrationService → IIdempotencyStore | `operationKey="...:register-1"` | `TryReserveAsync` → reservation `IsSuccess=true`; повтор → `IsFailure`, код `CONCURRENT_UPDATE` |
+| UserRegistrationService → IIdempotencyStore | `operationKey="...:register-1"` | `TryReserveAsync` → reservation `IsSuccess=true`; retry → `IsFailure`, code `CONCURRENT_UPDATE` |
 | Program (ToRegistrationHttpResult) → HTTP | `DataProcessResult.IsFailure`, `Error.Code="VALIDATION_FAILED"` | `Results.Json(..., statusCode: 400)` |
 
 A connection without an example simulation and expected result is an incomplete §0.
@@ -70,23 +70,23 @@ A connection without an example simulation and expected result is an incomplete 
 
 1. Use `flowchart TD` (not `sequenceDiagram` for the primary human diagram).
 2. Every decision node `{...}` must state the human question, not a method name:
-   - ✅ `{Есть X-Idempotency-Key\nИ email и password заданы?}`
+   - ✅ `{Is X-Idempotency-Key present\nand are both email and password provided?}`
    - ❌ `{string.IsNullOrWhiteSpace(idempotencyKey)}`
 3. Every action node must explain the business meaning:
-   - ✅ `["✅ Регистрация принята (201)\nЗапись сохранена, событие в outbox"]`
+   - ✅ `["✅ Registration accepted (201)\nRecord saved, event in outbox"]`
    - ❌ `["RegisterAsync(request, ifMatch, idempotencyKey, ct)"]`
 4. Label arrows with the condition in human language:
-   - ✅ `-->|"НЕТ\nполя не заполнены → отказ"|`
+   - ✅ `-->|"NO\nfields are missing → reject"|`
    - ❌ `-->|false|`
 5. Include emoji status indicators: ✅⚠️🔶 on skeleton/partial components.
 6. **Per-branch simulation (REQUIRED).** For EVERY decision branch (each outcome of
    each `{...}` node), give a concrete simulation input + the expected result for that
-   branch. Example: `Вход: body без idempotency-key → ветка НЕТ → DataProcessResult.IsFailure, Error.Code=BAD_REQUEST, HTTP 400`;
-   `Вход: корректный body + ключ → ветка ДА → IsSuccess, HTTP 201`. Every branch of
+   branch. Example: `Input: body without idempotency-key → NO branch → DataProcessResult.IsFailure, Error.Code=BAD_REQUEST, HTTP 400`;
+   `Input: valid body + key → YES branch → IsSuccess, HTTP 201`. Every branch of
    every decision node must show one simulated input and its expected output.
 
-**Что НЕ делать (ветки):** ветка решения без примера-симуляции входа и ожидаемого
-результата — нарушение Part-A §1 контракта (см. plan-review FC-14).
+**What NOT to do (branches):** a decision branch without a simulated example input and expected
+result violates the Part-A §1 contract (see plan-review FC-14).
 
 **One flowchart per major decision path.** The human gate (request validation /
 intent classification / auth+tenant check) must have its own flowchart showing all

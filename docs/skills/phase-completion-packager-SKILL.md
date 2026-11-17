@@ -166,22 +166,22 @@ why_this_status_is_true:
 next_required_action:
 ```
 
-Machine-only JSON/state/ledger rows cannot be the primary status. Binding human-first template:
+Machine-only JSON/state/ledger rows cannot be the primary status. Binding human-first template (English unless the user requests another language):
 
 ```text
-Фаза N/M: <человеческое имя фазы>
-Что решает фаза: <одно простое русское предложение>
-Шаг NN.MM/NN.Total: <человеческое имя шага>
-Что решает шаг: <одно простое русское предложение>
-Сейчас: <человеческий перевод DONE/IN_PROGRESS/NEEDS_FIX/REMAINING/BLOCKED; технический label только в скобках>
-Что найдено: <что review/status проверка увидела, или "пока не проверялось">
-Что исправлено: <что fix изменил, или "пока ничего не менялось">
-Что осталось: <оставшаяся работа и boundary простыми словами>
-Счетчики фазы: сделано <X>/<Y>, осталось <Y-X>/<Y>
-Счетчики всего плана: сделано <A>/<B>, осталось <B-A>/<B>
+Phase N/M: <human-readable phase name>
+What the phase solves: <one plain-language sentence>
+Step NN.MM/NN.Total: <human-readable step name>
+What the step solves: <one plain-language sentence>
+Current status: <plain-language explanation of DONE/IN_PROGRESS/NEEDS_FIX/REMAINING/BLOCKED; technical label only in parentheses>
+Findings: <what the review/status check found, or "not checked yet">
+What was fixed: <what the fix changed, or "nothing changed yet">
+What remains: <remaining work and scope in plain language>
+Phase counts: done <X>/<Y>, remaining <Y-X>/<Y>
+Whole-plan counts: done <A>/<B>, remaining <B-A>/<B>
 ```
 
-`Фаза N/M, шаг NN.MM/NN.Total, статус X` alone is a packaging failure when the packet is for
+`Phase N/M, step NN.MM/NN.Total, status X` alone is a packaging failure when the packet is for
 Luba. Technical labels (STATE flags, JSON paths, validator names, `NEEDS_FIX`, `DONE`, `PASS`)
 must be translated in the same update into what review found, what fix did, and what remains.
 
@@ -248,7 +248,7 @@ open items only if a Luba decision is needed.
    to close the workflow only when Luba explicitly stopped/paused/asked answer-only or all active
    requirements are complete. If `remaining_count > 0` and `next_bounded_action_exists=true`, do
    not stop; start/wait/review/repair the next bounded action. A promise to continue ("I will
-   continue", "следующий шаг") is not continuation unless the next bounded sub-agent was actually
+   continue", "следующий шаг" ("next step")) is not continuation unless the next bounded sub-agent was actually
    started or a real blocker exists.
 7. Borrowing core ML/host wording (trained, DPO, checkpoint, live-host, two-PASS) to imply
    capability this repo does not own — G12 boundary violation.

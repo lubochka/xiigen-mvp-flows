@@ -1,13 +1,13 @@
 # Output Readability Gate
 
 > **Stack adaptation (xiigen flows).** The four prohibited prose patterns, the
-> dashboard/API documentation readability checklist, the Russian-first
+> dashboard/API documentation readability checklist, the English-first
 > Human-Readable Execution Board, and the No-Machine-Log-To-User rule ported from
 > `llm_mvp_core/docs/skills/output-readability-gate-SKILL.md` (G07). The universal
 > part (no shortcodes / ALL_CAPS_UNDERSCORE / letter-number tokens in prose
 > outside backticks; dashboard/API docs must give a human name + example input +
-> parameters + expected output + evidence boundary; the Russian board with Всего/
-> Сделано/Сейчас/Осталось/Тип результата/Следующее действие; a machine status is
+> parameters + expected output + evidence boundary; the English board with Total/
+> Done/In progress/Remaining/Result type/Next action; a machine status is
 > never the whole user-facing report) is taken from core. Adapted here:
 > - The "project equivalents" section uses this stack: `DataProcessResult<T>`
 >   status / `ErrorCode` strings, xUnit, and Angular DI tokens — **not** core
@@ -16,7 +16,7 @@
 > - **Angular UX readability** is added: labels, accessible names/help text,
 >   example values, error wording, and no internal jargon on the primary user path
 >   in the `flows/FLOW-NN-<slug>/client/angular` surface.
-> - The mojibake check stays relevant for Russian board strings.
+> - The mojibake check stays relevant for multilingual board strings.
 > - **The llm_mvp_core host-UI clusters are NOT ported.** Dual-Path Same-Scenario
 >   UI Proof, Multi-Monitor Target Window Control, Cursor/Claude/Codex auth
 >   preflight, and the 10-review-cycle Execution Plan Visibility Gate are
@@ -178,7 +178,7 @@ Required for dashboard/flow docs:
   accessible names / help text, example values, error wording, history/copy/export
   clarity, layout/bounds, and no internal jargon on the primary user path
 □ No mojibake or broken encoding markers such as "Ð", "Ñ", "Â", or "â€™"
-  (relevant for the Russian board strings)
+  (relevant for the multilingual board strings)
 □ No code-style status noise replaces a human explanation
 ```
 
@@ -221,18 +221,18 @@ are absent, the packet fails readability even when the machine evidence is valid
 
 ### Human-Readable Execution Board
 
-Every long plan-execution status must include a plain Russian progress board:
+Every long plan-execution status must include a progress board in plain English unless the user requests another language:
 
 ```text
-Всего: <total major plan blocks and/or current-phase tasks>
-Сделано: <completed count>/<total>; <completed names>
-Сейчас выполняется: <current task and owner>
-Осталось: <remaining count>; <remaining names>
-Тип текущего результата: <code | artifact | review | policy | evidence-only | commit boundary>
-Принятые доказательства: <accepted evidence in human words>
-Закрытые claims и почему: <claim names + human reason they remain closed>
-Открытые разрывы: <open gaps>
-Следующее действие: <next bounded action>
+Total: <total major plan blocks and/or current-phase tasks>
+Done: <completed count>/<total>; <completed names>
+In progress: <current task and owner>
+Remaining: <remaining count>; <remaining names>
+Current result type: <code | artifact | review | policy | evidence-only | commit boundary>
+Accepted evidence: <accepted evidence in human words>
+Claims that remain closed and why: <claim names + human reason they remain closed>
+Open gaps: <open gaps>
+Next action: <next bounded action>
 ```
 
 If the board is missing, the status is not readable enough even when STATE, JSON,
@@ -246,10 +246,10 @@ object, or an internal status label. Internal labels may appear only with a huma
 translation:
 
 ```text
-Проверка: what was checked
-Результат: what passed or failed
-Что исправлено: repair made or NONE
-Что осталось: remaining gap or NONE
+Check: what was checked
+Result: what passed or failed
+What was fixed: repair made or NONE
+What remains: remaining gap or NONE
 ```
 
 If a status cannot be understood without opening raw logs, return it to
@@ -264,14 +264,14 @@ Human-Readable Architecture Artifact Gate (see
 `human-readable-architecture-audit-SKILL.md`):
 
 ```
-□ Primary explanation is Russian unless Luba asked otherwise
+□ Primary explanation is English unless the user requests another language
 □ Machine labels are secondary, not the explanation
 □ UML is PlantUML or Mermaid classDiagram importable to draw.io
 □ Data-flow simulations and expected branch outcomes are present
 □ Algorithms are explained in no-code human language
 □ Code quotes have exact file:line refs and short quotes
 □ Every problem quote has an adjacent concrete solution
-□ No table-only, shortcode-heavy, English-only, schema-first, or prompt/spec artifact
+□ No table-only, shortcode-heavy, text in a language other than the one requested, schema-first, or prompt/spec artifact
 ```
 
 "Create schema", "wrap in a service", or "add tests" without concrete classes,
@@ -303,6 +303,6 @@ governance/authoring repair before accepting it.
 ## Integration
 
 - `context-package-design-SKILL.md` prose sections must pass this gate
-- `agent-output-format-SKILL.md` references this gate for the Russian-first board and machine-status bans
+- `agent-output-format-SKILL.md` references this gate for the English-first board and machine-status bans
 - `human-readable-architecture-audit-SKILL.md` governs the architecture-audit readability detail
 - Table cells and code fences that display literal identifiers are exempt — the gate applies to prose only

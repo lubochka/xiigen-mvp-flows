@@ -220,14 +220,14 @@ is not a complete code review.
 
 ### Human-readable code review report gate
 
-Reject code review when the report is table-only, shortcode-heavy, English-only
-when Russian is required, schema-only, or prompt/spec instead of an implementable
-blueprint. For trainable/architecture findings, include: Russian human summary;
+Reject code review when the report is table-only, shortcode-heavy, in a language other than the one
+the user requested, schema-only, or prompt/spec instead of an implementable
+blueprint. For trainable/architecture findings, include: English human summary unless the user requests another language;
 Mermaid/PlantUML importable to draw.io when data flow is explained; no-code
-algorithm explanation; exact `file:line` quote plus `сейчас` / `почему плохо/ок`
-/ `должно стать`; and Concrete Repair Blueprint fields for any suspicious
+algorithm explanation; exact `file:line` quote plus `current behavior` / `why this is wrong/acceptable`
+/ `required behavior`; and Concrete Repair Blueprint fields for any suspicious
 Dictionary/counter/KNN/scorer/selector/private-method quote. Generic "wrap in
-ILogicalUnit"/"add KNN"/"add tests"/"chosen/rejected/quarantine" is not a решение.
+ILogicalUnit"/"add KNN"/"add tests"/"chosen/rejected/quarantine" is not a solution.
 
 ---
 

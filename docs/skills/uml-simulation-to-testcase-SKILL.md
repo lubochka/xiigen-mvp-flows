@@ -51,7 +51,7 @@ For every algorithm branch:
 ```text
 algorithm_branch_case:
   branch_id:
-  human_condition:                # plain Russian question from the §1 flowchart
+  human_condition:                # plain-English question from the §1 flowchart unless the user requests another language
   input_example:
   expected_result:                # e.g. IsSuccess, HTTP 201
   not_expected_result:            # e.g. NOT a 500, NOT a second stored record

@@ -221,11 +221,11 @@ unit consumed via manifest — not to "make it trainable here".
 Report every finding in this form:
 
 ```text
-Human explanation in Russian:
+Human explanation in English (unless the user requests another language):
 Code quote with exact file:line:
-сейчас:
-почему плохо/ок:
-должно стать:
+current behavior:
+why this is wrong/acceptable:
+required behavior:
 Allowed location (in llm_mvp_core):
 Current location:
 Dataset/claim risk:

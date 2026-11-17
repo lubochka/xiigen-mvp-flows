@@ -262,7 +262,7 @@ Not for altitude disagreements. Not for framing preferences.
 **Required response:** Answer the question first in plain language. Only after the answer may the architect close active sub-agents, patch governance, or resume the nearest safe already-authorized work. Fresh Luba approval is required only for `hard_stop_or_hold` or real missing authority, not merely because a question was answered. If the question is a failure-cause "why", the after-answer action is root-cause repair of the exact governing skill/guide/agent-file loophole, a human explanation of the repair, and continuation of the previously authorized work.
 
 #### FAIL-23A: Why Question Root-Cause Repair Trigger missed
-**Signature:** Luba asks "why", "why did you stop", "why did this happen", "pochemu", "почему", or equivalent failure-cause wording; the response answers only, defends only, apologizes only, sends a final protocol summary, or starts unrelated implementation before repairing the governing loophole.
+**Signature:** Luba asks "why", "why did you stop", "why did this happen", "pochemu", "почему" ("why"), or equivalent failure-cause wording; the response answers only, defends only, apologizes only, sends a final protocol summary, or starts unrelated implementation before repairing the governing loophole.
 **Detection:** Treat the message as `answer_first_then_continue` unless Luba explicitly says stop, pause, answer only, or no continue. Check that the response answered first in human language; named the exact missing/weak/contradictory skills/guides/agent-file rule; used the active role boundary; completed the repair before continuation; reported concrete changed files/rules; and then continued to the nearest safe already-authorized work.
 **Class:** Class-a.
 **Required response:** why is not a stop. Answer Luba first, repair the exact skill/guide/agent-file loophole through the active role boundary, explain what changed in human language, and continue the previously authorized work chain. Protocol repair complete is not a completion boundary.
@@ -289,8 +289,8 @@ Not for altitude disagreements. Not for framing preferences.
 **Score:** score_delta -500.
 
 #### FAIL-27: Admitting-a-plan-without-Part-A (R3 breach)
-**Signature:** A plan was admitted to execution without already containing (not merely promising) Part A in Luba's format: §0 draw.io-importable UML; §1 algorithm descriptions in Russian, plain human language, without code, with class references; §2/§3 per algorithm: where the logic sits, a detailed explanation, and exact code citations with precise file references reflecting code AS ACTUALLY IMPLEMENTED.
-**Detection:** Plan admitted to execution and Part A is absent, incomplete, aspirational ("will be written later"), contains only flowcharts without class structure, or is written in English-only prose. A "future documentation phase" does NOT satisfy. NOTE: a Mermaid classDiagram IS acceptable for §0 (draw.io imports Mermaid classDiagram format); FAIL-27 does NOT fire on Mermaid classDiagrams alone.
+**Signature:** A plan was admitted to execution without already containing (not merely promising) Part A in Luba's format: §0 draw.io-importable UML; §1 algorithm descriptions in plain English unless the user requests another language, without code, with class references; §2/§3 per algorithm: where the logic sits, a detailed explanation, and exact code citations with precise file references reflecting code AS ACTUALLY IMPLEMENTED.
+**Detection:** Plan admitted to execution and Part A is absent, incomplete, aspirational ("will be written later"), contains only flowcharts without class structure, or is written in a language other than the one requested (English is the default). A "future documentation phase" does NOT satisfy. NOTE: a Mermaid classDiagram IS acceptable for §0 (draw.io imports Mermaid classDiagram format); FAIL-27 does NOT fire on Mermaid classDiagrams alone.
 **Class:** Class-a.
 **Required response:** Block execution. Return the plan with an explicit list of missing Part A sections. Execution is forbidden until Part A in Luba's format is present inside the plan document. A promise to add it later = still a FAIL-27.
 **Score:** score_delta -500.
@@ -514,8 +514,8 @@ honesty and to the manifest-consumption path.
 **Score:** score_delta -1000.
 
 #### FAIL-44 — Human-readable audit gate skipped
-**Pattern:** An architecture/code audit, plan review, or documentation artifact is accepted even though its primary explanation is table-only, shortcode-heavy, English-only when Russian was required, schema-first, schema-only, or prompt/spec.
-**Correct behavior:** Reject the artifact until it has a Russian human summary, draw.io-importable Mermaid/PlantUML with concrete data-flow simulations, a no-code algorithm explanation, exact `file:line` quotes, and quote-adjacent concrete solutions.
+**Pattern:** An architecture/code audit, plan review, or documentation artifact is accepted even though its primary explanation is table-only, shortcode-heavy, written in a language other than the one requested by the user, schema-first, schema-only, or prompt/spec.
+**Correct behavior:** Reject the artifact until it has a human-readable summary in English unless the user requests another language, draw.io-importable Mermaid/PlantUML with concrete data-flow simulations, a no-code algorithm explanation, exact `file:line` quotes, and quote-adjacent concrete solutions.
 **Score:** score_delta -500.
 
 #### FAIL-45 — Concrete repair blueprint replaced by prompt/spec
@@ -524,7 +524,7 @@ honesty and to the manifest-consumption path.
 **Score:** score_delta -500 (−1000 if the generic row authorized implementation).
 
 #### FAIL-46 — Audit sufficiency overclaim
-**Pattern:** A narrow audit claims "достаточно"/"готово"/"closed"/"sufficient"/"complete" without a green breadth challenge.
+**Pattern:** A narrow audit claims "достаточно" ("sufficient")/"готово" ("ready")/"closed"/"sufficient"/"complete" without a green breadth challenge.
 **Correct behavior:** Replace broad completion wording with bounded wording or run the breadth challenge. Parent review must ask: "What would a broader audit likely find that this artifact missed?"
 **Score:** score_delta -500 (−1000 if the overclaim authorized downstream work).
 
