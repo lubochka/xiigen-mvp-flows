@@ -70,13 +70,13 @@ The development client is served at `http://localhost:4200/`. See its [README](f
 
 Read the [contributor guide](CONTRIBUTING.md), [support guidance](SUPPORT.md) and [security policy](SECURITY.md).
 
-Use [issues](https://github.com/lubochka/xiigen-flows-dot-net-angular/issues) for bugs, documentation corrections and feature proposals. Identify the flow, intended user outcome and affected contract. Put shared infrastructure changes in the platform repository and coordinate package changes with consumers. Keep examples synthetic and exclude credentials and private tenant data.
+Use [issues](https://github.com/lubochka/xiigen-mvp-flows/issues) for bugs, documentation corrections and feature proposals. Identify the flow, intended user outcome and affected contract. Put shared infrastructure changes in the platform repository and coordinate package changes with consumers. Keep examples synthetic and exclude credentials and private tenant data.
 
 ## License and related projects
 
 XIIGen's first-party licensing is GNU Affero General Public License version 3 only (`AGPL-3.0-only`). Third-party dependencies retain their own licenses. See [LICENSE](LICENSE), [NOTICE](NOTICE) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-- [XIIGen Platform](https://github.com/lubochka/xiigen-platform-dot-net-angular) — shared .NET contracts, fabrics and APIs.
+- [XIIGen Platform](https://github.com/lubochka/xiigen-mvp-platform/) — shared .NET contracts, fabrics and APIs.
 - [xiigen-mvp](https://github.com/lubochka/xiigen-mvp) — the parallel XIIGen implementation and product reference.
 
 The engine consumes models and can produce learning signals. Model-weight training belongs to the separate XIIGen model core; see the [FAQ](docs/FAQ.md).
