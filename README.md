@@ -4,7 +4,7 @@
 
 XIIGen is a fabric-first AI code generation engine for agentic workflows. It turns business intent into application flows through planning, generation, orchestration, retrieval and review. This repository implements the same product as [xiigen-mvp](https://github.com/lubochka/xiigen-mvp) using .NET microservices and Angular clients.
 
-Business behavior lives here. Shared result types, tenant context, fabric contracts and platform APIs come from [XIIGen Platform](https://github.com/lubochka/xiigen-platform-dot-net-angular). This split lets flows share infrastructure while keeping their own application boundaries.
+Business behavior lives here. Shared result types, tenant context, fabric contracts and platform APIs come from [XIIGen Platform](https://github.com/lubochka/xiigen-mvp-platform). This split lets flows share infrastructure while keeping their own application boundaries.
 
 ## Explore the flows
 
